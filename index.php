@@ -11,7 +11,7 @@ include __DIR__ . '/includes/header.php';
     <div class="hero-grid">
       <header class="hero-header reveal">
         <h1 class="hero-heading">
-          <span class="nowrap">Premium websites.  Bigger projects.</span>
+          <span class="nowrap">Premium websites. <br>  Bigger projects.</span>
           On-point marketing. Better leads.
           <span class="accent-lime">Bigger projects.</span>
         </h1>
