@@ -29,6 +29,29 @@ $message = clean((string)($_POST['message'] ?? ''));
 $updates = !empty($_POST['updates']) ? 'Yes' : 'No';
 $source  = clean((string)($_POST['source'] ?? 'website'));
 
+// Brief / audit / feedback pages
+$form_pages = [
+  'free-audit'      => ['Free audit request', '/free-audit.php'],
+  'website-brief'   => ['Website brief', '/website-brief.php'],
+  'marketing-brief' => ['Marketing brief', '/marketing-brief.php'],
+  'client-feedback' => ['Client feedback', '/client-feedback.php'],
+];
+$form_page = $form_pages[$source] ?? null;
+
+// Anything the form sent on top of the standard fields
+$standard = ['website', 'name', 'email', 'phone', 'help', 'budget', 'message', 'updates', 'source', 'terms'];
+$extra = [];
+foreach ($_POST as $key => $value) {
+  if (in_array($key, $standard, true)) {
+    continue;
+  }
+  $value = is_array($value) ? implode(', ', array_map('strval', $value)) : (string)$value;
+  $value = clean($value);
+  if ($value !== '') {
+    $extra[ucfirst(str_replace('_', ' ', clean((string)$key)))] = $value;
+  }
+}
+
 $errors = [];
 if ($name === '' || mb_strlen($name) < 2) {
   $errors[] = 'name';
@@ -36,7 +59,7 @@ if ($name === '' || mb_strlen($name) < 2) {
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
   $errors[] = 'email';
 }
-if ($phone === '') {
+if ($phone === '' && !$form_page) {
   $errors[] = 'phone';
 }
 if ($message === '') {
@@ -44,14 +67,14 @@ if ($message === '') {
 }
 
 if ($errors) {
-  header('Location: /contact.php?error=1');
+  header('Location: ' . ($form_page ? $form_page[1] : '/contact.php') . '?error=1');
   exit;
 }
 
 $to = 'hello@wtflabs.com';
-$subject = 'New inquiry from ' . $name . ' — WTF Labs';
+$subject = ($form_page ? $form_page[0] : 'New inquiry') . ' from ' . $name . ' — WTF Labs';
 
-$body = "New project inquiry from the website\n";
+$body = ($form_page ? $form_page[0] . ' from the website' : 'New project inquiry from the website') . "\n";
 $body .= str_repeat('-', 40) . "\n";
 $body .= "Name:    {$name}\n";
 $body .= "Email:   {$email}\n";
@@ -60,6 +83,9 @@ $body .= "Help:    " . ($help !== '' ? $help : '—') . "\n";
 $body .= "Budget:  " . ($budget !== '' ? $budget : '—') . "\n";
 $body .= "Updates: {$updates}\n";
 $body .= "Source:  {$source}\n";
+foreach ($extra as $label => $value) {
+  $body .= "{$label}: {$value}\n";
+}
 $body .= str_repeat('-', 40) . "\n";
 $body .= "Message:\n{$message}\n";
 $body .= str_repeat('-', 40) . "\n";

@@ -48,7 +48,6 @@ require_once __DIR__ . '/config.php';
         <img class="nav-logo-img nav-logo-dark" src="/assets/images/logo-sec.png" alt="WTF Labs" width="72" height="70">
       </a>
       <ul class="nav-links">
-        <li><a href="/about.php"<?php echo $current_page === 'about' ? ' aria-current="page"' : ''; ?>>About</a></li>
         <li class="nav-dropdown">
           <a href="/services.php" class="nav-dropdown-btn"<?php echo $current_page === 'services' ? ' aria-current="page"' : ''; ?>>Services <span>&#9662;</span></a>
           <div class="nav-dropdown-menu">
@@ -77,6 +76,16 @@ require_once __DIR__ . '/config.php';
         </li>
         <li><a href="/works.php"<?php echo $current_page === 'works' ? ' aria-current="page"' : ''; ?>>Work</a></li>
         <li><a href="/how-we-work.php"<?php echo $current_page === 'how-we-work' ? ' aria-current="page"' : ''; ?>>How We Work</a></li>
+        <li><a href="/insights.php"<?php echo $current_page === 'insights' ? ' aria-current="page"' : ''; ?>>Insights</a></li>
+        <li class="nav-dropdown">
+          <a href="/website-brief.php" class="nav-dropdown-btn"<?php echo $current_page === 'forms' ? ' aria-current="page"' : ''; ?>>Forms <span>&#9662;</span></a>
+          <div class="nav-dropdown-menu">
+            <a href="/website-brief.php">Website Brief</a>
+            <a href="/marketing-brief.php">Marketing Brief</a>
+            <a href="/client-feedback.php">Client Feedback</a>
+          </div>
+        </li>
+        <li><a href="/about.php"<?php echo $current_page === 'about' ? ' aria-current="page"' : ''; ?>>About</a></li>
       </ul>
       <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" title="Toggle theme">
         <svg class="theme-icon theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -87,7 +96,7 @@ require_once __DIR__ . '/config.php';
           <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3 7 7 0 1 0 21 14.5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
         </svg>
       </button>
-      <a href="/contact.php" class="btn btn-lime btn-sm" data-open-popup>Free Audit</a>
+      <a href="/free-audit.php" class="btn btn-lime btn-sm">Free Audit</a>
       <button class="nav-burger" type="button" aria-label="Menu"><span></span><span></span></button>
     </nav>
     
