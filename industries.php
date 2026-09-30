@@ -44,11 +44,13 @@ include __DIR__ . '/includes/page-banner.php';
       </div>
       <!-- Sub navigation -->
       <div class="works-subfilters" id="industriesSubfilters" role="tablist" aria-label="Filter by service" hidden>
+        <!--
         <button type="button" class="works-filter works-subfilter is-active" data-sub="all" role="tab" aria-selected="true">All</button>
         <button type="button" class="works-filter works-subfilter" data-sub="websites" role="tab" aria-selected="false">Websites</button>
         <button type="button" class="works-filter works-subfilter" data-sub="local-seo" role="tab" aria-selected="false">Local SEO</button>
         <button type="button" class="works-filter works-subfilter" data-sub="google-ads" role="tab" aria-selected="false">Google Ads</button>
         <button type="button" class="works-filter works-subfilter" data-sub="social-ads" role="tab" aria-selected="false">Social Ads</button>
+        -->
       </div>
     </div>
 
