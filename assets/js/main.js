@@ -182,6 +182,18 @@ document.querySelector('.nav-burger')?.addEventListener('click', () => {
   document.querySelector('.nav-links')?.classList.toggle('mobile-open');
 });
 
+// Mobile nav dropdowns - one open at a time
+document.querySelectorAll('.nav-dropdown-btn').forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    if (!window.matchMedia('(max-width: 980px)').matches) return;
+    const item = btn.closest('.nav-dropdown');
+    if (item.classList.contains('is-open')) return;
+    e.preventDefault();
+    document.querySelectorAll('.nav-dropdown.is-open').forEach((el) => el.classList.remove('is-open'));
+    item.classList.add('is-open');
+  });
+});
+
 // Smooth brand card tilt on hover
 document.querySelectorAll('.brand-card').forEach((card) => {
   card.addEventListener('mousemove', (e) => {
@@ -671,28 +683,6 @@ window.addEventListener('load', () => {
     ]
   };
 
-  // Industries - every industry shares the same service tabs
-  const INDUSTRIES = {
-    remodelers: 'Remodelers',
-    hvac: 'HVAC',
-    plumbing: 'Plumbing',
-    roofing: 'Roofing',
-    'pest-control': 'Pest Control',
-    'pool-services': 'Pool Services',
-    landscaping: 'Landscaping',
-    handyman: 'Handyman',
-    'power-washing': 'Power Washing'
-  };
-  const INDUSTRY_SUBS = [
-    { id: 'websites', label: 'Websites' },
-    { id: 'local-seo', label: 'Local SEO' },
-    { id: 'google-ads', label: 'Google Ads' },
-    { id: 'social-ads', label: 'Social Ads' }
-  ];
-  Object.keys(INDUSTRIES).forEach((id) => {
-    SUBS[id] = [{ id: 'all', label: 'All ' + INDUSTRIES[id] }].concat(INDUSTRY_SUBS);
-  });
-
   function hasToken(list, token) {
     if (!list || !token) return false;
     return (' ' + list + ' ').indexOf(' ' + token + ' ') !== -1;
@@ -706,6 +696,8 @@ window.addEventListener('load', () => {
 
     let activeCategory = 'all';
     let activeSub = 'all';
+    // Sub tabs written in the page markup (Industries) are reused as-is
+    const staticSubs = subfilters.querySelector('[data-sub]') !== null;
 
     function applyFilter() {
       grid.querySelectorAll(cardSelector).forEach((card) => {
@@ -735,7 +727,20 @@ window.addEventListener('load', () => {
       });
     }
 
-    function renderSubs(category) {
+    function renderSubs(category, label) {
+      if (staticSubs) {
+        activeSub = 'all';
+        subfilters.querySelectorAll('[data-sub]').forEach((el) => {
+          const isAll = el.getAttribute('data-sub') === 'all';
+          el.classList.toggle('is-active', isAll);
+          el.setAttribute('aria-selected', isAll ? 'true' : 'false');
+          if (isAll) el.textContent = 'All ' + label;
+        });
+        subfilters.hidden = category === 'all';
+        subfilters.classList.toggle('is-open', category !== 'all');
+        return;
+      }
+
       subfilters.innerHTML = '';
       subfilters.classList.remove('is-open');
       subfilters.hidden = true;
@@ -767,7 +772,7 @@ window.addEventListener('load', () => {
       btn.classList.add('is-active');
       btn.setAttribute('aria-selected', 'true');
       activeCategory = btn.getAttribute('data-filter') || 'all';
-      renderSubs(activeCategory);
+      renderSubs(activeCategory, btn.textContent.replace(/\s+/g, ' ').trim());
       applyFilter();
     });
 

@@ -1,3 +1,268 @@
 <?php
-$industry_slug = 'hvac';
-include __DIR__ . '/includes/industry-page.php';
+$page_title = 'HVAC | WTF Labs';
+$page_description = 'Websites and campaigns that keep HVAC techs booked through peak season and the slow months.';
+$current_page = 'industries';
+include __DIR__ . '/includes/header.php';
+?>
+
+<?php
+$banner_crumb_label = 'Industries';
+$banner_crumb_href = '/industries.php';
+$banner_breadcrumb = 'HVAC';
+$banner_kicker = 'Industry';
+$banner_h1 = 'HVAC marketing that keeps your trucks <span class="about-hero-accent">booked</span>';
+$banner_lead = 'From emergency AC repair to furnace installs and maintenance plans - we build the site, search presence, and ads that fill your schedule year-round.';
+$banner_primary_label = 'Get a quote';
+$banner_secondary_label = 'See our work';
+$banner_image = '/assets/images/industry-hvac-1.webp';
+$banner_float1 = '/assets/images/industry-hvac-2.webp';
+$banner_float2 = '/assets/images/industry-hvac-3.webp';
+$banner_card = 'More service calls, fewer empty slots.';
+include __DIR__ . '/includes/page-banner.php';
+?>
+
+<section class="svc-section svc-work">
+  <div class="container">
+    <div class="svc-section-head reveal">
+      <p class="svc-kicker"><span></span> Selected work</p>
+      <h2>HVAC marketing that works in the <span class="heading-accent">real world</span></h2>
+      <p>Booking-ready websites and campaigns built around how homeowners search when the AC quits.</p>
+    </div>
+    <div class="svc-cases reveal">
+      <article class="svc-case">
+        <div class="svc-case-media">
+          <img src="/assets/images/industry-hvac-2.webp" alt="Heating &amp; cooling company">
+        </div>
+        <div class="svc-case-body">
+          <p class="svc-case-meta">USA · Website &amp; booking</p>
+          <h3>Heating &amp; cooling company</h3>
+          <p>A fast, mobile-first site with online scheduling that turned late-night visits into booked morning calls.</p>
+        </div>
+      </article>
+      <article class="svc-case">
+        <div class="svc-case-media">
+          <img src="/assets/images/industry-hvac-3.webp" alt="Multi-truck HVAC outfit">
+        </div>
+        <div class="svc-case-body">
+          <p class="svc-case-meta">Regional · Google Ads</p>
+          <h3>Multi-truck HVAC outfit</h3>
+          <p>Seasonal search campaigns that shifted budget between AC and heating demand as the weather changed.</p>
+        </div>
+      </article>
+      <article class="svc-case">
+        <div class="svc-case-media">
+          <img src="/assets/images/industry-hvac-4.webp" alt="Family-owned HVAC shop">
+        </div>
+        <div class="svc-case-body">
+          <p class="svc-case-meta">Local · Maintenance plans</p>
+          <h3>Family-owned HVAC shop</h3>
+          <p>A membership landing page and email flow that grew recurring maintenance revenue.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="svc-section svc-process">
+  <div class="container">
+    <div class="svc-section-head reveal">
+      <p class="svc-kicker"><span></span> Process</p>
+      <h2>HVAC: from discovery to <span class="heading-accent heading-accent--lime">booked jobs</span></h2>
+      <p>We handle every stage - strategy, craft, delivery, and follow-through - as one senior team.</p>
+    </div>
+    <div class="svc-process-grid reveal">
+      <article class="svc-process-card">
+        <span class="svc-process-num">01</span>
+        <h3>Discovery → Demand</h3>
+        <p>We look at your service mix, seasonality, and which calls actually make you money.</p>
+      </article>
+      <article class="svc-process-card">
+        <span class="svc-process-num">02</span>
+        <h3>Site &amp; booking</h3>
+        <p>Clear service pages, emergency CTAs, and scheduling that works on a phone at 2am.</p>
+      </article>
+      <article class="svc-process-card">
+        <span class="svc-process-num">03</span>
+        <h3>Local visibility</h3>
+        <p>Map pack rankings, city pages, and a steady flow of fresh reviews.</p>
+      </article>
+      <article class="svc-process-card">
+        <span class="svc-process-num">04</span>
+        <h3>Ads &amp; tracking</h3>
+        <p>Seasonal campaigns with call tracking so you know which dollars booked jobs.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="svc-section svc-excellence">
+  <div class="container">
+    <div class="svc-excellence-layout reveal">
+      <div class="svc-excellence-copy">
+        <p class="svc-kicker"><span></span> Excellence</p>
+        <h2>End-to-end HVAC <span class="heading-accent">growth</span></h2>
+        <p>When a system breaks, homeowners call whoever shows up first and looks trustworthy. We make sure that is you - on Google, on Maps, and on their phone.</p>
+        <p>We tie your website, local SEO, and paid campaigns to booked jobs and maintenance plan sign-ups, so every season is easier to plan.</p>
+        <ul class="why-feature-list">
+          <li>Emergency &amp; seasonal service pages</li>
+          <li>Online booking and call tracking</li>
+          <li>Maintenance plan sign-ups</li>
+        </ul>
+        <a href="/contact.php" class="btn btn-lime" style="margin-top:20px">Start a project</a>
+      </div>
+      <div class="svc-excellence-visual">
+        <div class="svc-excellence-visual-main">
+          <img src="/assets/images/industry-hvac-4.webp" alt="">
+        </div>
+        <div class="svc-excellence-chip">
+          <span class="svc-excellence-chip-dot"></span>
+          <p>Repairs · Installs · Plans</p>
+        </div>
+        <div class="svc-excellence-float svc-excellence-float--1">
+          <img src="/assets/images/industry-hvac-1.webp" alt="">
+        </div>
+        <div class="svc-excellence-float svc-excellence-float--2">
+          <img src="/assets/images/industry-hvac-3.webp" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="svc-section svc-team">
+  <div class="container">
+    <div class="svc-team-box reveal">
+      <div>
+        <p class="svc-kicker"><span></span> The team</p>
+        <h2>A growth team that thinks <span class="heading-accent">like partners</span></h2>
+        <p>A mature team that takes responsibility, keeps everything transparent, and stays one step ahead in communication.</p>
+      </div>
+      <ul class="svc-team-list">
+        <li>Senior marketers who know how local customers search and book</li>
+        <li>Clear weekly updates on leads, calls, and what is next</li>
+        <li>Reporting tied to booked jobs - not vanity metrics</li>
+        <li>Integrations with the booking and CRM tools you already use</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<?php
+$street_section_id = 'reviews';
+$street_kicker = 'Reviews';
+include __DIR__ . '/includes/testimonialslider.php';
+?>
+
+<section class="svc-section svc-more">
+  <div class="container">
+    <div class="svc-section-head reveal">
+      <p class="svc-kicker"><span></span> Explore</p>
+      <h2>Explore more <span class="heading-accent">industries</span></h2>
+    </div>
+    <div class="excel-tags reveal">
+      <a href="/remodelers.php" class="excel-tag">Remodelers</a>
+      <a href="/plumbing.php" class="excel-tag">Plumbing</a>
+      <a href="/roofing.php" class="excel-tag">Roofing</a>
+      <a href="/pest-control.php" class="excel-tag">Pest Control</a>
+      <a href="/pool-services.php" class="excel-tag">Pool Services</a>
+      <a href="/landscaping.php" class="excel-tag">Landscaping</a>
+      <a href="/handyman.php" class="excel-tag">Handyman</a>
+      <a href="/power-washing.php" class="excel-tag">Power Washing</a>
+    </div>
+    <div class="services-cta-band reveal" style="margin-top:40px">
+      <div>
+        <h3>Let's discuss growing your HVAC business</h3>
+        <p>We'll help you define the right next step.</p>
+      </div>
+      <a href="/contact.php" class="btn btn-lime btn-lg">Get a quote</a>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section" id="faqs">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="subheading">HVAC FAQs</p>
+      <h2>Questions about <span class="heading-accent">HVAC</span></h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item is-open">
+        <button class="faq-trigger" type="button" aria-expanded="true">
+          <span class="faq-num">01</span>
+          <span class="faq-question">Can customers book service online?</span>
+          <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq-panel" role="region">
+          <div class="faq-panel-inner">
+            <p>Yes. We connect your site to scheduling tools like ServiceTitan, Housecall Pro, or Jobber so homeowners can book without calling.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" type="button" aria-expanded="false">
+          <span class="faq-num">02</span>
+          <span class="faq-question">How do you handle seasonal demand?</span>
+          <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq-panel" role="region">
+          <div class="faq-panel-inner">
+            <p>Campaigns and homepage offers shift between cooling and heating, with budgets adjusted as call volume changes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" type="button" aria-expanded="false">
+          <span class="faq-num">03</span>
+          <span class="faq-question">Can you help sell maintenance plans?</span>
+          <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq-panel" role="region">
+          <div class="faq-panel-inner">
+            <p>We build membership pages, sign-up flows, and reminder emails that turn one-time customers into recurring revenue.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" type="button" aria-expanded="false">
+          <span class="faq-num">04</span>
+          <span class="faq-question">How much does a website project cost?</span>
+          <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq-panel" role="region">
+          <div class="faq-panel-inner">
+            <p>Website projects start at $10,000. Most full-cycle B2B website engagements fall between $25,000 and $50,000. A focused landing page or smaller corporate site may fall in the $10,000–$20,000 range. Complex platforms may exceed $50,000. After the first conversation we give a realistic estimate.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" type="button" aria-expanded="false">
+          <span class="faq-num">05</span>
+          <span class="faq-question">Which platform and technology stack should we use?</span>
+          <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq-panel" role="region">
+          <div class="faq-panel-inner">
+            <p>We recommend based on your business, content, integrations, and long-term plans. We build with Webflow, WordPress, Shopify, HubSpot, React, Vue, Node.js, Laravel, and Strapi. If you already have technical requirements, we work within them.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" type="button" aria-expanded="false">
+          <span class="faq-num">06</span>
+          <span class="faq-question">Can you move faster if we have a hard deadline?</span>
+          <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq-panel" role="region">
+          <div class="faq-panel-inner">
+            <p>Yes, when the deadline is realistic and trade-offs are understood. We can expand the team, run design and development in parallel, and prioritize what is required for launch - then refine after go-live.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="faq-all-wrap reveal">
+      <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<?php include __DIR__ . '/includes/footer.php'; ?>
