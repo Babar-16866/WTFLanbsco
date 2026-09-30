@@ -13,7 +13,7 @@ include __DIR__ . '/includes/header.php';
         <h1 class="hero-heading">
           <span class="nowrap">Premium websites.</span><br>
             On-point marketing.
-          <br><span class="accent-lime"><span style="color: #ffffff">Better</span> leads. <span style="color: #ffffff"></span>Bigger</span> projects.</span>
+          <br><span class="accent-lime"><span style="color: #ffffff">Better</span> leads. <span style="color: #ffffff">Bigger</span> projects.</span>
         </h1>
       </header>
 
