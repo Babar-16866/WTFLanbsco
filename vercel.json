@@ -1,0 +1,17 @@
+{
+  "functions": {
+    "api/index.php": {
+      "runtime": "vercel-php@0.9.0"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(?!send-mail\\.php$)(.+)\\.php",
+      "methods": ["GET", "HEAD"],
+      "status": 301,
+      "headers": { "Location": "/$1" }
+    },
+    { "src": "/(assets/.+|sitemap\\.xml)", "dest": "/$1" },
+    { "src": "/(.*)", "dest": "/api/index.php" }
+  ]
+}
