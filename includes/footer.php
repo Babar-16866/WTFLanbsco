@@ -20,6 +20,7 @@ include __DIR__ . '/contact-section.php';
         <a href="/how-we-work.php">How we work</a>
         <a href="/about.php">About Us</a>
         <a href="/services.php">Services</a>
+        <a href="/industries.php">Industries</a>
         <a href="/faqs.php">FAQs</a>
         <a href="/contact.php">Contact</a>
       </div>
@@ -32,6 +33,18 @@ include __DIR__ . '/contact-section.php';
         <a href="/social-media-advertising.php">Social Media Advertising</a>
         <a href="/google-ads.php">Google Ads</a>
         <a href="/digital-marketing.php">Digital Marketing</a>
+      </div>
+      <div>
+        <h4>Industries</h4>
+        <a href="/remodelers.php">Remodelers</a>
+        <a href="/hvac.php">HVAC</a>
+        <a href="/plumbing.php">Plumbing</a>
+        <a href="/roofing.php">Roofing</a>
+        <a href="/pest-control.php">Pest Control</a>
+        <a href="/pool-services.php">Pool Services</a>
+        <a href="/landscaping.php">Landscaping</a>
+        <a href="/handyman.php">Handyman</a>
+        <a href="/power-washing.php">Power Washing</a>
       </div>
       <div>
         <h4>Contact</h4>

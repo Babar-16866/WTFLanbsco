@@ -614,7 +614,7 @@ window.addEventListener('load', () => {
   });
 })();
 
-// Works / Services two-tier category filters
+// Works / Services / Industries two-tier category filters
 (function initCategoryFilters() {
   const SUBS = {
     'graphic-design': [
@@ -670,6 +670,28 @@ window.addEventListener('load', () => {
       { id: 'funnel-design', label: 'Funnel Design' }
     ]
   };
+
+  // Industries - every industry shares the same service tabs
+  const INDUSTRIES = {
+    remodelers: 'Remodelers',
+    hvac: 'HVAC',
+    plumbing: 'Plumbing',
+    roofing: 'Roofing',
+    'pest-control': 'Pest Control',
+    'pool-services': 'Pool Services',
+    landscaping: 'Landscaping',
+    handyman: 'Handyman',
+    'power-washing': 'Power Washing'
+  };
+  const INDUSTRY_SUBS = [
+    { id: 'websites', label: 'Websites' },
+    { id: 'local-seo', label: 'Local SEO' },
+    { id: 'google-ads', label: 'Google Ads' },
+    { id: 'social-ads', label: 'Social Ads' }
+  ];
+  Object.keys(INDUSTRIES).forEach((id) => {
+    SUBS[id] = [{ id: 'all', label: 'All ' + INDUSTRIES[id] }].concat(INDUSTRY_SUBS);
+  });
 
   function hasToken(list, token) {
     if (!list || !token) return false;
@@ -769,6 +791,7 @@ window.addEventListener('load', () => {
 
   bindFilterPair('worksFilters', 'worksSubfilters', 'worksGrid', '.work-card');
   bindFilterPair('servicesFilters', 'servicesSubfilters', 'servicesGrid', '.service-detail-card');
+  bindFilterPair('industriesFilters', 'industriesSubfilters', 'industriesGrid', '.service-detail-card');
 })();
 
 // FAQs page — service-specific FAQ tabs (stay on page)

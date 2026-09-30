@@ -3167,7 +3167,7 @@ select option {
 
 /* ===== FOOTER ===== */
 .site-footer { background: var(--footer-bg); color: var(--footer-text); padding: 60px 0 24px; transition: background-color 0.35s var(--ease), color 0.35s var(--ease); }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.footer-grid { display: grid; grid-template-columns: 2fr repeat(5, 1fr); gap: 32px; margin-bottom: 40px; }
 .footer-logo {
   display: inline-flex;
   align-items: center;
@@ -4830,6 +4830,11 @@ button.excel-tag {
   margin-bottom: 40px;
   position: relative;
   z-index: 5;
+}
+
+/* Services / Industries - centered tabs */
+.works-filter-stack--center {
+  align-items: center;
 }
 
 .works-filters {

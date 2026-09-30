@@ -6,6 +6,7 @@
  *   $banner_kicker, $banner_h1 (HTML ok), $banner_lead
  * Optional:
  *   $banner_breadcrumb (plain text after Services /)
+ *   $banner_crumb_label, $banner_crumb_href (parent crumb, Services by default)
  *   $banner_primary_label, $banner_primary_href, $banner_primary_popup (bool)
  *   $banner_secondary_label, $banner_secondary_href
  *   $banner_proof (array of [strong, span])
@@ -13,6 +14,8 @@
  */
 $banner_kicker = $banner_kicker ?? '';
 $banner_breadcrumb = $banner_breadcrumb ?? '';
+$banner_crumb_label = $banner_crumb_label ?? 'Services';
+$banner_crumb_href = $banner_crumb_href ?? '/services.php';
 $banner_h1 = $banner_h1 ?? '';
 $banner_lead = $banner_lead ?? '';
 $banner_primary_label = $banner_primary_label ?? 'Get a quote';
@@ -36,7 +39,7 @@ $banner_card = $banner_card ?? 'Same senior crew from strategy to launch';
     <div class="about-hero-box reveal">
       <div class="about-hero-copy">
         <?php if ($banner_breadcrumb !== ''): ?>
-          <p class="about-hero-crumb"><a href="/services.php">Services</a> / <?php echo htmlspecialchars($banner_breadcrumb); ?></p>
+          <p class="about-hero-crumb"><a href="<?php echo htmlspecialchars($banner_crumb_href); ?>"><?php echo htmlspecialchars($banner_crumb_label); ?></a> / <?php echo htmlspecialchars($banner_breadcrumb); ?></p>
         <?php endif; ?>
         <?php if ($banner_kicker !== ''): ?>
           <p class="page-kicker"><?php echo htmlspecialchars($banner_kicker); ?></p>
@@ -83,7 +86,8 @@ $banner_card = $banner_card ?? 'Same senior crew from strategy to launch';
 <?php
 // Prevent bleed into next include on same request
 unset(
-  $banner_kicker, $banner_breadcrumb, $banner_h1, $banner_lead,
+  $banner_kicker, $banner_breadcrumb, $banner_crumb_label, $banner_crumb_href,
+  $banner_h1, $banner_lead,
   $banner_primary_label, $banner_primary_href, $banner_primary_popup,
   $banner_secondary_label, $banner_secondary_href,
   $banner_proof, $banner_image, $banner_float1, $banner_float2, $banner_card

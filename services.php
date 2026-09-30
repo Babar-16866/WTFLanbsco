@@ -20,7 +20,7 @@ include __DIR__ . '/includes/page-banner.php';
 
 <section class="page-section">
   <div class="container">
-    <div class="works-filter-stack">
+    <div class="works-filter-stack works-filter-stack--center">
       <div class="works-filters" id="servicesFilters" role="tablist" aria-label="Filter services">
         <button type="button" class="works-filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
         <button type="button" class="works-filter" data-filter="graphic-design" role="tab" aria-selected="false">Graphic Design</button>
