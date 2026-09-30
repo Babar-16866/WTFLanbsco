@@ -6731,6 +6731,18 @@ img {
 .about-timeline::before {
   display: none;
 }
+/* ===== INDUSTRIES ===== */
+.card-more-link {
+  display: inline-block;
+  margin-top: 12px;
+}
+.svc-excellence-copy .btn {
+  margin-top: 20px;
+}
+.svc-more .services-cta-band {
+  margin-top: 40px;
+}
+
 /* ===== INSIGHTS ===== */
 .insight-list {
   display: flex;

@@ -68,7 +68,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Quote forms that qualify budgets</li>
             <li>Local SEO for high-value jobs</li>
           </ul>
-          <a href="/remodelers.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/remodelers.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -85,7 +85,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Online booking and call tracking</li>
             <li>Maintenance plan sign-ups</li>
           </ul>
-          <a href="/hvac.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more &rarr;</a>
+          <a href="/hvac.php" class="text-link-blue card-more-link">Learn more &rarr;</a>
         </div>
       </article>
 
@@ -101,7 +101,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Water heater &amp; repipe landing pages</li>
             <li>Local SEO for every service area</li>
           </ul>
-          <a href="/plumbing.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/plumbing.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -118,7 +118,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Storm &amp; insurance claim pages</li>
             <li>Financing and warranty callouts</li>
           </ul>
-          <a href="/roofing.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/roofing.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -135,7 +135,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Recurring plan sign-ups</li>
             <li>Seasonal campaign planning</li>
           </ul>
-          <a href="/pest-control.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/pest-control.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -152,7 +152,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Repair &amp; equipment pages</li>
             <li>Opening and closing campaigns</li>
           </ul>
-          <a href="/pool-services.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/pool-services.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -169,7 +169,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Maintenance contract sign-ups</li>
             <li>Seasonal lead campaigns</li>
           </ul>
-          <a href="/landscaping.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/landscaping.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -186,7 +186,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Easy online booking</li>
             <li>Repeat customer campaigns</li>
           </ul>
-          <a href="/handyman.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/handyman.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -203,7 +203,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Before/after galleries</li>
             <li>Residential &amp; commercial pages</li>
           </ul>
-          <a href="/power-washing.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/power-washing.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -223,7 +223,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Project story pages</li>
             <li>Consultation booking</li>
           </ul>
-          <a href="/remodelers.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/remodelers.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -241,7 +241,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Google Business Profile</li>
             <li>Review generation</li>
           </ul>
-          <a href="/remodelers.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/remodelers.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -260,7 +260,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Budget-qualified landing pages</li>
             <li>Call &amp; form tracking</li>
           </ul>
-          <a href="/remodelers.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/remodelers.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -279,7 +279,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Homeowner audience targeting</li>
             <li>Retargeting site visitors</li>
           </ul>
-          <a href="/remodelers.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/remodelers.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -298,7 +298,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Online scheduling</li>
             <li>Financing &amp; rebate pages</li>
           </ul>
-          <a href="/hvac.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more &rarr;</a>
+          <a href="/hvac.php" class="text-link-blue card-more-link">Learn more &rarr;</a>
         </div>
       </article>
 
@@ -315,7 +315,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Google Business Profile</li>
             <li>Review velocity</li>
           </ul>
-          <a href="/hvac.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more &rarr;</a>
+          <a href="/hvac.php" class="text-link-blue card-more-link">Learn more &rarr;</a>
         </div>
       </article>
 
@@ -332,7 +332,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>LSA management</li>
             <li>Call tracking</li>
           </ul>
-          <a href="/hvac.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more &rarr;</a>
+          <a href="/hvac.php" class="text-link-blue card-more-link">Learn more &rarr;</a>
         </div>
       </article>
 
@@ -349,7 +349,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Homeowner targeting</li>
             <li>Plan sign-up retargeting</li>
           </ul>
-          <a href="/hvac.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more &rarr;</a>
+          <a href="/hvac.php" class="text-link-blue card-more-link">Learn more &rarr;</a>
         </div>
       </article>
 
@@ -367,7 +367,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Emergency service pages</li>
             <li>Trust badges &amp; reviews</li>
           </ul>
-          <a href="/plumbing.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/plumbing.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -385,7 +385,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Google Business Profile</li>
             <li>Review requests</li>
           </ul>
-          <a href="/plumbing.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/plumbing.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -403,7 +403,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Local Services Ads</li>
             <li>Geo &amp; zip targeting</li>
           </ul>
-          <a href="/plumbing.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/plumbing.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -421,7 +421,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Neighborhood targeting</li>
             <li>Past-customer retargeting</li>
           </ul>
-          <a href="/plumbing.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/plumbing.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -440,7 +440,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Warranty &amp; financing pages</li>
             <li>Project photo galleries</li>
           </ul>
-          <a href="/roofing.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/roofing.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -458,7 +458,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Google Business Profile</li>
             <li>Review strategy</li>
           </ul>
-          <a href="/roofing.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/roofing.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -476,7 +476,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Storm-ready campaigns</li>
             <li>Lead quality tracking</li>
           </ul>
-          <a href="/roofing.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/roofing.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -494,7 +494,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Neighborhood targeting</li>
             <li>Inspection offers</li>
           </ul>
-          <a href="/roofing.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/roofing.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -514,7 +514,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Plan comparison tables</li>
             <li>Online booking</li>
           </ul>
-          <a href="/pest-control.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/pest-control.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -533,7 +533,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Google Business Profile</li>
             <li>Review requests</li>
           </ul>
-          <a href="/pest-control.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/pest-control.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -552,7 +552,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Local Services Ads</li>
             <li>Seasonal budgets</li>
           </ul>
-          <a href="/pest-control.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/pest-control.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -571,7 +571,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Neighborhood targeting</li>
             <li>Plan upgrade retargeting</li>
           </ul>
-          <a href="/pest-control.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/pest-control.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -591,7 +591,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Repair &amp; equipment pages</li>
             <li>Quote requests</li>
           </ul>
-          <a href="/pool-services.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/pool-services.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -610,7 +610,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Google Business Profile</li>
             <li>Review generation</li>
           </ul>
-          <a href="/pool-services.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/pool-services.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -629,7 +629,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Seasonal budgets</li>
             <li>Call &amp; form tracking</li>
           </ul>
-          <a href="/pool-services.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/pool-services.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -648,7 +648,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Route-area targeting</li>
             <li>Opening season offers</li>
           </ul>
-          <a href="/pool-services.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/pool-services.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -668,7 +668,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Design consultation booking</li>
             <li>Maintenance plan pages</li>
           </ul>
-          <a href="/landscaping.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/landscaping.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -687,7 +687,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Google Business Profile</li>
             <li>Review strategy</li>
           </ul>
-          <a href="/landscaping.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/landscaping.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -706,7 +706,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Seasonal budgets</li>
             <li>Lead quality tracking</li>
           </ul>
-          <a href="/landscaping.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/landscaping.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -725,7 +725,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Homeowner targeting</li>
             <li>Seasonal offers</li>
           </ul>
-          <a href="/landscaping.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/landscaping.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -744,7 +744,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Online booking</li>
             <li>Reviews &amp; trust badges</li>
           </ul>
-          <a href="/handyman.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/handyman.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -762,7 +762,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Google Business Profile</li>
             <li>Review generation</li>
           </ul>
-          <a href="/handyman.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/handyman.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -780,7 +780,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Tight geo targeting</li>
             <li>Call tracking</li>
           </ul>
-          <a href="/handyman.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/handyman.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -798,7 +798,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Neighborhood targeting</li>
             <li>Repeat customer offers</li>
           </ul>
-          <a href="/handyman.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/handyman.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -818,7 +818,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Instant quote forms</li>
             <li>Residential &amp; commercial pages</li>
           </ul>
-          <a href="/power-washing.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/power-washing.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -837,7 +837,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Google Business Profile</li>
             <li>Photo-rich reviews</li>
           </ul>
-          <a href="/power-washing.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/power-washing.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -856,7 +856,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Seasonal budgets</li>
             <li>Quote form tracking</li>
           </ul>
-          <a href="/power-washing.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/power-washing.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>
@@ -875,7 +875,7 @@ include __DIR__ . '/includes/page-banner.php';
             <li>Neighborhood targeting</li>
             <li>Seasonal offers</li>
           </ul>
-          <a href="/power-washing.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more
+          <a href="/power-washing.php" class="text-link-blue card-more-link">Learn more
             &rarr;</a>
         </div>
       </article>

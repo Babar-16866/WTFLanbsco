@@ -108,7 +108,7 @@ include __DIR__ . '/includes/page-banner.php';
           <li>Online booking and call tracking</li>
           <li>Maintenance plan sign-ups</li>
         </ul>
-        <a href="/contact.php" class="btn btn-lime" style="margin-top:20px">Start a project</a>
+        <a href="/contact.php" class="btn btn-lime">Start a project</a>
       </div>
       <div class="svc-excellence-visual">
         <div class="svc-excellence-visual-main">
@@ -169,7 +169,7 @@ include __DIR__ . '/includes/testimonialslider.php';
       <a href="/handyman.php" class="excel-tag">Handyman</a>
       <a href="/power-washing.php" class="excel-tag">Power Washing</a>
     </div>
-    <div class="services-cta-band reveal" style="margin-top:40px">
+    <div class="services-cta-band reveal">
       <div>
         <h3>Let's discuss growing your HVAC business</h3>
         <p>We'll help you define the right next step.</p>
