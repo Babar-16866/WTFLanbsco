@@ -18,14 +18,16 @@ include __DIR__ . '/includes/header.php';
           <br><span class="nowrap">Home-Service Businesses</span>
         </h1>
         -->
-        <h1 class="hero-heading" aria-label="Your work deserves better branding, websites, marketing, leads, sales, projects.">
+        <h1 class="hero-heading" aria-label="Your work deserves better Branding, Websites, Marketing, Leads, Sales, Projects.">
           <span aria-hidden="true">Your work deserves better</span><br>
-          <span class="accent-lime typewriter" data-typewriter="branding|websites|marketing|leads|sales|projects" aria-hidden="true"></span>
+          <span class="accent-lime typewriter" data-typewriter="Branding|Websites|Marketing|Leads|Sales|Projects" aria-hidden="true"></span>
         </h1>
       </header>
 
+      <!--
       <div class="hero-buttons reveal reveal-delay-2">
         <div class="buttons-group" id="fanButtons">
+      -->
           <!--
           <a href="#contact" class="btn-fan btn-fan-1">Discuss your website</a>
           <a href="#contact" class="btn-fan btn-fan-2">Get quote</a>
@@ -33,6 +35,7 @@ include __DIR__ . '/includes/header.php';
           <a href="mailto:hello@wtflabs.com" class="btn-fan btn-fan-4">Email</a>
           <a href="#contact" class="btn-fan btn-fan-5">Book a call</a>
           -->
+      <!--
           <a href="/free-audit.php" class="btn-fan btn-fan-1">FREE Audit</a>
           <a href="#contact" class="btn-fan btn-fan-2">Book discovery call</a>
           <a href="/works.php" class="btn-fan btn-fan-3">Just Show Me The Work</a>
@@ -40,6 +43,7 @@ include __DIR__ . '/includes/header.php';
           <a href="mailto:hello@wtflabs.com" class="btn-fan btn-fan-5">Email</a>
         </div>
       </div>
+      -->
 
       <a href="#testimonials" class="clutch-card reveal reveal-delay-3">
         <img src="/assets/images/clutch.svg" alt="Reviews" class="clutch-logo">
@@ -114,12 +118,12 @@ include __DIR__ . '/includes/header.php';
 <!-- THE PROBLEM -->
 <section class="problem-section">
   <div class="container">
+    <div class="section-header center problem-head reveal">
+      <h2>Stop losing good jobs to lower-bid competitors with <span class="heading-accent">better marketing.</span></h2>
+      <p class="section-desc center-desc">You can have better crews, better service, better materials, and better results, and still lose the job if the other company looks more credible online.</p>
+      <p class="section-desc center-desc">That gap costs home-service businesses in different ways:</p>
+    </div>
     <div class="why-done problem-box reveal">
-      <div class="why-done-head problem-head">
-        <h2>Stop losing good jobs to lower-bid competitors with <span class="accent-lime">better marketing.</span></h2>
-        <p>You can have better crews, better service, better materials, and better results, and still lose the job if the other company looks more credible online.</p>
-        <p>That gap costs home-service businesses in different ways:</p>
-      </div>
       <div class="why-done-grid">
         <article class="why-done-card">
           <span class="why-done-num problem-label">Premium Projects</span>
@@ -480,6 +484,7 @@ include __DIR__ . '/includes/header.php';
       </div>
     </div>
 
+    <!--
     <div class="excel-cta-bar reveal">
       <div class="excel-cta-copy">
         <strong>Ready to build?</strong>
@@ -497,6 +502,7 @@ include __DIR__ . '/includes/header.php';
         </a>
       </div>
     </div>
+    -->
   </div>
 </section>
 
@@ -1191,7 +1197,7 @@ include __DIR__ . '/includes/testimonialslider.php';
 <!-- FINAL CTA -->
 <section class="final-cta-section">
   <div class="container final-cta-inner reveal">
-    <h2 class="final-cta-title">Your work already has value. <span class="accent-lime">Make sure your marketing shows it.</span></h2>
+    <h2 class="final-cta-title">Your Work Already Has Value. <span class="accent-lime">Make Sure Your Marketing Shows It.</span></h2>
     <p class="final-cta-body">We&rsquo;ll review your current website and conversion path, and show you the highest-impact opportunities we see.</p>
     <a href="/free-audit.php" class="btn btn-lime btn-lg">Claim Your FREE Audit</a>
     <p class="final-cta-micro">No pressure. No generic 50-page report. Just useful feedback on what is helping, what is hurting, and what we would fix first.</p>

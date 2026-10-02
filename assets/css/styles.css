@@ -6961,36 +6961,47 @@ img {
 
 /* ===== THE PROBLEM ===== */
 .problem-section {
-  padding: 40px 0 20px;
+  padding: 80px 0 20px;
 }
-.problem-box .problem-head {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 14px;
-  margin-bottom: 36px;
+.problem-head {
+  max-width: 860px;
+  margin: 0 auto 40px;
 }
 .problem-head h2 {
-  font-size: clamp(30px, 4vw, 46px);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 1.08;
-  max-width: 860px;
+  text-wrap: balance;
 }
-.problem-head p {
+.problem-head .section-desc {
   max-width: 640px;
-  font-size: 17px;
-  line-height: 1.55;
-  color: rgba(255, 255, 255, 0.65);
+  text-wrap: pretty;
+}
+.problem-head .section-desc + .section-desc {
+  margin-top: 8px;
+}
+.problem-box {
+  margin-top: 0;
 }
 .problem-label {
   font-size: clamp(22px, 2vw, 26px);
   letter-spacing: -0.03em;
   line-height: 1.1;
 }
+.problem-guides .guides-header {
+  max-width: 900px;
+}
+.problem-guides .guides-header h2 {
+  text-wrap: balance;
+}
+.problem-guides .guides-header h2 span {
+  white-space: nowrap;
+}
+.problem-guides .guides-desc {
+  max-width: 640px;
+  text-wrap: pretty;
+}
 .problem-guides .guides-desc + .guides-desc {
   margin-top: 10px;
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 600;
 }
 .problem-guides .guide-item {
   min-height: 0;
@@ -7001,8 +7012,8 @@ img {
   color: rgba(255, 255, 255, 0.78);
 }
 @media (max-width: 768px) {
-  .problem-section { padding: 20px 0 8px; }
-  .problem-box .problem-head { align-items: center; }
+  .problem-section { padding: 56px 0 8px; }
+  .problem-head { margin-bottom: 28px; }
 }
 
 /* ===== INDUSTRIES (HOME) ===== */
@@ -7012,9 +7023,9 @@ img {
 .brand-card-logos--top {
   margin-top: 0;
   border-top: 0;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
-  gap: 8px 18px;
+  gap: 12px;
   padding: 26px 20px 0;
   background: transparent;
 }
@@ -7026,8 +7037,12 @@ img {
   padding-top: 16px;
 }
 .brands-grid--three .brand-card-logos--top {
-  min-height: 70px;
+  min-height: 0;
   align-content: center;
+}
+.brands-grid--three .brand-logo {
+  font-size: 11px;
+  letter-spacing: 0;
 }
 .brands-grid--three .brand-card-head .btn {
   margin-top: auto;
