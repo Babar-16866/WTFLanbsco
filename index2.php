@@ -46,6 +46,7 @@ include __DIR__ . '/includes/header.php';
       </div>
       -->
 
+      <!--
       <a href="#testimonials" class="clutch-card reveal reveal-delay-3">
         <img src="/assets/images/clutch.svg" alt="Reviews" class="clutch-logo">
         <div class="clutch-stars">
@@ -58,6 +59,21 @@ include __DIR__ . '/includes/header.php';
         <div class="clutch-text">
           <strong>4.8</strong> of 5 based on <strong>48</strong> client reviews
         </div>
+      </a>
+      -->
+      <a href="#testimonials" class="hero-reviews-btn reveal reveal-delay-3">
+        <span class="hero-reviews-avatars" aria-hidden="true">
+          <img src="/assets/images/team-1.jpg" alt="" width="36" height="36">
+          <img src="/assets/images/team-2.jpg" alt="" width="36" height="36">
+          <img src="/assets/images/team-3.jpg" alt="" width="36" height="36">
+        </span>
+        <span class="hero-reviews-copy">
+          <span class="hero-reviews-stars" aria-hidden="true">★★★★★</span>
+          <span class="hero-reviews-label">See What Clients Say</span>
+        </span>
+        <span class="hero-reviews-arrow" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3.5 8.5 8 13l4.5-4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
       </a>
 
       <div class="hero-definition reveal reveal-delay-1">
@@ -431,7 +447,7 @@ include __DIR__ . '/includes/header.php';
 
         <div class="excel-stack">
           <a href="/seo.php" class="excel-card excel-card--sm excel-card--row"
-            style="--card-grad:linear-gradient(115deg,#2563eb 0%,color-mix(in srgb, var(--pal-primary) 90%, var(--pal-light)) 50%,var(--pal-primary) 100%)">
+            style="--card-grad:linear-gradient(115deg,#24503E 0%,#2F6B52 55%,#1E4233 100%)">
             <div class="excel-card-media excel-card-media--devices">
               <img loading="lazy" src="/assets/images/excel-landing.webp" alt="SEO &amp; Local Search">
             </div>
@@ -441,7 +457,7 @@ include __DIR__ . '/includes/header.php';
             </div>
           </a>
           <a href="/google-ads.php" class="excel-card excel-card--sm excel-card--row"
-            style="--card-grad:linear-gradient(135deg,#ec4899 0%,var(--pal-primary) 55%,color-mix(in srgb, var(--pal-primary) 76%, var(--pal-dark)) 100%)">
+            style="--card-grad:linear-gradient(135deg,#C98A4C 0%,#B87333 50%,#7A4A1F 100%)">
             <div class="excel-card-media excel-card-media--orb">
               <img loading="lazy" src="/assets/images/excel-ai-orb.jpg" alt="Google Ads">
             </div>
@@ -466,7 +482,7 @@ include __DIR__ . '/includes/header.php';
         -->
 
         <a href="/social-media-advertising.php" class="excel-card excel-card--tall"
-          style="--card-grad:linear-gradient(165deg,#1d4ed8 0%,#2563eb 40%,#3b82f6 100%)">
+          style="--card-grad:linear-gradient(165deg,#10231B 0%,#1E4233 60%,#2F6B52 100%)">
           <div class="excel-card-copy">
             <h3>Social Media Advertising</h3>
             <p>Showcase your work, offers and get local attention with qualified leads.</p>
@@ -477,8 +493,8 @@ include __DIR__ . '/includes/header.php';
         </a>
 
         <div class="excel-stack">
-          <a href="/graphic-design.php" class="excel-card excel-card--sm excel-card--row excel-card--on-lime"
-            style="--card-grad:linear-gradient(120deg,var(--pal-accent) 0%,color-mix(in srgb, var(--pal-accent) 89%, var(--pal-dark)) 45%,var(--pal-primary) 100%)">
+          <a href="/graphic-design.php" class="excel-card excel-card--sm excel-card--row"
+            style="--card-grad:linear-gradient(140deg,#1E4233 0%,#2F6B52 55%,#B87333 100%)">
             <div class="excel-card-media excel-card-media--devices">
               <img loading="lazy" src="/assets/images/excel-web3.webp" alt="Branding &amp; Creative">
             </div>
@@ -488,7 +504,7 @@ include __DIR__ . '/includes/header.php';
             </div>
           </a>
           <a href="/digital-marketing.php" class="excel-card excel-card--sm excel-card--row"
-            style="--card-grad:linear-gradient(135deg,#14b8a6 0%,#06b6d4 45%,#3b82f6 100%)">
+            style="--card-grad:linear-gradient(135deg,#2F6B52 0%,#24503E 50%,#10231B 100%)">
             <div class="excel-card-media excel-card-media--orb">
               <img loading="lazy" src="/assets/images/excel-branding.webp" alt="Full-Service Digital Marketing">
             </div>
@@ -619,7 +635,7 @@ include __DIR__ . '/includes/header.php';
     </div>
 
     <div class="works-grid home-works-grid reveal" id="homeWorksGrid" data-smooth>
-      <article class="work-card" data-tags="web-development web-design" data-subs="web-app custom-web product-sites" data-industries="plumbing hvac" data-live="https://heavy-route.vercel.app/">
+      <article class="work-card" data-tags="web-development web-design" data-subs="web-app custom-web product-sites" data-industries="plumbing hvac" data-live="https://heavyroutes.netlify.app/">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/work-heavyroute.jpg" alt="HeavyRoute AI">
         </div>

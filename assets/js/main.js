@@ -1353,35 +1353,23 @@ window.addEventListener('load', () => {
 
   // Play icon
   let cursor = null;
-  let cx = 0, cy = 0, tx = 0, ty = 0, rafId = null;
+  let cx = 0, cy = 0, tx = 0, ty = 0, rafId = null, inside = false;
   if (finePointer) {
     cursor = document.createElement('div');
     cursor.className = 'street-play-cursor';
     cursor.setAttribute('aria-hidden', 'true');
-    cursor.innerHTML = '<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg>';
+    cursor.innerHTML =
+      '<svg class="street-play-ring" viewBox="0 0 120 120"><defs><path id="streetPlayPath" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs>' +
+      '<text textLength="286" lengthAdjust="spacing"><textPath href="#streetPlayPath">PLAY REVIEW \u2022 PLAY REVIEW \u2022 </textPath></text></svg>' +
+      '<span class="street-play-core"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg></span>';
     document.body.appendChild(cursor);
     document.documentElement.classList.add('has-video-cursor');
   }
 
-  function moveCursor() {
-    const k = reduceMotion ? 1 : 0.25;
-    cx += (tx - cx) * k;
-    cy += (ty - cy) * k;
-    cursor.style.transform = `translate3d(${cx}px, ${cy}px, 0)`;
-    if (Math.abs(tx - cx) > 0.3 || Math.abs(ty - cy) > 0.3) {
-      rafId = requestAnimationFrame(moveCursor);
-    } else {
-      rafId = null;
-    }
-  }
-
-  function enter(card, e) {
+  function enter(card) {
     current = card;
     playCard(card);
     if (cursor) {
-      tx = cx = e.clientX;
-      ty = cy = e.clientY;
-      cursor.style.transform = `translate3d(${cx}px, ${cy}px, 0)`;
       cursor.classList.add('is-visible');
       document.documentElement.classList.add('is-over-video');
     }
@@ -1396,27 +1384,45 @@ window.addEventListener('load', () => {
     }
   }
 
+  // Follow
+  function tick() {
+    const k = reduceMotion ? 1 : 0.2;
+    cx += (tx - cx) * k;
+    cy += (ty - cy) * k;
+    cursor.style.transform = `translate3d(${cx}px, ${cy}px, 0)`;
+    if (inside && !modalOpen()) {
+      const hit = document.elementFromPoint(tx, ty);
+      const card = hit && hit.closest('.street-card--video');
+      const over = card && section.contains(card) ? card : null;
+      if (over !== current) {
+        if (current) leave();
+        if (over) enter(over);
+      }
+    }
+    const moving = Math.abs(tx - cx) > 0.3 || Math.abs(ty - cy) > 0.3;
+    rafId = inside || moving ? requestAnimationFrame(tick) : null;
+  }
+
   if (finePointer) {
-    section.addEventListener('mouseover', (e) => {
-      if (modalOpen()) return;
-      const card = e.target.closest('.street-card--video');
-      if (!card || card === current) return;
-      if (current) leave();
-      enter(card, e);
+    section.addEventListener('pointerenter', (e) => {
+      if (e.pointerType !== 'mouse') return;
+      inside = true;
+      tx = cx = e.clientX;
+      ty = cy = e.clientY;
+      if (!rafId) rafId = requestAnimationFrame(tick);
     });
 
-    section.addEventListener('mouseout', (e) => {
-      if (!current) return;
-      const to = e.relatedTarget;
-      if (to && current.contains(to)) return;
-      leave();
-    });
-
-    section.addEventListener('mousemove', (e) => {
-      if (!cursor || !current) return;
+    section.addEventListener('pointermove', (e) => {
+      if (e.pointerType !== 'mouse') return;
+      inside = true;
       tx = e.clientX;
       ty = e.clientY;
-      if (!rafId) rafId = requestAnimationFrame(moveCursor);
+      if (!rafId) rafId = requestAnimationFrame(tick);
+    });
+
+    section.addEventListener('pointerleave', () => {
+      inside = false;
+      if (current) leave();
     });
   }
 
@@ -1552,5 +1558,32 @@ window.addEventListener('load', () => {
       e.preventDefault();
       activate(panel);
     });
+  });
+})();
+
+// Filter labels
+(function initFilterLabels() {
+  const industries = document.getElementById('homeWorksIndustries');
+  const services = document.getElementById('homeWorksFilters');
+  const subs = document.getElementById('homeWorksSubfilters');
+  if (!industries || !services || !subs) return;
+  const industryRow = industries.closest('.home-filter-row');
+  const serviceRow = services.closest('.home-filter-row');
+
+  industries.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-industry]');
+    if (!btn) return;
+    industryRow.classList.toggle('is-done', btn.getAttribute('data-industry') !== 'all');
+    serviceRow.classList.remove('is-done');
+  });
+
+  services.addEventListener('click', (e) => {
+    if (e.target.closest('[data-filter]')) serviceRow.classList.remove('is-done');
+  });
+
+  subs.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-sub]');
+    if (!btn) return;
+    serviceRow.classList.toggle('is-done', btn.getAttribute('data-sub') !== 'all');
   });
 })();

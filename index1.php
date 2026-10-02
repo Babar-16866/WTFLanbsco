@@ -46,6 +46,7 @@ include __DIR__ . '/includes/header.php';
       </div>
       -->
 
+      <!--
       <a href="#testimonials" class="clutch-card reveal reveal-delay-3">
         <img src="/assets/images/clutch.svg" alt="Reviews" class="clutch-logo">
         <div class="clutch-stars">
@@ -58,6 +59,21 @@ include __DIR__ . '/includes/header.php';
         <div class="clutch-text">
           <strong>4.8</strong> of 5 based on <strong>48</strong> client reviews
         </div>
+      </a>
+      -->
+      <a href="#testimonials" class="hero-reviews-btn reveal reveal-delay-3">
+        <span class="hero-reviews-avatars" aria-hidden="true">
+          <img src="/assets/images/team-1.jpg" alt="" width="36" height="36">
+          <img src="/assets/images/team-2.jpg" alt="" width="36" height="36">
+          <img src="/assets/images/team-3.jpg" alt="" width="36" height="36">
+        </span>
+        <span class="hero-reviews-copy">
+          <span class="hero-reviews-stars" aria-hidden="true">★★★★★</span>
+          <span class="hero-reviews-label">See What Clients Say</span>
+        </span>
+        <span class="hero-reviews-arrow" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3.5 8.5 8 13l4.5-4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
       </a>
 
       <div class="hero-definition reveal reveal-delay-1">
@@ -477,8 +493,8 @@ include __DIR__ . '/includes/header.php';
         </a>
 
         <div class="excel-stack">
-          <a href="/graphic-design.php" class="excel-card excel-card--sm excel-card--row excel-card--on-lime"
-            style="--card-grad:linear-gradient(120deg,var(--pal-accent) 0%,color-mix(in srgb, var(--pal-accent) 89%, var(--pal-dark)) 45%,var(--pal-primary) 100%)">
+          <a href="/graphic-design.php" class="excel-card excel-card--sm excel-card--row"
+            style="--card-grad:linear-gradient(150deg,color-mix(in srgb, var(--pal-primary) 60%, var(--pal-dark)) 0%,var(--pal-primary) 55%,color-mix(in srgb, var(--pal-primary) 70%, var(--pal-light)) 100%)">
             <div class="excel-card-media excel-card-media--devices">
               <img loading="lazy" src="/assets/images/excel-web3.webp" alt="Branding &amp; Creative">
             </div>
@@ -619,7 +635,7 @@ include __DIR__ . '/includes/header.php';
     </div>
 
     <div class="works-grid home-works-grid reveal" id="homeWorksGrid" data-smooth>
-      <article class="work-card" data-tags="web-development web-design" data-subs="web-app custom-web product-sites" data-industries="plumbing hvac" data-live="https://heavy-route.vercel.app/">
+      <article class="work-card" data-tags="web-development web-design" data-subs="web-app custom-web product-sites" data-industries="plumbing hvac" data-live="https://heavyroutes.netlify.app/">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/work-heavyroute.jpg" alt="HeavyRoute AI">
         </div>
