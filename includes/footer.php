@@ -13,6 +13,7 @@ include __DIR__ . '/contact-section.php';
         <p>WTF Labs - B2B website design & development since 2018.</p>
         <p class="footer-address">742 Innovation Drive, Suite 200<br>Austin, TX 78701, USA</p>
       </div>
+      <!--
       <div>
         <h4>Navigation</h4>
         <a href="/">Home</a>
@@ -34,6 +35,25 @@ include __DIR__ . '/contact-section.php';
         <a href="/google-ads.php">Google Ads</a>
         <a href="/digital-marketing.php">Digital Marketing</a>
       </div>
+      -->
+      <div>
+        <h4>Company</h4>
+        <a href="/about.php">About</a>
+        <a href="/works.php">Work</a>
+        <a href="/how-we-work.php">How We Work</a>
+        <a href="/#testimonials">Reviews</a>
+        <a href="/contact.php">Contact</a>
+        <a href="/faqs.php">FAQs</a>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="/web-design.php">Web Design &amp; Development</a>
+        <a href="/seo.php">SEO &amp; Local Search</a>
+        <a href="/google-ads.php">Google Ads</a>
+        <a href="/social-media-advertising.php">Social Media Advertising</a>
+        <a href="/graphic-design.php">Branding &amp; Creative</a>
+        <a href="/digital-marketing.php">Full-Service Digital Marketing</a>
+      </div>
       <div>
         <h4>Industries</h4>
         <a href="/remodelers.php">Remodelers</a>
@@ -46,6 +66,7 @@ include __DIR__ . '/contact-section.php';
         <a href="/handyman.php">Handyman</a>
         <a href="/power-washing.php">Power Washing</a>
       </div>
+      <!--
       <div>
         <h4>Contact</h4>
         <a href="mailto:hello@wtflabs.com">hello@wtflabs.com</a>
@@ -53,15 +74,28 @@ include __DIR__ . '/contact-section.php';
         <a href="https://wa.me/15550001234" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         <a href="/contact.php" data-open-popup>Get a quote</a>
       </div>
+      -->
+      <div>
+        <h4>Resources</h4>
+        <a href="/insights.php">Insights</a>
+        <a href="/website-brief.php">Website Brief</a>
+        <a href="/marketing-brief.php">Marketing Brief</a>
+        <a href="/client-feedback.php">Client Feedback</a>
+      </div>
       <div>
         <h4>Legal</h4>
         <a href="/privacy-policy.php">Privacy Policy</a>
+        <a href="/terms-and-conditions.php">Terms</a>
         <a href="/refund-policy.php">Refund Policy</a>
-        <a href="/terms-and-conditions.php">Terms &amp; Conditions</a>
       </div>
     </div>
     <div class="container footer-copy"><p>&copy; <?php echo date('Y'); ?> WTF Labs. All rights reserved.</p></div>
   </footer>
+
+  <?php if ($current_page !== 'works'): ?>
+  <!-- Sticky work CTA -->
+  <a href="/works.php" class="btn btn-lime sticky-work-cta" id="stickyWorkCta" aria-hidden="true" tabindex="-1">Just Show Me The Work</a>
+  <?php endif; ?>
 
   <!-- Brand popup -->
   <div class="promo-popup" id="promoPopup" hidden>

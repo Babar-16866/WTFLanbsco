@@ -51,6 +51,7 @@ require_once __DIR__ . '/config.php';
         <li class="nav-dropdown">
           <a href="/services.php" class="nav-dropdown-btn"<?php echo $current_page === 'services' ? ' aria-current="page"' : ''; ?>>Services <span>&#9662;</span></a>
           <div class="nav-dropdown-menu">
+            <!--
             <a href="/graphic-design.php">Graphic Design</a>
             <a href="/web-design.php">Web Design</a>
             <a href="/web-development.php">Web Development</a>
@@ -58,25 +59,33 @@ require_once __DIR__ . '/config.php';
             <a href="/social-media-advertising.php">Social Media Advertising</a>
             <a href="/google-ads.php">Google Ads</a>
             <a href="/digital-marketing.php">Digital Marketing</a>
+            -->
+            <a href="/web-design.php">Web Design &amp; Development</a>
+            <a href="/seo.php">SEO &amp; Local Search</a>
+            <a href="/google-ads.php">Google Ads</a>
+            <a href="/social-media-advertising.php">Social Media Advertising</a>
+            <a href="/graphic-design.php">Branding &amp; Creative</a>
+            <a href="/digital-marketing.php">Full-Service Digital Marketing</a>
           </div>
         </li>
         <li class="nav-dropdown">
           <a href="/industries.php" class="nav-dropdown-btn"<?php echo $current_page === 'industries' ? ' aria-current="page"' : ''; ?>>Industries <span>&#9662;</span></a>
           <div class="nav-dropdown-menu">
             <a href="/remodelers.php">Remodelers</a>
+            <a href="/roofing.php">Roofing</a>
+            <a href="/handyman.php">Handyman</a>
+            <a href="/power-washing.php">Power Washing</a>
             <a href="/hvac.php">HVAC</a>
             <a href="/plumbing.php">Plumbing</a>
-            <a href="/roofing.php">Roofing</a>
             <a href="/pest-control.php">Pest Control</a>
             <a href="/pool-services.php">Pool Services</a>
             <a href="/landscaping.php">Landscaping</a>
-            <a href="/handyman.php">Handyman</a>
-            <a href="/power-washing.php">Power Washing</a>
           </div>
         </li>
         <li><a href="/works.php"<?php echo $current_page === 'works' ? ' aria-current="page"' : ''; ?>>Work</a></li>
         <li><a href="/how-we-work.php"<?php echo $current_page === 'how-we-work' ? ' aria-current="page"' : ''; ?>>How We Work</a></li>
         <li><a href="/insights.php"<?php echo $current_page === 'insights' ? ' aria-current="page"' : ''; ?>>Insights</a></li>
+        <!--
         <li class="nav-dropdown">
           <a href="/website-brief.php" class="nav-dropdown-btn"<?php echo $current_page === 'forms' ? ' aria-current="page"' : ''; ?>>Forms <span>&#9662;</span></a>
           <div class="nav-dropdown-menu">
@@ -85,6 +94,7 @@ require_once __DIR__ . '/config.php';
             <a href="/client-feedback.php">Client Feedback</a>
           </div>
         </li>
+        -->
         <li><a href="/about.php"<?php echo $current_page === 'about' ? ' aria-current="page"' : ''; ?>>About</a></li>
       </ul>
       <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" title="Toggle theme">
@@ -96,7 +106,7 @@ require_once __DIR__ . '/config.php';
           <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3 7 7 0 1 0 21 14.5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
         </svg>
       </button>
-      <a href="/free-audit.php" class="btn btn-lime btn-sm">Free Audit</a>
+      <a href="/free-audit.php" class="btn btn-lime btn-sm">FREE Audit</a>
       <button class="nav-burger" type="button" aria-label="Menu"><span></span><span></span></button>
     </nav>
     

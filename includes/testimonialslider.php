@@ -7,8 +7,15 @@ $street_section_id = $street_section_id ?? 'testimonials';
 $street_kicker = $street_kicker ?? 'word on the street';
 ?>
 <section class="street-section" id="<?php echo htmlspecialchars($street_section_id); ?>">
+  <!--
   <div class="container">
     <p class="street-kicker reveal"><span></span> <?php echo htmlspecialchars($street_kicker); ?></p>
+  </div>
+  -->
+  <div class="container">
+    <div class="section-header center street-head reveal">
+      <h2>&hellip;AND THE CROWD GOES <span class="accent-blue">WTF!</span></h2>
+    </div>
   </div>
 
   <div class="street-rows reveal">
@@ -133,5 +140,9 @@ $street_kicker = $street_kicker ?? 'word on the street';
         </article>
       </div>
     </div>
+  </div>
+
+  <div class="container street-cta reveal">
+    <a href="/contact.php" class="btn btn-lime btn-lg" data-open-popup>I Wanna Join Them!</a>
   </div>
 </section>
