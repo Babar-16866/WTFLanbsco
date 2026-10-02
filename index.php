@@ -609,7 +609,7 @@ include __DIR__ . '/includes/header.php';
     </div>
 
     <div class="works-grid home-works-grid reveal" id="homeWorksGrid" data-smooth>
-      <article class="work-card" data-tags="web-development web-design" data-subs="web-app custom-web product-sites" data-industries="plumbing hvac" data-live="https://heavyroute.vercel.app/">
+      <article class="work-card" data-tags="web-development web-design" data-subs="web-app custom-web product-sites" data-industries="plumbing hvac" data-live="https://heavy-route.vercel.app/">
         <div class="work-card-media">
           <img src="/assets/images/work-heavyroute.jpg" alt="HeavyRoute AI">
         </div>

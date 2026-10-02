@@ -1275,8 +1275,8 @@ window.addEventListener('load', () => {
   }
   const footer = document.querySelector('.site-footer');
   const banner = document.getElementById('cookieBanner');
-  let ready = false;
-  let started = false;
+  const hero = document.querySelector('.hero-section, .page-hero, main > section, section');
+  let ready = !hero;
   let footerVisible = false;
 
   function sync() {
@@ -1288,14 +1288,12 @@ window.addEventListener('load', () => {
     cta.style.setProperty('--sticky-offset', bannerOpen ? (banner.offsetHeight + 12) + 'px' : '0px');
   }
 
-  window.addEventListener('scroll', () => {
-    if (started) return;
-    started = true;
-    setTimeout(() => {
-      ready = true;
+  if (hero) {
+    new IntersectionObserver((entries) => {
+      ready = !entries[0].isIntersecting;
       sync();
-    }, 3000);
-  }, { passive: true });
+    }).observe(hero);
+  }
 
   if (footer) {
     new IntersectionObserver((entries) => {
@@ -1308,4 +1306,239 @@ window.addEventListener('load', () => {
     document.getElementById(id)?.addEventListener('click', () => setTimeout(sync, 0));
   });
   window.addEventListener('resize', sync);
+})();
+
+// Testimonial videos
+(function initStreetVideos() {
+  const section = document.querySelector('.street-section');
+  if (!section || !section.querySelector('.street-card--video')) return;
+
+  const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let current = null;
+
+  section.querySelectorAll('.street-card--video').forEach((card) => {
+    const logo = card.querySelector('.street-logo');
+    card.setAttribute('role', 'button');
+    card.tabIndex = 0;
+    card.setAttribute('aria-label', 'Play video review' + (logo ? ' from ' + logo.textContent.trim() : ''));
+  });
+
+  // Hover preview
+  function playCard(card) {
+    const video = card.querySelector('.street-video');
+    if (!video) return;
+    video.muted = true;
+    const p = video.play();
+    if (p && p.catch) p.catch(() => {});
+  }
+
+  function stopAll() {
+    section.querySelectorAll('.street-card--video .street-video').forEach((video) => {
+      if (!video.paused) video.pause();
+    });
+  }
+
+  // Play icon
+  let cursor = null;
+  let cx = 0, cy = 0, tx = 0, ty = 0, rafId = null;
+  if (finePointer) {
+    cursor = document.createElement('div');
+    cursor.className = 'street-play-cursor';
+    cursor.setAttribute('aria-hidden', 'true');
+    cursor.innerHTML = '<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg>';
+    document.body.appendChild(cursor);
+    document.documentElement.classList.add('has-video-cursor');
+  }
+
+  function moveCursor() {
+    const k = reduceMotion ? 1 : 0.25;
+    cx += (tx - cx) * k;
+    cy += (ty - cy) * k;
+    cursor.style.transform = `translate3d(${cx}px, ${cy}px, 0)`;
+    if (Math.abs(tx - cx) > 0.3 || Math.abs(ty - cy) > 0.3) {
+      rafId = requestAnimationFrame(moveCursor);
+    } else {
+      rafId = null;
+    }
+  }
+
+  function enter(card, e) {
+    current = card;
+    playCard(card);
+    if (cursor) {
+      tx = cx = e.clientX;
+      ty = cy = e.clientY;
+      cursor.style.transform = `translate3d(${cx}px, ${cy}px, 0)`;
+      cursor.classList.add('is-visible');
+      document.documentElement.classList.add('is-over-video');
+    }
+  }
+
+  function leave() {
+    current = null;
+    stopAll();
+    if (cursor) {
+      cursor.classList.remove('is-visible');
+      document.documentElement.classList.remove('is-over-video');
+    }
+  }
+
+  if (finePointer) {
+    section.addEventListener('mouseover', (e) => {
+      if (modalOpen()) return;
+      const card = e.target.closest('.street-card--video');
+      if (!card || card === current) return;
+      if (current) leave();
+      enter(card, e);
+    });
+
+    section.addEventListener('mouseout', (e) => {
+      if (!current) return;
+      const to = e.relatedTarget;
+      if (to && current.contains(to)) return;
+      leave();
+    });
+
+    section.addEventListener('mousemove', (e) => {
+      if (!cursor || !current) return;
+      tx = e.clientX;
+      ty = e.clientY;
+      if (!rafId) rafId = requestAnimationFrame(moveCursor);
+    });
+  }
+
+  // Video popup
+  const modal = document.createElement('div');
+  modal.className = 'street-video-modal';
+  modal.hidden = true;
+  modal.setAttribute('role', 'dialog');
+  modal.setAttribute('aria-modal', 'true');
+  modal.setAttribute('aria-label', 'Video review');
+  modal.innerHTML =
+    '<div class="street-video-modal-backdrop" data-close></div>' +
+    '<div class="street-video-modal-box">' +
+      '<button type="button" class="street-video-modal-close" aria-label="Close video" data-close>' +
+        '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>' +
+      '</button>' +
+      '<video class="street-video-modal-player" controls playsinline preload="auto"></video>' +
+    '</div>';
+  document.body.appendChild(modal);
+
+  const box = modal.querySelector('.street-video-modal-box');
+  const player = modal.querySelector('.street-video-modal-player');
+  const closeBtn = modal.querySelector('.street-video-modal-close');
+  let lastFocus = null;
+
+  function setRatio(w, h) {
+    if (w > 0 && h > 0) box.style.setProperty('--ratio', (w / h).toFixed(4));
+  }
+  player.addEventListener('loadedmetadata', () => setRatio(player.videoWidth, player.videoHeight));
+
+  function modalOpen() {
+    return !modal.hidden;
+  }
+
+  function openModal(card) {
+    const src = card.dataset.video;
+    if (!src) return;
+    const preview = card.querySelector('.street-video');
+    leave();
+    lastFocus = document.activeElement;
+    box.style.removeProperty('--ratio');
+    if (preview) setRatio(preview.videoWidth, preview.videoHeight);
+    player.src = src;
+    player.currentTime = 0;
+    player.muted = false;
+    modal.hidden = false;
+    document.body.classList.add('street-modal-open');
+    closeBtn.focus();
+    const p = player.play();
+    if (p && p.catch) {
+      // Muted fallback
+      p.catch(() => {
+        player.muted = true;
+        player.play().catch(() => {});
+      });
+    }
+  }
+
+  function closeModal() {
+    if (!modalOpen()) return;
+    player.pause();
+    player.removeAttribute('src');
+    player.load();
+    modal.hidden = true;
+    document.body.classList.remove('street-modal-open');
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  // Marquee drag
+  let pressedCard = null;
+  section.addEventListener('pointerdown', (e) => {
+    pressedCard = e.target.closest('.street-card--video');
+  }, true);
+
+  section.addEventListener('click', (e) => {
+    const card = e.target.closest('.street-card--video') || pressedCard;
+    pressedCard = null;
+    if (card) openModal(card);
+  });
+
+  section.addEventListener('keydown', (e) => {
+    const card = e.target.closest('.street-card--video');
+    if (!card || (e.key !== 'Enter' && e.key !== ' ')) return;
+    e.preventDefault();
+    openModal(card);
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target.closest('[data-close]')) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (!modalOpen()) return;
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      closeModal();
+    } else if (e.key === 'Tab') {
+      // Focus trap
+      e.preventDefault();
+      if (document.activeElement === closeBtn) player.focus();
+      else closeBtn.focus();
+    }
+  });
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      leave();
+      if (modalOpen()) player.pause();
+    }
+  });
+})();
+
+// Services panels
+(function initServicePanels() {
+  const wrap = document.getElementById('svcPanels');
+  if (!wrap) return;
+  const panels = Array.from(wrap.querySelectorAll('.svc-panel'));
+  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  function activate(panel) {
+    panels.forEach((p) => p.classList.toggle('is-active', p === panel));
+  }
+
+  panels.forEach((panel) => {
+    panel.addEventListener('mouseenter', () => {
+      if (canHover) activate(panel);
+    });
+    panel.addEventListener('focus', () => {
+      if (panel.matches(':focus-visible')) activate(panel);
+    });
+    panel.addEventListener('click', (e) => {
+      if (panel.classList.contains('is-active')) return;
+      e.preventDefault();
+      activate(panel);
+    });
+  });
 })();

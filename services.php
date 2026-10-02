@@ -18,6 +18,95 @@ $banner_card = 'Design, build, grow — one senior pod.';
 include __DIR__ . '/includes/page-banner.php';
 ?>
 
+<!-- SERVICES SHOWCASE -->
+<section class="svc-showcase">
+  <div class="container">
+    <div class="section-header center reveal">
+      <p class="subheading">What we do</p>
+      <h2>Every service. <span class="heading-accent">One senior team.</span></h2>
+    </div>
+    <div class="svc-panels reveal" id="svcPanels">
+      <a href="/web-design.php" class="svc-panel is-active">
+        <img src="/assets/images/service-web-design.jpg" alt="Web Design">
+        <span class="svc-panel-num">01</span>
+        <span class="svc-panel-label">Web Design</span>
+        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
+        <div class="svc-panel-body">
+          <h3>Web Design</h3>
+          <p>Clear, modern website design that builds trust and turns visitors into leads.</p>
+          <span class="svc-panel-link">Explore service &rarr;</span>
+        </div>
+      </a>
+      <a href="/web-development.php" class="svc-panel">
+        <img src="/assets/images/service-web-development.jpg" alt="Web Development">
+        <span class="svc-panel-num">02</span>
+        <span class="svc-panel-label">Web Development</span>
+        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
+        <div class="svc-panel-body">
+          <h3>Web Development</h3>
+          <p>Fast, reliable websites and web apps engineered for performance and growth.</p>
+          <span class="svc-panel-link">Explore service &rarr;</span>
+        </div>
+      </a>
+      <a href="/graphic-design.php" class="svc-panel">
+        <img src="/assets/images/service-graphic-design.jpg" alt="Graphic Design">
+        <span class="svc-panel-num">03</span>
+        <span class="svc-panel-label">Graphic Design</span>
+        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
+        <div class="svc-panel-body">
+          <h3>Graphic Design</h3>
+          <p>Visual identity, brand assets, and marketing creatives that look sharp and stay on-brand.</p>
+          <span class="svc-panel-link">Explore service &rarr;</span>
+        </div>
+      </a>
+      <a href="/seo.php" class="svc-panel">
+        <img src="/assets/images/service-seo.jpg" alt="SEO">
+        <span class="svc-panel-num">04</span>
+        <span class="svc-panel-label">SEO</span>
+        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
+        <div class="svc-panel-body">
+          <h3>SEO</h3>
+          <p>Technical, on-page, and content SEO that drives qualified traffic and local visibility.</p>
+          <span class="svc-panel-link">Explore service &rarr;</span>
+        </div>
+      </a>
+      <a href="/social-media-advertising.php" class="svc-panel">
+        <img src="/assets/images/service-social-media.jpg" alt="Social Media Advertising">
+        <span class="svc-panel-num">05</span>
+        <span class="svc-panel-label">Social Media Advertising</span>
+        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
+        <div class="svc-panel-body">
+          <h3>Social Media Advertising</h3>
+          <p>Paid social campaigns that reach the right audience with creatives that stop the scroll.</p>
+          <span class="svc-panel-link">Explore service &rarr;</span>
+        </div>
+      </a>
+      <a href="/google-ads.php" class="svc-panel">
+        <img src="/assets/images/service-google-ads.jpg" alt="Google Ads">
+        <span class="svc-panel-num">06</span>
+        <span class="svc-panel-label">Google Ads</span>
+        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
+        <div class="svc-panel-body">
+          <h3>Google Ads</h3>
+          <p>Search and Performance Max campaigns tuned for cost-efficient leads and revenue.</p>
+          <span class="svc-panel-link">Explore service &rarr;</span>
+        </div>
+      </a>
+      <a href="/digital-marketing.php" class="svc-panel">
+        <img src="/assets/images/service-digital-marketing.jpg" alt="Digital Marketing">
+        <span class="svc-panel-num">07</span>
+        <span class="svc-panel-label">Digital Marketing</span>
+        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
+        <div class="svc-panel-body">
+          <h3>Digital Marketing</h3>
+          <p>Full-funnel strategy that connects brand, content, and paid channels into one growth engine.</p>
+          <span class="svc-panel-link">Explore service &rarr;</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <section class="page-section">
   <div class="container">
     <div class="works-filter-stack works-filter-stack--center">
