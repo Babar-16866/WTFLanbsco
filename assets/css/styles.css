@@ -7938,7 +7938,7 @@ img {
   text-wrap: balance;
 }
 .problem-head .section-desc {
-  max-width: 640px;
+  max-width: 680px;
   text-wrap: pretty;
 }
 .problem-head .section-desc + .section-desc {
