@@ -699,12 +699,6 @@ window.addEventListener('load', () => {
     let activeSub = 'all';
     let activeIndustry = 'all';
 
-    function hasMatch(category, sub) {
-      return Array.from(grid.querySelectorAll(cardSelector)).some((card) =>
-        hasToken(card.getAttribute('data-industries') || '', activeIndustry) &&
-        hasToken(card.getAttribute('data-tags') || '', category) &&
-        (!sub || hasToken(card.getAttribute('data-subs') || '', sub)));
-    }
     // Sub tabs written in the page markup (Industries) are reused as-is
     const staticSubs = subfilters.querySelector('[data-sub]') !== null;
 
@@ -738,6 +732,9 @@ window.addEventListener('load', () => {
 
         card.hidden = !show;
       });
+
+      const empty = document.getElementById(gridId + 'Empty');
+      if (empty) empty.hidden = !!grid.querySelector(cardSelector + ':not([hidden])');
     }
 
     // Smooth
@@ -793,7 +790,6 @@ window.addEventListener('load', () => {
       if (category === 'all' || !SUBS[category]) return;
 
       SUBS[category].forEach((item, index) => {
-        if (industries && activeIndustry !== 'all' && item.id !== 'all' && !hasMatch(category, item.id)) return;
         const btn = document.createElement('button');
         btn.type = 'button';
         btn.className = 'works-filter works-subfilter' + (index === 0 ? ' is-active' : '');
@@ -853,9 +849,8 @@ window.addEventListener('load', () => {
         const isAll = value === 'all';
         el.classList.toggle('is-active', isAll);
         el.setAttribute('aria-selected', isAll ? 'true' : 'false');
-        el.hidden = !isAll && activeIndustry !== 'all' && !hasMatch(value);
       });
-      filters.hidden = activeIndustry === 'all';
+      (filters.closest('.home-filter-row') || filters).hidden = activeIndustry === 'all';
       renderSubs('all', '');
       smoothFilter();
     });
@@ -867,6 +862,23 @@ window.addEventListener('load', () => {
   bindFilterPair('worksFilters', 'worksSubfilters', 'worksGrid', '.work-card');
   bindFilterPair('servicesFilters', 'servicesSubfilters', 'servicesGrid', '.service-detail-card');
   bindFilterPair('industriesFilters', 'industriesSubfilters', 'industriesGrid', '.service-detail-card');
+
+  // Filter from link
+  function selectFromHash() {
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    if (!id) return;
+    ['servicesFilters', 'industriesFilters', 'worksFilters'].forEach((filtersId) => {
+      const btn = document.querySelector('#' + filtersId + ' [data-filter="' + CSS.escape(id) + '"]');
+      if (!btn) return;
+      btn.click();
+      const bar = btn.parentElement;
+      bar.scrollLeft = btn.offsetLeft - (bar.clientWidth - btn.offsetWidth) / 2;
+      const stack = btn.closest('.works-filter-stack');
+      setTimeout(() => stack?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 200);
+    });
+  }
+  selectFromHash();
+  window.addEventListener('hashchange', selectFromHash);
   bindFilterPair('homeWorksFilters', 'homeWorksSubfilters', 'homeWorksGrid', '.work-card', 'homeWorksIndustries');
 })();
 

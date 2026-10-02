@@ -38,7 +38,7 @@ include __DIR__ . '/includes/page-banner.php';
     <div class="works-grid reveal" id="worksGrid">
       <article class="work-card" data-tags="web-design web-development" data-subs="product-sites custom-web landing-pages">
         <div class="work-card-media">
-          <img src="/assets/images/excel-uiux.webp" alt="TorchSensors">
+          <img loading="lazy" src="/assets/images/excel-uiux.webp" alt="TorchSensors">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -56,7 +56,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="work-card" data-tags="web-design digital-marketing" data-subs="landing-pages funnel-design content-marketing">
         <div class="work-card-media">
-          <img src="/assets/images/mockup-2.webp" alt="Solana Payouts">
+          <img loading="lazy" src="/assets/images/mockup-2.webp" alt="Solana Payouts">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -74,7 +74,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="work-card" data-tags="web-development graphic-design" data-subs="web-app brand-collaterals social-media-post">
         <div class="work-card-media">
-          <img src="/assets/images/excel-mobile.webp" alt="Infaces">
+          <img loading="lazy" src="/assets/images/excel-mobile.webp" alt="Infaces">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -92,7 +92,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="work-card" data-tags="web-design graphic-design" data-subs="corporate-sites logo-design brand-collaterals">
         <div class="work-card-media">
-          <img src="/assets/images/service-graphic-design.jpg" alt="Global Leathers">
+          <img loading="lazy" src="/assets/images/service-graphic-design.jpg" alt="Global Leathers">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -110,7 +110,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="work-card" data-tags="web-development seo" data-subs="custom-web technical-seo on-page">
         <div class="work-card-media">
-          <img src="/assets/images/mockup-3.webp" alt="Cofinity-X">
+          <img loading="lazy" src="/assets/images/mockup-3.webp" alt="Cofinity-X">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -128,7 +128,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress redesigns">
         <div class="work-card-media">
-          <img src="/assets/images/service-web-design.jpg" alt="Elvetiko">
+          <img loading="lazy" src="/assets/images/service-web-design.jpg" alt="Elvetiko">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -146,7 +146,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="work-card" data-tags="web-design google-ads" data-subs="landing-pages search-ads remarketing">
         <div class="work-card-media">
-          <img src="/assets/images/mockup-main.webp" alt="Fairway">
+          <img loading="lazy" src="/assets/images/mockup-main.webp" alt="Fairway">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -164,7 +164,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="work-card" data-tags="web-development seo" data-subs="wordpress on-page content-seo">
         <div class="work-card-media">
-          <img src="/assets/images/service-web-development.jpg" alt="Fulfillment for Europe">
+          <img loading="lazy" src="/assets/images/service-web-development.jpg" alt="Fulfillment for Europe">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -182,7 +182,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="work-card" data-tags="web-development digital-marketing" data-subs="custom-web strategy funnel-design">
         <div class="work-card-media">
-          <img src="/assets/images/mockup-1.webp" alt="Automotive platforms">
+          <img loading="lazy" src="/assets/images/mockup-1.webp" alt="Automotive platforms">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -200,7 +200,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="work-card" data-tags="web-design social-media-advertising" data-subs="landing-pages meta-ads creative-testing">
         <div class="work-card-media">
-          <img src="/assets/images/mobile-app.webp" alt="WMails.io">
+          <img loading="lazy" src="/assets/images/mobile-app.webp" alt="WMails.io">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -218,7 +218,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="work-card" data-tags="web-development seo" data-subs="wordpress content-seo technical-seo">
         <div class="work-card-media">
-          <img src="/assets/images/why-craft.jpg" alt="Prosperity Home Loans">
+          <img loading="lazy" src="/assets/images/why-craft.jpg" alt="Prosperity Home Loans">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -236,7 +236,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="work-card" data-tags="web-design graphic-design" data-subs="corporate-sites brand-collaterals business-card">
         <div class="work-card-media">
-          <img src="/assets/images/excel-branding.webp" alt="SolvoWorld">
+          <img loading="lazy" src="/assets/images/excel-branding.webp" alt="SolvoWorld">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">

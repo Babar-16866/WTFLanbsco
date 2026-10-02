@@ -58,7 +58,7 @@ include __DIR__ . '/includes/page-banner.php';
       <!-- Overview cards: visible on All -->
       <article class="service-detail-card" data-level="overview" data-tags="remodelers">
         <div class="service-detail-media">
-          <a href="/remodelers.php"><img src="/assets/images/industry-remodelers-1.webp" alt="Remodelers"></a>
+          <a href="/remodelers.php"><img loading="lazy" src="/assets/images/industry-remodelers-1.webp" alt="Remodelers"></a>
         </div>
         <div class="service-detail-body">
           <h2><a href="/remodelers.php">Remodelers</a></h2>
@@ -75,7 +75,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="overview" data-tags="hvac">
         <div class="service-detail-media">
-          <a href="/hvac.php"><img src="/assets/images/industry-hvac-1.webp" alt="HVAC"></a>
+          <a href="/hvac.php"><img loading="lazy" src="/assets/images/industry-hvac-1.webp" alt="HVAC"></a>
         </div>
         <div class="service-detail-body">
           <h2><a href="/hvac.php">HVAC</a></h2>
@@ -91,7 +91,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="overview" data-tags="plumbing">
         <div class="service-detail-media">
-          <a href="/plumbing.php"><img src="/assets/images/industry-plumbing-1.webp" alt="Plumbing"></a>
+          <a href="/plumbing.php"><img loading="lazy" src="/assets/images/industry-plumbing-1.webp" alt="Plumbing"></a>
         </div>
         <div class="service-detail-body">
           <h2><a href="/plumbing.php">Plumbing</a></h2>
@@ -108,7 +108,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="overview" data-tags="roofing">
         <div class="service-detail-media">
-          <a href="/roofing.php"><img src="/assets/images/industry-roofing-1.webp" alt="Roofing"></a>
+          <a href="/roofing.php"><img loading="lazy" src="/assets/images/industry-roofing-1.webp" alt="Roofing"></a>
         </div>
         <div class="service-detail-body">
           <h2><a href="/roofing.php">Roofing</a></h2>
@@ -125,7 +125,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="overview" data-tags="pest-control">
         <div class="service-detail-media">
-          <a href="/pest-control.php"><img src="/assets/images/industry-pest-control-1.webp" alt="Pest Control"></a>
+          <a href="/pest-control.php"><img loading="lazy" src="/assets/images/industry-pest-control-1.webp" alt="Pest Control"></a>
         </div>
         <div class="service-detail-body">
           <h2><a href="/pest-control.php">Pest Control</a></h2>
@@ -142,7 +142,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="overview" data-tags="pool-services">
         <div class="service-detail-media">
-          <a href="/pool-services.php"><img src="/assets/images/industry-pool-services-1.webp" alt="Pool Services"></a>
+          <a href="/pool-services.php"><img loading="lazy" src="/assets/images/industry-pool-services-1.webp" alt="Pool Services"></a>
         </div>
         <div class="service-detail-body">
           <h2><a href="/pool-services.php">Pool Services</a></h2>
@@ -159,7 +159,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="overview" data-tags="landscaping">
         <div class="service-detail-media">
-          <a href="/landscaping.php"><img src="/assets/images/industry-landscaping-1.webp" alt="Landscaping"></a>
+          <a href="/landscaping.php"><img loading="lazy" src="/assets/images/industry-landscaping-1.webp" alt="Landscaping"></a>
         </div>
         <div class="service-detail-body">
           <h2><a href="/landscaping.php">Landscaping</a></h2>
@@ -176,7 +176,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="overview" data-tags="handyman">
         <div class="service-detail-media">
-          <a href="/handyman.php"><img src="/assets/images/industry-handyman-1.webp" alt="Handyman"></a>
+          <a href="/handyman.php"><img loading="lazy" src="/assets/images/industry-handyman-1.webp" alt="Handyman"></a>
         </div>
         <div class="service-detail-body">
           <h2><a href="/handyman.php">Handyman</a></h2>
@@ -193,7 +193,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="overview" data-tags="power-washing">
         <div class="service-detail-media">
-          <a href="/power-washing.php"><img src="/assets/images/industry-power-washing-1.webp" alt="Power Washing"></a>
+          <a href="/power-washing.php"><img loading="lazy" src="/assets/images/industry-power-washing-1.webp" alt="Power Washing"></a>
         </div>
         <div class="service-detail-body">
           <h2><a href="/power-washing.php">Power Washing</a></h2>
@@ -212,7 +212,7 @@ include __DIR__ . '/includes/page-banner.php';
       <!-- Remodelers -->
       <article class="service-detail-card" data-level="sub" data-tags="remodelers" data-subs="websites" hidden>
         <div class="service-detail-media">
-          <a href="/remodelers.php"><img src="/assets/images/industry-remodelers-2.webp" alt="Remodelers Websites"></a>
+          <a href="/remodelers.php"><img loading="lazy" src="/assets/images/industry-remodelers-2.webp" alt="Remodelers Websites"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Remodelers</p>
@@ -230,7 +230,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="remodelers" data-subs="local-seo" hidden>
         <div class="service-detail-media">
-          <a href="/remodelers.php"><img src="/assets/images/industry-remodelers-3.webp" alt="Remodelers Local SEO"></a>
+          <a href="/remodelers.php"><img loading="lazy" src="/assets/images/industry-remodelers-3.webp" alt="Remodelers Local SEO"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Remodelers</p>
@@ -248,7 +248,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="remodelers" data-subs="google-ads" hidden>
         <div class="service-detail-media">
-          <a href="/remodelers.php"><img src="/assets/images/industry-remodelers-4.webp"
+          <a href="/remodelers.php"><img loading="lazy" src="/assets/images/industry-remodelers-4.webp"
               alt="Remodelers Google Ads"></a>
         </div>
         <div class="service-detail-body">
@@ -267,7 +267,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="remodelers" data-subs="social-ads" hidden>
         <div class="service-detail-media">
-          <a href="/remodelers.php"><img src="/assets/images/industry-remodelers-1.webp"
+          <a href="/remodelers.php"><img loading="lazy" src="/assets/images/industry-remodelers-1.webp"
               alt="Remodelers Social Ads"></a>
         </div>
         <div class="service-detail-body">
@@ -287,7 +287,7 @@ include __DIR__ . '/includes/page-banner.php';
       <!-- HVAC -->
       <article class="service-detail-card" data-level="sub" data-tags="hvac" data-subs="websites" hidden>
         <div class="service-detail-media">
-          <a href="/hvac.php"><img src="/assets/images/industry-hvac-2.webp" alt="HVAC Websites"></a>
+          <a href="/hvac.php"><img loading="lazy" src="/assets/images/industry-hvac-2.webp" alt="HVAC Websites"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">HVAC</p>
@@ -304,7 +304,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="hvac" data-subs="local-seo" hidden>
         <div class="service-detail-media">
-          <a href="/hvac.php"><img src="/assets/images/industry-hvac-3.webp" alt="HVAC Local SEO"></a>
+          <a href="/hvac.php"><img loading="lazy" src="/assets/images/industry-hvac-3.webp" alt="HVAC Local SEO"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">HVAC</p>
@@ -321,7 +321,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="hvac" data-subs="google-ads" hidden>
         <div class="service-detail-media">
-          <a href="/hvac.php"><img src="/assets/images/industry-hvac-4.webp" alt="HVAC Google Ads"></a>
+          <a href="/hvac.php"><img loading="lazy" src="/assets/images/industry-hvac-4.webp" alt="HVAC Google Ads"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">HVAC</p>
@@ -338,7 +338,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="hvac" data-subs="social-ads" hidden>
         <div class="service-detail-media">
-          <a href="/hvac.php"><img src="/assets/images/industry-hvac-1.webp" alt="HVAC Social Ads"></a>
+          <a href="/hvac.php"><img loading="lazy" src="/assets/images/industry-hvac-1.webp" alt="HVAC Social Ads"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">HVAC</p>
@@ -356,7 +356,7 @@ include __DIR__ . '/includes/page-banner.php';
       <!-- Plumbing -->
       <article class="service-detail-card" data-level="sub" data-tags="plumbing" data-subs="websites" hidden>
         <div class="service-detail-media">
-          <a href="/plumbing.php"><img src="/assets/images/industry-plumbing-2.webp" alt="Plumbing Websites"></a>
+          <a href="/plumbing.php"><img loading="lazy" src="/assets/images/industry-plumbing-2.webp" alt="Plumbing Websites"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Plumbing</p>
@@ -374,7 +374,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="plumbing" data-subs="local-seo" hidden>
         <div class="service-detail-media">
-          <a href="/plumbing.php"><img src="/assets/images/industry-plumbing-3.webp" alt="Plumbing Local SEO"></a>
+          <a href="/plumbing.php"><img loading="lazy" src="/assets/images/industry-plumbing-3.webp" alt="Plumbing Local SEO"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Plumbing</p>
@@ -392,7 +392,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="plumbing" data-subs="google-ads" hidden>
         <div class="service-detail-media">
-          <a href="/plumbing.php"><img src="/assets/images/industry-plumbing-4.webp" alt="Plumbing Google Ads"></a>
+          <a href="/plumbing.php"><img loading="lazy" src="/assets/images/industry-plumbing-4.webp" alt="Plumbing Google Ads"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Plumbing</p>
@@ -410,7 +410,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="plumbing" data-subs="social-ads" hidden>
         <div class="service-detail-media">
-          <a href="/plumbing.php"><img src="/assets/images/industry-plumbing-1.webp" alt="Plumbing Social Ads"></a>
+          <a href="/plumbing.php"><img loading="lazy" src="/assets/images/industry-plumbing-1.webp" alt="Plumbing Social Ads"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Plumbing</p>
@@ -429,7 +429,7 @@ include __DIR__ . '/includes/page-banner.php';
       <!-- Roofing -->
       <article class="service-detail-card" data-level="sub" data-tags="roofing" data-subs="websites" hidden>
         <div class="service-detail-media">
-          <a href="/roofing.php"><img src="/assets/images/industry-roofing-2.webp" alt="Roofing Websites"></a>
+          <a href="/roofing.php"><img loading="lazy" src="/assets/images/industry-roofing-2.webp" alt="Roofing Websites"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Roofing</p>
@@ -447,7 +447,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="roofing" data-subs="local-seo" hidden>
         <div class="service-detail-media">
-          <a href="/roofing.php"><img src="/assets/images/industry-roofing-3.webp" alt="Roofing Local SEO"></a>
+          <a href="/roofing.php"><img loading="lazy" src="/assets/images/industry-roofing-3.webp" alt="Roofing Local SEO"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Roofing</p>
@@ -465,7 +465,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="roofing" data-subs="google-ads" hidden>
         <div class="service-detail-media">
-          <a href="/roofing.php"><img src="/assets/images/industry-roofing-4.webp" alt="Roofing Google Ads"></a>
+          <a href="/roofing.php"><img loading="lazy" src="/assets/images/industry-roofing-4.webp" alt="Roofing Google Ads"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Roofing</p>
@@ -483,7 +483,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="roofing" data-subs="social-ads" hidden>
         <div class="service-detail-media">
-          <a href="/roofing.php"><img src="/assets/images/industry-roofing-1.webp" alt="Roofing Social Ads"></a>
+          <a href="/roofing.php"><img loading="lazy" src="/assets/images/industry-roofing-1.webp" alt="Roofing Social Ads"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Roofing</p>
@@ -502,7 +502,7 @@ include __DIR__ . '/includes/page-banner.php';
       <!-- Pest Control -->
       <article class="service-detail-card" data-level="sub" data-tags="pest-control" data-subs="websites" hidden>
         <div class="service-detail-media">
-          <a href="/pest-control.php"><img src="/assets/images/industry-pest-control-2.webp"
+          <a href="/pest-control.php"><img loading="lazy" src="/assets/images/industry-pest-control-2.webp"
               alt="Pest Control Websites"></a>
         </div>
         <div class="service-detail-body">
@@ -521,7 +521,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="pest-control" data-subs="local-seo" hidden>
         <div class="service-detail-media">
-          <a href="/pest-control.php"><img src="/assets/images/industry-pest-control-3.webp"
+          <a href="/pest-control.php"><img loading="lazy" src="/assets/images/industry-pest-control-3.webp"
               alt="Pest Control Local SEO"></a>
         </div>
         <div class="service-detail-body">
@@ -540,7 +540,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="pest-control" data-subs="google-ads" hidden>
         <div class="service-detail-media">
-          <a href="/pest-control.php"><img src="/assets/images/industry-pest-control-4.webp"
+          <a href="/pest-control.php"><img loading="lazy" src="/assets/images/industry-pest-control-4.webp"
               alt="Pest Control Google Ads"></a>
         </div>
         <div class="service-detail-body">
@@ -559,7 +559,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="pest-control" data-subs="social-ads" hidden>
         <div class="service-detail-media">
-          <a href="/pest-control.php"><img src="/assets/images/industry-pest-control-1.webp"
+          <a href="/pest-control.php"><img loading="lazy" src="/assets/images/industry-pest-control-1.webp"
               alt="Pest Control Social Ads"></a>
         </div>
         <div class="service-detail-body">
@@ -579,7 +579,7 @@ include __DIR__ . '/includes/page-banner.php';
       <!-- Pool Services -->
       <article class="service-detail-card" data-level="sub" data-tags="pool-services" data-subs="websites" hidden>
         <div class="service-detail-media">
-          <a href="/pool-services.php"><img src="/assets/images/industry-pool-services-2.webp"
+          <a href="/pool-services.php"><img loading="lazy" src="/assets/images/industry-pool-services-2.webp"
               alt="Pool Services Websites"></a>
         </div>
         <div class="service-detail-body">
@@ -598,7 +598,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="pool-services" data-subs="local-seo" hidden>
         <div class="service-detail-media">
-          <a href="/pool-services.php"><img src="/assets/images/industry-pool-services-3.webp"
+          <a href="/pool-services.php"><img loading="lazy" src="/assets/images/industry-pool-services-3.webp"
               alt="Pool Services Local SEO"></a>
         </div>
         <div class="service-detail-body">
@@ -617,7 +617,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="pool-services" data-subs="google-ads" hidden>
         <div class="service-detail-media">
-          <a href="/pool-services.php"><img src="/assets/images/industry-pool-services-4.webp"
+          <a href="/pool-services.php"><img loading="lazy" src="/assets/images/industry-pool-services-4.webp"
               alt="Pool Services Google Ads"></a>
         </div>
         <div class="service-detail-body">
@@ -636,7 +636,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="pool-services" data-subs="social-ads" hidden>
         <div class="service-detail-media">
-          <a href="/pool-services.php"><img src="/assets/images/industry-pool-services-1.webp"
+          <a href="/pool-services.php"><img loading="lazy" src="/assets/images/industry-pool-services-1.webp"
               alt="Pool Services Social Ads"></a>
         </div>
         <div class="service-detail-body">
@@ -656,7 +656,7 @@ include __DIR__ . '/includes/page-banner.php';
       <!-- Landscaping -->
       <article class="service-detail-card" data-level="sub" data-tags="landscaping" data-subs="websites" hidden>
         <div class="service-detail-media">
-          <a href="/landscaping.php"><img src="/assets/images/industry-landscaping-2.webp"
+          <a href="/landscaping.php"><img loading="lazy" src="/assets/images/industry-landscaping-2.webp"
               alt="Landscaping Websites"></a>
         </div>
         <div class="service-detail-body">
@@ -675,7 +675,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="landscaping" data-subs="local-seo" hidden>
         <div class="service-detail-media">
-          <a href="/landscaping.php"><img src="/assets/images/industry-landscaping-3.webp"
+          <a href="/landscaping.php"><img loading="lazy" src="/assets/images/industry-landscaping-3.webp"
               alt="Landscaping Local SEO"></a>
         </div>
         <div class="service-detail-body">
@@ -694,7 +694,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="landscaping" data-subs="google-ads" hidden>
         <div class="service-detail-media">
-          <a href="/landscaping.php"><img src="/assets/images/industry-landscaping-4.webp"
+          <a href="/landscaping.php"><img loading="lazy" src="/assets/images/industry-landscaping-4.webp"
               alt="Landscaping Google Ads"></a>
         </div>
         <div class="service-detail-body">
@@ -713,7 +713,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="landscaping" data-subs="social-ads" hidden>
         <div class="service-detail-media">
-          <a href="/landscaping.php"><img src="/assets/images/industry-landscaping-1.webp"
+          <a href="/landscaping.php"><img loading="lazy" src="/assets/images/industry-landscaping-1.webp"
               alt="Landscaping Social Ads"></a>
         </div>
         <div class="service-detail-body">
@@ -733,7 +733,7 @@ include __DIR__ . '/includes/page-banner.php';
       <!-- Handyman -->
       <article class="service-detail-card" data-level="sub" data-tags="handyman" data-subs="websites" hidden>
         <div class="service-detail-media">
-          <a href="/handyman.php"><img src="/assets/images/industry-handyman-2.webp" alt="Handyman Websites"></a>
+          <a href="/handyman.php"><img loading="lazy" src="/assets/images/industry-handyman-2.webp" alt="Handyman Websites"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Handyman</p>
@@ -751,7 +751,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="handyman" data-subs="local-seo" hidden>
         <div class="service-detail-media">
-          <a href="/handyman.php"><img src="/assets/images/industry-handyman-3.webp" alt="Handyman Local SEO"></a>
+          <a href="/handyman.php"><img loading="lazy" src="/assets/images/industry-handyman-3.webp" alt="Handyman Local SEO"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Handyman</p>
@@ -769,7 +769,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="handyman" data-subs="google-ads" hidden>
         <div class="service-detail-media">
-          <a href="/handyman.php"><img src="/assets/images/industry-handyman-4.webp" alt="Handyman Google Ads"></a>
+          <a href="/handyman.php"><img loading="lazy" src="/assets/images/industry-handyman-4.webp" alt="Handyman Google Ads"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Handyman</p>
@@ -787,7 +787,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="handyman" data-subs="social-ads" hidden>
         <div class="service-detail-media">
-          <a href="/handyman.php"><img src="/assets/images/industry-handyman-1.webp" alt="Handyman Social Ads"></a>
+          <a href="/handyman.php"><img loading="lazy" src="/assets/images/industry-handyman-1.webp" alt="Handyman Social Ads"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Handyman</p>
@@ -806,7 +806,7 @@ include __DIR__ . '/includes/page-banner.php';
       <!-- Power Washing -->
       <article class="service-detail-card" data-level="sub" data-tags="power-washing" data-subs="websites" hidden>
         <div class="service-detail-media">
-          <a href="/power-washing.php"><img src="/assets/images/industry-power-washing-2.webp"
+          <a href="/power-washing.php"><img loading="lazy" src="/assets/images/industry-power-washing-2.webp"
               alt="Power Washing Websites"></a>
         </div>
         <div class="service-detail-body">
@@ -825,7 +825,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="power-washing" data-subs="local-seo" hidden>
         <div class="service-detail-media">
-          <a href="/power-washing.php"><img src="/assets/images/industry-power-washing-3.webp"
+          <a href="/power-washing.php"><img loading="lazy" src="/assets/images/industry-power-washing-3.webp"
               alt="Power Washing Local SEO"></a>
         </div>
         <div class="service-detail-body">
@@ -844,7 +844,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="power-washing" data-subs="google-ads" hidden>
         <div class="service-detail-media">
-          <a href="/power-washing.php"><img src="/assets/images/service-social-media.jpg"
+          <a href="/power-washing.php"><img loading="lazy" src="/assets/images/service-social-media.jpg"
               alt="Power Washing Google Ads"></a>
         </div>
         <div class="service-detail-body">
@@ -863,7 +863,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="power-washing" data-subs="social-ads" hidden>
         <div class="service-detail-media">
-          <a href="/power-washing.php"><img src="/assets/images/industry-power-washing-1.webp"
+          <a href="/power-washing.php"><img loading="lazy" src="/assets/images/industry-power-washing-1.webp"
               alt="Power Washing Social Ads"></a>
         </div>
         <div class="service-detail-body">

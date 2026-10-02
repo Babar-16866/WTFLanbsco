@@ -84,7 +84,7 @@ include __DIR__ . '/includes/header.php';
         <img src="/assets/images/mockup-main.webp" alt="">
       </div>
       <div class="hero-banner" data-depth="0.08">
-        <img src="/assets/images/main-banner.png" alt="WTF Labs" class="hero-banner-img">
+        <img src="/assets/images/main-banner.webp" alt="WTF Labs" class="hero-banner-img" width="1041" height="1069" fetchpriority="high">
       </div>
       <div class="hero-green-dot"></div>
     </div>
@@ -304,11 +304,11 @@ include __DIR__ . '/includes/header.php';
           <p class="brand-card-points">Project proof · Before/after storytelling · Premium positioning · Reviews · Clear process · Better-fit inquiries</p>
         </div>
         <div class="brand-card-fan">
-          <img class="fan-shot fan-shot-1" src="/assets/images/industry-roofing-1.webp" alt="">
-          <img class="fan-shot fan-shot-2" src="/assets/images/industry-handyman-1.webp" alt="">
-          <img class="fan-shot fan-shot-3" src="/assets/images/industry-remodelers-1.webp" alt="">
-          <img class="fan-shot fan-shot-4" src="/assets/images/industry-power-washing-1.webp" alt="">
-          <img class="fan-shot fan-shot-5" src="/assets/images/industry-remodelers-3.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-1" src="/assets/images/industry-roofing-1.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-2" src="/assets/images/industry-handyman-1.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-3" src="/assets/images/industry-remodelers-1.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-4" src="/assets/images/industry-power-washing-1.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-5" src="/assets/images/industry-remodelers-3.webp" alt="">
         </div>
         <div class="brand-card-cta">
           <span class="btn btn-lime btn-sm">Explore High-Ticket Industries</span>
@@ -325,11 +325,11 @@ include __DIR__ . '/includes/header.php';
           <p class="brand-card-points">Mobile speed · Click-to-call · Booking · Financing · Invoicing · Reviews · Local trust · Lead tracking</p>
         </div>
         <div class="brand-card-fan">
-          <img class="fan-shot fan-shot-1" src="/assets/images/industry-hvac-2.webp" alt="">
-          <img class="fan-shot fan-shot-2" src="/assets/images/industry-plumbing-1.webp" alt="">
-          <img class="fan-shot fan-shot-3" src="/assets/images/industry-hvac-1.webp" alt="">
-          <img class="fan-shot fan-shot-4" src="/assets/images/industry-plumbing-2.webp" alt="">
-          <img class="fan-shot fan-shot-5" src="/assets/images/industry-hvac-4.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-1" src="/assets/images/industry-hvac-2.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-2" src="/assets/images/industry-plumbing-1.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-3" src="/assets/images/industry-hvac-1.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-4" src="/assets/images/industry-plumbing-2.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-5" src="/assets/images/industry-hvac-4.webp" alt="">
         </div>
         <div class="brand-card-cta">
           <span class="btn btn-lime btn-sm">Explore Rapid-Response Industries</span>
@@ -347,11 +347,11 @@ include __DIR__ . '/includes/header.php';
           <p class="brand-card-points">Plan selection · Quick cost estimates · Service-area clarity · Recurring signup · Retention · Local proof</p>
         </div>
         <div class="brand-card-fan">
-          <img class="fan-shot fan-shot-1" src="/assets/images/industry-pool-services-1.webp" alt="">
-          <img class="fan-shot fan-shot-2" src="/assets/images/industry-landscaping-1.webp" alt="">
-          <img class="fan-shot fan-shot-3" src="/assets/images/industry-pest-control-1.webp" alt="">
-          <img class="fan-shot fan-shot-4" src="/assets/images/industry-pool-services-4.webp" alt="">
-          <img class="fan-shot fan-shot-5" src="/assets/images/industry-landscaping-3.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-1" src="/assets/images/industry-pool-services-1.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-2" src="/assets/images/industry-landscaping-1.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-3" src="/assets/images/industry-pest-control-1.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-4" src="/assets/images/industry-pool-services-4.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-5" src="/assets/images/industry-landscaping-3.webp" alt="">
         </div>
         <div class="brand-card-cta">
           <span class="btn btn-lime btn-sm">Explore Recurring-Service Industries</span>
@@ -369,11 +369,11 @@ include __DIR__ . '/includes/header.php';
           <p class="brand-card-points">Plan selection · Quick cost estimates · Service-area clarity · Recurring signup · Retention · Local proof</p>
         </div>
         <div class="brand-card-fan">
-          <img class="fan-shot fan-shot-1" src="/assets/images/industry-pool-services-1.webp" alt="">
-          <img class="fan-shot fan-shot-2" src="/assets/images/industry-landscaping-1.webp" alt="">
-          <img class="fan-shot fan-shot-3" src="/assets/images/industry-pest-control-1.webp" alt="">
-          <img class="fan-shot fan-shot-4" src="/assets/images/industry-pool-services-4.webp" alt="">
-          <img class="fan-shot fan-shot-5" src="/assets/images/industry-landscaping-3.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-1" src="/assets/images/industry-pool-services-1.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-2" src="/assets/images/industry-landscaping-1.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-3" src="/assets/images/industry-pest-control-1.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-4" src="/assets/images/industry-pool-services-4.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-5" src="/assets/images/industry-landscaping-3.webp" alt="">
         </div>
         <div class="brand-card-cta">
           <span class="btn btn-lime btn-sm">Explore Recurring-Service Industries</span>
@@ -425,7 +425,7 @@ include __DIR__ . '/includes/header.php';
             <p>Conversion focused websites that build trust fast and turn local buyers to calls, quotes, and jobs.</p>
           </div>
           <div class="excel-card-media excel-card-media--mockup">
-            <img src="/assets/images/excel-graphic-design.webp" alt="Web Design &amp; Development">
+            <img loading="lazy" src="/assets/images/excel-graphic-design.webp" alt="Web Design &amp; Development">
           </div>
         </a>
 
@@ -433,7 +433,7 @@ include __DIR__ . '/includes/header.php';
           <a href="/seo.php" class="excel-card excel-card--sm excel-card--row"
             style="--card-grad:linear-gradient(115deg,#2563eb 0%,color-mix(in srgb, var(--pal-primary) 90%, var(--pal-light)) 50%,var(--pal-primary) 100%)">
             <div class="excel-card-media excel-card-media--devices">
-              <img src="/assets/images/excel-landing.webp" alt="SEO &amp; Local Search">
+              <img loading="lazy" src="/assets/images/excel-landing.webp" alt="SEO &amp; Local Search">
             </div>
             <div class="excel-card-copy">
               <h3>SEO &amp; Local Search</h3>
@@ -443,7 +443,7 @@ include __DIR__ . '/includes/header.php';
           <a href="/google-ads.php" class="excel-card excel-card--sm excel-card--row"
             style="--card-grad:linear-gradient(135deg,#ec4899 0%,var(--pal-primary) 55%,color-mix(in srgb, var(--pal-primary) 76%, var(--pal-dark)) 100%)">
             <div class="excel-card-media excel-card-media--orb">
-              <img src="/assets/images/excel-ai-orb.jpg" alt="Google Ads">
+              <img loading="lazy" src="/assets/images/excel-ai-orb.jpg" alt="Google Ads">
             </div>
             <div class="excel-card-copy">
               <h3>Google Ads</h3>
@@ -472,7 +472,7 @@ include __DIR__ . '/includes/header.php';
             <p>Showcase your work, offers and get local attention with qualified leads.</p>
           </div>
           <div class="excel-card-media excel-card-media--phones">
-            <img src="/assets/images/excel-mobile.webp" alt="Social media advertising">
+            <img loading="lazy" src="/assets/images/excel-mobile.webp" alt="Social media advertising">
           </div>
         </a>
 
@@ -480,7 +480,7 @@ include __DIR__ . '/includes/header.php';
           <a href="/graphic-design.php" class="excel-card excel-card--sm excel-card--row excel-card--on-lime"
             style="--card-grad:linear-gradient(120deg,var(--pal-accent) 0%,color-mix(in srgb, var(--pal-accent) 89%, var(--pal-dark)) 45%,var(--pal-primary) 100%)">
             <div class="excel-card-media excel-card-media--devices">
-              <img src="/assets/images/excel-web3.webp" alt="Branding &amp; Creative">
+              <img loading="lazy" src="/assets/images/excel-web3.webp" alt="Branding &amp; Creative">
             </div>
             <div class="excel-card-copy">
               <h3>Branding &amp; Creative</h3>
@@ -490,7 +490,7 @@ include __DIR__ . '/includes/header.php';
           <a href="/digital-marketing.php" class="excel-card excel-card--sm excel-card--row"
             style="--card-grad:linear-gradient(135deg,#14b8a6 0%,#06b6d4 45%,#3b82f6 100%)">
             <div class="excel-card-media excel-card-media--orb">
-              <img src="/assets/images/excel-branding.webp" alt="Full-Service Digital Marketing">
+              <img loading="lazy" src="/assets/images/excel-branding.webp" alt="Full-Service Digital Marketing">
             </div>
             <div class="excel-card-copy">
               <h3>Full-Service Digital Marketing</h3>
@@ -583,36 +583,45 @@ include __DIR__ . '/includes/header.php';
       <p class="section-desc center-desc">Immersive where it helps. Fast where speed matters. Clear <span class="text-underline-lime">where buyers</span> need confidence. Every build should fit the sales cycle behind it.</p>
     </div>
 
-    <div class="works-filter-stack works-filter-stack--center reveal">
-      <div class="works-filters" id="homeWorksIndustries" role="tablist" aria-label="Filter works by industry">
-        <button type="button" class="works-filter is-active" data-industry="all" role="tab" aria-selected="true">All</button>
-        <button type="button" class="works-filter" data-industry="remodelers" role="tab" aria-selected="false">Remodelers</button>
-        <button type="button" class="works-filter" data-industry="hvac" role="tab" aria-selected="false">HVAC</button>
-        <button type="button" class="works-filter" data-industry="plumbing" role="tab" aria-selected="false">Plumbing</button>
-        <button type="button" class="works-filter" data-industry="roofing" role="tab" aria-selected="false">Roofing</button>
-        <button type="button" class="works-filter" data-industry="pest-control" role="tab" aria-selected="false">Pest Control</button>
-        <button type="button" class="works-filter" data-industry="pool-services" role="tab" aria-selected="false">Pool Services</button>
-        <button type="button" class="works-filter" data-industry="landscaping" role="tab" aria-selected="false">Landscaping</button>
-        <button type="button" class="works-filter" data-industry="handyman" role="tab" aria-selected="false">Handyman</button>
-        <button type="button" class="works-filter" data-industry="power-washing" role="tab" aria-selected="false">Power Washing</button>
+    <div class="works-filter-stack works-filter-stack--center home-filter-stack reveal">
+      <div class="home-filter-row">
+        <p class="home-filter-label">Select the Industry</p>
+        <div class="works-filters" id="homeWorksIndustries" role="tablist" aria-label="Filter works by industry">
+          <button type="button" class="works-filter is-active" data-industry="all" role="tab" aria-selected="true">All</button>
+          <button type="button" class="works-filter" data-industry="remodelers" role="tab" aria-selected="false">Remodelers</button>
+          <button type="button" class="works-filter" data-industry="hvac" role="tab" aria-selected="false">HVAC</button>
+          <button type="button" class="works-filter" data-industry="plumbing" role="tab" aria-selected="false">Plumbing</button>
+          <button type="button" class="works-filter" data-industry="roofing" role="tab" aria-selected="false">Roofing</button>
+          <button type="button" class="works-filter" data-industry="pest-control" role="tab" aria-selected="false">Pest Control</button>
+          <button type="button" class="works-filter" data-industry="pool-services" role="tab" aria-selected="false">Pool Services</button>
+          <button type="button" class="works-filter" data-industry="landscaping" role="tab" aria-selected="false">Landscaping</button>
+          <button type="button" class="works-filter" data-industry="handyman" role="tab" aria-selected="false">Handyman</button>
+          <button type="button" class="works-filter" data-industry="power-washing" role="tab" aria-selected="false">Power Washing</button>
+        </div>
       </div>
-      <div class="works-filters" id="homeWorksFilters" role="tablist" aria-label="Filter works by service" hidden>
-        <button type="button" class="works-filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
-        <button type="button" class="works-filter" data-filter="graphic-design" role="tab" aria-selected="false">Graphic Design</button>
-        <button type="button" class="works-filter" data-filter="web-design" role="tab" aria-selected="false">Web Design</button>
-        <button type="button" class="works-filter" data-filter="web-development" role="tab" aria-selected="false">Web Development</button>
-        <button type="button" class="works-filter" data-filter="seo" role="tab" aria-selected="false">SEO</button>
-        <button type="button" class="works-filter" data-filter="social-media-advertising" role="tab" aria-selected="false">Social Ads</button>
-        <button type="button" class="works-filter" data-filter="google-ads" role="tab" aria-selected="false">Google Ads</button>
-        <button type="button" class="works-filter" data-filter="digital-marketing" role="tab" aria-selected="false">Digital Marketing</button>
+      <div class="home-filter-row" id="homeWorksServiceRow" hidden>
+        <p class="home-filter-label">Select the Service</p>
+        <div class="works-filters" id="homeWorksFilters" role="tablist" aria-label="Filter works by service">
+          <button type="button" class="works-filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button type="button" class="works-filter" data-filter="graphic-design" role="tab" aria-selected="false">Graphic Design</button>
+          <button type="button" class="works-filter" data-filter="web-design" role="tab" aria-selected="false">Web Design</button>
+          <button type="button" class="works-filter" data-filter="web-development" role="tab" aria-selected="false">Web Development</button>
+          <button type="button" class="works-filter" data-filter="seo" role="tab" aria-selected="false">SEO</button>
+          <button type="button" class="works-filter" data-filter="social-media-advertising" role="tab" aria-selected="false">Social Ads</button>
+          <button type="button" class="works-filter" data-filter="google-ads" role="tab" aria-selected="false">Google Ads</button>
+          <button type="button" class="works-filter" data-filter="digital-marketing" role="tab" aria-selected="false">Digital Marketing</button>
+        </div>
       </div>
-      <div class="works-subfilters" id="homeWorksSubfilters" role="tablist" aria-label="Filter by subcategory" hidden></div>
+      <div class="home-filter-row">
+        <span class="home-filter-label" aria-hidden="true"></span>
+        <div class="works-subfilters" id="homeWorksSubfilters" role="tablist" aria-label="Filter by subcategory" hidden></div>
+      </div>
     </div>
 
     <div class="works-grid home-works-grid reveal" id="homeWorksGrid" data-smooth>
       <article class="work-card" data-tags="web-development web-design" data-subs="web-app custom-web product-sites" data-industries="plumbing hvac" data-live="https://heavy-route.vercel.app/">
         <div class="work-card-media">
-          <img src="/assets/images/work-heavyroute.jpg" alt="HeavyRoute AI">
+          <img loading="lazy" src="/assets/images/work-heavyroute.jpg" alt="HeavyRoute AI">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -630,7 +639,7 @@ include __DIR__ . '/includes/header.php';
 
       <article class="work-card" data-tags="web-design web-development" data-subs="product-sites shopify custom-web" data-industries="handyman power-washing" data-live="https://pitboxbikes.vercel.app/">
         <div class="work-card-media">
-          <img src="/assets/images/work-pitbox.jpg" alt="PITBOX">
+          <img loading="lazy" src="/assets/images/work-pitbox.jpg" alt="PITBOX">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -648,7 +657,7 @@ include __DIR__ . '/includes/header.php';
 
       <article class="work-card" data-tags="web-design graphic-design" data-subs="corporate-sites brand-collaterals" data-industries="remodelers pool-services" data-live="https://websiteinfra.vercel.app/">
         <div class="work-card-media">
-          <img src="/assets/images/work-micasa.jpg" alt="MICASA">
+          <img loading="lazy" src="/assets/images/work-micasa.jpg" alt="MICASA">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -666,7 +675,7 @@ include __DIR__ . '/includes/header.php';
 
       <article class="work-card" data-tags="web-design web-development" data-subs="product-sites custom-web landing-pages" data-industries="hvac roofing">
         <div class="work-card-media">
-          <img src="/assets/images/excel-uiux.webp" alt="TorchSensors">
+          <img loading="lazy" src="/assets/images/excel-uiux.webp" alt="TorchSensors">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -684,7 +693,7 @@ include __DIR__ . '/includes/header.php';
 
       <article class="work-card" data-tags="web-design digital-marketing" data-subs="landing-pages funnel-design content-marketing" data-industries="plumbing pest-control">
         <div class="work-card-media">
-          <img src="/assets/images/mockup-2.webp" alt="Solana Payouts">
+          <img loading="lazy" src="/assets/images/mockup-2.webp" alt="Solana Payouts">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -702,7 +711,7 @@ include __DIR__ . '/includes/header.php';
 
       <article class="work-card" data-tags="web-development graphic-design" data-subs="web-app brand-collaterals social-media-post" data-industries="remodelers landscaping">
         <div class="work-card-media">
-          <img src="/assets/images/excel-mobile.webp" alt="Infaces">
+          <img loading="lazy" src="/assets/images/excel-mobile.webp" alt="Infaces">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -720,7 +729,7 @@ include __DIR__ . '/includes/header.php';
 
       <article class="work-card" data-tags="web-design graphic-design" data-subs="corporate-sites logo-design brand-collaterals" data-industries="remodelers handyman">
         <div class="work-card-media">
-          <img src="/assets/images/service-graphic-design.jpg" alt="Global Leathers">
+          <img loading="lazy" src="/assets/images/service-graphic-design.jpg" alt="Global Leathers">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -738,7 +747,7 @@ include __DIR__ . '/includes/header.php';
 
       <article class="work-card" data-tags="web-development seo" data-subs="custom-web technical-seo on-page" data-industries="hvac plumbing">
         <div class="work-card-media">
-          <img src="/assets/images/mockup-3.webp" alt="Cofinity-X">
+          <img loading="lazy" src="/assets/images/mockup-3.webp" alt="Cofinity-X">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -756,7 +765,7 @@ include __DIR__ . '/includes/header.php';
 
       <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress redesigns" data-industries="pool-services landscaping">
         <div class="work-card-media">
-          <img src="/assets/images/service-web-design.jpg" alt="Elvetiko">
+          <img loading="lazy" src="/assets/images/service-web-design.jpg" alt="Elvetiko">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -774,7 +783,7 @@ include __DIR__ . '/includes/header.php';
 
       <article class="work-card" data-tags="web-design google-ads" data-subs="landing-pages search-ads remarketing" data-industries="roofing power-washing">
         <div class="work-card-media">
-          <img src="/assets/images/mockup-main.webp" alt="Fairway">
+          <img loading="lazy" src="/assets/images/mockup-main.webp" alt="Fairway">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -792,7 +801,7 @@ include __DIR__ . '/includes/header.php';
 
       <article class="work-card" data-tags="web-development seo" data-subs="wordpress on-page content-seo" data-industries="pest-control pool-services">
         <div class="work-card-media">
-          <img src="/assets/images/service-web-development.jpg" alt="Fulfillment for Europe">
+          <img loading="lazy" src="/assets/images/service-web-development.jpg" alt="Fulfillment for Europe">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -810,7 +819,7 @@ include __DIR__ . '/includes/header.php';
 
       <article class="work-card" data-tags="web-development digital-marketing" data-subs="custom-web strategy funnel-design" data-industries="power-washing handyman">
         <div class="work-card-media">
-          <img src="/assets/images/mockup-1.webp" alt="Automotive platforms">
+          <img loading="lazy" src="/assets/images/mockup-1.webp" alt="Automotive platforms">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -828,7 +837,7 @@ include __DIR__ . '/includes/header.php';
 
       <article class="work-card" data-tags="web-design social-media-advertising" data-subs="landing-pages meta-ads creative-testing" data-industries="hvac pest-control">
         <div class="work-card-media">
-          <img src="/assets/images/mobile-app.webp" alt="WMails.io">
+          <img loading="lazy" src="/assets/images/mobile-app.webp" alt="WMails.io">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -846,7 +855,7 @@ include __DIR__ . '/includes/header.php';
 
       <article class="work-card" data-tags="web-development seo" data-subs="wordpress content-seo technical-seo" data-industries="remodelers roofing">
         <div class="work-card-media">
-          <img src="/assets/images/why-craft.jpg" alt="Prosperity Home Loans">
+          <img loading="lazy" src="/assets/images/why-craft.jpg" alt="Prosperity Home Loans">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -864,7 +873,7 @@ include __DIR__ . '/includes/header.php';
 
       <article class="work-card" data-tags="web-design graphic-design" data-subs="corporate-sites brand-collaterals business-card" data-industries="landscaping power-washing">
         <div class="work-card-media">
-          <img src="/assets/images/excel-branding.webp" alt="SolvoWorld">
+          <img loading="lazy" src="/assets/images/excel-branding.webp" alt="SolvoWorld">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -881,6 +890,8 @@ include __DIR__ . '/includes/header.php';
       </article>
     </div>
 
+    <p class="home-works-empty" id="homeWorksGridEmpty" hidden>More projects in this category are coming soon.</p>
+
     <div class="home-work-cta">
       <a href="/contact.php" class="btn btn-lime btn-lg" data-open-popup>I&rsquo;m sold! Call me!</a>
     </div>
@@ -893,7 +904,7 @@ include __DIR__ . '/includes/header.php';
     <button class="work-modal-close" type="button" data-work-close aria-label="Close">&times;</button>
     <div class="work-modal-scroll">
       <div class="work-modal-media">
-        <img id="workModalImg" src="" alt="">
+        <img loading="lazy" id="workModalImg" src="" alt="">
       </div>
       <div class="work-modal-body">
         <p class="work-modal-eyebrow" id="workModalEyebrow"></p>

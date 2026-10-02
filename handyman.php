@@ -31,7 +31,7 @@ include __DIR__ . '/includes/page-banner.php';
     <div class="svc-cases reveal">
       <article class="svc-case">
         <div class="svc-case-media">
-          <img src="/assets/images/industry-handyman-2.webp" alt="Handyman service">
+          <img loading="lazy" src="/assets/images/industry-handyman-2.webp" alt="Handyman service">
         </div>
         <div class="svc-case-body">
           <p class="svc-case-meta">USA · Website &amp; booking</p>
@@ -41,7 +41,7 @@ include __DIR__ . '/includes/page-banner.php';
       </article>
       <article class="svc-case">
         <div class="svc-case-media">
-          <img src="/assets/images/industry-handyman-3.webp" alt="Multi-tech handyman team">
+          <img loading="lazy" src="/assets/images/industry-handyman-3.webp" alt="Multi-tech handyman team">
         </div>
         <div class="svc-case-body">
           <p class="svc-case-meta">Regional · Local SEO</p>
@@ -51,7 +51,7 @@ include __DIR__ . '/includes/page-banner.php';
       </article>
       <article class="svc-case">
         <div class="svc-case-media">
-          <img src="/assets/images/industry-handyman-4.webp" alt="Solo handyman pro">
+          <img loading="lazy" src="/assets/images/industry-handyman-4.webp" alt="Solo handyman pro">
         </div>
         <div class="svc-case-body">
           <p class="svc-case-meta">Local · Repeat business</p>
@@ -112,17 +112,17 @@ include __DIR__ . '/includes/page-banner.php';
       </div>
       <div class="svc-excellence-visual">
         <div class="svc-excellence-visual-main">
-          <img src="/assets/images/industry-handyman-4.webp" alt="">
+          <img loading="lazy" src="/assets/images/industry-handyman-4.webp" alt="">
         </div>
         <div class="svc-excellence-chip">
           <span class="svc-excellence-chip-dot"></span>
           <p>Repairs · Installs · Odd jobs</p>
         </div>
         <div class="svc-excellence-float svc-excellence-float--1">
-          <img src="/assets/images/industry-handyman-1.webp" alt="">
+          <img loading="lazy" src="/assets/images/industry-handyman-1.webp" alt="">
         </div>
         <div class="svc-excellence-float svc-excellence-float--2">
-          <img src="/assets/images/industry-handyman-3.webp" alt="">
+          <img loading="lazy" src="/assets/images/industry-handyman-3.webp" alt="">
         </div>
       </div>
     </div>
@@ -160,14 +160,14 @@ include __DIR__ . '/includes/testimonialslider.php';
       <h2>Explore more <span class="heading-accent">industries</span></h2>
     </div>
     <div class="excel-tags reveal">
-      <a href="/remodelers.php" class="excel-tag">Remodelers</a>
-      <a href="/hvac.php" class="excel-tag">HVAC</a>
-      <a href="/plumbing.php" class="excel-tag">Plumbing</a>
-      <a href="/roofing.php" class="excel-tag">Roofing</a>
-      <a href="/pest-control.php" class="excel-tag">Pest Control</a>
-      <a href="/pool-services.php" class="excel-tag">Pool Services</a>
-      <a href="/landscaping.php" class="excel-tag">Landscaping</a>
-      <a href="/power-washing.php" class="excel-tag">Power Washing</a>
+      <a href="/industries.php#remodelers" class="excel-tag">Remodelers</a>
+      <a href="/industries.php#hvac" class="excel-tag">HVAC</a>
+      <a href="/industries.php#plumbing" class="excel-tag">Plumbing</a>
+      <a href="/industries.php#roofing" class="excel-tag">Roofing</a>
+      <a href="/industries.php#pest-control" class="excel-tag">Pest Control</a>
+      <a href="/industries.php#pool-services" class="excel-tag">Pool Services</a>
+      <a href="/industries.php#landscaping" class="excel-tag">Landscaping</a>
+      <a href="/industries.php#power-washing" class="excel-tag">Power Washing</a>
     </div>
     <div class="services-cta-band reveal">
       <div>

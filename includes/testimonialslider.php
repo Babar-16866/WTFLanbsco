@@ -23,7 +23,7 @@ $street_kicker = $street_kicker ?? 'word on the street';
       <div class="street-row-track">
         <!-- Video -->
         <article class="street-card street-card--photo street-card--video street-card--tall" data-video="<?= BASE ?>/assets/videos/testimonial-demo.mp4">
-          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo.mp4#t=0.1" muted loop playsinline preload="metadata" tabindex="-1" aria-hidden="true"></video>
+          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo.mp4#t=0.1" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/testimonial-demo-poster.jpg" tabindex="-1" aria-hidden="true"></video>
           <div class="street-photo-overlay">
             <span class="street-logo">kernel</span>
             <p>We've worked with them for many projects now and <strong>am always blown away</strong>.</p>
@@ -33,7 +33,7 @@ $street_kicker = $street_kicker ?? 'word on the street';
           <span class="street-badge">Reverb</span>
           <p><strong>WTF Labs has the creative depth</strong> to go from an idea to a fully packaged and branded deliverable.</p>
           <div class="street-meta">
-            <img class="street-avatar" src="<?= BASE ?>/assets/images/team-2.jpg" alt="">
+            <img loading="lazy" class="street-avatar" src="<?= BASE ?>/assets/images/team-2.jpg" alt="">
             <div class="street-meta-text">
               <strong>David Kalt</strong>
               <span class="street-stars" aria-label="5 stars">★★★★★</span>
@@ -42,7 +42,7 @@ $street_kicker = $street_kicker ?? 'word on the street';
         </article>
         <!-- Video -->
         <article class="street-card street-card--photo street-card--video street-card--wide" data-video="<?= BASE ?>/assets/videos/testimonial-demo.mp4">
-          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo.mp4#t=0.1" muted loop playsinline preload="metadata" tabindex="-1" aria-hidden="true"></video>
+          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo.mp4#t=0.1" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/testimonial-demo-poster.jpg" tabindex="-1" aria-hidden="true"></video>
           <div class="street-photo-overlay">
             <span class="street-logo">USERWAY</span>
             <p>Despite high expectations, they always over-delivered — a testament to their <strong>creative prowess</strong>.</p>
@@ -52,7 +52,7 @@ $street_kicker = $street_kicker ?? 'word on the street';
           <span class="street-badge">TELUS</span>
           <p>We had many detailed requirements which WTF Labs <strong>were able to easily meet.</strong></p>
           <div class="street-meta">
-            <img class="street-avatar" src="<?= BASE ?>/assets/images/team-3.jpg" alt="">
+            <img loading="lazy" class="street-avatar" src="<?= BASE ?>/assets/images/team-3.jpg" alt="">
             <div class="street-meta-text">
               <strong>Colleen Doll</strong>
               <span class="street-stars" aria-label="5 stars">★★★★★</span>
@@ -61,7 +61,7 @@ $street_kicker = $street_kicker ?? 'word on the street';
         </article>
         <!-- Video -->
         <article class="street-card street-card--photo street-card--video street-card--tall" data-video="<?= BASE ?>/assets/videos/testimonial-demo.mp4">
-          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo.mp4#t=0.1" muted loop playsinline preload="metadata" tabindex="-1" aria-hidden="true"></video>
+          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo.mp4#t=0.1" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/testimonial-demo-poster.jpg" tabindex="-1" aria-hidden="true"></video>
           <div class="street-photo-overlay">
             <span class="street-logo">ROOT</span>
             <p>Everyone that sees the UI says that is the <strong>best looking UI</strong> I've ever seen.</p>
@@ -71,7 +71,7 @@ $street_kicker = $street_kicker ?? 'word on the street';
           <span class="street-badge">FOLIO XXIV</span>
           <p>Extremely impressive. <strong>Best I've seen in class.</strong></p>
           <div class="street-meta">
-            <img class="street-avatar" src="<?= BASE ?>/assets/images/people-main.jpg" alt="">
+            <img loading="lazy" class="street-avatar" src="<?= BASE ?>/assets/images/people-main.jpg" alt="">
             <div class="street-meta-text">
               <strong>FOLIO Team</strong>
               <span class="street-stars" aria-label="5 stars">★★★★★</span>
@@ -87,7 +87,7 @@ $street_kicker = $street_kicker ?? 'word on the street';
           <span class="street-badge">Fairmarkit</span>
           <p>Despite high expectations, they always over-delivered — a testament to their <strong>creative prowess</strong>.</p>
           <div class="street-meta">
-            <img class="street-avatar" src="<?= BASE ?>/assets/images/people-office.jpg" alt="">
+            <img loading="lazy" class="street-avatar" src="<?= BASE ?>/assets/images/people-office.jpg" alt="">
             <div class="street-meta-text">
               <strong>Oliver Belin</strong>
               <span class="street-stars" aria-label="5 stars">★★★★★</span>
@@ -96,7 +96,7 @@ $street_kicker = $street_kicker ?? 'word on the street';
         </article>
         <!-- Video -->
         <article class="street-card street-card--photo street-card--video street-card--tall" data-video="<?= BASE ?>/assets/videos/testimonial-demo.mp4">
-          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo.mp4#t=0.1" muted loop playsinline preload="metadata" tabindex="-1" aria-hidden="true"></video>
+          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo.mp4#t=0.1" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/testimonial-demo-poster.jpg" tabindex="-1" aria-hidden="true"></video>
           <div class="street-photo-overlay">
             <span class="street-logo">starbridge</span>
             <p>I can't believe you guys <strong>did all this in a week.</strong></p>
@@ -106,7 +106,7 @@ $street_kicker = $street_kicker ?? 'word on the street';
           <span class="street-badge">License Lounge</span>
           <p>We showed the designs to key customers and they <strong>absolutely loved it.</strong></p>
           <div class="street-meta">
-            <img class="street-avatar" src="<?= BASE ?>/assets/images/people-workshop.jpg" alt="">
+            <img loading="lazy" class="street-avatar" src="<?= BASE ?>/assets/images/people-workshop.jpg" alt="">
             <div class="street-meta-text">
               <strong>Jay Nesbitt</strong>
               <span class="street-stars" aria-label="5 stars">★★★★★</span>
@@ -115,7 +115,7 @@ $street_kicker = $street_kicker ?? 'word on the street';
         </article>
         <!-- Video -->
         <article class="street-card street-card--photo street-card--video street-card--wide" data-video="<?= BASE ?>/assets/videos/testimonial-demo.mp4">
-          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo.mp4#t=0.1" muted loop playsinline preload="metadata" tabindex="-1" aria-hidden="true"></video>
+          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo.mp4#t=0.1" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/testimonial-demo-poster.jpg" tabindex="-1" aria-hidden="true"></video>
           <div class="street-photo-overlay">
             <span class="street-logo">Vivodyne</span>
             <p>Everyone that's seen has said that it's <strong>hands down the best</strong> website they've seen.</p>
@@ -125,7 +125,7 @@ $street_kicker = $street_kicker ?? 'word on the street';
           <span class="street-badge">Skyline</span>
           <p>The amount of work done in between <strong>speaks for itself.</strong></p>
           <div class="street-meta">
-            <img class="street-avatar" src="<?= BASE ?>/assets/images/team-1.jpg" alt="">
+            <img loading="lazy" class="street-avatar" src="<?= BASE ?>/assets/images/team-1.jpg" alt="">
             <div class="street-meta-text">
               <strong>Vasya Tremsin</strong>
               <span class="street-stars" aria-label="5 stars">★★★★★</span>
@@ -136,7 +136,7 @@ $street_kicker = $street_kicker ?? 'word on the street';
           <span class="street-badge">Commerce</span>
           <p><strong>+30% signups</strong> and almost <strong>+50% cart conversion</strong> after the redesign.</p>
           <div class="street-meta">
-            <img class="street-avatar" src="<?= BASE ?>/assets/images/team-2.jpg" alt="">
+            <img loading="lazy" class="street-avatar" src="<?= BASE ?>/assets/images/team-2.jpg" alt="">
             <div class="street-meta-text">
               <strong>Mark Solomon</strong>
               <span class="street-stars" aria-label="5 stars">★★★★★</span>

@@ -29,7 +29,7 @@ include __DIR__ . '/includes/page-banner.php';
     <div class="svc-cases reveal">
       <article class="svc-case">
         <div class="svc-case-media">
-          <img src="/assets/images/mockup-main.webp" alt="TorchSensors">
+          <img loading="lazy" src="/assets/images/mockup-main.webp" alt="TorchSensors">
         </div>
         <div class="svc-case-body">
           <p class="svc-case-meta">USA · Product launch</p>
@@ -39,7 +39,7 @@ include __DIR__ . '/includes/page-banner.php';
       </article>
       <article class="svc-case">
         <div class="svc-case-media">
-          <img src="/assets/images/mockup-3.webp" alt="Cofinity-X">
+          <img loading="lazy" src="/assets/images/mockup-3.webp" alt="Cofinity-X">
         </div>
         <div class="svc-case-body">
           <p class="svc-case-meta">Germany · B2B tech</p>
@@ -49,7 +49,7 @@ include __DIR__ . '/includes/page-banner.php';
       </article>
       <article class="svc-case">
         <div class="svc-case-media">
-          <img src="/assets/images/excel-uiux.webp" alt="Elvetiko">
+          <img loading="lazy" src="/assets/images/excel-uiux.webp" alt="Elvetiko">
         </div>
         <div class="svc-case-body">
           <p class="svc-case-meta">Cyprus · Healthcare</p>
@@ -110,17 +110,17 @@ include __DIR__ . '/includes/page-banner.php';
       </div>
       <div class="svc-excellence-visual">
         <div class="svc-excellence-visual-main">
-          <img src="/assets/images/mockup-main.webp" alt="">
+          <img loading="lazy" src="/assets/images/mockup-main.webp" alt="">
         </div>
         <div class="svc-excellence-chip">
           <span class="svc-excellence-chip-dot"></span>
           <p>UI · Landing pages · Systems</p>
         </div>
         <div class="svc-excellence-float svc-excellence-float--1">
-          <img src="/assets/images/excel-uiux.webp" alt="">
+          <img loading="lazy" src="/assets/images/excel-uiux.webp" alt="">
         </div>
         <div class="svc-excellence-float svc-excellence-float--2">
-          <img src="/assets/images/torch-1.webp" alt="">
+          <img loading="lazy" src="/assets/images/torch-1.webp" alt="">
         </div>
       </div>
     </div>
@@ -158,12 +158,12 @@ include __DIR__ . '/includes/testimonialslider.php';
       <h2>Explore more <span class="heading-accent">services</span></h2>
     </div>
     <div class="excel-tags reveal">
-      <a href="/graphic-design.php" class="excel-tag">Graphic Design</a>
-      <a href="/web-development.php" class="excel-tag">Web Development</a>
-      <a href="/seo.php" class="excel-tag">SEO</a>
-      <a href="/social-media-advertising.php" class="excel-tag">Social Media Advertising</a>
-      <a href="/google-ads.php" class="excel-tag">Google Ads</a>
-      <a href="/digital-marketing.php" class="excel-tag">Digital Marketing</a>
+      <a href="/services.php#graphic-design" class="excel-tag">Graphic Design</a>
+      <a href="/services.php#web-development" class="excel-tag">Web Development</a>
+      <a href="/services.php#seo" class="excel-tag">SEO</a>
+      <a href="/services.php#social-media-advertising" class="excel-tag">Social Media Advertising</a>
+      <a href="/services.php#google-ads" class="excel-tag">Google Ads</a>
+      <a href="/services.php#digital-marketing" class="excel-tag">Digital Marketing</a>
     </div>
     <div class="services-cta-band reveal" style="margin-top:40px">
       <div>

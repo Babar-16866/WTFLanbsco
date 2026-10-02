@@ -8,7 +8,7 @@ include __DIR__ . '/contact-section.php';
     <div class="container footer-grid">
       <div class="footer-brand">
         <a href="/" class="footer-logo">
-          <img src="/assets/images/logo-sec.png" alt="WTF Labs">
+          <img loading="lazy" src="/assets/images/logo-sec.webp" alt="WTF Labs">
         </a>
         <p>WTF Labs - B2B website design & development since 2018.</p>
         <p class="footer-address">742 Innovation Drive, Suite 200<br>Austin, TX 78701, USA</p>
@@ -47,24 +47,24 @@ include __DIR__ . '/contact-section.php';
       </div>
       <div>
         <h4>Services</h4>
-        <a href="/web-design.php">Web Design &amp; Development</a>
-        <a href="/seo.php">SEO &amp; Local Search</a>
-        <a href="/google-ads.php">Google Ads</a>
-        <a href="/social-media-advertising.php">Social Media Advertising</a>
-        <a href="/graphic-design.php">Branding &amp; Creative</a>
-        <a href="/digital-marketing.php">Full-Service Digital Marketing</a>
+        <a href="/services.php#web-design">Web Design &amp; Development</a>
+        <a href="/services.php#seo">SEO &amp; Local Search</a>
+        <a href="/services.php#google-ads">Google Ads</a>
+        <a href="/services.php#social-media-advertising">Social Media Advertising</a>
+        <a href="/services.php#graphic-design">Branding &amp; Creative</a>
+        <a href="/services.php#digital-marketing">Full-Service Digital Marketing</a>
       </div>
       <div>
         <h4>Industries</h4>
-        <a href="/remodelers.php">Remodelers</a>
-        <a href="/hvac.php">HVAC</a>
-        <a href="/plumbing.php">Plumbing</a>
-        <a href="/roofing.php">Roofing</a>
-        <a href="/pest-control.php">Pest Control</a>
-        <a href="/pool-services.php">Pool Services</a>
-        <a href="/landscaping.php">Landscaping</a>
-        <a href="/handyman.php">Handyman</a>
-        <a href="/power-washing.php">Power Washing</a>
+        <a href="/industries.php#remodelers">Remodelers</a>
+        <a href="/industries.php#hvac">HVAC</a>
+        <a href="/industries.php#plumbing">Plumbing</a>
+        <a href="/industries.php#roofing">Roofing</a>
+        <a href="/industries.php#pest-control">Pest Control</a>
+        <a href="/industries.php#pool-services">Pool Services</a>
+        <a href="/industries.php#landscaping">Landscaping</a>
+        <a href="/industries.php#handyman">Handyman</a>
+        <a href="/industries.php#power-washing">Power Washing</a>
       </div>
       <!--
       <div>
@@ -105,7 +105,7 @@ include __DIR__ . '/contact-section.php';
       <div class="promo-popup-glow" aria-hidden="true"></div>
       <div class="promo-popup-inner">
         <div class="promo-popup-brand">
-          <img src="/assets/images/logo.png" alt="WTF Labs">
+          <img loading="lazy" src="/assets/images/logo.webp" alt="WTF Labs">
         </div>
         <p class="promo-popup-kicker"><span></span> Limited slots this month</p>
         <h2 id="promoPopupTitle">Let's build something <em>WTF</em>-worthy</h2>

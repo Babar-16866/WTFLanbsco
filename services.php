@@ -26,8 +26,8 @@ include __DIR__ . '/includes/page-banner.php';
       <h2>Every service. <span class="heading-accent">One senior team.</span></h2>
     </div>
     <div class="svc-panels reveal" id="svcPanels">
-      <a href="/web-design.php" class="svc-panel is-active">
-        <img src="/assets/images/service-web-design.jpg" alt="Web Design">
+      <a href="/services.php#web-design" class="svc-panel is-active">
+        <img loading="lazy" src="/assets/images/service-web-design.jpg" alt="Web Design">
         <span class="svc-panel-num">01</span>
         <span class="svc-panel-label">Web Design</span>
         <span class="svc-panel-enter" aria-hidden="true">Enter</span>
@@ -37,8 +37,8 @@ include __DIR__ . '/includes/page-banner.php';
           <span class="svc-panel-link">Explore service &rarr;</span>
         </div>
       </a>
-      <a href="/web-development.php" class="svc-panel">
-        <img src="/assets/images/service-web-development.jpg" alt="Web Development">
+      <a href="/services.php#web-development" class="svc-panel">
+        <img loading="lazy" src="/assets/images/service-web-development.jpg" alt="Web Development">
         <span class="svc-panel-num">02</span>
         <span class="svc-panel-label">Web Development</span>
         <span class="svc-panel-enter" aria-hidden="true">Enter</span>
@@ -48,8 +48,8 @@ include __DIR__ . '/includes/page-banner.php';
           <span class="svc-panel-link">Explore service &rarr;</span>
         </div>
       </a>
-      <a href="/graphic-design.php" class="svc-panel">
-        <img src="/assets/images/service-graphic-design.jpg" alt="Graphic Design">
+      <a href="/services.php#graphic-design" class="svc-panel">
+        <img loading="lazy" src="/assets/images/service-graphic-design.jpg" alt="Graphic Design">
         <span class="svc-panel-num">03</span>
         <span class="svc-panel-label">Graphic Design</span>
         <span class="svc-panel-enter" aria-hidden="true">Enter</span>
@@ -59,8 +59,8 @@ include __DIR__ . '/includes/page-banner.php';
           <span class="svc-panel-link">Explore service &rarr;</span>
         </div>
       </a>
-      <a href="/seo.php" class="svc-panel">
-        <img src="/assets/images/service-seo.jpg" alt="SEO">
+      <a href="/services.php#seo" class="svc-panel">
+        <img loading="lazy" src="/assets/images/service-seo.jpg" alt="SEO">
         <span class="svc-panel-num">04</span>
         <span class="svc-panel-label">SEO</span>
         <span class="svc-panel-enter" aria-hidden="true">Enter</span>
@@ -70,8 +70,8 @@ include __DIR__ . '/includes/page-banner.php';
           <span class="svc-panel-link">Explore service &rarr;</span>
         </div>
       </a>
-      <a href="/social-media-advertising.php" class="svc-panel">
-        <img src="/assets/images/service-social-media.jpg" alt="Social Media Advertising">
+      <a href="/services.php#social-media-advertising" class="svc-panel">
+        <img loading="lazy" src="/assets/images/service-social-media.jpg" alt="Social Media Advertising">
         <span class="svc-panel-num">05</span>
         <span class="svc-panel-label">Social Media Advertising</span>
         <span class="svc-panel-enter" aria-hidden="true">Enter</span>
@@ -81,8 +81,8 @@ include __DIR__ . '/includes/page-banner.php';
           <span class="svc-panel-link">Explore service &rarr;</span>
         </div>
       </a>
-      <a href="/google-ads.php" class="svc-panel">
-        <img src="/assets/images/service-google-ads.jpg" alt="Google Ads">
+      <a href="/services.php#google-ads" class="svc-panel">
+        <img loading="lazy" src="/assets/images/service-google-ads.jpg" alt="Google Ads">
         <span class="svc-panel-num">06</span>
         <span class="svc-panel-label">Google Ads</span>
         <span class="svc-panel-enter" aria-hidden="true">Enter</span>
@@ -92,8 +92,8 @@ include __DIR__ . '/includes/page-banner.php';
           <span class="svc-panel-link">Explore service &rarr;</span>
         </div>
       </a>
-      <a href="/digital-marketing.php" class="svc-panel">
-        <img src="/assets/images/service-digital-marketing.jpg" alt="Digital Marketing">
+      <a href="/services.php#digital-marketing" class="svc-panel">
+        <img loading="lazy" src="/assets/images/service-digital-marketing.jpg" alt="Digital Marketing">
         <span class="svc-panel-num">07</span>
         <span class="svc-panel-label">Digital Marketing</span>
         <span class="svc-panel-enter" aria-hidden="true">Enter</span>
@@ -127,7 +127,7 @@ include __DIR__ . '/includes/page-banner.php';
       <!-- Overview cards: visible on All -->
       <article class="service-detail-card" data-level="overview" data-tags="graphic-design">
         <div class="service-detail-media">
-          <a href="/graphic-design.php"><img src="/assets/images/service-graphic-design.jpg" alt="Graphic Design"></a>
+          <a href="/graphic-design.php"><img loading="lazy" src="/assets/images/service-graphic-design.jpg" alt="Graphic Design"></a>
         </div>
         <div class="service-detail-body">
           <h2><a href="/graphic-design.php">Graphic Design</a></h2>
@@ -143,7 +143,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="overview" data-tags="web-design">
         <div class="service-detail-media">
-          <a href="/web-design.php"><img src="/assets/images/mockup-main.webp" alt="Web Design"></a>
+          <a href="/web-design.php"><img loading="lazy" src="/assets/images/mockup-main.webp" alt="Web Design"></a>
         </div>
         <div class="service-detail-body">
           <h2><a href="/web-design.php">Web Design</a></h2>
@@ -159,7 +159,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="overview" data-tags="web-development">
         <div class="service-detail-media">
-          <a href="/web-development.php"><img src="/assets/images/product-dashboard.webp" alt="Web Development"></a>
+          <a href="/web-development.php"><img loading="lazy" src="/assets/images/product-dashboard.webp" alt="Web Development"></a>
         </div>
         <div class="service-detail-body">
           <h2><a href="/web-development.php">Web Development</a></h2>
@@ -175,7 +175,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="overview" data-tags="seo">
         <div class="service-detail-media">
-          <a href="/seo.php"><img src="/assets/images/service-seo.jpg" alt="SEO"></a>
+          <a href="/seo.php"><img loading="lazy" src="/assets/images/service-seo.jpg" alt="SEO"></a>
         </div>
         <div class="service-detail-body">
           <h2><a href="/seo.php">SEO</a></h2>
@@ -191,7 +191,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="overview" data-tags="social-media-advertising">
         <div class="service-detail-media">
-          <a href="/social-media-advertising.php"><img src="/assets/images/service-social-media.jpg" alt="Social Media Advertising"></a>
+          <a href="/social-media-advertising.php"><img loading="lazy" src="/assets/images/service-social-media.jpg" alt="Social Media Advertising"></a>
         </div>
         <div class="service-detail-body">
           <h2><a href="/social-media-advertising.php">Social Media Advertising</a></h2>
@@ -207,7 +207,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="overview" data-tags="google-ads">
         <div class="service-detail-media">
-          <a href="/google-ads.php"><img src="/assets/images/excel-landing.webp" alt="Google Ads"></a>
+          <a href="/google-ads.php"><img loading="lazy" src="/assets/images/excel-landing.webp" alt="Google Ads"></a>
         </div>
         <div class="service-detail-body">
           <h2><a href="/google-ads.php">Google Ads</a></h2>
@@ -223,7 +223,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="overview" data-tags="digital-marketing">
         <div class="service-detail-media">
-          <a href="/digital-marketing.php"><img src="/assets/images/service-digital-marketing.jpg" alt="Digital Marketing"></a>
+          <a href="/digital-marketing.php"><img loading="lazy" src="/assets/images/service-digital-marketing.jpg" alt="Digital Marketing"></a>
         </div>
         <div class="service-detail-body">
           <h2><a href="/digital-marketing.php">Digital Marketing</a></h2>
@@ -241,7 +241,7 @@ include __DIR__ . '/includes/page-banner.php';
       <!-- Graphic Design -->
       <article class="service-detail-card" data-level="sub" data-tags="graphic-design" data-subs="logo-design" hidden>
         <div class="service-detail-media">
-          <a href="/graphic-design.php"><img src="/assets/images/service-graphic-design.jpg" alt="Logo Design"></a>
+          <a href="/graphic-design.php"><img loading="lazy" src="/assets/images/service-graphic-design.jpg" alt="Logo Design"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Graphic Design</p>
@@ -258,7 +258,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="graphic-design" data-subs="brand-collaterals" hidden>
         <div class="service-detail-media">
-          <a href="/graphic-design.php"><img src="/assets/images/excel-branding.webp" alt="Brand Collaterals"></a>
+          <a href="/graphic-design.php"><img loading="lazy" src="/assets/images/excel-branding.webp" alt="Brand Collaterals"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Graphic Design</p>
@@ -275,7 +275,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="graphic-design" data-subs="t-shirt" hidden>
         <div class="service-detail-media">
-          <a href="/graphic-design.php"><img src="/assets/images/branding-1.webp" alt="T-shirt Design"></a>
+          <a href="/graphic-design.php"><img loading="lazy" src="/assets/images/branding-1.webp" alt="T-shirt Design"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Graphic Design</p>
@@ -292,7 +292,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="graphic-design" data-subs="business-card" hidden>
         <div class="service-detail-media">
-          <a href="/graphic-design.php"><img src="/assets/images/branding-2.webp" alt="Business Card"></a>
+          <a href="/graphic-design.php"><img loading="lazy" src="/assets/images/branding-2.webp" alt="Business Card"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Graphic Design</p>
@@ -309,7 +309,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="graphic-design" data-subs="social-media-post" hidden>
         <div class="service-detail-media">
-          <a href="/graphic-design.php"><img src="/assets/images/service-social-media.jpg" alt="Social Media Post"></a>
+          <a href="/graphic-design.php"><img loading="lazy" src="/assets/images/service-social-media.jpg" alt="Social Media Post"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Graphic Design</p>
@@ -327,7 +327,7 @@ include __DIR__ . '/includes/page-banner.php';
       <!-- Web Design -->
       <article class="service-detail-card" data-level="sub" data-tags="web-design" data-subs="landing-pages" hidden>
         <div class="service-detail-media">
-          <a href="/web-design.php"><img src="/assets/images/excel-landing.webp" alt="Landing Pages"></a>
+          <a href="/web-design.php"><img loading="lazy" src="/assets/images/excel-landing.webp" alt="Landing Pages"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Web Design</p>
@@ -344,7 +344,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="web-design" data-subs="corporate-sites" hidden>
         <div class="service-detail-media">
-          <a href="/web-design.php"><img src="/assets/images/mockup-main.webp" alt="Corporate Sites"></a>
+          <a href="/web-design.php"><img loading="lazy" src="/assets/images/mockup-main.webp" alt="Corporate Sites"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Web Design</p>
@@ -361,7 +361,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="web-design" data-subs="product-sites" hidden>
         <div class="service-detail-media">
-          <a href="/web-design.php"><img src="/assets/images/product-ui.webp" alt="Product Sites"></a>
+          <a href="/web-design.php"><img loading="lazy" src="/assets/images/product-ui.webp" alt="Product Sites"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Web Design</p>
@@ -378,7 +378,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="web-design" data-subs="redesigns" hidden>
         <div class="service-detail-media">
-          <a href="/web-design.php"><img src="/assets/images/excel-uiux.webp" alt="Redesigns"></a>
+          <a href="/web-design.php"><img loading="lazy" src="/assets/images/excel-uiux.webp" alt="Redesigns"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Web Design</p>
@@ -396,7 +396,7 @@ include __DIR__ . '/includes/page-banner.php';
       <!-- Web Development -->
       <article class="service-detail-card" data-level="sub" data-tags="web-development" data-subs="wordpress" hidden>
         <div class="service-detail-media">
-          <a href="/web-development.php"><img src="/assets/images/service-web-development.jpg" alt="WordPress"></a>
+          <a href="/web-development.php"><img loading="lazy" src="/assets/images/service-web-development.jpg" alt="WordPress"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Web Development</p>
@@ -413,7 +413,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="web-development" data-subs="wix" hidden>
         <div class="service-detail-media">
-          <a href="/web-development.php"><img src="/assets/images/excel-landing.webp" alt="Wix"></a>
+          <a href="/web-development.php"><img loading="lazy" src="/assets/images/excel-landing.webp" alt="Wix"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Web Development</p>
@@ -430,7 +430,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="web-development" data-subs="squarespace" hidden>
         <div class="service-detail-media">
-          <a href="/web-development.php"><img src="/assets/images/mockup-2.webp" alt="Squarespace"></a>
+          <a href="/web-development.php"><img loading="lazy" src="/assets/images/mockup-2.webp" alt="Squarespace"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Web Development</p>
@@ -447,7 +447,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="web-development" data-subs="shopify" hidden>
         <div class="service-detail-media">
-          <a href="/web-development.php"><img src="/assets/images/mockup-5.webp" alt="Shopify"></a>
+          <a href="/web-development.php"><img loading="lazy" src="/assets/images/mockup-5.webp" alt="Shopify"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Web Development</p>
@@ -464,7 +464,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="web-development" data-subs="web-app" hidden>
         <div class="service-detail-media">
-          <a href="/web-development.php"><img src="/assets/images/product-dashboard.webp" alt="Web App"></a>
+          <a href="/web-development.php"><img loading="lazy" src="/assets/images/product-dashboard.webp" alt="Web App"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Web Development</p>
@@ -481,7 +481,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="web-development" data-subs="custom-web" hidden>
         <div class="service-detail-media">
-          <a href="/web-development.php"><img src="/assets/images/device-1.webp" alt="Custom Web"></a>
+          <a href="/web-development.php"><img loading="lazy" src="/assets/images/device-1.webp" alt="Custom Web"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Web Development</p>
@@ -499,7 +499,7 @@ include __DIR__ . '/includes/page-banner.php';
       <!-- SEO -->
       <article class="service-detail-card" data-level="sub" data-tags="seo" data-subs="technical-seo" hidden>
         <div class="service-detail-media">
-          <a href="/seo.php"><img src="/assets/images/service-seo.jpg" alt="Technical SEO"></a>
+          <a href="/seo.php"><img loading="lazy" src="/assets/images/service-seo.jpg" alt="Technical SEO"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">SEO</p>
@@ -516,7 +516,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="seo" data-subs="on-page" hidden>
         <div class="service-detail-media">
-          <a href="/seo.php"><img src="/assets/images/excel-landing.webp" alt="On-Page SEO"></a>
+          <a href="/seo.php"><img loading="lazy" src="/assets/images/excel-landing.webp" alt="On-Page SEO"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">SEO</p>
@@ -533,7 +533,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="seo" data-subs="content-seo" hidden>
         <div class="service-detail-media">
-          <a href="/seo.php"><img src="/assets/images/why-craft.jpg" alt="Content SEO"></a>
+          <a href="/seo.php"><img loading="lazy" src="/assets/images/why-craft.jpg" alt="Content SEO"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">SEO</p>
@@ -550,7 +550,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="seo" data-subs="local-seo" hidden>
         <div class="service-detail-media">
-          <a href="/seo.php"><img src="/assets/images/people-office.jpg" alt="Local SEO"></a>
+          <a href="/seo.php"><img loading="lazy" src="/assets/images/people-office.jpg" alt="Local SEO"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">SEO</p>
@@ -568,7 +568,7 @@ include __DIR__ . '/includes/page-banner.php';
       <!-- Social Ads -->
       <article class="service-detail-card" data-level="sub" data-tags="social-media-advertising" data-subs="meta-ads" hidden>
         <div class="service-detail-media">
-          <a href="/social-media-advertising.php"><img src="/assets/images/service-social-media.jpg" alt="Meta Ads"></a>
+          <a href="/social-media-advertising.php"><img loading="lazy" src="/assets/images/service-social-media.jpg" alt="Meta Ads"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Social Ads</p>
@@ -585,7 +585,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="social-media-advertising" data-subs="linkedin-ads" hidden>
         <div class="service-detail-media">
-          <a href="/social-media-advertising.php"><img src="/assets/images/excel-spatial.webp" alt="LinkedIn Ads"></a>
+          <a href="/social-media-advertising.php"><img loading="lazy" src="/assets/images/excel-spatial.webp" alt="LinkedIn Ads"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Social Ads</p>
@@ -602,7 +602,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="social-media-advertising" data-subs="tiktok-ads" hidden>
         <div class="service-detail-media">
-          <a href="/social-media-advertising.php"><img src="/assets/images/excel-mobile.webp" alt="TikTok Ads"></a>
+          <a href="/social-media-advertising.php"><img loading="lazy" src="/assets/images/excel-mobile.webp" alt="TikTok Ads"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Social Ads</p>
@@ -619,7 +619,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="social-media-advertising" data-subs="creative-testing" hidden>
         <div class="service-detail-media">
-          <a href="/social-media-advertising.php"><img src="/assets/images/mobile-app.webp" alt="Creative Testing"></a>
+          <a href="/social-media-advertising.php"><img loading="lazy" src="/assets/images/mobile-app.webp" alt="Creative Testing"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Social Ads</p>
@@ -637,7 +637,7 @@ include __DIR__ . '/includes/page-banner.php';
       <!-- Google Ads -->
       <article class="service-detail-card" data-level="sub" data-tags="google-ads" data-subs="search-ads" hidden>
         <div class="service-detail-media">
-          <a href="/google-ads.php"><img src="/assets/images/service-google-ads.jpg" alt="Search Ads"></a>
+          <a href="/google-ads.php"><img loading="lazy" src="/assets/images/service-google-ads.jpg" alt="Search Ads"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Google Ads</p>
@@ -654,7 +654,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="google-ads" data-subs="display-ads" hidden>
         <div class="service-detail-media">
-          <a href="/google-ads.php"><img src="/assets/images/excel-web3.webp" alt="Display Ads"></a>
+          <a href="/google-ads.php"><img loading="lazy" src="/assets/images/excel-web3.webp" alt="Display Ads"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Google Ads</p>
@@ -671,7 +671,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="google-ads" data-subs="performance-max" hidden>
         <div class="service-detail-media">
-          <a href="/google-ads.php"><img src="/assets/images/excel-landing.webp" alt="Performance Max"></a>
+          <a href="/google-ads.php"><img loading="lazy" src="/assets/images/excel-landing.webp" alt="Performance Max"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Google Ads</p>
@@ -688,7 +688,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="google-ads" data-subs="remarketing" hidden>
         <div class="service-detail-media">
-          <a href="/google-ads.php"><img src="/assets/images/product-dashboard.webp" alt="Remarketing"></a>
+          <a href="/google-ads.php"><img loading="lazy" src="/assets/images/product-dashboard.webp" alt="Remarketing"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Google Ads</p>
@@ -706,7 +706,7 @@ include __DIR__ . '/includes/page-banner.php';
       <!-- Digital Marketing -->
       <article class="service-detail-card" data-level="sub" data-tags="digital-marketing" data-subs="strategy" hidden>
         <div class="service-detail-media">
-          <a href="/digital-marketing.php"><img src="/assets/images/service-digital-marketing.jpg" alt="Strategy"></a>
+          <a href="/digital-marketing.php"><img loading="lazy" src="/assets/images/service-digital-marketing.jpg" alt="Strategy"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Digital Marketing</p>
@@ -723,7 +723,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="digital-marketing" data-subs="content-marketing" hidden>
         <div class="service-detail-media">
-          <a href="/digital-marketing.php"><img src="/assets/images/why-design.jpg" alt="Content Marketing"></a>
+          <a href="/digital-marketing.php"><img loading="lazy" src="/assets/images/why-design.jpg" alt="Content Marketing"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Digital Marketing</p>
@@ -740,7 +740,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="digital-marketing" data-subs="email-marketing" hidden>
         <div class="service-detail-media">
-          <a href="/digital-marketing.php"><img src="/assets/images/people-collab.jpg" alt="Email Marketing"></a>
+          <a href="/digital-marketing.php"><img loading="lazy" src="/assets/images/people-collab.jpg" alt="Email Marketing"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Digital Marketing</p>
@@ -757,7 +757,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="digital-marketing" data-subs="funnel-design" hidden>
         <div class="service-detail-media">
-          <a href="/digital-marketing.php"><img src="/assets/images/why-influence.jpg" alt="Funnel Design"></a>
+          <a href="/digital-marketing.php"><img loading="lazy" src="/assets/images/why-influence.jpg" alt="Funnel Design"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Digital Marketing</p>

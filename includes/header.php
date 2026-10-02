@@ -12,7 +12,7 @@ require_once __DIR__ . '/config.php';
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/styles.css">
-  <link rel="icon" href="/assets/images/logo.png" type="image/png">
+  <link rel="icon" href="/assets/images/logo-icon.png" type="image/png">
   <script>
     (function () {
       // Default: light. Dark only if user explicitly chose it.
@@ -44,8 +44,8 @@ require_once __DIR__ . '/config.php';
   <header class="site-header">
     <nav class="nav-pill">
       <a href="/" class="nav-logo">
-        <img class="nav-logo-img nav-logo-light" src="/assets/images/logo.png" alt="WTF Labs" width="72" height="70">
-        <img class="nav-logo-img nav-logo-dark" src="/assets/images/logo-sec.png" alt="WTF Labs" width="72" height="70">
+        <img class="nav-logo-img nav-logo-light" src="/assets/images/logo.webp" alt="WTF Labs" width="72" height="70">
+        <img class="nav-logo-img nav-logo-dark" src="/assets/images/logo-sec.webp" alt="WTF Labs" width="72" height="70">
       </a>
       <ul class="nav-links">
         <li class="nav-dropdown">
@@ -60,26 +60,26 @@ require_once __DIR__ . '/config.php';
             <a href="/google-ads.php">Google Ads</a>
             <a href="/digital-marketing.php">Digital Marketing</a>
             -->
-            <a href="/web-design.php">Web Design &amp; Development</a>
-            <a href="/seo.php">SEO &amp; Local Search</a>
-            <a href="/google-ads.php">Google Ads</a>
-            <a href="/social-media-advertising.php">Social Media Advertising</a>
-            <a href="/graphic-design.php">Branding &amp; Creative</a>
-            <a href="/digital-marketing.php">Full-Service Digital Marketing</a>
+            <a href="/services.php#web-design">Web Design &amp; Development</a>
+            <a href="/services.php#seo">SEO &amp; Local Search</a>
+            <a href="/services.php#google-ads">Google Ads</a>
+            <a href="/services.php#social-media-advertising">Social Media Advertising</a>
+            <a href="/services.php#graphic-design">Branding &amp; Creative</a>
+            <a href="/services.php#digital-marketing">Full-Service Digital Marketing</a>
           </div>
         </li>
         <li class="nav-dropdown">
           <a href="/industries.php" class="nav-dropdown-btn"<?php echo $current_page === 'industries' ? ' aria-current="page"' : ''; ?>>Industries <span>&#9662;</span></a>
           <div class="nav-dropdown-menu">
-            <a href="/remodelers.php">Remodelers</a>
-            <a href="/roofing.php">Roofing</a>
-            <a href="/handyman.php">Handyman</a>
-            <a href="/power-washing.php">Power Washing</a>
-            <a href="/hvac.php">HVAC</a>
-            <a href="/plumbing.php">Plumbing</a>
-            <a href="/pest-control.php">Pest Control</a>
-            <a href="/pool-services.php">Pool Services</a>
-            <a href="/landscaping.php">Landscaping</a>
+            <a href="/industries.php#remodelers">Remodelers</a>
+            <a href="/industries.php#roofing">Roofing</a>
+            <a href="/industries.php#handyman">Handyman</a>
+            <a href="/industries.php#power-washing">Power Washing</a>
+            <a href="/industries.php#hvac">HVAC</a>
+            <a href="/industries.php#plumbing">Plumbing</a>
+            <a href="/industries.php#pest-control">Pest Control</a>
+            <a href="/industries.php#pool-services">Pool Services</a>
+            <a href="/industries.php#landscaping">Landscaping</a>
           </div>
         </li>
         <li><a href="/works.php"<?php echo $current_page === 'works' ? ' aria-current="page"' : ''; ?>>Work</a></li>

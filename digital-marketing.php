@@ -29,7 +29,7 @@ include __DIR__ . '/includes/page-banner.php';
     <div class="svc-cases reveal">
       <article class="svc-case">
         <div class="svc-case-media">
-          <img src="/assets/images/service-digital-marketing.jpg" alt="Launch growth plan">
+          <img loading="lazy" src="/assets/images/service-digital-marketing.jpg" alt="Launch growth plan">
         </div>
         <div class="svc-case-body">
           <p class="svc-case-meta">Go-to-market</p>
@@ -39,7 +39,7 @@ include __DIR__ . '/includes/page-banner.php';
       </article>
       <article class="svc-case">
         <div class="svc-case-media">
-          <img src="/assets/images/service-google-ads.jpg" alt="Nurture &amp; email">
+          <img loading="lazy" src="/assets/images/service-google-ads.jpg" alt="Nurture &amp; email">
         </div>
         <div class="svc-case-body">
           <p class="svc-case-meta">Lifecycle</p>
@@ -49,7 +49,7 @@ include __DIR__ . '/includes/page-banner.php';
       </article>
       <article class="svc-case">
         <div class="svc-case-media">
-          <img src="/assets/images/people-collab.jpg" alt="Measurement layer">
+          <img loading="lazy" src="/assets/images/people-collab.jpg" alt="Measurement layer">
         </div>
         <div class="svc-case-body">
           <p class="svc-case-meta">Analytics</p>
@@ -110,17 +110,17 @@ include __DIR__ . '/includes/page-banner.php';
       </div>
       <div class="svc-excellence-visual">
         <div class="svc-excellence-visual-main">
-          <img src="/assets/images/service-google-ads.jpg" alt="">
+          <img loading="lazy" src="/assets/images/service-google-ads.jpg" alt="">
         </div>
         <div class="svc-excellence-chip">
           <span class="svc-excellence-chip-dot"></span>
           <p>Strategy · Channels · Results</p>
         </div>
         <div class="svc-excellence-float svc-excellence-float--1">
-          <img src="/assets/images/service-digital-marketing.jpg" alt="">
+          <img loading="lazy" src="/assets/images/service-digital-marketing.jpg" alt="">
         </div>
         <div class="svc-excellence-float svc-excellence-float--2">
-          <img src="/assets/images/excel-spatial.webp" alt="">
+          <img loading="lazy" src="/assets/images/excel-spatial.webp" alt="">
         </div>
       </div>
     </div>
@@ -158,12 +158,12 @@ include __DIR__ . '/includes/testimonialslider.php';
       <h2>Explore more <span class="heading-accent">services</span></h2>
     </div>
     <div class="excel-tags reveal">
-      <a href="/graphic-design.php" class="excel-tag">Graphic Design</a>
-      <a href="/web-design.php" class="excel-tag">Web Design</a>
-      <a href="/web-development.php" class="excel-tag">Web Development</a>
-      <a href="/seo.php" class="excel-tag">SEO</a>
-      <a href="/social-media-advertising.php" class="excel-tag">Social Media Advertising</a>
-      <a href="/google-ads.php" class="excel-tag">Google Ads</a>
+      <a href="/services.php#graphic-design" class="excel-tag">Graphic Design</a>
+      <a href="/services.php#web-design" class="excel-tag">Web Design</a>
+      <a href="/services.php#web-development" class="excel-tag">Web Development</a>
+      <a href="/services.php#seo" class="excel-tag">SEO</a>
+      <a href="/services.php#social-media-advertising" class="excel-tag">Social Media Advertising</a>
+      <a href="/services.php#google-ads" class="excel-tag">Google Ads</a>
     </div>
     <div class="services-cta-band reveal" style="margin-top:40px">
       <div>

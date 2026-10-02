@@ -25,7 +25,7 @@ include __DIR__ . '/includes/page-banner.php';
     <div class="works-grid reveal">
       <article class="work-card">
         <div class="work-card-media">
-          <a href="#remodelers-lose-projects"><img src="/assets/images/industry-remodelers-1.webp" alt="Remodeled kitchen"></a>
+          <a href="#remodelers-lose-projects"><img loading="lazy" src="/assets/images/industry-remodelers-1.webp" alt="Remodeled kitchen"></a>
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -40,7 +40,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="work-card">
         <div class="work-card-media">
-          <a href="#hvac-mobile-calls"><img src="/assets/images/industry-hvac-2.webp" alt="HVAC technician at a thermostat"></a>
+          <a href="#hvac-mobile-calls"><img loading="lazy" src="/assets/images/industry-hvac-2.webp" alt="HVAC technician at a thermostat"></a>
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -55,7 +55,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="work-card">
         <div class="work-card-media">
-          <a href="#plumbing-google-ads"><img src="/assets/images/industry-plumbing-1.webp" alt="Plumber fixing a sink"></a>
+          <a href="#plumbing-google-ads"><img loading="lazy" src="/assets/images/industry-plumbing-1.webp" alt="Plumber fixing a sink"></a>
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -70,7 +70,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="work-card">
         <div class="work-card-media">
-          <a href="#pest-control-recurring"><img src="/assets/images/industry-pest-control-3.webp" alt="Pest control technician with a homeowner"></a>
+          <a href="#pest-control-recurring"><img loading="lazy" src="/assets/images/industry-pest-control-3.webp" alt="Pest control technician with a homeowner"></a>
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -85,7 +85,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="work-card">
         <div class="work-card-media">
-          <a href="#roofing-website-examples"><img src="/assets/images/industry-roofing-3.webp" alt="New roof on a family home"></a>
+          <a href="#roofing-website-examples"><img loading="lazy" src="/assets/images/industry-roofing-3.webp" alt="New roof on a family home"></a>
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
@@ -100,7 +100,7 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="work-card">
         <div class="work-card-media">
-          <a href="#pool-local-seo"><img src="/assets/images/industry-pool-services-4.webp" alt="Backyard pool at sunset"></a>
+          <a href="#pool-local-seo"><img loading="lazy" src="/assets/images/industry-pool-services-4.webp" alt="Backyard pool at sunset"></a>
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">

@@ -34,10 +34,10 @@ include __DIR__ . '/includes/page-banner.php';
         </ul>
       </div>
       <div class="about-split-media">
-        <img src="/assets/images/enterprise-team.jpg" alt="Enterprise delivery team">
+        <img loading="lazy" src="/assets/images/enterprise-team.jpg" alt="Enterprise delivery team">
         <div class="about-split-float">
-          <img src="/assets/images/team-1.jpg" alt="">
-          <img src="/assets/images/team-3.jpg" alt="">
+          <img loading="lazy" src="/assets/images/team-1.jpg" alt="">
+          <img loading="lazy" src="/assets/images/team-3.jpg" alt="">
         </div>
       </div>
     </div>
@@ -83,11 +83,11 @@ include __DIR__ . '/includes/page-banner.php';
         <p>Designers, engineers, and strategists who stay — so your context never resets mid-project.</p>
       </div>
       <div class="about-team-photos">
-        <img src="/assets/images/team-1.jpg" alt="Team">
-        <img src="/assets/images/team-2.jpg" alt="Team">
-        <img src="/assets/images/team-3.jpg" alt="Team">
-        <img src="/assets/images/people-main.jpg" alt="Team">
-        <img src="/assets/images/people-collab.jpg" alt="Team">
+        <img loading="lazy" src="/assets/images/team-1.jpg" alt="Team">
+        <img loading="lazy" src="/assets/images/team-2.jpg" alt="Team">
+        <img loading="lazy" src="/assets/images/team-3.jpg" alt="Team">
+        <img loading="lazy" src="/assets/images/people-main.jpg" alt="Team">
+        <img loading="lazy" src="/assets/images/people-collab.jpg" alt="Team">
       </div>
     </div>
 
@@ -141,7 +141,7 @@ include __DIR__ . '/includes/page-banner.php';
 
     <div class="about-method reveal">
       <div class="about-method-visual">
-        <img src="/assets/images/people-workshop.jpg" alt="WTF Labs collaboration">
+        <img loading="lazy" src="/assets/images/people-workshop.jpg" alt="WTF Labs collaboration">
         <div class="about-method-badge">Alfred energy</div>
       </div>
       <div class="about-method-copy">

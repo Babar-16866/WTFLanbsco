@@ -10,8 +10,8 @@ include __DIR__ . '/includes/header.php';
   <div class="container">
     <div class="thank-card reveal">
       <div class="thank-visual" aria-hidden="true">
-        <img src="/assets/images/logo.png" alt="" class="thank-logo thank-logo-light">
-        <img src="/assets/images/logo-sec.png" alt="" class="thank-logo thank-logo-dark">
+        <img src="/assets/images/logo.webp" alt="" class="thank-logo thank-logo-light">
+        <img src="/assets/images/logo-sec.webp" alt="" class="thank-logo thank-logo-dark">
         <span class="thank-check">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
