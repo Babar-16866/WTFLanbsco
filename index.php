@@ -18,9 +18,9 @@ include __DIR__ . '/includes/header.php';
           <br><span class="nowrap">Home-Service Businesses</span>
         </h1>
         -->
-        <h1 class="hero-heading" aria-label="Your work deserves better Branding, Websites, Marketing, Leads, Sales, Projects.">
+        <h1 class="hero-heading" aria-label="Your work deserves better Branding. Websites. Marketing. Leads. Sales. Projects.">
           <span aria-hidden="true">Your work deserves better</span><br>
-          <span class="accent-lime typewriter" data-typewriter="Branding|Websites|Marketing|Leads|Sales|Projects" aria-hidden="true"></span>
+          <span class="accent-lime typewriter" data-typewriter="Branding.|Websites.|Marketing.|Leads.|Sales.|Projects." aria-hidden="true"></span>
         </h1>
       </header>
 
@@ -61,8 +61,11 @@ include __DIR__ . '/includes/header.php';
 
       <div class="hero-definition reveal reveal-delay-1">
         <span class="dot-deco"></span>
+        <!--
         <p><span class="accent-lime">Earn trust from buyers, partners, and investors.</span> One senior team from
           strategy to launch.</p>
+        -->
+        <p><span class="accent-lime">Win better leads, bigger projects, and more trust before the first call.</span> Make your business look as good online as the work you do in the real world.</p>
       </div>
     </div>
 
@@ -119,7 +122,7 @@ include __DIR__ . '/includes/header.php';
 <section class="problem-section">
   <div class="container">
     <div class="section-header center problem-head reveal">
-      <h2>Stop losing good jobs to lower-bid competitors with <span class="heading-accent">better marketing.</span></h2>
+      <h2 class="home-title">Stop Losing Good Jobs To Lower-Bid Competitors With <span class="heading-accent">Better Marketing.</span></h2>
       <p class="section-desc center-desc">You can have better crews, better service, better materials, and better results, and still lose the job if the other company looks more credible online.</p>
       <p class="section-desc center-desc">That gap costs home-service businesses in different ways:</p>
     </div>
@@ -149,7 +152,7 @@ include __DIR__ . '/includes/header.php';
 <section class="guides-section problem-guides">
   <div class="container">
     <div class="guides-header reveal">
-      <h2>Stop losing good jobs to lower-bid competitors with <span>better marketing.</span></h2>
+      <h2 class="home-title">Stop Losing Good Jobs To Lower-Bid Competitors With <span>Better Marketing.</span></h2>
       <p class="guides-desc">You can have better crews, better service, better materials, and better results, and still lose the job if the other company looks more credible online.</p>
       <p class="guides-desc">That gap costs home-service businesses in different ways:</p>
     </div>
@@ -184,7 +187,7 @@ include __DIR__ . '/includes/header.php';
     -->
     <div class="section-header center reveal">
       <p class="subheading accent-blue"><span class="dot-blue"></span> Who we build for</p>
-      <h2>BUILT AROUND HOW YOUR<br><span class="accent-blue typewriter" data-typewriter="BUSINESS ACTUALLY SELLS|CUSTOMERS BUY"></span></h2>
+      <h2 class="home-title">BUILT AROUND HOW YOUR<br><span class="accent-blue typewriter" data-typewriter="BUSINESS ACTUALLY SELLS.|CUSTOMERS BUY."></span></h2>
     </div>
 
     <!--
@@ -287,7 +290,7 @@ include __DIR__ . '/includes/header.php';
     </div>
     -->
 
-    <div class="brands-grid brands-grid--three reveal">
+    <div class="brands-grid brands-grid--groups reveal">
       <a href="/industries.php" class="brand-card">
         <div class="brand-card-logos brand-card-logos--top">
           <span class="brand-logo">Remodelers</span>
@@ -298,7 +301,6 @@ include __DIR__ . '/includes/header.php';
         <div class="brand-card-head">
           <h3>What matters most:</h3>
           <p class="brand-card-points">Project proof · Before/after storytelling · Premium positioning · Reviews · Clear process · Better-fit inquiries</p>
-          <span class="btn btn-lime btn-sm">Explore High-Ticket Industries</span>
         </div>
         <div class="brand-card-fan">
           <img class="fan-shot fan-shot-1" src="/assets/images/industry-roofing-1.webp" alt="">
@@ -306,6 +308,9 @@ include __DIR__ . '/includes/header.php';
           <img class="fan-shot fan-shot-3" src="/assets/images/industry-remodelers-1.webp" alt="">
           <img class="fan-shot fan-shot-4" src="/assets/images/industry-power-washing-1.webp" alt="">
           <img class="fan-shot fan-shot-5" src="/assets/images/industry-remodelers-3.webp" alt="">
+        </div>
+        <div class="brand-card-cta">
+          <span class="btn btn-lime btn-sm">Explore High-Ticket Industries</span>
         </div>
       </a>
 
@@ -317,7 +322,6 @@ include __DIR__ . '/includes/header.php';
         <div class="brand-card-head">
           <h3>What matters most:</h3>
           <p class="brand-card-points">Mobile speed · Click-to-call · Booking · Financing · Invoicing · Reviews · Local trust · Lead tracking</p>
-          <span class="btn btn-lime btn-sm">Explore Rapid-Response Industries</span>
         </div>
         <div class="brand-card-fan">
           <img class="fan-shot fan-shot-1" src="/assets/images/industry-hvac-2.webp" alt="">
@@ -325,6 +329,9 @@ include __DIR__ . '/includes/header.php';
           <img class="fan-shot fan-shot-3" src="/assets/images/industry-hvac-1.webp" alt="">
           <img class="fan-shot fan-shot-4" src="/assets/images/industry-plumbing-2.webp" alt="">
           <img class="fan-shot fan-shot-5" src="/assets/images/industry-hvac-4.webp" alt="">
+        </div>
+        <div class="brand-card-cta">
+          <span class="btn btn-lime btn-sm">Explore Rapid-Response Industries</span>
         </div>
       </a>
 
@@ -337,7 +344,6 @@ include __DIR__ . '/includes/header.php';
         <div class="brand-card-head">
           <h3>What matters most:</h3>
           <p class="brand-card-points">Plan selection · Quick cost estimates · Service-area clarity · Recurring signup · Retention · Local proof</p>
-          <span class="btn btn-lime btn-sm">Explore Recurring-Service Industries</span>
         </div>
         <div class="brand-card-fan">
           <img class="fan-shot fan-shot-1" src="/assets/images/industry-pool-services-1.webp" alt="">
@@ -345,6 +351,31 @@ include __DIR__ . '/includes/header.php';
           <img class="fan-shot fan-shot-3" src="/assets/images/industry-pest-control-1.webp" alt="">
           <img class="fan-shot fan-shot-4" src="/assets/images/industry-pool-services-4.webp" alt="">
           <img class="fan-shot fan-shot-5" src="/assets/images/industry-landscaping-3.webp" alt="">
+        </div>
+        <div class="brand-card-cta">
+          <span class="btn btn-lime btn-sm">Explore Recurring-Service Industries</span>
+        </div>
+      </a>
+
+      <a href="/industries.php" class="brand-card">
+        <div class="brand-card-logos brand-card-logos--top">
+          <span class="brand-logo">Pest Control</span>
+          <span class="brand-logo">Pool Services</span>
+          <span class="brand-logo">Landscaping</span>
+        </div>
+        <div class="brand-card-head">
+          <h3>What matters most:</h3>
+          <p class="brand-card-points">Plan selection · Quick cost estimates · Service-area clarity · Recurring signup · Retention · Local proof</p>
+        </div>
+        <div class="brand-card-fan">
+          <img class="fan-shot fan-shot-1" src="/assets/images/industry-pool-services-1.webp" alt="">
+          <img class="fan-shot fan-shot-2" src="/assets/images/industry-landscaping-1.webp" alt="">
+          <img class="fan-shot fan-shot-3" src="/assets/images/industry-pest-control-1.webp" alt="">
+          <img class="fan-shot fan-shot-4" src="/assets/images/industry-pool-services-4.webp" alt="">
+          <img class="fan-shot fan-shot-5" src="/assets/images/industry-landscaping-3.webp" alt="">
+        </div>
+        <div class="brand-card-cta">
+          <span class="btn btn-lime btn-sm">Explore Recurring-Service Industries</span>
         </div>
       </a>
     </div>
@@ -356,7 +387,7 @@ include __DIR__ . '/includes/header.php';
 <section class="excel-section" id="services">
   <div class="container">
     <div class="excel-header reveal">
-      <h2 class="excel-title"><span class="accent-blue">What</span> we excel at</h2>
+      <h2 class="excel-title home-title"><span class="accent-blue">What</span> We Excel At</h2>
       <div class="excel-controls">
         <a href="/services.php" class="excel-view-all">
           View all services
@@ -512,7 +543,7 @@ include __DIR__ . '/includes/header.php';
     <div class="container">
       <div class="section-header rail-head reveal">
         <p class="subheading">Why WTF Labs</p>
-        <h2>We make quality <span class="heading-accent">obvious.</span></h2>
+        <h2 class="home-title">We Make Quality <span class="heading-accent">Obvious.</span></h2>
         <p class="section-desc">Our job is not to make your business sound fancy. It is to make the quality already there easier to see, trust, and buy.</p>
       </div>
     </div>
@@ -547,12 +578,24 @@ include __DIR__ . '/includes/header.php';
 <section class="home-work-section" id="works">
   <div class="container">
     <div class="section-header center reveal">
-      <h2>REAL WORK. <span class="accent-lime">BUILT TO EARN TRUST.</span></h2>
-      <p class="section-desc center-desc">Immersive where it helps. Fast where speed matters. Clear where buyers need confidence. Every build should fit the sales cycle behind it.</p>
+      <h2 class="home-title">REAL WORK. <span class="accent-lime">BUILT TO EARN TRUST.</span></h2>
+      <p class="section-desc center-desc">Immersive where it helps. Fast where speed matters. Clear <span class="text-underline-lime">where buyers</span> need confidence. Every build should fit the sales cycle behind it.</p>
     </div>
 
     <div class="works-filter-stack works-filter-stack--center reveal">
-      <div class="works-filters" id="homeWorksFilters" role="tablist" aria-label="Filter works by service">
+      <div class="works-filters" id="homeWorksIndustries" role="tablist" aria-label="Filter works by industry">
+        <button type="button" class="works-filter is-active" data-industry="all" role="tab" aria-selected="true">All</button>
+        <button type="button" class="works-filter" data-industry="remodelers" role="tab" aria-selected="false">Remodelers</button>
+        <button type="button" class="works-filter" data-industry="hvac" role="tab" aria-selected="false">HVAC</button>
+        <button type="button" class="works-filter" data-industry="plumbing" role="tab" aria-selected="false">Plumbing</button>
+        <button type="button" class="works-filter" data-industry="roofing" role="tab" aria-selected="false">Roofing</button>
+        <button type="button" class="works-filter" data-industry="pest-control" role="tab" aria-selected="false">Pest Control</button>
+        <button type="button" class="works-filter" data-industry="pool-services" role="tab" aria-selected="false">Pool Services</button>
+        <button type="button" class="works-filter" data-industry="landscaping" role="tab" aria-selected="false">Landscaping</button>
+        <button type="button" class="works-filter" data-industry="handyman" role="tab" aria-selected="false">Handyman</button>
+        <button type="button" class="works-filter" data-industry="power-washing" role="tab" aria-selected="false">Power Washing</button>
+      </div>
+      <div class="works-filters" id="homeWorksFilters" role="tablist" aria-label="Filter works by service" hidden>
         <button type="button" class="works-filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
         <button type="button" class="works-filter" data-filter="graphic-design" role="tab" aria-selected="false">Graphic Design</button>
         <button type="button" class="works-filter" data-filter="web-design" role="tab" aria-selected="false">Web Design</button>
@@ -566,7 +609,61 @@ include __DIR__ . '/includes/header.php';
     </div>
 
     <div class="works-grid home-works-grid reveal" id="homeWorksGrid" data-smooth>
-      <article class="work-card" data-tags="web-design web-development" data-subs="product-sites custom-web landing-pages">
+      <article class="work-card" data-tags="web-development web-design" data-subs="web-app custom-web product-sites" data-industries="plumbing hvac" data-live="https://heavyroute.vercel.app/">
+        <div class="work-card-media">
+          <img src="/assets/images/work-heavyroute.jpg" alt="HeavyRoute AI">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Logistics platform</span>
+            <span>Live website</span>
+          </div>
+          <h2>HeavyRoute AI</h2>
+          <p>Route simulation, port gate slot booking, live fleet telemetry, and automated customs compliance for heavy and out-of-gauge cargo.</p>
+          <div class="work-card-tags">
+            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design.php">Web Design</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-card" data-tags="web-design web-development" data-subs="product-sites shopify custom-web" data-industries="handyman power-washing" data-live="https://pitboxbikes.vercel.app/">
+        <div class="work-card-media">
+          <img src="/assets/images/work-pitbox.jpg" alt="PITBOX">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>E-commerce</span>
+            <span>Live website</span>
+          </div>
+          <h2>PITBOX</h2>
+          <p>A superbike parts store with an interactive teardown that lets riders take the bike apart and shop every part with fitment checked before dispatch.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-card" data-tags="web-design graphic-design" data-subs="corporate-sites brand-collaterals" data-industries="remodelers pool-services" data-live="https://websiteinfra.vercel.app/">
+        <div class="work-card-media">
+          <img src="/assets/images/work-micasa.jpg" alt="MICASA">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Design &amp; architecture</span>
+            <span>Live website</span>
+          </div>
+          <h2>MICASA</h2>
+          <p>An immersive studio website for a design and architecture firm, built to showcase bespoke interiors and exteriors one scroll at a time.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/graphic-design.php">Graphic Design</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-card" data-tags="web-design web-development" data-subs="product-sites custom-web landing-pages" data-industries="hvac roofing">
         <div class="work-card-media">
           <img src="/assets/images/excel-uiux.webp" alt="TorchSensors">
         </div>
@@ -584,7 +681,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design digital-marketing" data-subs="landing-pages funnel-design content-marketing">
+      <article class="work-card" data-tags="web-design digital-marketing" data-subs="landing-pages funnel-design content-marketing" data-industries="plumbing pest-control">
         <div class="work-card-media">
           <img src="/assets/images/mockup-2.webp" alt="Solana Payouts">
         </div>
@@ -602,7 +699,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-development graphic-design" data-subs="web-app brand-collaterals social-media-post">
+      <article class="work-card" data-tags="web-development graphic-design" data-subs="web-app brand-collaterals social-media-post" data-industries="remodelers landscaping">
         <div class="work-card-media">
           <img src="/assets/images/excel-mobile.webp" alt="Infaces">
         </div>
@@ -620,7 +717,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design graphic-design" data-subs="corporate-sites logo-design brand-collaterals">
+      <article class="work-card" data-tags="web-design graphic-design" data-subs="corporate-sites logo-design brand-collaterals" data-industries="remodelers handyman">
         <div class="work-card-media">
           <img src="/assets/images/service-graphic-design.jpg" alt="Global Leathers">
         </div>
@@ -638,7 +735,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-development seo" data-subs="custom-web technical-seo on-page">
+      <article class="work-card" data-tags="web-development seo" data-subs="custom-web technical-seo on-page" data-industries="hvac plumbing">
         <div class="work-card-media">
           <img src="/assets/images/mockup-3.webp" alt="Cofinity-X">
         </div>
@@ -656,7 +753,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress redesigns">
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress redesigns" data-industries="pool-services landscaping">
         <div class="work-card-media">
           <img src="/assets/images/service-web-design.jpg" alt="Elvetiko">
         </div>
@@ -674,7 +771,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design google-ads" data-subs="landing-pages search-ads remarketing">
+      <article class="work-card" data-tags="web-design google-ads" data-subs="landing-pages search-ads remarketing" data-industries="roofing power-washing">
         <div class="work-card-media">
           <img src="/assets/images/mockup-main.webp" alt="Fairway">
         </div>
@@ -692,7 +789,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-development seo" data-subs="wordpress on-page content-seo">
+      <article class="work-card" data-tags="web-development seo" data-subs="wordpress on-page content-seo" data-industries="pest-control pool-services">
         <div class="work-card-media">
           <img src="/assets/images/service-web-development.jpg" alt="Fulfillment for Europe">
         </div>
@@ -710,7 +807,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-development digital-marketing" data-subs="custom-web strategy funnel-design">
+      <article class="work-card" data-tags="web-development digital-marketing" data-subs="custom-web strategy funnel-design" data-industries="power-washing handyman">
         <div class="work-card-media">
           <img src="/assets/images/mockup-1.webp" alt="Automotive platforms">
         </div>
@@ -728,7 +825,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design social-media-advertising" data-subs="landing-pages meta-ads creative-testing">
+      <article class="work-card" data-tags="web-design social-media-advertising" data-subs="landing-pages meta-ads creative-testing" data-industries="hvac pest-control">
         <div class="work-card-media">
           <img src="/assets/images/mobile-app.webp" alt="WMails.io">
         </div>
@@ -746,7 +843,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-development seo" data-subs="wordpress content-seo technical-seo">
+      <article class="work-card" data-tags="web-development seo" data-subs="wordpress content-seo technical-seo" data-industries="remodelers roofing">
         <div class="work-card-media">
           <img src="/assets/images/why-craft.jpg" alt="Prosperity Home Loans">
         </div>
@@ -764,7 +861,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design graphic-design" data-subs="corporate-sites brand-collaterals business-card">
+      <article class="work-card" data-tags="web-design graphic-design" data-subs="corporate-sites brand-collaterals business-card" data-industries="landscaping power-washing">
         <div class="work-card-media">
           <img src="/assets/images/excel-branding.webp" alt="SolvoWorld">
         </div>
@@ -812,13 +909,22 @@ include __DIR__ . '/includes/header.php';
   </div>
 </div>
 
+<div class="live-modal" id="liveModal" hidden>
+  <div class="live-modal-backdrop" data-live-close></div>
+  <div class="live-modal-dialog" role="dialog" aria-modal="true" aria-label="Live website preview">
+    <button class="live-modal-close" type="button" data-live-close aria-label="Close">&times;</button>
+    <div class="live-modal-loader" aria-hidden="true"><span></span></div>
+    <iframe class="live-modal-frame" id="liveModalFrame" title="Live website preview" src="about:blank"></iframe>
+  </div>
+</div>
+
 <!-- HOW WE WORK -->
 <section class="rail-section how-rail-section" id="how-we-work" data-rail>
   <div class="rail-sticky">
     <div class="container">
       <div class="section-header rail-head reveal">
         <p class="subheading">How We Work</p>
-        <h2>NO MYSTERY PROCESS. <span class="heading-accent">CLEAR FROM DAY ONE.</span></h2>
+        <h2 class="home-title">NO MYSTERY PROCESS. <span class="heading-accent">CLEAR FROM DAY ONE.</span></h2>
       </div>
     </div>
     <div class="rail-viewport">
@@ -1053,7 +1159,7 @@ include __DIR__ . '/includes/testimonialslider.php';
   <div class="container">
     <div class="section-header reveal">
       <p class="subheading">WTF Labs Method FAQs</p>
-      <h2>Still have questions?<br>Here are the straight answers</h2>
+      <h2 class="home-title">Still Have Questions?<br>Here Are The Straight Answers</h2>
     </div>
     <div class="faq-list reveal">
       <div class="faq-item is-open">
@@ -1199,7 +1305,7 @@ include __DIR__ . '/includes/testimonialslider.php';
   <div class="container final-cta-inner reveal">
     <h2 class="final-cta-title">Your Work Already Has Value. <span class="accent-lime">Make Sure Your Marketing Shows It.</span></h2>
     <p class="final-cta-body">We&rsquo;ll review your current website and conversion path, and show you the highest-impact opportunities we see.</p>
-    <a href="/free-audit.php" class="btn btn-lime btn-lg">Claim Your FREE Audit</a>
+    <a href="/free-audit.php" class="btn btn-lime btn-lg">Claim Your FREE Consultation</a>
     <p class="final-cta-micro">No pressure. No generic 50-page report. Just useful feedback on what is helping, what is hurting, and what we would fix first.</p>
   </div>
 </section>

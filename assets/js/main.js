@@ -688,14 +688,23 @@ window.addEventListener('load', () => {
     return (' ' + list + ' ').indexOf(' ' + token + ' ') !== -1;
   }
 
-  function bindFilterPair(filtersId, subfiltersId, gridId, cardSelector) {
+  function bindFilterPair(filtersId, subfiltersId, gridId, cardSelector, industriesId) {
     const filters = document.getElementById(filtersId);
     const subfilters = document.getElementById(subfiltersId);
     const grid = document.getElementById(gridId);
     if (!filters || !subfilters || !grid) return;
+    const industries = industriesId ? document.getElementById(industriesId) : null;
 
     let activeCategory = 'all';
     let activeSub = 'all';
+    let activeIndustry = 'all';
+
+    function hasMatch(category, sub) {
+      return Array.from(grid.querySelectorAll(cardSelector)).some((card) =>
+        hasToken(card.getAttribute('data-industries') || '', activeIndustry) &&
+        hasToken(card.getAttribute('data-tags') || '', category) &&
+        (!sub || hasToken(card.getAttribute('data-subs') || '', sub)));
+    }
     // Sub tabs written in the page markup (Industries) are reused as-is
     const staticSubs = subfilters.querySelector('[data-sub]') !== null;
 
@@ -721,6 +730,10 @@ window.addEventListener('load', () => {
           if (show && activeSub !== 'all') {
             show = hasToken(subs, activeSub);
           }
+        }
+
+        if (show && industries && activeIndustry !== 'all') {
+          show = hasToken(card.getAttribute('data-industries') || '', activeIndustry);
         }
 
         card.hidden = !show;
@@ -780,6 +793,7 @@ window.addEventListener('load', () => {
       if (category === 'all' || !SUBS[category]) return;
 
       SUBS[category].forEach((item, index) => {
+        if (industries && activeIndustry !== 'all' && item.id !== 'all' && !hasMatch(category, item.id)) return;
         const btn = document.createElement('button');
         btn.type = 'button';
         btn.className = 'works-filter works-subfilter' + (index === 0 ? ' is-active' : '');
@@ -822,6 +836,30 @@ window.addEventListener('load', () => {
       smoothFilter();
     });
 
+    industries?.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-industry]');
+      if (!btn || !industries.contains(btn)) return;
+      e.preventDefault();
+      industries.querySelectorAll('[data-industry]').forEach((el) => {
+        el.classList.remove('is-active');
+        el.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('is-active');
+      btn.setAttribute('aria-selected', 'true');
+      activeIndustry = btn.getAttribute('data-industry') || 'all';
+      activeCategory = 'all';
+      filters.querySelectorAll('[data-filter]').forEach((el) => {
+        const value = el.getAttribute('data-filter');
+        const isAll = value === 'all';
+        el.classList.toggle('is-active', isAll);
+        el.setAttribute('aria-selected', isAll ? 'true' : 'false');
+        el.hidden = !isAll && activeIndustry !== 'all' && !hasMatch(value);
+      });
+      filters.hidden = activeIndustry === 'all';
+      renderSubs('all', '');
+      smoothFilter();
+    });
+
     // Ensure initial visibility matches active tab (All / category)
     applyFilter();
   }
@@ -829,7 +867,7 @@ window.addEventListener('load', () => {
   bindFilterPair('worksFilters', 'worksSubfilters', 'worksGrid', '.work-card');
   bindFilterPair('servicesFilters', 'servicesSubfilters', 'servicesGrid', '.service-detail-card');
   bindFilterPair('industriesFilters', 'industriesSubfilters', 'industriesGrid', '.service-detail-card');
-  bindFilterPair('homeWorksFilters', 'homeWorksSubfilters', 'homeWorksGrid', '.work-card');
+  bindFilterPair('homeWorksFilters', 'homeWorksSubfilters', 'homeWorksGrid', '.work-card', 'homeWorksIndustries');
 })();
 
 // FAQs page — service-specific FAQ tabs (stay on page)
@@ -1082,6 +1120,7 @@ window.addEventListener('load', () => {
     if (!sticky || !track) return;
     const cards = Array.from(track.children);
     let distance = 0;
+    let stickTop = 0;
     let isStatic = false;
 
     function setActive(index) {
@@ -1091,7 +1130,7 @@ window.addEventListener('load', () => {
     function update() {
       if (isStatic) return;
       const total = section.offsetHeight - sticky.offsetHeight;
-      const progress = total > 0 ? Math.min(1, Math.max(0, -section.getBoundingClientRect().top / total)) : 0;
+      const progress = total > 0 ? Math.min(1, Math.max(0, (stickTop - section.getBoundingClientRect().top) / total)) : 0;
       track.style.transform = `translate3d(${-progress * distance}px, 0, 0)`;
       setActive(Math.round(progress * (cards.length - 1)));
     }
@@ -1099,17 +1138,20 @@ window.addEventListener('load', () => {
     function measure() {
       section.classList.remove('is-static');
       section.style.height = '';
+      sticky.style.top = '';
       track.style.transform = '';
       const last = cards[cards.length - 1];
       const padRight = parseFloat(getComputedStyle(track).paddingRight) || 0;
       const viewport = document.documentElement.clientWidth;
       distance = last ? Math.max(0, last.offsetLeft + last.offsetWidth + padRight - viewport) : 0;
-      isStatic = reduceMotion.matches || distance <= 0 || sticky.offsetHeight > window.innerHeight;
+      isStatic = reduceMotion.matches || distance <= 0;
       section.classList.toggle('is-static', isStatic);
       if (isStatic) {
         cards.forEach((card) => card.classList.add('is-active'));
         return;
       }
+      stickTop = Math.min(0, window.innerHeight - sticky.offsetHeight);
+      sticky.style.top = stickTop + 'px';
       section.style.height = (sticky.offsetHeight + distance) + 'px';
       update();
     }
@@ -1167,11 +1209,42 @@ window.addEventListener('load', () => {
     lastFocus?.focus();
   }
 
+  const live = document.getElementById('liveModal');
+  const liveFrame = document.getElementById('liveModalFrame');
+
+  function openLive(card) {
+    if (!live || !liveFrame) return;
+    lastFocus = card;
+    live.classList.remove('is-loaded');
+    liveFrame.src = card.getAttribute('data-live');
+    live.hidden = false;
+    document.body.classList.add('work-modal-open');
+    live.querySelector('.live-modal-close')?.focus();
+  }
+
+  function closeLive() {
+    if (!live || live.hidden) return;
+    live.hidden = true;
+    liveFrame.src = 'about:blank';
+    document.body.classList.remove('work-modal-open');
+    lastFocus?.focus();
+  }
+
+  liveFrame?.addEventListener('load', () => {
+    if (liveFrame.src !== 'about:blank') live.classList.add('is-loaded');
+  });
+  live?.querySelectorAll('[data-live-close]').forEach((el) => el.addEventListener('click', closeLive));
+
+  function openCard(card) {
+    if (card.hasAttribute('data-live')) openLive(card);
+    else openModal(card);
+  }
+
   grid.addEventListener('click', (e) => {
     const card = e.target.closest('.work-card');
     if (!card || !grid.contains(card)) return;
     e.preventDefault();
-    openModal(card);
+    openCard(card);
   });
 
   grid.addEventListener('keydown', (e) => {
@@ -1179,14 +1252,16 @@ window.addEventListener('load', () => {
     const card = e.target.closest('.work-card');
     if (!card || card !== e.target) return;
     e.preventDefault();
-    openModal(card);
+    openCard(card);
   });
 
   modal.querySelectorAll('[data-work-close]').forEach((el) => el.addEventListener('click', closeModal));
   modal.querySelectorAll('[data-open-popup]').forEach((el) => el.addEventListener('click', closeModal));
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeModal();
+    if (e.key !== 'Escape') return;
+    closeModal();
+    closeLive();
   });
 })();
 
