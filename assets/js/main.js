@@ -873,9 +873,8 @@ window.addEventListener('load', () => {
       btn.click();
       const bar = btn.parentElement;
       bar.scrollLeft = btn.offsetLeft - (bar.clientWidth - btn.offsetWidth) / 2;
-      const stack = btn.closest('.works-filter-stack');
-      setTimeout(() => stack?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 200);
     });
+    history.replaceState(null, '', window.location.pathname + window.location.search);
   }
   selectFromHash();
   window.addEventListener('hashchange', selectFromHash);

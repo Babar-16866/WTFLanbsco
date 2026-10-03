@@ -636,15 +636,15 @@ include __DIR__ . '/includes/header.php';
     <div class="works-grid home-works-grid reveal" id="homeWorksGrid" data-smooth>
       <article class="work-card" data-tags="web-development web-design" data-subs="web-app custom-web product-sites" data-industries="plumbing hvac" data-live="https://heavyroutes.netlify.app/">
         <div class="work-card-media">
-          <img loading="lazy" src="/assets/images/work-heavyroute.jpg" alt="HeavyRoute AI">
+          <img loading="lazy" src="/assets/images/work-heavyroutes.jpg" alt="HeavyRoute">
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
-            <span>Logistics platform</span>
+            <span>Heavy haul &amp; logistics</span>
             <span>Live website</span>
           </div>
-          <h2>HeavyRoute AI</h2>
-          <p>Route simulation, port gate slot booking, live fleet telemetry, and automated customs compliance for heavy and out-of-gauge cargo.</p>
+          <h2>HeavyRoute</h2>
+          <p>A cinematic website for a heavy haul carrier moving machinery and oversized cargo across the US and Canada, with clear services, equipment, and a load planner for fast quotes.</p>
           <div class="work-card-tags">
             <a href="/web-development.php">Web Development</a>
             <a href="/web-design.php">Web Design</a>

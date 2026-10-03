@@ -8864,7 +8864,7 @@ h2.home-title,
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
 }
 .street-play-core svg {
-  margin-left: 4px;
+  display: block;
 }
 .street-play-core::after {
   content: "";
@@ -9171,7 +9171,7 @@ body.street-modal-open {
 /* index2 colors */
 [data-palette="index2"] {
   --pal-primary: #1E4233;
-  --pal-accent: #EDFC87;
+  --pal-accent: #D0F000;
   --pal-light: #FBF7EC;
   --pal-dark: #10231B;
   --pal-copper: #B87333;
@@ -9273,14 +9273,32 @@ body.street-modal-open {
   box-shadow: 0 14px 34px rgba(26, 0, 46, 0.28);
   transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.35s var(--ease);
 }
+@property --reviews-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
 .hero-reviews-btn::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(110deg, transparent 30%, rgba(208, 240, 0, 0.28) 50%, transparent 70%);
-  background-size: 250% 100%;
-  animation: hero-reviews-shine 3.6s var(--ease) infinite;
+  padding: 1.5px;
+  border-radius: inherit;
+  background: conic-gradient(from var(--reviews-angle), transparent 0deg, transparent 220deg, rgba(208, 240, 0, 0.35) 280deg, #D0F000 330deg, transparent 360deg);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  animation: hero-reviews-orbit 3.2s linear infinite;
+}
+.hero-reviews-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  border-radius: inherit;
+  background: radial-gradient(120% 140% at 88% 50%, rgba(208, 240, 0, 0.22), transparent 60%);
+  animation: hero-reviews-glow 2.6s var(--ease) infinite;
 }
 .hero-reviews-btn:hover {
   transform: translateY(-3px);
@@ -9345,9 +9363,12 @@ body.street-modal-open {
 .hero-reviews-btn:hover .hero-reviews-arrow {
   animation: hero-reviews-bounce 0.9s var(--ease) infinite;
 }
-@keyframes hero-reviews-shine {
-  0% { background-position: 150% 0; }
-  60%, 100% { background-position: -100% 0; }
+@keyframes hero-reviews-orbit {
+  to { --reviews-angle: 360deg; }
+}
+@keyframes hero-reviews-glow {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 1; }
 }
 @keyframes hero-reviews-bounce {
   0%, 100% { transform: translateY(0); }
@@ -9363,6 +9384,7 @@ body.street-modal-open {
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-reviews-btn::before,
+  .hero-reviews-btn::after,
   .hero-reviews-btn:hover .hero-reviews-arrow { animation: none; }
 }
 
@@ -9456,41 +9478,19 @@ html[data-palette="index2"] .excel-view-all {
   background-size: 200% 100%;
   box-shadow: 0 10px 24px rgba(184, 115, 51, 0.3);
 }
-html[data-palette="index2"] .hero-heading .accent-lime,
-html[data-palette="index2"] .hero-eyebrow,
-html[data-palette="index2"] .home-work-section .accent-lime,
-html[data-palette="index2"] .final-cta-title .accent-lime {
-  color: #EDFC87;
+html[data-palette="index2"] .hero-eyebrow {
+  color: #D0F000;
 }
 html[data-palette="index2"] .hero-eyebrow-dot {
-  background: #EDFC87;
+  background: #D0F000;
 }
 html[data-palette="index2"] .section-header .subheading,
 html[data-palette="index2"] .rail-head .subheading {
-  padding: 7px 14px;
-  border-radius: var(--pill);
-  background: #EDFC87;
-  color: #1E4233;
+  color: #D0F000;
 }
 html[data-palette="index2"] .section-header .subheading::before,
 html[data-palette="index2"] .dot-blue {
-  background: #1E4233;
-}
-html[data-palette="index2"] .heading-accent,
-html[data-palette="index2"] .accent-blue {
-  color: #EDFC87;
-}
-html[data-palette="index2"]:not([data-theme="dark"]) .section-header .heading-accent,
-html[data-palette="index2"]:not([data-theme="dark"]) .section-header h2 .accent-blue,
-html[data-palette="index2"]:not([data-theme="dark"]) .excel-title .accent-blue {
-  color: #10231B;
-  padding: 0 0.08em;
-  background-image: linear-gradient(transparent 58%, #EDFC87 58%, #EDFC87 92%, transparent 92%);
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-}
-html[data-palette="index2"] .home-work-section .section-header .accent-lime {
-  background: none;
+  background: #D0F000;
 }
 html[data-palette="index2"] .why-done,
 html[data-palette="index2"] .home-work-section,
@@ -9510,7 +9510,7 @@ html[data-palette="index2"] .rail-card {
 html[data-palette="index2"] .why-done-num,
 html[data-palette="index2"] .guide-num,
 html[data-palette="index2"] .rail-num {
-  color: #EDFC87;
+  color: #D0F000;
 }
 html[data-palette="index2"] .rail-card.is-active {
   border-color: #B87333;
@@ -9518,12 +9518,12 @@ html[data-palette="index2"] .rail-card.is-active {
 }
 html[data-palette="index2"] .works-filter.is-active,
 html[data-palette="index2"] .works-subfilter.is-active {
-  background: #EDFC87;
-  border-color: #EDFC87;
+  background: #D0F000;
+  border-color: #D0F000;
   color: #10231B;
 }
 html[data-palette="index2"] .niche-strip {
-  background: #EDFC87;
+  background: #D0F000;
 }
 html[data-palette="index2"] .niche-strip-list li::after {
   background: #B87333;
@@ -9539,4 +9539,30 @@ html[data-palette="index2"][data-theme="dark"] .street-section {
 }
 html[data-palette="index2"][data-theme="dark"] .street-card--quote {
   background: #13261D;
+}
+
+/* ===== INDEX1 & INDEX2 HEADING GRADIENT ===== */
+:root[data-palette] .heading-accent,
+:root[data-palette] h2 .accent-blue,
+:root[data-palette] h2 .accent-lime,
+:root[data-palette] .hero-heading .accent-lime,
+:root[data-palette] .final-cta-title .accent-lime,
+:root[data-palette] .contact-intro h2 span,
+:root[data-palette] .guides-header h2 span {
+  background-image: linear-gradient(90deg, #D0F000 0%, #E8FF66 45%, #9FE3C0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  padding: 0;
+}
+:root[data-palette] .typewriter::after {
+  background: #D0F000;
+}
+:root[data-palette]:not([data-theme="dark"]) :is(.problem-section, .our-clients, .excel-section, .rail-section:not(.how-rail-section), .how-rail-section, .street-section, .faq-section) :is(.heading-accent, h2 .accent-blue, h2 .accent-lime) {
+  background-image: linear-gradient(90deg, #A9C400 0%, #7FA01A 50%, #2F6B52 100%);
+}
+:root[data-palette]:not([data-theme="dark"]) .section-header .subheading,
+:root[data-palette]:not([data-theme="dark"]) .rail-head .subheading {
+  text-shadow: 0 0 0.5px rgba(16, 35, 27, 0.45);
 }
