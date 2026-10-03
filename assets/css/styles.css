@@ -241,6 +241,11 @@
   --pal-night-5: #10211A;
   --pal-glow: #EDFC87;
   --pal-eyebrow: #E4FF43;
+  --pal-gold: #C39B62;
+  --pal-gold-dark: #A07B45;
+  --pal-gold-light: #D8BA8C;
+  --pal-bg-image: url("/assets/images/index2-travertine.webp");
+  --pal-texture-image: url("/assets/images/index2-paper.webp");
   --pal-copper-300: #C98A4C;
   --pal-copper-800: #7A4A1F;
   --grad-web: linear-gradient(165deg, var(--pal-primary) 0%, color-mix(in srgb, var(--pal-primary) 76%, var(--pal-dark)) 45%, color-mix(in srgb, var(--pal-primary) 18%, var(--pal-dark)) 100%);
@@ -7484,10 +7489,12 @@ body.protect-popup-open {
 }
 
 /* Soften selection outside form fields */
+/*
 body {
   -webkit-user-select: none;
   user-select: none;
 }
+*/
 
 input,
 textarea,
@@ -7499,10 +7506,12 @@ select,
   user-select: text;
 }
 
+/*
 img {
   -webkit-user-drag: none;
   user-drag: none;
 }
+*/
 
 /* ===== Hero fan buttons — hover: purple + white text ===== */
 .btn-fan {
@@ -8081,7 +8090,7 @@ img {
   text-wrap: balance;
 }
 .problem-head .section-desc {
-  max-width: 640px;
+  max-width: 680px;
   text-wrap: pretty;
 }
 .problem-head .section-desc + .section-desc {
@@ -8160,7 +8169,7 @@ img {
   text-align: center;
 }
 .brand-card-points {
-  max-width: 380px;
+  max-width: 520px;
   margin: 0 auto 22px;
   font-size: 12px;
   font-weight: 700;
@@ -9597,15 +9606,16 @@ html[data-palette="index2"] .btn-lime,
 html[data-palette="index2"] .faq-all-btn,
 html[data-palette="index2"] .final-cta-section .btn-lime,
 html[data-palette="index2"] .promo-popup-dialog .btn-lime {
-  --btn-grad: linear-gradient(110deg, var(--pal-copper-dark) 0%, var(--pal-copper) 45%, var(--pal-copper-light) 100%);
-  --btn-glow: color-mix(in srgb, var(--pal-copper) 38%, transparent);
-  color: var(--pal-light);
+  --btn-grad: linear-gradient(110deg, var(--pal-gold-dark) 0%, var(--pal-gold) 45%, var(--pal-gold-light) 100%);
+  --btn-glow: color-mix(in srgb, var(--pal-gold) 38%, transparent);
+  color: var(--pal-dark);
   border-color: color-mix(in srgb, var(--pal-light) 22%, transparent);
 }
 html[data-palette="index2"] .excel-view-all {
-  background: linear-gradient(110deg, var(--pal-copper-dark) 0%, var(--pal-copper) 45%, var(--pal-copper-light) 100%);
+  background: linear-gradient(110deg, var(--pal-gold-dark) 0%, var(--pal-gold) 45%, var(--pal-gold-light) 100%);
   background-size: 200% 100%;
-  box-shadow: 0 10px 24px color-mix(in srgb, var(--pal-copper) 30%, transparent);
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--pal-gold) 30%, transparent);
+  color: var(--pal-dark);
 }
 html[data-palette="index2"] .hero-eyebrow {
   color: var(--pal-eyebrow);
@@ -9726,11 +9736,86 @@ html[data-palette="index2"] .niche-strip {
 :root[data-palette="index2"] .final-cta-title .accent-lime,
 :root[data-palette="index2"]:not([data-theme="dark"]) :is(.problem-section, .our-clients, .excel-section, .rail-section, .street-section, .faq-section) :is(.heading-accent, h2 .accent-blue, h2 .accent-lime) {
   background-image: none;
-  -webkit-text-fill-color: var(--pal-yellow);
-  color: var(--pal-yellow);
+  -webkit-text-fill-color: var(--pal-gold);
+  color: var(--pal-gold);
 }
 :root[data-palette="index2"] .contact-intro h2 span,
 :root[data-palette="index2"] .guides-header h2 span {
   background-image: linear-gradient(90deg, var(--pal-lime) 0%, var(--pal-grad-mid) 45%, var(--pal-grad-end) 100%);
   -webkit-text-fill-color: transparent;
+}
+
+/* ===== HERO ROTATE ===== */
+.hero-rotate {
+  display: grid;
+}
+.hero-rotate-item {
+  grid-area: 1 / 1;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+}
+.hero-rotate-item.is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-rotate-item { transition: none; transform: none; }
+}
+
+/* ===== INDEX2 BACKGROUND ===== */
+:root[data-palette="index2"]:not([data-theme="dark"]) body {
+  background-color: transparent;
+}
+:root[data-palette="index2"]:not([data-theme="dark"]) body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: var(--pal-bg-image) center / cover no-repeat;
+  pointer-events: none;
+}
+:root[data-palette="index2"]:not([data-theme="dark"]) :is(.our-clients, .excel-section, .rail-section, .street-section, .faq-section, .problem-section) {
+  background: transparent;
+}
+
+/* ===== INDEX2 TEXTURE ===== */
+html[data-palette="index2"] :is(.hero-box, .why-done-card, .guide-item, .rail-card) {
+  background-image: var(--pal-texture-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+}
+html[data-palette="index2"] .hero-box {
+  background-color: var(--pal-primary);
+}
+html[data-palette="index2"] :is(.why-done-card, .guide-item, .rail-card) {
+  background-color: var(--pal-primary-2);
+}
+html[data-palette="index2"] :is(.why-done, .home-work-section, .contact-section, .final-cta-section, .guides-section) {
+  background-color: var(--pal-primary);
+  background-image: var(--pal-texture-image), linear-gradient(150deg, var(--pal-primary-2) 0%, var(--pal-primary) 45%, var(--pal-dark) 100%);
+  background-size: cover, auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply, normal;
+}
+
+/* ===== INDEX2 WHY HEADING ===== */
+html[data-palette="index2"] #why-wtf-labs .rail-head .subheading {
+  color: var(--pal-gold);
+}
+html[data-palette="index2"] #why-wtf-labs .rail-head .subheading::before {
+  background: var(--pal-gold);
+}
+html[data-palette="index2"] #why-wtf-labs .rail-head .heading-accent {
+  color: var(--pal-dark);
+  -webkit-text-fill-color: var(--pal-dark);
+  padding: 0 0.08em;
+  background-image: linear-gradient(transparent 58%, var(--pal-gold) 58%, var(--pal-gold) 92%, transparent 92%);
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }

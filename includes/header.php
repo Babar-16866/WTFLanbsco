@@ -83,7 +83,9 @@ require_once __DIR__ . '/config.php';
           </div>
         </li>
         <li><a href="/works.php"<?php echo $current_page === 'works' ? ' aria-current="page"' : ''; ?>>Work</a></li>
+        <!--
         <li><a href="/how-we-work.php"<?php echo $current_page === 'how-we-work' ? ' aria-current="page"' : ''; ?>>How We Work</a></li>
+        -->
         <li><a href="/insights.php"<?php echo $current_page === 'insights' ? ' aria-current="page"' : ''; ?>>Insights</a></li>
         <!--
         <li class="nav-dropdown">

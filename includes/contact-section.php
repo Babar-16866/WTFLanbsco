@@ -13,7 +13,10 @@ if (!empty($hide_contact_section)) {
       <div class="contact-intro">
         <h2>Let's discuss your <span>next website</span>.</h2>
         <p>WTF Labs will help you define the right next step.</p>
+        <!--
         <p class="contact-address">742 Innovation Drive, Suite 200<br>Austin, TX 78701, USA</p>
+        -->
+        <p class="contact-address">25140 Kingsland Blvd<br>Katy, Texas 77494, USA</p>
         <p class="contact-phone"><a href="tel:+15550001234">+1 (555) 000-1234</a></p>
       </div>
       <form class="contact-form contact-form--home" id="contactForm" action="/send-mail.php" method="post">

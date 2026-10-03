@@ -1341,6 +1341,15 @@ window.addEventListener('load', () => {
   function playCard(card) {
     const video = card.querySelector('.street-video');
     if (!video) return;
+    if (!video.dataset.fallback) {
+      video.dataset.fallback = '1';
+      video.addEventListener('error', () => {
+        if (card.dataset.video && video.getAttribute('src') !== card.dataset.video) {
+          video.src = card.dataset.video;
+          if (current === card) video.play().catch(() => {});
+        }
+      });
+    }
     video.muted = true;
     const p = video.play();
     if (p && p.catch) p.catch(() => {});
@@ -1597,5 +1606,19 @@ window.addEventListener('load', () => {
     const btn = e.target.closest('[data-sub]');
     if (!btn) return;
     serviceRow.classList.toggle('is-done', btn.getAttribute('data-sub') !== 'all');
+  });
+})();
+
+// Hero rotate
+(function initHeroRotate() {
+  document.querySelectorAll('[data-rotate]').forEach((box) => {
+    const items = Array.from(box.querySelectorAll('.hero-rotate-item'));
+    if (items.length < 2) return;
+    let index = 0;
+    setInterval(() => {
+      items[index].classList.remove('is-active');
+      index = (index + 1) % items.length;
+      items[index].classList.add('is-active');
+    }, 3000);
   });
 })();

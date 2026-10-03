@@ -34,7 +34,10 @@ include __DIR__ . '/includes/page-banner.php';
             </span>
             <div>
               <strong>Office</strong>
+              <!--
               <p>742 Innovation Drive, Suite 200<br>Austin, TX 78701, USA</p>
+              -->
+              <p>25140 Kingsland Blvd<br>Katy, Texas 77494, USA</p>
             </div>
           </li>
           <li>
