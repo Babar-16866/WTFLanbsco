@@ -9566,3 +9566,50 @@ html[data-palette="index2"][data-theme="dark"] .street-card--quote {
 :root[data-palette]:not([data-theme="dark"]) .rail-head .subheading {
   text-shadow: 0 0 0.5px rgba(16, 35, 27, 0.45);
 }
+
+/* ===== EYEBROW DOT ===== */
+.subheading .dot-blue,
+.section-header .subheading::before,
+[data-theme="dark"] .section-header .subheading::before,
+.svc-kicker span,
+.page-section-kicker span,
+.faq-page-label span {
+  background: currentColor;
+}
+
+/* ===== CONTACT HEADING ===== */
+.contact-intro h2 {
+  text-transform: uppercase;
+}
+
+/* ===== NICHE STRIP COLOR ===== */
+.niche-strip,
+:where([data-palette]) .niche-strip,
+html[data-palette="index2"] .niche-strip {
+  background: #E4FF43;
+}
+
+/* ===== TESTIMONIAL SOUND ===== */
+.street-card--video.is-sound-on {
+  box-shadow: 0 0 0 3px var(--lime);
+}
+.street-play-cursor.is-sound-on .street-play-ring {
+  opacity: 0;
+}
+
+/* ===== INDEX2 HEADING ACCENTS ===== */
+:root[data-palette="index2"] .heading-accent,
+:root[data-palette="index2"] h2 .accent-blue,
+:root[data-palette="index2"] h2 .accent-lime,
+:root[data-palette="index2"] .hero-heading .accent-lime,
+:root[data-palette="index2"] .final-cta-title .accent-lime,
+:root[data-palette="index2"]:not([data-theme="dark"]) :is(.problem-section, .our-clients, .excel-section, .rail-section, .street-section, .faq-section) :is(.heading-accent, h2 .accent-blue, h2 .accent-lime) {
+  background-image: none;
+  -webkit-text-fill-color: #E4FF43;
+  color: #E4FF43;
+}
+:root[data-palette="index2"] .contact-intro h2 span,
+:root[data-palette="index2"] .guides-header h2 span {
+  background-image: linear-gradient(90deg, #D0F000 0%, #E8FF66 45%, #9FE3C0 100%);
+  -webkit-text-fill-color: transparent;
+}

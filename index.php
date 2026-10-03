@@ -493,7 +493,7 @@ include __DIR__ . '/includes/header.php';
 
         <div class="excel-stack">
           <a href="/graphic-design.php" class="excel-card excel-card--sm excel-card--row"
-            style="--card-grad:linear-gradient(150deg,#4f46e5 0%,#7c3aed 50%,#9010f0 100%)">
+            style="--card-grad:linear-gradient(140deg,#ff8a3d 0%,#f43f5e 48%,#a21caf 100%)">
             <div class="excel-card-media excel-card-media--devices">
               <img loading="lazy" src="/assets/images/excel-web3.webp" alt="Branding &amp; Creative">
             </div>

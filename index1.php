@@ -494,7 +494,7 @@ include __DIR__ . '/includes/header.php';
 
         <div class="excel-stack">
           <a href="/graphic-design.php" class="excel-card excel-card--sm excel-card--row"
-            style="--card-grad:linear-gradient(150deg,color-mix(in srgb, var(--pal-primary) 60%, var(--pal-dark)) 0%,var(--pal-primary) 55%,color-mix(in srgb, var(--pal-primary) 70%, var(--pal-light)) 100%)">
+            style="--card-grad:linear-gradient(140deg,#0f766e 0%,#14532d 50%,#4d7c0f 100%)">
             <div class="excel-card-media excel-card-media--devices">
               <img loading="lazy" src="/assets/images/excel-web3.webp" alt="Branding &amp; Creative">
             </div>

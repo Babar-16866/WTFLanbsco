@@ -561,6 +561,7 @@ window.addEventListener('load', () => {
 
 
 // Content protection — right-click modal + block copy
+/*
 (function initContentProtect() {
   const popup = document.getElementById('protectPopup');
   if (!popup) return;
@@ -625,6 +626,7 @@ window.addEventListener('load', () => {
     }
   });
 })();
+*/
 
 // Works / Services / Industries two-tier category filters
 (function initCategoryFilters() {
@@ -1346,6 +1348,8 @@ window.addEventListener('load', () => {
 
   function stopAll() {
     section.querySelectorAll('.street-card--video .street-video').forEach((video) => {
+      video.muted = true;
+      video.closest('.street-card--video')?.classList.remove('is-sound-on');
       if (!video.paused) video.pause();
     });
   }
@@ -1496,17 +1500,39 @@ window.addEventListener('load', () => {
     pressedCard = e.target.closest('.street-card--video');
   }, true);
 
+  // Sound on click
+  function toggleSound(card) {
+    const video = card.querySelector('.street-video');
+    if (!video) return;
+    section.querySelectorAll('.street-card--video').forEach((other) => {
+      if (other === card) return;
+      const v = other.querySelector('.street-video');
+      if (v) { v.muted = true; v.pause(); }
+      other.classList.remove('is-sound-on');
+    });
+    if (video.paused || video.muted) {
+      video.muted = false;
+      const p = video.play();
+      if (p && p.catch) p.catch(() => {});
+      card.classList.add('is-sound-on');
+    } else {
+      video.muted = true;
+      card.classList.remove('is-sound-on');
+      if (!finePointer) video.pause();
+    }
+  }
+
   section.addEventListener('click', (e) => {
     const card = e.target.closest('.street-card--video') || pressedCard;
     pressedCard = null;
-    if (card) openModal(card);
+    if (card) toggleSound(card);
   });
 
   section.addEventListener('keydown', (e) => {
     const card = e.target.closest('.street-card--video');
     if (!card || (e.key !== 'Enter' && e.key !== ' ')) return;
     e.preventDefault();
-    openModal(card);
+    toggleSound(card);
   });
 
   modal.addEventListener('click', (e) => {
@@ -1544,6 +1570,17 @@ window.addEventListener('load', () => {
   function activate(panel) {
     panels.forEach((p) => p.classList.toggle('is-active', p === panel));
   }
+
+  // Selected service
+  const filters = document.getElementById('servicesFilters');
+  function syncWithFilter() {
+    const btn = filters && filters.querySelector('.is-active');
+    const id = btn ? btn.getAttribute('data-filter') : 'all';
+    const match = panels.find((p) => (p.getAttribute('href') || '').endsWith('#' + id));
+    if (match) activate(match);
+  }
+  filters?.addEventListener('click', () => setTimeout(syncWithFilter, 0));
+  syncWithFilter();
 
   panels.forEach((panel) => {
     panel.addEventListener('mouseenter', () => {

@@ -163,6 +163,7 @@ include __DIR__ . '/contact-section.php';
   </div>
 
   <!-- Content protection notice -->
+  <!--
   <div class="protect-popup" id="protectPopup" hidden>
     <div class="protect-popup-backdrop" data-protect-close></div>
     <div class="protect-popup-dialog" role="dialog" aria-modal="true" aria-labelledby="protectPopupTitle">
@@ -171,6 +172,7 @@ include __DIR__ . '/contact-section.php';
       <button type="button" class="btn btn-lime" data-protect-close>Got it</button>
     </div>
   </div>
+  -->
 
   <script src="/assets/js/main.js"></script>
 </body>
