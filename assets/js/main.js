@@ -1348,8 +1348,6 @@ window.addEventListener('load', () => {
 
   function stopAll() {
     section.querySelectorAll('.street-card--video .street-video').forEach((video) => {
-      video.muted = true;
-      video.closest('.street-card--video')?.classList.remove('is-sound-on');
       if (!video.paused) video.pause();
     });
   }
@@ -1500,39 +1498,17 @@ window.addEventListener('load', () => {
     pressedCard = e.target.closest('.street-card--video');
   }, true);
 
-  // Sound on click
-  function toggleSound(card) {
-    const video = card.querySelector('.street-video');
-    if (!video) return;
-    section.querySelectorAll('.street-card--video').forEach((other) => {
-      if (other === card) return;
-      const v = other.querySelector('.street-video');
-      if (v) { v.muted = true; v.pause(); }
-      other.classList.remove('is-sound-on');
-    });
-    if (video.paused || video.muted) {
-      video.muted = false;
-      const p = video.play();
-      if (p && p.catch) p.catch(() => {});
-      card.classList.add('is-sound-on');
-    } else {
-      video.muted = true;
-      card.classList.remove('is-sound-on');
-      if (!finePointer) video.pause();
-    }
-  }
-
   section.addEventListener('click', (e) => {
     const card = e.target.closest('.street-card--video') || pressedCard;
     pressedCard = null;
-    if (card) toggleSound(card);
+    if (card) openModal(card);
   });
 
   section.addEventListener('keydown', (e) => {
     const card = e.target.closest('.street-card--video');
     if (!card || (e.key !== 'Enter' && e.key !== ' ')) return;
     e.preventDefault();
-    toggleSound(card);
+    openModal(card);
   });
 
   modal.addEventListener('click', (e) => {

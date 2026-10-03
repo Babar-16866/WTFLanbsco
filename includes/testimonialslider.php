@@ -23,7 +23,7 @@ $street_kicker = $street_kicker ?? 'word on the street';
       <div class="street-row-track">
         <!-- Video -->
         <article class="street-card street-card--photo street-card--video street-card--tall" data-video="<?= BASE ?>/assets/videos/testimonial-demo.mp4">
-          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo.mp4#t=0.1" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/testimonial-demo-poster.jpg" tabindex="-1" aria-hidden="true"></video>
+          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo-preview.mp4" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/testimonial-demo-poster.jpg" tabindex="-1" aria-hidden="true"></video>
           <div class="street-photo-overlay">
             <span class="street-logo">kernel</span>
             <p>We've worked with them for many projects now and <strong>am always blown away</strong>.</p>
@@ -42,7 +42,7 @@ $street_kicker = $street_kicker ?? 'word on the street';
         </article>
         <!-- Video -->
         <article class="street-card street-card--photo street-card--video street-card--wide" data-video="<?= BASE ?>/assets/videos/testimonial-demo.mp4">
-          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo.mp4#t=0.1" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/testimonial-demo-poster.jpg" tabindex="-1" aria-hidden="true"></video>
+          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo-preview.mp4" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/testimonial-demo-poster.jpg" tabindex="-1" aria-hidden="true"></video>
           <div class="street-photo-overlay">
             <span class="street-logo">USERWAY</span>
             <p>Despite high expectations, they always over-delivered — a testament to their <strong>creative prowess</strong>.</p>
@@ -61,7 +61,7 @@ $street_kicker = $street_kicker ?? 'word on the street';
         </article>
         <!-- Video -->
         <article class="street-card street-card--photo street-card--video street-card--tall" data-video="<?= BASE ?>/assets/videos/testimonial-demo.mp4">
-          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo.mp4#t=0.1" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/testimonial-demo-poster.jpg" tabindex="-1" aria-hidden="true"></video>
+          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo-preview.mp4" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/testimonial-demo-poster.jpg" tabindex="-1" aria-hidden="true"></video>
           <div class="street-photo-overlay">
             <span class="street-logo">ROOT</span>
             <p>Everyone that sees the UI says that is the <strong>best looking UI</strong> I've ever seen.</p>
@@ -96,7 +96,7 @@ $street_kicker = $street_kicker ?? 'word on the street';
         </article>
         <!-- Video -->
         <article class="street-card street-card--photo street-card--video street-card--tall" data-video="<?= BASE ?>/assets/videos/testimonial-demo.mp4">
-          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo.mp4#t=0.1" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/testimonial-demo-poster.jpg" tabindex="-1" aria-hidden="true"></video>
+          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo-preview.mp4" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/testimonial-demo-poster.jpg" tabindex="-1" aria-hidden="true"></video>
           <div class="street-photo-overlay">
             <span class="street-logo">starbridge</span>
             <p>I can't believe you guys <strong>did all this in a week.</strong></p>
@@ -115,7 +115,7 @@ $street_kicker = $street_kicker ?? 'word on the street';
         </article>
         <!-- Video -->
         <article class="street-card street-card--photo street-card--video street-card--wide" data-video="<?= BASE ?>/assets/videos/testimonial-demo.mp4">
-          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo.mp4#t=0.1" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/testimonial-demo-poster.jpg" tabindex="-1" aria-hidden="true"></video>
+          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo-preview.mp4" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/testimonial-demo-poster.jpg" tabindex="-1" aria-hidden="true"></video>
           <div class="street-photo-overlay">
             <span class="street-logo">Vivodyne</span>
             <p>Everyone that's seen has said that it's <strong>hands down the best</strong> website they've seen.</p>

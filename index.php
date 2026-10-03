@@ -409,7 +409,7 @@ include __DIR__ . '/includes/header.php';
           View all services
           <span class="excel-view-icon" aria-hidden="true">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <path d="M3 11L11 3M11 3H5M11 3v6" stroke="#fff" stroke-width="2" stroke-linecap="round"
+              <path d="M3 11L11 3M11 3H5M11 3v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round" />
             </svg>
           </span>
@@ -434,7 +434,7 @@ include __DIR__ . '/includes/header.php';
     <div class="excel-track-wrap reveal">
       <div class="excel-track" id="excelTrack">
         <a href="/web-design.php" class="excel-card excel-card--wide"
-          style="--card-grad:linear-gradient(165deg,#9010f0 0%,#6b00c4 45%,#1a002e 100%)">
+          style="--card-grad:var(--grad-web)">
           <div class="excel-card-copy">
             <h3>Web Design &amp; Development</h3>
             <p>Conversion focused websites that build trust fast and turn local buyers to calls, quotes, and jobs.</p>
@@ -446,7 +446,7 @@ include __DIR__ . '/includes/header.php';
 
         <div class="excel-stack">
           <a href="/seo.php" class="excel-card excel-card--sm excel-card--row"
-            style="--card-grad:linear-gradient(115deg,#2563eb 0%,#7c3aed 50%,#9010f0 100%)">
+            style="--card-grad:var(--grad-seo)">
             <div class="excel-card-media excel-card-media--devices">
               <img loading="lazy" src="/assets/images/excel-landing.webp" alt="SEO &amp; Local Search">
             </div>
@@ -456,7 +456,7 @@ include __DIR__ . '/includes/header.php';
             </div>
           </a>
           <a href="/google-ads.php" class="excel-card excel-card--sm excel-card--row"
-            style="--card-grad:linear-gradient(135deg,#ec4899 0%,#9010f0 55%,#6b00c4 100%)">
+            style="--card-grad:var(--grad-google-ads)">
             <div class="excel-card-media excel-card-media--orb">
               <img loading="lazy" src="/assets/images/excel-ai-orb.jpg" alt="Google Ads">
             </div>
@@ -481,7 +481,7 @@ include __DIR__ . '/includes/header.php';
         -->
 
         <a href="/social-media-advertising.php" class="excel-card excel-card--tall"
-          style="--card-grad:linear-gradient(165deg,#1d4ed8 0%,#2563eb 40%,#3b82f6 100%)">
+          style="--card-grad:var(--grad-social)">
           <div class="excel-card-copy">
             <h3>Social Media Advertising</h3>
             <p>Showcase your work, offers and get local attention with qualified leads.</p>
@@ -493,7 +493,7 @@ include __DIR__ . '/includes/header.php';
 
         <div class="excel-stack">
           <a href="/graphic-design.php" class="excel-card excel-card--sm excel-card--row"
-            style="--card-grad:linear-gradient(140deg,#ff8a3d 0%,#f43f5e 48%,#a21caf 100%)">
+            style="--card-grad:var(--grad-branding)">
             <div class="excel-card-media excel-card-media--devices">
               <img loading="lazy" src="/assets/images/excel-web3.webp" alt="Branding &amp; Creative">
             </div>
@@ -503,7 +503,7 @@ include __DIR__ . '/includes/header.php';
             </div>
           </a>
           <a href="/digital-marketing.php" class="excel-card excel-card--sm excel-card--row"
-            style="--card-grad:linear-gradient(135deg,#14b8a6 0%,#06b6d4 45%,#3b82f6 100%)">
+            style="--card-grad:var(--grad-marketing)">
             <div class="excel-card-media excel-card-media--orb">
               <img loading="lazy" src="/assets/images/excel-branding.webp" alt="Full-Service Digital Marketing">
             </div>
