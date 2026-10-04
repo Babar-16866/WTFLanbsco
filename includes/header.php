@@ -12,7 +12,7 @@ require_once __DIR__ . '/config.php';
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/styles.css">
-  <link rel="icon" href="/assets/images/logo-icon.png" type="image/png">
+  <link rel="icon" href="/assets/images/logo-new-icon.png" type="image/png">
   <script>
     (function () {
       // Default: light. Dark only if user explicitly chose it.
@@ -44,8 +44,8 @@ require_once __DIR__ . '/config.php';
   <header class="site-header">
     <nav class="nav-pill">
       <a href="/" class="nav-logo">
-        <img class="nav-logo-img nav-logo-light" src="/assets/images/logo.webp" alt="WTF Labs" width="72" height="70">
-        <img class="nav-logo-img nav-logo-dark" src="/assets/images/logo-sec.webp" alt="WTF Labs" width="72" height="70">
+        <img class="nav-logo-img nav-logo-light" src="/assets/images/logo-new.webp" alt="WTF Labs" width="72" height="70">
+        <img class="nav-logo-img nav-logo-dark" src="/assets/images/logo-new.webp" alt="WTF Labs" width="72" height="70">
       </a>
       <ul class="nav-links">
         <li class="nav-dropdown">

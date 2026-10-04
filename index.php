@@ -2,6 +2,7 @@
 $page_title = 'Premium Web Design & Marketing for Home-Service Businesses | WTF Labs';
 $page_description = 'Premium websites and digital marketing for remodelers, HVAC, plumbing, roofing, pest control, pool services, landscaping, handyman and power-washing businesses.';
 $current_page = 'home';
+$page_palette = 'index2';
 include __DIR__ . '/includes/header.php';
 ?>
 
@@ -171,6 +172,7 @@ include __DIR__ . '/includes/header.php';
 </section>
 
 <!-- THE PROBLEM (GUIDES STYLE) -->
+<!--
 <section class="guides-section problem-guides">
   <div class="container">
     <div class="guides-header reveal">
@@ -197,6 +199,7 @@ include __DIR__ . '/includes/header.php';
     </div>
   </div>
 </section>
+-->
 
 <!-- OUR CLIENTS / INDUSTRIES -->
 <section class="our-clients" id="industries">
@@ -219,7 +222,7 @@ include __DIR__ . '/includes/header.php';
           <h3>Automotive & Mobility</h3>
           <span class="brand-link">Explore work <span class="brand-link-icon" aria-hidden="true"><svg width="10"
                 height="10" viewBox="0 0 10 10" fill="none">
-                <path d="M2 5h6M5 2l3 3-3 3" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                <path d="M2 5h6M5 2l3 3-3 3" stroke="#FBF7EC" stroke-width="1.6" stroke-linecap="round"
                   stroke-linejoin="round" />
               </svg></span></span>
         </div>
@@ -243,7 +246,7 @@ include __DIR__ . '/includes/header.php';
           <h3>Real Estate & Finance</h3>
           <span class="brand-link">Explore work <span class="brand-link-icon" aria-hidden="true"><svg width="10"
                 height="10" viewBox="0 0 10 10" fill="none">
-                <path d="M2 5h6M5 2l3 3-3 3" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                <path d="M2 5h6M5 2l3 3-3 3" stroke="#FBF7EC" stroke-width="1.6" stroke-linecap="round"
                   stroke-linejoin="round" />
               </svg></span></span>
         </div>
@@ -267,7 +270,7 @@ include __DIR__ . '/includes/header.php';
           <h3>Web Platforms & Products</h3>
           <span class="brand-link">Explore work <span class="brand-link-icon" aria-hidden="true"><svg width="10"
                 height="10" viewBox="0 0 10 10" fill="none">
-                <path d="M2 5h6M5 2l3 3-3 3" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                <path d="M2 5h6M5 2l3 3-3 3" stroke="#FBF7EC" stroke-width="1.6" stroke-linecap="round"
                   stroke-linejoin="round" />
               </svg></span></span>
         </div>
@@ -291,7 +294,7 @@ include __DIR__ . '/includes/header.php';
           <h3>Award-Winning Websites</h3>
           <span class="brand-link">Explore work <span class="brand-link-icon" aria-hidden="true"><svg width="10"
                 height="10" viewBox="0 0 10 10" fill="none">
-                <path d="M2 5h6M5 2l3 3-3 3" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                <path d="M2 5h6M5 2l3 3-3 3" stroke="#FBF7EC" stroke-width="1.6" stroke-linecap="round"
                   stroke-linejoin="round" />
               </svg></span></span>
         </div>
@@ -1339,7 +1342,7 @@ include __DIR__ . '/includes/testimonialslider.php';
     <!--
     <h2 class="final-cta-title">Your Work Already Has Value. <span class="accent-lime">Make Sure Your Marketing Shows It.</span></h2>
     -->
-    <h2 class="final-cta-title">Your Work Already Has <span class="accent-lime">Value.</span> Make Sure Your Marketing <span class="accent-lime">Shows It.</span></h2>
+    <h2 class="final-cta-title">Your Work Already Has <span class="accent-lime">Value.</span> Make Sure Your Marketing <span class="accent-lime">Shows</span> It.</h2>
     <p class="final-cta-body">We&rsquo;ll review your current website and conversion path, and show you the highest-impact opportunities we see.</p>
     <a href="/free-audit.php" class="btn btn-lime btn-lg">Claim Your FREE Consultation</a>
     <p class="final-cta-micro">No pressure. No generic 50-page report. Just useful feedback on what is helping, what is hurting, and what we would fix first.</p>

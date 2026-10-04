@@ -9922,6 +9922,3 @@ html[data-palette="index2"] :is(.site-header, .hero-section, .home-work-section,
 html[data-palette="index2"][data-theme="dark"] .contact-section .btn-lime {
   color: var(--pal-light);
 }
-html[data-palette="index2"] .sticky-work-cta.is-on-dark {
-  color: var(--pal-light);
-}

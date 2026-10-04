@@ -8,7 +8,7 @@ include __DIR__ . '/contact-section.php';
     <div class="container footer-grid">
       <div class="footer-brand">
         <a href="/" class="footer-logo">
-          <img loading="lazy" src="/assets/images/logo-sec.webp" alt="WTF Labs">
+          <img loading="lazy" src="/assets/images/logo-new.webp" alt="WTF Labs">
         </a>
         <p>WTF Labs - B2B website design & development since 2018.</p>
         <!--
@@ -108,7 +108,7 @@ include __DIR__ . '/contact-section.php';
       <div class="promo-popup-glow" aria-hidden="true"></div>
       <div class="promo-popup-inner">
         <div class="promo-popup-brand">
-          <img loading="lazy" src="/assets/images/logo.webp" alt="WTF Labs">
+          <img loading="lazy" src="/assets/images/logo-new.webp" alt="WTF Labs">
         </div>
         <p class="promo-popup-kicker"><span></span> Limited slots this month</p>
         <h2 id="promoPopupTitle">Let's build something <em>WTF</em>-worthy</h2>
