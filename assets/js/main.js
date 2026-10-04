@@ -732,6 +732,10 @@ window.addEventListener('load', () => {
           show = hasToken(card.getAttribute('data-industries') || '', activeIndustry);
         }
 
+        if (show && level === '' && activeCategory === 'all' && activeIndustry === 'all' && grid.querySelector('[data-featured]')) {
+          show = card.hasAttribute('data-featured');
+        }
+
         card.hidden = !show;
       });
 

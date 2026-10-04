@@ -11,7 +11,11 @@ if (!empty($hide_contact_section)) {
   <div class="container">
     <div class="contact-layout reveal">
       <div class="contact-intro">
+        <?php if (($page_palette ?? '') === 'index2'): ?>
+        <h2>Let's discuss your <span>next project</span>.</h2>
+        <?php else: ?>
         <h2>Let's discuss your <span>next website</span>.</h2>
+        <?php endif; ?>
         <p>WTF Labs will help you define the right next step.</p>
         <!--
         <p class="contact-address">742 Innovation Drive, Suite 200<br>Austin, TX 78701, USA</p>

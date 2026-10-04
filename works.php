@@ -23,7 +23,7 @@ include __DIR__ . '/includes/page-banner.php';
   <div class="container">
     <div class="works-filter-stack">
       <div class="works-filters" id="worksFilters" role="tablist" aria-label="Filter works by service">
-        <button type="button" class="works-filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button type="button" class="works-filter is-active" data-filter="all" role="tab" aria-selected="true">Featured</button>
         <button type="button" class="works-filter" data-filter="graphic-design" role="tab" aria-selected="false">Graphic Design</button>
         <button type="button" class="works-filter" data-filter="web-design" role="tab" aria-selected="false">Web Design</button>
         <button type="button" class="works-filter" data-filter="web-development" role="tab" aria-selected="false">Web Development</button>
@@ -36,7 +36,7 @@ include __DIR__ . '/includes/page-banner.php';
     </div>
 
     <div class="works-grid reveal" id="worksGrid">
-      <article class="work-card" data-tags="web-design web-development" data-subs="product-sites custom-web landing-pages">
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="product-sites custom-web landing-pages">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/excel-uiux.webp" alt="TorchSensors">
         </div>
@@ -54,7 +54,7 @@ include __DIR__ . '/includes/page-banner.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design digital-marketing" data-subs="landing-pages funnel-design content-marketing">
+      <article class="work-card" data-featured data-tags="web-design digital-marketing" data-subs="landing-pages funnel-design content-marketing">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/mockup-2.webp" alt="Solana Payouts">
         </div>
@@ -72,7 +72,7 @@ include __DIR__ . '/includes/page-banner.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-development graphic-design" data-subs="web-app brand-collaterals social-media-post">
+      <article class="work-card" data-featured data-tags="web-development graphic-design" data-subs="web-app brand-collaterals social-media-post">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/excel-mobile.webp" alt="Infaces">
         </div>
@@ -90,7 +90,7 @@ include __DIR__ . '/includes/page-banner.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design graphic-design" data-subs="corporate-sites logo-design brand-collaterals">
+      <article class="work-card" data-featured data-tags="web-design graphic-design" data-subs="corporate-sites logo-design brand-collaterals">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/service-graphic-design.jpg" alt="Global Leathers">
         </div>
@@ -108,7 +108,7 @@ include __DIR__ . '/includes/page-banner.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-development seo" data-subs="custom-web technical-seo on-page">
+      <article class="work-card" data-featured data-tags="web-development seo" data-subs="custom-web technical-seo on-page">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/mockup-3.webp" alt="Cofinity-X">
         </div>
@@ -126,7 +126,7 @@ include __DIR__ . '/includes/page-banner.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress redesigns">
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wordpress redesigns">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/service-web-design.jpg" alt="Elvetiko">
         </div>

@@ -608,7 +608,7 @@ include __DIR__ . '/includes/header.php';
       <div class="home-filter-row">
         <p class="home-filter-label">Select the Industry</p>
         <div class="works-filters" id="homeWorksIndustries" role="tablist" aria-label="Filter works by industry">
-          <button type="button" class="works-filter is-active" data-industry="all" role="tab" aria-selected="true">All</button>
+          <button type="button" class="works-filter is-active" data-industry="all" role="tab" aria-selected="true">Featured</button>
           <button type="button" class="works-filter" data-industry="remodelers" role="tab" aria-selected="false">Remodelers</button>
           <button type="button" class="works-filter" data-industry="hvac" role="tab" aria-selected="false">HVAC</button>
           <button type="button" class="works-filter" data-industry="plumbing" role="tab" aria-selected="false">Plumbing</button>
@@ -640,7 +640,7 @@ include __DIR__ . '/includes/header.php';
     </div>
 
     <div class="works-grid home-works-grid reveal" id="homeWorksGrid" data-smooth>
-      <article class="work-card" data-tags="web-development web-design" data-subs="web-app custom-web product-sites" data-industries="plumbing hvac" data-live="https://heavyroutes.netlify.app/">
+      <article class="work-card" data-featured data-tags="web-development web-design" data-subs="web-app custom-web product-sites" data-industries="plumbing hvac" data-live="https://heavyroutes.netlify.app/">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/work-heavyroutes.jpg" alt="HeavyRoute">
         </div>
@@ -658,7 +658,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design web-development" data-subs="product-sites shopify custom-web" data-industries="handyman power-washing" data-live="https://pitboxbikes.vercel.app/">
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="product-sites shopify custom-web" data-industries="handyman power-washing" data-live="https://pitboxbikes.vercel.app/">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/work-pitbox.jpg" alt="PITBOX">
         </div>
@@ -676,7 +676,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design graphic-design" data-subs="corporate-sites brand-collaterals" data-industries="remodelers pool-services" data-live="https://websiteinfra.vercel.app/">
+      <article class="work-card" data-featured data-tags="web-design graphic-design" data-subs="corporate-sites brand-collaterals" data-industries="remodelers pool-services" data-live="https://websiteinfra.vercel.app/">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/work-micasa.jpg" alt="MICASA">
         </div>
@@ -694,7 +694,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design web-development" data-subs="product-sites custom-web landing-pages" data-industries="hvac roofing">
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="product-sites custom-web landing-pages" data-industries="hvac roofing">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/excel-uiux.webp" alt="TorchSensors">
         </div>
@@ -712,7 +712,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design digital-marketing" data-subs="landing-pages funnel-design content-marketing" data-industries="plumbing pest-control">
+      <article class="work-card" data-featured data-tags="web-design digital-marketing" data-subs="landing-pages funnel-design content-marketing" data-industries="plumbing pest-control">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/mockup-2.webp" alt="Solana Payouts">
         </div>
@@ -730,7 +730,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-development graphic-design" data-subs="web-app brand-collaterals social-media-post" data-industries="remodelers landscaping">
+      <article class="work-card" data-featured data-tags="web-development graphic-design" data-subs="web-app brand-collaterals social-media-post" data-industries="remodelers landscaping">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/excel-mobile.webp" alt="Infaces">
         </div>
