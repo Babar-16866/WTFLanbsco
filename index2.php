@@ -1340,7 +1340,7 @@ include __DIR__ . '/includes/testimonialslider.php';
     <!--
     <h2 class="final-cta-title">Your Work Already Has Value. <span class="accent-lime">Make Sure Your Marketing Shows It.</span></h2>
     -->
-    <h2 class="final-cta-title">Your Work Already Has <span class="accent-lime">Value.</span> Make Sure Your Marketing <span class="accent-lime">Shows It.</span></h2>
+    <h2 class="final-cta-title">Your Work Already Has <span class="accent-lime">Value.</span> Make Sure Your Marketing <span class="accent-lime">Shows</span> It.</h2>
     <p class="final-cta-body">We&rsquo;ll review your current website and conversion path, and show you the highest-impact opportunities we see.</p>
     <a href="/free-audit.php" class="btn btn-lime btn-lg">Claim Your FREE Consultation</a>
     <p class="final-cta-micro">No pressure. No generic 50-page report. Just useful feedback on what is helping, what is hurting, and what we would fix first.</p>

@@ -1623,31 +1623,3 @@ window.addEventListener('load', () => {
   });
 })();
 
-// Background motion
-(function initBackgroundMotion() {
-  const root = document.documentElement;
-  if (root.getAttribute('data-palette') !== 'index2') return;
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  let current = 0;
-  let target = 0;
-  let raf = null;
-
-  function read() {
-    const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-    target = window.scrollY / max;
-    if (!raf) raf = requestAnimationFrame(tick);
-  }
-
-  function tick() {
-    current += (target - current) * 0.08;
-    const vh = window.innerHeight;
-    root.style.setProperty('--bg-shift', (current * -0.3 * vh).toFixed(1) + 'px');
-    root.style.setProperty('--bg-zoom', (1 + current * 0.12).toFixed(4));
-    root.style.setProperty('--bg-tilt', (Math.sin(current * Math.PI) * 1.2).toFixed(3) + 'deg');
-    raf = Math.abs(target - current) > 0.0005 ? requestAnimationFrame(tick) : null;
-  }
-
-  window.addEventListener('scroll', read, { passive: true });
-  window.addEventListener('resize', read);
-  read();
-})();
