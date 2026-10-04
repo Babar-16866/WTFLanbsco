@@ -10058,23 +10058,39 @@ html[data-palette] .services-cta-band p {
 .puzzle-card-inner {
   flex: 1;
   background: var(--pal-card, #FFFFFF);
-  border-radius: 24px;
+  border-radius: 6px;
   padding: 36px 32px;
 }
-.puzzle-card:not(:first-child) .puzzle-card-inner {
-  padding-left: 52px;
-  -webkit-mask: radial-gradient(circle at 8px 50%, transparent 23px, #000 24px);
-  mask: radial-gradient(circle at 8px 50%, transparent 23px, #000 24px);
-}
-.puzzle-card:not(:last-child)::after {
+.puzzle-card:nth-child(2)::before,
+.puzzle-card:nth-child(2)::after {
   content: '';
   position: absolute;
-  top: calc(50% - 22px);
-  right: -30px;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
+  top: calc(50% - 45px);
+  width: 60px;
+  height: 90px;
   background: var(--pal-card, #FFFFFF);
+}
+.puzzle-card:nth-child(2)::before {
+  right: calc(100% - 1px);
+  clip-path: path('M 60 33 C 51 33 45 34.5 46.5 39 C 49.5 28.5 40.5 19.5 27 19.5 C 13.5 19.5 3 31.5 3 45 C 3 58.5 13.5 70.5 27 70.5 C 40.5 70.5 49.5 61.5 46.5 51 C 45 55.5 51 57 60 57 Z');
+}
+.puzzle-card:nth-child(2)::after {
+  left: calc(100% - 1px);
+  clip-path: path('M 0 33 C 9 33 15 34.5 13.5 39 C 10.5 28.5 19.5 19.5 33 19.5 C 46.5 19.5 57 31.5 57 45 C 57 58.5 46.5 70.5 33 70.5 C 19.5 70.5 10.5 61.5 13.5 51 C 15 55.5 9 57 0 57 Z');
+}
+.puzzle-card:first-child .puzzle-card-inner {
+  padding-right: 80px;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 90'%3E%3Cpath d='M 60 33 C 51 33 45 34.5 46.5 39 C 49.5 28.5 40.5 19.5 27 19.5 C 13.5 19.5 3 31.5 3 45 C 3 58.5 13.5 70.5 27 70.5 C 40.5 70.5 49.5 61.5 46.5 51 C 45 55.5 51 57 60 57 Z'/%3E%3C/svg%3E") right center / 60px 90px no-repeat, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 90'%3E%3Cpath d='M 60 33 C 51 33 45 34.5 46.5 39 C 49.5 28.5 40.5 19.5 27 19.5 C 13.5 19.5 3 31.5 3 45 C 3 58.5 13.5 70.5 27 70.5 C 40.5 70.5 49.5 61.5 46.5 51 C 45 55.5 51 57 60 57 Z'/%3E%3C/svg%3E") right center / 60px 90px no-repeat, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+.puzzle-card:last-child .puzzle-card-inner {
+  padding-left: 80px;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 90'%3E%3Cpath d='M 0 33 C 9 33 15 34.5 13.5 39 C 10.5 28.5 19.5 19.5 33 19.5 C 46.5 19.5 57 31.5 57 45 C 57 58.5 46.5 70.5 33 70.5 C 19.5 70.5 10.5 61.5 13.5 51 C 15 55.5 9 57 0 57 Z'/%3E%3C/svg%3E") left center / 60px 90px no-repeat, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 90'%3E%3Cpath d='M 0 33 C 9 33 15 34.5 13.5 39 C 10.5 28.5 19.5 19.5 33 19.5 C 46.5 19.5 57 31.5 57 45 C 57 58.5 46.5 70.5 33 70.5 C 19.5 70.5 10.5 61.5 13.5 51 C 15 55.5 9 57 0 57 Z'/%3E%3C/svg%3E") left center / 60px 90px no-repeat, linear-gradient(#000 0 0);
+  mask-composite: exclude;
 }
 .puzzle-card h3 {
   font-size: clamp(18px, 1.6vw, 21px);
@@ -10094,22 +10110,42 @@ html[data-palette] .services-cta-band p {
   .puzzle-section { padding: 64px 0 32px; }
   .puzzle-grid {
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 64px;
     max-width: 560px;
     margin: 0 auto;
   }
   .puzzle-card-inner { padding: 30px 24px; }
-  .puzzle-card:not(:first-child) .puzzle-card-inner {
-    padding-left: 24px;
-    padding-top: 46px;
-    -webkit-mask: radial-gradient(circle at 50% 8px, transparent 23px, #000 24px);
-    mask: radial-gradient(circle at 50% 8px, transparent 23px, #000 24px);
-  }
-  .puzzle-card:not(:last-child)::after {
+  .puzzle-card:nth-child(2)::before,
+  .puzzle-card:nth-child(2)::after {
     top: auto;
     right: auto;
-    left: calc(50% - 22px);
-    bottom: -30px;
+    left: calc(50% - 45px);
+    width: 90px;
+    height: 60px;
+  }
+  .puzzle-card:nth-child(2)::before {
+    bottom: calc(100% - 1px);
+    clip-path: path('M 33 60 C 33 51 34.5 45 39 46.5 C 28.5 49.5 19.5 40.5 19.5 27 C 19.5 13.5 31.5 3 45 3 C 58.5 3 70.5 13.5 70.5 27 C 70.5 40.5 61.5 49.5 51 46.5 C 55.5 45 57 51 57 60 Z');
+  }
+  .puzzle-card:nth-child(2)::after {
+    top: calc(100% - 1px);
+    clip-path: path('M 33 0 C 33 9 34.5 15 39 13.5 C 28.5 10.5 19.5 19.5 19.5 33 C 19.5 46.5 31.5 57 45 57 C 58.5 57 70.5 46.5 70.5 33 C 70.5 19.5 61.5 10.5 51 13.5 C 55.5 15 57 9 57 0 Z');
+  }
+  .puzzle-card:first-child .puzzle-card-inner {
+    padding-right: 24px;
+    padding-bottom: 76px;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 90 60'%3E%3Cpath d='M 33 60 C 33 51 34.5 45 39 46.5 C 28.5 49.5 19.5 40.5 19.5 27 C 19.5 13.5 31.5 3 45 3 C 58.5 3 70.5 13.5 70.5 27 C 70.5 40.5 61.5 49.5 51 46.5 C 55.5 45 57 51 57 60 Z'/%3E%3C/svg%3E") center bottom / 90px 60px no-repeat, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 90 60'%3E%3Cpath d='M 33 60 C 33 51 34.5 45 39 46.5 C 28.5 49.5 19.5 40.5 19.5 27 C 19.5 13.5 31.5 3 45 3 C 58.5 3 70.5 13.5 70.5 27 C 70.5 40.5 61.5 49.5 51 46.5 C 55.5 45 57 51 57 60 Z'/%3E%3C/svg%3E") center bottom / 90px 60px no-repeat, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+  }
+  .puzzle-card:last-child .puzzle-card-inner {
+    padding-left: 24px;
+    padding-top: 76px;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 90 60'%3E%3Cpath d='M 33 0 C 33 9 34.5 15 39 13.5 C 28.5 10.5 19.5 19.5 19.5 33 C 19.5 46.5 31.5 57 45 57 C 58.5 57 70.5 46.5 70.5 33 C 70.5 19.5 61.5 10.5 51 13.5 C 55.5 15 57 9 57 0 Z'/%3E%3C/svg%3E") center top / 90px 60px no-repeat, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 90 60'%3E%3Cpath d='M 33 0 C 33 9 34.5 15 39 13.5 C 28.5 10.5 19.5 19.5 19.5 33 C 19.5 46.5 31.5 57 45 57 C 58.5 57 70.5 46.5 70.5 33 C 70.5 19.5 61.5 10.5 51 13.5 C 55.5 15 57 9 57 0 Z'/%3E%3C/svg%3E") center top / 90px 60px no-repeat, linear-gradient(#000 0 0);
+    mask-composite: exclude;
   }
 }
 
