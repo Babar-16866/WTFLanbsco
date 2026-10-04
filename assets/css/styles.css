@@ -10007,3 +10007,6 @@ img[src$="product-ui.webp"] {
 .industry-nav-section .works-filter-stack {
   margin-bottom: 0;
 }
+.site-footer {
+  border-radius: var(--radius) var(--radius) 0 0;
+}
