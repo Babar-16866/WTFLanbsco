@@ -244,6 +244,7 @@
   --pal-gold: #C39B62;
   --pal-overlay: #E4D9C9;
   --pal-card: #FFFFFF;
+  --pal-selected: #132A20;
   --pal-gold-dark: #A07B45;
   --pal-gold-light: #D8BA8C;
   --pal-bg-image: url("/assets/images/index2-travertine.webp");
@@ -9893,7 +9894,7 @@ html[data-palette="index2"] :is(.btn-lime, .faq-all-btn, .excel-view-all):hover 
   background: var(--pal-card);
   box-shadow: 0 20px 50px color-mix(in srgb, var(--pal-dark) 14%, transparent);
 }
-:root[data-palette="index2"]:not([data-theme="dark"]) .contact-form--home :is(.field label, .check) {
+:root[data-palette="index2"]:not([data-theme="dark"]) .contact-form--home :is(.field > label, .check) {
   color: var(--pal-dark);
 }
 :root[data-palette="index2"]:not([data-theme="dark"]) .contact-form--home :is(input, select, textarea, .wtf-select-trigger) {
@@ -9983,4 +9984,19 @@ html body :is(.nav-pill > .btn-lime, .brand-card-cta .btn, .contact-form--home .
   html body .excel-view-all {
     padding: 6px 6px 6px 22px;
   }
+}
+
+html body form .budget-pills label:has(input:checked),
+html body form .budget-pills label:has(input:checked):hover,
+html[data-palette] body form.contact-form .budget-pills label:has(input:checked),
+html[data-palette] body form.contact-form .budget-pills label:has(input:checked):hover {
+  background: var(--pal-selected, #132A20);
+  border-color: var(--pal-selected, #132A20);
+  color: #FFFFFF;
+}
+img[src$="product-ui.webp"] {
+  object-position: center top;
+}
+.page-section .home-filter-label {
+  color: var(--text);
 }

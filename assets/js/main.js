@@ -728,7 +728,7 @@ window.addEventListener('load', () => {
           }
         }
 
-        if (show && industries && activeIndustry !== 'all') {
+        if (show && industries && activeIndustry !== 'all' && card.hasAttribute('data-industries')) {
           show = hasToken(card.getAttribute('data-industries') || '', activeIndustry);
         }
 
@@ -856,7 +856,7 @@ window.addEventListener('load', () => {
         el.classList.toggle('is-active', isAll);
         el.setAttribute('aria-selected', isAll ? 'true' : 'false');
       });
-      (filters.closest('.home-filter-row') || filters).hidden = activeIndustry === 'all';
+      if (filters.closest('#homeWorksServiceRow')) filters.closest('#homeWorksServiceRow').hidden = activeIndustry === 'all';
       renderSubs('all', '');
       smoothFilter();
     });
@@ -865,14 +865,16 @@ window.addEventListener('load', () => {
     applyFilter();
   }
 
-  bindFilterPair('worksFilters', 'worksSubfilters', 'worksGrid', '.work-card');
-  bindFilterPair('servicesFilters', 'servicesSubfilters', 'servicesGrid', '.service-detail-card');
+  bindFilterPair('worksFilters', 'worksSubfilters', 'worksGrid', '.work-card', 'worksIndustries');
+  bindFilterPair('servicesFilters', 'servicesSubfilters', 'servicesGrid', '.service-detail-card', 'servicesIndustries');
   bindFilterPair('industriesFilters', 'industriesSubfilters', 'industriesGrid', '.service-detail-card');
 
   // Filter from link
   function selectFromHash() {
     const id = decodeURIComponent(window.location.hash.slice(1));
     if (!id) return;
+    const showcase = document.querySelector('.svc-showcase');
+    if (showcase && document.querySelector('#servicesFilters [data-filter="' + CSS.escape(id) + '"]')) showcase.hidden = true;
     ['servicesFilters', 'industriesFilters', 'worksFilters'].forEach((filtersId) => {
       const btn = document.querySelector('#' + filtersId + ' [data-filter="' + CSS.escape(id) + '"]');
       if (!btn) return;
@@ -1587,10 +1589,10 @@ window.addEventListener('load', () => {
 })();
 
 // Filter labels
-(function initFilterLabels() {
-  const industries = document.getElementById('homeWorksIndustries');
-  const services = document.getElementById('homeWorksFilters');
-  const subs = document.getElementById('homeWorksSubfilters');
+[['homeWorksIndustries', 'homeWorksFilters', 'homeWorksSubfilters'], ['servicesIndustries', 'servicesFilters', 'servicesSubfilters'], ['worksIndustries', 'worksFilters', 'worksSubfilters']].forEach(([industriesId, servicesId, subsId]) => {
+  const industries = document.getElementById(industriesId);
+  const services = document.getElementById(servicesId);
+  const subs = document.getElementById(subsId);
   if (!industries || !services || !subs) return;
   const industryRow = industries.closest('.home-filter-row');
   const serviceRow = services.closest('.home-filter-row');
@@ -1611,7 +1613,7 @@ window.addEventListener('load', () => {
     if (!btn) return;
     serviceRow.classList.toggle('is-done', btn.getAttribute('data-sub') !== 'all');
   });
-})();
+});
 
 // Hero rotate
 (function initHeroRotate() {

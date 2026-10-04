@@ -109,18 +109,39 @@ include __DIR__ . '/includes/page-banner.php';
 
 <section class="page-section">
   <div class="container">
-    <div class="works-filter-stack works-filter-stack--center">
-      <div class="works-filters" id="servicesFilters" role="tablist" aria-label="Filter services">
-        <button type="button" class="works-filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
-        <button type="button" class="works-filter" data-filter="graphic-design" role="tab" aria-selected="false">Graphic Design</button>
-        <button type="button" class="works-filter" data-filter="web-design" role="tab" aria-selected="false">Web Design</button>
-        <button type="button" class="works-filter" data-filter="web-development" role="tab" aria-selected="false">Web Development</button>
-        <button type="button" class="works-filter" data-filter="seo" role="tab" aria-selected="false">SEO</button>
-        <button type="button" class="works-filter" data-filter="social-media-advertising" role="tab" aria-selected="false">Social Ads</button>
-        <button type="button" class="works-filter" data-filter="google-ads" role="tab" aria-selected="false">Google Ads</button>
-        <button type="button" class="works-filter" data-filter="digital-marketing" role="tab" aria-selected="false">Digital Marketing</button>
+    <div class="works-filter-stack works-filter-stack--center home-filter-stack">
+      <div class="home-filter-row">
+        <p class="home-filter-label">Select the Industry</p>
+        <div class="works-filters" id="servicesIndustries" role="tablist" aria-label="Filter by industry">
+          <button type="button" class="works-filter is-active" data-industry="all" role="tab" aria-selected="true">All</button>
+          <button type="button" class="works-filter" data-industry="remodelers" role="tab" aria-selected="false">Remodelers</button>
+          <button type="button" class="works-filter" data-industry="hvac" role="tab" aria-selected="false">HVAC</button>
+          <button type="button" class="works-filter" data-industry="plumbing" role="tab" aria-selected="false">Plumbing</button>
+          <button type="button" class="works-filter" data-industry="roofing" role="tab" aria-selected="false">Roofing</button>
+          <button type="button" class="works-filter" data-industry="pest-control" role="tab" aria-selected="false">Pest Control</button>
+          <button type="button" class="works-filter" data-industry="pool-services" role="tab" aria-selected="false">Pool Services</button>
+          <button type="button" class="works-filter" data-industry="landscaping" role="tab" aria-selected="false">Landscaping</button>
+          <button type="button" class="works-filter" data-industry="handyman" role="tab" aria-selected="false">Handyman</button>
+          <button type="button" class="works-filter" data-industry="power-washing" role="tab" aria-selected="false">Power Washing</button>
+        </div>
       </div>
-      <div class="works-subfilters" id="servicesSubfilters" role="tablist" aria-label="Filter by subcategory" hidden></div>
+      <div class="home-filter-row">
+        <p class="home-filter-label">Select the Service</p>
+        <div class="works-filters" id="servicesFilters" role="tablist" aria-label="Filter services">
+          <button type="button" class="works-filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button type="button" class="works-filter" data-filter="graphic-design" role="tab" aria-selected="false">Graphic Design</button>
+          <button type="button" class="works-filter" data-filter="web-design" role="tab" aria-selected="false">Web Design</button>
+          <button type="button" class="works-filter" data-filter="web-development" role="tab" aria-selected="false">Web Development</button>
+          <button type="button" class="works-filter" data-filter="seo" role="tab" aria-selected="false">SEO</button>
+          <button type="button" class="works-filter" data-filter="social-media-advertising" role="tab" aria-selected="false">Social Ads</button>
+          <button type="button" class="works-filter" data-filter="google-ads" role="tab" aria-selected="false">Google Ads</button>
+          <button type="button" class="works-filter" data-filter="digital-marketing" role="tab" aria-selected="false">Digital Marketing</button>
+        </div>
+      </div>
+      <div class="home-filter-row">
+        <span class="home-filter-label" aria-hidden="true"></span>
+        <div class="works-subfilters" id="servicesSubfilters" role="tablist" aria-label="Filter by subcategory" hidden></div>
+      </div>
     </div>
 
     <div class="services-detail-grid" id="servicesGrid">

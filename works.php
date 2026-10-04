@@ -21,22 +21,43 @@ include __DIR__ . '/includes/page-banner.php';
 
 <section class="page-section">
   <div class="container">
-    <div class="works-filter-stack">
-      <div class="works-filters" id="worksFilters" role="tablist" aria-label="Filter works by service">
-        <button type="button" class="works-filter is-active" data-filter="all" role="tab" aria-selected="true">Featured</button>
-        <button type="button" class="works-filter" data-filter="graphic-design" role="tab" aria-selected="false">Graphic Design</button>
-        <button type="button" class="works-filter" data-filter="web-design" role="tab" aria-selected="false">Web Design</button>
-        <button type="button" class="works-filter" data-filter="web-development" role="tab" aria-selected="false">Web Development</button>
-        <button type="button" class="works-filter" data-filter="seo" role="tab" aria-selected="false">SEO</button>
-        <button type="button" class="works-filter" data-filter="social-media-advertising" role="tab" aria-selected="false">Social Ads</button>
-        <button type="button" class="works-filter" data-filter="google-ads" role="tab" aria-selected="false">Google Ads</button>
-        <button type="button" class="works-filter" data-filter="digital-marketing" role="tab" aria-selected="false">Digital Marketing</button>
+    <div class="works-filter-stack works-filter-stack--center home-filter-stack">
+      <div class="home-filter-row">
+        <p class="home-filter-label">Select the Industry</p>
+        <div class="works-filters" id="worksIndustries" role="tablist" aria-label="Filter by industry">
+          <button type="button" class="works-filter is-active" data-industry="all" role="tab" aria-selected="true">All</button>
+          <button type="button" class="works-filter" data-industry="remodelers" role="tab" aria-selected="false">Remodelers</button>
+          <button type="button" class="works-filter" data-industry="hvac" role="tab" aria-selected="false">HVAC</button>
+          <button type="button" class="works-filter" data-industry="plumbing" role="tab" aria-selected="false">Plumbing</button>
+          <button type="button" class="works-filter" data-industry="roofing" role="tab" aria-selected="false">Roofing</button>
+          <button type="button" class="works-filter" data-industry="pest-control" role="tab" aria-selected="false">Pest Control</button>
+          <button type="button" class="works-filter" data-industry="pool-services" role="tab" aria-selected="false">Pool Services</button>
+          <button type="button" class="works-filter" data-industry="landscaping" role="tab" aria-selected="false">Landscaping</button>
+          <button type="button" class="works-filter" data-industry="handyman" role="tab" aria-selected="false">Handyman</button>
+          <button type="button" class="works-filter" data-industry="power-washing" role="tab" aria-selected="false">Power Washing</button>
+        </div>
       </div>
-      <div class="works-subfilters" id="worksSubfilters" role="tablist" aria-label="Filter by subcategory" hidden></div>
+      <div class="home-filter-row">
+        <p class="home-filter-label">Select the Service</p>
+        <div class="works-filters" id="worksFilters" role="tablist" aria-label="Filter works by service">
+          <button type="button" class="works-filter is-active" data-filter="all" role="tab" aria-selected="true">Featured</button>
+          <button type="button" class="works-filter" data-filter="graphic-design" role="tab" aria-selected="false">Graphic Design</button>
+          <button type="button" class="works-filter" data-filter="web-design" role="tab" aria-selected="false">Web Design</button>
+          <button type="button" class="works-filter" data-filter="web-development" role="tab" aria-selected="false">Web Development</button>
+          <button type="button" class="works-filter" data-filter="seo" role="tab" aria-selected="false">SEO</button>
+          <button type="button" class="works-filter" data-filter="social-media-advertising" role="tab" aria-selected="false">Social Ads</button>
+          <button type="button" class="works-filter" data-filter="google-ads" role="tab" aria-selected="false">Google Ads</button>
+          <button type="button" class="works-filter" data-filter="digital-marketing" role="tab" aria-selected="false">Digital Marketing</button>
+        </div>
+      </div>
+      <div class="home-filter-row">
+        <span class="home-filter-label" aria-hidden="true"></span>
+        <div class="works-subfilters" id="worksSubfilters" role="tablist" aria-label="Filter by subcategory" hidden></div>
+      </div>
     </div>
 
     <div class="works-grid reveal" id="worksGrid">
-      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="product-sites custom-web landing-pages">
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="product-sites custom-web landing-pages" data-industries="hvac roofing">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/excel-uiux.webp" alt="TorchSensors">
         </div>
@@ -54,7 +75,7 @@ include __DIR__ . '/includes/page-banner.php';
         </div>
       </article>
 
-      <article class="work-card" data-featured data-tags="web-design digital-marketing" data-subs="landing-pages funnel-design content-marketing">
+      <article class="work-card" data-featured data-tags="web-design digital-marketing" data-subs="landing-pages funnel-design content-marketing" data-industries="plumbing pest-control">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/mockup-2.webp" alt="Solana Payouts">
         </div>
@@ -72,7 +93,7 @@ include __DIR__ . '/includes/page-banner.php';
         </div>
       </article>
 
-      <article class="work-card" data-featured data-tags="web-development graphic-design" data-subs="web-app brand-collaterals social-media-post">
+      <article class="work-card" data-featured data-tags="web-development graphic-design" data-subs="web-app brand-collaterals social-media-post" data-industries="remodelers landscaping">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/excel-mobile.webp" alt="Infaces">
         </div>
@@ -90,7 +111,7 @@ include __DIR__ . '/includes/page-banner.php';
         </div>
       </article>
 
-      <article class="work-card" data-featured data-tags="web-design graphic-design" data-subs="corporate-sites logo-design brand-collaterals">
+      <article class="work-card" data-featured data-tags="web-design graphic-design" data-subs="corporate-sites logo-design brand-collaterals" data-industries="remodelers handyman">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/service-graphic-design.jpg" alt="Global Leathers">
         </div>
@@ -108,7 +129,7 @@ include __DIR__ . '/includes/page-banner.php';
         </div>
       </article>
 
-      <article class="work-card" data-featured data-tags="web-development seo" data-subs="custom-web technical-seo on-page">
+      <article class="work-card" data-featured data-tags="web-development seo" data-subs="custom-web technical-seo on-page" data-industries="hvac plumbing">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/mockup-3.webp" alt="Cofinity-X">
         </div>
@@ -126,7 +147,7 @@ include __DIR__ . '/includes/page-banner.php';
         </div>
       </article>
 
-      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wordpress redesigns">
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wordpress redesigns" data-industries="pool-services landscaping">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/service-web-design.jpg" alt="Elvetiko">
         </div>
@@ -144,7 +165,7 @@ include __DIR__ . '/includes/page-banner.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design google-ads" data-subs="landing-pages search-ads remarketing">
+      <article class="work-card" data-tags="web-design google-ads" data-subs="landing-pages search-ads remarketing" data-industries="roofing power-washing">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/mockup-main.webp" alt="Fairway">
         </div>
@@ -162,7 +183,7 @@ include __DIR__ . '/includes/page-banner.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-development seo" data-subs="wordpress on-page content-seo">
+      <article class="work-card" data-tags="web-development seo" data-subs="wordpress on-page content-seo" data-industries="pest-control pool-services">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/service-web-development.jpg" alt="Fulfillment for Europe">
         </div>
@@ -180,7 +201,7 @@ include __DIR__ . '/includes/page-banner.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-development digital-marketing" data-subs="custom-web strategy funnel-design">
+      <article class="work-card" data-tags="web-development digital-marketing" data-subs="custom-web strategy funnel-design" data-industries="power-washing handyman">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/mockup-1.webp" alt="Automotive platforms">
         </div>
@@ -198,7 +219,7 @@ include __DIR__ . '/includes/page-banner.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design social-media-advertising" data-subs="landing-pages meta-ads creative-testing">
+      <article class="work-card" data-tags="web-design social-media-advertising" data-subs="landing-pages meta-ads creative-testing" data-industries="hvac pest-control">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/mobile-app.webp" alt="WMails.io">
         </div>
@@ -216,7 +237,7 @@ include __DIR__ . '/includes/page-banner.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-development seo" data-subs="wordpress content-seo technical-seo">
+      <article class="work-card" data-tags="web-development seo" data-subs="wordpress content-seo technical-seo" data-industries="remodelers roofing">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/why-craft.jpg" alt="Prosperity Home Loans">
         </div>
@@ -234,7 +255,7 @@ include __DIR__ . '/includes/page-banner.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design graphic-design" data-subs="corporate-sites brand-collaterals business-card">
+      <article class="work-card" data-tags="web-design graphic-design" data-subs="corporate-sites brand-collaterals business-card" data-industries="landscaping power-washing">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/excel-branding.webp" alt="SolvoWorld">
         </div>
