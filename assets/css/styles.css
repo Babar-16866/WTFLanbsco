@@ -10010,3 +10010,20 @@ img[src$="product-ui.webp"] {
 .site-footer {
   border-radius: var(--radius) var(--radius) 0 0;
 }
+
+html[data-palette] .about-hero-card-dot {
+  background: #C39B62;
+  box-shadow: 0 0 0 4px color-mix(in srgb, #C39B62 35%, transparent);
+}
+
+html[data-palette] .about-hero-lime-orb {
+  background: #C39B62;
+}
+
+html[data-palette] .service-detail-body li::before {
+  background: #C39B62;
+}
+
+html[data-palette] .services-cta-band p {
+  color: #D8D2E1;
+}
