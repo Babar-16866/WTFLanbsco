@@ -291,7 +291,7 @@ if (excelTrack) {
 
 // Word on the street — 2 opposite marquees + drag
 (function initStreetRows() {
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reduceMotion = false;
   const DURATION_MS = 45000;
 
   document.querySelectorAll('.street-row').forEach((row) => {
@@ -507,7 +507,7 @@ window.addEventListener('load', () => {
 // Custom theme cursor (desktop only)
 (function initCustomCursor() {
   const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const reduceMotion = { matches: false };
   if (!finePointer.matches || reduceMotion.matches) return;
 
   const root = document.createElement('div');
@@ -1089,7 +1089,7 @@ window.addEventListener('load', () => {
 
 // Typewriter
 (function initTypewriter() {
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reduceMotion = false;
   document.querySelectorAll('[data-typewriter]').forEach((el) => {
     const words = el.getAttribute('data-typewriter').split('|').map((w) => w.trim()).filter(Boolean);
     if (!words.length) return;
@@ -1130,7 +1130,7 @@ window.addEventListener('load', () => {
 
 // Rail
 (function initRails() {
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const reduceMotion = { matches: false };
   document.querySelectorAll('[data-rail]').forEach((section) => {
     const sticky = section.querySelector('.rail-sticky');
     const track = section.querySelector('.rail-track');
@@ -1331,7 +1331,7 @@ window.addEventListener('load', () => {
   if (!section || !section.querySelector('.street-card--video')) return;
 
   const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reduceMotion = false;
   let current = null;
 
   section.querySelectorAll('.street-card--video').forEach((card) => {

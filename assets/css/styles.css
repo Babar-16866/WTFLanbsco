@@ -2920,12 +2920,14 @@ select option {
   color: var(--cream);
 }
 
+/*
 @media (prefers-reduced-motion: reduce) {
   .street-row[data-dir="left"] .street-row-track,
   .street-row[data-dir="right"] .street-row-track {
     animation: none;
   }
 }
+*/
 
 @media (max-width: 768px) {
   .street-section { padding: 64px 0 72px; }
@@ -8075,9 +8077,11 @@ img {
 @keyframes niche-marquee {
   to { transform: translate3d(-50%, 0, 0); }
 }
+/*
 @media (prefers-reduced-motion: reduce) {
   .niche-strip-track { animation: none; }
 }
+*/
 @media (max-width: 768px) {
   .niche-strip { margin-top: 12px; padding: 14px 0; }
   .niche-strip-list li { gap: 22px; padding-right: 22px; }
@@ -9038,10 +9042,12 @@ h2.home-title,
   from { opacity: 0.8; transform: scale(1); }
   to { opacity: 0; transform: scale(1.55); }
 }
+/*
 @media (prefers-reduced-motion: reduce) {
   .street-play-ring,
   .street-play-core::after { animation: none; }
 }
+*/
 html.has-video-cursor.is-over-video .custom-cursor {
   opacity: 0 !important;
 }
@@ -9136,10 +9142,12 @@ body.street-modal-open {
   .street-video-modal-player { border-radius: 12px; }
   .street-video-modal-close { top: -50px; width: 40px; height: 40px; }
 }
+/*
 @media (prefers-reduced-motion: reduce) {
   .street-video-modal-backdrop,
   .street-video-modal-box { animation: none; }
 }
+*/
 
 /* ===== SERVICES SHOWCASE ===== */
 .svc-showcase {
@@ -9525,11 +9533,13 @@ body.street-modal-open {
     margin: 20px auto 0;
   }
 }
+/*
 @media (prefers-reduced-motion: reduce) {
   .hero-reviews-btn::before,
   .hero-reviews-btn::after,
   .hero-reviews-btn:hover .hero-reviews-arrow { animation: none; }
 }
+*/
 
 /* ===== INDEX1 & INDEX2 HEADER AND FOOTER ===== */
 html[data-palette] {
@@ -9776,10 +9786,12 @@ html[data-palette="index2"] .niche-strip {
 html[data-palette="index2"] .hero-rotate-item + .hero-rotate-item {
   color: var(--pal-lime);
 }
+/*
 @media (prefers-reduced-motion: reduce) {
   .hero-rotate-item,
   .hero-rotate-item.is-active { transition: none; transform: none; filter: none; }
 }
+*/
 
 /* ===== INDEX2 BACKGROUND ===== */
 :root[data-palette="index2"]:not([data-theme="dark"]) body {
