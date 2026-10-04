@@ -9905,7 +9905,7 @@ html[data-palette="index2"] .contact-form--home .budget-pills label {
 }
 html[data-palette="index2"] .contact-form--home .budget-pills label:hover,
 html[data-palette="index2"] .contact-form--home .budget-pills label:has(input:checked) {
-  color: var(--pal-card);
+  color: var(--pal-light);
 }
 html[data-palette="index2"] .contact-form--home .budget-pills label:has(input:checked) {
   background: var(--pal-gold-dark);
@@ -9920,5 +9920,8 @@ html[data-palette="index2"] .problem-box {
 /* ===== INDEX2 BUTTONS ON GREEN ===== */
 html[data-palette="index2"] :is(.site-header, .hero-section, .home-work-section, .final-cta-section) :is(.btn-lime, .faq-all-btn),
 html[data-palette="index2"][data-theme="dark"] .contact-section .btn-lime {
-  color: var(--pal-card);
+  color: var(--pal-light);
+}
+html[data-palette="index2"] .sticky-work-cta.is-on-dark {
+  color: var(--pal-light);
 }

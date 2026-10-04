@@ -1323,6 +1323,29 @@ window.addEventListener('load', () => {
     document.getElementById(id)?.addEventListener('click', () => setTimeout(sync, 0));
   });
   window.addEventListener('resize', sync);
+  if (document.documentElement.getAttribute('data-palette') === 'index2') {
+    const isDark = (el) => {
+      while (el && el !== document.documentElement) {
+        const m = getComputedStyle(el).backgroundColor.match(/[0-9.]+/g);
+        if (m && (m.length < 4 || +m[3] > 0.5)) return (+m[0] * 0.299 + +m[1] * 0.587 + +m[2] * 0.114) < 110;
+        el = el.parentElement;
+      }
+      return false;
+    };
+    let pending = false;
+    const tone = () => {
+      pending = false;
+      const r = cta.getBoundingClientRect();
+      const under = document.elementsFromPoint(r.left + r.width / 2, r.top + r.height / 2).find((el) => el !== cta && !cta.contains(el));
+      cta.classList.toggle('is-on-dark', isDark(under));
+    };
+    const queue = () => {
+      if (!pending) { pending = true; requestAnimationFrame(tone); }
+    };
+    window.addEventListener('scroll', queue, { passive: true });
+    window.addEventListener('resize', queue);
+    tone();
+  }
 })();
 
 // Testimonial videos
