@@ -242,6 +242,8 @@
   --pal-glow: #EDFC87;
   --pal-eyebrow: #E4FF43;
   --pal-gold: #C39B62;
+  --pal-overlay: #E4D9C9;
+  --pal-card: #FFFFFF;
   --pal-gold-dark: #A07B45;
   --pal-gold-light: #D8BA8C;
   --pal-bg-image: url("/assets/images/index2-travertine.webp");
@@ -9752,15 +9754,28 @@ html[data-palette="index2"] .niche-strip {
 .hero-rotate-item {
   grid-area: 1 / 1;
   opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+  filter: blur(6px);
+  transform: translateY(6px);
+  transition: opacity 0.6s ease-in-out, filter 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 .hero-rotate-item.is-active {
   opacity: 1;
+  filter: blur(0);
   transform: translateY(0);
+  transition: opacity 0.9s ease-in-out 0.45s, filter 0.9s ease-in-out 0.45s, transform 0.9s ease-in-out 0.45s;
+}
+.hero-rotate-item + .hero-rotate-item {
+  color: var(--lime);
+}
+:where([data-palette]) .hero-rotate-item + .hero-rotate-item {
+  color: var(--pal-accent);
+}
+html[data-palette="index2"] .hero-rotate-item + .hero-rotate-item {
+  color: var(--pal-lime);
 }
 @media (prefers-reduced-motion: reduce) {
-  .hero-rotate-item { transition: none; transform: none; }
+  .hero-rotate-item,
+  .hero-rotate-item.is-active { transition: none; transform: none; filter: none; }
 }
 
 /* ===== INDEX2 BACKGROUND ===== */
@@ -9772,7 +9787,9 @@ html[data-palette="index2"] .niche-strip {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: var(--pal-bg-image) center / cover no-repeat;
+  background:
+    linear-gradient(color-mix(in srgb, var(--pal-overlay) 80%, transparent), color-mix(in srgb, var(--pal-overlay) 80%, transparent)),
+    var(--pal-bg-image) center / cover no-repeat;
   pointer-events: none;
 }
 :root[data-palette="index2"]:not([data-theme="dark"]) :is(.our-clients, .excel-section, .rail-section, .street-section, .faq-section, .problem-section) {
@@ -9793,7 +9810,8 @@ html[data-palette="index2"] .hero-box {
 html[data-palette="index2"] :is(.why-done-card, .guide-item, .rail-card) {
   background-color: var(--pal-primary-2);
 }
-html[data-palette="index2"] :is(.why-done, .home-work-section, .contact-section, .final-cta-section, .guides-section) {
+html[data-palette="index2"] :is(.why-done, .home-work-section, .final-cta-section, .guides-section),
+:root[data-palette="index2"][data-theme="dark"] .contact-section {
   background-color: var(--pal-primary);
   background-image: var(--pal-texture-image), linear-gradient(150deg, var(--pal-primary-2) 0%, var(--pal-primary) 45%, var(--pal-dark) 100%);
   background-size: cover, auto;
@@ -9813,9 +9831,59 @@ html[data-palette="index2"] #why-wtf-labs .rail-head .heading-accent {
   color: var(--pal-dark);
   -webkit-text-fill-color: var(--pal-dark);
   padding: 0 0.08em;
-  background-image: linear-gradient(transparent 58%, var(--pal-gold) 58%, var(--pal-gold) 92%, transparent 92%);
+  background-image: linear-gradient(transparent 58%, var(--pal-lime) 58%, var(--pal-lime) 92%, transparent 92%);
   -webkit-background-clip: border-box;
   background-clip: border-box;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+}
+
+/* ===== INDEX2 TYPING CURSOR ===== */
+:root[data-palette="index2"] .typewriter::after {
+  background: currentColor;
+}
+
+/* ===== INDEX2 BUTTONS ===== */
+html[data-palette="index2"] :is(.btn-lime, .faq-all-btn, .excel-view-all) {
+  background: var(--pal-gold);
+}
+html[data-palette="index2"] :is(.btn-lime, .faq-all-btn, .excel-view-all):hover {
+  background: linear-gradient(110deg, var(--pal-gold-dark) 0%, var(--pal-gold) 45%, var(--pal-gold-light) 100%);
+  background-size: 200% 100%;
+  background-position: 100% 50%;
+}
+
+/* ===== INDEX2 CONTACT ===== */
+:root[data-palette="index2"]:not([data-theme="dark"]) .contact-section {
+  background: transparent;
+  color: var(--pal-dark);
+}
+:root[data-palette="index2"]:not([data-theme="dark"]) .contact-intro h2 {
+  color: var(--pal-dark);
+}
+:root[data-palette="index2"]:not([data-theme="dark"]) .contact-intro h2 span {
+  background-image: none;
+  -webkit-text-fill-color: var(--pal-gold);
+  color: var(--pal-gold);
+}
+:root[data-palette="index2"]:not([data-theme="dark"]) .contact-intro p {
+  color: var(--pal-text-muted);
+}
+:root[data-palette="index2"]:not([data-theme="dark"]) .contact-section .contact-phone a {
+  color: var(--pal-dark);
+}
+:root[data-palette="index2"]:not([data-theme="dark"]) .contact-form--home {
+  padding: 32px;
+  border-radius: 24px;
+  background: var(--pal-card);
+  box-shadow: 0 20px 50px color-mix(in srgb, var(--pal-dark) 14%, transparent);
+}
+:root[data-palette="index2"]:not([data-theme="dark"]) .contact-form--home :is(.field label, .check) {
+  color: var(--pal-dark);
+}
+:root[data-palette="index2"]:not([data-theme="dark"]) .contact-form--home :is(input, select, textarea, .wtf-select-trigger) {
+  border-color: color-mix(in srgb, var(--pal-dark) 18%, transparent);
+}
+@media (max-width: 640px) {
+  :root[data-palette="index2"]:not([data-theme="dark"]) .contact-form--home { padding: 22px 18px; }
 }
