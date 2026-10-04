@@ -9942,7 +9942,7 @@ html[data-palette="index2"][data-theme="dark"] .contact-section .btn-lime {
 /* ===== INNER PAGES ===== */
 html[data-palette="index2"] :is(.nav-links a, .nav-dropdown-btn)[aria-current="page"] {
   background: color-mix(in srgb, var(--pal-light) 10%, transparent);
-  color: var(--pal-gold);
+  color: #CBEB01;
 }
 html[data-palette="index2"] :is(.page-kicker, .svc-kicker, .page-section-kicker, .faq-page-label, .contact-page-label, .contact-page-aside .contact-page-label, .contact-page-form-wrap .contact-page-label) {
   color: var(--pal-eyebrow);
