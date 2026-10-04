@@ -9893,3 +9893,6 @@ html[data-palette="index2"] :is(.faq-section, .excel-section, .why-section, .str
   border-top: 0;
   border-bottom: 0;
 }
+:root[data-palette="index2"][data-theme="dark"] :is(.problem-section, .our-clients, .excel-section, .rail-section, .street-section, .faq-section) {
+  background: transparent;
+}
