@@ -9788,7 +9788,7 @@ html[data-palette="index2"] .hero-rotate-item + .hero-rotate-item {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(color-mix(in srgb, var(--pal-overlay) 60%, transparent), color-mix(in srgb, var(--pal-overlay) 60%, transparent)),
+    linear-gradient(color-mix(in srgb, var(--pal-overlay) 40%, transparent), color-mix(in srgb, var(--pal-overlay) 40%, transparent)),
     var(--pal-bg-image) center / cover no-repeat;
   pointer-events: none;
 }
