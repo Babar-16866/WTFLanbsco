@@ -9887,3 +9887,9 @@ html[data-palette="index2"] :is(.btn-lime, .faq-all-btn, .excel-view-all):hover 
 @media (max-width: 640px) {
   :root[data-palette="index2"]:not([data-theme="dark"]) .contact-form--home { padding: 22px 18px; }
 }
+
+/* ===== INDEX2 SECTION LINES ===== */
+html[data-palette="index2"] :is(.faq-section, .excel-section, .why-section, .street-section, .our-clients, .rail-section, .problem-section) {
+  border-top: 0;
+  border-bottom: 0;
+}
