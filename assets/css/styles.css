@@ -9795,7 +9795,7 @@ html[data-palette="index2"] .hero-rotate-item + .hero-rotate-item {
     var(--pal-bg-image) center / 100% 100% no-repeat;
   pointer-events: none;
 }
-:root[data-palette="index2"]:not([data-theme="dark"]) :is(.our-clients, .excel-section, .rail-section, .street-section, .faq-section, .problem-section) {
+:root[data-palette="index2"]:not([data-theme="dark"]) :is(.our-clients, .excel-section, .rail-section, .street-section, .faq-section, .problem-section, .page-hero, .page-section, .svc-work, .svc-team, .svc-more, .svc-excellence, .thank-section) {
   background: transparent;
 }
 
