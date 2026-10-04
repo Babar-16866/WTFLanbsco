@@ -50,7 +50,9 @@ $banner_card = $banner_card ?? 'Same senior crew from strategy to launch';
         <?php endif; ?>
         <div class="page-hero-actions">
           <a href="<?php echo htmlspecialchars($banner_primary_href); ?>" class="btn btn-lime btn-lg"<?php echo $banner_primary_popup ? ' data-open-popup' : ''; ?>><?php echo htmlspecialchars($banner_primary_label); ?></a>
-          <a href="<?php echo htmlspecialchars($banner_secondary_href); ?>" class="btn btn-outline-white btn-lg"><?php echo htmlspecialchars($banner_secondary_label); ?></a>
+          <?php if ($banner_secondary_label !== ''): ?>
+            <a href="<?php echo htmlspecialchars($banner_secondary_href); ?>" class="btn btn-outline-white btn-lg"><?php echo htmlspecialchars($banner_secondary_label); ?></a>
+          <?php endif; ?>
         </div>
         <?php if (!empty($banner_proof)): ?>
           <div class="about-hero-proof">

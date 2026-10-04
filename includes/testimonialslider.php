@@ -5,6 +5,9 @@
  */
 $street_section_id = $street_section_id ?? 'testimonials';
 $street_kicker = $street_kicker ?? 'word on the street';
+$street_eyebrow = $street_eyebrow ?? '';
+$street_heading = $street_heading ?? '&hellip;AND THE CROWD GOES <span class="accent-blue">WTF!</span>';
+$street_desc = $street_desc ?? '';
 ?>
 <section class="street-section" id="<?php echo htmlspecialchars($street_section_id); ?>">
   <!--
@@ -14,7 +17,13 @@ $street_kicker = $street_kicker ?? 'word on the street';
   -->
   <div class="container">
     <div class="section-header center street-head reveal">
-      <h2>&hellip;AND THE CROWD GOES <span class="accent-blue">WTF!</span></h2>
+<?php if ($street_eyebrow !== ''): ?>
+      <p class="subheading"><?php echo htmlspecialchars($street_eyebrow); ?></p>
+<?php endif; ?>
+      <h2><?php echo $street_heading; ?></h2>
+<?php if ($street_desc !== ''): ?>
+      <p class="section-desc center-desc"><?php echo htmlspecialchars($street_desc); ?></p>
+<?php endif; ?>
     </div>
   </div>
 
