@@ -870,13 +870,6 @@ window.addEventListener('load', () => {
   bindFilterPair('industriesFilters', 'industriesSubfilters', 'industriesGrid', '.service-detail-card');
 
   // Industry navs
-  const SERVICE_CARDS = {
-    'web-design': ['websites'],
-    'web-development': ['websites'],
-    seo: ['local-seo'],
-    'social-media-advertising': ['social-ads'],
-    'google-ads': ['google-ads']
-  };
   const industryNav = document.querySelector('[data-industry-nav]');
   const indIndustries = document.getElementById('indIndustries');
   const indServices = document.getElementById('indServices');
@@ -915,20 +908,30 @@ window.addEventListener('load', () => {
 
   function applyIndustryFilter() {
     if (!indGrid) return;
-    const wanted = SERVICE_CARDS[indService];
+    const industryBtn = indIndustries.querySelector('[data-industry="' + indIndustry + '"]');
+    const industryName = indIndustry !== 'all' && industryBtn ? industryBtn.textContent.replace(/\s+/g, ' ').trim() : '';
     indGrid.querySelectorAll('.service-detail-card').forEach((card) => {
       const level = card.getAttribute('data-level');
       let show;
-      if (indIndustry === 'all' && indService === 'all') {
+      if (level === 'svc') {
+        show = indService !== 'all' && card.getAttribute('data-service') === indService;
+        if (show && indSub !== 'all') show = hasToken(card.getAttribute('data-subs') || '', indSub);
+        const kicker = card.querySelector('.service-detail-kicker');
+        if (kicker) {
+          if (!kicker.dataset.base) kicker.dataset.base = kicker.textContent;
+          kicker.textContent = industryName ? industryName + ' · ' + kicker.dataset.base : kicker.dataset.base;
+        }
+      } else if (indService !== 'all') {
+        show = false;
+      } else if (indIndustry === 'all') {
         show = level === 'overview';
       } else {
-        show = level === 'sub';
-        if (show && indIndustry !== 'all') show = hasToken(card.getAttribute('data-tags') || '', indIndustry);
-        if (show && wanted) show = wanted.some((sub) => hasToken(card.getAttribute('data-subs') || '', sub));
+        show = level === 'sub' && hasToken(card.getAttribute('data-tags') || '', indIndustry);
       }
       card.hidden = !show;
     });
   }
+
 
   function goToIndustries() {
     const parts = [indIndustry, indService, indSub].map(encodeURIComponent);
