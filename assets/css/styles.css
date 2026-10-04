@@ -10000,3 +10000,10 @@ img[src$="product-ui.webp"] {
 .page-section .home-filter-label {
   color: var(--text);
 }
+.industry-nav-section {
+  padding-top: 56px;
+  padding-bottom: 0;
+}
+.industry-nav-section .works-filter-stack {
+  margin-bottom: 0;
+}

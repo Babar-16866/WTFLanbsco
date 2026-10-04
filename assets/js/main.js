@@ -869,6 +869,108 @@ window.addEventListener('load', () => {
   bindFilterPair('servicesFilters', 'servicesSubfilters', 'servicesGrid', '.service-detail-card', 'servicesIndustries');
   bindFilterPair('industriesFilters', 'industriesSubfilters', 'industriesGrid', '.service-detail-card');
 
+  // Industry navs
+  const SERVICE_CARDS = {
+    'web-design': ['websites'],
+    'web-development': ['websites'],
+    seo: ['local-seo'],
+    'social-media-advertising': ['social-ads'],
+    'google-ads': ['google-ads']
+  };
+  const industryNav = document.querySelector('[data-industry-nav]');
+  const indIndustries = document.getElementById('indIndustries');
+  const indServices = document.getElementById('indServices');
+  const indSubs = document.getElementById('indSubs');
+  const indGrid = document.getElementById('industriesGrid');
+  let indIndustry = industryNav && industryNav.dataset.current ? industryNav.dataset.current : 'all';
+  let indService = 'all';
+  let indSub = 'all';
+
+  function setActive(group, attr, value) {
+    group.querySelectorAll('[' + attr + ']').forEach((el) => {
+      const on = el.getAttribute(attr) === value;
+      el.classList.toggle('is-active', on);
+      el.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+  }
+
+  function renderIndSubs() {
+    indSubs.innerHTML = '';
+    indSub = 'all';
+    const list = SUBS[indService];
+    indSubs.hidden = !list;
+    indSubs.classList.toggle('is-open', !!list);
+    if (!list) return;
+    list.forEach((item, index) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'works-filter works-subfilter' + (index === 0 ? ' is-active' : '');
+      btn.setAttribute('data-sub', item.id);
+      btn.setAttribute('role', 'tab');
+      btn.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
+      btn.textContent = item.label;
+      indSubs.appendChild(btn);
+    });
+  }
+
+  function applyIndustryFilter() {
+    if (!indGrid) return;
+    const wanted = SERVICE_CARDS[indService];
+    indGrid.querySelectorAll('.service-detail-card').forEach((card) => {
+      const level = card.getAttribute('data-level');
+      let show;
+      if (indIndustry === 'all' && indService === 'all') {
+        show = level === 'overview';
+      } else {
+        show = level === 'sub';
+        if (show && indIndustry !== 'all') show = hasToken(card.getAttribute('data-tags') || '', indIndustry);
+        if (show && wanted) show = wanted.some((sub) => hasToken(card.getAttribute('data-subs') || '', sub));
+      }
+      card.hidden = !show;
+    });
+  }
+
+  function goToIndustries() {
+    const parts = [indIndustry, indService, indSub].map(encodeURIComponent);
+    window.location.href = '/industries.php#' + parts.join('/');
+  }
+
+  if (industryNav && indIndustries && indServices && indSubs) {
+    indIndustries.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-industry]');
+      if (!btn) return;
+      indIndustry = btn.getAttribute('data-industry');
+      setActive(indIndustries, 'data-industry', indIndustry);
+      if (!indGrid) { goToIndustries(); return; }
+      applyIndustryFilter();
+    });
+    indServices.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-filter]');
+      if (!btn) return;
+      indService = btn.getAttribute('data-filter');
+      setActive(indServices, 'data-filter', indService);
+      renderIndSubs();
+      if (indGrid) applyIndustryFilter();
+    });
+    indSubs.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-sub]');
+      if (!btn) return;
+      indSub = btn.getAttribute('data-sub');
+      setActive(indSubs, 'data-sub', indSub);
+      if (!indGrid) { goToIndustries(); return; }
+      applyIndustryFilter();
+    });
+
+    if (indGrid && window.location.hash) {
+      const [ind, svc, sub] = decodeURIComponent(window.location.hash.slice(1)).split('/');
+      if (ind && indIndustries.querySelector('[data-industry="' + CSS.escape(ind) + '"]')) indIndustries.querySelector('[data-industry="' + CSS.escape(ind) + '"]').click();
+      if (svc && indServices.querySelector('[data-filter="' + CSS.escape(svc) + '"]')) indServices.querySelector('[data-filter="' + CSS.escape(svc) + '"]').click();
+      if (sub && indSubs.querySelector('[data-sub="' + CSS.escape(sub) + '"]')) indSubs.querySelector('[data-sub="' + CSS.escape(sub) + '"]').click();
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+    applyIndustryFilter();
+  }
+
   // Filter from link
   function selectFromHash() {
     const id = decodeURIComponent(window.location.hash.slice(1));
@@ -1589,7 +1691,7 @@ window.addEventListener('load', () => {
 })();
 
 // Filter labels
-[['homeWorksIndustries', 'homeWorksFilters', 'homeWorksSubfilters'], ['servicesIndustries', 'servicesFilters', 'servicesSubfilters'], ['worksIndustries', 'worksFilters', 'worksSubfilters']].forEach(([industriesId, servicesId, subsId]) => {
+[['homeWorksIndustries', 'homeWorksFilters', 'homeWorksSubfilters'], ['servicesIndustries', 'servicesFilters', 'servicesSubfilters'], ['worksIndustries', 'worksFilters', 'worksSubfilters'], ['indIndustries', 'indServices', 'indSubs']].forEach(([industriesId, servicesId, subsId]) => {
   const industries = document.getElementById(industriesId);
   const services = document.getElementById(servicesId);
   const subs = document.getElementById(subsId);
