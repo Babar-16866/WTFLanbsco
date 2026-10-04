@@ -253,12 +253,23 @@
   --dot-size: 640px 640px;
   --pal-copper-300: #C98A4C;
   --pal-copper-800: #7A4A1F;
+  /*
   --grad-web: linear-gradient(165deg, var(--pal-primary) 0%, color-mix(in srgb, var(--pal-primary) 76%, var(--pal-dark)) 45%, color-mix(in srgb, var(--pal-primary) 18%, var(--pal-dark)) 100%);
   --grad-seo: linear-gradient(115deg, var(--pal-primary-2) 0%, var(--pal-primary-3) 55%, var(--pal-primary) 100%);
   --grad-google-ads: linear-gradient(135deg, var(--pal-copper-300) 0%, var(--pal-copper) 50%, var(--pal-copper-800) 100%);
   --grad-social: linear-gradient(165deg, var(--pal-dark) 0%, var(--pal-primary) 60%, var(--pal-primary-3) 100%);
   --grad-branding: linear-gradient(140deg, var(--pal-primary) 0%, var(--pal-primary-3) 55%, var(--pal-copper) 100%);
   --grad-marketing: linear-gradient(135deg, var(--pal-primary-3) 0%, var(--pal-primary-2) 50%, var(--pal-dark) 100%);
+  */
+  --card-purple: #9010F0;
+  --card-purple-deep: #6B00C4;
+  --card-ink: #1A002E;
+  --grad-web: linear-gradient(165deg, var(--card-purple) 0%, var(--card-purple-deep) 45%, var(--card-ink) 100%);
+  --grad-seo: linear-gradient(115deg, var(--card-blue-600) 0%, var(--card-violet-600) 50%, var(--card-purple) 100%);
+  --grad-google-ads: linear-gradient(135deg, var(--card-pink-500) 0%, var(--card-purple) 55%, var(--card-purple-deep) 100%);
+  --grad-social: linear-gradient(165deg, var(--card-blue-700) 0%, var(--card-blue-600) 40%, var(--card-blue-500) 100%);
+  --grad-branding: linear-gradient(140deg, var(--card-orange-400) 0%, var(--card-rose-500) 48%, var(--card-fuchsia-700) 100%);
+  --grad-marketing: linear-gradient(135deg, var(--card-teal-500) 0%, var(--card-cyan-500) 45%, var(--card-blue-500) 100%);
 }
 [data-theme="dark"]:where([data-palette]) {
   --bg: var(--pal-dark);
