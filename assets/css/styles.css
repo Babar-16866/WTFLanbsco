@@ -10156,3 +10156,15 @@ html[data-palette] .services-cta-band p {
 .services-cta-section .services-cta-band {
   margin-top: 0;
 }
+
+/* ===== SERVICE WHY CARDS ===== */
+.svc-why-section .why-done-card {
+  min-height: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 32px 28px;
+}
+.svc-why-section .why-done-card .problem-label {
+  margin-bottom: 12px;
+}

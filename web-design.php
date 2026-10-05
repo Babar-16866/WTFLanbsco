@@ -265,7 +265,7 @@ include __DIR__ . '/includes/testimonialslider.php';
 */ ?>
 
 <!-- WHY THIS SERVICE MATTERS -->
-<section class="problem-section">
+<section class="problem-section svc-why-section">
   <div class="container">
     <div class="section-header center problem-head reveal">
       <p class="subheading">Why This Service Matters</p>
