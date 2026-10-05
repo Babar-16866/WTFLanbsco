@@ -932,7 +932,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-development seo" data-subs="wordpress on-page content-seo" data-industries="remodelers hvac" data-live="https://digitalscribblers.com/" data-live-tab>
+      <article class="work-card" data-tags="web-development seo" data-subs="wordpress on-page content-seo" data-industries="remodelers hvac" data-live="/live-preview?site=digital-scribblers">
         <div class="work-card-media">
           <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-digital-scribblers.webp" alt="Digital Scribblers">
         </div>
@@ -1041,7 +1041,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="roofing pest-control" data-live="https://www.minaab.com/" data-live-tab>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="roofing pest-control" data-live="/live-preview?site=minaa-b">
         <div class="work-card-media">
           <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-minaa-b.webp" alt="Minaa B.">
         </div>
@@ -1059,7 +1059,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design web-development digital-marketing" data-subs="landing-pages squarespace funnel-design" data-industries="pool-services landscaping" data-live="https://www.digitalnomad.coach/" data-live-tab>
+      <article class="work-card" data-tags="web-design web-development digital-marketing" data-subs="landing-pages squarespace funnel-design" data-industries="pool-services landscaping" data-live="/live-preview?site=digital-nomad-coach">
         <div class="work-card-media">
           <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-digital-nomad-coach.webp" alt="Digital Nomad Coach">
         </div>
@@ -1096,7 +1096,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design web-development" data-subs="product-sites shopify" data-industries="remodelers hvac" data-live="https://bruvi.com/" data-live-tab>
+      <article class="work-card" data-tags="web-design web-development" data-subs="product-sites shopify" data-industries="remodelers hvac" data-live="/live-preview?site=bruvi">
         <div class="work-card-media">
           <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-bruvi.webp" alt="Bruvi">
         </div>
@@ -1114,7 +1114,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design web-development graphic-design" data-subs="product-sites shopify brand-collaterals" data-industries="plumbing roofing" data-live="https://artisaire.com/" data-live-tab>
+      <article class="work-card" data-tags="web-design web-development graphic-design" data-subs="product-sites shopify brand-collaterals" data-industries="plumbing roofing" data-live="/live-preview?site=artisaire">
         <div class="work-card-media">
           <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-artisaire.webp" alt="Artisaire">
         </div>
@@ -1133,7 +1133,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design web-development" data-subs="product-sites shopify" data-industries="pest-control pool-services" data-live="https://kirrinfinch.com/" data-live-tab>
+      <article class="work-card" data-tags="web-design web-development" data-subs="product-sites shopify" data-industries="pest-control pool-services" data-live="/live-preview?site=kirrin-finch">
         <div class="work-card-media">
           <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-kirrin-finch.webp" alt="Kirrin Finch">
         </div>
@@ -1151,7 +1151,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design web-development" data-subs="product-sites shopify" data-industries="landscaping handyman" data-live="https://southern-novelscents.myshopify.com/" data-live-tab>
+      <article class="work-card" data-tags="web-design web-development" data-subs="product-sites shopify" data-industries="landscaping handyman" data-live="/live-preview?site=southern-novelscents">
         <div class="work-card-media">
           <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-southern-novelscents.webp" alt="Southern Novelscents">
         </div>
@@ -1205,7 +1205,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design web-development" data-subs="product-sites shopify" data-industries="roofing pest-control" data-live="https://www.bittybalm.com/" data-live-tab>
+      <article class="work-card" data-tags="web-design web-development" data-subs="product-sites shopify" data-industries="roofing pest-control" data-live="/live-preview?site=bitty-balm">
         <div class="work-card-media">
           <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-bitty-balm.webp" alt="Bitty Balm">
         </div>
@@ -1259,7 +1259,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design web-development" data-subs="landing-pages custom-web" data-industries="remodelers hvac" data-live="https://black-diamond-limo.webflow.io/" data-live-tab>
+      <article class="work-card" data-tags="web-design web-development" data-subs="landing-pages custom-web" data-industries="remodelers hvac" data-live="/live-preview?site=black-diamond-limo">
         <div class="work-card-media">
           <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-black-diamond-limo.webp" alt="Black Diamond Limo">
         </div>
@@ -1277,7 +1277,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design web-development seo" data-subs="corporate-sites custom-web local-seo" data-industries="remodelers handyman" data-live="https://www.refreshrenovations.com.au/" data-live-tab>
+      <article class="work-card" data-tags="web-design web-development seo" data-subs="corporate-sites custom-web local-seo" data-industries="remodelers handyman" data-live="/live-preview?site=refresh-renovations">
         <div class="work-card-media">
           <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-refresh-renovations.webp" alt="Refresh Renovations">
         </div>
@@ -1296,7 +1296,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="plumbing roofing" data-live="https://www.thevaloannerd.com/" data-live-tab>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="plumbing roofing" data-live="/live-preview?site=va-loan-nerd">
         <div class="work-card-media">
           <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-va-loan-nerd.webp" alt="The VA Loan Nerd">
         </div>
@@ -1350,7 +1350,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design digital-marketing social-media-advertising" data-subs="landing-pages strategy meta-ads" data-industries="plumbing roofing" data-live="https://www.bestiemedia.co/" data-live-tab>
+      <article class="work-card" data-tags="web-design digital-marketing social-media-advertising" data-subs="landing-pages strategy meta-ads" data-industries="plumbing roofing" data-live="/live-preview?site=bestie-media">
         <div class="work-card-media">
           <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-bestie-media.webp" alt="Bestie Media">
         </div>
