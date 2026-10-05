@@ -15,6 +15,7 @@ include __DIR__ . '/contact-section.php';
         <p class="footer-address">742 Innovation Drive, Suite 200<br>Austin, TX 78701, USA</p>
         -->
         <p class="footer-address">25140 Kingsland Blvd<br>Katy, Texas 77494, USA</p>
+        <p class="footer-address"><a href="mailto:info@wtflabsco.com">info@wtflabsco.com</a></p>
       </div>
       <!--
       <div>
