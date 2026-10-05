@@ -10065,31 +10065,31 @@ html[data-palette] .services-cta-band p {
 .puzzle-card:nth-child(2)::after {
   content: '';
   position: absolute;
-  top: calc(50% - 51px);
-  width: 68px;
-  height: 102px;
+  top: calc(50% - 74px);
+  width: 45.9px;
+  height: 148px;
   background: var(--pal-card, #FFFFFF);
 }
 .puzzle-card:nth-child(2)::before {
   right: calc(100% - 1px);
-  clip-path: path('M 68 37.4 C 57.8 37.4 51 39.1 52.7 44.2 C 56.1 32.3 45.9 22.1 30.6 22.1 C 15.3 22.1 3.4 35.7 3.4 51 C 3.4 66.3 15.3 79.9 30.6 79.9 C 45.9 79.9 56.1 69.7 52.7 57.8 C 51 62.9 57.8 64.6 68 64.6 Z');
+  clip-path: path('M 45.9 18.5 C 45.9 37 42.5 44.4 34 37 C 23.8 14.8 1.7 22.2 1.7 74 C 1.7 125.8 23.8 133.2 34 111 C 42.5 103.6 45.9 111 45.9 129.5 Z');
 }
 .puzzle-card:nth-child(2)::after {
   left: calc(100% - 1px);
-  clip-path: path('M 0 37.4 C 10.2 37.4 17 39.1 15.3 44.2 C 11.9 32.3 22.1 22.1 37.4 22.1 C 52.7 22.1 64.6 35.7 64.6 51 C 64.6 66.3 52.7 79.9 37.4 79.9 C 22.1 79.9 11.9 69.7 15.3 57.8 C 17 62.9 10.2 64.6 0 64.6 Z');
+  clip-path: path('M 0 18.5 C 0 37 3.4 44.4 11.9 37 C 22.1 14.8 44.2 22.2 44.2 74 C 44.2 125.8 22.1 133.2 11.9 111 C 3.4 103.6 0 111 0 129.5 Z');
 }
 .puzzle-card:first-child .puzzle-card-inner {
-  padding-right: 80px;
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-14 -14 68 130'%3E%3Cpath d='M 68 37.4 C 57.8 37.4 51 39.1 52.7 44.2 C 56.1 32.3 45.9 22.1 30.6 22.1 C 15.3 22.1 3.4 35.7 3.4 51 C 3.4 66.3 15.3 79.9 30.6 79.9 C 45.9 79.9 56.1 69.7 52.7 57.8 C 51 62.9 57.8 64.6 68 64.6 Z' stroke='black' stroke-width='28' stroke-linejoin='round'/%3E%3C/svg%3E") right center / 68px 130px no-repeat, linear-gradient(#000 0 0);
+  padding-right: 62px;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-14 -14 45.9 176'%3E%3Cpath d='M 45.9 18.5 C 45.9 37 42.5 44.4 34 37 C 23.8 14.8 1.7 22.2 1.7 74 C 1.7 125.8 23.8 133.2 34 111 C 42.5 103.6 45.9 111 45.9 129.5 Z' stroke='black' stroke-width='28' stroke-linejoin='round'/%3E%3C/svg%3E") right center / 45.9px 176px no-repeat, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-14 -14 68 130'%3E%3Cpath d='M 68 37.4 C 57.8 37.4 51 39.1 52.7 44.2 C 56.1 32.3 45.9 22.1 30.6 22.1 C 15.3 22.1 3.4 35.7 3.4 51 C 3.4 66.3 15.3 79.9 30.6 79.9 C 45.9 79.9 56.1 69.7 52.7 57.8 C 51 62.9 57.8 64.6 68 64.6 Z' stroke='black' stroke-width='28' stroke-linejoin='round'/%3E%3C/svg%3E") right center / 68px 130px no-repeat, linear-gradient(#000 0 0);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-14 -14 45.9 176'%3E%3Cpath d='M 45.9 18.5 C 45.9 37 42.5 44.4 34 37 C 23.8 14.8 1.7 22.2 1.7 74 C 1.7 125.8 23.8 133.2 34 111 C 42.5 103.6 45.9 111 45.9 129.5 Z' stroke='black' stroke-width='28' stroke-linejoin='round'/%3E%3C/svg%3E") right center / 45.9px 176px no-repeat, linear-gradient(#000 0 0);
   mask-composite: exclude;
 }
 .puzzle-card:last-child .puzzle-card-inner {
-  padding-left: 80px;
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='14 -14 68 130'%3E%3Cpath d='M 0 37.4 C 10.2 37.4 17 39.1 15.3 44.2 C 11.9 32.3 22.1 22.1 37.4 22.1 C 52.7 22.1 64.6 35.7 64.6 51 C 64.6 66.3 52.7 79.9 37.4 79.9 C 22.1 79.9 11.9 69.7 15.3 57.8 C 17 62.9 10.2 64.6 0 64.6 Z' stroke='black' stroke-width='28' stroke-linejoin='round'/%3E%3C/svg%3E") left center / 68px 130px no-repeat, linear-gradient(#000 0 0);
+  padding-left: 62px;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='14 -14 45.9 176'%3E%3Cpath d='M 0 18.5 C 0 37 3.4 44.4 11.9 37 C 22.1 14.8 44.2 22.2 44.2 74 C 44.2 125.8 22.1 133.2 11.9 111 C 3.4 103.6 0 111 0 129.5 Z' stroke='black' stroke-width='28' stroke-linejoin='round'/%3E%3C/svg%3E") left center / 45.9px 176px no-repeat, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='14 -14 68 130'%3E%3Cpath d='M 0 37.4 C 10.2 37.4 17 39.1 15.3 44.2 C 11.9 32.3 22.1 22.1 37.4 22.1 C 52.7 22.1 64.6 35.7 64.6 51 C 64.6 66.3 52.7 79.9 37.4 79.9 C 22.1 79.9 11.9 69.7 15.3 57.8 C 17 62.9 10.2 64.6 0 64.6 Z' stroke='black' stroke-width='28' stroke-linejoin='round'/%3E%3C/svg%3E") left center / 68px 130px no-repeat, linear-gradient(#000 0 0);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='14 -14 45.9 176'%3E%3Cpath d='M 0 18.5 C 0 37 3.4 44.4 11.9 37 C 22.1 14.8 44.2 22.2 44.2 74 C 44.2 125.8 22.1 133.2 11.9 111 C 3.4 103.6 0 111 0 129.5 Z' stroke='black' stroke-width='28' stroke-linejoin='round'/%3E%3C/svg%3E") left center / 45.9px 176px no-repeat, linear-gradient(#000 0 0);
   mask-composite: exclude;
 }
 .puzzle-card h3 {
@@ -10119,32 +10119,32 @@ html[data-palette] .services-cta-band p {
   .puzzle-card:nth-child(2)::after {
     top: auto;
     right: auto;
-    left: calc(50% - 51px);
-    width: 102px;
-    height: 68px;
+    left: calc(50% - 74px);
+    width: 148px;
+    height: 45.9px;
   }
   .puzzle-card:nth-child(2)::before {
     bottom: calc(100% - 1px);
-    clip-path: path('M 37.4 68 C 37.4 57.8 39.1 51 44.2 52.7 C 32.3 56.1 22.1 45.9 22.1 30.6 C 22.1 15.3 35.7 3.4 51 3.4 C 66.3 3.4 79.9 15.3 79.9 30.6 C 79.9 45.9 69.7 56.1 57.8 52.7 C 62.9 51 64.6 57.8 64.6 68 Z');
+    clip-path: path('M 18.5 45.9 C 37 45.9 44.4 42.5 37 34 C 14.8 23.8 22.2 1.7 74 1.7 C 125.8 1.7 133.2 23.8 111 34 C 103.6 42.5 111 45.9 129.5 45.9 Z');
   }
   .puzzle-card:nth-child(2)::after {
     top: calc(100% - 1px);
-    clip-path: path('M 37.4 0 C 37.4 10.2 39.1 17 44.2 15.3 C 32.3 11.9 22.1 22.1 22.1 37.4 C 22.1 52.7 35.7 64.6 51 64.6 C 66.3 64.6 79.9 52.7 79.9 37.4 C 79.9 22.1 69.7 11.9 57.8 15.3 C 62.9 17 64.6 10.2 64.6 0 Z');
+    clip-path: path('M 18.5 0 C 37 0 44.4 3.4 37 11.9 C 14.8 22.1 22.2 44.2 74 44.2 C 125.8 44.2 133.2 22.1 111 11.9 C 103.6 3.4 111 0 129.5 0 Z');
   }
   .puzzle-card:first-child .puzzle-card-inner {
     padding-right: 24px;
-    padding-bottom: 80px;
-    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-14 -14 130 68'%3E%3Cpath d='M 37.4 68 C 37.4 57.8 39.1 51 44.2 52.7 C 32.3 56.1 22.1 45.9 22.1 30.6 C 22.1 15.3 35.7 3.4 51 3.4 C 66.3 3.4 79.9 15.3 79.9 30.6 C 79.9 45.9 69.7 56.1 57.8 52.7 C 62.9 51 64.6 57.8 64.6 68 Z' stroke='black' stroke-width='28' stroke-linejoin='round'/%3E%3C/svg%3E") center bottom / 130px 68px no-repeat, linear-gradient(#000 0 0);
+    padding-bottom: 62px;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-14 -14 176 45.9'%3E%3Cpath d='M 18.5 45.9 C 37 45.9 44.4 42.5 37 34 C 14.8 23.8 22.2 1.7 74 1.7 C 125.8 1.7 133.2 23.8 111 34 C 103.6 42.5 111 45.9 129.5 45.9 Z' stroke='black' stroke-width='28' stroke-linejoin='round'/%3E%3C/svg%3E") center bottom / 176px 45.9px no-repeat, linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
-    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-14 -14 130 68'%3E%3Cpath d='M 37.4 68 C 37.4 57.8 39.1 51 44.2 52.7 C 32.3 56.1 22.1 45.9 22.1 30.6 C 22.1 15.3 35.7 3.4 51 3.4 C 66.3 3.4 79.9 15.3 79.9 30.6 C 79.9 45.9 69.7 56.1 57.8 52.7 C 62.9 51 64.6 57.8 64.6 68 Z' stroke='black' stroke-width='28' stroke-linejoin='round'/%3E%3C/svg%3E") center bottom / 130px 68px no-repeat, linear-gradient(#000 0 0);
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-14 -14 176 45.9'%3E%3Cpath d='M 18.5 45.9 C 37 45.9 44.4 42.5 37 34 C 14.8 23.8 22.2 1.7 74 1.7 C 125.8 1.7 133.2 23.8 111 34 C 103.6 42.5 111 45.9 129.5 45.9 Z' stroke='black' stroke-width='28' stroke-linejoin='round'/%3E%3C/svg%3E") center bottom / 176px 45.9px no-repeat, linear-gradient(#000 0 0);
     mask-composite: exclude;
   }
   .puzzle-card:last-child .puzzle-card-inner {
     padding-left: 24px;
-    padding-top: 80px;
-    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-14 14 130 68'%3E%3Cpath d='M 37.4 0 C 37.4 10.2 39.1 17 44.2 15.3 C 32.3 11.9 22.1 22.1 22.1 37.4 C 22.1 52.7 35.7 64.6 51 64.6 C 66.3 64.6 79.9 52.7 79.9 37.4 C 79.9 22.1 69.7 11.9 57.8 15.3 C 62.9 17 64.6 10.2 64.6 0 Z' stroke='black' stroke-width='28' stroke-linejoin='round'/%3E%3C/svg%3E") center top / 130px 68px no-repeat, linear-gradient(#000 0 0);
+    padding-top: 62px;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-14 14 176 45.9'%3E%3Cpath d='M 18.5 0 C 37 0 44.4 3.4 37 11.9 C 14.8 22.1 22.2 44.2 74 44.2 C 125.8 44.2 133.2 22.1 111 11.9 C 103.6 3.4 111 0 129.5 0 Z' stroke='black' stroke-width='28' stroke-linejoin='round'/%3E%3C/svg%3E") center top / 176px 45.9px no-repeat, linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
-    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-14 14 130 68'%3E%3Cpath d='M 37.4 0 C 37.4 10.2 39.1 17 44.2 15.3 C 32.3 11.9 22.1 22.1 22.1 37.4 C 22.1 52.7 35.7 64.6 51 64.6 C 66.3 64.6 79.9 52.7 79.9 37.4 C 79.9 22.1 69.7 11.9 57.8 15.3 C 62.9 17 64.6 10.2 64.6 0 Z' stroke='black' stroke-width='28' stroke-linejoin='round'/%3E%3C/svg%3E") center top / 130px 68px no-repeat, linear-gradient(#000 0 0);
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-14 14 176 45.9'%3E%3Cpath d='M 18.5 0 C 37 0 44.4 3.4 37 11.9 C 14.8 22.1 22.2 44.2 74 44.2 C 125.8 44.2 133.2 22.1 111 11.9 C 103.6 3.4 111 0 129.5 0 Z' stroke='black' stroke-width='28' stroke-linejoin='round'/%3E%3C/svg%3E") center top / 176px 45.9px no-repeat, linear-gradient(#000 0 0);
     mask-composite: exclude;
   }
 }
