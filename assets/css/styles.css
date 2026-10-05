@@ -10170,7 +10170,7 @@ html[data-palette] .services-cta-band p {
 #process.why-wtf-section .rail-head {
   max-width: 1000px;
 }
-.home-work-section .subheading ~ .section-desc {
+.svc-why-section ~ .home-work-section .subheading ~ .section-desc {
   max-width: 900px;
 }
 html[data-palette] .svc-why-section ~ .services-cta-section .services-cta-band {
