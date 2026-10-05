@@ -38,32 +38,58 @@ $finalUrl = $url;
 if (is_file($cacheFile) && time() - filemtime($cacheFile) < 900) {
   $html = (string)file_get_contents($cacheFile);
 } else {
-  $ch = curl_init($url);
-  curl_setopt_array($ch, [
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_FOLLOWLOCATION => true,
-    CURLOPT_MAXREDIRS => 5,
-    CURLOPT_CONNECTTIMEOUT => 4,
-    CURLOPT_TIMEOUT => 8,
-    CURLOPT_ENCODING => '',
-    CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36',
-    CURLOPT_HTTPHEADER => ['Accept: text/html,application/xhtml+xml', 'Accept-Language: en-US,en;q=0.9'],
-  ]);
-  $html = (string)curl_exec($ch);
-  if ($html === '' && in_array(curl_errno($ch), [35, 51, 58, 60, 77], true)) {
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-    $html = (string)curl_exec($ch);
+  $fetch = function (string $target, int $timeout): array {
+    $ch = curl_init($target);
+    curl_setopt_array($ch, [
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_FOLLOWLOCATION => true,
+      CURLOPT_MAXREDIRS => 5,
+      CURLOPT_CONNECTTIMEOUT => 4,
+      CURLOPT_TIMEOUT => $timeout,
+      CURLOPT_ENCODING => '',
+      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_2TLS,
+      CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+      CURLOPT_HTTPHEADER => [
+        'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+        'Accept-Language: en-US,en;q=0.9',
+        'Cache-Control: no-cache',
+        'Pragma: no-cache',
+        'Upgrade-Insecure-Requests: 1',
+        'Sec-Ch-Ua: "Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"',
+        'Sec-Ch-Ua-Mobile: ?0',
+        'Sec-Ch-Ua-Platform: "Windows"',
+        'Sec-Fetch-Dest: document',
+        'Sec-Fetch-Mode: navigate',
+        'Sec-Fetch-Site: none',
+        'Sec-Fetch-User: ?1',
+      ],
+    ]);
+    $body = (string)curl_exec($ch);
+    if ($body === '' && in_array(curl_errno($ch), [35, 51, 58, 60, 77], true)) {
+      curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+      curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+      $body = (string)curl_exec($ch);
+    }
+    $status = (int)curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
+    $final = (string)curl_getinfo($ch, CURLINFO_EFFECTIVE_URL);
+    $ok = $body !== '' && $status < 400 && stripos($body, 'cf-challenge') === false && stripos($body, 'challenge-platform') === false && stripos($body, '<title>Just a moment') === false;
+    return [$ok ? $body : '', $final];
+  };
+
+  [$html, $finalUrl] = $fetch($url, 7);
+  if ($html === '') {
+    [$html] = $fetch('https://web.archive.org/web/2id_/' . $url, 12);
+    $finalUrl = $url;
+    if ($html !== '') {
+      $html = preg_replace('#https?://web.archive.org/web/d+(?:[a-z]{2}_)?/#i', '', $html);
+    }
   }
-  $finalUrl = (string)curl_getinfo($ch, CURLINFO_EFFECTIVE_URL) ?: $url;
-  $status = (int)curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
-  $errno = curl_errno($ch);
-  if ($html === '' || $status >= 400) {
-    header('X-Preview-Status: ' . $status . '/' . $errno);
-    header('Content-Type: text/html; charset=UTF-8');
-    header('Cache-Control: no-store');
-    echo '<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>html,body{margin:0;background:#10231B}img{display:block;width:100%;height:auto}</style></head><body><img src="/assets/images/work-live-' . htmlspecialchars($slug, ENT_QUOTES) . '.webp" alt=""></body></html>';
+  if ($html === '') {
+    http_response_code(502);
     exit;
+  }
+  if ($finalUrl === '' || str_contains($finalUrl, 'web.archive.org')) {
+    $finalUrl = $url;
   }
   $finalHost = (string)parse_url($finalUrl, PHP_URL_HOST);
   $base = 'https://' . $finalHost . '/';
