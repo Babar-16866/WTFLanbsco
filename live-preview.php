@@ -70,6 +70,8 @@ if (is_file($cacheFile) && time() - filemtime($cacheFile) < 900) {
   $html = preg_replace('/<meta[^>]+http-equiv=["\']?(content-security-policy|x-frame-options)["\']?[^>]*>/i', '', $html);
   $html = preg_replace('/<base\b[^>]*>/i', '', $html);
   $inject = '<base href="' . htmlspecialchars($base, ENT_QUOTES) . '">'
+    . '<style>div.needsclick[class*="kl-private-reset-css"][role="dialog"],div.needsclick[class*="kl-private-reset-css"][aria-modal]{display:none!important}</style>'
+    . '<script>new MutationObserver(function(){document.querySelectorAll("div.needsclick[class*=kl-private-reset-css]").forEach(function(e){var c=getComputedStyle(e);if(c.position==="fixed"&&e.offsetWidth>=innerWidth*0.9)e.style.setProperty("display","none","important")})}).observe(document.documentElement,{childList:true,subtree:true});</script>'
     . '<script>(function(){var s=' . json_encode($slug) . ',h=' . json_encode($finalHost) . ';'
     . 'document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a||a.target==="_blank")return;'
     . 'var u;try{u=new URL(a.getAttribute("href"),document.baseURI)}catch(x){return}'
