@@ -10182,3 +10182,149 @@ html[data-palette] .svc-why-section ~ .services-cta-section .services-cta-band {
   background-blend-mode: multiply, normal;
   border-color: color-mix(in srgb, var(--pal-glow) 14%, transparent);
 }
+
+/* ===== FORM STEPS ===== */
+.contact-form-wrap {
+  min-width: 0;
+}
+.form-steps {
+  display: flex;
+  align-items: flex-start;
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 0 12px;
+}
+.form-step-dot {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+  width: 72px;
+}
+.form-step-num {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--text-muted);
+  background: var(--pal-card, #FFFFFF);
+  border: 2px dotted color-mix(in srgb, var(--pal-gold, #C39B62) 70%, transparent);
+  transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+}
+.form-step-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color 0.35s ease;
+}
+.form-step-dot.is-active .form-step-num {
+  color: var(--pal-dark, #10231B);
+  background: var(--pal-gold, #C39B62);
+  border: 2px solid var(--pal-gold, #C39B62);
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--pal-gold, #C39B62) 22%, transparent), 0 10px 22px color-mix(in srgb, var(--pal-gold, #C39B62) 35%, transparent);
+  transform: scale(1.06);
+}
+.form-step-dot.is-done .form-step-num {
+  color: var(--pal-light, #FBF7EC);
+  background: var(--pal-primary, #1E4233);
+  border: 2px solid var(--pal-primary, #1E4233);
+}
+.form-step-dot.is-active .form-step-label,
+.form-step-dot.is-done .form-step-label {
+  color: var(--text);
+}
+.form-step-line {
+  position: relative;
+  flex: 1 1 auto;
+  height: 4px;
+  margin: 17px -14px 0;
+  background-image: radial-gradient(circle, color-mix(in srgb, var(--pal-gold, #C39B62) 55%, transparent) 1.6px, transparent 2px);
+  background-size: 10px 4px;
+  background-repeat: repeat-x;
+  background-position: center;
+}
+.form-step-line span {
+  position: absolute;
+  inset: 0;
+  width: 0;
+  background-image: radial-gradient(circle, var(--pal-primary, #1E4233) 2px, transparent 2.4px);
+  background-size: 10px 4px;
+  background-repeat: repeat-x;
+  background-position: left center;
+  transition: width 0.5s ease;
+}
+.form-step-line.is-done span {
+  width: 100%;
+}
+.form-step {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: form-step-in 0.4s ease;
+}
+.form-step[hidden] {
+  display: none;
+}
+@keyframes form-step-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+.form-step-actions {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  margin-top: 4px;
+}
+.form-step-actions .btn {
+  flex: 1;
+}
+.form-step-back {
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 1.5px solid color-mix(in srgb, var(--pal-dark, #10231B) 22%, transparent);
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+.form-step-back:hover {
+  border-color: var(--pal-gold, #C39B62);
+  background: color-mix(in srgb, var(--pal-gold, #C39B62) 12%, transparent);
+}
+.wtf-select-trigger.is-invalid {
+  border-color: #C0392B;
+}
+@media (max-width: 640px) {
+  .form-steps { padding: 0 4px; }
+  .form-step-dot { width: 60px; }
+  .form-step-num { width: 34px; height: 34px; font-size: 13px; }
+  .form-step-line { margin-top: 15px; }
+  .form-step-label { font-size: 11px; }
+}
+:root[data-theme="dark"] .form-step-dot:not(.is-active, .is-done) .form-step-num {
+  background: transparent;
+  color: var(--text-muted);
+}
+:root[data-theme="dark"] .form-step-dot.is-done .form-step-num {
+  color: var(--pal-dark, #10231B);
+  background: var(--pal-light, #FBF7EC);
+  border-color: var(--pal-light, #FBF7EC);
+}
+:root[data-theme="dark"] .form-step-line span {
+  background-image: radial-gradient(circle, var(--pal-light, #FBF7EC) 2px, transparent 2.4px);
+}
+:root[data-theme="dark"] .form-step-back {
+  border-color: color-mix(in srgb, var(--pal-light, #FBF7EC) 30%, transparent);
+}
