@@ -44,7 +44,7 @@ include __DIR__ . '/contact-section.php';
         <a href="/about.php">About</a>
         <a href="/works.php">Work</a>
         <a href="/how-we-work.php">How We Work</a>
-        <a href="/#testimonials">Reviews</a>
+        <!-- <a href="/#testimonials">Reviews</a> -->
         <a href="/contact.php">Contact</a>
         <a href="/faqs.php">FAQs</a>
       </div>
