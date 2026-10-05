@@ -10263,6 +10263,7 @@ html[data-palette] .svc-why-section ~ .services-cta-section .services-cta-band {
 .form-step-line.is-done span {
   width: 100%;
 }
+/*
 .form-step {
   display: flex;
   flex-direction: column;
@@ -10306,6 +10307,7 @@ html[data-palette] .svc-why-section ~ .services-cta-section .services-cta-band {
 .wtf-select-trigger.is-invalid {
   border-color: #C0392B;
 }
+*/
 @media (max-width: 640px) {
   .form-steps { padding: 0 4px; }
   .form-step-dot { width: 60px; }
@@ -10325,6 +10327,8 @@ html[data-palette] .svc-why-section ~ .services-cta-section .services-cta-band {
 :root[data-theme="dark"] .form-step-line span {
   background-image: radial-gradient(circle, var(--pal-light, #FBF7EC) 2px, transparent 2.4px);
 }
+/*
 :root[data-theme="dark"] .form-step-back {
   border-color: color-mix(in srgb, var(--pal-light, #FBF7EC) 30%, transparent);
 }
+*/

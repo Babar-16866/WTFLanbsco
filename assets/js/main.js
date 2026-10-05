@@ -1738,14 +1738,17 @@ window.addEventListener('load', () => {
 // Form steps
 (function initFormSteps() {
   document.querySelectorAll('form[data-steps]').forEach((form) => {
-    const steps = Array.from(form.querySelectorAll('.form-step'));
+    const total = Number(form.dataset.steps) || 3;
+    const btn = form.querySelector('[data-step-button]');
     const wrap = form.closest('.contact-form-wrap');
     const dots = wrap ? Array.from(wrap.querySelectorAll('[data-step-dot]')) : [];
     const lines = wrap ? Array.from(wrap.querySelectorAll('.form-step-line')) : [];
     const stepInput = form.querySelector('input[name="step"]');
     const leadInput = form.querySelector('input[name="lead_id"]');
+    const required = ['name', 'email', 'phone'].map((n) => form.elements[n]).filter(Boolean);
     const sent = {};
     let current = 1;
+    if (!btn) return;
 
     if (leadInput && !leadInput.value) {
       leadInput.value = Date.now().toString(36).toUpperCase() + '-' + Math.random().toString(36).slice(2, 6).toUpperCase();
@@ -1753,9 +1756,10 @@ window.addEventListener('load', () => {
 
     function show(n) {
       current = n;
-      steps.forEach((step) => {
-        step.hidden = Number(step.dataset.step) !== n;
-      });
+      const last = n === total;
+      btn.type = last ? 'submit' : 'button';
+      btn.textContent = last ? 'Submit' : 'Next';
+      if (stepInput) stepInput.value = String(n);
       dots.forEach((dot) => {
         const i = Number(dot.dataset.stepDot);
         dot.classList.toggle('is-active', i === n);
@@ -1764,25 +1768,6 @@ window.addEventListener('load', () => {
         else dot.removeAttribute('aria-current');
       });
       lines.forEach((line, i) => line.classList.toggle('is-done', i + 1 < n));
-    }
-
-    function valid(step) {
-      const fields = Array.from(step.querySelectorAll('input, select, textarea'));
-      for (const field of fields) {
-        if (!field.checkValidity()) {
-          if (field.tagName === 'SELECT') {
-            const trigger = field.closest('.wtf-select')?.querySelector('.wtf-select-trigger');
-            if (trigger) {
-              trigger.focus();
-              trigger.classList.add('is-invalid');
-              setTimeout(() => trigger.classList.remove('is-invalid'), 1600);
-            }
-          }
-          field.reportValidity();
-          return false;
-        }
-      }
-      return true;
     }
 
     function sendStep(n) {
@@ -1797,29 +1782,17 @@ window.addEventListener('load', () => {
       });
     }
 
-    form.querySelectorAll('[data-step-next]').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const step = btn.closest('.form-step');
-        if (!valid(step)) return;
-        sendStep(current);
-        show(current + 1);
-        steps[current - 1].querySelector('input:not([type="radio"]), select, textarea')?.focus({ preventScroll: true });
-      });
-    });
-
-    form.querySelectorAll('[data-step-back]').forEach((btn) => {
-      btn.addEventListener('click', () => show(current - 1));
-    });
-
-    form.addEventListener('keydown', (e) => {
-      if (e.key !== 'Enter' || e.target.tagName === 'TEXTAREA' || current === steps.length) return;
-      if (e.target.closest('.wtf-select')) return;
+    btn.addEventListener('click', (e) => {
+      if (current === total) return;
       e.preventDefault();
-      steps[current - 1].querySelector('[data-step-next]')?.click();
-    });
-
-    form.addEventListener('submit', () => {
-      if (stepInput) stepInput.value = String(steps.length);
+      for (const field of required) {
+        if (!field.checkValidity()) {
+          field.reportValidity();
+          return;
+        }
+      }
+      sendStep(current);
+      show(current + 1);
     });
 
     show(1);
