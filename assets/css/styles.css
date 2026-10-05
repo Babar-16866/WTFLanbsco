@@ -10335,3 +10335,33 @@ html[data-palette] .svc-why-section ~ .services-cta-section .services-cta-band {
 .site-footer .footer-address a {
   color: inherit;
 }
+
+/* ===== MOBILE FIXES ===== */
+@media (max-width: 768px) {
+  .excel-card-media--mockup {
+    margin-bottom: 0;
+    -webkit-clip-path: inset(0 round 0 0 28px 28px);
+    clip-path: inset(0 round 0 0 28px 28px);
+  }
+  .rail-cta .btn {
+    white-space: nowrap;
+    padding-left: 16px;
+    padding-right: 16px;
+    letter-spacing: 0.03em;
+    font-size: clamp(10px, 3.2vw, 14px);
+  }
+  .thank-visual {
+    padding-right: 38px;
+    padding-bottom: 4px;
+  }
+  .thank-check {
+    right: 0;
+    bottom: 0;
+    width: 34px;
+    height: 34px;
+  }
+  .thank-check svg {
+    width: 22px;
+    height: 22px;
+  }
+}

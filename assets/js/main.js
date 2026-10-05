@@ -150,6 +150,14 @@ document.querySelectorAll('.faq-list').forEach((list) => {
   items.forEach((item) => {
     item.querySelector('.faq-trigger')?.addEventListener('click', () => {
       const isOpen = item.classList.contains('is-open');
+      const anchor = item.querySelector('.faq-trigger');
+      const anchorTop = anchor.getBoundingClientRect().top;
+      const holdUntil = performance.now() + 650;
+      (function hold() {
+        const shift = anchor.getBoundingClientRect().top - anchorTop;
+        if (Math.abs(shift) > 0.5) window.scrollTo({ top: window.scrollY + shift, behavior: 'instant' });
+        if (performance.now() < holdUntil) requestAnimationFrame(hold);
+      })();
       items.forEach((other) => {
         const trigger = other.querySelector('.faq-trigger');
         other.classList.toggle('is-open', false);
@@ -352,8 +360,9 @@ if (excelTrack) {
       apply();
     });
 
+    const hoverPointer = window.matchMedia('(hover: hover) and (pointer: fine)');
     row.addEventListener('mouseenter', () => {
-      paused = true;
+      if (hoverPointer.matches) paused = true;
     });
     row.addEventListener('mouseleave', () => {
       if (!dragging) paused = false;
@@ -389,7 +398,7 @@ if (excelTrack) {
       pointerId = null;
       row.classList.remove('is-dragging');
       track.classList.remove('is-dragging');
-      if (!row.matches(':hover')) paused = false;
+      if (e.pointerType !== 'mouse' || !hoverPointer.matches || !row.matches(':hover')) paused = false;
     }
 
     track.addEventListener('pointerup', endDrag);
@@ -1204,6 +1213,22 @@ window.addEventListener('load', () => {
       el.textContent = words[0];
       return;
     }
+    const heading = el.closest('h1, h2, h3') || el.parentElement;
+    function reserve() {
+      const current = el.textContent;
+      heading.style.minHeight = '';
+      let tallest = 0;
+      words.forEach((word) => {
+        el.textContent = word;
+        tallest = Math.max(tallest, heading.offsetHeight);
+      });
+      el.textContent = current;
+      heading.style.minHeight = tallest + 'px';
+    }
+    reserve();
+    window.addEventListener('resize', reserve);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(reserve);
+
     let wordIndex = 0;
     let charIndex = 0;
     let deleting = false;
