@@ -10167,3 +10167,18 @@ html[data-palette] .services-cta-band p {
 .svc-why-section .problem-head .section-desc {
   max-width: 780px;
 }
+#process.why-wtf-section .rail-head {
+  max-width: 1000px;
+}
+.home-work-section .subheading ~ .section-desc {
+  max-width: 900px;
+}
+html[data-palette] .svc-why-section ~ .services-cta-section .services-cta-band {
+  background-color: var(--pal-primary);
+  background-image: var(--pal-texture-image), linear-gradient(150deg, var(--pal-primary-2) 0%, var(--pal-primary) 45%, var(--pal-dark) 100%);
+  background-size: cover, auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply, normal;
+  border-color: color-mix(in srgb, var(--pal-glow) 14%, transparent);
+}

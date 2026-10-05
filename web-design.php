@@ -441,7 +441,7 @@ include __DIR__ . '/includes/testimonialslider.php';
   <div class="container">
     <div class="services-cta-band reveal">
       <div>
-        <h3>Don’t let your website undersell the quality of your work.</h3>
+        <h3>Don’t let your website undersell<br>the quality of your work.</h3>
       </div>
       <a href="/contact.php" class="btn btn-lime btn-lg">Claim Your FREE Website Consultation</a>
     </div>
