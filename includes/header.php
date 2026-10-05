@@ -60,12 +60,12 @@ require_once __DIR__ . '/config.php';
             <a href="/google-ads.php">Google Ads</a>
             <a href="/digital-marketing.php">Digital Marketing</a>
             -->
-            <a href="/services.php#web-design">Web Design &amp; Development</a>
-            <a href="/services.php#seo">SEO &amp; Local Search</a>
-            <a href="/services.php#google-ads">Google Ads</a>
-            <a href="/services.php#social-media-advertising">Social Media Advertising</a>
-            <a href="/services.php#graphic-design">Branding &amp; Creative</a>
-            <a href="/services.php#digital-marketing">Full-Service Digital Marketing</a>
+            <a href="/web-design.php">Web Design &amp; Development</a>
+            <a href="/seo.php">SEO &amp; Local Search</a>
+            <a href="/google-ads.php">Google Ads</a>
+            <a href="/social-media-advertising.php">Social Media Advertising</a>
+            <a href="/graphic-design.php">Branding &amp; Creative</a>
+            <a href="/digital-marketing.php">Full-Service Digital Marketing</a>
           </div>
         </li>
         <li class="nav-dropdown">
