@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+ini_set('display_errors', '0');
+
 $sites = [
   'digital-scribblers' => 'https://digitalscribblers.com/',
   'minaa-b' => 'https://www.minaab.com/',
@@ -41,22 +43,26 @@ if (is_file($cacheFile) && time() - filemtime($cacheFile) < 900) {
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_MAXREDIRS => 5,
-    CURLOPT_CONNECTTIMEOUT => 6,
-    CURLOPT_TIMEOUT => 15,
+    CURLOPT_CONNECTTIMEOUT => 4,
+    CURLOPT_TIMEOUT => 8,
     CURLOPT_ENCODING => '',
     CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36',
     CURLOPT_HTTPHEADER => ['Accept: text/html,application/xhtml+xml', 'Accept-Language: en-US,en;q=0.9'],
   ]);
   $html = (string)curl_exec($ch);
-  if ($html === '' && in_array(curl_errno($ch), [51, 60], true)) {
+  if ($html === '' && in_array(curl_errno($ch), [35, 51, 58, 60, 77], true)) {
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
     $html = (string)curl_exec($ch);
   }
   $finalUrl = (string)curl_getinfo($ch, CURLINFO_EFFECTIVE_URL) ?: $url;
   $status = (int)curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
-  curl_close($ch);
+  $errno = curl_errno($ch);
   if ($html === '' || $status >= 400) {
-    http_response_code(502);
+    header('X-Preview-Status: ' . $status . '/' . $errno);
+    header('Content-Type: text/html; charset=UTF-8');
+    header('Cache-Control: no-store');
+    echo '<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>html,body{margin:0;background:#10231B}img{display:block;width:100%;height:auto}</style></head><body><img src="/assets/images/work-live-' . htmlspecialchars($slug, ENT_QUOTES) . '.webp" alt=""></body></html>';
     exit;
   }
   $finalHost = (string)parse_url($finalUrl, PHP_URL_HOST);
