@@ -10161,3 +10161,9 @@ html[data-palette] .services-cta-band p {
 .svc-why-section .why-done-card {
   min-height: 210px;
 }
+.svc-why-section .problem-head {
+  max-width: 1080px;
+}
+.svc-why-section .problem-head .section-desc {
+  max-width: 780px;
+}
