@@ -10335,32 +10335,3 @@ html[data-palette] .svc-why-section ~ .services-cta-section .services-cta-band {
 .site-footer .footer-address a {
   color: inherit;
 }
-
-/* ===== INDUSTRY NAV LOOK ===== */
-.home-filter-stack[data-industry-nav] {
-  padding: 44px 40px;
-  border-radius: var(--radius);
-  background-color: var(--pal-primary, #1E4233);
-  background-image: var(--pal-texture-image, none), linear-gradient(150deg, var(--pal-primary-2, #24503E) 0%, var(--pal-primary, #1E4233) 45%, var(--pal-dark, #10231B) 100%);
-  background-size: cover, auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: multiply, normal;
-  color: var(--pal-light, #FBF7EC);
-}
-.page-section .home-filter-stack[data-industry-nav] .home-filter-label {
-  color: var(--pal-light, #FBF7EC);
-}
-.home-filter-stack[data-industry-nav] .works-subfilter {
-  color: color-mix(in srgb, var(--pal-light, #FBF7EC) 75%, transparent);
-  border-color: color-mix(in srgb, var(--pal-light, #FBF7EC) 20%, transparent);
-}
-.home-filter-stack[data-industry-nav] .works-subfilter:hover {
-  color: var(--pal-light, #FBF7EC);
-}
-.home-filter-stack[data-industry-nav] .works-subfilter.is-active {
-  color: var(--dark);
-}
-@media (max-width: 640px) {
-  .home-filter-stack[data-industry-nav] { padding: 28px 16px; }
-}
