@@ -1336,11 +1336,60 @@ window.addEventListener('load', () => {
   const live = document.getElementById('liveModal');
   const liveFrame = document.getElementById('liveModalFrame');
 
+  const warmed = new Set();
+  let warmTimer = 0;
+  let liveLoaded = false;
+  let revealTimer = 0;
+
+  function markLoaded() {
+    clearTimeout(revealTimer);
+    if (!liveFrame.dataset.url) return;
+    liveLoaded = true;
+    live.classList.add('is-loaded');
+  }
+
+  function loadLive(url) {
+    if (liveFrame.dataset.url === url) return;
+    liveLoaded = false;
+    live.classList.remove('is-loaded');
+    liveFrame.dataset.url = url;
+    liveFrame.src = url;
+    clearTimeout(revealTimer);
+    revealTimer = setTimeout(markLoaded, 1200);
+  }
+
+  function warmLive(card) {
+    if (!live || !liveFrame || !live.hidden) return;
+    const url = card.getAttribute('data-live');
+    let origin = '';
+    try { origin = new URL(url).origin; } catch (e) { return; }
+    if (!warmed.has(origin)) {
+      warmed.add(origin);
+      const link = document.createElement('link');
+      link.rel = 'preconnect';
+      link.href = origin;
+      document.head.appendChild(link);
+    }
+    loadLive(url);
+  }
+
+  grid.addEventListener('pointerover', (e) => {
+    const card = e.target.closest('.work-card[data-live]:not([data-live-tab])');
+    if (!card) return;
+    clearTimeout(warmTimer);
+    warmTimer = setTimeout(() => warmLive(card), e.pointerType === 'mouse' ? 120 : 0);
+  });
+  grid.addEventListener('focusin', (e) => {
+    const card = e.target.closest('.work-card[data-live]:not([data-live-tab])');
+    if (card) warmLive(card);
+  });
+
   function openLive(card) {
     if (!live || !liveFrame) return;
     lastFocus = card;
-    live.classList.remove('is-loaded');
-    liveFrame.src = card.getAttribute('data-live');
+    clearTimeout(warmTimer);
+    loadLive(card.getAttribute('data-live'));
+    live.classList.toggle('is-loaded', liveLoaded);
     live.hidden = false;
     document.body.classList.add('work-modal-open');
     live.querySelector('.live-modal-close')?.focus();
@@ -1349,18 +1398,19 @@ window.addEventListener('load', () => {
   function closeLive() {
     if (!live || live.hidden) return;
     live.hidden = true;
+    clearTimeout(revealTimer);
+    liveFrame.dataset.url = '';
     liveFrame.src = 'about:blank';
     document.body.classList.remove('work-modal-open');
     lastFocus?.focus();
   }
 
-  liveFrame?.addEventListener('load', () => {
-    if (liveFrame.src !== 'about:blank') live.classList.add('is-loaded');
-  });
+  liveFrame?.addEventListener('load', markLoaded);
   live?.querySelectorAll('[data-live-close]').forEach((el) => el.addEventListener('click', closeLive));
 
   function openCard(card) {
-    if (card.hasAttribute('data-live')) openLive(card);
+    if (card.hasAttribute('data-live-tab')) window.open(card.getAttribute('data-live'), '_blank', 'noopener');
+    else if (card.hasAttribute('data-live')) openLive(card);
     else openModal(card);
   }
 
