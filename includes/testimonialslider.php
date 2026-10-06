@@ -35,11 +35,24 @@ $street_desc = $street_desc ?? '';
         <article class="street-card street-card--photo street-card--video street-card--tall" data-video="<?= BASE ?>/assets/videos/testimonial-demo.mp4">
           <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo-preview.mp4" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/testimonial-demo-poster.jpg" tabindex="-1" aria-hidden="true"></video>
         -->
+        <!--
         <article class="street-card street-card--photo street-card--video street-card--tall" data-video="<?= BASE ?>/assets/videos/wtf.mp4">
           <video class="street-video" src="<?= BASE ?>/assets/videos/wtf-preview.mp4" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/wtf-poster.jpg" tabindex="-1" aria-hidden="true"></video>
           <div class="street-photo-overlay">
             <span class="street-logo">kernel</span>
             <p>We've worked with them for many projects now and <strong>am always blown away</strong>.</p>
+          </div>
+        </article>
+        -->
+        <article class="street-card street-card--quote street-card--md">
+          <span class="street-badge">kernel</span>
+          <p>We've worked with them for many projects now and <strong>am always blown away</strong>.</p>
+          <div class="street-meta">
+            <img loading="lazy" class="street-avatar" src="<?= BASE ?>/assets/images/team-1.jpg" alt="">
+            <div class="street-meta-text">
+              <strong>Kernel Team</strong>
+              <span class="street-stars" aria-label="5 stars">★★★★★</span>
+            </div>
           </div>
         </article>
         <article class="street-card street-card--quote street-card--md">
@@ -81,11 +94,24 @@ $street_desc = $street_desc ?? '';
         <article class="street-card street-card--photo street-card--video street-card--tall" data-video="<?= BASE ?>/assets/videos/testimonial-demo.mp4">
           <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo-preview.mp4" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/testimonial-demo-poster.jpg" tabindex="-1" aria-hidden="true"></video>
         -->
+        <!--
         <article class="street-card street-card--photo street-card--video street-card--tall" data-video="<?= BASE ?>/assets/videos/wtf.mp4">
           <video class="street-video" src="<?= BASE ?>/assets/videos/wtf-preview.mp4" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/wtf-poster.jpg" tabindex="-1" aria-hidden="true"></video>
           <div class="street-photo-overlay">
             <span class="street-logo">ROOT</span>
             <p>Everyone that sees the UI says that is the <strong>best looking UI</strong> I've ever seen.</p>
+          </div>
+        </article>
+        -->
+        <article class="street-card street-card--quote street-card--md">
+          <span class="street-badge">ROOT</span>
+          <p>Everyone that sees the UI says that is the <strong>best looking UI</strong> I've ever seen.</p>
+          <div class="street-meta">
+            <img loading="lazy" class="street-avatar" src="<?= BASE ?>/assets/images/team-3.jpg" alt="">
+            <div class="street-meta-text">
+              <strong>Root Team</strong>
+              <span class="street-stars" aria-label="5 stars">★★★★★</span>
+            </div>
           </div>
         </article>
         <article class="street-card street-card--quote street-card--md">
