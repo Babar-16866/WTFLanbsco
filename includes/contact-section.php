@@ -31,6 +31,7 @@ if (!empty($hide_contact_section)) {
           <li class="form-step-line" aria-hidden="true"><span></span></li>
           <li class="form-step-dot" data-step-dot="3"><span class="form-step-num">3</span><span class="form-step-label">Details</span></li>
         </ol>
+        <?php /*
         <form class="contact-form contact-form--home" id="contactForm" action="/send-mail.php" method="post" data-steps="3">
           <input type="text" name="website" value="" tabindex="-1" autocomplete="off" class="hp-field" aria-hidden="true">
           <input type="hidden" name="source" value="home-contact">
@@ -66,6 +67,77 @@ if (!empty($hide_contact_section)) {
           <label class="check"><input type="checkbox" name="updates"> Send me occasional updates from WTF Labs.</label>
           <label class="check"><input type="checkbox" name="terms" required> I agree to the Privacy Policy and Terms of use.</label>
           <button type="submit" class="btn btn-lime btn-lg btn-block" data-step-button>Submit</button>
+          <p class="form-ok hidden" id="formOk">Thank you! Your submission has been received!</p>
+        </form>
+        */ ?>
+        <form class="contact-form contact-form--home" id="contactForm" action="/send-mail.php" method="post" data-steps="3" novalidate>
+          <input type="text" name="website" value="" tabindex="-1" autocomplete="off" class="hp-field" aria-hidden="true">
+          <input type="hidden" name="source" value="home-contact">
+          <input type="hidden" name="step" value="1">
+          <input type="hidden" name="lead_id" value="">
+          <div class="form-step" data-step="1">
+            <p class="form-step-title">What industry do you operate in?</p>
+            <div class="field"><label>Full name</label><input type="text" name="name" required autocomplete="name" placeholder="Jane Doe"></div>
+            <div class="contact-form-row">
+              <div class="field"><label>Phone</label><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+1 (555) 000-1234"></div>
+              <div class="field"><label>Email</label><input type="email" name="email" required autocomplete="email" placeholder="jane@company.com"></div>
+            </div>
+            <button type="button" class="btn btn-lime btn-lg btn-block" data-step-next>Next</button>
+          </div>
+          <div class="form-step" data-step="2" hidden>
+            <p class="form-step-title">Which service are you interested in?</p>
+            <div class="contact-form-row">
+              <div class="field"><label>Industry</label>
+                <select name="industry" required data-other-select>
+                  <option value="" disabled selected>Select your industry</option>
+                <option>Remodelers</option>
+                <option>Roofing</option>
+                <option>Handyman</option>
+                <option>Power Washing</option>
+                <option>HVAC</option>
+                <option>Plumbing</option>
+                <option>Pest Control</option>
+                <option>Pool Services</option>
+                <option>Landscaping</option>
+                <option>Other</option>
+                </select>
+              </div>
+              <div class="field"><label>Which service are you interested in?</label>
+                <select name="help" required>
+                  <option value="" disabled selected>Select a service</option>
+                <option>Web Design &amp; Development</option>
+                <option>SEO &amp; Local Search</option>
+                <option>Google Ads</option>
+                <option>Social Media Advertising</option>
+                <option>Branding &amp; Creative</option>
+                <option>Full-Service Digital Marketing</option>
+                </select>
+              </div>
+            </div>
+            <div class="field form-other-field" hidden><label>Your industry</label><input type="text" name="industry_other" placeholder="Type your industry"></div>
+            <div class="contact-form-row">
+              <div class="field"><label>Budget</label>
+                <select name="budget" required>
+                  <option value="" disabled selected>Select a budget</option>
+                <option>10k-20k</option>
+                <option>20k-50k</option>
+                <option>50k-100k</option>
+                <option>100k+</option>
+                </select>
+              </div>
+              <div class="field"><label>How did you hear about us?</label><input type="text" name="heard_about" placeholder="Google, referral, social media..."></div>
+            </div>
+            <button type="button" class="btn btn-lime btn-lg btn-block" data-step-next>Next</button>
+          </div>
+          <div class="form-step" data-step="3" hidden>
+            <p class="form-step-title">How much are you willing to invest for this goal?</p>
+            <p class="form-commit-label">Are you committed?</p>
+            <div class="form-commit">
+              <button type="submit" class="btn btn-lime btn-lg" name="commitment" value="100% committed">100% Committed</button>
+              <button type="button" class="btn btn-lg form-commit-runaway" tabindex="-1" aria-hidden="true">50%</button>
+              <button type="submit" class="btn btn-lg form-commit-alt" name="commitment" value="Not committed">Not Committed</button>
+            </div>
+          </div>
           <p class="form-ok hidden" id="formOk">Thank you! Your submission has been received!</p>
         </form>
       </div>

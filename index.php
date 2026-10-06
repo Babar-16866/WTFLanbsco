@@ -20,7 +20,7 @@ include __DIR__ . '/includes/header.php';
         </h1>
         -->
         <h1 class="hero-heading" aria-label="Your work deserves better Branding. Websites. Marketing. Leads. Sales. Projects.">
-          <span aria-hidden="true">Your work deserves better</span><br>
+          <span aria-hidden="true">Your work deserves better</span> <br class="hero-heading-br">
           <span class="accent-lime typewriter" data-typewriter="Branding.|Websites.|Marketing.|Leads.|Sales.|Projects." aria-hidden="true"></span>
         </h1>
       </header>
@@ -328,14 +328,14 @@ include __DIR__ . '/includes/header.php';
           <p class="brand-card-points">Project proof · Before/after storytelling · Premium positioning · Reviews · Clear process · Better-fit inquiries</p>
         </div>
         <div class="brand-card-fan">
-          <img loading="lazy" class="fan-shot fan-shot-1" src="/assets/images/industry-roofing-1.webp" alt="">
-          <img loading="lazy" class="fan-shot fan-shot-2" src="/assets/images/industry-handyman-1.webp" alt="">
-          <img loading="lazy" class="fan-shot fan-shot-3" src="/assets/images/industry-remodelers-1.webp" alt="">
-          <img loading="lazy" class="fan-shot fan-shot-4" src="/assets/images/industry-power-washing-1.webp" alt="">
-          <img loading="lazy" class="fan-shot fan-shot-5" src="/assets/images/industry-remodelers-3.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-1" src="/assets/images/card1.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-2" src="/assets/images/card1_01.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-3" src="/assets/images/card1_03.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-4" src="/assets/images/card1_02.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-5" src="/assets/images/card1_04.webp" alt="">
         </div>
         <div class="brand-card-cta">
-          <span class="btn btn-lime btn-sm">Explore High-Ticket Industries</span>
+          <span class="btn btn-lime btn-sm">Explore More</span>
         </div>
       </a>
 
@@ -356,7 +356,7 @@ include __DIR__ . '/includes/header.php';
           <img loading="lazy" class="fan-shot fan-shot-5" src="/assets/images/industry-hvac-4.webp" alt="">
         </div>
         <div class="brand-card-cta">
-          <span class="btn btn-lime btn-sm">Explore Rapid-Response Industries</span>
+          <span class="btn btn-lime btn-sm">Explore More</span>
         </div>
       </a>
 
@@ -378,31 +378,30 @@ include __DIR__ . '/includes/header.php';
           <img loading="lazy" class="fan-shot fan-shot-5" src="/assets/images/industry-landscaping-3.webp" alt="">
         </div>
         <div class="brand-card-cta">
-          <span class="btn btn-lime btn-sm">Explore Recurring-Service Industries</span>
+          <span class="btn btn-lime btn-sm">Explore More</span>
         </div>
       </a>
 
-      <a href="/industries.php" class="brand-card">
+      <div class="brand-card brand-card--more">
         <div class="brand-card-logos brand-card-logos--top">
-          <span class="brand-logo">Pest Control</span>
-          <span class="brand-logo">Pool Services</span>
-          <span class="brand-logo">Landscaping</span>
+          <span class="brand-logo">And Many More!</span>
         </div>
         <div class="brand-card-head">
-          <h3>What matters most:</h3>
-          <p class="brand-card-points">Plan selection · Quick cost estimates · Service-area clarity · Recurring signup · Retention · Local proof</p>
+          <h3>Can't Find Your Industry?</h3>
+          <p class="brand-card-points">Reach out to us to discuss your needs and how we can help you.</p>
         </div>
         <div class="brand-card-fan">
-          <img loading="lazy" class="fan-shot fan-shot-1" src="/assets/images/industry-pool-services-1.webp" alt="">
-          <img loading="lazy" class="fan-shot fan-shot-2" src="/assets/images/industry-landscaping-1.webp" alt="">
-          <img loading="lazy" class="fan-shot fan-shot-3" src="/assets/images/industry-pest-control-1.webp" alt="">
-          <img loading="lazy" class="fan-shot fan-shot-4" src="/assets/images/industry-pool-services-4.webp" alt="">
-          <img loading="lazy" class="fan-shot fan-shot-5" src="/assets/images/industry-landscaping-3.webp" alt="">
+          <span class="fan-shot fan-shot-1 fan-word"><img loading="lazy" src="/assets/images/industry-pool-services-1.webp" alt=""><span class="fan-word-text" aria-hidden="true"><span>C</span><span>A</span><span>N</span><span>T</span></span></span>
+          <span class="fan-shot fan-shot-2 fan-word"><img loading="lazy" src="/assets/images/industry-landscaping-1.webp" alt=""><span class="fan-word-text" aria-hidden="true"><span>F</span><span>I</span><span>N</span><span>D</span></span></span>
+          <span class="fan-shot fan-shot-3 fan-word"><img loading="lazy" src="/assets/images/industry-pest-control-1.webp" alt=""><span class="fan-word-text fan-word-text--grid" aria-hidden="true"><span>Y</span><span>O</span><span>U</span><span>R</span></span></span>
+          <span class="fan-shot fan-shot-4 fan-word"><img loading="lazy" src="/assets/images/industry-pool-services-4.webp" alt=""><span class="fan-word-text fan-word-text--long" aria-hidden="true"><span>I</span><span>N</span><span>D</span><span>U</span><span>S</span><span>T</span><span>R</span><span>Y</span></span></span>
+          <span class="fan-shot fan-shot-5 fan-word"><img loading="lazy" src="/assets/images/industry-landscaping-3.webp" alt=""><span class="fan-word-text fan-word-text--mark" aria-hidden="true"><span>?</span></span></span>
         </div>
-        <div class="brand-card-cta">
-          <span class="btn btn-lime btn-sm">Explore Recurring-Service Industries</span>
+        <div class="brand-card-cta brand-card-cta--duo">
+          <a href="mailto:info@wtflabsco.com" class="btn btn-lime btn-sm">Email Us</a>
+          <a href="tel:+15550001234" class="btn btn-sm brand-card-btn-alt">Call Us Now</a>
         </div>
-      </a>
+      </div>
     </div>
 
   </div>
@@ -643,6 +642,7 @@ include __DIR__ . '/includes/header.php';
     </div>
 
     <div class="works-grid home-works-grid reveal" id="homeWorksGrid" data-smooth>
+      <?php /*
       <article class="work-card" data-featured data-tags="web-development web-design" data-subs="web-app custom-web product-sites" data-industries="plumbing hvac" data-live="https://heavyroute-final.vercel.app/">
         <div class="work-card-media">
           <img loading="lazy" src="/assets/images/work-heavyroutes.jpg" alt="HeavyRoute">
@@ -1506,6 +1506,168 @@ include __DIR__ . '/includes/header.php';
           </div>
           <h2>Azur Camping</h2>
           <p>A booking-led website for five campsites in southern Germany, with date search and best-price online booking.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      */ ?>
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="remodelers" data-live="https://teamworkhomedesigns.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-teamwork-home-designs.webp" alt="Teamwork Home Designs">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Austin, TX</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Teamwork Home Designs</h2>
+          <p>A clean WordPress site for an Austin general contractor, built around kitchen and bath transformations and a free consultation call.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="remodelers" data-live="https://primeconstructionaustin.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-prime-construction.webp" alt="Prime Construction">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Austin, TX</span>
+            <span>Custom coded</span>
+          </div>
+          <h2>Prime Construction</h2>
+          <p>A custom-built design and build site for an Austin remodeler, leading with finished kitchens, baths and whole-home renovations.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="remodelers" data-live="https://miaremodelingcontractors.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/industry-remodelers-2.webp" alt="Mia Remodeling Contractors">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Miami, FL</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Mia Remodeling Contractors</h2>
+          <p>A WordPress site for a Miami remodeling contractor covering bathrooms, kitchens, decks, patio enclosures and pergolas.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="remodelers" data-live="https://elbazconstructioncorp.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/industry-remodelers-4.webp" alt="Elbaz Construction">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Miami, FL</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Elbaz Construction</h2>
+          <p>A WordPress site for a Miami and Hollywood general contractor focused on kitchen and bathroom remodeling across South Florida.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="landing-pages wix" data-industries="remodelers" data-live="https://www.ymedinaremodeling.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-ymedina-remodeling.webp" alt="YMedina Remodeling">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Miami, FL</span>
+            <span>Wix</span>
+          </div>
+          <h2>YMedina Remodeling</h2>
+          <p>A Wix site for a Miami remodeling company with a free estimate form right in the first screen.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="remodelers" data-live="/live-preview?site=excel-remodeling">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-excel-remodeling.webp" alt="Excel Remodeling">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Maryland</span>
+            <span>Squarespace</span>
+          </div>
+          <h2>Excel Remodeling</h2>
+          <p>A Squarespace site for a Maryland roofing and siding company, built around trust and a free no-pressure estimate.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="remodelers" data-live="https://www.environschicago.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-environs-chicago.webp" alt="Environs Group">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Chicago, IL</span>
+            <span>Squarespace</span>
+          </div>
+          <h2>Environs Group</h2>
+          <p>An elegant Squarespace site for a Chicago builder and interior design studio, showing available homes and recent projects.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wix" data-industries="remodelers" data-live="https://www.unitedelitegroup.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-united-elite-group.webp" alt="United Elite Group">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>New York, NY</span>
+            <span>Wix</span>
+          </div>
+          <h2>United Elite Group</h2>
+          <p>A Wix site for a New York City luxury renovation contractor, with portfolio-led storytelling and a free consultation.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="redesigns squarespace" data-industries="remodelers" data-live="https://www.eurodesignremodel.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-euro-design-remodel.webp" alt="Euro Design Remodel">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Maryland</span>
+            <span>Squarespace</span>
+          </div>
+          <h2>Euro Design Remodel</h2>
+          <p>A Squarespace site for a Maryland bathroom remodeler with 20 years of experience, built to book free design consultations.</p>
           <div class="work-card-tags">
             <a href="/web-design.php">Web Design</a>
             <a href="/web-development.php">Web Development</a>

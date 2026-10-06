@@ -16,6 +16,7 @@ $sites = [
   'refresh-renovations' => 'https://www.refreshrenovations.com.au/',
   'va-loan-nerd' => 'https://www.thevaloannerd.com/',
   'bestie-media' => 'https://www.bestiemedia.co/',
+  'excel-remodeling' => 'https://www.excelremodeling.net/',
 ];
 
 $slug = (string)($_GET['site'] ?? '');

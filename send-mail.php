@@ -65,7 +65,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 if ($phone === '' && !$form_page) {
   $errors[] = 'phone';
 }
-if ($message === '' && !$partial) {
+if ($message === '' && !$partial && $step !== 3) {
   $errors[] = 'message';
 }
 

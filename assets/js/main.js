@@ -186,19 +186,23 @@ document.querySelectorAll('form.contact-form').forEach((form) => {
 });
 
 // Mobile nav
-document.querySelector('.nav-burger')?.addEventListener('click', () => {
-  document.querySelector('.nav-links')?.classList.toggle('mobile-open');
+document.querySelector('.nav-burger')?.addEventListener('click', (e) => {
+  const open = document.querySelector('.nav-links')?.classList.toggle('mobile-open');
+  e.currentTarget.classList.toggle('is-open', !!open);
+  e.currentTarget.setAttribute('aria-expanded', open ? 'true' : 'false');
+  document.body.classList.toggle('nav-open', !!open);
 });
 
 // Mobile nav dropdowns - one open at a time
 document.querySelectorAll('.nav-dropdown-btn').forEach((btn) => {
   btn.addEventListener('click', (e) => {
     if (!window.matchMedia('(max-width: 980px)').matches) return;
-    const item = btn.closest('.nav-dropdown');
-    if (item.classList.contains('is-open')) return;
+    if (!e.target.closest('.nav-dropdown-btn > span')) return;
     e.preventDefault();
+    const item = btn.closest('.nav-dropdown');
+    const willOpen = !item.classList.contains('is-open');
     document.querySelectorAll('.nav-dropdown.is-open').forEach((el) => el.classList.remove('is-open'));
-    item.classList.add('is-open');
+    item.classList.toggle('is-open', willOpen);
   });
 });
 
@@ -1271,6 +1275,8 @@ window.addEventListener('load', () => {
     let distance = 0;
     let stickTop = 0;
     let isStatic = false;
+    let hold = 0;
+    let lastWidth = 0;
 
     function setActive(index) {
       cards.forEach((card, i) => card.classList.toggle('is-active', i === index));
@@ -1278,8 +1284,8 @@ window.addEventListener('load', () => {
 
     function update() {
       if (isStatic) return;
-      const total = section.offsetHeight - sticky.offsetHeight;
-      const progress = total > 0 ? Math.min(1, Math.max(0, (stickTop - section.getBoundingClientRect().top) / total)) : 0;
+      const total = section.offsetHeight - sticky.offsetHeight - hold * 2;
+      const progress = total > 0 ? Math.min(1, Math.max(0, (stickTop - section.getBoundingClientRect().top - hold) / total)) : 0;
       track.style.transform = `translate3d(${-progress * distance}px, 0, 0)`;
       setActive(Math.round(progress * (cards.length - 1)));
     }
@@ -1299,15 +1305,23 @@ window.addEventListener('load', () => {
         cards.forEach((card) => card.classList.add('is-active'));
         return;
       }
+      lastWidth = viewport;
+      hold = Math.round(window.innerHeight * 0.2);
       stickTop = Math.min(0, window.innerHeight - sticky.offsetHeight);
       sticky.style.top = stickTop + 'px';
-      section.style.height = (sticky.offsetHeight + distance) + 'px';
+      section.style.height = (sticky.offsetHeight + distance + hold * 2) + 'px';
       update();
     }
 
     measure();
     window.addEventListener('scroll', update, { passive: true });
-    window.addEventListener('resize', measure);
+    window.addEventListener('resize', () => {
+      if (document.documentElement.clientWidth === lastWidth) {
+        update();
+        return;
+      }
+      measure();
+    });
     window.addEventListener('load', measure);
   });
 })();
@@ -1477,9 +1491,11 @@ window.addEventListener('load', () => {
   const hero = document.querySelector('.hero-section, .page-hero, main > section, section');
   let ready = !hero;
   let footerVisible = false;
+  let contactVisible = false;
+  const contact = document.getElementById('contact');
 
   function sync() {
-    const show = ready && !footerVisible;
+    const show = ready && !footerVisible && !contactVisible;
     cta.classList.toggle('is-visible', show);
     cta.setAttribute('aria-hidden', show ? 'false' : 'true');
     cta.tabIndex = show ? 0 : -1;
@@ -1499,6 +1515,13 @@ window.addEventListener('load', () => {
       footerVisible = entries[0].isIntersecting;
       sync();
     }).observe(footer);
+  }
+
+  if (contact) {
+    new IntersectionObserver((entries) => {
+      contactVisible = entries[0].isIntersecting;
+      sync();
+    }, { rootMargin: '0px 0px -25% 0px' }).observe(contact);
   }
 
   ['allowCookies', 'rejectCookies'].forEach((id) => {
@@ -1813,17 +1836,15 @@ window.addEventListener('load', () => {
 // Form steps
 (function initFormSteps() {
   document.querySelectorAll('form[data-steps]').forEach((form) => {
-    const total = Number(form.dataset.steps) || 3;
-    const btn = form.querySelector('[data-step-button]');
+    const panels = Array.from(form.querySelectorAll('.form-step'));
+    if (!panels.length) return;
     const wrap = form.closest('.contact-form-wrap');
     const dots = wrap ? Array.from(wrap.querySelectorAll('[data-step-dot]')) : [];
     const lines = wrap ? Array.from(wrap.querySelectorAll('.form-step-line')) : [];
     const stepInput = form.querySelector('input[name="step"]');
     const leadInput = form.querySelector('input[name="lead_id"]');
-    const required = ['name', 'email', 'phone'].map((n) => form.elements[n]).filter(Boolean);
     const sent = {};
     let current = 1;
-    if (!btn) return;
 
     if (leadInput && !leadInput.value) {
       leadInput.value = Date.now().toString(36).toUpperCase() + '-' + Math.random().toString(36).slice(2, 6).toUpperCase();
@@ -1831,9 +1852,7 @@ window.addEventListener('load', () => {
 
     function show(n) {
       current = n;
-      const last = n === total;
-      btn.type = last ? 'submit' : 'button';
-      btn.textContent = last ? 'Submit' : 'Next';
+      panels.forEach((panel) => { panel.hidden = Number(panel.dataset.step) !== n; });
       if (stepInput) stepInput.value = String(n);
       dots.forEach((dot) => {
         const i = Number(dot.dataset.stepDot);
@@ -1845,10 +1864,26 @@ window.addEventListener('load', () => {
       lines.forEach((line, i) => line.classList.toggle('is-done', i + 1 < n));
     }
 
+    function valid(panel) {
+      for (const field of panel.querySelectorAll('input, select, textarea')) {
+        if (field.closest('[hidden]') && field.closest('[hidden]') !== panel) continue;
+        if (!field.checkValidity()) {
+          const trigger = field.tagName === 'SELECT' ? field.closest('.wtf-select')?.querySelector('.wtf-select-trigger') : null;
+          if (trigger) {
+            trigger.classList.add('is-invalid');
+            trigger.focus();
+            setTimeout(() => trigger.classList.remove('is-invalid'), 1600);
+          }
+          field.reportValidity();
+          return false;
+        }
+      }
+      return true;
+    }
+
     function sendStep(n) {
       const data = new FormData(form);
       data.set('step', String(n));
-      data.delete('terms');
       const key = JSON.stringify(Array.from(data.entries()));
       if (sent[n] === key) return;
       sent[n] = key;
@@ -1857,19 +1892,116 @@ window.addEventListener('load', () => {
       });
     }
 
-    btn.addEventListener('click', (e) => {
-      if (current === total) return;
-      e.preventDefault();
-      for (const field of required) {
-        if (!field.checkValidity()) {
-          field.reportValidity();
-          return;
-        }
-      }
-      sendStep(current);
-      show(current + 1);
+    form.querySelectorAll('[data-step-next]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const panel = btn.closest('.form-step');
+        if (!valid(panel)) return;
+        sendStep(current);
+        show(current + 1);
+        const top = (wrap || form).getBoundingClientRect().top;
+        if (top < 80) window.scrollBy({ top: top - 100, behavior: 'smooth' });
+      });
     });
+
+    form.addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter' || e.target.tagName === 'TEXTAREA' || e.target.closest('.wtf-select')) return;
+      const next = panels[current - 1]?.querySelector('[data-step-next]');
+      if (!next) return;
+      e.preventDefault();
+      next.click();
+    });
+
+    form.addEventListener('submit', (e) => {
+      if (stepInput) stepInput.value = String(panels.length);
+      if (!form.querySelector('input[name="name"]').value) {
+        e.preventDefault();
+        show(1);
+      }
+    });
+
+    const otherSelect = form.querySelector('[data-other-select]');
+    const otherField = form.querySelector('.form-other-field');
+    if (otherSelect && otherField) {
+      const otherInput = otherField.querySelector('input');
+      const syncOther = () => {
+        const isOther = otherSelect.value === 'Other';
+        otherField.hidden = !isOther;
+        otherInput.required = isOther;
+        if (!isOther) otherInput.value = '';
+      };
+      otherSelect.addEventListener('change', syncOther);
+      syncOther();
+    }
+
+    const runaway = form.querySelector('.form-commit-runaway');
+    if (runaway) {
+      let dx = 0;
+      let dy = 0;
+      function flee(px, py) {
+        const area = runaway.closest('.form-commit') || form;
+        const box = area.getBoundingClientRect();
+        const w = runaway.offsetWidth;
+        const h = runaway.offsetHeight;
+        const prev = runaway.style.transform;
+        runaway.style.transition = 'none';
+        runaway.style.transform = 'none';
+        const home = runaway.getBoundingClientRect();
+        runaway.style.transform = prev;
+        void runaway.offsetWidth;
+        runaway.style.transition = '';
+        const pad = 10;
+        const minX = box.left + pad;
+        const maxX = box.right - w - pad;
+        const minY = box.top + pad;
+        const maxY = box.bottom - h - pad;
+        let best = null;
+        const others = Array.from(area.querySelectorAll('.btn')).filter((el) => el !== runaway).map((el) => el.getBoundingClientRect());
+        for (let i = 0; i < 60; i++) {
+          const x = minX + Math.random() * Math.max(0, maxX - minX);
+          const y = minY + Math.random() * Math.max(0, maxY - minY);
+          const hit = others.some((o) => x < o.right + 6 && x + w > o.left - 6 && y < o.bottom + 6 && y + h > o.top - 6);
+          if (hit) continue;
+          const d = Math.hypot(x + w / 2 - px, y + h / 2 - py);
+          if (!best || d > best.d) best = { x, y, d };
+        }
+        if (!best) return;
+        dx = best.x - home.left;
+        dy = best.y - home.top;
+        runaway.style.transform = 'translate(' + Math.round(dx) + 'px, ' + Math.round(dy) + 'px)';
+      }
+      form.addEventListener('pointermove', (e) => {
+        if (runaway.closest('[hidden]')) return;
+        const r = runaway.getBoundingClientRect();
+        const near = e.clientX > r.left - 60 && e.clientX < r.right + 60 && e.clientY > r.top - 50 && e.clientY < r.bottom + 50;
+        if (near) flee(e.clientX, e.clientY);
+      });
+      ['pointerdown', 'touchstart', 'mousedown', 'click', 'focus'].forEach((type) => {
+        runaway.addEventListener(type, (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const p = e.touches ? e.touches[0] : e;
+          flee(p.clientX || 0, p.clientY || 0);
+          runaway.blur();
+        }, { passive: false });
+      });
+      window.addEventListener('resize', () => {
+        dx = 0;
+        dy = 0;
+        runaway.style.transform = '';
+      });
+    }
 
     show(1);
   });
 })();
+
+// Filter scroll
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.works-filters [data-industry], .works-filters [data-filter], .works-subfilters [data-sub]');
+  if (!btn) return;
+  const bar = btn.closest('.works-filters, .works-subfilters');
+  if (!bar || bar.scrollWidth <= bar.clientWidth + 1) return;
+  const pad = parseFloat(getComputedStyle(bar).paddingLeft) || 0;
+  const left = bar.scrollLeft + btn.getBoundingClientRect().left - bar.getBoundingClientRect().left - pad;
+  bar.scrollTo({ left: Math.max(0, Math.min(left, bar.scrollWidth - bar.clientWidth)), behavior: 'smooth' });
+});
