@@ -33,13 +33,13 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
         <p class="home-filter-label">Select the Service</p>
         <div class="works-filters" id="homeWorksFilters" role="tablist" aria-label="Filter works by service">
           <button type="button" class="works-filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
-          <button type="button" class="works-filter" data-filter="graphic-design" role="tab" aria-selected="false">Graphic Design</button>
-          <button type="button" class="works-filter" data-filter="web-design" role="tab" aria-selected="false">Web Design</button>
-          <button type="button" class="works-filter" data-filter="web-development" role="tab" aria-selected="false">Web Development</button>
+          <!-- <button type="button" class="works-filter" data-filter="graphic-design" role="tab" aria-selected="false">Graphic Design</button> -->
+          <!-- <button type="button" class="works-filter" data-filter="web-design" role="tab" aria-selected="false">Web Design</button> -->
+          <button type="button" class="works-filter" data-filter="web-development" role="tab" aria-selected="false">Web Design &amp; Development</button>
           <button type="button" class="works-filter" data-filter="seo" role="tab" aria-selected="false">SEO</button>
           <button type="button" class="works-filter" data-filter="social-media-advertising" role="tab" aria-selected="false">Social Ads</button>
           <button type="button" class="works-filter" data-filter="google-ads" role="tab" aria-selected="false">Google Ads</button>
-          <button type="button" class="works-filter" data-filter="digital-marketing" role="tab" aria-selected="false">Digital Marketing</button>
+          <!-- <button type="button" class="works-filter" data-filter="digital-marketing" role="tab" aria-selected="false">Digital Marketing</button> -->
         </div>
       </div>
       <div class="home-filter-row">

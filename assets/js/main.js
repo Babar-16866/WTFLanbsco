@@ -660,7 +660,11 @@ window.addEventListener('load', () => {
       { id: 'redesigns', label: 'Redesigns' }
     ],
     'web-development': [
-      { id: 'all', label: 'All Web Development' },
+      { id: 'all', label: 'All Web Design & Development' },
+      { id: 'landing-pages', label: 'Landing Pages' },
+      { id: 'corporate-sites', label: 'Corporate Sites' },
+      { id: 'product-sites', label: 'Product Sites' },
+      { id: 'redesigns', label: 'Redesigns' },
       { id: 'wordpress', label: 'WordPress' },
       { id: 'wix', label: 'Wix' },
       { id: 'squarespace', label: 'Squarespace' },
@@ -700,6 +704,7 @@ window.addEventListener('load', () => {
 
   function hasToken(list, token) {
     if (!list || !token) return false;
+    if (token === 'web-development' && (' ' + list + ' ').indexOf(' web-design ') !== -1) return true;
     return (' ' + list + ' ').indexOf(' ' + token + ' ') !== -1;
   }
 
@@ -927,7 +932,8 @@ window.addEventListener('load', () => {
       const level = card.getAttribute('data-level');
       let show;
       if (level === 'svc') {
-        show = indService !== 'all' && card.getAttribute('data-service') === indService;
+        const svc = card.getAttribute('data-service');
+        show = indService !== 'all' && (svc === indService || (indService === 'web-development' && svc === 'web-design'));
         if (show && indSub !== 'all') show = hasToken(card.getAttribute('data-subs') || '', indSub);
         const kicker = card.querySelector('.service-detail-kicker');
         if (kicker) {
