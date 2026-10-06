@@ -10731,3 +10731,77 @@ html[data-palette] body .thank-btn-secondary:hover {
 .fan-word.fan-shot-3 img { object-position: 45% center; }
 .fan-word.fan-shot-4 img { object-position: 45% center; }
 .fan-word.fan-shot-5 img { object-position: 90% center; }
+@media (hover: hover) and (pointer: fine) {
+  html.has-custom-cursor :fullscreen,
+  html.has-custom-cursor :fullscreen *,
+  html.has-custom-cursor ::backdrop,
+  html.has-custom-cursor .street-video-modal,
+  html.has-custom-cursor .street-video-modal * {
+    cursor: auto !important;
+  }
+  html.has-custom-cursor .street-video-modal :is(button, a) {
+    cursor: pointer !important;
+  }
+}
+body.street-modal-open .custom-cursor,
+html:has(.street-video-modal:not([hidden])) .custom-cursor {
+  opacity: 0 !important;
+}
+.street-play-cursor {
+  width: 84px;
+  height: 84px;
+  margin: -42px 0 0 -42px;
+}
+.street-play-ring text {
+  font-size: 8.5px;
+  letter-spacing: 1.2px;
+}
+.street-play-core {
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+}
+.street-play-core svg {
+  width: 16px;
+  height: 16px;
+}
+@media (hover: hover) and (pointer: fine) {
+  html.has-custom-cursor body.street-modal-open,
+  html.has-custom-cursor body.street-modal-open * {
+    cursor: auto !important;
+  }
+}
+.fan-word-text--grid {
+  left: 50%;
+  right: auto;
+  width: auto;
+  padding: 10px 14px;
+  transform: translateX(-50%);
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--pal-dark, #10231B) 55%, transparent), transparent);
+  column-gap: 10px;
+}
+@media (max-width: 980px) {
+  .page-hero { padding-top: 104px; }
+  .nav-links .nav-dropdown-btn {
+    justify-content: space-between;
+  }
+  .nav-links .nav-dropdown-btn > span {
+    margin-left: auto;
+  }
+}
+@media (max-width: 768px) {
+  .page-hero { padding-top: 100px; }
+}
+.nav-pill a,
+.nav-pill button,
+.nav-links a,
+.nav-dropdown-btn,
+.nav-dropdown-btn > span {
+  -webkit-tap-highlight-color: transparent;
+}
+.nav-burger:focus:not(:focus-visible),
+.theme-toggle:focus:not(:focus-visible),
+.nav-links a:focus:not(:focus-visible),
+.nav-dropdown-btn:focus:not(:focus-visible) {
+  outline: none;
+}

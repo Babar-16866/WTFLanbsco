@@ -146,11 +146,24 @@ $street_desc = $street_desc ?? '';
         <article class="street-card street-card--photo street-card--video street-card--tall" data-video="<?= BASE ?>/assets/videos/testimonial-demo.mp4">
           <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo-preview.mp4" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/testimonial-demo-poster.jpg" tabindex="-1" aria-hidden="true"></video>
         -->
+        <!--
         <article class="street-card street-card--photo street-card--video street-card--tall" data-video="<?= BASE ?>/assets/videos/wtf.mp4">
           <video class="street-video" src="<?= BASE ?>/assets/videos/wtf-preview.mp4" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/wtf-poster.jpg" tabindex="-1" aria-hidden="true"></video>
           <div class="street-photo-overlay">
             <span class="street-logo">starbridge</span>
             <p>I can't believe you guys <strong>did all this in a week.</strong></p>
+          </div>
+        </article>
+        -->
+        <article class="street-card street-card--quote street-card--md">
+          <span class="street-badge">starbridge</span>
+          <p>I can't believe you guys <strong>did all this in a week.</strong></p>
+          <div class="street-meta">
+            <img loading="lazy" class="street-avatar" src="<?= BASE ?>/assets/images/team-2.jpg" alt="">
+            <div class="street-meta-text">
+              <strong>Starbridge Team</strong>
+              <span class="street-stars" aria-label="5 stars">★★★★★</span>
+            </div>
           </div>
         </article>
         <article class="street-card street-card--quote street-card--lg">
@@ -169,8 +182,8 @@ $street_desc = $street_desc ?? '';
         <article class="street-card street-card--photo street-card--video street-card--wide" data-video="<?= BASE ?>/assets/videos/testimonial-demo.mp4">
           <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo-preview.mp4" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/testimonial-demo-poster.jpg" tabindex="-1" aria-hidden="true"></video>
         -->
-        <article class="street-card street-card--photo street-card--video street-card--wide" data-video="<?= BASE ?>/assets/videos/wtf.mp4">
-          <video class="street-video" src="<?= BASE ?>/assets/videos/wtf-preview.mp4" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/wtf-poster.jpg" tabindex="-1" aria-hidden="true"></video>
+        <article class="street-card street-card--photo street-card--video street-card--wide" data-video="<?= BASE ?>/assets/videos/wtflabs-02.webm">
+          <video class="street-video" src="<?= BASE ?>/assets/videos/wtflabs-02-preview.webm" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/wtflabs-02-poster.jpg" tabindex="-1" aria-hidden="true"></video>
           <div class="street-photo-overlay">
             <span class="street-logo">Vivodyne</span>
             <p>Everyone that's seen has said that it's <strong>hands down the best</strong> website they've seen.</p>

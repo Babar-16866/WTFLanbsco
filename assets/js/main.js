@@ -660,11 +660,7 @@ window.addEventListener('load', () => {
       { id: 'redesigns', label: 'Redesigns' }
     ],
     'web-development': [
-      { id: 'all', label: 'All Web Design & Development' },
-      { id: 'landing-pages', label: 'Landing Pages' },
-      { id: 'corporate-sites', label: 'Corporate Sites' },
-      { id: 'product-sites', label: 'Product Sites' },
-      { id: 'redesigns', label: 'Redesigns' },
+      { id: 'all', label: 'All' },
       { id: 'wordpress', label: 'WordPress' },
       { id: 'wix', label: 'Wix' },
       { id: 'squarespace', label: 'Squarespace' },
@@ -1364,20 +1360,36 @@ window.addEventListener('load', () => {
       return true;
     }
 
+    let lastWheel = 0;
+    let gesture = false;
     window.addEventListener('wheel', (e) => {
       if (e.defaultPrevented || isStatic || Math.abs(e.deltaY) < Math.abs(e.deltaX)) return;
+      const now = performance.now();
       const dir = e.deltaY > 0 ? 1 : -1;
       const b = bounds();
-      if (dir > 0 && window.scrollY < b.start - 2 && b.start - window.scrollY < 140) {
+      const y = window.scrollY;
+      const quiet = now - lastWheel > 220;
+      lastWheel = now;
+      if (gesture && (!quiet || now < busyUntil)) {
+        if (y >= b.start - 2 && y <= b.end + 2) {
+          e.preventDefault();
+          return;
+        }
+      }
+      gesture = false;
+      const crossIn = (dir > 0 && y < b.start - 2 && y + e.deltaY * 1.5 + 140 >= b.start) || (dir < 0 && y > b.end + 2 && y + e.deltaY * 1.5 - 140 <= b.end);
+      if (crossIn) {
         e.preventDefault();
-        busyUntil = performance.now() + 700;
-        current = 0;
-        window.scrollTo({ top: Math.round(b.start), behavior: 'instant' });
+        gesture = true;
+        busyUntil = now + 650;
+        current = dir > 0 ? 0 : cards.length - 1;
+        window.scrollTo({ top: Math.round(dir > 0 ? b.start : b.end), behavior: 'instant' });
         update();
         return;
       }
       if (!inZone(dir)) return;
-      if (go(dir) || performance.now() < busyUntil) e.preventDefault();
+      e.preventDefault();
+      if (go(dir)) gesture = true;
     }, { passive: false });
 
     let lastY = window.scrollY;
