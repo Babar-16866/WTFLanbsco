@@ -349,11 +349,11 @@ include __DIR__ . '/includes/header.php';
           <p class="brand-card-points">Mobile speed · Click-to-call · Booking · Financing · Invoicing · Reviews · Local trust · Lead tracking</p>
         </div>
         <div class="brand-card-fan">
-          <img loading="lazy" class="fan-shot fan-shot-1" src="/assets/images/industry-hvac-2.webp" alt="">
-          <img loading="lazy" class="fan-shot fan-shot-2" src="/assets/images/industry-plumbing-1.webp" alt="">
-          <img loading="lazy" class="fan-shot fan-shot-3" src="/assets/images/industry-hvac-1.webp" alt="">
-          <img loading="lazy" class="fan-shot fan-shot-4" src="/assets/images/industry-plumbing-2.webp" alt="">
-          <img loading="lazy" class="fan-shot fan-shot-5" src="/assets/images/industry-hvac-4.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-1" src="/assets/images/card2.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-2" src="/assets/images/card2_01.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-3" src="/assets/images/card2_02.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-4" src="/assets/images/card2_03.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-5" src="/assets/images/card2_04.webp" alt="">
         </div>
         <div class="brand-card-cta">
           <span class="btn btn-lime btn-sm">Explore More</span>
@@ -371,11 +371,11 @@ include __DIR__ . '/includes/header.php';
           <p class="brand-card-points">Plan selection · Quick cost estimates · Service-area clarity · Recurring signup · Retention · Local proof</p>
         </div>
         <div class="brand-card-fan">
-          <img loading="lazy" class="fan-shot fan-shot-1" src="/assets/images/industry-pool-services-1.webp" alt="">
-          <img loading="lazy" class="fan-shot fan-shot-2" src="/assets/images/industry-landscaping-1.webp" alt="">
-          <img loading="lazy" class="fan-shot fan-shot-3" src="/assets/images/industry-pest-control-1.webp" alt="">
-          <img loading="lazy" class="fan-shot fan-shot-4" src="/assets/images/industry-pool-services-4.webp" alt="">
-          <img loading="lazy" class="fan-shot fan-shot-5" src="/assets/images/industry-landscaping-3.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-1" src="/assets/images/card3.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-2" src="/assets/images/card3_01.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-3" src="/assets/images/card3_02.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-4" src="/assets/images/card3_03.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-5" src="/assets/images/card3_04.webp" alt="">
         </div>
         <div class="brand-card-cta">
           <span class="btn btn-lime btn-sm">Explore More</span>
@@ -391,11 +391,11 @@ include __DIR__ . '/includes/header.php';
           <p class="brand-card-points">Reach out to us to discuss your needs and how we can help you.</p>
         </div>
         <div class="brand-card-fan">
-          <span class="fan-shot fan-shot-1 fan-word"><img loading="lazy" src="/assets/images/industry-pool-services-1.webp" alt=""><span class="fan-word-text" aria-hidden="true"><span>C</span><span>A</span><span>N</span><span>T</span></span></span>
-          <span class="fan-shot fan-shot-2 fan-word"><img loading="lazy" src="/assets/images/industry-landscaping-1.webp" alt=""><span class="fan-word-text" aria-hidden="true"><span>F</span><span>I</span><span>N</span><span>D</span></span></span>
-          <span class="fan-shot fan-shot-3 fan-word"><img loading="lazy" src="/assets/images/industry-pest-control-1.webp" alt=""><span class="fan-word-text fan-word-text--grid" aria-hidden="true"><span>Y</span><span>O</span><span>U</span><span>R</span></span></span>
-          <span class="fan-shot fan-shot-4 fan-word"><img loading="lazy" src="/assets/images/industry-pool-services-4.webp" alt=""><span class="fan-word-text fan-word-text--long" aria-hidden="true"><span>I</span><span>N</span><span>D</span><span>U</span><span>S</span><span>T</span><span>R</span><span>Y</span></span></span>
-          <span class="fan-shot fan-shot-5 fan-word"><img loading="lazy" src="/assets/images/industry-landscaping-3.webp" alt=""><span class="fan-word-text fan-word-text--mark" aria-hidden="true"><span>?</span></span></span>
+          <span class="fan-shot fan-shot-1 fan-word"><img loading="lazy" src="/assets/images/card4.webp" alt=""><span class="fan-word-text" aria-hidden="true"><span>C</span><span>A</span><span>N</span><span>T</span></span></span>
+          <span class="fan-shot fan-shot-2 fan-word"><img loading="lazy" src="/assets/images/card4_01.webp" alt=""><span class="fan-word-text" aria-hidden="true"><span>F</span><span>I</span><span>N</span><span>D</span></span></span>
+          <span class="fan-shot fan-shot-3 fan-word"><img loading="lazy" src="/assets/images/card4_03.webp" alt=""><span class="fan-word-text fan-word-text--grid" aria-hidden="true"><span>Y</span><span>O</span><span>U</span><span>R</span></span></span>
+          <span class="fan-shot fan-shot-4 fan-word"><img loading="lazy" src="/assets/images/card4_02.webp" alt=""><span class="fan-word-text fan-word-text--long" aria-hidden="true"><span>I</span><span>N</span><span>D</span><span>U</span><span>S</span><span>T</span><span>R</span><span>Y</span></span></span>
+          <span class="fan-shot fan-shot-5 fan-word"><img loading="lazy" src="/assets/images/card4.webp" alt=""><span class="fan-word-text fan-word-text--mark" aria-hidden="true"><span>?</span></span></span>
         </div>
         <div class="brand-card-cta brand-card-cta--duo">
           <a href="mailto:info@wtflabsco.com" class="btn btn-lime btn-sm">Email Us</a>

@@ -10715,3 +10715,19 @@ html[data-palette] body .thank-btn-secondary:hover {
 .rail-section.is-stepping .rail-card {
   transition: opacity 0.5s ease, background-color 0.5s ease, transform 0.5s ease;
 }
+.brand-card .fan-shot[src*="card2_01"] { object-position: 62% center; }
+.brand-card .fan-shot[src*="card2_02"] { object-position: 45% center; }
+.brand-card .fan-shot[src*="card2_03"] { object-position: 40% center; }
+.brand-card .fan-shot[src*="card2_04"] { object-position: 60% center; }
+.brand-card .fan-shot[src*="card3."] { object-position: 55% center; }
+.brand-card .fan-shot[src*="card3_01"] { object-position: 30% 60%; }
+.brand-card .fan-shot[src*="card3_02"] { object-position: 50% center; }
+.brand-card .fan-shot[src*="card3_03"] { object-position: 50% 70%; }
+.brand-card .fan-shot[src*="card3_04"] { object-position: 45% center; }
+.fan-shot-1 .fan-word img { object-position: 30% center; }
+.fan-shot-2 .fan-word img,
+.fan-word.fan-shot-2 img { object-position: 30% center; }
+.fan-word.fan-shot-1 img { object-position: 30% center; }
+.fan-word.fan-shot-3 img { object-position: 45% center; }
+.fan-word.fan-shot-4 img { object-position: 45% center; }
+.fan-word.fan-shot-5 img { object-position: 90% center; }
