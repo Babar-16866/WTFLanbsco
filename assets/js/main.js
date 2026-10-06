@@ -1313,6 +1313,135 @@ window.addEventListener('load', () => {
       update();
     }
 
+    let current = 0;
+    let busyUntil = 0;
+    let touchY = null;
+    let touchMoved = false;
+
+    function bounds() {
+      const total = section.offsetHeight - sticky.offsetHeight - hold * 2;
+      const start = section.getBoundingClientRect().top + window.scrollY - stickTop + hold;
+      return { start, end: start + total, total };
+    }
+
+    function cardY(i) {
+      const b = bounds();
+      return b.start + (cards.length > 1 ? i / (cards.length - 1) : 0) * b.total;
+    }
+
+    function inZone(dir) {
+      if (isStatic) return false;
+      const b = bounds();
+      const y = window.scrollY;
+      if (dir > 0) return y >= b.start - 2 && y < b.end - 2;
+      return y > b.start + 2 && y <= b.end + 2;
+    }
+
+    function nearestIndex() {
+      const b = bounds();
+      const p = b.total > 0 ? (window.scrollY - b.start) / b.total : 0;
+      return Math.min(cards.length - 1, Math.max(0, Math.round(p * (cards.length - 1))));
+    }
+
+    function go(dir) {
+      const now = performance.now();
+      if (now < busyUntil) return true;
+      current = nearestIndex();
+      const next = current + dir;
+      if (next < 0 || next > cards.length - 1) return false;
+      current = next;
+      busyUntil = now + 700;
+      section.classList.add('is-stepping');
+      window.scrollTo({ top: Math.round(cardY(current)), behavior: 'instant' });
+      update();
+      setTimeout(() => section.classList.remove('is-stepping'), 650);
+      return true;
+    }
+
+    window.addEventListener('wheel', (e) => {
+      if (e.defaultPrevented || isStatic || Math.abs(e.deltaY) < Math.abs(e.deltaX)) return;
+      const dir = e.deltaY > 0 ? 1 : -1;
+      const b = bounds();
+      if (dir > 0 && window.scrollY < b.start - 2 && b.start - window.scrollY < 140) {
+        e.preventDefault();
+        busyUntil = performance.now() + 700;
+        current = 0;
+        window.scrollTo({ top: Math.round(b.start), behavior: 'instant' });
+        update();
+        return;
+      }
+      if (!inZone(dir)) return;
+      if (go(dir) || performance.now() < busyUntil) e.preventDefault();
+    }, { passive: false });
+
+    let lastY = window.scrollY;
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      const prev = lastY;
+      lastY = y;
+      if (isStatic || touchY !== null || performance.now() < busyUntil) return;
+      const b = bounds();
+      if (y <= b.start + 2 || y >= b.end - 2) return;
+      let index = nearestIndex();
+      if (prev <= b.start + 2) index = 0;
+      else if (prev >= b.end - 2) index = cards.length - 1;
+      const target = Math.round(cardY(index));
+      if (Math.abs(target - y) < 3) return;
+      current = index;
+      busyUntil = performance.now() + 500;
+      section.classList.add('is-stepping');
+      window.scrollTo({ top: target, behavior: 'instant' });
+      lastY = window.scrollY;
+      update();
+      setTimeout(() => section.classList.remove('is-stepping'), 650);
+    }, { passive: true });
+
+    window.addEventListener('touchstart', (e) => {
+      touchY = e.touches.length === 1 ? e.touches[0].clientY : null;
+      touchMoved = false;
+    }, { passive: true });
+
+    window.addEventListener('touchmove', (e) => {
+      if (e.defaultPrevented || touchY === null || isStatic) return;
+      const dy = touchY - e.touches[0].clientY;
+      const dir = dy > 0 ? 1 : -1;
+      const b = bounds();
+      const y = window.scrollY;
+      if ((dir > 0 && y < b.start - 2 && y + Math.abs(dy) * 1.2 > b.start) || (dir < 0 && y > b.end + 2 && y - Math.abs(dy) * 1.2 < b.end)) {
+        e.preventDefault();
+        if (!touchMoved) {
+          touchMoved = true;
+          current = dir > 0 ? 0 : cards.length - 1;
+          busyUntil = performance.now() + 700;
+          window.scrollTo({ top: Math.round(dir > 0 ? b.start : b.end), behavior: 'instant' });
+          lastY = window.scrollY;
+          update();
+        }
+        return;
+      }
+      if (!inZone(dir)) return;
+      const edge = (dir < 0 && nearestIndex() === 0) || (dir > 0 && nearestIndex() === cards.length - 1);
+      if (edge) return;
+      e.preventDefault();
+      if (!touchMoved && Math.abs(dy) > 24) {
+        touchMoved = true;
+        go(dir);
+      }
+    }, { passive: false });
+
+    window.addEventListener('touchend', () => {
+      touchY = null;
+      lastY = window.scrollY;
+    }, { passive: true });
+
+    window.addEventListener('keydown', (e) => {
+      const map = { ArrowDown: 1, PageDown: 1, ' ': 1, ArrowUp: -1, PageUp: -1 };
+      const dir = map[e.key];
+      if (e.defaultPrevented || !dir || e.target.closest('input, textarea, select, [contenteditable]')) return;
+      if (!inZone(dir)) return;
+      if (go(dir) || performance.now() < busyUntil) e.preventDefault();
+    });
+
     measure();
     window.addEventListener('scroll', update, { passive: true });
     window.addEventListener('resize', () => {
