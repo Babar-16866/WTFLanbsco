@@ -10870,6 +10870,7 @@ html[data-palette] body .sticky-work-cta.is-on-dark {
   font-size: 13px;
   letter-spacing: 0;
 }
+/*
 .brands-grid--groups .brand-card-fan {
   container-type: inline-size;
 }
@@ -10917,6 +10918,7 @@ html[data-palette] body .sticky-work-cta.is-on-dark {
 @media (max-width: 640px) {
   .brands-grid--groups .brand-card-fan { aspect-ratio: 1.9 / 1; }
 }
+*/
 .excel-card-media--hosting img {
   object-fit: cover;
   border-radius: 14px;
