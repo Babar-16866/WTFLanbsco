@@ -1362,7 +1362,7 @@ window.addEventListener('load', () => {
       const next = current + dir;
       if (next < 0 || next > cards.length - 1) return false;
       current = next;
-      busyUntil = now + 520;
+      busyUntil = now + 420;
       section.classList.add('is-stepping');
       window.scrollTo({ top: Math.round(cardY(current)), behavior: 'instant' });
       update();
@@ -1373,12 +1373,21 @@ window.addEventListener('load', () => {
     let lastWheel = 0;
     let lastAbs = 0;
     let stepAt = 0;
+    let queued = 0;
+    let queueTimer = 0;
+    function runQueued() {
+      queueTimer = 0;
+      if (!queued) return;
+      const dir = queued;
+      queued = 0;
+      if (inZone(dir) && go(dir)) stepAt = performance.now();
+    }
     window.addEventListener('wheel', (e) => {
       if (e.defaultPrevented || isStatic || Math.abs(e.deltaY) < Math.abs(e.deltaX)) return;
       const now = performance.now();
       const dir = e.deltaY > 0 ? 1 : -1;
       const abs = Math.abs(e.deltaY);
-      const fresh = now - lastWheel > 110 || abs > lastAbs * 1.4 || (abs === lastAbs && abs >= 50);
+      const fresh = now - lastWheel > 80 || abs > lastAbs * 1.05 || (abs === lastAbs && abs >= 40);
       lastWheel = now;
       lastAbs = abs;
       const b = bounds();
@@ -1388,7 +1397,7 @@ window.addEventListener('load', () => {
       if (crossIn) {
         e.preventDefault();
         if (now < busyUntil) return;
-        busyUntil = now + 520;
+        busyUntil = now + 380;
         stepAt = now;
         current = dir > 0 ? 0 : cards.length - 1;
         window.scrollTo({ top: Math.round(dir > 0 ? b.start : b.end), behavior: 'instant' });
@@ -1400,7 +1409,15 @@ window.addEventListener('load', () => {
         return;
       }
       e.preventDefault();
-      if (now < busyUntil || !fresh) return;
+      if (!fresh) return;
+      if (now < busyUntil) {
+        if (now - stepAt > 120) {
+          queued = dir;
+          clearTimeout(queueTimer);
+          queueTimer = setTimeout(runQueued, busyUntil - now + 10);
+        }
+        return;
+      }
       if (go(dir)) stepAt = now;
     }, { passive: false });
 
