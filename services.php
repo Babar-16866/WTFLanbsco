@@ -123,7 +123,7 @@ include __DIR__ . '/includes/page-banner.php';
           <!-- <button type="button" class="works-filter" data-filter="web-design" role="tab" aria-selected="false">Web Design</button> -->
           <button type="button" class="works-filter" data-filter="web-development" role="tab" aria-selected="false">Web Design &amp; Development</button>
           <button type="button" class="works-filter" data-filter="seo" role="tab" aria-selected="false">SEO</button>
-          <button type="button" class="works-filter" data-filter="social-media-advertising" role="tab" aria-selected="false">Social Ads</button>
+          <button type="button" class="works-filter" data-filter="social-media-advertising" role="tab" aria-selected="false">Social Media</button>
           <button type="button" class="works-filter" data-filter="google-ads" role="tab" aria-selected="false">Google Ads</button>
           <!-- <button type="button" class="works-filter" data-filter="digital-marketing" role="tab" aria-selected="false">Digital Marketing</button> -->
         </div>
@@ -582,7 +582,7 @@ include __DIR__ . '/includes/page-banner.php';
           <a href="/social-media-advertising.php"><img loading="lazy" src="/assets/images/service-social-media.jpg" alt="Meta Ads"></a>
         </div>
         <div class="service-detail-body">
-          <p class="service-detail-kicker">Social Ads</p>
+          <p class="service-detail-kicker">Social Media</p>
           <h2><a href="/social-media-advertising.php">Meta Ads</a></h2>
           <p>Facebook &amp; Instagram campaigns built around creative and conversion.</p>
           <ul>
@@ -599,7 +599,7 @@ include __DIR__ . '/includes/page-banner.php';
           <a href="/social-media-advertising.php"><img loading="lazy" src="/assets/images/excel-spatial.webp" alt="LinkedIn Ads"></a>
         </div>
         <div class="service-detail-body">
-          <p class="service-detail-kicker">Social Ads</p>
+          <p class="service-detail-kicker">Social Media</p>
           <h2><a href="/social-media-advertising.php">LinkedIn Ads</a></h2>
           <p>B2B demand gen with precise targeting and sharp creative.</p>
           <ul>
@@ -616,7 +616,7 @@ include __DIR__ . '/includes/page-banner.php';
           <a href="/social-media-advertising.php"><img loading="lazy" src="/assets/images/excel-mobile.webp" alt="TikTok Ads"></a>
         </div>
         <div class="service-detail-body">
-          <p class="service-detail-kicker">Social Ads</p>
+          <p class="service-detail-kicker">Social Media</p>
           <h2><a href="/social-media-advertising.php">TikTok Ads</a></h2>
           <p>Native-feeling creatives and campaigns for attention-heavy feeds.</p>
           <ul>
@@ -633,7 +633,7 @@ include __DIR__ . '/includes/page-banner.php';
           <a href="/social-media-advertising.php"><img loading="lazy" src="/assets/images/mobile-app.webp" alt="Creative Testing"></a>
         </div>
         <div class="service-detail-body">
-          <p class="service-detail-kicker">Social Ads</p>
+          <p class="service-detail-kicker">Social Media</p>
           <h2><a href="/social-media-advertising.php">Creative Testing</a></h2>
           <p>Systematic creative tests that find winners faster.</p>
           <ul>

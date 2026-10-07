@@ -644,6 +644,7 @@ window.addEventListener('load', () => {
 // Works / Services / Industries two-tier category filters
 (function initCategoryFilters() {
   const SUBS = {
+    /*
     'graphic-design': [
       { id: 'all', label: 'All Graphic Design' },
       { id: 'logo-design', label: 'Logo Design' },
@@ -659,8 +660,7 @@ window.addEventListener('load', () => {
       { id: 'product-sites', label: 'Product Sites' },
       { id: 'redesigns', label: 'Redesigns' }
     ],
-    /*
-    'web-development': [
+        'web-development': [
       { id: 'all', label: 'All' },
       { id: 'wordpress', label: 'WordPress' },
       { id: 'wix', label: 'Wix' },
@@ -669,7 +669,6 @@ window.addEventListener('load', () => {
       { id: 'web-app', label: 'Web App' },
       { id: 'custom-web', label: 'Custom Web' }
     ],
-    */
     seo: [
       { id: 'all', label: 'All SEO' },
       { id: 'technical-seo', label: 'Technical SEO' },
@@ -698,6 +697,7 @@ window.addEventListener('load', () => {
       { id: 'email-marketing', label: 'Email Marketing' },
       { id: 'funnel-design', label: 'Funnel Design' }
     ]
+    */
   };
 
   function hasToken(list, token) {

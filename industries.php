@@ -50,7 +50,7 @@ include __DIR__ . '/includes/page-banner.php';
         <button type="button" class="works-filter works-subfilter" data-sub="websites" role="tab" aria-selected="false">Websites</button>
         <button type="button" class="works-filter works-subfilter" data-sub="local-seo" role="tab" aria-selected="false">Local SEO</button>
         <button type="button" class="works-filter works-subfilter" data-sub="google-ads" role="tab" aria-selected="false">Google Ads</button>
-        <button type="button" class="works-filter works-subfilter" data-sub="social-ads" role="tab" aria-selected="false">Social Ads</button>
+        <button type="button" class="works-filter works-subfilter" data-sub="social-ads" role="tab" aria-selected="false">Social Media</button>
         - ->
       </div>
     </div>
@@ -79,7 +79,7 @@ include __DIR__ . '/includes/page-banner.php';
           <!-- <button type="button" class="works-filter" data-filter="web-design" role="tab" aria-selected="false">Web Design</button> -->
           <button type="button" class="works-filter" data-filter="web-development" role="tab" aria-selected="false">Web Design &amp; Development</button>
           <button type="button" class="works-filter" data-filter="seo" role="tab" aria-selected="false">SEO</button>
-          <button type="button" class="works-filter" data-filter="social-media-advertising" role="tab" aria-selected="false">Social Ads</button>
+          <button type="button" class="works-filter" data-filter="social-media-advertising" role="tab" aria-selected="false">Social Media</button>
           <button type="button" class="works-filter" data-filter="google-ads" role="tab" aria-selected="false">Google Ads</button>
           <!-- <button type="button" class="works-filter" data-filter="digital-marketing" role="tab" aria-selected="false">Digital Marketing</button> -->
         </div>
@@ -304,11 +304,11 @@ include __DIR__ . '/includes/page-banner.php';
       <article class="service-detail-card" data-level="sub" data-tags="remodelers" data-subs="social-ads" hidden>
         <div class="service-detail-media">
           <a href="/remodelers.php"><img loading="lazy" src="/assets/images/industry-remodelers-1.webp"
-              alt="Remodelers Social Ads"></a>
+              alt="Remodelers Social Media"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Remodelers</p>
-          <h2><a href="/remodelers.php">Social Ads</a></h2>
+          <h2><a href="/remodelers.php">Social Media</a></h2>
           <p>Visual campaigns that put your finished projects in front of local homeowners.</p>
           <ul>
             <li>Before/after creatives</li>
@@ -374,11 +374,11 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="hvac" data-subs="social-ads" hidden>
         <div class="service-detail-media">
-          <a href="/hvac.php"><img loading="lazy" src="/assets/images/industry-hvac-1.webp" alt="HVAC Social Ads"></a>
+          <a href="/hvac.php"><img loading="lazy" src="/assets/images/industry-hvac-1.webp" alt="HVAC Social Media"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">HVAC</p>
-          <h2><a href="/hvac.php">Social Ads</a></h2>
+          <h2><a href="/hvac.php">Social Media</a></h2>
           <p>Local campaigns for tune-ups, installs, and maintenance plans.</p>
           <ul>
             <li>Seasonal promo creatives</li>
@@ -446,11 +446,11 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="plumbing" data-subs="social-ads" hidden>
         <div class="service-detail-media">
-          <a href="/plumbing.php"><img loading="lazy" src="/assets/images/industry-plumbing-1.webp" alt="Plumbing Social Ads"></a>
+          <a href="/plumbing.php"><img loading="lazy" src="/assets/images/industry-plumbing-1.webp" alt="Plumbing Social Media"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Plumbing</p>
-          <h2><a href="/plumbing.php">Social Ads</a></h2>
+          <h2><a href="/plumbing.php">Social Media</a></h2>
           <p>Local awareness and install offers that stay top of mind.</p>
           <ul>
             <li>Water heater promos</li>
@@ -519,11 +519,11 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="roofing" data-subs="social-ads" hidden>
         <div class="service-detail-media">
-          <a href="/roofing.php"><img loading="lazy" src="/assets/images/industry-roofing-1.webp" alt="Roofing Social Ads"></a>
+          <a href="/roofing.php"><img loading="lazy" src="/assets/images/industry-roofing-1.webp" alt="Roofing Social Media"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Roofing</p>
-          <h2><a href="/roofing.php">Social Ads</a></h2>
+          <h2><a href="/roofing.php">Social Media</a></h2>
           <p>Neighborhood campaigns that build awareness before homeowners need a roof.</p>
           <ul>
             <li>Job-site proof creatives</li>
@@ -596,11 +596,11 @@ include __DIR__ . '/includes/page-banner.php';
       <article class="service-detail-card" data-level="sub" data-tags="pest-control" data-subs="social-ads" hidden>
         <div class="service-detail-media">
           <a href="/pest-control.php"><img loading="lazy" src="/assets/images/industry-pest-control-1.webp"
-              alt="Pest Control Social Ads"></a>
+              alt="Pest Control Social Media"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Pest Control</p>
-          <h2><a href="/pest-control.php">Social Ads</a></h2>
+          <h2><a href="/pest-control.php">Social Media</a></h2>
           <p>Seasonal campaigns that reach homeowners before pests show up.</p>
           <ul>
             <li>Pre-season promos</li>
@@ -673,11 +673,11 @@ include __DIR__ . '/includes/page-banner.php';
       <article class="service-detail-card" data-level="sub" data-tags="pool-services" data-subs="social-ads" hidden>
         <div class="service-detail-media">
           <a href="/pool-services.php"><img loading="lazy" src="/assets/images/industry-pool-services-1.webp"
-              alt="Pool Services Social Ads"></a>
+              alt="Pool Services Social Media"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Pool Services</p>
-          <h2><a href="/pool-services.php">Social Ads</a></h2>
+          <h2><a href="/pool-services.php">Social Media</a></h2>
           <p>Local campaigns that keep your brand in front of pool owners.</p>
           <ul>
             <li>Before/after pool creatives</li>
@@ -750,11 +750,11 @@ include __DIR__ . '/includes/page-banner.php';
       <article class="service-detail-card" data-level="sub" data-tags="landscaping" data-subs="social-ads" hidden>
         <div class="service-detail-media">
           <a href="/landscaping.php"><img loading="lazy" src="/assets/images/industry-landscaping-1.webp"
-              alt="Landscaping Social Ads"></a>
+              alt="Landscaping Social Media"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Landscaping</p>
-          <h2><a href="/landscaping.php">Social Ads</a></h2>
+          <h2><a href="/landscaping.php">Social Media</a></h2>
           <p>Visual campaigns that show off outdoor spaces you have built.</p>
           <ul>
             <li>Project showcase creatives</li>
@@ -823,11 +823,11 @@ include __DIR__ . '/includes/page-banner.php';
 
       <article class="service-detail-card" data-level="sub" data-tags="handyman" data-subs="social-ads" hidden>
         <div class="service-detail-media">
-          <a href="/handyman.php"><img loading="lazy" src="/assets/images/industry-handyman-1.webp" alt="Handyman Social Ads"></a>
+          <a href="/handyman.php"><img loading="lazy" src="/assets/images/industry-handyman-1.webp" alt="Handyman Social Media"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Handyman</p>
-          <h2><a href="/handyman.php">Social Ads</a></h2>
+          <h2><a href="/handyman.php">Social Media</a></h2>
           <p>Neighborhood campaigns that build a loyal local following.</p>
           <ul>
             <li>Before/after creatives</li>
@@ -900,11 +900,11 @@ include __DIR__ . '/includes/page-banner.php';
       <article class="service-detail-card" data-level="sub" data-tags="power-washing" data-subs="social-ads" hidden>
         <div class="service-detail-media">
           <a href="/power-washing.php"><img loading="lazy" src="/assets/images/industry-power-washing-1.webp"
-              alt="Power Washing Social Ads"></a>
+              alt="Power Washing Social Media"></a>
         </div>
         <div class="service-detail-body">
           <p class="service-detail-kicker">Power Washing</p>
-          <h2><a href="/power-washing.php">Social Ads</a></h2>
+          <h2><a href="/power-washing.php">Social Media</a></h2>
           <p>Short before/after video ads that stop the scroll.</p>
           <ul>
             <li>Before/after video creatives</li>
@@ -1244,7 +1244,7 @@ include __DIR__ . '/includes/page-banner.php';
           <a href="/social-media-advertising.php"><img loading="lazy" src="/assets/images/service-social-media.jpg" alt="Meta Ads"></a>
         </div>
         <div class="service-detail-body">
-          <p class="service-detail-kicker">Social Ads</p>
+          <p class="service-detail-kicker">Social Media</p>
           <h2><a href="/social-media-advertising.php">Meta Ads</a></h2>
           <p>Facebook &amp; Instagram campaigns built around creative and conversion.</p>
           <ul>
@@ -1261,7 +1261,7 @@ include __DIR__ . '/includes/page-banner.php';
           <a href="/social-media-advertising.php"><img loading="lazy" src="/assets/images/excel-spatial.webp" alt="LinkedIn Ads"></a>
         </div>
         <div class="service-detail-body">
-          <p class="service-detail-kicker">Social Ads</p>
+          <p class="service-detail-kicker">Social Media</p>
           <h2><a href="/social-media-advertising.php">LinkedIn Ads</a></h2>
           <p>B2B demand gen with precise targeting and sharp creative.</p>
           <ul>
@@ -1278,7 +1278,7 @@ include __DIR__ . '/includes/page-banner.php';
           <a href="/social-media-advertising.php"><img loading="lazy" src="/assets/images/excel-mobile.webp" alt="TikTok Ads"></a>
         </div>
         <div class="service-detail-body">
-          <p class="service-detail-kicker">Social Ads</p>
+          <p class="service-detail-kicker">Social Media</p>
           <h2><a href="/social-media-advertising.php">TikTok Ads</a></h2>
           <p>Native-feeling creatives and campaigns for attention-heavy feeds.</p>
           <ul>
@@ -1295,7 +1295,7 @@ include __DIR__ . '/includes/page-banner.php';
           <a href="/social-media-advertising.php"><img loading="lazy" src="/assets/images/mobile-app.webp" alt="Creative Testing"></a>
         </div>
         <div class="service-detail-body">
-          <p class="service-detail-kicker">Social Ads</p>
+          <p class="service-detail-kicker">Social Media</p>
           <h2><a href="/social-media-advertising.php">Creative Testing</a></h2>
           <p>Systematic creative tests that find winners faster.</p>
           <ul>
