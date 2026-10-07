@@ -10835,3 +10835,89 @@ html[data-palette] body .brand-card--more .brand-card-btn-alt {
 html[data-palette] body .brand-card--more .brand-card-btn-alt:hover {
   background: color-mix(in srgb, var(--pal-gold) 18%, transparent);
 }
+@media (min-width: 981px) and (max-width: 1536px) {
+  .hero-canvas .mockup-2,
+  .hero-canvas .mockup-3 {
+    display: none;
+  }
+}
+html[data-palette] body :is(.btn-lime, .faq-all-btn):is(:hover, :focus-visible) {
+  box-shadow: 0 14px 32px var(--btn-glow, transparent);
+}
+html[data-palette] body :is(.btn-outline-white, .excel-cta-call, .thank-btn-secondary, .brand-card-btn-alt, .form-commit-alt):is(:hover, :focus-visible) {
+  box-shadow: none;
+}
+@media (max-width: 1440px) {
+  html[data-palette] body .nav-pill > .btn-lime,
+  html[data-palette] body .nav-pill > .btn-lime:hover {
+    box-shadow: none;
+  }
+}
+html[data-palette] body .brand-card--more .brand-card-cta .btn-lime {
+  color: var(--pal-light);
+}
+html[data-palette] body .sticky-work-cta.is-on-dark {
+  color: var(--pal-light);
+}
+:root[data-palette="index2"]:not([data-theme="dark"]) :is(h1, h2, h3) :is(.heading-accent, .accent-blue, .accent-lime, .typewriter) {
+  text-shadow: 2px 3px 5px color-mix(in srgb, var(--pal-dark) 24%, transparent);
+}
+:root[data-palette="index2"]:not([data-theme="dark"]) :is(.hero-section, .home-work-section, .final-cta-section, .about-hero-box, .page-hero-box, .why-done, .services-cta-band, .brand-card--more, .contact-intro, .site-footer, .rail-card) :is(h1, h2, h3) :is(.heading-accent, .accent-blue, .accent-lime, .typewriter) {
+  text-shadow: none;
+}
+.brands-grid--groups .brand-card-points {
+  text-transform: none;
+  font-size: 13px;
+  letter-spacing: 0;
+}
+.brands-grid--groups .brand-card-fan {
+  container-type: inline-size;
+}
+.brands-grid--groups .fan-shot {
+  top: 50%;
+  left: 50%;
+  width: auto;
+  max-width: none;
+  height: 84%;
+  aspect-ratio: 9 / 16;
+}
+.brands-grid--groups .fan-shot-3 {
+  width: auto;
+  max-width: none;
+  height: 92%;
+}
+.brands-grid--groups .fan-shot-1 { transform: translate(-50%, -50%) translateX(-32cqw) rotate(-14deg); }
+.brands-grid--groups .fan-shot-2 { transform: translate(-50%, -50%) translateX(-17cqw) rotate(-7deg); }
+.brands-grid--groups .fan-shot-3 { transform: translate(-50%, -50%); }
+.brands-grid--groups .fan-shot-4 { transform: translate(-50%, -50%) translateX(17cqw) rotate(7deg); }
+.brands-grid--groups .fan-shot-5 { transform: translate(-50%, -50%) translateX(32cqw) rotate(14deg); }
+.brands-grid--groups .brand-card:hover .fan-shot-1 { transform: translate(-50%, -50%) translateX(-34cqw) rotate(-16deg); }
+.brands-grid--groups .brand-card:hover .fan-shot-2 { transform: translate(-50%, -50%) translateX(-18.5cqw) rotate(-8deg); }
+.brands-grid--groups .brand-card:hover .fan-shot-3 { transform: translate(-50%, -50%) scale(1.03); }
+.brands-grid--groups .brand-card:hover .fan-shot-4 { transform: translate(-50%, -50%) translateX(18.5cqw) rotate(8deg); }
+.brands-grid--groups .brand-card:hover .fan-shot-5 { transform: translate(-50%, -50%) translateX(34cqw) rotate(16deg); }
+.brands-grid--groups .fan-shot { height: min(84%, 54cqw); }
+.brands-grid--groups .fan-shot-3 { height: min(92%, 60cqw); }
+@media (max-width: 640px) {
+  .brands-grid--groups .brand-card-fan {
+    height: auto;
+    aspect-ratio: 1.55 / 1;
+  }
+}
+.brands-grid--groups .fan-shot { height: min(84%, 42cqw); }
+.brands-grid--groups .fan-shot-3 { height: min(92%, 47cqw); }
+.brands-grid--groups .fan-shot-1 { transform: translate(-50%, -50%) translateX(-31cqw) rotate(-13deg); }
+.brands-grid--groups .fan-shot-2 { transform: translate(-50%, -50%) translateX(-16cqw) rotate(-6deg); }
+.brands-grid--groups .fan-shot-4 { transform: translate(-50%, -50%) translateX(16cqw) rotate(6deg); }
+.brands-grid--groups .fan-shot-5 { transform: translate(-50%, -50%) translateX(31cqw) rotate(13deg); }
+.brands-grid--groups .brand-card:hover .fan-shot-1 { transform: translate(-50%, -50%) translateX(-32.5cqw) rotate(-15deg); }
+.brands-grid--groups .brand-card:hover .fan-shot-2 { transform: translate(-50%, -50%) translateX(-17.5cqw) rotate(-7deg); }
+.brands-grid--groups .brand-card:hover .fan-shot-4 { transform: translate(-50%, -50%) translateX(17.5cqw) rotate(7deg); }
+.brands-grid--groups .brand-card:hover .fan-shot-5 { transform: translate(-50%, -50%) translateX(32.5cqw) rotate(15deg); }
+@media (max-width: 640px) {
+  .brands-grid--groups .brand-card-fan { aspect-ratio: 1.9 / 1; }
+}
+.excel-card-media--hosting img {
+  object-fit: cover;
+  border-radius: 14px;
+}

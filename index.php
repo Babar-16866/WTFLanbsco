@@ -94,16 +94,16 @@ include __DIR__ . '/includes/header.php';
 
     <div class="hero-canvas" id="heroCanvas">
       <div class="float-mockup mockup-1" data-depth="0.03">
-        <img src="/assets/images/mockup-1.webp" alt="">
+        <img src="/assets/images/service-web-design.jpg" alt="">
       </div>
       <div class="float-mockup mockup-2" data-depth="0.05">
-        <img src="/assets/images/mockup-2.webp" alt="">
+        <img src="/assets/images/service-seo.jpg" alt="">
       </div>
       <div class="float-mockup mockup-3" data-depth="0.04">
-        <img src="/assets/images/mockup-3.webp" alt="">
+        <img src="/assets/images/service-social-media.jpg" alt="">
       </div>
       <div class="float-mockup mockup-4" data-depth="0.06">
-        <img src="/assets/images/mockup-main.webp" alt="">
+        <img src="/assets/images/service-google-ads.jpg" alt="">
       </div>
       <div class="hero-banner" data-depth="0.08">
         <img src="/assets/images/main-banner.webp" alt="WTF Labs" class="hero-banner-img" width="1041" height="1069" fetchpriority="high">
@@ -387,15 +387,22 @@ include __DIR__ . '/includes/header.php';
           <span class="brand-logo">And Many More!</span>
         </div>
         <div class="brand-card-head">
-          <h3>Can't Find Your Industry?</h3>
+          <h3>Can't find your industry?</h3>
           <p class="brand-card-points">Reach out to us to discuss your needs and how we can help you.</p>
         </div>
         <div class="brand-card-fan">
+          <!--
           <span class="fan-shot fan-shot-1 fan-word"><img loading="lazy" src="/assets/images/card4.webp" alt=""><span class="fan-word-text" aria-hidden="true"><span>C</span><span>A</span><span>N</span><span>T</span></span></span>
           <span class="fan-shot fan-shot-2 fan-word"><img loading="lazy" src="/assets/images/card4_01.webp" alt=""><span class="fan-word-text" aria-hidden="true"><span>F</span><span>I</span><span>N</span><span>D</span></span></span>
           <span class="fan-shot fan-shot-3 fan-word"><img loading="lazy" src="/assets/images/card4_03.webp" alt=""><span class="fan-word-text fan-word-text--grid" aria-hidden="true"><span>Y</span><span>O</span><span>U</span><span>R</span></span></span>
           <span class="fan-shot fan-shot-4 fan-word"><img loading="lazy" src="/assets/images/card4_02.webp" alt=""><span class="fan-word-text fan-word-text--long" aria-hidden="true"><span>I</span><span>N</span><span>D</span><span>U</span><span>S</span><span>T</span><span>R</span><span>Y</span></span></span>
           <span class="fan-shot fan-shot-5 fan-word"><img loading="lazy" src="/assets/images/card4.webp" alt=""><span class="fan-word-text fan-word-text--mark" aria-hidden="true"><span>?</span></span></span>
+          -->
+          <img loading="lazy" class="fan-shot fan-shot-1" src="/assets/images/card4.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-2" src="/assets/images/card4_01.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-3" src="/assets/images/card4_03.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-4" src="/assets/images/card4_02.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-5" src="/assets/images/card4.webp" alt="">
         </div>
         <div class="brand-card-cta brand-card-cta--duo">
           <a href="mailto:info@wtflabsco.com" class="btn btn-lime btn-sm">Email Us</a>
@@ -521,6 +528,17 @@ include __DIR__ . '/includes/header.php';
             </div>
           </a>
         </div>
+
+        <a href="/contact.php" class="excel-card excel-card--tall"
+          style="--card-grad:var(--grad-social)">
+          <div class="excel-card-copy">
+            <h3>Website Hosting &amp; Maintenance</h3>
+            <p>Fast, secure hosting with updates, backups and monitoring handled for you, so your site stays online and earning.</p>
+          </div>
+          <div class="excel-card-media excel-card-media--phones excel-card-media--hosting">
+            <img loading="lazy" src="/assets/images/excel-hosting.webp" alt="Website hosting and maintenance">
+          </div>
+        </a>
 
         <!--
         <a href="/services.php" class="excel-card excel-card--tall excel-card--more"
