@@ -19,7 +19,7 @@ include __DIR__ . '/includes/page-banner.php';
 ?>
 
 <!-- SERVICES SHOWCASE -->
-<section class="svc-showcase">
+<section class="svc-showcase" id="featured-services">
   <div class="container">
     <div class="section-header center reveal">
       <p class="subheading">Featured Services</p>

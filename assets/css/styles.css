@@ -10921,3 +10921,19 @@ html[data-palette] body .sticky-work-cta.is-on-dark {
   object-fit: cover;
   border-radius: 14px;
 }
+
+.home-works-grid .work-card.is-over-limit {
+  display: none;
+}
+.home-work-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+.works-show-more[hidden] {
+  display: none;
+}
+.svc-showcase {
+  scroll-margin-top: 110px;
+}

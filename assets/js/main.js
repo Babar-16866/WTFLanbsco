@@ -659,6 +659,7 @@ window.addEventListener('load', () => {
       { id: 'product-sites', label: 'Product Sites' },
       { id: 'redesigns', label: 'Redesigns' }
     ],
+    /*
     'web-development': [
       { id: 'all', label: 'All' },
       { id: 'wordpress', label: 'WordPress' },
@@ -668,6 +669,7 @@ window.addEventListener('load', () => {
       { id: 'web-app', label: 'Web App' },
       { id: 'custom-web', label: 'Custom Web' }
     ],
+    */
     seo: [
       { id: 'all', label: 'All SEO' },
       { id: 'technical-seo', label: 'Technical SEO' },
@@ -755,6 +757,7 @@ window.addEventListener('load', () => {
 
       const empty = document.getElementById(gridId + 'Empty');
       if (empty) empty.hidden = !!grid.querySelector(cardSelector + ':not([hidden])');
+      grid.dispatchEvent(new CustomEvent('works:filtered'));
     }
 
     // Smooth
@@ -993,6 +996,13 @@ window.addEventListener('load', () => {
   function selectFromHash() {
     const id = decodeURIComponent(window.location.hash.slice(1));
     if (!id) return;
+    const section = document.getElementById(id);
+    if (section && section.classList.contains('svc-showcase')) {
+      const jump = () => window.scrollTo({ top: section.getBoundingClientRect().top + window.scrollY - 110, behavior: 'instant' });
+      jump();
+      window.addEventListener('load', jump, { once: true });
+      return;
+    }
     const showcase = document.querySelector('.svc-showcase');
     if (showcase && document.querySelector('#servicesFilters [data-filter="' + CSS.escape(id) + '"]')) showcase.hidden = true;
     ['servicesFilters', 'industriesFilters', 'worksFilters'].forEach((filtersId) => {
@@ -1301,7 +1311,7 @@ window.addEventListener('load', () => {
       const padRight = parseFloat(getComputedStyle(track).paddingRight) || 0;
       const viewport = document.documentElement.clientWidth;
       distance = last ? Math.max(0, last.offsetLeft + last.offsetWidth + padRight - viewport) : 0;
-      isStatic = reduceMotion.matches || distance <= 0;
+      isStatic = reduceMotion.matches || distance <= 0 || window.matchMedia('(max-width: 768px)').matches;
       section.classList.toggle('is-static', isStatic);
       if (isStatic) {
         cards.forEach((card) => card.classList.add('is-active'));
@@ -1352,7 +1362,7 @@ window.addEventListener('load', () => {
       const next = current + dir;
       if (next < 0 || next > cards.length - 1) return false;
       current = next;
-      busyUntil = now + 700;
+      busyUntil = now + 520;
       section.classList.add('is-stepping');
       window.scrollTo({ top: Math.round(cardY(current)), behavior: 'instant' });
       update();
@@ -1361,35 +1371,37 @@ window.addEventListener('load', () => {
     }
 
     let lastWheel = 0;
-    let gesture = false;
+    let lastAbs = 0;
+    let stepAt = 0;
     window.addEventListener('wheel', (e) => {
       if (e.defaultPrevented || isStatic || Math.abs(e.deltaY) < Math.abs(e.deltaX)) return;
       const now = performance.now();
       const dir = e.deltaY > 0 ? 1 : -1;
+      const abs = Math.abs(e.deltaY);
+      const fresh = now - lastWheel > 110 || abs > lastAbs * 1.4 || (abs === lastAbs && abs >= 50);
+      lastWheel = now;
+      lastAbs = abs;
       const b = bounds();
       const y = window.scrollY;
-      const quiet = now - lastWheel > 220;
-      lastWheel = now;
-      if (gesture && (!quiet || now < busyUntil)) {
-        if (y >= b.start - 2 && y <= b.end + 2) {
-          e.preventDefault();
-          return;
-        }
-      }
-      gesture = false;
-      const crossIn = (dir > 0 && y < b.start - 2 && y + e.deltaY * 1.5 + 140 >= b.start) || (dir < 0 && y > b.end + 2 && y + e.deltaY * 1.5 - 140 <= b.end);
+      const reach = Math.max(abs, 100) * 1.5 + 260;
+      const crossIn = (dir > 0 && y < b.start - 2 && b.start - y <= reach) || (dir < 0 && y > b.end + 2 && y - b.end <= reach);
       if (crossIn) {
         e.preventDefault();
-        gesture = true;
-        busyUntil = now + 650;
+        if (now < busyUntil) return;
+        busyUntil = now + 520;
+        stepAt = now;
         current = dir > 0 ? 0 : cards.length - 1;
         window.scrollTo({ top: Math.round(dir > 0 ? b.start : b.end), behavior: 'instant' });
         update();
         return;
       }
-      if (!inZone(dir)) return;
+      if (!inZone(dir)) {
+        if (!fresh && now - stepAt < 1200 && y >= b.start - 2 && y <= b.end + 2) e.preventDefault();
+        return;
+      }
       e.preventDefault();
-      if (go(dir)) gesture = true;
+      if (now < busyUntil || !fresh) return;
+      if (go(dir)) stepAt = now;
     }, { passive: false });
 
     let lastY = window.scrollY;
@@ -1639,10 +1651,12 @@ window.addEventListener('load', () => {
   let ready = !hero;
   let footerVisible = false;
   let contactVisible = false;
+  let workVisible = false;
   const contact = document.getElementById('contact');
+  const workSection = document.querySelector('.home-work-section');
 
   function sync() {
-    const show = ready && !footerVisible && !contactVisible;
+    const show = ready && !footerVisible && !contactVisible && !workVisible;
     cta.classList.toggle('is-visible', show);
     cta.setAttribute('aria-hidden', show ? 'false' : 'true');
     cta.tabIndex = show ? 0 : -1;
@@ -1669,6 +1683,13 @@ window.addEventListener('load', () => {
       contactVisible = entries[0].isIntersecting;
       sync();
     }, { rootMargin: '0px 0px -25% 0px' }).observe(contact);
+  }
+
+  if (workSection) {
+    new IntersectionObserver((entries) => {
+      workVisible = entries[0].isIntersecting;
+      sync();
+    }, { rootMargin: '0px 0px -90px 0px' }).observe(workSection);
   }
 
   ['allowCookies', 'rejectCookies'].forEach((id) => {
@@ -2194,4 +2215,37 @@ document.addEventListener('click', (e) => {
     setTimeout(queue, 500);
   }).observe(cta, { attributes: true, attributeFilter: ['class'] });
   queue();
+})();
+
+// Show more
+(function initShowMore() {
+  const LIMIT = 6;
+  document.querySelectorAll('#homeWorksGrid').forEach((grid) => {
+    const cta = grid.closest('.container')?.querySelector('.home-work-cta');
+    if (!cta) return;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'btn btn-lime btn-lg works-show-more';
+    btn.textContent = 'Show More';
+    btn.hidden = true;
+    cta.appendChild(btn);
+    let expanded = false;
+
+    function apply() {
+      const visible = Array.from(grid.querySelectorAll('.work-card')).filter((card) => !card.hidden);
+      visible.forEach((card, i) => card.classList.toggle('is-over-limit', !expanded && i >= LIMIT));
+      grid.querySelectorAll('.work-card[hidden]').forEach((card) => card.classList.remove('is-over-limit'));
+      btn.hidden = expanded || visible.length <= LIMIT;
+    }
+
+    grid.addEventListener('works:filtered', () => {
+      expanded = false;
+      apply();
+    });
+    btn.addEventListener('click', () => {
+      expanded = true;
+      apply();
+    });
+    apply();
+  });
 })();
