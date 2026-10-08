@@ -76,7 +76,7 @@ include __DIR__ . '/contact-section.php';
         <a href="mailto:hello@wtflabs.com">hello@wtflabs.com</a>
         <a href="tel:+15550001234">+1 (555) 000-1234</a>
         <a href="https://wa.me/15550001234" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-        <a href="/contact.php" data-open-popup>Get a quote</a>
+        <a href="/contact.php" data-open-popup>Free Consultation</a>
       </div>
       -->
       <div>
@@ -95,6 +95,10 @@ include __DIR__ . '/contact-section.php';
     </div>
     <div class="container footer-copy"><p>&copy; <?php echo date('Y'); ?> WTF Labs. All rights reserved.</p></div>
   </footer>
+
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top" hidden>
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 16V4M4.5 9.5 10 4l5.5 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
 
   <?php if ($current_page !== 'works'): ?>
   <!-- Sticky work CTA -->

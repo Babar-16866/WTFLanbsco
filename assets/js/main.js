@@ -167,6 +167,18 @@ document.querySelectorAll('.faq-list').forEach((list) => {
         item.classList.add('is-open');
         item.querySelector('.faq-trigger')?.setAttribute('aria-expanded', 'true');
       }
+      if (!isOpen) {
+        setTimeout(() => {
+          const header = document.querySelector('.site-header');
+          const top = (header ? header.getBoundingClientRect().bottom : 0) + 16;
+          const r = item.getBoundingClientRect();
+          const bottom = window.innerHeight - 20;
+          let delta = 0;
+          if (r.top < top) delta = r.top - top;
+          else if (r.bottom > bottom) delta = Math.min(r.bottom - bottom, r.top - top);
+          if (Math.abs(delta) > 2) window.scrollBy({ top: delta, behavior: 'smooth' });
+        }, 660);
+      }
     });
   });
 });
@@ -947,7 +959,7 @@ window.addEventListener('load', () => {
         show = level === 'sub' && hasToken(card.getAttribute('data-tags') || '', indIndustry);
       }
       card.hidden = !show;
-    });
+    });    indGrid.dispatchEvent(new CustomEvent('industries:filtered'));
   }
 
 
@@ -1621,6 +1633,27 @@ window.addEventListener('load', () => {
   }
 
   liveFrame?.addEventListener('load', markLoaded);
+  const liveProgress = live ? live.querySelector('.live-modal-progress') : null;
+  liveFrame?.addEventListener('load', () => {
+    if (!liveProgress) return;
+    liveProgress.style.height = '0';
+    let win = null;
+    try {
+      win = liveFrame.contentWindow;
+      void win.document.documentElement;
+    } catch (e) {
+      win = null;
+    }
+    liveProgress.hidden = !win;
+    if (!win) return;
+    const sync = () => {
+      const doc = win.document.documentElement;
+      const max = doc.scrollHeight - win.innerHeight;
+      liveProgress.style.height = (max > 0 ? (win.scrollY / max) * 100 : 0) + '%';
+    };
+    win.addEventListener('scroll', sync, { passive: true });
+    sync();
+  });
   live?.querySelectorAll('[data-live-close]').forEach((el) => el.addEventListener('click', closeLive));
 
   function openCard(card) {
@@ -1673,7 +1706,7 @@ window.addEventListener('load', () => {
   const workSection = document.querySelector('.home-work-section');
 
   function sync() {
-    const show = ready && !footerVisible && !contactVisible && !workVisible;
+    const show = ready && !footerVisible && !contactVisible && !workVisible && !document.body.classList.contains('street-join-active');
     cta.classList.toggle('is-visible', show);
     cta.setAttribute('aria-hidden', show ? 'false' : 'true');
     cta.tabIndex = show ? 0 : -1;
@@ -2077,14 +2110,77 @@ window.addEventListener('load', () => {
       });
     }
 
+    const note = form.querySelector('.form-step-note');
+    let noteBusy = false;
+
+    function escapeText(value) {
+      const d = document.createElement('div');
+      d.textContent = value;
+      return d.innerHTML;
+    }
+
+    function fieldText(name) {
+      const el = form.elements[name];
+      if (!el) return '';
+      if (el.tagName === 'SELECT') {
+        const o = el.options[el.selectedIndex];
+        return o && !o.disabled ? o.textContent.trim() : '';
+      }
+      return String(el.value || '').trim();
+    }
+
+    function summaryHtml() {
+      const industry = fieldText('industry') === 'Other' ? fieldText('industry_other') : fieldText('industry');
+      const rows = [
+        ['Industry', industry],
+        ['Service', fieldText('help')],
+        ['Investment', fieldText('budget')],
+        ['Heard about us', fieldText('heard_about')]
+      ].filter((r) => r[1]);
+      return '<p class="form-step-note-title">Here is what we have so far</p><ul class="form-step-note-list">' +
+        rows.map((r) => '<li><span>' + r[0] + '</span><strong>' + escapeText(r[1]) + '</strong></li>').join('') + '</ul>';
+    }
+
+    function flash(html, ms, then) {
+      if (!note) {
+        then();
+        return;
+      }
+      noteBusy = true;
+      panels.forEach((panel) => { panel.hidden = true; });
+      note.innerHTML = html;
+      note.hidden = false;
+      note.classList.remove('is-in');
+      void note.offsetWidth;
+      note.classList.add('is-in');
+      setTimeout(() => {
+        note.hidden = true;
+        note.classList.remove('is-in');
+        noteBusy = false;
+        then();
+      }, ms);
+    }
+
     form.querySelectorAll('[data-step-next]').forEach((btn) => {
       btn.addEventListener('click', () => {
+        if (noteBusy) return;
         const panel = btn.closest('.form-step');
         if (!valid(panel)) return;
-        sendStep(current);
-        show(current + 1);
-        const top = (wrap || form).getBoundingClientRect().top;
-        if (top < 80) window.scrollBy({ top: top - 100, behavior: 'smooth' });
+        const from = current;
+        sendStep(from);
+        const go = () => {
+          show(from + 1);
+          const top = (wrap || form).getBoundingClientRect().top;
+          if (top < 80) window.scrollBy({ top: top - 100, behavior: 'smooth' });
+        };
+        if (from === 1) {
+          const first = fieldText('name').split(/\s+/)[0];
+          flash('<p class="form-step-note-title">Great! Nice to meet you ' + escapeText(first) + ' \u{1F60A}</p>', 2200, go);
+        } else if (from === 2) {
+          flash(summaryHtml(), 3500, go);
+        } else {
+          go();
+        }
       });
     });
 
@@ -2122,50 +2218,59 @@ window.addEventListener('load', () => {
     if (runaway) {
       let dx = 0;
       let dy = 0;
-      function flee(px, py) {
+      let homeX = 0;
+      let homeY = 0;
+      let backTimer = 0;
+      const RANGE = 120;
+      const MAX = 70;
+
+      function measureHome() {
+        const r = runaway.getBoundingClientRect();
+        homeX = r.left - dx + r.width / 2;
+        homeY = r.top - dy + r.height / 2;
+      }
+
+      function place(x, y) {
         const area = runaway.closest('.form-commit') || form;
         const box = area.getBoundingClientRect();
         const w = runaway.offsetWidth;
         const h = runaway.offsetHeight;
-        const prev = runaway.style.transform;
-        runaway.style.transition = 'none';
-        runaway.style.transform = 'none';
-        const home = runaway.getBoundingClientRect();
-        runaway.style.transform = prev;
-        void runaway.offsetWidth;
-        runaway.style.transition = '';
-        const pad = 10;
-        const minX = box.left + pad;
-        const maxX = box.right - w - pad;
-        const minY = box.top + pad;
-        const maxY = box.bottom - h - pad;
-        let best = null;
-        const others = Array.from(area.querySelectorAll('.btn')).filter((el) => el !== runaway).map((el) => el.getBoundingClientRect());
-        for (let i = 0; i < 60; i++) {
-          const x = minX + Math.random() * Math.max(0, maxX - minX);
-          const y = minY + Math.random() * Math.max(0, maxY - minY);
-          const hit = others.some((o) => x < o.right + 6 && x + w > o.left - 6 && y < o.bottom + 6 && y + h > o.top - 6);
-          if (hit) continue;
-          const d = Math.hypot(x + w / 2 - px, y + h / 2 - py);
-          if (!best || d > best.d) best = { x, y, d };
-        }
-        if (!best) return;
-        dx = best.x - home.left;
-        dy = best.y - home.top;
+        const minX = box.left + w / 2 - homeX;
+        const maxX = box.right - w / 2 - homeX;
+        const minY = box.top + h / 2 - homeY;
+        const maxY = box.bottom - h / 2 - homeY;
+        dx = Math.max(minX, Math.min(maxX, x));
+        dy = Math.max(minY, Math.min(maxY, y));
         runaway.style.transform = 'translate(' + Math.round(dx) + 'px, ' + Math.round(dy) + 'px)';
       }
+
+      function nudge(px, py) {
+        measureHome();
+        const cx = homeX + dx;
+        const cy = homeY + dy;
+        let vx = cx - px;
+        let vy = cy - py;
+        const dist = Math.hypot(vx, vy) || 1;
+        if (dist > RANGE) return;
+        vx /= dist;
+        vy /= dist;
+        const push = (RANGE - dist) * 0.6 + 10;
+        place(Math.max(-MAX * 2, Math.min(MAX * 2, dx + vx * push)), Math.max(-MAX, Math.min(MAX, dy + vy * push)));
+        clearTimeout(backTimer);
+        backTimer = setTimeout(() => place(0, 0), 1400);
+      }
+
       form.addEventListener('pointermove', (e) => {
         if (runaway.closest('[hidden]')) return;
-        const r = runaway.getBoundingClientRect();
-        const near = e.clientX > r.left - 60 && e.clientX < r.right + 60 && e.clientY > r.top - 50 && e.clientY < r.bottom + 50;
-        if (near) flee(e.clientX, e.clientY);
+        nudge(e.clientX, e.clientY);
       });
       ['pointerdown', 'touchstart', 'mousedown', 'click', 'focus'].forEach((type) => {
         runaway.addEventListener(type, (e) => {
           e.preventDefault();
           e.stopPropagation();
           const p = e.touches ? e.touches[0] : e;
-          flee(p.clientX || 0, p.clientY || 0);
+          measureHome();
+          nudge(p.clientX || homeX, (p.clientY || homeY) + 1);
           runaway.blur();
         }, { passive: false });
       });
@@ -2265,4 +2370,91 @@ document.addEventListener('click', (e) => {
     });
     apply();
   });
+})();
+
+// Back to top
+(function initBackToTop() {
+  const btn = document.getElementById('backToTop');
+  if (!btn) return;
+  const contact = document.getElementById('contact');
+  const footer = document.querySelector('.site-footer');
+  let trigger = document.querySelector('.final-cta-section');
+  if (!trigger) {
+    const last = contact || footer;
+    let prev = last ? last.previousElementSibling : null;
+    while (prev && (prev.tagName !== 'SECTION' || prev.offsetHeight === 0)) prev = prev.previousElementSibling;
+    trigger = prev || last;
+  }
+  if (!trigger) return;
+  btn.hidden = false;
+  let ticking = false;
+  function sync() {
+    ticking = false;
+    const show = trigger.getBoundingClientRect().top < window.innerHeight * 0.85;
+    btn.classList.toggle('is-visible', show);
+    btn.tabIndex = show ? 0 : -1;
+  }
+  window.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(sync);
+  }, { passive: true });
+  window.addEventListener('resize', sync);
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  sync();
+})();
+
+// Join handoff
+(function initJoinHandoff() {
+  const section = document.querySelector('.street-section');
+  const real = section ? section.querySelector('.street-cta .btn:not(.street-join-float)') : null;
+  const float = section ? section.querySelector('.street-join-float') : null;
+  if (!real || !float) return;
+  document.body.appendChild(float);
+  let active = false;
+  let ticking = false;
+  function sync() {
+    ticking = false;
+    const s = section.getBoundingClientRect();
+    const r = real.getBoundingClientRect();
+    const dockY = window.innerHeight - (window.innerWidth <= 640 ? 16 : 24) - real.offsetHeight;
+    const started = s.top < window.innerHeight * 0.75 && s.bottom > 0;
+    const next = started && r.top > dockY + 2;
+    if (next !== active) {
+      active = next;
+      document.body.classList.toggle('street-join-active', active);
+      float.classList.toggle('is-visible', active);
+      window.dispatchEvent(new Event('resize'));
+    }
+  }
+  window.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(sync);
+  }, { passive: true });
+  sync();
+})();
+
+// Industries show more
+(function initIndustriesShowMore() {
+  const LIMIT = 4;
+  const grid = document.getElementById('industriesGrid');
+  const btn = document.getElementById('industriesShowMore');
+  if (!grid || !btn) return;
+  let expanded = false;
+  function apply() {
+    const visible = Array.from(grid.querySelectorAll('.service-detail-card')).filter((card) => !card.hidden);
+    grid.querySelectorAll('.service-detail-card').forEach((card) => card.classList.remove('is-over-limit'));
+    visible.forEach((card, i) => card.classList.toggle('is-over-limit', !expanded && i >= LIMIT));
+    btn.hidden = expanded || visible.length <= LIMIT;
+  }
+  grid.addEventListener('industries:filtered', () => {
+    expanded = false;
+    apply();
+  });
+  btn.addEventListener('click', () => {
+    expanded = true;
+    apply();
+  });
+  apply();
 })();

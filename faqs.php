@@ -27,8 +27,8 @@ include __DIR__ . '/includes/page-banner.php';
     </div>
 
     <div class="faq-list reveal">
-      <div class="faq-item is-open">
-        <button class="faq-trigger" type="button" aria-expanded="true">
+      <div class="faq-item">
+        <button class="faq-trigger" type="button" aria-expanded="false">
           <span class="faq-num">01</span>
           <span class="faq-question">How much does a website project cost?</span>
           <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
@@ -167,8 +167,8 @@ include __DIR__ . '/includes/page-banner.php';
       <div class="faq-service-panels" id="faqServicePanels">
         <div class="faq-service-panel is-active" data-faq-panel="graphic-design" role="tabpanel">
           <div class="faq-list">
-            <div class="faq-item is-open">
-              <button class="faq-trigger" type="button" aria-expanded="true">
+            <div class="faq-item">
+              <button class="faq-trigger" type="button" aria-expanded="false">
                 <span class="faq-num">01</span>
                 <span class="faq-question">What is included in a graphic design engagement?</span>
                 <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
@@ -196,8 +196,8 @@ include __DIR__ . '/includes/page-banner.php';
 
         <div class="faq-service-panel" data-faq-panel="web-design" role="tabpanel" hidden>
           <div class="faq-list">
-            <div class="faq-item is-open">
-              <button class="faq-trigger" type="button" aria-expanded="true">
+            <div class="faq-item">
+              <button class="faq-trigger" type="button" aria-expanded="false">
                 <span class="faq-num">01</span>
                 <span class="faq-question">Do you design mobile and desktop?</span>
                 <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
@@ -225,8 +225,8 @@ include __DIR__ . '/includes/page-banner.php';
 
         <div class="faq-service-panel" data-faq-panel="web-development" role="tabpanel" hidden>
           <div class="faq-list">
-            <div class="faq-item is-open">
-              <button class="faq-trigger" type="button" aria-expanded="true">
+            <div class="faq-item">
+              <button class="faq-trigger" type="button" aria-expanded="false">
                 <span class="faq-num">01</span>
                 <span class="faq-question">Which CMS options do you support?</span>
                 <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
@@ -254,8 +254,8 @@ include __DIR__ . '/includes/page-banner.php';
 
         <div class="faq-service-panel" data-faq-panel="seo" role="tabpanel" hidden>
           <div class="faq-list">
-            <div class="faq-item is-open">
-              <button class="faq-trigger" type="button" aria-expanded="true">
+            <div class="faq-item">
+              <button class="faq-trigger" type="button" aria-expanded="false">
                 <span class="faq-num">01</span>
                 <span class="faq-question">Is SEO a one-time project?</span>
                 <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
@@ -283,8 +283,8 @@ include __DIR__ . '/includes/page-banner.php';
 
         <div class="faq-service-panel" data-faq-panel="social-media-advertising" role="tabpanel" hidden>
           <div class="faq-list">
-            <div class="faq-item is-open">
-              <button class="faq-trigger" type="button" aria-expanded="true">
+            <div class="faq-item">
+              <button class="faq-trigger" type="button" aria-expanded="false">
                 <span class="faq-num">01</span>
                 <span class="faq-question">Which social platforms do you run?</span>
                 <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
@@ -312,8 +312,8 @@ include __DIR__ . '/includes/page-banner.php';
 
         <div class="faq-service-panel" data-faq-panel="google-ads" role="tabpanel" hidden>
           <div class="faq-list">
-            <div class="faq-item is-open">
-              <button class="faq-trigger" type="button" aria-expanded="true">
+            <div class="faq-item">
+              <button class="faq-trigger" type="button" aria-expanded="false">
                 <span class="faq-num">01</span>
                 <span class="faq-question">Do you rebuild messy accounts?</span>
                 <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
@@ -341,8 +341,8 @@ include __DIR__ . '/includes/page-banner.php';
 
         <div class="faq-service-panel" data-faq-panel="digital-marketing" role="tabpanel" hidden>
           <div class="faq-list">
-            <div class="faq-item is-open">
-              <button class="faq-trigger" type="button" aria-expanded="true">
+            <div class="faq-item">
+              <button class="faq-trigger" type="button" aria-expanded="false">
                 <span class="faq-num">01</span>
                 <span class="faq-question">Is this only paid ads?</span>
                 <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>

@@ -9,7 +9,7 @@ include __DIR__ . '/includes/header.php';
 $banner_kicker = 'Contact';
 $banner_h1 = 'Let\'s discuss your <span class="about-hero-accent">next website</span>';
 $banner_lead = 'Tell us about your goals — we\'ll help you define the right next step. Real replies, usually within one business day.';
-$banner_primary_label = 'Get a quote';
+$banner_primary_label = 'Free Consultation';
 $banner_secondary_label = 'WhatsApp';
 $banner_secondary_href = 'https://wa.me/15550001234';
 $banner_image = '/assets/images/people-office.jpg';
@@ -132,8 +132,8 @@ include __DIR__ . '/includes/page-banner.php';
       <h2>Quick answers while you <span class="heading-accent">reach out</span></h2>
     </div>
     <div class="faq-list reveal">
-      <div class="faq-item is-open">
-        <button class="faq-trigger" type="button" aria-expanded="true">
+      <div class="faq-item">
+        <button class="faq-trigger" type="button" aria-expanded="false">
           <span class="faq-num">01</span>
           <span class="faq-question">How much does a website project cost?</span>
           <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>

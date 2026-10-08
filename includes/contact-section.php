@@ -12,7 +12,7 @@ if (!empty($hide_contact_section)) {
     <div class="contact-layout reveal">
       <div class="contact-intro">
         <?php if (($page_palette ?? '') === 'index2'): ?>
-        <h2>Let's discuss your <span>next project</span>.</h2>
+        <h2>Let's have a <span>conversation</span></h2>
         <?php else: ?>
         <h2>Let's discuss your <span>next website</span>.</h2>
         <?php endif; ?>
@@ -76,18 +76,19 @@ if (!empty($hide_contact_section)) {
           <input type="hidden" name="step" value="1">
           <input type="hidden" name="lead_id" value="">
           <div class="form-step" data-step="1">
-            <p class="form-step-title">What industry do you operate in?</p>
+            <p class="form-step-title">Let's start here</p>
             <div class="field"><label>Full name</label><input type="text" name="name" required autocomplete="name" placeholder="Jane Doe"></div>
             <div class="contact-form-row">
               <div class="field"><label>Phone</label><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+1 (555) 000-1234"></div>
               <div class="field"><label>Email</label><input type="email" name="email" required autocomplete="email" placeholder="jane@company.com"></div>
             </div>
+            <div class="field"><label>What industry do you operate in?</label><input type="text" name="industry_operate" placeholder="e.g. Roofing"></div>
             <button type="button" class="btn btn-lime btn-lg btn-block" data-step-next>Next</button>
           </div>
           <div class="form-step" data-step="2" hidden>
-            <p class="form-step-title">Which service are you interested in?</p>
+            <p class="form-step-title">Tell us a little more so we understand your current situation...</p>
             <div class="contact-form-row">
-              <div class="field"><label>Industry</label>
+              <div class="field"><label>Which industry are you in?</label>
                 <select name="industry" required data-other-select>
                   <option value="" disabled selected>Select your industry</option>
                 <option>Remodelers</option>
@@ -105,27 +106,36 @@ if (!empty($hide_contact_section)) {
               <div class="field"><label>Which service are you interested in?</label>
                 <select name="help" required>
                   <option value="" disabled selected>Select a service</option>
-                <option>Web Design &amp; Development</option>
-                <option>SEO &amp; Local Search</option>
-                <option>Google Ads</option>
-                <option>Social Media Advertising</option>
-                <option>Branding &amp; Creative</option>
-                <option>Full-Service Digital Marketing</option>
+                  <option>New Website</option>
+                  <option>Old Website Redesign</option>
+                  <option>Digital Marketing</option>
+                  <option>I&#39;d like to discuss and decide</option>
                 </select>
               </div>
             </div>
             <div class="field form-other-field" hidden><label>Your industry</label><input type="text" name="industry_other" placeholder="Type your industry"></div>
             <div class="contact-form-row">
-              <div class="field"><label>Budget</label>
+              <div class="field"><label>How much is a reasonable investment for your business growth?</label>
                 <select name="budget" required>
                   <option value="" disabled selected>Select a budget</option>
-                <option>10k-20k</option>
-                <option>20k-50k</option>
-                <option>50k-100k</option>
-                <option>100k+</option>
+                  <option>$2,000 - $3,500</option>
+                  <option>$3,500 - $5,000</option>
+                  <option>$5,000 - $10,000</option>
+                  <option>I am not sure. I&#39;d like to discuss.</option>
                 </select>
               </div>
-              <div class="field"><label>How did you hear about us?</label><input type="text" name="heard_about" placeholder="Google, referral, social media..."></div>
+              <div class="field"><label>How did you hear about us?</label>
+                <select name="heard_about">
+                  <option value="" disabled selected>Select an option</option>
+                  <option>Instagram</option>
+                  <option>TikTok</option>
+                  <option>YouTube</option>
+                  <option>Google Search</option>
+                  <option>Referred by someone</option>
+                  <option>Facebook</option>
+                  <option>Other</option>
+                </select>
+              </div>
             </div>
             <button type="button" class="btn btn-lime btn-lg btn-block" data-step-next>Next</button>
           </div>
@@ -138,6 +148,7 @@ if (!empty($hide_contact_section)) {
               <button type="submit" class="btn btn-lg form-commit-alt" name="commitment" value="Not committed">Not Committed</button>
             </div>
           </div>
+          <div class="form-step-note" hidden aria-live="polite"></div>
           <p class="form-ok hidden" id="formOk">Thank you! Your submission has been received!</p>
         </form>
       </div>

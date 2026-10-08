@@ -17,6 +17,12 @@ $sites = [
   'va-loan-nerd' => 'https://www.thevaloannerd.com/',
   'bestie-media' => 'https://www.bestiemedia.co/',
   'excel-remodeling' => 'https://www.excelremodeling.net/',
+  'austin-pressure-washing-and-roof-cleanin' => 'https://austinroofcleaning.net/',
+  'summit-pool-and-spa' => 'https://summitpoolservice.com/',
+  'asa-pools-and-hot-tubs' => 'https://asapoolservice.com/',
+  'tri-miami-handyman-services' => 'https://trimiamihandymanservices.com/',
+  'extreme-handyman-services' => 'https://www.theextremehandyman.com/',
+  'mns-plumbing' => 'https://www.mnsplumbing.com/',
 ];
 
 $slug = (string)($_GET['site'] ?? '');

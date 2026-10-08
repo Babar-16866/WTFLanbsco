@@ -171,7 +171,7 @@ include __DIR__ . '/includes/testimonialslider.php';
         <h3>Let's discuss your next SEO project</h3>
         <p>We'll help you define the right next step.</p>
       </div>
-      <a href="/contact.php" class="btn btn-lime btn-lg">Get a quote</a>
+      <a href="/contact.php" class="btn btn-lime btn-lg">Free Consultation</a>
     </div>
   </div>
 </section>
@@ -183,8 +183,8 @@ include __DIR__ . '/includes/testimonialslider.php';
       <h2>Questions <span class="heading-accent">about SEO</span></h2>
     </div>
     <div class="faq-list reveal">
-      <div class="faq-item is-open">
-        <button class="faq-trigger" type="button" aria-expanded="true">
+      <div class="faq-item">
+        <button class="faq-trigger" type="button" aria-expanded="false">
           <span class="faq-num">01</span>
           <span class="faq-question">Is SEO a one-time project?</span>
           <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
@@ -357,8 +357,8 @@ include __DIR__ . '/includes/testimonialslider.php';
       <h2 class="home-title">Questions worth answering before you make the next move.</h2>
     </div>
     <div class="faq-list reveal">
-      <div class="faq-item is-open">
-        <button class="faq-trigger" type="button" aria-expanded="true">
+      <div class="faq-item">
+        <button class="faq-trigger" type="button" aria-expanded="false">
           <span class="faq-num">01</span>
           <span class="faq-question">Is local SEO just about ranking higher on Google?</span>
           <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>

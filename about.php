@@ -185,8 +185,8 @@ include __DIR__ . '/includes/testimonialslider.php';
       <h2>Still have questions?</h2>
     </div>
     <div class="faq-list reveal">
-      <div class="faq-item is-open">
-        <button class="faq-trigger" type="button" aria-expanded="true">
+      <div class="faq-item">
+        <button class="faq-trigger" type="button" aria-expanded="false">
           <span class="faq-num">01</span>
           <span class="faq-question">How much does a website project cost?</span>
           <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>

@@ -12,7 +12,7 @@ $banner_breadcrumb = 'Handyman';
 $banner_kicker = 'Industry';
 $banner_h1 = 'Handyman marketing that keeps your calendar <span class="about-hero-accent">full</span>';
 $banner_lead = 'We help handyman businesses look professional, show up in local searches, and turn one small fix into a customer who calls you for everything.';
-$banner_primary_label = 'Get a quote';
+$banner_primary_label = 'Free Consultation';
 $banner_secondary_label = 'See our work';
 $banner_image = '/assets/images/industry-handyman-1.webp';
 $banner_float1 = '/assets/images/industry-handyman-2.webp';
@@ -45,7 +45,7 @@ include __DIR__ . '/includes/page-banner.php';
           <button type="button" class="works-filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
           <!-- <button type="button" class="works-filter" data-filter="graphic-design" role="tab" aria-selected="false">Graphic Design</button> -->
           <!-- <button type="button" class="works-filter" data-filter="web-design" role="tab" aria-selected="false">Web Design</button> -->
-          <button type="button" class="works-filter" data-filter="web-development" role="tab" aria-selected="false">Web Design &amp; Development</button>
+          <button type="button" class="works-filter" data-filter="web-development" role="tab" aria-selected="false">Web Design</button>
           <button type="button" class="works-filter" data-filter="seo" role="tab" aria-selected="false">SEO</button>
           <button type="button" class="works-filter" data-filter="social-media-advertising" role="tab" aria-selected="false">Social Media</button>
           <button type="button" class="works-filter" data-filter="google-ads" role="tab" aria-selected="false">Google Ads</button>
@@ -213,7 +213,7 @@ include __DIR__ . '/includes/testimonialslider.php';
         <h3>Let's discuss growing your handyman business</h3>
         <p>We'll help you define the right next step.</p>
       </div>
-      <a href="/contact.php" class="btn btn-lime btn-lg">Get a quote</a>
+      <a href="/contact.php" class="btn btn-lime btn-lg">Free Consultation</a>
     </div>
   </div>
 </section>
@@ -225,8 +225,8 @@ include __DIR__ . '/includes/testimonialslider.php';
       <h2>Questions about <span class="heading-accent">Handyman</span></h2>
     </div>
     <div class="faq-list reveal">
-      <div class="faq-item is-open">
-        <button class="faq-trigger" type="button" aria-expanded="true">
+      <div class="faq-item">
+        <button class="faq-trigger" type="button" aria-expanded="false">
           <span class="faq-num">01</span>
           <span class="faq-question">Do we need a big website?</span>
           <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
