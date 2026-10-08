@@ -2221,7 +2221,7 @@ window.addEventListener('load', () => {
       let homeX = 0;
       let homeY = 0;
       let backTimer = 0;
-      const RANGE = 120;
+      const RANGE = 55;
       const MAX = 70;
 
       function measureHome() {
@@ -2236,8 +2236,8 @@ window.addEventListener('load', () => {
         const w = runaway.offsetWidth;
         const h = runaway.offsetHeight;
         const minX = box.left + w / 2 - homeX;
-        const maxX = box.right - w / 2 - homeX;
-        const minY = box.top + h / 2 - homeY;
+        const maxX = 0;
+        const minY = 0;
         const maxY = box.bottom - h / 2 - homeY;
         dx = Math.max(minX, Math.min(maxX, x));
         dy = Math.max(minY, Math.min(maxY, y));
@@ -2254,7 +2254,7 @@ window.addEventListener('load', () => {
         if (dist > RANGE) return;
         vx /= dist;
         vy /= dist;
-        const push = (RANGE - dist) * 0.6 + 10;
+        const push = (RANGE - dist) * 0.5 + 8;
         place(Math.max(-MAX * 2, Math.min(MAX * 2, dx + vx * push)), Math.max(-MAX, Math.min(MAX, dy + vy * push)));
         clearTimeout(backTimer);
         backTimer = setTimeout(() => place(0, 0), 1400);

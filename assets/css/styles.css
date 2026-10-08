@@ -11137,3 +11137,7 @@ html body :is(.btn, .btn-lime, .faq-all-btn, .excel-view-all, .sticky-work-cta, 
     height: min(560px, 72vw, calc(100svh / 0.85 - 320px));
   }
 }
+.street-play-cursor .street-play-ring,
+.street-play-cursor::before {
+  display: none;
+}
