@@ -77,12 +77,14 @@ if (!empty($hide_contact_section)) {
           <input type="hidden" name="lead_id" value="">
           <div class="form-step" data-step="1">
             <p class="form-step-title">Let's start here</p>
-            <div class="field"><label>Full name</label><input type="text" name="name" required autocomplete="name" placeholder="Jane Doe"></div>
             <div class="contact-form-row">
-              <div class="field"><label>Phone</label><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+1 (555) 000-1234"></div>
+              <div class="field"><label>Full name</label><input type="text" name="name" required autocomplete="name" placeholder="Jane Doe"></div>
               <div class="field"><label>Email</label><input type="email" name="email" required autocomplete="email" placeholder="jane@company.com"></div>
             </div>
-            <div class="field"><label>What industry do you operate in?</label><input type="text" name="industry_operate" placeholder="e.g. Roofing"></div>
+            <div class="contact-form-row">
+              <div class="field"><label>Phone</label><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+1 (555) 000-1234"></div>
+              <div class="field"><label>What industry do you operate in?</label><input type="text" name="industry_operate" placeholder="e.g. Roofing"></div>
+            </div>
             <button type="button" class="btn btn-lime btn-lg btn-block" data-step-next>Next</button>
           </div>
           <div class="form-step" data-step="2" hidden>
