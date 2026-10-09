@@ -77,14 +77,16 @@ if (!empty($hide_contact_section)) {
           <input type="hidden" name="lead_id" value="">
           <div class="form-step" data-step="1">
             <p class="form-step-title">Let's start here</p>
+            <input type="hidden" name="name" value="">
             <div class="contact-form-row">
-              <div class="field"><label>Full name</label><input type="text" name="name" required autocomplete="name" placeholder="Jane Doe"></div>
+              <div class="field"><label>First name</label><input type="text" name="first_name" required autocomplete="given-name" placeholder="Jane"></div>
+              <div class="field"><label>Last name</label><input type="text" name="last_name" required autocomplete="family-name" placeholder="Doe"></div>
+            </div>
+            <div class="contact-form-row">
               <div class="field"><label>Email</label><input type="email" name="email" required autocomplete="email" placeholder="jane@company.com"></div>
-            </div>
-            <div class="contact-form-row">
               <div class="field"><label>Phone</label><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+1 (555) 000-1234"></div>
-              <div class="field"><label>What industry do you operate in?</label><input type="text" name="industry_operate" placeholder="e.g. Roofing"></div>
             </div>
+            <!-- <div class="field"><label>What industry do you operate in?</label><input type="text" name="industry_operate" placeholder="e.g. Roofing"></div> -->
             <button type="button" class="btn btn-lime btn-lg btn-block" data-step-next>Next</button>
           </div>
           <div class="form-step" data-step="2" hidden>
@@ -145,9 +147,13 @@ if (!empty($hide_contact_section)) {
             <p class="form-step-title">How much are you willing to invest for this goal?</p>
             <p class="form-commit-label">Are you committed?</p>
             <div class="form-commit">
+              <div class="form-catch" aria-hidden="true">
+                <svg class="form-catch-ring" viewBox="0 0 120 120"><defs><path id="formCatchPath" d="M60 60m-49 0a49 49 0 1 1 98 0a49 49 0 1 1-98 0"/></defs><text textLength="300" lengthAdjust="spacing"><textPath href="#formCatchPath">CATCH ME IF YOU CAN &#8226; CATCH ME IF YOU CAN &#8226; </textPath></text></svg>
+                <img src="/assets/images/main-banner.webp" alt="" class="form-catch-img" width="1041" height="1069" loading="lazy">
+              </div>
               <button type="submit" class="btn btn-lime btn-lg" name="commitment" value="100% committed">100% Committed</button>
               <button type="button" class="btn btn-lg form-commit-runaway" tabindex="-1" aria-hidden="true">50%</button>
-              <button type="submit" class="btn btn-lg form-commit-alt" name="commitment" value="Not committed">Not Committed</button>
+              <button type="button" class="btn btn-lg form-commit-alt" data-not-committed>Not Committed</button>
             </div>
           </div>
           <div class="form-step-note" hidden aria-live="polite"></div>

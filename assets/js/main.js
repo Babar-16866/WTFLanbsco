@@ -185,8 +185,8 @@ document.querySelectorAll('.faq-list').forEach((list) => {
 
 // Contact / promo forms — native POST to send-mail.php → thank-you.php
 document.querySelectorAll('form.contact-form').forEach((form) => {
-  form.addEventListener('submit', () => {
-    const btn = form.querySelector('[type="submit"]');
+  form.addEventListener('submit', (e) => {
+    const btn = e.submitter || form.querySelector('[type="submit"]');
     if (btn) {
       btn.disabled = true;
       btn.textContent = 'Sending…';
@@ -1395,6 +1395,7 @@ window.addEventListener('load', () => {
       if (inZone(dir) && go(dir)) stepAt = performance.now();
     }
     window.addEventListener('wheel', (e) => {
+      if (document.documentElement.dataset.autoScroll) return;
       if (e.defaultPrevented || isStatic || Math.abs(e.deltaY) < Math.abs(e.deltaX)) return;
       const now = performance.now();
       const dir = e.deltaY > 0 ? 1 : -1;
@@ -1438,7 +1439,7 @@ window.addEventListener('load', () => {
       const y = window.scrollY;
       const prev = lastY;
       lastY = y;
-      if (isStatic || touchY !== null || performance.now() < busyUntil) return;
+      if (isStatic || touchY !== null || performance.now() < busyUntil || document.documentElement.dataset.autoScroll) return;
       const b = bounds();
       if (y <= b.start + 2 || y >= b.end - 2) return;
       let index = nearestIndex();
@@ -2099,7 +2100,13 @@ window.addEventListener('load', () => {
       return true;
     }
 
+    function syncName() {
+      const full = form.querySelector('input[name="name"]');
+      if (full && form.elements.first_name) full.value = [fieldText('first_name'), fieldText('last_name')].filter(Boolean).join(' ');
+    }
+
     function sendStep(n) {
+      syncName();
       const data = new FormData(form);
       data.set('step', String(n));
       const key = JSON.stringify(Array.from(data.entries()));
@@ -2174,7 +2181,7 @@ window.addEventListener('load', () => {
           if (top < 80) window.scrollBy({ top: top - 100, behavior: 'smooth' });
         };
         if (from === 1) {
-          const first = fieldText('name').split(/\s+/)[0];
+          const first = fieldText('first_name') || fieldText('name').split(/\s+/)[0];
           flash('<p class="form-step-note-title">Great! Nice to meet you ' + escapeText(first) + ' \u{1F60A}</p>', 2200, go);
         } else if (from === 2) {
           flash(summaryHtml(), 3500, go);
@@ -2193,6 +2200,7 @@ window.addEventListener('load', () => {
     });
 
     form.addEventListener('submit', (e) => {
+      syncName();
       if (stepInput) stepInput.value = String(panels.length);
       if (!form.querySelector('input[name="name"]').value) {
         e.preventDefault();
@@ -2214,70 +2222,65 @@ window.addEventListener('load', () => {
       syncOther();
     }
 
+    const notBtn = form.querySelector('[data-not-committed]');
+    if (notBtn) {
+      notBtn.addEventListener('click', () => {
+        syncName();
+        const data = new FormData(form);
+        data.set('step', String(panels.length));
+        data.set('commitment', 'Not committed');
+        fetch(form.action, { method: 'POST', body: data, keepalive: true }).catch(() => {});
+      });
+    }
+
     const runaway = form.querySelector('.form-commit-runaway');
-    if (runaway) {
-      let dx = 0;
-      let dy = 0;
-      let homeX = 0;
-      let homeY = 0;
-      let backTimer = 0;
-      const RANGE = 55;
-      const MAX = 70;
+    const commit = form.querySelector('.form-commit');
+    const catcher = form.querySelector('.form-catch');
+    if (runaway && commit) {
+      let atTop = false;
+      let lockUntil = 0;
+      let catchTimer = 0;
 
-      function measureHome() {
-        const r = runaway.getBoundingClientRect();
-        homeX = r.left - dx + r.width / 2;
-        homeY = r.top - dy + r.height / 2;
+      function showCatch() {
+        if (!catcher) return;
+        catcher.classList.remove('is-visible');
+        void catcher.offsetWidth;
+        catcher.classList.add('is-visible');
+        clearTimeout(catchTimer);
+        catchTimer = setTimeout(() => catcher.classList.remove('is-visible'), 2600);
       }
 
-      function place(x, y) {
-        const area = runaway.closest('.form-commit') || form;
-        const box = area.getBoundingClientRect();
-        const w = runaway.offsetWidth;
-        const h = runaway.offsetHeight;
-        const minX = box.left + w / 2 - homeX;
-        const maxX = 0;
-        const minY = 0;
-        const maxY = box.bottom - h / 2 - homeY;
-        dx = Math.max(minX, Math.min(maxX, x));
-        dy = Math.max(minY, Math.min(maxY, y));
-        runaway.style.transform = 'translate(' + Math.round(dx) + 'px, ' + Math.round(dy) + 'px)';
-      }
-
-      function nudge(px, py) {
-        measureHome();
-        const cx = homeX + dx;
-        const cy = homeY + dy;
-        let vx = cx - px;
-        let vy = cy - py;
-        const dist = Math.hypot(vx, vy) || 1;
-        if (dist > RANGE) return;
-        vx /= dist;
-        vy /= dist;
-        const push = (RANGE - dist) * 0.5 + 8;
-        place(Math.max(-MAX * 2, Math.min(MAX * 2, dx + vx * push)), Math.max(-MAX, Math.min(MAX, dy + vy * push)));
-        clearTimeout(backTimer);
-        backTimer = setTimeout(() => place(0, 0), 1400);
+      function rearrange() {
+        const now = performance.now();
+        if (now < lockUntil) return;
+        lockUntil = now + 650;
+        const btns = Array.from(commit.querySelectorAll('.btn'));
+        const before = new Map(btns.map((b) => [b, b.getBoundingClientRect()]));
+        atTop = !atTop;
+        commit.classList.toggle('is-swapped', atTop);
+        btns.forEach((b) => {
+          const r0 = before.get(b);
+          const r1 = b.getBoundingClientRect();
+          const dy = r0.top - r1.top;
+          if (!dy) return;
+          b.animate([{ transform: 'translateY(' + dy + 'px)' }, { transform: 'translateY(0)' }], { duration: 420, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' });
+        });
+        showCatch();
       }
 
       form.addEventListener('pointermove', (e) => {
-        if (runaway.closest('[hidden]')) return;
-        nudge(e.clientX, e.clientY);
+        if (runaway.closest('[hidden]') || e.pointerType === 'touch') return;
+        const r = runaway.getBoundingClientRect();
+        const near = e.clientX > r.left - 24 && e.clientX < r.right + 24 && e.clientY > r.top - 18 && e.clientY < r.bottom + 18;
+        if (near) rearrange();
       });
-      ['pointerdown', 'touchstart', 'mousedown', 'click', 'focus'].forEach((type) => {
+      ['pointerdown', 'click', 'focus'].forEach((type) => {
         runaway.addEventListener(type, (e) => {
           e.preventDefault();
           e.stopPropagation();
-          const p = e.touches ? e.touches[0] : e;
-          measureHome();
-          nudge(p.clientX || homeX, (p.clientY || homeY) + 1);
           runaway.blur();
-        }, { passive: false });
-      });
-      window.addEventListener('resize', () => {
-        dx = 0;
-        dy = 0;
-        runaway.style.transform = '';
+          if (type === 'pointerdown') rearrange();
+        });
       });
     }
 
@@ -2341,7 +2344,7 @@ document.addEventListener('click', (e) => {
 
 // Show more
 (function initShowMore() {
-  const LIMIT = 6;
+  const LIMIT = 3;
   document.querySelectorAll('#homeWorksGrid').forEach((grid) => {
     const cta = grid.closest('.container')?.querySelector('.home-work-cta');
     if (!cta) return;
@@ -2360,6 +2363,14 @@ document.addEventListener('click', (e) => {
       btn.hidden = visible.length <= LIMIT;
       btn.textContent = expanded ? 'Show Less' : 'Show More';
     }
+
+    const RANK = ['Prime Construction', 'Beyond Wow Plumbing', 'Tanous HVAC', 'Teamwork Home Designs', 'United Elite Group', 'Alexander\u2019s Heating & AC', 'Davis Air Conditioning & Heating', 'Edwards Plumbing', 'Economy Plumbing Services', 'Tadlock Roofing', 'Yuras Roofing', 'Janney Home Services', 'Nozzle Nolen', 'Alta Pest Control', 'Akela Pest Control', 'ASA Pools & Hot Tubs', 'Summit Pool & Spa', 'South Texas Pool Tile Cleaning', 'Texan Landscape Group', '2 Gals Landscaping', 'Evergreen Outdoor', 'KW Handyman', 'TRI Miami Handyman Services', 'I\u2019m That Guy Handyman', 'ATX Clean Pro Wash', 'Southern Shine', 'Austin Pressure Washing & Roof Cleaning'];
+    const rankOf = (card) => {
+      const i = RANK.indexOf((card.querySelector('h2')?.textContent || '').trim());
+      return i < 0 ? RANK.length : i;
+    };
+    const ordered = Array.from(grid.querySelectorAll('.work-card')).map((card, i) => [card, i]).sort((x, y) => rankOf(x[0]) - rankOf(y[0]) || x[1] - y[1]);
+    ordered.forEach(([card]) => grid.appendChild(card));
 
     grid.addEventListener('works:filtered', () => {
       expanded = false;
@@ -2402,7 +2413,20 @@ document.addEventListener('click', (e) => {
     requestAnimationFrame(sync);
   }, { passive: true });
   window.addEventListener('resize', sync);
-  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  btn.addEventListener('click', () => {
+    const root = document.documentElement;
+    root.dataset.autoScroll = '1';
+    const started = performance.now();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    (function watch() {
+      if (window.scrollY <= 1 || performance.now() - started > 4000) {
+        if (window.scrollY > 1) window.scrollTo({ top: 0, behavior: 'instant' });
+        delete root.dataset.autoScroll;
+        return;
+      }
+      requestAnimationFrame(watch);
+    })();
+  });
   sync();
 })();
 
@@ -2419,12 +2443,19 @@ document.addEventListener('click', (e) => {
     ticking = false;
     const s = section.getBoundingClientRect();
     const r = real.getBoundingClientRect();
-    const dockY = window.innerHeight - (window.innerWidth <= 640 ? 16 : 24) - real.offsetHeight;
-    const started = s.top < window.innerHeight * 0.75 && s.bottom > 0;
-    const next = started && r.top > dockY + 2;
+    const f = float.getBoundingClientRect();
+    const dockTop = f.top - (float.classList.contains('is-visible') ? 0 : f.height * 1.4);
+    const vh = document.documentElement.getBoundingClientRect().height ? window.innerHeight : window.innerHeight;
+    const started = s.top < vh * 0.75 && s.bottom > 0;
+    const next = started && r.top > dockTop + 1;
     if (next !== active) {
       active = next;
+      if (!active) {
+        float.style.transition = 'none';
+        requestAnimationFrame(() => requestAnimationFrame(() => { float.style.transition = ''; }));
+      }
       document.body.classList.toggle('street-join-active', active);
+      real.classList.toggle('is-handed-off', active);
       float.classList.toggle('is-visible', active);
       window.dispatchEvent(new Event('resize'));
     }

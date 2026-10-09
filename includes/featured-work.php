@@ -1910,7 +1910,7 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="plumbing" data-live="https://beyondwow.com/">
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="plumbing" data-live="https://beyondwow.com/">
         <div class="work-card-media">
           <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-beyond-wow-plumbing.webp" alt="Beyond Wow Plumbing">
         </div>
@@ -2036,7 +2036,7 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
         </div>
       </article>
 
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="hvac" data-live="https://www.tanousnj.com/">
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="hvac" data-live="https://www.tanousnj.com/">
         <div class="work-card-media">
           <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-tanous-hvac.webp" alt="Tanous HVAC">
         </div>
