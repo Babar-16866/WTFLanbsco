@@ -11148,3 +11148,6 @@ html body :is(.btn, .btn-lime, .faq-all-btn, .excel-view-all, .sticky-work-cta, 
 :root[data-palette="index2"]:not([data-theme="dark"]) :is(.hero-section, .home-work-section, .final-cta-section, .about-hero-box, .page-hero-box, .why-done, .services-cta-band, .brand-card--more, .contact-intro, .site-footer, .rail-card) :is(h1, h2, h3) :is(.heading-accent, .accent-blue, .accent-lime, .typewriter) {
   text-shadow: none;
 }
+:root[data-palette="index2"]:not([data-theme="dark"]) :is(.hero-section, .home-work-section, .final-cta-section, .about-hero-box, .page-hero-box, .why-done, .services-cta-band, .brand-card--more, .site-footer, .rail-card) :is(h1, h2, h3) :is(.heading-accent, .accent-blue, .accent-lime, .typewriter, .about-hero-accent) {
+  text-shadow: -3px -3px 0 var(--pal-light, #FBF7EC);
+}
