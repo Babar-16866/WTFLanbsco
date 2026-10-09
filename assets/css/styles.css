@@ -11157,3 +11157,38 @@ html body :is(.btn, .btn-lime, .faq-all-btn, .excel-view-all, .sticky-work-cta, 
 html[data-palette] body :is(h1, h2, h3) .typewriter {
   text-shadow: none !important;
 }
+.home-filter-stack {
+  grid-template-columns: minmax(0, max-content);
+  justify-items: center;
+  gap: 8px;
+}
+.home-filter-row:not(:first-child) {
+  margin-top: 0;
+}
+.home-filter-stack .home-filter-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--pal-gold, #C39B62);
+}
+.home-filter-stack .home-filter-label::before,
+.home-filter-stack .home-filter-label::after {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.6;
+}
+.home-filter-stack span.home-filter-label {
+  display: none;
+}
+.home-filter-stack .works-filters,
+.home-filter-stack .works-subfilters {
+  justify-self: center;
+}
