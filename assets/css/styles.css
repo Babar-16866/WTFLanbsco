@@ -11199,3 +11199,27 @@ html[data-palette] body :is(h1, h2, h3) .typewriter {
 :root[data-palette="index2"]:not([data-theme="dark"]) :is(.hero-section, .home-work-section, .final-cta-section, .about-hero-box, .page-hero-box, .why-done, .services-cta-band, .brand-card--more, .site-footer, .rail-card) :is(h1, h2, h3) :is(.heading-accent, .accent-blue, .accent-lime, .about-hero-accent) {
   text-shadow: -1px -1px 0 #FBF7EC, -2px -2px 0 #FBF7EC, -3px -3px 0 #FBF7EC, -4px -4px 0 #FBF7EC, -5px -5px 0 #FBF7EC, -6px -6px 0 #FBF7EC, -7px -7px 0 #FBF7EC, -8px -8px 0 #FBF7EC, -9px -9px 1px rgba(251, 247, 236, 0.35);
 }
+.home-work-cta {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 14px;
+}
+.home-work-cta > :first-child {
+  grid-column: 2;
+}
+.home-work-cta .works-show-more {
+  grid-column: 3;
+  justify-self: end;
+}
+@media (max-width: 640px) {
+  .home-work-cta {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .home-work-cta > :first-child,
+  .home-work-cta .works-show-more {
+    grid-column: 1;
+    justify-self: center;
+  }
+}

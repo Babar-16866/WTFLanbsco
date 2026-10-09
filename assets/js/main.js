@@ -2357,7 +2357,8 @@ document.addEventListener('click', (e) => {
       const visible = Array.from(grid.querySelectorAll('.work-card')).filter((card) => !card.hidden);
       visible.forEach((card, i) => card.classList.toggle('is-over-limit', !expanded && i >= LIMIT));
       grid.querySelectorAll('.work-card[hidden]').forEach((card) => card.classList.remove('is-over-limit'));
-      btn.hidden = expanded || visible.length <= LIMIT;
+      btn.hidden = visible.length <= LIMIT;
+      btn.textContent = expanded ? 'Show Less' : 'Show More';
     }
 
     grid.addEventListener('works:filtered', () => {
@@ -2365,8 +2366,9 @@ document.addEventListener('click', (e) => {
       apply();
     });
     btn.addEventListener('click', () => {
-      expanded = true;
+      expanded = !expanded;
       apply();
+      if (!expanded) grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
     apply();
   });
@@ -2446,15 +2448,17 @@ document.addEventListener('click', (e) => {
     const visible = Array.from(grid.querySelectorAll('.service-detail-card')).filter((card) => !card.hidden);
     grid.querySelectorAll('.service-detail-card').forEach((card) => card.classList.remove('is-over-limit'));
     visible.forEach((card, i) => card.classList.toggle('is-over-limit', !expanded && i >= LIMIT));
-    btn.hidden = expanded || visible.length <= LIMIT;
+    btn.hidden = visible.length <= LIMIT;
+    btn.textContent = expanded ? 'Show Less' : 'Show More';
   }
   grid.addEventListener('industries:filtered', () => {
     expanded = false;
     apply();
   });
   btn.addEventListener('click', () => {
-    expanded = true;
+    expanded = !expanded;
     apply();
+    if (!expanded) grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
   apply();
 })();
