@@ -11154,3 +11154,6 @@ html body :is(.btn, .btn-lime, .faq-all-btn, .excel-view-all, .sticky-work-cta, 
 :root[data-palette="index2"]:not([data-theme="dark"]) :is(h1, h2, h3) :is(.heading-accent, .accent-blue, .accent-lime, .typewriter):not(:is(.hero-section, .home-work-section, .final-cta-section, .about-hero-box, .page-hero-box, .why-done, .services-cta-band, .brand-card--more, .contact-intro, .site-footer, .rail-card) *) {
   text-shadow: -1px -1px 0 #10231B, -2px -2px 0 #10231B, -3px -3px 0 #10231B, -4px -4px 0 #10231B, -5px -5px 0 #10231B, -6px -6px 1px rgba(16, 35, 27, 0.35);
 }
+:root[data-palette="index2"]:not([data-theme="dark"]) .hero-section :is(h1, h2, h3) .typewriter {
+  text-shadow: -1px -1px 0 #FBF7EC, -2px -2px 0 #FBF7EC, -3px -3px 0 #FBF7EC, -4px -4px 0 #FBF7EC, -5px -5px 0 #FBF7EC, -6px -6px 1px rgba(251, 247, 236, 0.35);
+}
