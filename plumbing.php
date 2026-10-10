@@ -25,7 +25,7 @@ include __DIR__ . '/includes/page-banner.php';
   <div class="container">
     <div class="works-filter-stack works-filter-stack--center home-filter-stack" data-industry-nav data-current="plumbing">
       <div class="home-filter-row is-done">
-        <p class="home-filter-label">Select the Industry</p>
+        <p class="home-filter-label">Select the Industry and services</p>
         <div class="works-filters" id="indIndustries" role="tablist" aria-label="Filter by industry">
           <button type="button" class="works-filter" data-industry="all" role="tab" aria-selected="false">Featured</button>
           <button type="button" class="works-filter" data-industry="remodelers" role="tab" aria-selected="false">Remodelers</button>
@@ -40,7 +40,7 @@ include __DIR__ . '/includes/page-banner.php';
         </div>
       </div>
       <div class="home-filter-row">
-        <p class="home-filter-label">Select the Service</p>
+        <!-- <p class="home-filter-label">Select the Service</p> -->
         <div class="works-filters" id="indServices" role="tablist" aria-label="Filter by service">
           <button type="button" class="works-filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
           <!-- <button type="button" class="works-filter" data-filter="graphic-design" role="tab" aria-selected="false">Graphic Design</button> -->

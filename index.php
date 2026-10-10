@@ -626,7 +626,7 @@ include __DIR__ . '/includes/header.php';
 
     <div class="works-filter-stack works-filter-stack--center home-filter-stack reveal">
       <div class="home-filter-row">
-        <p class="home-filter-label">Select the Industry</p>
+        <p class="home-filter-label">Select the Industry and services</p>
         <div class="works-filters" id="homeWorksIndustries" role="tablist" aria-label="Filter works by industry">
           <button type="button" class="works-filter is-active" data-industry="all" role="tab" aria-selected="true">Featured</button>
           <button type="button" class="works-filter" data-industry="remodelers" role="tab" aria-selected="false">Remodelers</button>
@@ -641,7 +641,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </div>
       <div class="home-filter-row" id="homeWorksServiceRow" hidden>
-        <p class="home-filter-label">Select the Service</p>
+        <!-- <p class="home-filter-label">Select the Service</p> -->
         <div class="works-filters" id="homeWorksFilters" role="tablist" aria-label="Filter works by service">
           <button type="button" class="works-filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
           <!-- <button type="button" class="works-filter" data-filter="graphic-design" role="tab" aria-selected="false">Graphic Design</button> -->
