@@ -2387,7 +2387,7 @@ document.addEventListener('click', (e) => {
       btn.textContent = expanded ? 'Show Less' : 'Show More';
     }
 
-    const RANK = ['Prime Construction', 'Beyond Wow Plumbing', 'Tanous HVAC', 'Teamwork Home Designs', 'United Elite Group', 'Alexander\u2019s Heating & AC', 'Davis Air Conditioning & Heating', 'Edwards Plumbing', 'Economy Plumbing Services', 'Tadlock Roofing', 'Yuras Roofing', 'Janney Home Services', 'Nozzle Nolen', 'Alta Pest Control', 'Akela Pest Control', 'ASA Pools & Hot Tubs', 'Summit Pool & Spa', 'South Texas Pool Tile Cleaning', 'Texan Landscape Group', '2 Gals Landscaping', 'Evergreen Outdoor', 'KW Handyman', 'TRI Miami Handyman Services', 'I\u2019m That Guy Handyman', 'ATX Clean Pro Wash', 'Southern Shine', 'Austin Pressure Washing & Roof Cleaning'];
+    const RANK = ['Prime Construction', 'Tanous HVAC', 'Texan Landscape Group', 'Beyond Wow Plumbing', 'Teamwork Home Designs', 'United Elite Group', 'Alexander\u2019s Heating & AC', 'Davis Air Conditioning & Heating', 'Edwards Plumbing', 'Economy Plumbing Services', 'Tadlock Roofing', 'Yuras Roofing', 'Janney Home Services', 'Nozzle Nolen', 'Alta Pest Control', 'Akela Pest Control', 'ASA Pools & Hot Tubs', 'Summit Pool & Spa', 'South Texas Pool Tile Cleaning', '2 Gals Landscaping', 'Evergreen Outdoor', 'KW Handyman', 'TRI Miami Handyman Services', 'I\u2019m That Guy Handyman', 'ATX Clean Pro Wash', 'Southern Shine', 'Austin Pressure Washing & Roof Cleaning'];
     const rankOf = (card) => {
       const i = RANK.indexOf((card.querySelector('h2')?.textContent || '').trim());
       return i < 0 ? RANK.length : i;
