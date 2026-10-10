@@ -11593,3 +11593,6 @@ html body .form-commit .form-commit-runaway {
   .form-peek-word--left { left: 6px; }
   .form-peek-word--right { right: 6px; }
 }
+.form-peek:not(.is-visible) .form-peek-head {
+  transform: translate(-50%, 150%);
+}

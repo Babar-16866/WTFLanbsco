@@ -145,22 +145,22 @@ if (!empty($hide_contact_section)) {
             <button type="button" class="btn btn-lime btn-lg btn-block" data-step-next>Next</button>
           </div>
           <div class="form-step" data-step="3" hidden>
-            <p class="form-step-title">How much are you willing to invest for this goal?</p>
+            <!-- <p class="form-step-title">How much are you willing to invest for this goal?</p> -->
             <!-- <p class="form-commit-label">Are you committed?</p> -->
             <div class="form-commit">
               <div class="form-peek form-peek--top" aria-hidden="true">
-                <span class="form-peek-word form-peek-word--left">CAUGHT ME</span>
+                <span class="form-peek-word form-peek-word--left">CATCH ME</span>
                 <span class="form-peek-head"><img src="/assets/images/main-banner.webp" alt="" width="1041" height="1069" loading="lazy"></span>
                 <span class="form-peek-word form-peek-word--right">IF YOU CAN</span>
               </div>
-              <button type="submit" class="btn btn-lime btn-lg" name="commitment" value="100% committed">100% Committed, and I promised I won't waste your time</button>
-              <button type="button" class="btn btn-lg form-commit-runaway" tabindex="-1" aria-hidden="true">50% committed and I'll waste your time</button>
-              <button type="button" class="btn btn-lg form-commit-alt" data-not-committed>I'd like to discuss and I promised I waste your time</button>
+              <button type="submit" class="btn btn-lime btn-lg" name="commitment" value="100% committed">100% Committed, and I promise I won't waste your time</button>
+              <button type="button" class="btn btn-lg form-commit-runaway" tabindex="-1" aria-hidden="true">50% committed and I promise I'll waste your time</button>
+              <button type="button" class="btn btn-lg form-commit-alt" data-not-committed>I'd like to discuss, and I promise I won't waste your time</button>
             </div>
           </div>
           <div class="form-step-note" hidden aria-live="polite"></div>
           <div class="form-peek form-peek--bottom" aria-hidden="true">
-            <span class="form-peek-word form-peek-word--left">CAUGHT ME</span>
+            <span class="form-peek-word form-peek-word--left">CATCH ME</span>
             <span class="form-peek-head"><img src="/assets/images/main-banner.webp" alt="" width="1041" height="1069" loading="lazy"></span>
             <span class="form-peek-word form-peek-word--right">IF YOU CAN</span>
           </div>
