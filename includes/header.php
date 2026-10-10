@@ -77,14 +77,14 @@ require_once __DIR__ . '/config.php';
           <a href="/industries.php" class="nav-dropdown-btn"<?php echo $current_page === 'industries' ? ' aria-current="page"' : ''; ?>>Industries <span>&#9662;</span></a>
           <div class="nav-dropdown-menu">
             <a href="/industries.php#remodelers">Remodelers</a>
-            <a href="/industries.php#roofing">Roofing</a>
-            <a href="/industries.php#handyman">Handyman</a>
-            <a href="/industries.php#power-washing">Power Washing</a>
             <a href="/industries.php#hvac">HVAC</a>
-            <a href="/industries.php#plumbing">Plumbing</a>
-            <a href="/industries.php#pest-control">Pest Control</a>
-            <a href="/industries.php#pool-services">Pool Services</a>
             <a href="/industries.php#landscaping">Landscaping</a>
+            <a href="/industries.php#roofing">Roofing</a>
+            <a href="/industries.php#plumbing">Plumbing</a>
+            <a href="/industries.php#pool-services">Pool Services</a>
+            <a href="/industries.php#power-washing">Power Washing</a>
+            <a href="/industries.php#handyman">Handyman</a>
+            <a href="/industries.php#pest-control">Pest Control</a>
           </div>
         </li>
         <li><a href="/works.php"<?php echo $current_page === 'works' ? ' aria-current="page"' : ''; ?>>Work</a></li>

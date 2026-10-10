@@ -117,6 +117,7 @@ if (!empty($hide_contact_section)) {
                 </select>
               </div>
             </div>
+            <div class="field form-url-field" hidden><label>What is your current website URL?</label><input type="url" name="website_url" inputmode="url" placeholder="https://www.yourwebsite.com"></div>
             <div class="field form-other-field" hidden><label>Your industry</label><input type="text" name="industry_other" placeholder="Type your industry"></div>
             <div class="contact-form-row">
               <div class="field"><label>How much is a reasonable investment for your business growth?</label>
@@ -145,18 +146,24 @@ if (!empty($hide_contact_section)) {
           </div>
           <div class="form-step" data-step="3" hidden>
             <p class="form-step-title">How much are you willing to invest for this goal?</p>
-            <p class="form-commit-label">Are you committed?</p>
+            <!-- <p class="form-commit-label">Are you committed?</p> -->
             <div class="form-commit">
-              <div class="form-catch" aria-hidden="true">
-                <svg class="form-catch-ring" viewBox="0 0 120 120"><defs><path id="formCatchPath" d="M60 60m-49 0a49 49 0 1 1 98 0a49 49 0 1 1-98 0"/></defs><text textLength="300" lengthAdjust="spacing"><textPath href="#formCatchPath">CATCH ME IF YOU CAN &#8226; CATCH ME IF YOU CAN &#8226; </textPath></text></svg>
-                <img src="/assets/images/main-banner.webp" alt="" class="form-catch-img" width="1041" height="1069" loading="lazy">
+              <div class="form-peek form-peek--top" aria-hidden="true">
+                <span class="form-peek-word form-peek-word--left">CAUGHT ME</span>
+                <span class="form-peek-head"><img src="/assets/images/main-banner.webp" alt="" width="1041" height="1069" loading="lazy"></span>
+                <span class="form-peek-word form-peek-word--right">IF YOU CAN</span>
               </div>
-              <button type="submit" class="btn btn-lime btn-lg" name="commitment" value="100% committed">100% Committed</button>
-              <button type="button" class="btn btn-lg form-commit-runaway" tabindex="-1" aria-hidden="true">50%</button>
-              <button type="button" class="btn btn-lg form-commit-alt" data-not-committed>Not Committed</button>
+              <button type="submit" class="btn btn-lime btn-lg" name="commitment" value="100% committed">100% Committed, and I promised I won't waste your time</button>
+              <button type="button" class="btn btn-lg form-commit-runaway" tabindex="-1" aria-hidden="true">50% committed and I'll waste your time</button>
+              <button type="button" class="btn btn-lg form-commit-alt" data-not-committed>I'd like to discuss and I promised I waste your time</button>
             </div>
           </div>
           <div class="form-step-note" hidden aria-live="polite"></div>
+          <div class="form-peek form-peek--bottom" aria-hidden="true">
+            <span class="form-peek-word form-peek-word--left">CAUGHT ME</span>
+            <span class="form-peek-head"><img src="/assets/images/main-banner.webp" alt="" width="1041" height="1069" loading="lazy"></span>
+            <span class="form-peek-word form-peek-word--right">IF YOU CAN</span>
+          </div>
           <p class="form-ok hidden" id="formOk">Thank you! Your submission has been received!</p>
         </form>
       </div>

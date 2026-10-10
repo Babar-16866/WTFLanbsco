@@ -30,13 +30,13 @@ include __DIR__ . '/includes/page-banner.php';
           <button type="button" class="works-filter" data-industry="all" role="tab" aria-selected="false">Featured</button>
           <button type="button" class="works-filter" data-industry="remodelers" role="tab" aria-selected="false">Remodelers</button>
           <button type="button" class="works-filter" data-industry="hvac" role="tab" aria-selected="false">HVAC</button>
-          <button type="button" class="works-filter" data-industry="plumbing" role="tab" aria-selected="false">Plumbing</button>
-          <button type="button" class="works-filter" data-industry="roofing" role="tab" aria-selected="false">Roofing</button>
-          <button type="button" class="works-filter is-active" data-industry="pest-control" role="tab" aria-selected="true">Pest Control</button>
-          <button type="button" class="works-filter" data-industry="pool-services" role="tab" aria-selected="false">Pool Services</button>
           <button type="button" class="works-filter" data-industry="landscaping" role="tab" aria-selected="false">Landscaping</button>
-          <button type="button" class="works-filter" data-industry="handyman" role="tab" aria-selected="false">Handyman</button>
+          <button type="button" class="works-filter" data-industry="roofing" role="tab" aria-selected="false">Roofing</button>
+          <button type="button" class="works-filter" data-industry="plumbing" role="tab" aria-selected="false">Plumbing</button>
+          <button type="button" class="works-filter" data-industry="pool-services" role="tab" aria-selected="false">Pool Services</button>
           <button type="button" class="works-filter" data-industry="power-washing" role="tab" aria-selected="false">Power Washing</button>
+          <button type="button" class="works-filter" data-industry="handyman" role="tab" aria-selected="false">Handyman</button>
+          <button type="button" class="works-filter is-active" data-industry="pest-control" role="tab" aria-selected="true">Pest Control</button>
         </div>
       </div>
       <div class="home-filter-row">

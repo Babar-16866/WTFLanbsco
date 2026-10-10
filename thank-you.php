@@ -22,9 +22,10 @@ include __DIR__ . '/includes/header.php';
       </div>
 
       <p class="svc-kicker thank-kicker"><span></span> Message received</p>
-      <h1>Thanks — we'll be in <span class="heading-accent">touch soon</span></h1>
-      <!-- <p class="thank-lead">Your inquiry landed with the WTF Labs team. Expect a real reply within one business day with clear next steps.</p> -->
-      <p class="thank-lead">Thanks for taking the first step towards your better business finances</p>
+      <!-- <h1>Thanks — we'll be in <span class="heading-accent">touch soon</span></h1> -->
+      <h1 class="thank-title">Thanks for taking the first step towards your <span class="heading-accent">better business finances.</span></h1>
+      <p class="thank-lead">Your inquiry landed with the WTF Labs team. Expect a real reply within one business day with clear next steps.</p>
+      <!-- <p class="thank-lead">Thanks for taking the first step towards your better business finances</p> -->
       <p class="thank-lead">The journey of a thousand miles, begins with one step</p>
 
       <ul class="thank-points">

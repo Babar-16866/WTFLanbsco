@@ -1,3 +1,4 @@
+const pageZoom = () => parseFloat(getComputedStyle(document.documentElement).zoom) || 1;
 // Theme toggle
 const themeToggle = document.getElementById('themeToggle');
 const root = document.documentElement;
@@ -288,7 +289,7 @@ if (excelTrack) {
   excelTrack.addEventListener('pointermove', (e) => {
     if (!excelDragging) return;
     if (excelPointerId !== null && e.pointerId !== excelPointerId) return;
-    const dx = e.clientX - excelStartX;
+    const dx = (e.clientX - excelStartX) / pageZoom();
     if (Math.abs(dx) > 4) excelDragMoved = true;
     excelTrack.scrollLeft = excelStartScroll - dx;
   });
@@ -317,6 +318,8 @@ if (excelTrack) {
 (function initStreetRows() {
   const reduceMotion = false;
   const DURATION_MS = 45000;
+  const firstTrack = document.querySelector('.street-row .street-row-track');
+  const SPEED = firstTrack ? (firstTrack.scrollWidth / DURATION_MS) : 0.05;
 
   document.querySelectorAll('.street-row').forEach((row) => {
     const track = row.querySelector('.street-row-track');
@@ -363,7 +366,7 @@ if (excelTrack) {
       const dt = Math.min(40, now - lastTs);
       lastTs = now;
       if (!dragging && !paused && !reduceMotion && half > 0) {
-        x += dir * (half / DURATION_MS) * dt;
+        x += dir * SPEED * dt;
         wrap();
         apply();
       }
@@ -400,7 +403,7 @@ if (excelTrack) {
     track.addEventListener('pointermove', (e) => {
       if (!dragging) return;
       if (pointerId !== null && e.pointerId !== pointerId) return;
-      const dx = e.clientX - startClientX;
+      const dx = (e.clientX - startClientX) / pageZoom();
       if (Math.abs(dx) > 4) dragMoved = true;
       x = startX + dx;
       wrap();
@@ -550,8 +553,9 @@ window.addEventListener('load', () => {
   let visible = false;
 
   const move = (e) => {
-    x = e.clientX;
-    y = e.clientY;
+    const z = pageZoom();
+    x = e.clientX / z;
+    y = e.clientY / z;
     if (!visible) {
       visible = true;
       root.classList.add('is-visible');
@@ -1308,8 +1312,9 @@ window.addEventListener('load', () => {
 
     function update() {
       if (isStatic) return;
+      const z = pageZoom();
       const total = section.offsetHeight - sticky.offsetHeight - hold * 2;
-      const progress = total > 0 ? Math.min(1, Math.max(0, (stickTop - section.getBoundingClientRect().top - hold) / total)) : 0;
+      const progress = total > 0 ? Math.min(1, Math.max(0, (stickTop - section.getBoundingClientRect().top / z - hold) / total)) : 0;
       track.style.transform = `translate3d(${-progress * distance}px, 0, 0)`;
       setActive(Math.round(progress * (cards.length - 1)));
     }
@@ -1321,8 +1326,9 @@ window.addEventListener('load', () => {
       track.style.transform = '';
       const last = cards[cards.length - 1];
       const padRight = parseFloat(getComputedStyle(track).paddingRight) || 0;
+      const z = pageZoom();
       const viewport = document.documentElement.clientWidth;
-      distance = last ? Math.max(0, last.offsetLeft + last.offsetWidth + padRight - viewport) : 0;
+      distance = last ? Math.max(0, last.offsetLeft + last.offsetWidth + padRight - viewport / z) : 0;
       isStatic = reduceMotion.matches || distance <= 0 || window.matchMedia('(max-width: 768px)').matches;
       section.classList.toggle('is-static', isStatic);
       if (isStatic) {
@@ -1330,8 +1336,8 @@ window.addEventListener('load', () => {
         return;
       }
       lastWidth = viewport;
-      hold = Math.round(window.innerHeight * 0.2);
-      stickTop = Math.min(0, window.innerHeight - sticky.offsetHeight);
+      hold = Math.round(window.innerHeight / z * 0.2);
+      stickTop = Math.min(0, window.innerHeight / z - sticky.offsetHeight);
       sticky.style.top = stickTop + 'px';
       section.style.height = (sticky.offsetHeight + distance + hold * 2) + 'px';
       update();
@@ -1343,8 +1349,9 @@ window.addEventListener('load', () => {
     let touchMoved = false;
 
     function bounds() {
-      const total = section.offsetHeight - sticky.offsetHeight - hold * 2;
-      const start = section.getBoundingClientRect().top + window.scrollY - stickTop + hold;
+      const z = pageZoom();
+      const total = (section.offsetHeight - sticky.offsetHeight - hold * 2) * z;
+      const start = section.getBoundingClientRect().top + window.scrollY + (hold - stickTop) * z;
       return { start, end: start + total, total };
     }
 
@@ -1845,16 +1852,16 @@ window.addEventListener('load', () => {
     section.addEventListener('pointerenter', (e) => {
       if (e.pointerType !== 'mouse') return;
       inside = true;
-      tx = cx = e.clientX;
-      ty = cy = e.clientY;
+      tx = cx = e.clientX / pageZoom();
+      ty = cy = e.clientY / pageZoom();
       if (!rafId) rafId = requestAnimationFrame(tick);
     });
 
     section.addEventListener('pointermove', (e) => {
       if (e.pointerType !== 'mouse') return;
       inside = true;
-      tx = e.clientX;
-      ty = e.clientY;
+      tx = e.clientX / pageZoom();
+      ty = e.clientY / pageZoom();
       if (!rafId) rafId = requestAnimationFrame(tick);
     });
 
@@ -2148,6 +2155,12 @@ window.addEventListener('load', () => {
         rows.map((r) => '<li><span>' + r[0] + '</span><strong>' + escapeText(r[1]) + '</strong></li>').join('') + '</ul>';
     }
 
+    function thanksHtml() {
+      const first = fieldText('first_name') || fieldText('name').split(/\s+/)[0];
+      const industry = fieldText('industry') === 'Other' ? fieldText('industry_other') : fieldText('industry');
+      return '<p class="form-step-note-message">Thanks for sharing this with us ' + escapeText(first) + '. We have already helped multiple ' + escapeText(industry) + ' businesses in increasing their revenues strategically and we\'d like to welcome you on your journey for growth.</p>';
+    }
+
     function flash(html, ms, then) {
       if (!note) {
         then();
@@ -2184,7 +2197,7 @@ window.addEventListener('load', () => {
           const first = fieldText('first_name') || fieldText('name').split(/\s+/)[0];
           flash('<p class="form-step-note-title">Great! Nice to meet you ' + escapeText(first) + ' \u{1F60A}</p>', 2200, go);
         } else if (from === 2) {
-          flash(summaryHtml(), 3500, go);
+          flash(thanksHtml(), 5000, go);
         } else {
           go();
         }
@@ -2207,6 +2220,20 @@ window.addEventListener('load', () => {
         show(1);
       }
     });
+
+    const helpSelect = form.querySelector('select[name="help"]');
+    const urlField = form.querySelector('.form-url-field');
+    if (helpSelect && urlField) {
+      const urlInput = urlField.querySelector('input');
+      const syncUrl = () => {
+        const show = helpSelect.value === 'Old Website Redesign';
+        urlField.hidden = !show;
+        urlInput.required = show;
+        if (!show) urlInput.value = '';
+      };
+      helpSelect.addEventListener('change', syncUrl);
+      syncUrl();
+    }
 
     const otherSelect = form.querySelector('[data-other-select]');
     const otherField = form.querySelector('.form-other-field');
@@ -2235,51 +2262,47 @@ window.addEventListener('load', () => {
 
     const runaway = form.querySelector('.form-commit-runaway');
     const commit = form.querySelector('.form-commit');
-    const catcher = form.querySelector('.form-catch');
+    const peekTop = form.querySelector('.form-peek--top');
+    const peekBottom = form.querySelector('.form-peek--bottom');
     if (runaway && commit) {
       let atTop = false;
       let lockUntil = 0;
-      let catchTimer = 0;
+      let peekTimer = 0;
 
-      function showCatch() {
-        if (!catcher) return;
-        catcher.classList.remove('is-visible');
-        void catcher.offsetWidth;
-        catcher.classList.add('is-visible');
-        clearTimeout(catchTimer);
-        catchTimer = setTimeout(() => catcher.classList.remove('is-visible'), 2600);
+      function peek(el) {
+        [peekTop, peekBottom].forEach((p) => p && p.classList.remove('is-visible'));
+        if (!el) return;
+        void el.offsetWidth;
+        el.classList.add('is-visible');
+        clearTimeout(peekTimer);
+        peekTimer = setTimeout(() => el.classList.remove('is-visible'), 2600);
       }
 
-      function rearrange() {
+      function move() {
         const now = performance.now();
         if (now < lockUntil) return;
-        lockUntil = now + 650;
-        const btns = Array.from(commit.querySelectorAll('.btn'));
-        const before = new Map(btns.map((b) => [b, b.getBoundingClientRect()]));
+        lockUntil = now + 700;
+        const r0 = runaway.getBoundingClientRect();
         atTop = !atTop;
         commit.classList.toggle('is-swapped', atTop);
-        btns.forEach((b) => {
-          const r0 = before.get(b);
-          const r1 = b.getBoundingClientRect();
-          const dy = r0.top - r1.top;
-          if (!dy) return;
-          b.animate([{ transform: 'translateY(' + dy + 'px)' }, { transform: 'translateY(0)' }], { duration: 420, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' });
-        });
-        showCatch();
+        const r1 = runaway.getBoundingClientRect();
+        const dy = (r0.top - r1.top) / pageZoom();
+        if (dy) runaway.animate([{ transform: 'translateY(' + dy + 'px)' }, { transform: 'translateY(0)' }], { duration: 450, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' });
+        peek(atTop ? peekBottom : peekTop);
       }
 
       form.addEventListener('pointermove', (e) => {
         if (runaway.closest('[hidden]') || e.pointerType === 'touch') return;
         const r = runaway.getBoundingClientRect();
-        const near = e.clientX > r.left - 24 && e.clientX < r.right + 24 && e.clientY > r.top - 18 && e.clientY < r.bottom + 18;
-        if (near) rearrange();
+        const near = e.clientX > r.left - 20 && e.clientX < r.right + 20 && e.clientY > r.top - 16 && e.clientY < r.bottom + 16;
+        if (near) move();
       });
       ['pointerdown', 'click', 'focus'].forEach((type) => {
         runaway.addEventListener(type, (e) => {
           e.preventDefault();
           e.stopPropagation();
           runaway.blur();
-          if (type === 'pointerdown') rearrange();
+          if (type === 'pointerdown') move();
         });
       });
     }
