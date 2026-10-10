@@ -11330,9 +11330,9 @@ html[data-palette] body #industriesShowMore.btn {
 :root[data-palette="index2"]:not([data-theme="dark"]) :is(h1, h2, h3) :is(.heading-accent, .accent-blue, .accent-lime):not(.typewriter):not(:is(.hero-section, .home-work-section, .final-cta-section, .about-hero-box, .page-hero-box, .why-done, .services-cta-band, .brand-card--more, .contact-intro, .site-footer, .rail-card) *) {
   -webkit-text-stroke: 0;
   position: relative;
-  left: 11px;
+  left: 9px;
   top: 5px;
-  text-shadow: -7px -1px 0 #10231B, -8px -2px 0 #10231B, -9px -3px 0 #10231B, -10px -4px 0 #10231B, -11px -5px 1.5px #10231B, -12px -6px 2px #10231B;
+  text-shadow: -5px -1px 0 #10231B, -6px -2px 0 #10231B, -7px -3px 0 #10231B, -8px -4px 0 #10231B, -9px -5px 1.5px #10231B, -10px -6px 2px #10231B;
 }
 :root[data-palette="index2"] :is(.hero-section, .home-work-section, .final-cta-section, .about-hero-box, .page-hero-box, .why-done, .services-cta-band, .brand-card--more, .site-footer, .rail-card) :is(h1, h2, h3) :is(.heading-accent, .accent-blue, .accent-lime, .about-hero-accent) {
   -webkit-text-stroke: 0 !important;
