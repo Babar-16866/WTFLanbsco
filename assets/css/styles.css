@@ -11621,9 +11621,7 @@ html body .form-commit .form-commit-runaway {
 }
 html[data-palette] body .street-join-float--light.btn,
 html[data-palette] body .street-join-float--light.btn:is(:hover, :focus-visible) {
-  background: #FFFFFF;
-  border-color: #FFFFFF;
-  color: var(--pal-dark, #10231B);
+  color: #FFFFFF;
 }
 .custom-cursor {
   z-index: 100005;
