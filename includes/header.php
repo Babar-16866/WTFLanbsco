@@ -70,7 +70,7 @@ require_once __DIR__ . '/config.php';
             -->
             <a href="/web-design.php">Web Design</a>
             <a href="/digital-marketing.php">Digital Marketing</a>
-            <a href="/services.php#featured-services">Click One 👆 There's More!</a>
+            <a href="/services.php#featured-services" data-nav-nudge>Click One 👆 There's More!</a>
           </div>
         </li>
         <li class="nav-dropdown">
@@ -113,7 +113,7 @@ require_once __DIR__ . '/config.php';
           <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3 7 7 0 1 0 21 14.5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
         </svg>
       </button>
-      <a href="/free-audit.php" class="btn btn-lime btn-sm">FREE Consultation</a>
+      <a href="/free-consultation.php" class="btn btn-lime btn-sm">FREE Consultation</a>
       <button class="nav-burger" type="button" aria-label="Menu"><span></span><span></span></button>
     </nav>
     

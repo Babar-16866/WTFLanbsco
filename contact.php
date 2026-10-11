@@ -205,6 +205,7 @@ include __DIR__ . '/includes/page-banner.php';
           </div>
           <div class="form-step" data-step="3" hidden>
             <!-- <p class="form-step-title">How much are you willing to invest for this goal?</p> -->
+            <p class="form-step-title">How committed are you for your business growth?</p>
             <!-- <p class="form-commit-label">Are you committed?</p> -->
             <div class="form-commit">
               <div class="form-peek form-peek--top" aria-hidden="true">

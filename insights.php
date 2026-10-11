@@ -9,8 +9,8 @@ include __DIR__ . '/includes/header.php';
 $banner_kicker = 'Insights';
 $banner_h1 = 'Straight talk on <span class="about-hero-accent">growth</span>';
 $banner_lead = 'Practical playbooks for local service businesses — what wins the call, the booking, and the bigger job. No fluff, just what we see working.';
-$banner_primary_label = 'Get a free audit';
-$banner_primary_href = '/free-audit.php';
+$banner_primary_label = 'Get a free consultation';
+$banner_primary_href = '/free-consultation.php';
 $banner_primary_popup = false;
 $banner_secondary_label = 'See our work';
 $banner_image = '/assets/images/industry-remodelers-2.webp';
@@ -119,7 +119,7 @@ include __DIR__ . '/includes/page-banner.php';
         <h3>Want to know what your site is missing?</h3>
         <p>Get a free audit with a clear list of what to fix first.</p>
       </div>
-      <a href="/free-audit.php" class="btn btn-lime btn-lg">Get a free audit</a>
+      <a href="/free-consultation.php" class="btn btn-lime btn-lg">Get a free consultation</a>
     </div>
   </div>
 </section>

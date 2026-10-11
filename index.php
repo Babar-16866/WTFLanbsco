@@ -37,7 +37,7 @@ include __DIR__ . '/includes/header.php';
           <a href="#contact" class="btn-fan btn-fan-5">Book a call</a>
           -->
       <!--
-          <a href="/free-audit.php" class="btn-fan btn-fan-1">FREE Audit</a>
+          <a href="/free-consultation.php" class="btn-fan btn-fan-1">FREE Consultation</a>
           <a href="#contact" class="btn-fan btn-fan-2">Book discovery call</a>
           <a href="/works.php" class="btn-fan btn-fan-3">Just Show Me The Work</a>
           <a href="https://wa.me/15550001234" class="btn-fan btn-fan-4" target="_blank">Whatsapp</a>
@@ -2724,7 +2724,7 @@ include __DIR__ . '/includes/header.php';
 
     <div class="home-work-cta">
       <a href="/contact.php" class="btn btn-lime btn-lg" data-open-popup>I&rsquo;m sold! Call me!</a>
-      <a href="/contact.php" class="btn btn-lime btn-lg street-join-float" data-open-popup aria-hidden="true" tabindex="-1">I&rsquo;m sold! Call me!</a>
+      <a href="/contact.php" class="btn btn-lime btn-lg street-join-float street-join-float--light" data-open-popup aria-hidden="true" tabindex="-1">I&rsquo;m sold! Call me!</a>
     </div>
   </div>
 </section>
@@ -2796,8 +2796,8 @@ include __DIR__ . '/includes/header.php';
       </div>
     </div>
     <div class="container rail-cta">
-      <a href="/free-audit.php" class="btn btn-lime btn-lg">Let&rsquo;s Do Step 1</a>
-      <a href="/free-audit.php" class="btn btn-lime btn-lg street-join-float" aria-hidden="true" tabindex="-1">Let&rsquo;s Do Step 1</a>
+      <a href="/free-consultation.php" class="btn btn-lime btn-lg">Let&rsquo;s Do Step 1</a>
+      <a href="/free-consultation.php" class="btn btn-lime btn-lg street-join-float" aria-hidden="true" tabindex="-1">Let&rsquo;s Do Step 1</a>
     </div>
   </div>
 </section>
@@ -3153,7 +3153,7 @@ include __DIR__ . '/includes/testimonialslider.php';
     -->
     <h2 class="final-cta-title">Your Work Already Has <span class="accent-lime">Value.</span><br>Make Sure Marketing<br><span class="accent-lime">Shows</span> It.</h2>
     <p class="final-cta-body">We&rsquo;ll review your current website and How you market, to show you the highest-impact opportunities we see.</p>
-    <a href="/free-audit.php" class="btn btn-lime btn-lg">Claim Your FREE Consultation</a>
+    <a href="/free-consultation.php" class="btn btn-lime btn-lg">Claim Your FREE Consultation</a>
     <p class="final-cta-micro">No pressure. No generic 50-page report. Just useful feedback on what is helping, what is hurting, and what we would fix first.</p>
   </div>
 </section>

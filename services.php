@@ -921,8 +921,8 @@ include __DIR__ . '/includes/page-banner.php';
       </div>
     </div>
     <div class="container rail-cta">
-      <a href="/free-audit.php" class="btn btn-lime btn-lg">Let&rsquo;s Do Step 1</a>
-      <a href="/free-audit.php" class="btn btn-lime btn-lg street-join-float" aria-hidden="true" tabindex="-1">Let&rsquo;s Do Step 1</a>
+      <a href="/free-consultation.php" class="btn btn-lime btn-lg">Let&rsquo;s Do Step 1</a>
+      <a href="/free-consultation.php" class="btn btn-lime btn-lg street-join-float" aria-hidden="true" tabindex="-1">Let&rsquo;s Do Step 1</a>
     </div>
   </div>
 </section>
@@ -931,7 +931,7 @@ include __DIR__ . '/includes/page-banner.php';
 <?php
 $work_eyebrow = 'Featured Work';
 $work_heading = 'See the work. <span class="accent-lime">See what changed.</span>';
-$work_desc = 'Keep the gallery visual and easy to scan. Each project should show the problem, what was built, and the result or business outcome when that result is verified.';
+$work_desc = '';
 include __DIR__ . '/includes/featured-work.php';
 ?>
 
@@ -939,7 +939,7 @@ include __DIR__ . '/includes/featured-work.php';
 <?php
 $street_section_id = 'testimonials';
 $street_heading = 'Good work should be easy to trust <span class="accent-blue">before the call.</span>';
-$street_desc = 'Use this section for short, verified client reviews that speak to communication, quality, speed, lead quality, conversion, or the difference the work made to the business.';
+$street_desc = '';
 include __DIR__ . '/includes/testimonialslider.php';
 ?>
 

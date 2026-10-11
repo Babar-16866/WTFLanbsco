@@ -34,7 +34,8 @@ $partial = $step === 1 || $step === 2;
 
 // Brief / audit / feedback pages
 $form_pages = [
-  'free-audit'      => ['Free audit request', '/free-audit.php'],
+  'free-audit'      => ['Free audit request', '/free-consultation.php'],
+  'free-consultation' => ['Free consultation request', '/free-consultation.php'],
   'website-brief'   => ['Website brief', '/website-brief.php'],
   'marketing-brief' => ['Marketing brief', '/marketing-brief.php'],
   'client-feedback' => ['Client feedback', '/client-feedback.php'],
@@ -81,7 +82,7 @@ if ($errors) {
   exit;
 }
 
-$to = 'hello@wtflabs.com';
+$to = 'info@wtflabsco.com';
 $subject = ($form_page ? $form_page[0] : 'New inquiry') . ' from ' . $name . ' — WTF Labs';
 if ($step >= 1 && $step <= 3) {
   $subject = ($step === 3 ? 'Completed inquiry' : 'Inquiry step ' . $step . ' of 3') . ' from ' . $name . ' — WTF Labs';

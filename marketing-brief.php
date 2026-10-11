@@ -61,7 +61,7 @@ include __DIR__ . '/includes/page-banner.php';
 
         <div class="contact-page-links">
           <a href="/website-brief.php">Website Brief</a>
-          <a href="/free-audit.php">Free Audit</a>
+          <a href="/free-consultation.php">Free Consultation</a>
           <a href="/digital-marketing.php">Digital Marketing</a>
           <a href="/insights.php">Insights</a>
         </div>

@@ -380,10 +380,11 @@ if (excelTrack) {
     });
 
     const hoverPointer = window.matchMedia('(hover: hover) and (pointer: fine)');
-    row.addEventListener('mouseenter', () => {
+    const hoverArea = row.closest('.street-rows') || row;
+    hoverArea.addEventListener('mouseenter', () => {
       if (hoverPointer.matches) paused = true;
     });
-    row.addEventListener('mouseleave', () => {
+    hoverArea.addEventListener('mouseleave', () => {
       if (!dragging) paused = false;
     });
 
@@ -417,7 +418,7 @@ if (excelTrack) {
       pointerId = null;
       row.classList.remove('is-dragging');
       track.classList.remove('is-dragging');
-      if (e.pointerType !== 'mouse' || !hoverPointer.matches || !row.matches(':hover')) paused = false;
+      if (e.pointerType !== 'mouse' || !hoverPointer.matches || !hoverArea.matches(':hover')) paused = false;
     }
 
     track.addEventListener('pointerup', endDrag);
@@ -1763,6 +1764,7 @@ window.addEventListener('load', () => {
     document.getElementById(id)?.addEventListener('click', () => setTimeout(sync, 0));
   });
   window.addEventListener('resize', sync);
+  window.addEventListener('join:change', sync);
 })();
 
 // Testimonial videos
@@ -2073,7 +2075,7 @@ window.addEventListener('load', () => {
   document.querySelectorAll('form[data-steps]').forEach((form) => {
     const panels = Array.from(form.querySelectorAll('.form-step'));
     if (!panels.length) return;
-    const wrap = form.closest('.contact-form-wrap');
+    const wrap = form.closest('.contact-form-wrap, .contact-page-form-wrap');
     const dots = wrap ? Array.from(wrap.querySelectorAll('[data-step-dot]')) : [];
     const lines = wrap ? Array.from(wrap.querySelectorAll('.form-step-line')) : [];
     const stepInput = form.querySelector('input[name="step"]');
@@ -2206,10 +2208,19 @@ window.addEventListener('load', () => {
           const first = fieldText('first_name') || fieldText('name').split(/\s+/)[0];
           flash('<p class="form-step-note-title">Great! Nice to meet you ' + escapeText(first) + ' \u{1F60A}</p>', 2200, go);
         } else if (from === 2) {
-          flash(thanksHtml(), 5000, go);
+          flash(thanksHtml(), 9000, go);
         } else {
           go();
         }
+      });
+    });
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const n = Number(dot.dataset.stepDot);
+        if (noteBusy || n >= current) return;
+        for (let i = n; i <= panels.length; i++) delete sent[i];
+        show(n);
       });
     });
 
@@ -2265,7 +2276,8 @@ window.addEventListener('load', () => {
         const data = new FormData(form);
         data.set('step', String(panels.length));
         data.set('commitment', 'Not committed');
-        fetch(form.action, { method: 'POST', body: data, keepalive: true }).catch(() => {});
+        const done = () => { window.location.href = '/thank-you.php'; };
+        fetch(form.action, { method: 'POST', body: data, keepalive: true }).then(done, done);
       });
     }
 
@@ -2500,7 +2512,7 @@ document.addEventListener('click', (e) => {
     pairs.forEach((p) => { if (syncPair(p)) changed = true; });
     if (!changed) return;
     document.body.classList.toggle('street-join-active', pairs.some((p) => p.active || p.inView));
-    window.dispatchEvent(new Event('resize'));
+    window.dispatchEvent(new Event('join:change'));
   }
   window.addEventListener('scroll', () => {
     if (ticking) return;
@@ -2537,4 +2549,22 @@ document.addEventListener('click', (e) => {
     if (!expanded) grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
   apply();
+})();
+
+(function initNavNudge() {
+  document.querySelectorAll('[data-nav-nudge]').forEach((link) => {
+    let timer = 0;
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const menu = link.parentElement;
+      const targets = Array.from(menu.querySelectorAll('a')).filter((a) => a !== link);
+      targets.forEach((a) => {
+        a.classList.remove('is-nudged');
+        void a.offsetWidth;
+        a.classList.add('is-nudged');
+      });
+      clearTimeout(timer);
+      timer = setTimeout(() => targets.forEach((a) => a.classList.remove('is-nudged')), 2400);
+    });
+  });
 })();
