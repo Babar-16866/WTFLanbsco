@@ -249,8 +249,8 @@ include __DIR__ . '/includes/page-banner.php';
                 </select>
               </div>
             </div>
-            <div class="field form-url-field" hidden><label>What is your current website URL?</label><input type="url" name="website_url" inputmode="url" placeholder="https://www.yourwebsite.com"></div>
             <div class="field form-other-field" hidden><label>Your industry</label><input type="text" name="industry_other" placeholder="Type your industry"></div>
+            <div class="field form-url-field" hidden><label>What is your current website URL?</label><input type="url" name="website_url" inputmode="url" placeholder="https://www.yourwebsite.com"></div>
             <div class="contact-form-row">
               <div class="field"><label>How much is a reasonable investment for your business growth?</label>
                 <select name="budget" required>
