@@ -2113,6 +2113,7 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
 
     <div class="home-work-cta">
       <a href="/contact.php" class="btn btn-lime btn-lg" data-open-popup>I&rsquo;m sold! Call me!</a>
+      <a href="/contact.php" class="btn btn-lime btn-lg street-join-float" data-open-popup aria-hidden="true" tabindex="-1">I&rsquo;m sold! Call me!</a>
     </div>
   </div>
 </section>

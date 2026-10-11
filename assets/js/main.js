@@ -2464,9 +2464,9 @@ document.addEventListener('click', (e) => {
 
 // Join handoff
 (function initJoinHandoff() {
-  const pairs = [['.street-section', '.street-cta', false], ['.how-rail-section', '.rail-cta', true]].map(([sel, wrap, hold]) => {
+  const pairs = [['.street-section', '.street-cta', false], ['.how-rail-section', '.rail-cta', true], ['.home-work-section', '.home-work-cta', true]].map(([sel, wrap, hold]) => {
     const section = document.querySelector(sel);
-    const real = section ? section.querySelector(wrap + ' .btn:not(.street-join-float)') : null;
+    const real = section ? section.querySelector(wrap + ' > .btn:not(.street-join-float):not(.works-show-more)') : null;
     const float = section ? section.querySelector(wrap + ' .street-join-float') : null;
     return real && float ? { section, real, float, hold, active: false, inView: false } : null;
   }).filter(Boolean);
@@ -2507,6 +2507,9 @@ document.addEventListener('click', (e) => {
     ticking = true;
     requestAnimationFrame(sync);
   }, { passive: true });
+  window.addEventListener('resize', () => requestAnimationFrame(sync));
+  document.addEventListener('works:filtered', () => requestAnimationFrame(sync), true);
+  document.addEventListener('click', () => setTimeout(() => requestAnimationFrame(sync), 60));
   sync();
 })();
 

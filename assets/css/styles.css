@@ -11608,3 +11608,6 @@ html body .form-commit .form-commit-runaway {
 .rail-cta .btn.is-handed-off {
   visibility: hidden;
 }
+.home-work-cta .btn.is-handed-off {
+  visibility: hidden;
+}
