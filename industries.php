@@ -55,6 +55,7 @@ include __DIR__ . '/includes/page-banner.php';
       </div>
     </div>
     -->
+    <?php /*
     <div class="works-filter-stack works-filter-stack--center home-filter-stack" data-industry-nav>
       <div class="home-filter-row">
         <p class="home-filter-label">Select the Industry and services</p>
@@ -89,6 +90,7 @@ include __DIR__ . '/includes/page-banner.php';
         <div class="works-subfilters" id="indSubs" role="tablist" aria-label="Filter by subcategory" hidden></div>
       </div>
     </div>
+    */ ?>
 
     <div class="services-detail-grid" id="industriesGrid">
       <!-- Overview cards: visible on All -->
@@ -1442,12 +1444,21 @@ include __DIR__ . '/includes/page-banner.php';
           <a href="/digital-marketing.php" class="text-link-blue" style="display:inline-block;margin-top:12px">Learn more &rarr;</a>
         </div>
       </article>
+
+      <article class="service-detail-card services-cta-band industry-cta-card">
+        <h3>Don't see your industry?</h3>
+        <p>Ask us - we tailor engagements for local service businesses of every size.</p>
+        <a href="/contact.php" class="btn btn-lime btn-lg">Let's talk</a>
+      </article>
     </div>
 
+    <?php /*
     <div class="industries-show-more">
       <button type="button" class="btn btn-lime btn-lg" id="industriesShowMore" hidden>Show More</button>
     </div>
+    */ ?>
 
+    <?php /*
     <div class="services-cta-band reveal">
       <div>
         <h3>Don't see your industry?</h3>
@@ -1455,6 +1466,7 @@ include __DIR__ . '/includes/page-banner.php';
       </div>
       <a href="/contact.php" class="btn btn-lime btn-lg">Let's talk</a>
     </div>
+    */ ?>
   </div>
 </section>
 

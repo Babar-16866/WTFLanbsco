@@ -11767,3 +11767,19 @@ html body .form-peek--bottom .form-peek-word--right {
 .thank-card .thank-quote::before {
   content: none;
 }
+#industriesGrid .industry-cta-card {
+  margin-top: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 14px;
+  background: var(--inverse-bg);
+  color: var(--inverse-text);
+}
+#industriesGrid .industry-cta-card p {
+  margin-top: 0;
+}
+#industriesGrid .industry-cta-card:hover {
+  transform: none;
+}
