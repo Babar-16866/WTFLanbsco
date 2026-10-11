@@ -1710,11 +1710,13 @@ window.addEventListener('load', () => {
   let footerVisible = false;
   let contactVisible = false;
   let workVisible = false;
+  let finalVisible = false;
+  const finalCta = document.querySelector('.final-cta-section');
   const contact = document.getElementById('contact');
   const workSection = document.querySelector('.home-work-section');
 
   function sync() {
-    const show = ready && !footerVisible && !contactVisible && !workVisible && !document.body.classList.contains('street-join-active');
+    const show = ready && !footerVisible && !contactVisible && !workVisible && !finalVisible && !document.body.classList.contains('street-join-active');
     cta.classList.toggle('is-visible', show);
     cta.setAttribute('aria-hidden', show ? 'false' : 'true');
     cta.tabIndex = show ? 0 : -1;
@@ -1741,6 +1743,13 @@ window.addEventListener('load', () => {
       contactVisible = entries[0].isIntersecting;
       sync();
     }, { rootMargin: '0px 0px -25% 0px' }).observe(contact);
+  }
+
+  if (finalCta) {
+    new IntersectionObserver((entries) => {
+      finalVisible = entries[0].isIntersecting;
+      sync();
+    }).observe(finalCta);
   }
 
   if (workSection) {
