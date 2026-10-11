@@ -11760,3 +11760,10 @@ html body .form-peek--bottom .form-peek-word--right {
     width: 14px;
   }
 }
+.thank-card .thank-quote {
+  border-top: 0;
+  border-bottom: 0;
+}
+.thank-card .thank-quote::before {
+  content: none;
+}
