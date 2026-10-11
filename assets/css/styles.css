@@ -11783,3 +11783,7 @@ html body .form-peek--bottom .form-peek-word--right {
 #industriesGrid .industry-cta-card:hover {
   transform: none;
 }
+.thank-card .thank-quote {
+  margin: 18px auto 20px;
+  padding: 0 16px;
+}
