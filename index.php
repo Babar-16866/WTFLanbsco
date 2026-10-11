@@ -2796,6 +2796,7 @@ include __DIR__ . '/includes/header.php';
     </div>
     <div class="container rail-cta">
       <a href="/free-audit.php" class="btn btn-lime btn-lg">Let&rsquo;s Do Step 1</a>
+      <a href="/free-audit.php" class="btn btn-lime btn-lg street-join-float" aria-hidden="true" tabindex="-1">Let&rsquo;s Do Step 1</a>
     </div>
   </div>
 </section>

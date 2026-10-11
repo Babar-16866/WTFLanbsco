@@ -11605,3 +11605,6 @@ html body .form-commit .form-commit-runaway {
 .home-filter-stack .home-filter-row:not(:first-child) > :is(.works-filters, .works-subfilters) {
   margin-top: 10px;
 }
+.rail-cta .btn.is-handed-off {
+  visibility: hidden;
+}

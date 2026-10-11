@@ -344,7 +344,7 @@ include __DIR__ . '/includes/featured-work.php';
 <!-- REVIEWS -->
 <?php
 $street_section_id = 'testimonials';
-$street_heading = 'Good work should be easy to trust <span class="accent-blue">before the sales call.</span>';
+$street_heading = 'Good work should be easy to trust <span class="accent-blue">before the call.</span>';
 $street_desc = 'Use this section for short, verified client reviews that speak to communication, quality, speed, lead quality, conversion, or the difference the work made to the business.';
 include __DIR__ . '/includes/testimonialslider.php';
 ?>

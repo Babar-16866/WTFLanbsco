@@ -2455,33 +2455,43 @@ document.addEventListener('click', (e) => {
 
 // Join handoff
 (function initJoinHandoff() {
-  const section = document.querySelector('.street-section');
-  const real = section ? section.querySelector('.street-cta .btn:not(.street-join-float)') : null;
-  const float = section ? section.querySelector('.street-join-float') : null;
-  if (!real || !float) return;
-  document.body.appendChild(float);
-  let active = false;
+  const pairs = [['.street-section', '.street-cta', false], ['.how-rail-section', '.rail-cta', true]].map(([sel, wrap, hold]) => {
+    const section = document.querySelector(sel);
+    const real = section ? section.querySelector(wrap + ' .btn:not(.street-join-float)') : null;
+    const float = section ? section.querySelector(wrap + ' .street-join-float') : null;
+    return real && float ? { section, real, float, hold, active: false, inView: false } : null;
+  }).filter(Boolean);
+  if (!pairs.length) return;
+  pairs.forEach((p) => document.body.appendChild(p.float));
   let ticking = false;
-  function sync() {
-    ticking = false;
-    const s = section.getBoundingClientRect();
-    const r = real.getBoundingClientRect();
-    const f = float.getBoundingClientRect();
-    const dockTop = f.top - (float.classList.contains('is-visible') ? 0 : f.height * 1.4);
-    const vh = document.documentElement.getBoundingClientRect().height ? window.innerHeight : window.innerHeight;
+  function syncPair(p) {
+    const s = p.section.getBoundingClientRect();
+    const r = p.real.getBoundingClientRect();
+    const f = p.float.getBoundingClientRect();
+    const dockTop = f.top - (p.float.classList.contains('is-visible') ? 0 : f.height * 1.4);
+    const vh = window.innerHeight;
     const started = s.top < vh * 0.75 && s.bottom > 0;
     const next = started && r.top > dockTop + 1;
-    if (next !== active) {
-      active = next;
-      if (!active) {
-        float.style.transition = 'none';
-        requestAnimationFrame(() => requestAnimationFrame(() => { float.style.transition = ''; }));
-      }
-      document.body.classList.toggle('street-join-active', active);
-      real.classList.toggle('is-handed-off', active);
-      float.classList.toggle('is-visible', active);
-      window.dispatchEvent(new Event('resize'));
+    const inView = p.hold && s.top < vh && s.bottom > 0;
+    const viewChanged = inView !== p.inView;
+    p.inView = inView;
+    if (next === p.active) return viewChanged;
+    p.active = next;
+    if (!next) {
+      p.float.style.transition = 'none';
+      requestAnimationFrame(() => requestAnimationFrame(() => { p.float.style.transition = ''; }));
     }
+    p.real.classList.toggle('is-handed-off', next);
+    p.float.classList.toggle('is-visible', next);
+    return true;
+  }
+  function sync() {
+    ticking = false;
+    let changed = false;
+    pairs.forEach((p) => { if (syncPair(p)) changed = true; });
+    if (!changed) return;
+    document.body.classList.toggle('street-join-active', pairs.some((p) => p.active || p.inView));
+    window.dispatchEvent(new Event('resize'));
   }
   window.addEventListener('scroll', () => {
     if (ticking) return;
