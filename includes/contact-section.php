@@ -18,7 +18,7 @@ if (!empty($hide_contact_section)) {
         <?php endif; ?>
         <p>WTF Labs will help you define the right next step.</p>
         <p class="contact-address">25140 Kingsland Blvd<br>Katy, Texas 77494, USA</p>
-        <p class="contact-phone"><a href="tel:+15550001234">+1 (555) 000-1234</a></p>
+        <p class="contact-phone"><a href="tel:+15123379723">+1 (512) 337-9723</a></p>
       </div>
       <div class="contact-form-wrap">
         <ol class="form-steps" aria-label="Form progress">
@@ -42,7 +42,7 @@ if (!empty($hide_contact_section)) {
             </div>
             <div class="contact-form-row">
               <div class="field"><label>Email</label><input type="email" name="email" required autocomplete="email" placeholder="jane@company.com"></div>
-              <div class="field"><label>Phone</label><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+1 (555) 000-1234"></div>
+              <div class="field"><label>Phone</label><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+1 (512) 337-9723"></div>
             </div>
             <button type="button" class="btn btn-lime btn-lg btn-block" data-step-next>Next</button>
           </div>

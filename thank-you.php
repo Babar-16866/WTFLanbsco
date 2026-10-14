@@ -10,7 +10,7 @@ include __DIR__ . '/includes/header.php';
   <div class="container">
     <div class="thank-card reveal">
       <div class="thank-visual" aria-hidden="true">
-        <img src="/assets/images/logo-thank-you.webp" alt="" class="thank-logo thank-logo-light">
+        <img src="/assets/images/logo-thank-you-card.webp" alt="" class="thank-logo thank-logo-light">
         <img src="/assets/images/logo-new.webp" alt="" class="thank-logo thank-logo-dark">
       </div>
 

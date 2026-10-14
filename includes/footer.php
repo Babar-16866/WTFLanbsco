@@ -98,7 +98,7 @@ include __DIR__ . '/contact-section.php';
           </div>
           <div class="field">
             <label>What's your phone number?</label>
-            <input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+1 (555) 000-1234">
+            <input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+1 (512) 337-9723">
           </div>
           <div class="field">
             <label>What can we help you with?</label>

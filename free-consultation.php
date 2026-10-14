@@ -98,7 +98,7 @@ include __DIR__ . '/includes/page-banner.php';
             </div>
             <div class="contact-form-row">
               <div class="field"><label>Email</label><input type="email" name="email" required autocomplete="email" placeholder="jane@company.com"></div>
-              <div class="field"><label>Phone</label><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+1 (555) 000-1234"></div>
+              <div class="field"><label>Phone</label><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+1 (512) 337-9723"></div>
             </div>
             <button type="button" class="btn btn-lime btn-lg btn-block" data-step-next>Next</button>
           </div>

@@ -49,7 +49,7 @@ include __DIR__ . '/includes/header.php';
       <p>If your signed proposal, SOW, or master services agreement conflicts with this page, the signed agreement controls.</p>
 
       <h2>10. Contact</h2>
-      <p>Questions? Reach us at <a href="mailto:hello@wtflabs.com">hello@wtflabs.com</a> or <a href="tel:+15550001234">+1 (555) 000-1234</a>.</p>
+      <p>Questions? Reach us at <a href="mailto:hello@wtflabs.com">hello@wtflabs.com</a> or <a href="tel:+15123379723">+1 (512) 337-9723</a>.</p>
     </article>
   </div>
 </section>

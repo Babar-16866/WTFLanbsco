@@ -217,7 +217,7 @@ include __DIR__ . '/includes/header.php';
         </div>
         <div class="brand-card-cta brand-card-cta--duo">
           <a href="mailto:info@wtflabsco.com" class="btn btn-lime btn-sm">Email Us</a>
-          <a href="tel:+15550001234" class="btn btn-sm brand-card-btn-alt">Call Us Now</a>
+          <a href="tel:+15123379723" class="btn btn-sm brand-card-btn-alt">Call Us Now</a>
         </div>
       </div>
     </div>

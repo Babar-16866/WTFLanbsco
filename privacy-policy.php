@@ -62,7 +62,7 @@ include __DIR__ . '/includes/header.php';
       <p>We may update this Privacy Policy from time to time. The &ldquo;Last updated&rdquo; date at the top will reflect the latest revision.</p>
 
       <h2>11. Contact</h2>
-      <p>Questions about this policy? Email <a href="mailto:hello@wtflabs.com">hello@wtflabs.com</a> or call <a href="tel:+15550001234">+1 (555) 000-1234</a>.</p>
+      <p>Questions about this policy? Email <a href="mailto:hello@wtflabs.com">hello@wtflabs.com</a> or call <a href="tel:+15123379723">+1 (512) 337-9723</a>.</p>
     </article>
   </div>
 </section>

@@ -86,7 +86,7 @@ include __DIR__ . '/includes/page-banner.php';
           <div class="contact-form-row">
             <div class="field">
               <label for="mbPhone">What's your phone number?</label>
-              <input id="mbPhone" type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+1 (555) 000-1234">
+              <input id="mbPhone" type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+1 (512) 337-9723">
             </div>
             <div class="field">
               <label for="mbCompany">Company name</label>

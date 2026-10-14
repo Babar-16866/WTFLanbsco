@@ -11,7 +11,7 @@ $banner_h1 = 'Let\'s discuss your <span class="about-hero-accent">next website</
 $banner_lead = 'Tell us about your goals — we\'ll help you define the right next step. Real replies, usually within one business day.';
 $banner_primary_label = 'Free Consultation';
 $banner_secondary_label = 'WhatsApp';
-$banner_secondary_href = 'https://wa.me/15550001234';
+$banner_secondary_href = 'https://wa.me/15123379723';
 $banner_image = '/assets/images/people-office.jpg';
 $banner_float1 = '/assets/images/team-1.jpg';
 $banner_float2 = '/assets/images/team-3.jpg';
@@ -43,7 +43,7 @@ include __DIR__ . '/includes/page-banner.php';
             </span>
             <div>
               <strong>Phone</strong>
-              <p><a href="tel:+15550001234">+1 (555) 000-1234</a></p>
+              <p><a href="tel:+15123379723">+1 (512) 337-9723</a></p>
             </div>
           </li>
           <li>
@@ -58,7 +58,7 @@ include __DIR__ . '/includes/page-banner.php';
         </ul>
 
         <div class="contact-page-links">
-          <a href="https://wa.me/15550001234" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href="https://wa.me/15123379723" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           <a href="/how-we-work.php">How we work</a>
           <a href="/about.php">About us</a>
           <a href="/faqs.php">FAQs</a>
@@ -87,7 +87,7 @@ include __DIR__ . '/includes/page-banner.php';
             </div>
             <div class="contact-form-row">
               <div class="field"><label>Email</label><input type="email" name="email" required autocomplete="email" placeholder="jane@company.com"></div>
-              <div class="field"><label>Phone</label><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+1 (555) 000-1234"></div>
+              <div class="field"><label>Phone</label><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+1 (512) 337-9723"></div>
             </div>
             <button type="button" class="btn btn-lime btn-lg btn-block" data-step-next>Next</button>
           </div>
