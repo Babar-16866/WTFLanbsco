@@ -6,7 +6,7 @@ const OUT = process.env.OUT_DIR || join(ROOT, '_site');
 const SERVER = process.env.PHP_SERVER || 'http://127.0.0.1:8000';
 const BASE = (process.env.BASE_PATH || '').replace(/\/+$/, '');
 const DYNAMIC = (process.env.DYNAMIC_ORIGIN || '').replace(/\/+$/, '');
-const SERVER_ONLY = ['send-mail', 'live-preview'];
+const SERVER_ONLY = ['send-mail', 'live-preview', 'oauth-setup'];
 
 function mapPath(value) {
   if (!value.startsWith('/') || value.startsWith('//')) return value;

@@ -370,9 +370,20 @@ if (excelTrack) {
         wrap();
         apply();
       }
-      requestAnimationFrame(tick);
+      if (onScreen) requestAnimationFrame(tick);
+      else running = false;
     }
+    let onScreen = true;
+    let running = true;
     requestAnimationFrame(tick);
+    new IntersectionObserver((entries) => {
+      onScreen = entries[0].isIntersecting;
+      if (onScreen && !running) {
+        running = true;
+        lastTs = performance.now();
+        requestAnimationFrame(tick);
+      }
+    }, { rootMargin: '200px 0px' }).observe(row);
 
     window.addEventListener('resize', () => {
       measure();
@@ -553,6 +564,8 @@ window.addEventListener('load', () => {
   let ry = y;
   let visible = false;
 
+  let running = false;
+
   const move = (e) => {
     const z = pageZoom();
     x = e.clientX / z;
@@ -562,6 +575,10 @@ window.addEventListener('load', () => {
       root.classList.add('is-visible');
       rx = x;
       ry = y;
+    }
+    if (!running) {
+      running = true;
+      requestAnimationFrame(tick);
     }
   };
 
@@ -584,9 +601,12 @@ window.addEventListener('load', () => {
     ry += (y - ry) * 0.22;
     root.style.transform = `translate3d(${x}px, ${y}px, 0)`;
     if (ring) ring.style.transform = `translate3d(${rx - x}px, ${ry - y}px, 0)`;
+    if (Math.abs(x - rx) < 0.1 && Math.abs(y - ry) < 0.1) {
+      running = false;
+      return;
+    }
     requestAnimationFrame(tick);
   }
-  requestAnimationFrame(tick);
 })();
 
 

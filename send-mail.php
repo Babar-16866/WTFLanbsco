@@ -5,6 +5,8 @@
  */
 declare(strict_types=1);
 
+require __DIR__ . '/includes/gmail-mailer.php';
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
   header('Location: /contact.php');
   exit;
@@ -82,7 +84,8 @@ if ($errors) {
   exit;
 }
 
-$to = 'info@wtflabsco.com';
+$mailConfig = gmail_config();
+$to = $mailConfig['recipient'];
 $subject = ($form_page ? $form_page[0] : 'New inquiry') . ' from ' . $name . ' — WTF Labs';
 if ($step >= 1 && $step <= 3) {
   $subject = ($step === 3 ? 'Completed inquiry' : 'Inquiry step ' . $step . ' of 3') . ' from ' . $name . ' — WTF Labs';
@@ -110,7 +113,7 @@ $body .= str_repeat('-', 40) . "\n";
 $body .= 'IP: ' . ($_SERVER['REMOTE_ADDR'] ?? 'unknown') . "\n";
 $body .= 'Time: ' . date('Y-m-d H:i:s T') . "\n";
 
-$fromHeader = 'noreply@wtflabs.com';
+$fromHeader = $mailConfig['sender'];
 $headers = [
   'MIME-Version: 1.0',
   'Content-Type: text/plain; charset=UTF-8',
@@ -119,7 +122,10 @@ $headers = [
   'X-Mailer: PHP/' . phpversion(),
 ];
 
-$sent = @mail($to, '=?UTF-8?B?' . base64_encode($subject) . '?=', $body, implode("\r\n", $headers));
+$sent = gmail_is_ready() && gmail_send($subject, $body, $name, $email);
+if (!$sent) {
+  $sent = @mail($to, '=?UTF-8?B?' . base64_encode($subject) . '?=', $body, implode("\r\n", $headers));
+}
 
 if (!$sent) {
   // Still send user to thank-you so UX doesn't break; log locally if possible
