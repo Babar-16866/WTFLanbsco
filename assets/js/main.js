@@ -2532,3 +2532,19 @@ document.addEventListener('click', (e) => {
     });
   });
 })();
+
+(function preloadLazyImages() {
+  function start() {
+    const run = () => {
+      document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
+        img.fetchPriority = 'low';
+        img.decoding = 'async';
+        img.loading = 'eager';
+      });
+    };
+    if ('requestIdleCallback' in window) requestIdleCallback(run, { timeout: 1500 });
+    else setTimeout(run, 300);
+  }
+  if (document.readyState === 'complete') start();
+  else window.addEventListener('load', start);
+})();
