@@ -591,7 +591,6 @@ window.addEventListener('load', () => {
 
 
 // Content protection — right-click modal + block copy
-/*
 (function initContentProtect() {
   const popup = document.getElementById('protectPopup');
   if (!popup) return;
@@ -656,7 +655,6 @@ window.addEventListener('load', () => {
     }
   });
 })();
-*/
 
 // Works / Services / Industries two-tier category filters
 (function initCategoryFilters() {
