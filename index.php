@@ -329,10 +329,10 @@ include __DIR__ . '/includes/header.php';
         </div>
         <div class="brand-card-fan">
           <img loading="lazy" class="fan-shot fan-shot-1" src="/assets/images/card1_04.webp" alt="">
-          <img loading="lazy" class="fan-shot fan-shot-2" src="/assets/images/card1.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-2" src="/assets/images/card1_01.webp" alt="">
           <img loading="lazy" class="fan-shot fan-shot-3" src="/assets/images/card1_03.webp" alt="">
           <img loading="lazy" class="fan-shot fan-shot-4" src="/assets/images/card1_01.webp" alt="">
-          <img loading="lazy" class="fan-shot fan-shot-5" src="/assets/images/card1_02.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-5" src="/assets/images/card1.webp" alt="">
         </div>
         <div class="brand-card-cta">
           <span class="btn btn-lime btn-sm">Explore More</span>
