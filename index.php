@@ -94,16 +94,16 @@ include __DIR__ . '/includes/header.php';
 
     <div class="hero-canvas" id="heroCanvas">
       <div class="float-mockup mockup-1" data-depth="0.03">
-        <img src="/assets/images/service-web-design.jpg" alt="">
+        <img src="/assets/images/hero-mia-laptop.jpg" alt="">
       </div>
       <div class="float-mockup mockup-2" data-depth="0.05">
-        <img src="/assets/images/service-seo.jpg" alt="">
+        <img src="/assets/images/hero-mia-phone.jpg" alt="">
       </div>
       <div class="float-mockup mockup-3" data-depth="0.04">
         <img src="/assets/images/service-social-media.jpg" alt="">
       </div>
       <div class="float-mockup mockup-4" data-depth="0.06">
-        <img src="/assets/images/service-google-ads.jpg" alt="">
+        <img src="/assets/images/hero-mia-billboard.jpg" alt="">
       </div>
       <div class="hero-banner" data-depth="0.08">
         <img src="/assets/images/main-banner.webp" alt="WTF Labs" class="hero-banner-img" width="1041" height="1069" fetchpriority="high">
@@ -117,7 +117,7 @@ include __DIR__ . '/includes/header.php';
 <section class="niche-strip" aria-label="Industries we serve">
   <div class="niche-strip-track">
     <ul class="niche-strip-list">
-      <li>Remodelers</li>
+      <li>Remodeling</li>
       <li>HVAC</li>
       <li>Plumbing</li>
       <li>Roofing</li>
@@ -128,7 +128,7 @@ include __DIR__ . '/includes/header.php';
       <li>Power Washing</li>
     </ul>
     <ul class="niche-strip-list" aria-hidden="true">
-      <li>Remodelers</li>
+      <li>Remodeling</li>
       <li>HVAC</li>
       <li>Plumbing</li>
       <li>Roofing</li>
@@ -147,7 +147,7 @@ include __DIR__ . '/includes/header.php';
     <div class="section-header center problem-head reveal">
       <h2 class="home-title">Stop Losing Good Jobs To Lower-Bid Competitors With <span class="heading-accent">Better Marketing.</span></h2>
       <p class="section-desc center-desc">You can have better crews, better service, better materials, and better results, and still lose the job if the other company looks more credible online.</p>
-      <p class="section-desc center-desc">That gap costs home-service businesses in different ways:</p>
+      <p class="section-desc center-desc gap-lead">That gap costs home-service businesses in different ways:</p>
     </div>
     <div class="why-done problem-box reveal">
       <div class="why-done-grid">
@@ -455,7 +455,7 @@ include __DIR__ . '/includes/header.php';
             <p>Conversion focused websites that build trust fast and turn local buyers to calls, quotes, and jobs.</p>
           </div>
           <div class="excel-card-media excel-card-media--mockup">
-            <img loading="lazy" src="/assets/images/excel-graphic-design.webp" alt="Web Design &amp; Development">
+            <img loading="lazy" src="/assets/images/excel-web-design-new.webp" alt="Web Design &amp; Development">
           </div>
         </a>
 
@@ -463,7 +463,7 @@ include __DIR__ . '/includes/header.php';
           <a href="/seo.php" class="excel-card excel-card--sm excel-card--row"
             style="--card-grad:var(--grad-seo)">
             <div class="excel-card-media excel-card-media--devices">
-              <img loading="lazy" src="/assets/images/excel-landing.webp" alt="SEO &amp; Local Search">
+              <img loading="lazy" src="/assets/images/excel-seo-new.webp" alt="SEO &amp; Local Search">
             </div>
             <div class="excel-card-copy">
               <h3>SEO &amp; Local Search</h3>
@@ -473,7 +473,7 @@ include __DIR__ . '/includes/header.php';
           <a href="/google-ads.php" class="excel-card excel-card--sm excel-card--row"
             style="--card-grad:var(--grad-google-ads)">
             <div class="excel-card-media excel-card-media--orb">
-              <img loading="lazy" src="/assets/images/excel-ai-orb.jpg" alt="Google Ads">
+              <img loading="lazy" src="/assets/images/excel-google-ads-new.webp" alt="Google Ads">
             </div>
             <div class="excel-card-copy">
               <h3>Google Ads</h3>
@@ -502,7 +502,7 @@ include __DIR__ . '/includes/header.php';
             <p>Showcase your work, offers and get local attention with qualified leads.</p>
           </div>
           <div class="excel-card-media excel-card-media--phones">
-            <img loading="lazy" src="/assets/images/excel-mobile.webp" alt="Social media advertising">
+            <img loading="lazy" src="/assets/images/excel-social-new.webp" alt="Social media advertising">
           </div>
         </a>
 
@@ -510,7 +510,7 @@ include __DIR__ . '/includes/header.php';
           <a href="/graphic-design.php" class="excel-card excel-card--sm excel-card--row"
             style="--card-grad:var(--grad-branding)">
             <div class="excel-card-media excel-card-media--devices">
-              <img loading="lazy" src="/assets/images/excel-web3.webp" alt="Branding &amp; Creative">
+              <img loading="lazy" src="/assets/images/excel-branding-new.webp" alt="Branding &amp; Creative">
             </div>
             <div class="excel-card-copy">
               <h3>Branding &amp; Creative</h3>
@@ -520,7 +520,7 @@ include __DIR__ . '/includes/header.php';
           <a href="/digital-marketing.php" class="excel-card excel-card--sm excel-card--row"
             style="--card-grad:var(--grad-marketing)">
             <div class="excel-card-media excel-card-media--orb">
-              <img loading="lazy" src="/assets/images/excel-branding.webp" alt="Full-Service Digital Marketing">
+              <img loading="lazy" src="/assets/images/excel-digital-marketing-new.webp" alt="Full-Service Digital Marketing">
             </div>
             <div class="excel-card-copy">
               <h3>Full-Service Digital Marketing</h3>
@@ -536,7 +536,7 @@ include __DIR__ . '/includes/header.php';
             <p>Fast, secure hosting with updates, backups and monitoring handled for you, so your site stays online and earning.</p>
           </div>
           <div class="excel-card-media excel-card-media--phones excel-card-media--hosting">
-            <img loading="lazy" src="/assets/images/excel-hosting.webp" alt="Website hosting and maintenance">
+            <img loading="lazy" src="/assets/images/excel-maintenance-new.webp" alt="Website hosting and maintenance">
           </div>
         </a>
 
@@ -629,7 +629,7 @@ include __DIR__ . '/includes/header.php';
         <p class="home-filter-label">Select the Industry and services</p>
         <div class="works-filters" id="homeWorksIndustries" role="tablist" aria-label="Filter works by industry">
           <button type="button" class="works-filter is-active" data-industry="all" role="tab" aria-selected="true">Featured</button>
-          <button type="button" class="works-filter" data-industry="remodelers" role="tab" aria-selected="false">Remodelers</button>
+          <button type="button" class="works-filter" data-industry="remodelers" role="tab" aria-selected="false">Remodeling</button>
           <button type="button" class="works-filter" data-industry="hvac" role="tab" aria-selected="false">HVAC</button>
           <button type="button" class="works-filter" data-industry="landscaping" role="tab" aria-selected="false">Landscaping</button>
           <button type="button" class="works-filter" data-industry="roofing" role="tab" aria-selected="false">Roofing</button>

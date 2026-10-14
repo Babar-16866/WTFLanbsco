@@ -28,7 +28,7 @@ include __DIR__ . '/includes/page-banner.php';
         <p class="home-filter-label">Select the Industry and services</p>
         <div class="works-filters" id="indIndustries" role="tablist" aria-label="Filter by industry">
           <button type="button" class="works-filter" data-industry="all" role="tab" aria-selected="false">Featured</button>
-          <button type="button" class="works-filter" data-industry="remodelers" role="tab" aria-selected="false">Remodelers</button>
+          <button type="button" class="works-filter" data-industry="remodelers" role="tab" aria-selected="false">Remodeling</button>
           <button type="button" class="works-filter" data-industry="hvac" role="tab" aria-selected="false">HVAC</button>
           <button type="button" class="works-filter is-active" data-industry="landscaping" role="tab" aria-selected="true">Landscaping</button>
           <button type="button" class="works-filter" data-industry="roofing" role="tab" aria-selected="false">Roofing</button>

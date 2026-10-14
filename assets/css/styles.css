@@ -11787,3 +11787,26 @@ html body .form-peek--bottom .form-peek-word--right {
   margin: 18px auto 20px;
   padding: 0 16px;
 }
+.hero-canvas .mockup-1 img { object-position: 50% 48%; }
+.hero-canvas .mockup-2 img { object-position: 50% 30%; }
+.hero-canvas .mockup-4 img { object-position: 50% 38%; }
+html[data-palette="index2"] .hero-section .hero-eyebrow {
+  color: rgb(208, 240, 0);
+}
+html[data-palette="index2"] .hero-section .hero-eyebrow-dot {
+  background: rgb(208, 240, 0);
+}
+.section-desc.gap-lead {
+  font-size: clamp(19px, 1.5vw, 22px);
+  font-weight: 700;
+}
+.faq-all-btn span {
+  font-weight: 900;
+  font-size: 1.2em;
+  line-height: 1;
+  -webkit-text-stroke: 0.9px currentColor;
+}
+.form-peek--top,
+.form-peek--bottom {
+  gap: 2vw;
+}

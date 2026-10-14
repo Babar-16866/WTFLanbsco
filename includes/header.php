@@ -76,7 +76,7 @@ require_once __DIR__ . '/config.php';
         <li class="nav-dropdown">
           <a href="/industries.php" class="nav-dropdown-btn"<?php echo $current_page === 'industries' ? ' aria-current="page"' : ''; ?>>Industries <span>&#9662;</span></a>
           <div class="nav-dropdown-menu">
-            <a href="/industries.php#remodelers">Remodelers</a>
+            <a href="/industries.php#remodelers">Remodeling</a>
             <a href="/industries.php#hvac">HVAC</a>
             <a href="/industries.php#landscaping">Landscaping</a>
             <a href="/industries.php#roofing">Roofing</a>

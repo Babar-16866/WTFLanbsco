@@ -214,8 +214,8 @@ include __DIR__ . '/includes/page-banner.php';
                 <span class="form-peek-word form-peek-word--right">IF YOU CAN</span>
               </div>
               <button type="submit" class="btn btn-lime btn-lg" name="commitment" value="100% committed">100% Committed, and I promise I won't waste your time</button>
-              <button type="button" class="btn btn-lg form-commit-runaway" tabindex="-1" aria-hidden="true">50% committed and I promise I'll waste your time</button>
-              <button type="button" class="btn btn-lg form-commit-alt" data-not-committed>I'd like to discuss, and I promise I won't waste your time</button>
+              <button type="button" class="btn btn-lg form-commit-runaway" tabindex="-1" aria-hidden="true">50% committed and I promise I will waste your time</button>
+              <button type="button" class="btn btn-lg form-commit-alt" data-not-committed>I'd like to discuss, but I promise I won't waste your time</button>
             </div>
           </div>
           <div class="form-step-note" hidden aria-live="polite"></div>

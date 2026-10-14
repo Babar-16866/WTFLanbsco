@@ -10,7 +10,7 @@ include __DIR__ . '/includes/header.php';
   <div class="container">
     <div class="thank-card reveal">
       <div class="thank-visual" aria-hidden="true">
-        <img src="/assets/images/logo.webp" alt="" class="thank-logo thank-logo-light">
+        <img src="/assets/images/logo-thank-you.webp" alt="" class="thank-logo thank-logo-light">
         <img src="/assets/images/logo-new.webp" alt="" class="thank-logo thank-logo-dark">
         <!--
         <span class="thank-check">
@@ -29,7 +29,7 @@ include __DIR__ . '/includes/header.php';
       <p class="thank-lead thank-quote">The journey of a thousand miles, begins with one step</p>
 
       <ul class="thank-points">
-        <li>We review every submission personally — no bots.</li>
+        <li>We review every submission personally - no bots.</li>
         <!-- <li>If it's urgent, WhatsApp or call us anytime.</li> -->
         <li>Meanwhile, explore recent work or how we work.</li>
       </ul>
