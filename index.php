@@ -371,10 +371,10 @@ include __DIR__ . '/includes/header.php';
           <p class="brand-card-points">Plan selection · Quick cost estimates · Service-area clarity · Recurring signup · Retention · Local proof</p>
         </div>
         <div class="brand-card-fan">
-          <img loading="lazy" class="fan-shot fan-shot-1" src="/assets/images/card3_01.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-1" src="/assets/images/card3_04.webp" alt="">
           <img loading="lazy" class="fan-shot fan-shot-2" src="/assets/images/card3_02.webp" alt="">
           <img loading="lazy" class="fan-shot fan-shot-3" src="/assets/images/card3_03.webp" alt="">
-          <img loading="lazy" class="fan-shot fan-shot-4" src="/assets/images/card3_04.webp" alt="">
+          <img loading="lazy" class="fan-shot fan-shot-4" src="/assets/images/card3_01.webp" alt="">
           <img loading="lazy" class="fan-shot fan-shot-5" src="/assets/images/card3.webp" alt="">
         </div>
         <div class="brand-card-cta">
