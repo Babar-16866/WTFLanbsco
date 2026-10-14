@@ -11686,9 +11686,8 @@ html body .form-peek.is-visible .form-peek-word--right {
   animation: none;
 }
 html[data-palette] .nav-dropdown-menu a.is-nudged {
-  color: var(--pal-dark, #10231B);
-  background: var(--pal-gold, #C39B62);
-  animation: nav-nudge-pulse 0.8s ease 3;
+  background: color-mix(in srgb, var(--pal-light) 10%, transparent);
+  color: var(--pal-accent);
 }
 @keyframes nav-nudge-pulse {
   0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--pal-gold, #C39B62) 70%, transparent); }
