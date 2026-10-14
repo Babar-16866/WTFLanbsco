@@ -14,5 +14,9 @@ if (!preg_match('/^[a-z0-9-]+$/', $path) || !is_file($root . '/' . $path . '.php
   exit;
 }
 
+if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'GET' && !in_array($path, ['send-mail', 'oauth-setup', 'live-preview'], true)) {
+  header('Cache-Control: public, max-age=0, s-maxage=300, stale-while-revalidate=86400');
+}
+
 chdir($root);
 require $root . '/' . $path . '.php';

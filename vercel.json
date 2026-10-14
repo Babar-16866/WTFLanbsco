@@ -12,7 +12,11 @@
       "status": 301,
       "headers": { "Location": "/$1" }
     },
-    { "src": "/(assets/.+|sitemap\\.xml)", "dest": "/$1" },
+    {
+      "src": "/(assets/.+|sitemap\\.xml)",
+      "headers": { "Cache-Control": "public, max-age=2592000, stale-while-revalidate=86400" },
+      "dest": "/$1"
+    },
     { "src": "/(.*)", "dest": "/api/index.php" }
   ]
 }
