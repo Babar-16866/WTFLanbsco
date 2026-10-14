@@ -11,11 +11,6 @@ $street_desc_set = isset($street_desc);
 $street_desc = $street_desc ?? '';
 ?>
 <section class="street-section" id="<?php echo htmlspecialchars($street_section_id); ?>">
-  <!--
-  <div class="container">
-    <p class="street-kicker reveal"><span></span> <?php echo htmlspecialchars($street_kicker); ?></p>
-  </div>
-  -->
   <div class="container">
     <div class="section-header center street-head reveal">
 <?php if ($street_eyebrow !== ''): ?>
@@ -31,103 +26,6 @@ $street_desc = $street_desc ?? '';
   <div class="street-rows reveal">
     <div class="street-row" data-dir="left">
       <div class="street-row-track">
-        <?php /*
-        <!-- Video -->
-        <!--
-        <article class="street-card street-card--photo street-card--video street-card--tall" data-video="<?= BASE ?>/assets/videos/testimonial-demo.mp4">
-          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo-preview.mp4" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/testimonial-demo-poster.jpg" tabindex="-1" aria-hidden="true"></video>
-        -->
-        <!--
-        <article class="street-card street-card--photo street-card--video street-card--tall" data-video="<?= BASE ?>/assets/videos/wtf.mp4">
-          <video class="street-video" src="<?= BASE ?>/assets/videos/wtf-preview.mp4" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/wtf-poster.jpg" tabindex="-1" aria-hidden="true"></video>
-          <div class="street-photo-overlay">
-            <span class="street-logo">kernel</span>
-            <p>We've worked with them for many projects now and <strong>am always blown away</strong>.</p>
-          </div>
-        </article>
-        -->
-        <article class="street-card street-card--quote street-card--md">
-          <span class="street-badge">Cedarline HVAC</span>
-          <p>&quot;Noman actually listened to what we wanted instead of pushing a bunch of stuff we didn&#39;t need. The whole process was surprisingly easy.&quot;</p>
-          <div class="street-meta">
-            <img loading="lazy" class="street-avatar" src="<?= BASE ?>/assets/images/team-1.jpg" alt="">
-            <div class="street-meta-text">
-              <strong>Travis Mercer</strong>
-              <span class="street-stars" aria-label="5 stars">★★★★★</span>
-            </div>
-          </div>
-        </article>
-        <article class="street-card street-card--quote street-card--md">
-          <span class="street-badge">Copper Peak Roofing</span>
-          <p>&quot;We&#39;ve dealt with agencies before, but Bilal made communication a lot easier. He understood our business and paid attention to the little details.&quot;</p>
-          <div class="street-meta">
-            <img loading="lazy" class="street-avatar" src="<?= BASE ?>/assets/images/team-2.jpg" alt="">
-            <div class="street-meta-text">
-              <strong>Dorian Wells</strong>
-              <span class="street-stars" aria-label="5 stars">★★★★★</span>
-            </div>
-          </div>
-        </article>
-        <!-- Video -->
-        <!--
-        <article class="street-card street-card--photo street-card--video street-card--wide" data-video="<?= BASE ?>/assets/videos/testimonial-demo.mp4">
-          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo-preview.mp4" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/testimonial-demo-poster.jpg" tabindex="-1" aria-hidden="true"></video>
-        -->
-        <article class="street-card street-card--photo street-card--video street-card--wide" data-video="<?= BASE ?>/assets/videos/wtf.mp4">
-          <video class="street-video" src="<?= BASE ?>/assets/videos/wtf-preview.mp4" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/wtf-poster.jpg" tabindex="-1" aria-hidden="true"></video>
-          <div class="street-photo-overlay">
-            <span class="street-logo">USERWAY</span>
-            <p>Despite high expectations, they always over-delivered — a testament to their <strong>creative prowess</strong>.</p>
-          </div>
-        </article>
-        <article class="street-card street-card--quote street-card--sm">
-          <span class="street-badge">Harbor Bend Plumbing</span>
-          <p>&quot;The new website looks fantastic. It&#39;s cleaner, easier to navigate, and finally feels like it represents our company properly. Really happy with WTF Labs.&quot;</p>
-          <div class="street-meta">
-            <img loading="lazy" class="street-avatar" src="<?= BASE ?>/assets/images/team-3.jpg" alt="">
-            <div class="street-meta-text">
-              <strong>Lauren Whitcomb</strong>
-              <span class="street-stars" aria-label="5 stars">★★★★★</span>
-            </div>
-          </div>
-        </article>
-        <!-- Video -->
-        <!--
-        <article class="street-card street-card--photo street-card--video street-card--tall" data-video="<?= BASE ?>/assets/videos/testimonial-demo.mp4">
-          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo-preview.mp4" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/testimonial-demo-poster.jpg" tabindex="-1" aria-hidden="true"></video>
-        -->
-        <!--
-        <article class="street-card street-card--photo street-card--video street-card--tall" data-video="<?= BASE ?>/assets/videos/wtf.mp4">
-          <video class="street-video" src="<?= BASE ?>/assets/videos/wtf-preview.mp4" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/wtf-poster.jpg" tabindex="-1" aria-hidden="true"></video>
-          <div class="street-photo-overlay">
-            <span class="street-logo">ROOT</span>
-            <p>Everyone that sees the UI says that is the <strong>best looking UI</strong> I've ever seen.</p>
-          </div>
-        </article>
-        -->
-        <article class="street-card street-card--quote street-card--md">
-          <span class="street-badge">Stone &amp; Spruce Landscaping</span>
-          <p>&quot;Noman and Bilal were great to work with. What stood out most was how quickly they understood what we were trying to accomplish.&quot;</p>
-          <div class="street-meta">
-            <img loading="lazy" class="street-avatar" src="<?= BASE ?>/assets/images/team-3.jpg" alt="">
-            <div class="street-meta-text">
-              <strong>Elliot Hayes</strong>
-              <span class="street-stars" aria-label="5 stars">★★★★★</span>
-            </div>
-          </div>
-        </article>
-        <article class="street-card street-card--quote street-card--md">
-          <span class="street-badge">Brightlane Auto Detailing</span>
-          <p>&quot;Man, what a difference. Our old site looked like it hadn&#39;t been touched in ten years. This is exactly the kind of upgrade we needed.&quot;</p>
-          <div class="street-meta">
-            <img loading="lazy" class="street-avatar" src="<?= BASE ?>/assets/images/people-main.jpg" alt="">
-            <div class="street-meta-text">
-              <strong>Marcus Bell</strong>
-              <span class="street-stars" aria-label="5 stars">★★★★★</span>
-            </div>
-          </div>
-        </article>
-        */ ?>
         <article class="street-card street-card--photo street-card--video street-card--wide" data-video="<?= BASE ?>/assets/videos/wtf.mp4">
           <video class="street-video" src="<?= BASE ?>/assets/videos/wtf-preview.mp4" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/wtf-poster.jpg" tabindex="-1" aria-hidden="true"></video>
           <div class="street-photo-overlay">
@@ -205,89 +103,6 @@ $street_desc = $street_desc ?? '';
 
     <div class="street-row" data-dir="right">
       <div class="street-row-track">
-        <?php /*
-        <article class="street-card street-card--quote street-card--md">
-          <span class="street-badge">Westmark Electrical</span>
-          <p>&quot;What I liked about WTF Labs was that they kept things simple. No confusing technical explanations, just clear answers and a plan that made sense.&quot;</p>
-          <div class="street-meta">
-            <img loading="lazy" class="street-avatar" src="<?= BASE ?>/assets/images/people-office.jpg" alt="">
-            <div class="street-meta-text">
-              <strong>Caleb Russo</strong>
-              <span class="street-stars" aria-label="5 stars">★★★★★</span>
-            </div>
-          </div>
-        </article>
-        <!-- Video -->
-        <!--
-        <article class="street-card street-card--photo street-card--video street-card--tall" data-video="<?= BASE ?>/assets/videos/testimonial-demo.mp4">
-          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo-preview.mp4" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/testimonial-demo-poster.jpg" tabindex="-1" aria-hidden="true"></video>
-        -->
-        <!--
-        <article class="street-card street-card--photo street-card--video street-card--tall" data-video="<?= BASE ?>/assets/videos/wtf.mp4">
-          <video class="street-video" src="<?= BASE ?>/assets/videos/wtf-preview.mp4" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/wtf-poster.jpg" tabindex="-1" aria-hidden="true"></video>
-          <div class="street-photo-overlay">
-            <span class="street-logo">starbridge</span>
-            <p>I can't believe you guys <strong>did all this in a week.</strong></p>
-          </div>
-        </article>
-        -->
-        <article class="street-card street-card--quote street-card--md">
-          <span class="street-badge">Cedarline HVAC</span>
-          <p>&quot;Noman actually listened to what we wanted instead of pushing a bunch of stuff we didn&#39;t need. The whole process was surprisingly easy.&quot;</p>
-          <div class="street-meta">
-            <img loading="lazy" class="street-avatar" src="<?= BASE ?>/assets/images/team-2.jpg" alt="">
-            <div class="street-meta-text">
-              <strong>Travis Mercer</strong>
-              <span class="street-stars" aria-label="5 stars">★★★★★</span>
-            </div>
-          </div>
-        </article>
-        <article class="street-card street-card--quote street-card--lg">
-          <span class="street-badge">Copper Peak Roofing</span>
-          <p>&quot;We&#39;ve dealt with agencies before, but Bilal made communication a lot easier. He understood our business and paid attention to the little details.&quot;</p>
-          <div class="street-meta">
-            <img loading="lazy" class="street-avatar" src="<?= BASE ?>/assets/images/people-workshop.jpg" alt="">
-            <div class="street-meta-text">
-              <strong>Dorian Wells</strong>
-              <span class="street-stars" aria-label="5 stars">★★★★★</span>
-            </div>
-          </div>
-        </article>
-        <!-- Video -->
-        <!--
-        <article class="street-card street-card--photo street-card--video street-card--wide" data-video="<?= BASE ?>/assets/videos/testimonial-demo.mp4">
-          <video class="street-video" src="<?= BASE ?>/assets/videos/testimonial-demo-preview.mp4" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/testimonial-demo-poster.jpg" tabindex="-1" aria-hidden="true"></video>
-        -->
-        <article class="street-card street-card--photo street-card--video street-card--wide" data-video="<?= BASE ?>/assets/videos/wtflabs-02.webm">
-          <video class="street-video" src="<?= BASE ?>/assets/videos/wtflabs-02-preview.webm" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/wtflabs-02-poster.jpg" tabindex="-1" aria-hidden="true"></video>
-          <div class="street-photo-overlay">
-            <span class="street-logo">Vivodyne</span>
-            <p>Everyone that's seen has said that it's <strong>hands down the best</strong> website they've seen.</p>
-          </div>
-        </article>
-        <article class="street-card street-card--quote street-card--sm">
-          <span class="street-badge">Harbor Bend Plumbing</span>
-          <p>&quot;The new website looks fantastic. It&#39;s cleaner, easier to navigate, and finally feels like it represents our company properly. Really happy with WTF Labs.&quot;</p>
-          <div class="street-meta">
-            <img loading="lazy" class="street-avatar" src="<?= BASE ?>/assets/images/team-1.jpg" alt="">
-            <div class="street-meta-text">
-              <strong>Lauren Whitcomb</strong>
-              <span class="street-stars" aria-label="5 stars">★★★★★</span>
-            </div>
-          </div>
-        </article>
-        <article class="street-card street-card--quote street-card--md">
-          <span class="street-badge">Stone &amp; Spruce Landscaping</span>
-          <p>&quot;Noman and Bilal were great to work with. What stood out most was how quickly they understood what we were trying to accomplish.&quot;</p>
-          <div class="street-meta">
-            <img loading="lazy" class="street-avatar" src="<?= BASE ?>/assets/images/team-2.jpg" alt="">
-            <div class="street-meta-text">
-              <strong>Elliot Hayes</strong>
-              <span class="street-stars" aria-label="5 stars">★★★★★</span>
-            </div>
-          </div>
-        </article>
-        */ ?>
         <article class="street-card street-card--photo street-card--video street-card--wide" data-video="<?= BASE ?>/assets/videos/wtflabs-02.webm">
           <video class="street-video" src="<?= BASE ?>/assets/videos/wtflabs-02-preview.webm" muted loop playsinline preload="none" poster="<?= BASE ?>/assets/images/wtflabs-02-poster.jpg" tabindex="-1" aria-hidden="true"></video>
           <div class="street-photo-overlay">

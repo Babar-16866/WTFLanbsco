@@ -77,124 +77,6 @@ include __DIR__ . '/includes/page-banner.php';
       </aside>
 
       <div class="contact-page-form-wrap">
-        <?php /*
-        <p class="contact-page-label">Audit request</p>
-        <h3>Tell us what to review</h3>
-        <form class="contact-form contact-page-form" id="auditForm" action="/send-mail.php" method="post">
-          <input type="text" name="website" value="" tabindex="-1" autocomplete="off" class="hp-field" aria-hidden="true">
-          <input type="hidden" name="source" value="free-audit">
-          <div class="contact-form-row">
-            <div class="field">
-              <label for="auditName">What's your name?</label>
-              <input id="auditName" type="text" name="name" required autocomplete="name" placeholder="Jane Doe">
-            </div>
-            <div class="field">
-              <label for="auditEmail">What's your work email?</label>
-              <input id="auditEmail" type="email" name="email" required autocomplete="email" placeholder="jane@company.com">
-            </div>
-          </div>
-          <div class="contact-form-row">
-            <div class="field">
-              <label for="auditPhone">What's your phone number?</label>
-              <input id="auditPhone" type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+1 (555) 000-1234">
-            </div>
-            <div class="field">
-              <label for="auditCompany">Company name</label>
-              <input id="auditCompany" type="text" name="company" autocomplete="organization" placeholder="Acme Roofing">
-            </div>
-          </div>
-          <div class="field">
-            <label for="auditUrl">Website or store URL</label>
-            <input id="auditUrl" type="url" name="site_url" required placeholder="https://www.yoursite.com">
-          </div>
-          <div class="field">
-            <label>What should we audit?</label>
-            <div class="budget-pills">
-              <label><input type="radio" name="audit_type" value="Website" checked> Website</label>
-              <label><input type="radio" name="audit_type" value="Shopify store"> Shopify store</label>
-              <label><input type="radio" name="audit_type" value="Software / web app"> Software / web app</label>
-              <label><input type="radio" name="audit_type" value="Landing page"> Landing page</label>
-              <label><input type="radio" name="audit_type" value="Google Ads account"> Google Ads account</label>
-            </div>
-          </div>
-          <div class="contact-form-row">
-            <div class="field">
-              <label for="auditPlatform">Which platform is it built on?</label>
-              <select id="auditPlatform" name="platform" required>
-                <option value="" disabled selected>Select a platform</option>
-                <option>WordPress</option>
-                <option>Shopify</option>
-                <option>Webflow</option>
-                <option>Wix / Squarespace</option>
-                <option>Custom code (React, Laravel, etc.)</option>
-                <option>Not sure</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="auditIndustry">Your industry</label>
-              <select id="auditIndustry" name="industry" required>
-                <option value="" disabled selected>Select an industry</option>
-                <option>Remodeling</option>
-                <option>HVAC</option>
-                <option>Plumbing</option>
-                <option>Roofing</option>
-                <option>Pest Control</option>
-                <option>Pool Services</option>
-                <option>Landscaping</option>
-                <option>Handyman</option>
-                <option>Power Washing</option>
-                <option>E-commerce</option>
-                <option>SaaS / Software</option>
-                <option>Other</option>
-              </select>
-            </div>
-          </div>
-          <div class="field">
-            <label>Focus areas (pick any)</label>
-            <div class="budget-pills">
-              <label><input type="checkbox" name="focus[]" value="Speed"> Speed</label>
-              <label><input type="checkbox" name="focus[]" value="SEO"> SEO</label>
-              <label><input type="checkbox" name="focus[]" value="Local SEO"> Local SEO</label>
-              <label><input type="checkbox" name="focus[]" value="UX / Design"> UX / Design</label>
-              <label><input type="checkbox" name="focus[]" value="Conversion"> Conversion</label>
-              <label><input type="checkbox" name="focus[]" value="Checkout"> Checkout</label>
-              <label><input type="checkbox" name="focus[]" value="Security"> Security</label>
-              <label><input type="checkbox" name="focus[]" value="Tracking &amp; analytics"> Tracking &amp; analytics</label>
-            </div>
-          </div>
-          <div class="field">
-            <label>Monthly visitors (roughly)</label>
-            <div class="budget-pills">
-              <label><input type="radio" name="traffic" value="Under 1k"> Under 1k</label>
-              <label><input type="radio" name="traffic" value="1k-10k"> 1k-10k</label>
-              <label><input type="radio" name="traffic" value="10k-50k"> 10k-50k</label>
-              <label><input type="radio" name="traffic" value="50k+"> 50k+</label>
-              <label><input type="radio" name="traffic" value="Not sure"> Not sure</label>
-            </div>
-          </div>
-          <div class="field">
-            <label for="auditCompetitors">Top competitors (optional)</label>
-            <input id="auditCompetitors" type="text" name="competitors" placeholder="competitor-one.com, competitor-two.com">
-          </div>
-          <div class="field">
-            <label for="auditMessage">What's the biggest problem right now?</label>
-            <textarea id="auditMessage" name="message" rows="4" required placeholder="Not enough leads, slow site, low sales, ads not converting..."></textarea>
-          </div>
-          <div class="field">
-            <label>Best way to share the report</label>
-            <div class="budget-pills">
-              <label><input type="radio" name="contact_method" value="Email" checked> Email</label>
-              <label><input type="radio" name="contact_method" value="Video walkthrough"> Video walkthrough</label>
-              <label><input type="radio" name="contact_method" value="Call"> Call</label>
-            </div>
-          </div>
-          <label class="check">
-            <input type="checkbox" name="terms" required>
-            <span>I agree to the <a href="/privacy-policy.php">Privacy Policy</a> and <a href="/terms-and-conditions.php">Terms of use</a>.</span>
-          </label>
-          <button type="submit" class="btn btn-lime btn-lg btn-block">Request my free audit</button>
-        </form>
-        */ ?>
         <ol class="form-steps" aria-label="Form progress">
           <li class="form-step-dot is-active" data-step-dot="1"><span class="form-step-num">1</span><span class="form-step-label">Contact</span></li>
           <li class="form-step-line" aria-hidden="true"><span></span></li>
@@ -218,7 +100,6 @@ include __DIR__ . '/includes/page-banner.php';
               <div class="field"><label>Email</label><input type="email" name="email" required autocomplete="email" placeholder="jane@company.com"></div>
               <div class="field"><label>Phone</label><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+1 (555) 000-1234"></div>
             </div>
-            <!-- <div class="field"><label>What industry do you operate in?</label><input type="text" name="industry_operate" placeholder="e.g. Roofing"></div> -->
             <button type="button" class="btn btn-lime btn-lg btn-block" data-step-next>Next</button>
           </div>
           <div class="form-step" data-step="2" hidden>
@@ -277,9 +158,7 @@ include __DIR__ . '/includes/page-banner.php';
             <button type="button" class="btn btn-lime btn-lg btn-block" data-step-next>Next</button>
           </div>
           <div class="form-step" data-step="3" hidden>
-            <!-- <p class="form-step-title">How much are you willing to invest for this goal?</p> -->
             <p class="form-step-title">How committed are you for your business growth?</p>
-            <!-- <p class="form-commit-label">Are you committed?</p> -->
             <div class="form-commit">
               <div class="form-peek form-peek--top" aria-hidden="true">
                 <span class="form-peek-word form-peek-word--left">CATCH ME</span>

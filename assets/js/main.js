@@ -659,60 +659,6 @@ window.addEventListener('load', () => {
 // Works / Services / Industries two-tier category filters
 (function initCategoryFilters() {
   const SUBS = {
-    /*
-    'graphic-design': [
-      { id: 'all', label: 'All Graphic Design' },
-      { id: 'logo-design', label: 'Logo Design' },
-      { id: 'brand-collaterals', label: 'Brand Collaterals' },
-      { id: 't-shirt', label: 'T-shirt' },
-      { id: 'business-card', label: 'Business Card' },
-      { id: 'social-media-post', label: 'Social Media Post' }
-    ],
-    'web-design': [
-      { id: 'all', label: 'All Web Design' },
-      { id: 'landing-pages', label: 'Landing Pages' },
-      { id: 'corporate-sites', label: 'Corporate Sites' },
-      { id: 'product-sites', label: 'Product Sites' },
-      { id: 'redesigns', label: 'Redesigns' }
-    ],
-        'web-development': [
-      { id: 'all', label: 'All' },
-      { id: 'wordpress', label: 'WordPress' },
-      { id: 'wix', label: 'Wix' },
-      { id: 'squarespace', label: 'Squarespace' },
-      { id: 'shopify', label: 'Shopify' },
-      { id: 'web-app', label: 'Web App' },
-      { id: 'custom-web', label: 'Custom Web' }
-    ],
-    seo: [
-      { id: 'all', label: 'All SEO' },
-      { id: 'technical-seo', label: 'Technical SEO' },
-      { id: 'on-page', label: 'On-Page' },
-      { id: 'content-seo', label: 'Content SEO' },
-      { id: 'local-seo', label: 'Local SEO' }
-    ],
-    'social-media-advertising': [
-      { id: 'all', label: 'All Social Ads' },
-      { id: 'meta-ads', label: 'Meta Ads' },
-      { id: 'linkedin-ads', label: 'LinkedIn Ads' },
-      { id: 'tiktok-ads', label: 'TikTok Ads' },
-      { id: 'creative-testing', label: 'Creative Testing' }
-    ],
-    'google-ads': [
-      { id: 'all', label: 'All Google Ads' },
-      { id: 'search-ads', label: 'Search Ads' },
-      { id: 'display-ads', label: 'Display Ads' },
-      { id: 'performance-max', label: 'Performance Max' },
-      { id: 'remarketing', label: 'Remarketing' }
-    ],
-    'digital-marketing': [
-      { id: 'all', label: 'All Digital Marketing' },
-      { id: 'strategy', label: 'Strategy' },
-      { id: 'content-marketing', label: 'Content Marketing' },
-      { id: 'email-marketing', label: 'Email Marketing' },
-      { id: 'funnel-design', label: 'Funnel Design' }
-    ]
-    */
   };
 
   function hasToken(list, token) {

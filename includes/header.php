@@ -51,23 +51,6 @@ require_once __DIR__ . '/config.php';
         <li class="nav-dropdown">
           <a href="/services.php" class="nav-dropdown-btn"<?php echo $current_page === 'services' ? ' aria-current="page"' : ''; ?>>Services <span>&#9662;</span></a>
           <div class="nav-dropdown-menu">
-            <!--
-            <a href="/graphic-design.php">Graphic Design</a>
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-            <a href="/seo.php">SEO</a>
-            <a href="/social-media-advertising.php">Social Media Advertising</a>
-            <a href="/google-ads.php">Google Ads</a>
-            <a href="/digital-marketing.php">Digital Marketing</a>
-            -->
-            <!--
-            <a href="/web-design.php">Web Design &amp; Development</a>
-            <a href="/seo.php">SEO &amp; Local Search</a>
-            <a href="/google-ads.php">Google Ads</a>
-            <a href="/social-media-advertising.php">Social Media Advertising</a>
-            <a href="/graphic-design.php">Branding &amp; Creative</a>
-            <a href="/digital-marketing.php">Full-Service Digital Marketing</a>
-            -->
             <a href="/web-design.php">Web Design</a>
             <a href="/digital-marketing.php">Digital Marketing</a>
             <a href="/services.php#featured-services" data-nav-nudge>Click One 👆 There's More!</a>
@@ -88,20 +71,7 @@ require_once __DIR__ . '/config.php';
           </div>
         </li>
         <li><a href="/works.php"<?php echo $current_page === 'works' ? ' aria-current="page"' : ''; ?>>Work</a></li>
-        <!--
-        <li><a href="/how-we-work.php"<?php echo $current_page === 'how-we-work' ? ' aria-current="page"' : ''; ?>>How We Work</a></li>
-        -->
         <li><a href="/insights.php"<?php echo $current_page === 'insights' ? ' aria-current="page"' : ''; ?>>Insights</a></li>
-        <!--
-        <li class="nav-dropdown">
-          <a href="/website-brief.php" class="nav-dropdown-btn"<?php echo $current_page === 'forms' ? ' aria-current="page"' : ''; ?>>Forms <span>&#9662;</span></a>
-          <div class="nav-dropdown-menu">
-            <a href="/website-brief.php">Website Brief</a>
-            <a href="/marketing-brief.php">Marketing Brief</a>
-            <a href="/client-feedback.php">Client Feedback</a>
-          </div>
-        </li>
-        -->
         <li><a href="/about.php"<?php echo $current_page === 'about' ? ' aria-current="page"' : ''; ?>>About</a></li>
       </ul>
       <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" title="Toggle theme">

@@ -11,41 +11,14 @@ include __DIR__ . '/contact-section.php';
           <img loading="lazy" src="/assets/images/logo-new.webp" alt="WTF Labs">
         </a>
         <p>WTF Labs - B2B website design & development since 2018.</p>
-        <!--
-        <p class="footer-address">742 Innovation Drive, Suite 200<br>Austin, TX 78701, USA</p>
-        -->
         <p class="footer-address">25140 Kingsland Blvd<br>Katy, Texas 77494, USA</p>
         <p class="footer-address"><a href="mailto:info@wtflabsco.com">info@wtflabsco.com</a></p>
       </div>
-      <!--
-      <div>
-        <h4>Navigation</h4>
-        <a href="/">Home</a>
-        <a href="/works.php">Works</a>
-        <a href="/how-we-work.php">How we work</a>
-        <a href="/about.php">About Us</a>
-        <a href="/services.php">Services</a>
-        <a href="/industries.php">Industries</a>
-        <a href="/faqs.php">FAQs</a>
-        <a href="/contact.php">Contact</a>
-      </div>
-      <div>
-        <h4>Services</h4>
-        <a href="/graphic-design.php">Graphic Design</a>
-        <a href="/web-design.php">Web Design</a>
-        <a href="/web-development.php">Web Development</a>
-        <a href="/seo.php">SEO</a>
-        <a href="/social-media-advertising.php">Social Media Advertising</a>
-        <a href="/google-ads.php">Google Ads</a>
-        <a href="/digital-marketing.php">Digital Marketing</a>
-      </div>
-      -->
       <div>
         <h4>Company</h4>
         <a href="/about.php">About</a>
         <a href="/works.php">Work</a>
         <a href="/how-we-work.php">How We Work</a>
-        <!-- <a href="/#testimonials">Reviews</a> -->
         <a href="/contact.php">Contact</a>
         <a href="/faqs.php">FAQs</a>
       </div>
@@ -70,15 +43,6 @@ include __DIR__ . '/contact-section.php';
         <a href="/industries.php#handyman">Handyman</a>
         <a href="/industries.php#pest-control">Pest Control</a>
       </div>
-      <!--
-      <div>
-        <h4>Contact</h4>
-        <a href="mailto:hello@wtflabs.com">hello@wtflabs.com</a>
-        <a href="tel:+15550001234">+1 (555) 000-1234</a>
-        <a href="https://wa.me/15550001234" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-        <a href="/contact.php" data-open-popup>Free Consultation</a>
-      </div>
-      -->
       <div>
         <h4>Resources</h4>
         <a href="/insights.php">Insights</a>

@@ -34,9 +34,6 @@ include __DIR__ . '/includes/page-banner.php';
             </span>
             <div>
               <strong>Office</strong>
-              <!--
-              <p>742 Innovation Drive, Suite 200<br>Austin, TX 78701, USA</p>
-              -->
               <p>25140 Kingsland Blvd<br>Katy, Texas 77494, USA</p>
             </div>
           </li>
@@ -69,59 +66,6 @@ include __DIR__ . '/includes/page-banner.php';
       </aside>
 
       <div class="contact-page-form-wrap">
-        <?php /*
-        <p class="contact-page-label">Project inquiry</p>
-        <h3>Tell us what you're building</h3>
-        <form class="contact-form contact-page-form" id="contactForm" action="/send-mail.php" method="post">
-          <input type="text" name="website" value="" tabindex="-1" autocomplete="off" class="hp-field" aria-hidden="true">
-          <input type="hidden" name="source" value="contact-page">
-          <div class="contact-form-row">
-            <div class="field">
-              <label for="contactName">What's your name?</label>
-              <input id="contactName" type="text" name="name" required autocomplete="name" placeholder="Jane Doe">
-            </div>
-            <div class="field">
-              <label for="contactEmail">What's your work email?</label>
-              <input id="contactEmail" type="email" name="email" required autocomplete="email" placeholder="jane@company.com">
-            </div>
-          </div>
-          <div class="field">
-            <label for="contactPhone">What's your phone number?</label>
-            <input id="contactPhone" type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+1 (555) 000-1234">
-          </div>
-          <div class="field">
-            <label for="contactHelp">What can we help you with?</label>
-            <select id="contactHelp" name="help" required>
-              <option value="" disabled selected>Select a service</option>
-              <option>Company &amp; Business website</option>
-              <option>Landing page</option>
-              <option>Web applications &amp; SaaS</option>
-              <option>Graphic Design</option>
-              <option>SEO / Ads / Digital Marketing</option>
-              <option>Custom Webflow website</option>
-            </select>
-          </div>
-          <div class="field">
-            <label>What's your budget range?</label>
-            <div class="budget-pills">
-              <label><input type="radio" name="budget" value="10k-20k"> 10k-20k</label>
-              <label><input type="radio" name="budget" value="20k-50k"> 20k-50k</label>
-              <label><input type="radio" name="budget" value="50k-100k"> 50k-100k</label>
-              <label><input type="radio" name="budget" value="100k+"> 100k+</label>
-            </div>
-          </div>
-          <div class="field">
-            <label for="contactMessage">What should we know about the project?</label>
-            <textarea id="contactMessage" name="message" rows="4" required placeholder="Goals, timeline, links, anything useful..."></textarea>
-          </div>
-          <label class="check">
-            <input type="checkbox" name="terms" required>
-            <span>I agree to the <a href="/privacy-policy.php">Privacy Policy</a> and <a href="/terms-and-conditions.php">Terms of use</a>.</span>
-          </label>
-          <button type="submit" class="btn btn-lime btn-lg btn-block">Submit</button>
-          <p class="form-ok hidden" id="formOk">Thank you! Your submission has been received!</p>
-        </form>
-        */ ?>
         <ol class="form-steps" aria-label="Form progress">
           <li class="form-step-dot is-active" data-step-dot="1"><span class="form-step-num">1</span><span class="form-step-label">Contact</span></li>
           <li class="form-step-line" aria-hidden="true"><span></span></li>
@@ -145,7 +89,6 @@ include __DIR__ . '/includes/page-banner.php';
               <div class="field"><label>Email</label><input type="email" name="email" required autocomplete="email" placeholder="jane@company.com"></div>
               <div class="field"><label>Phone</label><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+1 (555) 000-1234"></div>
             </div>
-            <!-- <div class="field"><label>What industry do you operate in?</label><input type="text" name="industry_operate" placeholder="e.g. Roofing"></div> -->
             <button type="button" class="btn btn-lime btn-lg btn-block" data-step-next>Next</button>
           </div>
           <div class="form-step" data-step="2" hidden>
@@ -204,9 +147,7 @@ include __DIR__ . '/includes/page-banner.php';
             <button type="button" class="btn btn-lime btn-lg btn-block" data-step-next>Next</button>
           </div>
           <div class="form-step" data-step="3" hidden>
-            <!-- <p class="form-step-title">How much are you willing to invest for this goal?</p> -->
             <p class="form-step-title">How committed are you for your business growth?</p>
-            <!-- <p class="form-commit-label">Are you committed?</p> -->
             <div class="form-commit">
               <div class="form-peek form-peek--top" aria-hidden="true">
                 <span class="form-peek-word form-peek-word--left">CATCH ME</span>
