@@ -10525,7 +10525,7 @@ html[data-palette] body .thank-btn-secondary:hover {
 
 .brand-card .fan-shot[src*="card1."] { object-position: 42% center; }
 .brand-card .fan-shot[src*="card1_01"] { object-position: 62% 0; }
-.brand-card .fan-shot[src*="card1_02"] { object-position: 40% left; }
+.brand-card .fan-shot[src*="card1_02"] { object-position: 40% right; }
 .brand-card .fan-shot[src*="card1_03"] { object-position: 55% center; }
 .brand-card .fan-shot[src*="card1_04"] { object-position: 84% center; }
 
