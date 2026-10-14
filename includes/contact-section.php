@@ -95,7 +95,7 @@ if (!empty($hide_contact_section)) {
               <div class="field"><label>Which industry are you in?</label>
                 <select name="industry" required data-other-select>
                   <option value="" disabled selected>Select your industry</option>
-                <option>Remodelers</option>
+                <option>Remodelings</option>
                 <option>Roofing</option>
                 <option>Handyman</option>
                 <option>Power Washing</option>
