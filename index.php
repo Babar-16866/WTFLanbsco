@@ -2593,6 +2593,42 @@ include __DIR__ . '/includes/header.php';
         </div>
       </article>
 
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="plumbing" data-live="https://sunlandplumbing.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-sunland-plumbing.webp" alt="Sunland Plumbing">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Austin, TX</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Sunland Plumbing</h2>
+          <p>A WordPress site for Austin’s water heater specialists with upfront, all-in pricing.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="plumbing" data-live="https://captainplumbertx.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-captain-plumber.webp" alt="Captain Plumber">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Dripping Springs, TX</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Captain Plumber</h2>
+          <p>A bold WordPress site for a locally owned Dripping Springs plumber offering same-day service.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+
       <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="hvac" data-live="https://www.paragonmechanical.com/">
         <div class="work-card-media">
           <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-paragon-mechanical.webp" alt="Paragon Mechanical">
