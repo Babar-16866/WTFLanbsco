@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Industries | WTF Labs';
-$page_description = 'Websites, local SEO, Google Ads, and social ads for remodelers, HVAC, plumbing, roofing, pest control, pool services, landscaping, handyman, and power washing businesses.';
+$page_description = 'Websites, local SEO, Google Ads, and social ads for remodeling, HVAC, plumbing, roofing, pest control, pool services, landscaping, handyman, and power washing businesses.';
 $current_page = 'industries';
 include __DIR__ . '/includes/header.php';
 ?>
@@ -8,7 +8,7 @@ include __DIR__ . '/includes/header.php';
 <?php
 $banner_kicker = 'Industries';
 $banner_h1 = '<span class="about-hero-accent">Who</span> we help grow';
-$banner_lead = 'From remodelers and HVAC to roofing, pool, and power washing — one senior team building websites and campaigns that keep local service businesses booked.';
+$banner_lead = 'From remodeling and HVAC to roofing, pool, and power washing — one senior team building websites and campaigns that keep local service businesses booked.';
 $banner_primary_label = 'Free Consultation';
 $banner_secondary_label = 'See our work';
 $banner_image = '/assets/images/industry-remodelers-1.webp';
@@ -28,7 +28,7 @@ include __DIR__ . '/includes/page-banner.php';
           <a href="/remodelers.php"><img loading="lazy" src="/assets/images/industry-remodelers-1.webp" alt="Remodelers"></a>
         </div>
         <div class="service-detail-body">
-          <h2><a href="/remodelers.php">Remodelers</a></h2>
+          <h2><a href="/remodelers.php">Remodeling</a></h2>
           <p>Websites and lead gen that help remodeling companies win bigger kitchen, bath, and whole-home projects.</p>
           <ul>
             <li>Portfolio-led project galleries</li>
@@ -182,7 +182,7 @@ include __DIR__ . '/includes/page-banner.php';
           <a href="/remodelers.php"><img loading="lazy" src="/assets/images/industry-remodelers-2.webp" alt="Remodelers Websites"></a>
         </div>
         <div class="service-detail-body">
-          <p class="service-detail-kicker">Remodelers</p>
+          <p class="service-detail-kicker">Remodeling</p>
           <h2><a href="/remodelers.php">Websites</a></h2>
           <p>Portfolio-led sites that turn project photos into consultation requests.</p>
           <ul>
@@ -200,7 +200,7 @@ include __DIR__ . '/includes/page-banner.php';
           <a href="/remodelers.php"><img loading="lazy" src="/assets/images/industry-remodelers-3.webp" alt="Remodelers Local SEO"></a>
         </div>
         <div class="service-detail-body">
-          <p class="service-detail-kicker">Remodelers</p>
+          <p class="service-detail-kicker">Remodeling</p>
           <h2><a href="/remodelers.php">Local SEO</a></h2>
           <p>Rank for kitchen, bath, and remodel searches across your service area.</p>
           <ul>
@@ -219,7 +219,7 @@ include __DIR__ . '/includes/page-banner.php';
               alt="Remodelers Google Ads"></a>
         </div>
         <div class="service-detail-body">
-          <p class="service-detail-kicker">Remodelers</p>
+          <p class="service-detail-kicker">Remodeling</p>
           <h2><a href="/remodelers.php">Google Ads</a></h2>
           <p>Search campaigns aimed at high-value remodel projects.</p>
           <ul>
@@ -238,7 +238,7 @@ include __DIR__ . '/includes/page-banner.php';
               alt="Remodelers Social Media"></a>
         </div>
         <div class="service-detail-body">
-          <p class="service-detail-kicker">Remodelers</p>
+          <p class="service-detail-kicker">Remodeling</p>
           <h2><a href="/remodelers.php">Social Media</a></h2>
           <p>Visual campaigns that put your finished projects in front of local homeowners.</p>
           <ul>

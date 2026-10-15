@@ -1,5 +1,5 @@
 <?php
-$page_title = 'Remodelers | WTF Labs';
+$page_title = 'Remodeling | WTF Labs';
 $page_description = 'Websites and lead gen that help remodeling companies win bigger kitchen, bath, and whole-home projects.';
 $current_page = 'industries';
 include __DIR__ . '/includes/header.php';
@@ -8,7 +8,7 @@ include __DIR__ . '/includes/header.php';
 <?php
 $banner_crumb_label = 'Industries';
 $banner_crumb_href = '/industries.php';
-$banner_breadcrumb = 'Remodelers';
+$banner_breadcrumb = 'Remodeling';
 $banner_kicker = 'Industry';
 $banner_h1 = 'Remodeling marketing that wins <span class="about-hero-accent">bigger jobs</span>';
 $banner_lead = 'Websites, local SEO, and ads that show off your craftsmanship and bring in homeowners ready to invest in a kitchen, bath, or full remodel.';
@@ -217,8 +217,8 @@ include __DIR__ . '/includes/testimonialslider.php';
 <section class="faq-section" id="faqs">
   <div class="container">
     <div class="section-header reveal">
-      <p class="subheading">Remodelers FAQs</p>
-      <h2>Questions about <span class="heading-accent">Remodelers</span></h2>
+      <p class="subheading">Remodeling FAQs</p>
+      <h2>Questions about <span class="heading-accent">Remodeling</span></h2>
     </div>
     <div class="faq-list reveal">
       <div class="faq-item">

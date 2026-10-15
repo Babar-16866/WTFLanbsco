@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Web Design & Development for Home-Service Businesses | WTF Labs';
-$page_description = 'Premium, fast, conversion-focused websites for remodelers, HVAC, plumbers, roofers, pest control, pool companies, landscapers, and other home-service businesses.';
+$page_description = 'Premium, fast, conversion-focused websites for remodeling, HVAC, plumbers, roofers, pest control, pool companies, landscapers, and other home-service businesses.';
 $current_page = 'services';
 include __DIR__ . '/includes/header.php';
 ?>

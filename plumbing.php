@@ -195,7 +195,7 @@ include __DIR__ . '/includes/testimonialslider.php';
       <h2>Explore more <span class="heading-accent">industries</span></h2>
     </div>
     <div class="excel-tags reveal">
-      <a href="/industries.php#remodelers" class="excel-tag">Remodelers</a>
+      <a href="/industries.php#remodelers" class="excel-tag">Remodeling</a>
       <a href="/industries.php#hvac" class="excel-tag">HVAC</a>
       <a href="/industries.php#roofing" class="excel-tag">Roofing</a>
       <a href="/industries.php#pest-control" class="excel-tag">Pest Control</a>

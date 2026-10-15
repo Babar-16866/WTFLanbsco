@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Insights | WTF Labs';
-$page_description = 'Practical website, SEO, and ads insights for remodelers, HVAC, plumbing, roofing, pest control, and pool companies.';
+$page_description = 'Practical website, SEO, and ads insights for remodeling, HVAC, plumbing, roofing, pest control, and pool companies.';
 $current_page = 'insights';
 include __DIR__ . '/includes/header.php';
 ?>
@@ -29,7 +29,7 @@ include __DIR__ . '/includes/page-banner.php';
         </div>
         <div class="work-card-body">
           <div class="work-card-meta">
-            <span>Remodelers</span>
+            <span>Remodeling</span>
             <span>6 min read</span>
           </div>
           <h2>Why Remodelers Lose $50K Projects to Worse Competitors</h2>

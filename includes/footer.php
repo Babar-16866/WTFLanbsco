@@ -13,6 +13,7 @@ include __DIR__ . '/contact-section.php';
         <p>WTF Labs - B2B website design & development since 2018.</p>
         <p class="footer-address">25140 Kingsland Blvd<br>Katy, Texas 77494, USA</p>
         <p class="footer-address"><a href="mailto:info@wtflabsco.com">info@wtflabsco.com</a></p>
+        <p class="footer-address"><a href="tel:+15123379723">+1 (512) 337-9723</a></p>
       </div>
       <div>
         <h4>Company</h4>
@@ -33,7 +34,7 @@ include __DIR__ . '/contact-section.php';
       </div>
       <div>
         <h4>Industries</h4>
-        <a href="/industries.php#remodelers">Remodelers</a>
+        <a href="/industries.php#remodelers">Remodeling</a>
         <a href="/industries.php#hvac">HVAC</a>
         <a href="/industries.php#landscaping">Landscaping</a>
         <a href="/industries.php#roofing">Roofing</a>

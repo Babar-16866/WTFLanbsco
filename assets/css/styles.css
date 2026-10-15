@@ -11745,3 +11745,27 @@ html body :is(.works-show-more, #industriesShowMore, .brand-card-btn-alt).btn::b
 .brand-card .fan-shot[src*="card3_04"] { object-position: 100% center; }
 .brand-card .fan-shot[src*="card3_01"] { object-position: 100% 48%; }
 .brand-card .fan-shot[src*="card3."] { object-position: 75% center; }
+.back-to-top::before {
+  padding: 3.5px;
+  filter: drop-shadow(0 0 3px #D0F000) drop-shadow(0 0 8px rgba(208, 240, 0, 0.75));
+  animation: btt-glow 1.8s ease-in-out infinite;
+}
+@keyframes btt-glow {
+  0%, 100% { filter: drop-shadow(0 0 3px #D0F000) drop-shadow(0 0 6px rgba(208, 240, 0, 0.55)); }
+  50% { filter: drop-shadow(0 0 5px #D0F000) drop-shadow(0 0 14px rgba(208, 240, 0, 0.95)); }
+}
+html body :is(.works-show-more, #industriesShowMore, .brand-card-btn-alt).btn::before {
+  padding: 2px;
+  background: conic-gradient(from var(--reviews-angle), transparent 0deg, transparent 150deg, color-mix(in srgb, #D0F000 25%, transparent) 230deg, color-mix(in srgb, #D0F000 70%, transparent) 300deg, #D0F000 345deg, transparent 360deg);
+  filter: drop-shadow(0 0 4px rgba(208, 240, 0, 0.85));
+}
+html body :is(.works-show-more, #industriesShowMore, .brand-card-btn-alt).btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(120% 140% at 88% 50%, color-mix(in srgb, #D0F000 18%, transparent), transparent 60%);
+  animation: hero-reviews-glow 2.6s ease-in-out infinite;
+  pointer-events: none;
+}

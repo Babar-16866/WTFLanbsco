@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Premium Web Design & Marketing for Home-Service Businesses | WTF Labs';
-$page_description = 'Premium websites and digital marketing for remodelers, HVAC, plumbing, roofing, pest control, pool services, landscaping, handyman and power-washing businesses.';
+$page_description = 'Premium websites and digital marketing for remodeling, HVAC, plumbing, roofing, pest control, pool services, landscaping, handyman and power-washing businesses.';
 $current_page = 'home';
 $page_palette = 'index2';
 include __DIR__ . '/includes/header.php';
@@ -144,7 +144,7 @@ include __DIR__ . '/includes/header.php';
     <div class="brands-grid brands-grid--groups reveal">
       <a href="/industries.php" class="brand-card">
         <div class="brand-card-logos brand-card-logos--top">
-          <span class="brand-logo">Remodelers</span>
+          <span class="brand-logo">Remodeling</span>
           <span class="brand-logo">Roofing</span>
           <span class="brand-logo">Handyman</span>
           <span class="brand-logo">Power Washing</span>
@@ -1785,7 +1785,7 @@ include __DIR__ . '/includes/testimonialslider.php';
           <div class="faq-panel-inner">
             <p>"Okay" websites are usually leaking your highest-margin revenue without you ever noticing:</p>
             <ul>
-              <li><strong>For High-Ticket Trades (Remodelers, Roofing, Handyman, Power Washing):</strong> If your real-world craftsmanship is worth $50,000+ but your site looks dated, high-net-worth homeowners assume you are low-end. You suffer the "Mismatch Penalty", losing premium jobs to competitors who look more credible online.</li>
+              <li><strong>For High-Ticket Trades (Remodeling, Roofing, Handyman, Power Washing):</strong> If your real-world craftsmanship is worth $50,000+ but your site looks dated, high-net-worth homeowners assume you are low-end. You suffer the "Mismatch Penalty", losing premium jobs to competitors who look more credible online.</li>
               <li><strong>For Rapid-Response Trades (HVAC, Plumbing):</strong> A 3-second delay on mobile or a buried phone number forces desperate, high-intent leads to hit "back" and call your competitor.</li>
               <li><strong>For Recurring &amp; Route Trades (Pest Control, Pool Services, Landscaping):</strong> If your site forces prospective customers to call during office hours rather than choosing a plan and setting up autopay online, you stay stuck in the low-margin "one-off job" trap.</li>
             </ul>

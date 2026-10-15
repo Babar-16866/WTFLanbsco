@@ -19,6 +19,7 @@ $banner_card = 'Real launches. Real results. No templates.';
 include __DIR__ . '/includes/page-banner.php';
 ?>
 
+<?php /*
 <section class="page-section">
   <div class="container">
     <div class="works-filter-stack works-filter-stack--center home-filter-stack">
@@ -272,6 +273,8 @@ include __DIR__ . '/includes/page-banner.php';
 
   </div>
 </section>
+*/ ?>
+<?php include __DIR__ . '/includes/featured-work.php'; ?>
 
 <?php
 $street_section_id = 'works-testimonials';

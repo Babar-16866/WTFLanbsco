@@ -97,7 +97,7 @@ include __DIR__ . '/includes/page-banner.php';
               <div class="field"><label>Which industry are you in?</label>
                 <select name="industry" required data-other-select>
                   <option value="" disabled selected>Select your industry</option>
-                <option>Remodelers</option>
+                <option>Remodeling</option>
                 <option>Roofing</option>
                 <option>Handyman</option>
                 <option>Power Washing</option>

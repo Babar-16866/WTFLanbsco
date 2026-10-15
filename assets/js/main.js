@@ -391,7 +391,7 @@ if (excelTrack) {
     });
 
     const hoverPointer = window.matchMedia('(hover: hover) and (pointer: fine)');
-    const hoverArea = row.closest('.street-rows') || row;
+    const hoverArea = row;
     hoverArea.addEventListener('mouseenter', () => {
       if (hoverPointer.matches) paused = true;
     });
@@ -2172,7 +2172,7 @@ window.addEventListener('load', () => {
           const first = fieldText('first_name') || fieldText('name').split(/\s+/)[0];
           flash('<p class="form-step-note-title">Great! Nice to meet you ' + escapeText(first) + ' \u{1F60A}</p>', 2200, go);
         } else if (from === 2) {
-          flash(thanksHtml(), 7000, go);
+          flash(thanksHtml(), 4000, go);
         } else {
           go();
         }
