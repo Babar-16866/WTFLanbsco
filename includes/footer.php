@@ -61,6 +61,16 @@ include __DIR__ . '/contact-section.php';
     <div class="container footer-copy"><p>&copy; <?php echo date('Y'); ?> WTF Labs. All rights reserved.</p></div>
   </footer>
 
+  <div class="quick-contact" aria-label="Contact WTF Labs">
+    <a class="quick-contact-btn quick-contact-call" href="tel:+15123379723" aria-label="Call +1 (512) 337-9723">
+      <span class="quick-contact-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="quick-contact-text">+1 (512) 337-9723</span>
+    </a>
+    <a class="quick-contact-btn quick-contact-email" href="mailto:info@wtflabsco.com" aria-label="Email info@wtflabsco.com">
+      <span class="quick-contact-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="quick-contact-text">info@wtflabsco.com</span>
+    </a>
+  </div>
   <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top" hidden>
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 16V4M4.5 9.5 10 4l5.5 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </button>
@@ -102,31 +112,65 @@ include __DIR__ . '/contact-section.php';
             <input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+1 (512) 337-9723">
           </div>
           <div class="field">
-            <label>What can we help you with?</label>
+            <label>Which service are you interested in?</label>
             <select name="help" required>
               <option value="" disabled selected>Select a service</option>
-              <option>Company &amp; Business website</option>
-              <option>Landing page</option>
-              <option>Web applications &amp; SaaS</option>
-              <option>Graphic Design</option>
-              <option>SEO / Ads / Digital Marketing</option>
-              <option>Custom Webflow website</option>
+              <option>New Website</option>
+              <option>Old Website Redesign</option>
+              <option>Digital Marketing</option>
+              <option>I&#39;d like to discuss and decide</option>
             </select>
+          </div>
+          <div class="field form-url-field" hidden>
+            <label>What is your current website URL?</label>
+            <input type="url" name="website_url" inputmode="url" placeholder="https://www.yourwebsite.com">
+          </div>
+          <div class="field">
+            <label>Which industry are you in?</label>
+            <select name="industry" required>
+              <option value="" disabled selected>Select your industry</option>
+              <option>Remodeling</option>
+              <option>Roofing</option>
+              <option>Handyman</option>
+              <option>Power Washing</option>
+              <option>HVAC</option>
+              <option>Plumbing</option>
+              <option>Pest Control</option>
+              <option>Pool Services</option>
+              <option>Landscaping</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field form-other-field" hidden>
+            <label>Your industry</label>
+            <input type="text" name="industry_other" placeholder="Type your industry">
           </div>
           <div class="field">
             <label>What's your budget range?</label>
             <div class="budget-pills">
-              <label><input type="radio" name="budget" value="10k-20k"> 10k-20k</label>
-              <label><input type="radio" name="budget" value="20k-50k"> 20k-50k</label>
-              <label><input type="radio" name="budget" value="50k-100k"> 50k-100k</label>
-              <label><input type="radio" name="budget" value="100k+"> 100k+</label>
+              <label><input type="radio" name="budget" value="$2,000 - $3,500"> $2,000 - $3,500</label>
+              <label><input type="radio" name="budget" value="$3,500 - $5,000"> $3,500 - $5,000</label>
+              <label><input type="radio" name="budget" value="$5,000 - $10,000"> $5,000 - $10,000</label>
+              <label><input type="radio" name="budget" value="I am not sure. I'd like to discuss."> I am not sure. I&#39;d like to discuss.</label>
             </div>
+          </div>
+          <div class="field">
+            <label>How did you hear about us?</label>
+            <select name="heard_about">
+              <option value="" disabled selected>Select an option</option>
+              <option>Instagram</option>
+              <option>TikTok</option>
+              <option>YouTube</option>
+              <option>Google Search</option>
+              <option>Referred by someone</option>
+              <option>Facebook</option>
+              <option>Other</option>
+            </select>
           </div>
           <div class="field">
             <label>What should we know about the project?</label>
             <textarea name="message" rows="2" required placeholder="Goals, timeline, links, anything useful..."></textarea>
           </div>
-          <label class="check"><input type="checkbox" name="terms" required> I agree to the <a href="/privacy-policy.php" target="_blank" rel="noopener">Privacy Policy</a> and <a href="/terms-and-conditions.php" target="_blank" rel="noopener">Terms of use</a>.</label>
           <button type="submit" class="btn btn-lime btn-block promo-popup-submit">Submit</button>
         </form>
 

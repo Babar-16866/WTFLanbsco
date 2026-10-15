@@ -184,18 +184,73 @@ document.querySelectorAll('.faq-list').forEach((list) => {
   });
 });
 
+function formLabels(form) {
+  const pairs = [];
+  const seen = new Set();
+  Array.from(form.elements).forEach((el) => {
+    const name = el.name;
+    if (!name || seen.has(name) || name === 'website' || name === '_labels') return;
+    const type = (el.type || '').toLowerCase();
+    if (type === 'hidden') return;
+    if ((type === 'submit' || type === 'button') && name !== 'commitment') return;
+    let label = '';
+    if (name === 'commitment') {
+      label = el.closest('.form-step')?.querySelector('.form-step-title')?.textContent || 'Commitment';
+    } else {
+      const field = el.closest('.field');
+      const own = field ? Array.from(field.children).find((c) => c.tagName === 'LABEL') : null;
+      label = own ? own.textContent : (el.id ? (form.querySelector('label[for="' + el.id + '"]')?.textContent || '') : '');
+      if (!label) label = el.closest('label')?.textContent || el.getAttribute('aria-label') || el.placeholder || name;
+    }
+    seen.add(name);
+    pairs.push([name, label.replace(/\s+/g, ' ').trim()]);
+  });
+  return JSON.stringify(pairs);
+}
+
 // Contact / promo forms — native POST to send-mail.php → thank-you.php
 document.querySelectorAll('form.contact-form').forEach((form) => {
   form.addEventListener('submit', (e) => {
+    let labelsInput = form.querySelector('input[name="_labels"]');
+    if (!labelsInput) {
+      labelsInput = document.createElement('input');
+      labelsInput.type = 'hidden';
+      labelsInput.name = '_labels';
+      form.appendChild(labelsInput);
+    }
+    labelsInput.value = formLabels(form);
     const btn = e.submitter || form.querySelector('[type="submit"]');
     if (btn) {
-      btn.disabled = true;
-      btn.textContent = 'Sending…';
+      setTimeout(() => {
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+      }, 0);
     }
     if (form.id === 'promoPopupForm') {
-      localStorage.setItem('wtfPromoPopupDismissed', '1');
+      try { sessionStorage.setItem('wtfAutoPopupShown', '1'); } catch (err) { /* ignore */ }
     }
   });
+});
+
+document.querySelectorAll('#promoPopupForm').forEach((form) => {
+  const help = form.querySelector('select[name="help"]');
+  const urlField = form.querySelector('.form-url-field');
+  const industry = form.querySelector('select[name="industry"]');
+  const otherField = form.querySelector('.form-other-field');
+  const toggle = (field, show) => {
+    if (!field) return;
+    const input = field.querySelector('input');
+    field.hidden = !show;
+    input.required = show;
+    if (!show) input.value = '';
+  };
+  const sync = () => {
+    toggle(urlField, !!help && help.value === 'Old Website Redesign');
+    toggle(otherField, !!industry && industry.value === 'Other');
+  };
+  help?.addEventListener('change', sync);
+  industry?.addEventListener('change', sync);
+  sync();
 });
 
 // Mobile nav
@@ -463,7 +518,7 @@ function closePromoPopup(persist) {
   if (!promoPopup) return;
   promoPopup.hidden = true;
   document.body.classList.remove('promo-popup-open');
-  if (persist) localStorage.setItem(POPUP_KEY, '1');
+  if (persist) markAutoPopupShown();
   // Re-arm exit intent after close so tab hover can show it again
   setTimeout(() => {
     exitIntentArmed = true;
@@ -492,11 +547,15 @@ const AUTO_POPUP_KEY = 'wtfAutoPopupShown';
   } catch (err) { /* storage blocked - ignore */ }
 })();
 
+let autoPopupDone = false;
+
 function autoPopupAllowed() {
+  if (autoPopupDone) return false;
   try { return !sessionStorage.getItem(AUTO_POPUP_KEY); } catch (err) { return true; }
 }
 
 function markAutoPopupShown() {
+  autoPopupDone = true;
   try { sessionStorage.setItem(AUTO_POPUP_KEY, '1'); } catch (err) { /* ignore */ }
 }
 
@@ -538,9 +597,9 @@ document.addEventListener('click', (e) => {
 window.addEventListener('load', () => {
   setTimeout(() => {
     if (!autoPopupAllowed()) return;
-    if (localStorage.getItem(POPUP_KEY)) return;
+    if (!promoPopup || !promoPopup.hidden) return;
     markAutoPopupShown();
-    openPromoPopup(false);
+    openPromoPopup(true);
   }, 2200);
 });
 
@@ -2091,6 +2150,7 @@ window.addEventListener('load', () => {
       syncName();
       const data = new FormData(form);
       data.set('step', String(n));
+      data.set('_labels', formLabels(form));
       const key = JSON.stringify(Array.from(data.entries()));
       if (sent[n] === key) return;
       sent[n] = key;
@@ -2240,6 +2300,7 @@ window.addEventListener('load', () => {
         const data = new FormData(form);
         data.set('step', String(panels.length));
         data.set('commitment', 'Not committed');
+        data.set('_labels', formLabels(form));
         const done = () => { window.location.href = '/thank-you.php'; };
         fetch(form.action, { method: 'POST', body: data, keepalive: true }).then(done, done);
       });

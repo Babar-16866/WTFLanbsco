@@ -86,32 +86,55 @@ if ($errors) {
 
 $mailConfig = gmail_config();
 $to = $mailConfig['recipient'];
-$subject = ($form_page ? $form_page[0] : 'New inquiry') . ' from ' . $name . ' — WTF Labs';
-if ($step >= 1 && $step <= 3) {
-  $subject = ($step === 3 ? 'Completed inquiry' : 'Inquiry step ' . $step . ' of 3') . ' from ' . $name . ' — WTF Labs';
+$form_titles = [
+  'home-contact'      => 'Inquiry',
+  'free-consultation' => 'Free Consultation',
+  'free-audit'        => 'Free Consultation',
+  'promo-popup'       => 'New Lead',
+  'contact-page'      => 'Contact',
+  'website-brief'     => 'Website Brief',
+  'marketing-brief'   => 'Marketing Brief',
+  'client-feedback'   => 'Client Feedback',
+];
+$form_title = $form_titles[$source] ?? 'Inquiry';
+$step_note = ($step === 1 || $step === 2) ? ' (Step ' . $step . ' of 3)' : '';
+$subject = $form_title . $step_note . ' - ' . $name;
+
+$skip_fields = ['website', 'source', 'step', 'lead_id', 'terms', '_labels'];
+$label_pairs = json_decode((string)($_POST['_labels'] ?? ''), true);
+if (!is_array($label_pairs)) {
+  $label_pairs = [];
+  foreach (array_keys($_POST) as $key) {
+    $label_pairs[] = [(string)$key, ucfirst(str_replace('_', ' ', (string)$key))];
+  }
+}
+$lines = [];
+$seen = [];
+foreach ($label_pairs as $pair) {
+  if (!is_array($pair) || count($pair) < 2) {
+    continue;
+  }
+  $key = (string)$pair[0];
+  if ($key === '' || isset($seen[$key]) || in_array($key, $skip_fields, true) || !array_key_exists($key, $_POST)) {
+    continue;
+  }
+  if ($key === 'name' && (isset($_POST['first_name']) || isset($_POST['last_name']))) {
+    continue;
+  }
+  $seen[$key] = true;
+  $value = $_POST[$key];
+  $value = is_array($value) ? implode(', ', array_map('strval', $value)) : (string)$value;
+  $value = clean($value);
+  if ($value === '') {
+    continue;
+  }
+  $label = clean((string)$pair[1]);
+  $lines[] = ($label !== '' ? $label : $key) . "\n" . $value;
 }
 
-$body = ($form_page ? $form_page[0] . ' from the website' : 'New project inquiry from the website') . "\n";
-$body .= str_repeat('-', 40) . "\n";
-$body .= "Name:    {$name}\n";
-$body .= "Email:   {$email}\n";
-$body .= "Phone:   {$phone}\n";
-$body .= "Help:    " . ($help !== '' ? $help : '—') . "\n";
-$body .= "Budget:  " . ($budget !== '' ? $budget : '—') . "\n";
-$body .= "Updates: {$updates}\n";
-$body .= "Source:  {$source}\n";
-if ($step >= 1 && $step <= 3) {
-  $body .= "Step:    {$step} of 3" . ($step === 3 ? ' (complete)' : '') . "\n";
-  $body .= 'Lead ID: ' . ($lead_id !== '' ? $lead_id : '—') . "\n";
-}
-foreach ($extra as $label => $value) {
-  $body .= "{$label}: {$value}\n";
-}
-$body .= str_repeat('-', 40) . "\n";
-$body .= "Message:\n{$message}\n";
-$body .= str_repeat('-', 40) . "\n";
-$body .= 'IP: ' . ($_SERVER['REMOTE_ADDR'] ?? 'unknown') . "\n";
-$body .= 'Time: ' . date('Y-m-d H:i:s T') . "\n";
+$body = $form_title . $step_note . "\n";
+$body .= str_repeat('-', 40) . "\n\n";
+$body .= implode("\n\n", $lines) . "\n";
 
 $fromHeader = $mailConfig['sender'];
 $headers = [
