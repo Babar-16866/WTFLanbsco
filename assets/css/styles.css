@@ -11630,9 +11630,118 @@ html[data-palette="index2"] .hero-section .hero-eyebrow-dot {
   font-weight: 900;
   font-size: 1.2em;
   line-height: 1;
-  -webkit-text-stroke: 0.9px currentColor;
+  -webkit-text-stroke: 1.5px currentColor;
 }
 .form-peek--top,
 .form-peek--bottom {
   gap: 2vw;
 }
+html body .form-commit .btn.btn-lime,
+html body .form-commit .btn.btn-lime:is(:hover, :focus-visible, :active) {
+  border: 1px solid #D0F000;
+  background: var(--pal-gold, #C39B62);
+  color: var(--pal-dark, #10231B);
+  transform: none;
+  box-shadow: 0 0 0 1px rgba(208, 240, 0, 0.35), 0 0 16px rgba(208, 240, 0, 0.45), inset 0 0 10px rgba(208, 240, 0, 0.18) !important;
+}
+html body .form-commit .btn.form-commit-alt,
+html body .form-commit .btn.form-commit-alt:is(:hover, :focus-visible, :active) {
+  border: 1px solid #E8B92E;
+  background: transparent;
+  color: var(--pal-dark, #10231B);
+  transform: none;
+  box-shadow: 0 0 0 1px rgba(232, 185, 46, 0.3), 0 0 16px rgba(232, 185, 46, 0.4), inset 0 0 10px rgba(232, 185, 46, 0.14) !important;
+}
+html body .form-commit .btn.form-commit-runaway,
+html body .form-commit .btn.form-commit-runaway:is(:hover, :focus-visible, :active) {
+  border: 1px solid #E0464E;
+  background: #FFFFFF;
+  color: var(--pal-dark, #10231B);
+  box-shadow: 0 0 0 1px rgba(224, 70, 78, 0.28), 0 0 16px rgba(224, 70, 78, 0.38), inset 0 0 10px rgba(224, 70, 78, 0.12) !important;
+}
+.back-to-top {
+  isolation: isolate;
+}
+.back-to-top::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #D0F000 0deg, #D0F000 var(--btt-progress, 0deg), rgba(208, 240, 0, 0.12) var(--btt-progress, 0deg), rgba(208, 240, 0, 0.12) 360deg);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  filter: drop-shadow(0 0 4px rgba(208, 240, 0, 0.55));
+  pointer-events: none;
+}
+html body :is(.works-show-more, #industriesShowMore, .brand-card-btn-alt).btn {
+  position: relative;
+  isolation: isolate;
+}
+html body :is(.works-show-more, #industriesShowMore, .brand-card-btn-alt).btn::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: 1;
+  padding: 1.5px;
+  border-radius: inherit;
+  background: conic-gradient(from var(--reviews-angle), transparent 0deg, transparent 220deg, color-mix(in srgb, #D0F000 35%, transparent) 280deg, #D0F000 330deg, transparent 360deg);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  filter: drop-shadow(0 0 3px rgba(208, 240, 0, 0.6));
+  animation: hero-reviews-orbit 3.2s linear infinite;
+  pointer-events: none;
+}
+.hero-canvas .mockup-tall {
+  width: 132px;
+  height: 234px;
+  top: 4%;
+  border-radius: 16px;
+}
+.hero-canvas .mockup-tall img {
+  object-position: 50% 50%;
+}
+.hero-canvas .mockup-tall-left {
+  left: -16%;
+  animation: mockup-float 6s ease-in-out infinite;
+  --r: -8deg;
+}
+.hero-canvas .mockup-tall-right {
+  right: -16%;
+  animation: mockup-float 5.5s ease-in-out infinite 0.4s;
+  --r: 8deg;
+}
+@media (min-width: 981px) {
+  .hero-canvas .mockup-tall-left { left: -42%; }
+  .hero-canvas .mockup-tall-right { right: -42%; }
+}
+@media (max-width: 1100px) {
+  .hero-canvas .mockup-tall { width: 104px !important; height: 184px !important; }
+  .hero-canvas .mockup-tall-left { left: -24%; }
+  .hero-canvas .mockup-tall-right { right: -24%; }
+}
+.brand-card .fan-shot[src*="card1."] { object-position: 40% center; }
+.brand-card .fan-shot[src*="card1_02"] { object-position: 45% center; }
+.brand-card .fan-shot[src*="card1_01"] { object-position: 82% center; }
+.brand-card .fan-shot[src*="card2_04"] { object-position: 12% center; }
+.brand-card .fan-shot[src*="card2_03"] { object-position: 30% center; }
+.brand-card .fan-shot[src*="card2_02"] { object-position: 52% center; }
+.brand-card .fan-shot[src*="card2."] { object-position: 45% center; }
+.brand-card .fan-shot[src*="card3_04"] { object-position: 50% center; }
+.brand-card .fan-shot[src*="card3_01"] { object-position: 22% 48%; }
+.brand-card .fan-shot[src*="card3."] { object-position: 40% center; }
+.brand-card .fan-shot-2:is([src*="card2_03"]) { transform: translate(-50%, -48%) rotate(-8deg) translateX(-38%) scaleX(-1); }
+.brand-card:hover .fan-shot-2:is([src*="card2_03"]) { transform: translate(-50%, -50%) rotate(-10deg) translateX(-44%) scaleX(-1); }
+.brand-card .fan-shot-4:is([src*="card1_02"], [src*="card3_01"]) { transform: translate(-50%, -48%) rotate(8deg) translateX(38%) scaleX(-1); }
+.brand-card:hover .fan-shot-4:is([src*="card1_02"], [src*="card3_01"]) { transform: translate(-50%, -50%) rotate(10deg) translateX(44%) scaleX(-1); }
+.brand-card .fan-shot-5:is([src*="card2."], [src*="card3."]) { transform: translate(-50%, -46%) rotate(18deg) translateX(78%) scaleX(-1); }
+.brand-card:hover .fan-shot-5:is([src*="card2."], [src*="card3."]) { transform: translate(-50%, -48%) rotate(22deg) translateX(86%) scaleX(-1); }
+.brand-card .fan-shot[src*="card1."] { object-position: 100% center; }
+.brand-card .fan-shot[src*="card2_02"] { object-position: 0% center; }
+.brand-card .fan-shot[src*="card2."] { object-position: 75% center; }
+.brand-card .fan-shot[src*="card3_04"] { object-position: 100% center; }
+.brand-card .fan-shot[src*="card3_01"] { object-position: 100% 48%; }
+.brand-card .fan-shot[src*="card3."] { object-position: 75% center; }

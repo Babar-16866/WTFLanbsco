@@ -2172,7 +2172,7 @@ window.addEventListener('load', () => {
           const first = fieldText('first_name') || fieldText('name').split(/\s+/)[0];
           flash('<p class="form-step-note-title">Great! Nice to meet you ' + escapeText(first) + ' \u{1F60A}</p>', 2200, go);
         } else if (from === 2) {
-          flash(thanksHtml(), 9000, go);
+          flash(thanksHtml(), 7000, go);
         } else {
           go();
         }
@@ -2397,23 +2397,17 @@ document.addEventListener('click', (e) => {
 (function initBackToTop() {
   const btn = document.getElementById('backToTop');
   if (!btn) return;
-  const contact = document.getElementById('contact');
-  const footer = document.querySelector('.site-footer');
-  let trigger = document.querySelector('.final-cta-section');
-  if (!trigger) {
-    const last = contact || footer;
-    let prev = last ? last.previousElementSibling : null;
-    while (prev && (prev.tagName !== 'SECTION' || prev.offsetHeight === 0)) prev = prev.previousElementSibling;
-    trigger = prev || last;
-  }
-  if (!trigger) return;
+  const hero = document.querySelector('.hero-section, .page-hero') || document.querySelector('section');
   btn.hidden = false;
   let ticking = false;
   function sync() {
     ticking = false;
-    const show = trigger.getBoundingClientRect().top < window.innerHeight * 0.85;
+    const show = hero ? hero.getBoundingClientRect().bottom < 80 : window.scrollY > window.innerHeight;
     btn.classList.toggle('is-visible', show);
     btn.tabIndex = show ? 0 : -1;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+    btn.style.setProperty('--btt-progress', (progress * 360).toFixed(1) + 'deg');
   }
   window.addEventListener('scroll', () => {
     if (ticking) return;
