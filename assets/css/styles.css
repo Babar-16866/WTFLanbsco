@@ -11896,3 +11896,54 @@ html body .promo-popup-brand img {
   .quick-contact-icon { width: 20px; height: 20px; }
   .quick-contact-icon svg { width: 18px; height: 18px; }
 }
+.quick-contact-btn {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  padding: 0 14px 0 16px;
+  transition: max-width 0.6s cubic-bezier(0.65, 0, 0.35, 1), box-shadow 0.4s ease, background-color 0.4s ease;
+}
+.quick-contact-text {
+  transform: translateX(14px);
+  transition: opacity 0.35s ease 0.15s, transform 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.05s;
+}
+.quick-contact-icon {
+  transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+}
+@media (hover: hover) and (pointer: fine) {
+  .quick-contact-btn:is(:hover, :focus-visible) .quick-contact-text {
+    transform: translateX(0);
+  }
+  .quick-contact-btn:not(:hover):not(:focus-visible) .quick-contact-text {
+    transition: opacity 0.15s ease, transform 0.3s ease;
+  }
+}
+@media (max-width: 640px) {
+  .quick-contact-btn { padding: 0 11px 0 12px; }
+}
+.back-to-top::before {
+  z-index: 1;
+  background: conic-gradient(from 0deg,
+    rgba(208, 240, 0, 0.35) 0deg,
+    rgba(208, 240, 0, 0.55) calc(var(--btt-progress, 0deg) * 0.6),
+    #D0F000 calc(var(--btt-progress, 0deg) - 2deg),
+    #F4FFB0 var(--btt-progress, 0deg),
+    rgba(208, 240, 0, 0.1) calc(var(--btt-progress, 0deg) + 0.5deg),
+    rgba(208, 240, 0, 0.1) 360deg);
+  animation: btt-glow 1.6s ease-in-out infinite;
+}
+.back-to-top::after {
+  z-index: 2;
+  background:
+    radial-gradient(circle at 50% 2.5px, #FFFFFF 0 1.6px, #F4FFB0 2.2px, #D0F000 3.6px, rgba(208, 240, 0, 0.6) 5px, transparent 8px),
+    conic-gradient(from -28deg at 50% 50%, transparent 0deg, rgba(208, 240, 0, 0.45) 26deg, transparent 28deg 360deg);
+  -webkit-mask: radial-gradient(circle, transparent 0 calc(50% - 6px), #000 calc(50% - 5px));
+  mask: radial-gradient(circle, transparent 0 calc(50% - 6px), #000 calc(50% - 5px));
+  animation: btt-bullet 0.9s ease-in-out infinite;
+}
+@keyframes btt-bullet {
+  0%, 100% { opacity: 1; filter: drop-shadow(0 0 4px #D0F000) drop-shadow(0 0 10px rgba(208, 240, 0, 0.95)); }
+  50% { opacity: 0.45; filter: drop-shadow(0 0 2px #D0F000) drop-shadow(0 0 4px rgba(208, 240, 0, 0.5)); }
+}
+.quick-contact-btn {
+  justify-content: flex-start;
+}
