@@ -12100,3 +12100,22 @@ html body .form-peek--bottom .form-peek-word--left,
 html body .form-peek--bottom .form-peek-word--right {
   margin-bottom: 0;
 }
+html body .form-peek,
+html body .form-peek--top,
+html body .form-peek--bottom {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: end;
+  column-gap: 2vw;
+}
+html body .form-peek .form-peek-word--left {
+  grid-column: 1;
+  justify-self: end;
+}
+html body .form-peek .form-peek-head {
+  grid-column: 2;
+}
+html body .form-peek .form-peek-word--right {
+  grid-column: 3;
+  justify-self: start;
+}
