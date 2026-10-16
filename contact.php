@@ -66,6 +66,7 @@ include __DIR__ . '/includes/page-banner.php';
       </aside>
 
       <div class="contact-page-form-wrap">
+        <?php /*
         <ol class="form-steps" aria-label="Form progress">
           <li class="form-step-dot is-active" data-step-dot="1"><span class="form-step-num">1</span><span class="form-step-label">Contact</span></li>
           <li class="form-step-line" aria-hidden="true"><span></span></li>
@@ -166,6 +167,58 @@ include __DIR__ . '/includes/page-banner.php';
             <span class="form-peek-word form-peek-word--right">IF YOU CAN</span>
           </div>
           <p class="form-ok hidden" id="formOk">Thank you! Your submission has been received!</p>
+        </form>
+        */ ?>
+        <p class="contact-page-label">Send us a message</p>
+        <h3>How can we help?</h3>
+        <form class="contact-form contact-page-form contact-simple-form" id="contactPageForm" action="/send-mail.php" method="post" enctype="multipart/form-data">
+          <input type="text" name="website" value="" tabindex="-1" autocomplete="off" class="hp-field" aria-hidden="true">
+          <input type="hidden" name="source" value="contact-page">
+          <div class="field">
+            <label for="cpName">Name</label>
+            <input id="cpName" type="text" name="name" required autocomplete="name" placeholder="Jane Doe">
+          </div>
+          <div class="contact-form-row">
+            <div class="field">
+              <label for="cpPhone">Number</label>
+              <input id="cpPhone" type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+1 (512) 337-9723">
+            </div>
+            <div class="field">
+              <label for="cpEmail">Email</label>
+              <input id="cpEmail" type="email" name="email" required autocomplete="email" placeholder="jane@company.com">
+            </div>
+          </div>
+          <div class="field">
+            <label for="cpSubject">Subject</label>
+            <select id="cpSubject" name="subject" required data-subject-select>
+              <option value="" disabled selected>Select a subject</option>
+              <option>Job Application</option>
+              <option>General Inquiry</option>
+              <option>Complaint</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field contact-job-field" hidden>
+            <label for="cpJob">Job you want to apply for</label>
+            <input id="cpJob" type="text" name="job_title" placeholder="e.g. Web Designer">
+          </div>
+          <div class="field contact-job-field" hidden>
+            <label for="cpCv">Upload CV</label>
+            <label class="cv-upload" for="cpCv">
+              <input id="cpCv" type="file" name="cv" accept=".pdf,.doc,.docx">
+              <span class="cv-upload-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 16V4m0 0-4.5 4.5M12 4l4.5 4.5M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="cv-upload-text">Choose file <small>PDF, DOC or DOCX - max 5 MB</small></span>
+            </label>
+          </div>
+          <div class="field contact-subject-other" hidden>
+            <label for="cpSubjectOther">Your subject</label>
+            <input id="cpSubjectOther" type="text" name="subject_other" placeholder="Type your subject">
+          </div>
+          <div class="field">
+            <label for="cpMessage">Message</label>
+            <textarea id="cpMessage" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-lime btn-lg btn-block">Send Message</button>
         </form>
       </div>
     </div>

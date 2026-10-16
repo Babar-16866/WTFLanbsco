@@ -145,9 +145,23 @@ $headers = [
   'X-Mailer: PHP/' . phpversion(),
 ];
 
-$sent = gmail_is_ready() && gmail_send($subject, $body, $name, $email);
+$attachments = [];
+if (!empty($_FILES['cv']) && is_array($_FILES['cv']) && ($_FILES['cv']['error'] ?? UPLOAD_ERR_NO_FILE) === UPLOAD_ERR_OK) {
+  $cv_name = basename((string)$_FILES['cv']['name']);
+  $cv_ext = strtolower(pathinfo($cv_name, PATHINFO_EXTENSION));
+  $cv_types = ['pdf' => 'application/pdf', 'doc' => 'application/msword', 'docx' => 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+  if (isset($cv_types[$cv_ext]) && (int)$_FILES['cv']['size'] <= 5 * 1024 * 1024 && is_uploaded_file($_FILES['cv']['tmp_name'])) {
+    $attachments[] = ['name' => preg_replace('/[^A-Za-z0-9._ -]/', '_', $cv_name), 'type' => $cv_types[$cv_ext], 'data' => (string)file_get_contents($_FILES['cv']['tmp_name'])];
+    $body .= "\nCV\n" . $attachments[0]['name'] . " (attached)\n";
+  }
+}
+
+$sent = gmail_is_ready() && gmail_send($subject, $body, $name, $email, $attachments);
 if (!$sent) {
-  $sent = @mail($to, '=?UTF-8?B?' . base64_encode($subject) . '?=', $body, implode("\r\n", $headers));
+  $mail_headers = $headers;
+  $mail_headers = array_values(array_filter($mail_headers, static fn($h) => stripos($h, 'Content-Type:') !== 0));
+  $mail_body = gmail_build_body($body, $attachments, $mail_headers);
+  $sent = @mail($to, '=?UTF-8?B?' . base64_encode($subject) . '?=', $mail_body, implode("\r\n", $mail_headers));
 }
 
 if (!$sent) {

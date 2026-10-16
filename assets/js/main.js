@@ -2603,3 +2603,44 @@ document.addEventListener('click', (e) => {
   if (document.readyState === 'complete') start();
   else window.addEventListener('load', start);
 })();
+
+(function initSubjectOther() {
+  document.querySelectorAll('select[data-subject-select]').forEach((select) => {
+    const form = select.closest('form');
+    if (!form) return;
+    const field = form.querySelector('.contact-subject-other');
+    const jobFields = Array.from(form.querySelectorAll('.contact-job-field'));
+    const cv = form.querySelector('input[name="cv"]');
+    const cvText = form.querySelector('.cv-upload-text');
+    const cvDefault = cvText ? cvText.innerHTML : '';
+    const toggle = (wrap, show) => {
+      const input = wrap.querySelector('input');
+      wrap.hidden = !show;
+      input.required = show;
+      if (!show) input.value = '';
+    };
+    const sync = () => {
+      if (field) toggle(field, select.value === 'Other');
+      const job = select.value === 'Job Application';
+      jobFields.forEach((wrap) => toggle(wrap, job));
+      if (!job && cvText) cvText.innerHTML = cvDefault;
+    };
+    if (cv && cvText) {
+      cv.addEventListener('change', () => {
+        const file = cv.files && cv.files[0];
+        cv.setCustomValidity('');
+        if (!file) { cvText.innerHTML = cvDefault; return; }
+        if (file.size > 5 * 1024 * 1024) {
+          cv.setCustomValidity('Please upload a file smaller than 5 MB.');
+          cv.reportValidity();
+          cv.value = '';
+          cvText.innerHTML = cvDefault;
+          return;
+        }
+        cvText.textContent = file.name;
+      });
+    }
+    select.addEventListener('change', sync);
+    sync();
+  });
+})();

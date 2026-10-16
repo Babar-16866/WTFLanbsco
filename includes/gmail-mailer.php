@@ -125,7 +125,27 @@ function gmail_encode_header(string $value): string {
   return preg_match('/[^\x20-\x7E]/', $value) ? '=?UTF-8?B?' . base64_encode($value) . '?=' : $value;
 }
 
-function gmail_send(string $subject, string $body, string $replyName = '', string $replyEmail = ''): bool {
+function gmail_build_body(string $body, array $attachments, array &$headers): string {
+  if (!$attachments) {
+    $headers[] = 'Content-Type: text/plain; charset=UTF-8';
+    $headers[] = 'Content-Transfer-Encoding: base64';
+    return chunk_split(base64_encode($body), 76, "\r\n");
+  }
+  $boundary = 'b' . bin2hex(random_bytes(12));
+  $headers[] = 'Content-Type: multipart/mixed; boundary="' . $boundary . '"';
+  $out = '--' . $boundary . "\r\n" . "Content-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: base64\r\n\r\n" . chunk_split(base64_encode($body), 76, "\r\n");
+  foreach ($attachments as $file) {
+    $name = str_replace(['"', "\r", "\n"], '', (string)$file['name']);
+    $out .= '--' . $boundary . "\r\n";
+    $out .= 'Content-Type: ' . $file['type'] . '; name="' . $name . "\"\r\n";
+    $out .= "Content-Transfer-Encoding: base64\r\n";
+    $out .= 'Content-Disposition: attachment; filename="' . $name . "\"\r\n\r\n";
+    $out .= chunk_split(base64_encode((string)$file['data']), 76, "\r\n");
+  }
+  return $out . '--' . $boundary . "--\r\n";
+}
+
+function gmail_send(string $subject, string $body, string $replyName = '', string $replyEmail = '', array $attachments = []): bool {
   $config = gmail_config();
   $token = gmail_access_token();
   if ($token === null) {
@@ -159,13 +179,12 @@ function gmail_send(string $subject, string $body, string $replyName = '', strin
       'Subject: ' . gmail_encode_header($subject),
       'Message-ID: <' . bin2hex(random_bytes(12)) . '@' . substr(strrchr($from, '@'), 1) . '>',
       'MIME-Version: 1.0',
-      'Content-Type: text/plain; charset=UTF-8',
-      'Content-Transfer-Encoding: base64',
     ];
     if ($replyEmail !== '' && filter_var($replyEmail, FILTER_VALIDATE_EMAIL)) {
       $headers[] = 'Reply-To: ' . ($replyName !== '' ? gmail_encode_header($replyName) . ' ' : '') . '<' . $replyEmail . '>';
     }
-    $message = implode("\r\n", $headers) . "\r\n\r\n" . chunk_split(base64_encode($body), 76, "\r\n");
+    $content = gmail_build_body($body, $attachments, $headers);
+    $message = implode("\r\n", $headers) . "\r\n\r\n" . $content;
     $ok = gmail_smtp_command($socket, $message . "\r\n.", [250]);
   }
 
