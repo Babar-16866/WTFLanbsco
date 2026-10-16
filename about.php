@@ -34,11 +34,41 @@ include __DIR__ . '/includes/page-banner.php';
         </ul>
       </div>
       <div class="about-split-media">
-        <img loading="lazy" src="/assets/images/enterprise-team.jpg" alt="Enterprise delivery team">
+        <img loading="lazy" src="/assets/images/about-startup-lounge.webp" alt="WTF Labs office lounge">
         <div class="about-split-float">
           <img loading="lazy" src="/assets/images/team-1.jpg" alt="">
           <img loading="lazy" src="/assets/images/team-3.jpg" alt="">
         </div>
+      </div>
+    </div>
+
+    <div class="about-people reveal">
+      <div class="about-people-head">
+        <div>
+          <p class="faq-page-label"><span></span> Our team</p>
+          <h2>Meet the people behind <span class="heading-accent">your growth.</span></h2>
+        </div>
+        <p class="about-people-lead">The same senior faces from the first call to launch day - people who know your business and stay with it.</p>
+      </div>
+      <div class="about-people-grid">
+        <article class="about-person">
+          <div class="about-person-photo">
+            <img loading="lazy" src="/assets/images/team-bilal.webp" alt="Bilal, Marketing Expert at WTF Labs" width="900" height="986">
+          </div>
+          <div class="about-person-info">
+            <h3>Bilal</h3>
+            <p>Marketing Expert</p>
+          </div>
+        </article>
+        <article class="about-person">
+          <div class="about-person-photo">
+            <img loading="lazy" src="/assets/images/team-noman.webp" alt="Noman, Brand Consultant at WTF Labs" width="900" height="1018">
+          </div>
+          <div class="about-person-info">
+            <h3>Noman</h3>
+            <p>Brand Consultant</p>
+          </div>
+        </article>
       </div>
     </div>
 
@@ -76,6 +106,7 @@ include __DIR__ . '/includes/page-banner.php';
       </div>
     </div>
 
+    <?php /*
     <div class="about-team-strip reveal">
       <div class="about-team-strip-copy">
         <p class="faq-page-label"><span></span> The people</p>
@@ -90,6 +121,7 @@ include __DIR__ . '/includes/page-banner.php';
         <img loading="lazy" src="/assets/images/people-collab.jpg" alt="Team">
       </div>
     </div>
+    */ ?>
 
     <div class="about-maturity reveal">
       <div class="about-maturity-panel">

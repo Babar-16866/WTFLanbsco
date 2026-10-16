@@ -50,7 +50,7 @@ include __DIR__ . '/includes/header.php';
       <p>We keep personal data only as long as needed for the purposes described above, including project delivery, follow-up, and legal/accounting requirements, then delete or anonymize it.</p>
 
       <h2>7. Your rights</h2>
-      <p>Depending on your location, you may request access, correction, deletion, or restriction of your personal data, and object to certain processing. Contact us at <a href="mailto:hello@wtflabs.com">hello@wtflabs.com</a> to exercise these rights.</p>
+      <p>Depending on your location, you may request access, correction, deletion, or restriction of your personal data, and object to certain processing. Contact us at <a href="mailto:info@wtflabsco.com">info@wtflabsco.com</a> to exercise these rights.</p>
 
       <h2>8. Security</h2>
       <p>We take reasonable technical and organizational measures to protect your data. No method of transmission over the internet is 100% secure, so we cannot guarantee absolute security.</p>
@@ -62,7 +62,7 @@ include __DIR__ . '/includes/header.php';
       <p>We may update this Privacy Policy from time to time. The &ldquo;Last updated&rdquo; date at the top will reflect the latest revision.</p>
 
       <h2>11. Contact</h2>
-      <p>Questions about this policy? Email <a href="mailto:hello@wtflabs.com">hello@wtflabs.com</a> or call <a href="tel:+15123379723">+1 (512) 337-9723</a>.</p>
+      <p>Questions about this policy? Email <a href="mailto:info@wtflabsco.com">info@wtflabsco.com</a> or call <a href="tel:+15123379723">+1 (512) 337-9723</a>.</p>
     </article>
   </div>
 </section>

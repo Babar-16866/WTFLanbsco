@@ -52,7 +52,7 @@ include __DIR__ . '/includes/page-banner.php';
             </span>
             <div>
               <strong>Email</strong>
-              <p><a href="mailto:hello@wtflabs.com">hello@wtflabs.com</a></p>
+              <p><a href="mailto:info@wtflabsco.com">info@wtflabsco.com</a></p>
             </div>
           </li>
         </ul>

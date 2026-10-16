@@ -580,6 +580,7 @@ function isContactCta(el) {
   if (el.closest('.nav-links, .site-footer') && (el.getAttribute('href') || '').includes('contact.php')) {
     return false;
   }
+  if (el.hasAttribute('data-no-popup')) return false;
   if (el.hasAttribute('data-open-popup')) return true;
   const href = (el.getAttribute('href') || '').trim();
   if (!href) return false;
@@ -594,14 +595,6 @@ document.addEventListener('click', (e) => {
   openPromoPopup(true);
 });
 
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    if (!autoPopupAllowed()) return;
-    if (!promoPopup || !promoPopup.hidden) return;
-    markAutoPopupShown();
-    openPromoPopup(true);
-  }, 2200);
-});
 
 // Custom theme cursor (desktop only)
 (function initCustomCursor() {
@@ -1317,6 +1310,33 @@ window.addEventListener('load', () => {
 })();
 
 // Rail
+(function initAnchorScrollGuard() {
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href*="#"]');
+    if (!link || e.defaultPrevented) return;
+    const url = new URL(link.href, location.href);
+    if (url.pathname !== location.pathname || !url.hash || url.hash === '#') return;
+    let target = null;
+    try { target = document.querySelector(url.hash); } catch (err) { target = null; }
+    if (!target) return;
+    const root = document.documentElement;
+    root.dataset.autoScroll = '1';
+    const started = performance.now();
+    let lastPos = -1;
+    let still = 0;
+    (function watch() {
+      const y = window.scrollY;
+      still = Math.abs(y - lastPos) < 1 ? still + 1 : 0;
+      lastPos = y;
+      if (still > 12 || performance.now() - started > 4000) {
+        delete root.dataset.autoScroll;
+        return;
+      }
+      requestAnimationFrame(watch);
+    })();
+  });
+})();
+
 (function initRails() {
   const reduceMotion = { matches: false };
   document.querySelectorAll('[data-rail]').forEach((section) => {
@@ -1431,7 +1451,7 @@ window.addEventListener('load', () => {
       const now = performance.now();
       const dir = e.deltaY > 0 ? 1 : -1;
       const abs = Math.abs(e.deltaY);
-      const fresh = now - lastWheel > 80 || abs > lastAbs * 1.05 || (abs === lastAbs && abs >= 40);
+      const fresh = now - lastWheel > 80 || abs > lastAbs * 1.05 || (abs === lastAbs && abs >= 40) || now - stepAt > 450;
       lastWheel = now;
       lastAbs = abs;
       const b = bounds();
@@ -1466,10 +1486,19 @@ window.addEventListener('load', () => {
     }, { passive: false });
 
     let lastY = window.scrollY;
+    let snapFrom = window.scrollY;
+    let snapTimer = 0;
     window.addEventListener('scroll', () => {
+      if (!snapTimer) snapFrom = lastY;
+      lastY = window.scrollY;
+      clearTimeout(snapTimer);
+      snapTimer = setTimeout(snapToCard, 140);
+    }, { passive: true });
+
+    function snapToCard() {
+      snapTimer = 0;
       const y = window.scrollY;
-      const prev = lastY;
-      lastY = y;
+      const prev = snapFrom;
       if (isStatic || touchY !== null || performance.now() < busyUntil || document.documentElement.dataset.autoScroll) return;
       const b = bounds();
       if (y <= b.start + 2 || y >= b.end - 2) return;
@@ -1485,7 +1514,7 @@ window.addEventListener('load', () => {
       lastY = window.scrollY;
       update();
       setTimeout(() => section.classList.remove('is-stepping'), 650);
-    }, { passive: true });
+    }
 
     window.addEventListener('touchstart', (e) => {
       touchY = e.touches.length === 1 ? e.touches[0].clientY : null;
@@ -2318,6 +2347,14 @@ window.addEventListener('load', () => {
       function peek(el) {
         [peekTop, peekBottom].forEach((p) => p && p.classList.remove('is-visible'));
         if (!el) return;
+        if (el === peekBottom) {
+          const z = pageZoom();
+          const host = el.offsetParent || form;
+          const h = host.getBoundingClientRect();
+          const c = commit.getBoundingClientRect();
+          el.style.left = Math.round((c.left - h.left) / z) + 'px';
+          el.style.right = Math.round((h.right - c.right) / z) + 'px';
+        }
         void el.offsetWidth;
         el.classList.add('is-visible');
         clearTimeout(peekTimer);

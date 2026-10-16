@@ -21,6 +21,7 @@ $banner_lead = $banner_lead ?? '';
 $banner_primary_label = $banner_primary_label ?? 'Free Consultation';
 $banner_primary_href = $banner_primary_href ?? '/contact.php';
 $banner_primary_popup = $banner_primary_popup ?? true;
+$banner_secondary_label = $banner_secondary_label ?? '';
 $banner_secondary_href = $banner_secondary_href ?? '/works.php';
 $banner_proof = $banner_proof ?? [
   ['400+', 'projects'],

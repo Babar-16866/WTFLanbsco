@@ -1731,8 +1731,8 @@ include __DIR__ . '/includes/header.php';
       </div>
     </div>
     <div class="container rail-cta">
-      <a href="/free-consultation.php" class="btn btn-lime btn-lg">Let&rsquo;s Do Step 1</a>
-      <a href="/free-consultation.php" class="btn btn-lime btn-lg street-join-float" aria-hidden="true" tabindex="-1">Let&rsquo;s Do Step 1</a>
+      <a href="/contact.php" class="btn btn-lime btn-lg" data-open-popup>Let&rsquo;s Do Step 1</a>
+      <a href="/contact.php" class="btn btn-lime btn-lg street-join-float" data-open-popup aria-hidden="true" tabindex="-1">Let&rsquo;s Do Step 1</a>
     </div>
   </div>
 </section>
@@ -1900,7 +1900,7 @@ include __DIR__ . '/includes/testimonialslider.php';
   <div class="container final-cta-inner reveal">
     <h2 class="final-cta-title">Your Work Already Has <span class="accent-lime">Value.</span><br>Make Sure Marketing<br><span class="accent-lime">Shows</span> It.</h2>
     <p class="final-cta-body">We&rsquo;ll review your current website and How you market, to show you the highest-impact opportunities we see.</p>
-    <a href="/free-consultation.php" class="btn btn-lime btn-lg">Claim Your FREE Consultation</a>
+    <a href="#contact" class="btn btn-lime btn-lg" data-no-popup>Claim Your FREE Consultation</a>
     <p class="final-cta-micro">No pressure. No generic 50-page report. Just useful feedback on what is helping, what is hurting, and what we would fix first.</p>
   </div>
 </section>

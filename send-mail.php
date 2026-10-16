@@ -36,8 +36,8 @@ $partial = $step === 1 || $step === 2;
 
 // Brief / audit / feedback pages
 $form_pages = [
-  'free-audit'      => ['Free audit request', '/free-consultation.php'],
-  'free-consultation' => ['Free consultation request', '/free-consultation.php'],
+  'free-audit'      => ['Free audit request', '/contact.php'],
+  'free-consultation' => ['Free consultation request', '/contact.php'],
   'website-brief'   => ['Website brief', '/website-brief.php'],
   'marketing-brief' => ['Marketing brief', '/marketing-brief.php'],
   'client-feedback' => ['Client feedback', '/client-feedback.php'],

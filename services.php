@@ -169,8 +169,8 @@ include __DIR__ . '/includes/featured-work.php';
       </div>
     </div>
     <div class="container rail-cta">
-      <a href="/free-consultation.php" class="btn btn-lime btn-lg">Let&rsquo;s Do Step 1</a>
-      <a href="/free-consultation.php" class="btn btn-lime btn-lg street-join-float" aria-hidden="true" tabindex="-1">Let&rsquo;s Do Step 1</a>
+      <a href="/contact.php" class="btn btn-lime btn-lg" data-open-popup>Let&rsquo;s Do Step 1</a>
+      <a href="/contact.php" class="btn btn-lime btn-lg street-join-float" data-open-popup aria-hidden="true" tabindex="-1">Let&rsquo;s Do Step 1</a>
     </div>
   </div>
 </section>

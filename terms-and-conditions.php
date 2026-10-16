@@ -59,7 +59,7 @@ include __DIR__ . '/includes/header.php';
       <p>We may update these Terms and Conditions periodically. Continued use of the site after changes constitutes acceptance of the revised terms.</p>
 
       <h2>13. Contact</h2>
-      <p>Questions about these terms? Email <a href="mailto:hello@wtflabs.com">hello@wtflabs.com</a> or call <a href="tel:+15123379723">+1 (512) 337-9723</a>.</p>
+      <p>Questions about these terms? Email <a href="mailto:info@wtflabsco.com">info@wtflabsco.com</a> or call <a href="tel:+15123379723">+1 (512) 337-9723</a>.</p>
     </article>
   </div>
 </section>

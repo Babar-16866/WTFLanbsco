@@ -189,7 +189,7 @@ include __DIR__ . '/includes/page-banner.php';
           <span class="faq-question">Something went wrong - what now?</span>
           <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
         </button>
-        <div class="faq-panel" role="region"><div class="faq-panel-inner"><p>Tell us in the form and we'll get in touch within one business day to fix it. You can also reach us at <a href="mailto:hello@wtflabs.com">hello@wtflabs.com</a>.</p></div></div>
+        <div class="faq-panel" role="region"><div class="faq-panel-inner"><p>Tell us in the form and we'll get in touch within one business day to fix it. You can also reach us at <a href="mailto:info@wtflabsco.com">info@wtflabsco.com</a>.</p></div></div>
       </div>
     </div>
     <div class="faq-all-wrap reveal">

@@ -40,7 +40,7 @@ include __DIR__ . '/includes/header.php';
       <p>Fees paid to third parties (domains, hosting, ads spend, licenses, stock assets, plugins) are generally non-refundable once purchased on your behalf.</p>
 
       <h2>7. How to request a refund</h2>
-      <p>Email <a href="mailto:hello@wtflabs.com">hello@wtflabs.com</a> with your project name, invoice number, and reason. We aim to respond within 5 business days. Approved refunds are processed to the original payment method within 10–15 business days, subject to your bank or processor.</p>
+      <p>Email <a href="mailto:info@wtflabsco.com">info@wtflabsco.com</a> with your project name, invoice number, and reason. We aim to respond within 5 business days. Approved refunds are processed to the original payment method within 10–15 business days, subject to your bank or processor.</p>
 
       <h2>8. Chargebacks</h2>
       <p>Please contact us before filing a chargeback so we can resolve the issue. Unfounded chargebacks may result in suspension of services and recovery of fees plus related costs.</p>
@@ -49,7 +49,7 @@ include __DIR__ . '/includes/header.php';
       <p>If your signed proposal, SOW, or master services agreement conflicts with this page, the signed agreement controls.</p>
 
       <h2>10. Contact</h2>
-      <p>Questions? Reach us at <a href="mailto:hello@wtflabs.com">hello@wtflabs.com</a> or <a href="tel:+15123379723">+1 (512) 337-9723</a>.</p>
+      <p>Questions? Reach us at <a href="mailto:info@wtflabsco.com">info@wtflabsco.com</a> or <a href="tel:+15123379723">+1 (512) 337-9723</a>.</p>
     </article>
   </div>
 </section>

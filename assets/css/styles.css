@@ -11777,3 +11777,181 @@ html body .promo-popup-brand img {
   font-weight: 400;
   opacity: 0.7;
 }
+html body .form-commit .btn.btn-lime,
+html body .form-commit .btn.btn-lime:is(:hover, :focus-visible, :active),
+html body .form-commit .btn.form-commit-alt,
+html body .form-commit .btn.form-commit-alt:is(:hover, :focus-visible, :active),
+html body .form-commit .btn.form-commit-runaway,
+html body .form-commit .btn.form-commit-runaway:is(:hover, :focus-visible, :active) {
+  background: #FFFFFF;
+  color: var(--pal-dark, #10231B);
+  box-shadow: none !important;
+}
+html body .form-commit .btn.btn-lime,
+html body .form-commit .btn.btn-lime:is(:hover, :focus-visible, :active) {
+  border: 1px solid rgba(208, 240, 0, 0.2);
+}
+html body .form-commit .btn.form-commit-alt,
+html body .form-commit .btn.form-commit-alt:is(:hover, :focus-visible, :active) {
+  border: 1px solid rgba(232, 185, 46, 0.2);
+}
+html body .form-commit .btn.form-commit-runaway,
+html body .form-commit .btn.form-commit-runaway:is(:hover, :focus-visible, :active) {
+  border: 1px solid rgba(224, 70, 78, 0.2);
+}
+:root[data-palette="index2"]:not([data-theme="dark"]) #contactForm.contact-form--home {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--pal-gold, #C39B62) 22%, transparent);
+  background:
+    radial-gradient(120% 70% at 100% 0%, color-mix(in srgb, var(--pal-gold, #C39B62) 9%, transparent), transparent 60%),
+    #FFFFFF;
+  box-shadow: 0 24px 60px rgba(16, 35, 27, 0.14), 0 2px 6px rgba(16, 35, 27, 0.05);
+}
+:root[data-palette="index2"]:not([data-theme="dark"]) #contactForm.contact-form--home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--pal-gold, #C39B62), #D0F000, var(--pal-gold, #C39B62));
+}
+#contactForm .form-step-title {
+  position: relative;
+  padding-bottom: 12px;
+  margin-bottom: 10px;
+}
+#contactForm .form-step-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 44px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--pal-gold, #C39B62);
+}
+#contactForm .field label {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+:root[data-palette="index2"]:not([data-theme="dark"]) #contactForm .field :is(input, textarea),
+:root[data-palette="index2"]:not([data-theme="dark"]) #contactForm .wtf-select-trigger {
+  background: #FBF8F1;
+  border: 1px solid rgba(16, 35, 27, 0.14);
+  border-radius: 12px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+:root[data-palette="index2"]:not([data-theme="dark"]) #contactForm .field :is(input, textarea):hover,
+:root[data-palette="index2"]:not([data-theme="dark"]) #contactForm .wtf-select-trigger:hover {
+  border-color: color-mix(in srgb, var(--pal-gold, #C39B62) 55%, transparent);
+}
+:root[data-palette="index2"]:not([data-theme="dark"]) #contactForm .field :is(input, textarea):focus,
+:root[data-palette="index2"]:not([data-theme="dark"]) #contactForm .wtf-select-trigger:focus-visible {
+  outline: none;
+  background: #FFFFFF;
+  border-color: var(--pal-gold, #C39B62);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--pal-gold, #C39B62) 18%, transparent);
+}
+#contactForm [data-step-next].btn {
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--pal-gold, #C39B62) 35%, transparent);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+#contactForm [data-step-next].btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.04);
+  box-shadow: 0 14px 30px color-mix(in srgb, var(--pal-gold, #C39B62) 45%, transparent);
+}
+.about-people {
+  margin-top: 96px;
+}
+.about-people-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+.about-people-head h2 {
+  margin: 10px 0 0;
+  font-size: clamp(30px, 3.6vw, 46px);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--pal-dark, #10231B);
+}
+.about-people-lead {
+  max-width: 380px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--pal-dark, #10231B) 72%, transparent);
+}
+.about-people-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 360px));
+  justify-content: center;
+  gap: 28px;
+}
+.about-person {
+  padding: 12px 12px 22px;
+  border-radius: 26px;
+  background: var(--pal-light, #FBF7EC);
+  border: 1px solid color-mix(in srgb, var(--pal-gold, #C39B62) 25%, transparent);
+  box-shadow: 0 18px 44px rgba(16, 35, 27, 0.1);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.about-person:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 56px rgba(16, 35, 27, 0.16);
+}
+.about-person-photo {
+  position: relative;
+  aspect-ratio: 4 / 4.6;
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--pal-dark, #10231B);
+}
+.about-person-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  display: block;
+  transition: transform 0.6s var(--ease);
+}
+.about-person:hover .about-person-photo img {
+  transform: scale(1.04);
+}
+.about-person-info {
+  padding: 18px 8px 0;
+}
+.about-person-info h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--pal-dark, #10231B);
+}
+.about-person-info p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pal-gold, #C39B62);
+}
+@media (max-width: 768px) {
+  .about-people { margin-top: 64px; }
+  .about-people-head { flex-direction: column; align-items: flex-start; gap: 14px; margin-bottom: 28px; }
+}
+@media (max-width: 560px) {
+  .about-people-grid { grid-template-columns: minmax(0, 360px); }
+}
+.about-people {
+  margin-top: 0;
+  margin-bottom: 72px;
+}
+@media (max-width: 768px) {
+  .about-people { margin-top: 0; margin-bottom: 56px; }
+}
