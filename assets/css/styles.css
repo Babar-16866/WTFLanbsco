@@ -11955,3 +11955,29 @@ html body .form-commit .btn.form-commit-runaway:is(:hover, :focus-visible, :acti
 @media (max-width: 768px) {
   .about-people { margin-top: 0; margin-bottom: 56px; }
 }
+.about-people-head {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+.about-people-lead {
+  max-width: 620px;
+}
+.about-person {
+  background:
+    var(--pal-texture-image, none),
+    linear-gradient(145deg, color-mix(in srgb, var(--pal-primary) 21%, var(--pal-dark)) 0%, color-mix(in srgb, var(--pal-primary) 9%, var(--pal-dark)) 100%);
+  background-size: cover, auto;
+  background-blend-mode: soft-light, normal;
+  border: 1px solid color-mix(in srgb, var(--pal-accent, #D0F000) 14%, transparent);
+  box-shadow: 0 20px 48px rgba(16, 35, 27, 0.22);
+}
+.about-person-info h3 {
+  color: var(--pal-light, #FBF7EC);
+}
+.about-person {
+  background: var(--dot-pattern),
+    linear-gradient(145deg, color-mix(in srgb, var(--pal-primary) 21%, var(--pal-dark)) 0%, color-mix(in srgb, var(--pal-primary) 9%, var(--pal-dark)) 100%);
+  background-size: var(--dot-size), auto;
+  background-blend-mode: normal;
+}
