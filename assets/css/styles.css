@@ -11789,15 +11789,15 @@ html body .form-commit .btn.form-commit-runaway:is(:hover, :focus-visible, :acti
 }
 html body .form-commit .btn.btn-lime,
 html body .form-commit .btn.btn-lime:is(:hover, :focus-visible, :active) {
-  border: 2px solid rgba(208, 240, 0, 0.2);
+  border: 2px solid rgba(208, 240, 0, 0.349);
 }
 html body .form-commit .btn.form-commit-alt,
 html body .form-commit .btn.form-commit-alt:is(:hover, :focus-visible, :active) {
-  border: 2px solid rgba(232, 185, 46, 0.2);
+  border: 2px solid rgba(232, 186, 46, 0.281);
 }
 html body .form-commit .btn.form-commit-runaway,
 html body .form-commit .btn.form-commit-runaway:is(:hover, :focus-visible, :active) {
-  border: 2px solid rgba(224, 70, 78, 0.2);
+  border: 2px solid rgba(224, 70, 78, 0.322);
 }
 .about-people {
   margin-top: 96px;
