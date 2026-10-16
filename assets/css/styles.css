@@ -11981,3 +11981,80 @@ html body .form-commit .btn.form-commit-runaway:is(:hover, :focus-visible, :acti
   background-size: var(--dot-size), auto;
   background-blend-mode: normal;
 }
+.about-people-grid {
+  grid-template-columns: repeat(2, minmax(0, 380px));
+  gap: 32px;
+}
+.about-person {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid color-mix(in srgb, var(--pal-gold, #C39B62) 30%, transparent);
+  box-shadow: 0 24px 60px rgba(16, 35, 27, 0.22);
+  isolation: isolate;
+}
+.about-person::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(208, 240, 0, 0);
+  transition: box-shadow 0.4s var(--ease);
+  pointer-events: none;
+}
+.about-person:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 32px 70px rgba(16, 35, 27, 0.3);
+}
+.about-person:hover::after {
+  box-shadow: inset 0 0 0 2px rgba(208, 240, 0, 0.55);
+}
+.about-person-photo {
+  aspect-ratio: 4 / 5;
+  border-radius: 0;
+}
+.about-person-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(13, 31, 23, 0) 45%, rgba(13, 31, 23, 0.55) 68%, rgba(13, 31, 23, 0.96) 100%);
+  pointer-events: none;
+}
+.about-person-photo img {
+  object-position: center 15%;
+}
+.about-person-info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 0 28px 26px;
+}
+.about-person-info h3 {
+  font-size: 28px;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+}
+.about-person-info p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  color: var(--pal-gold, #C39B62);
+}
+.about-person-info p::before {
+  content: "";
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: #D0F000;
+  box-shadow: 0 0 8px rgba(208, 240, 0, 0.7);
+}
+@media (max-width: 560px) {
+  .about-people-grid { grid-template-columns: minmax(0, 380px); gap: 22px; }
+  .about-person-info { padding: 0 22px 22px; }
+  .about-person-info h3 { font-size: 24px; }
+}
