@@ -508,6 +508,7 @@ let exitIntentArmed = true;
 
 function openPromoPopup(force) {
   if (!promoPopup) return;
+  if (document.body.classList.contains('step-popup-open')) return;
   if (!force && localStorage.getItem(POPUP_KEY)) return;
   if (!promoPopup.hidden) return;
   promoPopup.hidden = false;
@@ -2679,5 +2680,38 @@ document.addEventListener('click', (e) => {
     }
     select.addEventListener('change', sync);
     sync();
+  });
+})();
+
+(function initStepPopup() {
+  const popup = document.getElementById('stepPopup');
+  if (!popup) return;
+  let lastFocus = null;
+  function open() {
+    if (!popup.hidden) return;
+    lastFocus = document.activeElement;
+    popup.hidden = false;
+    document.body.classList.add('step-popup-open');
+    const first = popup.querySelector('.form-step:not([hidden]) input:not([type="hidden"]):not(.hp-field)');
+    setTimeout(() => first && first.focus({ preventScroll: true }), 60);
+  }
+  function close() {
+    if (popup.hidden) return;
+    popup.hidden = true;
+    document.body.classList.remove('step-popup-open');
+    if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
+  }
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('[data-open-step-popup]');
+    if (trigger) {
+      e.preventDefault();
+      e.stopPropagation();
+      open();
+      return;
+    }
+    if (e.target.closest('[data-step-popup-close]')) close();
+  }, true);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !popup.hidden) close();
   });
 })();

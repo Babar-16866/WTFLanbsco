@@ -10,6 +10,7 @@ $banner_kicker = 'WEB + MARKETING UNDER ONE ROOF';
 $banner_h1 = 'Everything your digital presence needs to look stronger, work smarter, <span class="about-hero-accent">and win better jobs.</span>';
 $banner_lead = 'Premium websites, local search, paid media, creative, and tracking built as one connected system for quality home-service businesses.';
 $banner_primary_label = 'Free Consultation';
+$banner_primary_step = true;
 $banner_image = '/assets/images/service-web-design.jpg';
 $banner_float1 = '/assets/images/service-graphic-design.jpg';
 $banner_float2 = '/assets/images/service-social-media.jpg';
@@ -169,8 +170,8 @@ include __DIR__ . '/includes/featured-work.php';
       </div>
     </div>
     <div class="container rail-cta">
-      <a href="/contact.php" class="btn btn-lime btn-lg" data-open-popup>Let&rsquo;s Do Step 1</a>
-      <a href="/contact.php" class="btn btn-lime btn-lg street-join-float" data-open-popup aria-hidden="true" tabindex="-1">Let&rsquo;s Do Step 1</a>
+      <a href="/contact.php" class="btn btn-lime btn-lg" data-open-step-popup>Let&rsquo;s Do Step 1</a>
+      <a href="/contact.php" class="btn btn-lime btn-lg street-join-float" data-open-step-popup aria-hidden="true" tabindex="-1">Let&rsquo;s Do Step 1</a>
     </div>
   </div>
 </section>

@@ -11,6 +11,7 @@ $banner_kicker = 'Premium Web Design + Development';
 $banner_h1 = 'Make your business look as good online as <span class="about-hero-accent">the work you do.</span>';
 $banner_lead = 'Custom websites for home-service companies that need to earn trust fast, work beautifully on mobile, and turn visitors into calls, estimates, bookings, and better-fit leads.';
 $banner_primary_label = 'Get Your Free Website Consultation';
+$banner_primary_step = true;
 $banner_secondary_label = 'See Our Work';
 $banner_image = '/assets/images/mockup-main.webp';
 $banner_float1 = '/assets/images/excel-landing.webp';

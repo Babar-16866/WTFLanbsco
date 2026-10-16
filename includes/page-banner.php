@@ -21,6 +21,7 @@ $banner_lead = $banner_lead ?? '';
 $banner_primary_label = $banner_primary_label ?? 'Free Consultation';
 $banner_primary_href = $banner_primary_href ?? '/contact.php';
 $banner_primary_popup = $banner_primary_popup ?? true;
+$banner_primary_step = $banner_primary_step ?? false;
 $banner_secondary_label = $banner_secondary_label ?? '';
 $banner_secondary_href = $banner_secondary_href ?? '/works.php';
 $banner_proof = $banner_proof ?? [
@@ -48,7 +49,7 @@ $banner_float2 = $banner_float2 ?? '/assets/images/team-2.jpg';
           <p class="about-hero-lead"><?php echo htmlspecialchars($banner_lead); ?></p>
         <?php endif; ?>
         <div class="page-hero-actions">
-          <a href="<?php echo htmlspecialchars($banner_primary_href); ?>" class="btn btn-lime btn-lg"<?php echo $banner_primary_popup ? ' data-open-popup' : ''; ?>><?php echo htmlspecialchars($banner_primary_label); ?></a>
+          <a href="<?php echo htmlspecialchars($banner_primary_href); ?>" class="btn btn-lime btn-lg"<?php echo $banner_primary_step ? ' data-open-step-popup' : ($banner_primary_popup ? ' data-open-popup' : ''); ?>><?php echo htmlspecialchars($banner_primary_label); ?></a>
           <?php if ($banner_secondary_label !== ''): ?>
             <a href="<?php echo htmlspecialchars($banner_secondary_href); ?>" class="btn btn-outline-white btn-lg"><?php echo htmlspecialchars($banner_secondary_label); ?></a>
           <?php endif; ?>
@@ -85,7 +86,7 @@ $banner_float2 = $banner_float2 ?? '/assets/images/team-2.jpg';
 unset(
   $banner_kicker, $banner_breadcrumb, $banner_crumb_label, $banner_crumb_href,
   $banner_h1, $banner_lead,
-  $banner_primary_label, $banner_primary_href, $banner_primary_popup,
+  $banner_primary_label, $banner_primary_href, $banner_primary_popup, $banner_primary_step,
   $banner_secondary_label, $banner_secondary_href,
   $banner_proof, $banner_image, $banner_float1, $banner_float2, $banner_card
 );

@@ -12,6 +12,7 @@ $banner_lead = 'Practical playbooks for local service businesses — what wins t
 $banner_primary_label = 'Get a free consultation';
 $banner_primary_href = '/contact.php';
 $banner_primary_popup = false;
+$banner_primary_step = true;
 $banner_secondary_label = 'See our work';
 $banner_image = '/assets/images/industry-remodelers-2.webp';
 $banner_float1 = '/assets/images/industry-hvac-1.webp';
@@ -119,7 +120,7 @@ include __DIR__ . '/includes/page-banner.php';
         <h3>Want to know what your site is missing?</h3>
         <p>Get a free audit with a clear list of what to fix first.</p>
       </div>
-      <a href="/contact.php" class="btn btn-lime btn-lg" data-open-popup>Get a free consultation</a>
+      <a href="/contact.php" class="btn btn-lime btn-lg" data-open-step-popup>Get a free consultation</a>
     </div>
   </div>
 </section>

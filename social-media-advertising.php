@@ -11,6 +11,7 @@ $banner_kicker = 'PAID SOCIAL + CREATIVE';
 $banner_h1 = 'Show your best work that <span class="about-hero-accent">homeowners remember.</span>';
 $banner_lead = 'Visual-led campaigns that use project proof, offers, and strong local positioning to generate demand before the customer ever searches your name.';
 $banner_primary_label = 'Get a Free Marketing Audit';
+$banner_primary_step = true;
 $banner_secondary_label = '';
 $banner_image = '/assets/images/service-social-media.jpg';
 $banner_float1 = '/assets/images/excel-mobile.webp';

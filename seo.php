@@ -11,6 +11,7 @@ $banner_kicker = 'SEO + Local Search';
 $banner_h1 = 'Be easier to find when homeowners are <span class="about-hero-accent">ready to hire.</span>';
 $banner_lead = 'Technical SEO, service-area strategy, useful content, and conversion-focused pages built to increase qualified local visibility - not vanity traffic.';
 $banner_primary_label = 'Get a Free SEO + Website Audit';
+$banner_primary_step = true;
 $banner_image = '/assets/images/service-seo.jpg';
 $banner_float1 = '/assets/images/excel-landing.webp';
 $banner_float2 = '/assets/images/excel-design-system.webp';

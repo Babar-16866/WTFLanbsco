@@ -11,6 +11,7 @@ $banner_kicker = 'BRANDING + CREATIVE';
 $banner_h1 = 'Look like the company customers <span class="about-hero-accent">expect to pay more for.</span>';
 $banner_lead = 'Brand systems and campaign creative that make your business feel established, consistent, and credible everywhere homeowners see you.';
 $banner_primary_label = 'Talk About Your Brand';
+$banner_primary_step = true;
 $banner_secondary_label = '';
 $banner_image = '/assets/images/service-graphic-design.jpg';
 $banner_float1 = '/assets/images/excel-branding.webp';

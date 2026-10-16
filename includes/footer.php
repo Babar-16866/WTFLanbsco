@@ -166,6 +166,25 @@ include __DIR__ . '/contact-section.php';
     </div>
   </div>
 
+  <div class="step-popup" id="stepPopup" hidden>
+    <div class="step-popup-backdrop" data-step-popup-close></div>
+    <div class="step-popup-dialog" role="dialog" aria-modal="true" aria-labelledby="stepPopupTitle">
+      <button class="step-popup-close" type="button" data-step-popup-close aria-label="Close">&times;</button>
+      <div class="step-popup-head">
+        <p class="step-popup-kicker"><span></span> Free consultation</p>
+        <h2 id="stepPopupTitle">Let&#39;s have a <span>conversation</span></h2>
+      </div>
+      <div class="contact-form-wrap">
+<?php
+$step_form_id = 'stepPopupForm';
+$step_form_source = 'free-consultation';
+$step_form_ok_id = 'stepPopupOk';
+include __DIR__ . '/step-form.php';
+?>
+      </div>
+    </div>
+  </div>
+
   <!-- Content protection notice -->
   <div class="protect-popup" id="protectPopup" hidden>
     <div class="protect-popup-backdrop" data-protect-close></div>

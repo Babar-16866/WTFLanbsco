@@ -11789,79 +11789,15 @@ html body .form-commit .btn.form-commit-runaway:is(:hover, :focus-visible, :acti
 }
 html body .form-commit .btn.btn-lime,
 html body .form-commit .btn.btn-lime:is(:hover, :focus-visible, :active) {
-  border: 1px solid rgba(208, 240, 0, 0.2);
+  border: 2px solid rgba(208, 240, 0, 0.2);
 }
 html body .form-commit .btn.form-commit-alt,
 html body .form-commit .btn.form-commit-alt:is(:hover, :focus-visible, :active) {
-  border: 1px solid rgba(232, 185, 46, 0.2);
+  border: 2px solid rgba(232, 185, 46, 0.2);
 }
 html body .form-commit .btn.form-commit-runaway,
 html body .form-commit .btn.form-commit-runaway:is(:hover, :focus-visible, :active) {
-  border: 1px solid rgba(224, 70, 78, 0.2);
-}
-:root[data-palette="index2"]:not([data-theme="dark"]) #contactForm.contact-form--home {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid color-mix(in srgb, var(--pal-gold, #C39B62) 22%, transparent);
-  background:
-    radial-gradient(120% 70% at 100% 0%, color-mix(in srgb, var(--pal-gold, #C39B62) 9%, transparent), transparent 60%),
-    #FFFFFF;
-  box-shadow: 0 24px 60px rgba(16, 35, 27, 0.14), 0 2px 6px rgba(16, 35, 27, 0.05);
-}
-:root[data-palette="index2"]:not([data-theme="dark"]) #contactForm.contact-form--home::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--pal-gold, #C39B62), #D0F000, var(--pal-gold, #C39B62));
-}
-#contactForm .form-step-title {
-  position: relative;
-  padding-bottom: 12px;
-  margin-bottom: 10px;
-}
-#contactForm .form-step-title::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 44px;
-  height: 3px;
-  border-radius: 3px;
-  background: var(--pal-gold, #C39B62);
-}
-#contactForm .field label {
-  font-weight: 600;
-  letter-spacing: 0.01em;
-}
-:root[data-palette="index2"]:not([data-theme="dark"]) #contactForm .field :is(input, textarea),
-:root[data-palette="index2"]:not([data-theme="dark"]) #contactForm .wtf-select-trigger {
-  background: #FBF8F1;
-  border: 1px solid rgba(16, 35, 27, 0.14);
-  border-radius: 12px;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
-}
-:root[data-palette="index2"]:not([data-theme="dark"]) #contactForm .field :is(input, textarea):hover,
-:root[data-palette="index2"]:not([data-theme="dark"]) #contactForm .wtf-select-trigger:hover {
-  border-color: color-mix(in srgb, var(--pal-gold, #C39B62) 55%, transparent);
-}
-:root[data-palette="index2"]:not([data-theme="dark"]) #contactForm .field :is(input, textarea):focus,
-:root[data-palette="index2"]:not([data-theme="dark"]) #contactForm .wtf-select-trigger:focus-visible {
-  outline: none;
-  background: #FFFFFF;
-  border-color: var(--pal-gold, #C39B62);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--pal-gold, #C39B62) 18%, transparent);
-}
-#contactForm [data-step-next].btn {
-  box-shadow: 0 10px 24px color-mix(in srgb, var(--pal-gold, #C39B62) 35%, transparent);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
-}
-#contactForm [data-step-next].btn:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.04);
-  box-shadow: 0 14px 30px color-mix(in srgb, var(--pal-gold, #C39B62) 45%, transparent);
+  border: 2px solid rgba(224, 70, 78, 0.2);
 }
 .about-people {
   margin-top: 96px;
@@ -12057,4 +11993,106 @@ html body .form-commit .btn.form-commit-runaway:is(:hover, :focus-visible, :acti
   .about-people-grid { grid-template-columns: minmax(0, 380px); gap: 22px; }
   .about-person-info { padding: 0 22px 22px; }
   .about-person-info h3 { font-size: 24px; }
+}
+.step-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.step-popup[hidden] {
+  display: none;
+}
+body.step-popup-open {
+  overflow: hidden;
+}
+.step-popup-backdrop {
+  position: absolute;
+  inset: 0;
+  background: color-mix(in srgb, var(--pal-primary, #1E4233) 72%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.step-popup-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(680px, 100%);
+  max-height: calc(100vh - 32px);
+  max-height: calc(100dvh - 32px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 34px 34px 30px;
+  border-radius: 28px;
+  background:
+    linear-gradient(color-mix(in srgb, var(--pal-overlay, #E4D9C9) 90%, transparent), color-mix(in srgb, var(--pal-overlay, #E4D9C9) 90%, transparent)),
+    var(--pal-bg-image, none) center / 100% 100% no-repeat,
+    var(--pal-overlay, #E4D9C9);
+  border: 1px solid color-mix(in srgb, var(--pal-gold, #C39B62) 35%, transparent);
+  box-shadow: 0 30px 80px rgba(10, 22, 17, 0.45);
+  animation: promoPopIn 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.step-popup-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 3;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  line-height: 1;
+  background: var(--pal-dark, #10231B);
+  color: var(--pal-light, #FBF7EC);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.step-popup-close:hover {
+  transform: rotate(90deg);
+  background: var(--pal-primary, #1E4233);
+}
+.step-popup-head {
+  margin-bottom: 22px;
+  padding-right: 40px;
+}
+.step-popup-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pal-gold, #C39B62);
+}
+.step-popup-kicker span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--pal-gold, #C39B62);
+}
+.step-popup-head h2 {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: var(--pal-dark, #10231B);
+}
+.step-popup-head h2 span {
+  color: var(--pal-gold, #C39B62);
+}
+.step-popup .contact-form-wrap {
+  margin: 0;
+}
+@media (max-width: 640px) {
+  .step-popup { padding: 8px; align-items: flex-start; padding-top: max(8px, env(safe-area-inset-top)); }
+  .step-popup-dialog { padding: 26px 16px 20px; border-radius: 22px; max-height: calc(100dvh - 16px); }
+  .step-popup-close { top: 10px; right: 10px; width: 34px; height: 34px; }
 }

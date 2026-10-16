@@ -11,6 +11,7 @@ $banner_kicker = 'HIGH-INTENT DEMAND';
 $banner_h1 = 'Show up when homeowners are <span class="about-hero-accent">actively looking to hire.</span>';
 $banner_lead = 'Search campaigns, landing pages, call tracking, and ongoing optimization built around qualified local leads - not meaningless click volume.';
 $banner_primary_label = 'Free Ads Strategy Consultation';
+$banner_primary_step = true;
 $banner_secondary_label = '';
 $banner_image = '/assets/images/excel-landing.webp';
 $banner_float1 = '/assets/images/mockup-2.webp';

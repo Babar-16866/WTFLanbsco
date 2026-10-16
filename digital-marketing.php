@@ -11,6 +11,7 @@ $banner_kicker = 'FULL-FUNNEL DIGITAL MARKETING';
 $banner_h1 = 'Stop managing <span class="about-hero-accent">disconnected marketing.</span>';
 $banner_lead = 'Website, search, paid media, creative, and measurement under one senior team - so every channel reinforces the same positioning and lead goals.';
 $banner_primary_label = 'Get a Free Marketing Audit';
+$banner_primary_step = true;
 $banner_secondary_label = '';
 $banner_image = '/assets/images/service-google-ads.jpg';
 $banner_float1 = '/assets/images/service-digital-marketing.jpg';
