@@ -12119,3 +12119,11 @@ html body .form-peek .form-peek-word--right {
   grid-column: 3;
   justify-self: start;
 }
+html[data-copy-allowed] body {
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+html[data-copy-allowed] img {
+  -webkit-user-drag: auto;
+  user-drag: auto;
+}

@@ -186,6 +186,7 @@ include __DIR__ . '/step-form.php';
   </div>
 
   <!-- Content protection notice -->
+  <?php if (!getenv('VERCEL')): ?>
   <div class="protect-popup" id="protectPopup" hidden>
     <div class="protect-popup-backdrop" data-protect-close></div>
     <div class="protect-popup-dialog" role="dialog" aria-modal="true" aria-labelledby="protectPopupTitle">
@@ -194,6 +195,7 @@ include __DIR__ . '/step-form.php';
       <button type="button" class="btn btn-lime" data-protect-close>Got it</button>
     </div>
   </div>
+  <?php endif; ?>
 
   <script src="/assets/js/main.js?v=<?php echo asset_version('assets/js/main.js'); ?>"></script>
   

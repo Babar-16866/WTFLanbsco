@@ -2,7 +2,7 @@
 require_once __DIR__ . '/config.php';
 ?>
 <!DOCTYPE html>
-<html lang="en"<?php echo !empty($page_palette) ? " data-palette=\"" . htmlspecialchars($page_palette) . "\"" : ""; ?>>
+<html lang="en"<?php echo !empty($page_palette) ? " data-palette=\"" . htmlspecialchars($page_palette) . "\"" : ""; ?><?php echo getenv('VERCEL') ? ' data-copy-allowed' : ''; ?>>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
