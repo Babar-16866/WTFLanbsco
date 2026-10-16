@@ -6,15 +6,13 @@ include __DIR__ . '/includes/header.php';
 ?>
 
 <?php
-$banner_kicker = 'Web + Marketing Under One Roof';
-$banner_h1 = 'Everything your digital presence needs to look stronger, work smarter, and <span class="about-hero-accent">win better jobs.</span>';
+$banner_kicker = 'WEB + MARKETING UNDER ONE ROOF';
+$banner_h1 = 'Everything your digital presence needs to look stronger, work smarter, <span class="about-hero-accent">and win better jobs.</span>';
 $banner_lead = 'Premium websites, local search, paid media, creative, and tracking built as one connected system for quality home-service businesses.';
 $banner_primary_label = 'Free Consultation';
-$banner_secondary_label = 'See our work';
 $banner_image = '/assets/images/service-web-design.jpg';
 $banner_float1 = '/assets/images/service-graphic-design.jpg';
 $banner_float2 = '/assets/images/service-social-media.jpg';
-$banner_card = 'Design, build, grow — one senior pod.';
 include __DIR__ . '/includes/page-banner.php';
 ?>
 
@@ -22,28 +20,28 @@ include __DIR__ . '/includes/page-banner.php';
 <section class="svc-showcase" id="featured-services">
   <div class="container">
     <div class="section-header center reveal">
-      <p class="subheading">Featured Services</p>
+      <p class="subheading">FEATURED SERVICES</p>
       <h2>What we help home-service businesses do <span class="heading-accent">better.</span></h2>
     </div>
     <div class="svc-panels reveal" id="svcPanels">
       <a href="/web-design.php" class="svc-panel is-active">
         <img loading="lazy" src="/assets/images/service-web-design.jpg" alt="Web Design &amp; Development">
         <span class="svc-panel-num">01</span>
-        <span class="svc-panel-label">Web Design &amp; Development</span>
+        <span class="svc-panel-label">Web Design & &amp; Development</span>
         <span class="svc-panel-enter" aria-hidden="true">Enter</span>
         <div class="svc-panel-body">
           <h3>Web Design &amp; Development</h3>
-          <p>Make your business look as good online as the work you do - with a fast, custom website built to earn trust and turn visits into calls, estimates, bookings, and better-fit leads.</p>
+          <p>Make your business look as good online as the work you do - with a fast, custom website built to earn trust and turn visits into calls, estimates, bookings, and better-fit leads. </p>
           <span class="svc-panel-link">View Service &rarr;</span>
         </div>
       </a>
       <a href="/seo.php" class="svc-panel">
         <img loading="lazy" src="/assets/images/service-seo.jpg" alt="SEO &amp; Local Search">
         <span class="svc-panel-num">02</span>
-        <span class="svc-panel-label">SEO &amp; Local Search</span>
+        <span class="svc-panel-label">SEO &amp; & Local Search</span>
         <span class="svc-panel-enter" aria-hidden="true">Enter</span>
         <div class="svc-panel-body">
-          <h3>SEO &amp; Local Search</h3>
+          <h3>SEO &amp; & Local Search</h3>
           <p>Help the right homeowners find you when they are already looking for the services you want to sell - in the areas you actually want to serve.</p>
           <span class="svc-panel-link">View Service &rarr;</span>
         </div>
@@ -73,10 +71,10 @@ include __DIR__ . '/includes/page-banner.php';
       <a href="/graphic-design.php" class="svc-panel">
         <img loading="lazy" src="/assets/images/service-graphic-design.jpg" alt="Branding &amp; Creative">
         <span class="svc-panel-num">05</span>
-        <span class="svc-panel-label">Branding &amp; Creative</span>
+        <span class="svc-panel-label">Branding &amp; & Creative</span>
         <span class="svc-panel-enter" aria-hidden="true">Enter</span>
         <div class="svc-panel-body">
-          <h3>Branding &amp; Creative</h3>
+          <h3>Branding &amp; & Creative</h3>
           <p>Create a clear, consistent look across your website, ads, trucks, social posts, signs, proposals, and sales materials so the whole business feels established.</p>
           <span class="svc-panel-link">View Service &rarr;</span>
         </div>
@@ -101,26 +99,26 @@ include __DIR__ . '/includes/page-banner.php';
 <section class="puzzle-section">
   <div class="container">
     <div class="section-header center puzzle-head reveal">
-      <p class="subheading">Why It Matters</p>
+      <p class="subheading">WHY IT MATTERS</p>
       <h2 class="home-title">Your marketing should not <span class="heading-accent">work in pieces.</span></h2>
       <p class="section-desc center-desc">A good ad can still waste money if it sends people to a weak page. Strong SEO can still underperform if the website feels dated. A great-looking website can still sit quiet if nobody can find it. We connect the parts so each one helps the others do their job.</p>
     </div>
     <div class="puzzle-grid reveal">
       <article class="puzzle-card">
         <div class="puzzle-card-inner">
-          <h3>High-Ticket Project Businesses</h3>
+          <h3>HIGH-TICKET PROJECT BUSINESSES</h3>
           <p>For remodelers, roofers, and other project-based companies, the job is to look premium, prove the quality of the work, build trust before the estimate, and stop warm referrals from second-guessing you after they visit the website.</p>
         </div>
       </article>
       <article class="puzzle-card">
         <div class="puzzle-card-inner">
-          <h3>Rapid-Response Service Trades</h3>
+          <h3>RAPID-RESPONSE SERVICE TRADES</h3>
           <p>For HVAC, plumbing, and emergency service companies, the job is speed: load fast on mobile, show trust immediately, make calling or booking easy, and help serious replacement buyers take the next step without friction.</p>
         </div>
       </article>
       <article class="puzzle-card">
         <div class="puzzle-card-inner">
-          <h3>Recurring &amp; Route-Based Services</h3>
+          <h3>RECURRING &amp;  ROUTE-BASED SERVICES</h3>
           <p>For pest, pool, landscaping, and other recurring services, the job is to make plans easy to compare, show where you serve, simplify signup, and turn more one-time customers into repeat customers.</p>
         </div>
       </article>
@@ -128,42 +126,45 @@ include __DIR__ . '/includes/page-banner.php';
   </div>
 </section>
 
+<!-- WORK -->
+<?php
+$work_eyebrow = 'Featured Work';
+$work_heading = 'REAL WORK.<span class="accent-lime"> BUILT TO EARN TRUST.</span>';
+$work_desc = ' Immersive where it helps. Fast where speed matters. Clear where buyers need confidence. Every build should fit the sales cycle behind it.';
+include __DIR__ . '/includes/featured-work.php';
+?>
 
-<!-- OUR PROCESS -->
+
+<!-- How We Work -->
 <section class="rail-section how-rail-section" id="process" data-rail>
   <div class="rail-sticky">
     <div class="container">
       <div class="section-header rail-head reveal">
-        <p class="subheading">Our Process</p>
-        <h2 class="home-title">One clear process from bottleneck to <span class="heading-accent">better performance.</span></h2>
+        <p class="subheading">HOW WE WORK</p>
+        <h2 class="home-title">NO MYSTERY PROCESS. CLEAR <span class="heading-accent">FROM DAY ONE.</span></h2>
       </div>
     </div>
     <div class="rail-viewport">
       <div class="rail-track">
         <article class="rail-card">
           <span class="rail-num">01</span>
-          <h3>Find the real bottleneck</h3>
-          <p>We look at the website, traffic, offers, search visibility, ads, creative, and tracking to see where good opportunities are being lost.</p>
+          <h3>Understand the business</h3>
+          <p>Services, customers, markets, competitors, goals, and what is currently getting in the way.</p>
         </article>
         <article class="rail-card">
           <span class="rail-num">02</span>
-          <h3>Set the order of attack</h3>
-          <p>We separate what needs fixing now from what can wait, so you are not paying for six things when one or two will make the biggest difference first.</p>
+          <h3>Define the growth path</h3>
+          <p>We identify what needs to change first: website, messaging, search visibility, ads, or the whole system.</p>
         </article>
         <article class="rail-card">
           <span class="rail-num">03</span>
-          <h3>Build the right assets</h3>
-          <p>That may mean a new website, stronger service pages, better landing pages, new creative, better tracking, or a mix - based on the actual problem.</p>
+          <h3>Build and launch</h3>
+          <p>Language, user experience, design, tracking, automations, and campaigns move through one connected plan.</p>
         </article>
         <article class="rail-card">
           <span class="rail-num">04</span>
-          <h3>Connect the channels</h3>
-          <p>Your website, search, ads, reviews, forms, calls, and creative should reinforce the same message and make the next step obvious.</p>
-        </article>
-        <article class="rail-card">
-          <span class="rail-num">05</span>
-          <h3>Launch, measure, improve</h3>
-          <p>We watch what real traffic and real leads do, then improve the pages, campaigns, and user paths that matter most.</p>
+          <h3>Learn and improve</h3>
+          <p>Once real people interact with it, we use that data to sharpen the experience and the marketing.</p>
         </article>
       </div>
     </div>
@@ -174,18 +175,10 @@ include __DIR__ . '/includes/page-banner.php';
   </div>
 </section>
 
-<!-- WORK -->
-<?php
-$work_eyebrow = 'Featured Work';
-$work_heading = 'See the work. <span class="accent-lime">See what changed.</span>';
-$work_desc = '';
-include __DIR__ . '/includes/featured-work.php';
-?>
-
 <!-- REVIEWS -->
 <?php
 $street_section_id = 'testimonials';
-$street_heading = 'Good work should be easy to trust <span class="accent-blue">before the call.</span>';
+$street_heading = '…AND THE CROWD GOES <span class="accent-blue">WTF!</span>';
 $street_desc = '';
 include __DIR__ . '/includes/testimonialslider.php';
 ?>
@@ -206,7 +199,7 @@ include __DIR__ . '/includes/testimonialslider.php';
         </button>
         <div class="faq-panel" role="region">
           <div class="faq-panel-inner">
-            <p>No. In most cases, that would be the wrong place to start. We first find the biggest leak - for example a weak website, poor local visibility, low-quality ad traffic, or inconsistent creative - then build around that. Start with the free Consultation and we will show you what deserves attention first.</p>
+            <p>No. In most cases, that would be the wrong place to start. We first find the biggest leak - for example a weak website, poor local visibility, low-quality ad traffic, or inconsistent creative - then build around that. Start with the free audit and we will show you what deserves attention first.</p>
           </div>
         </div>
       </div>
@@ -218,7 +211,7 @@ include __DIR__ . '/includes/testimonialslider.php';
         </button>
         <div class="faq-panel" role="region">
           <div class="faq-panel-inner">
-            <p>That is exactly what the Consultation is for. If traffic is healthy but leads are weak, the website or offer may be the problem. If the site converts but not enough qualified people see it, search or paid media may be the bigger gap. We look at the whole path before recommending work.</p>
+            <p>That is exactly what the audit is for. If traffic is healthy but leads are weak, the website or offer may be the problem. If the site converts but not enough qualified people see it, search or paid media may be the bigger gap. We look at the whole path before recommending work.</p>
           </div>
         </div>
       </div>
@@ -266,7 +259,7 @@ include __DIR__ . '/includes/testimonialslider.php';
         </button>
         <div class="faq-panel" role="region">
           <div class="faq-panel-inner">
-            <p>Start with the free website and marketing Consultation. We will show you what is already helping, where the biggest friction is, and what we would fix first before you commit to a larger project.</p>
+            <p>Start with the free website and marketing audit. We will show you what is already helping, where the biggest friction is, and what we would fix first before you commit to a larger project.</p>
           </div>
         </div>
       </div>
@@ -282,10 +275,10 @@ include __DIR__ . '/includes/testimonialslider.php';
   <div class="container">
     <div class="services-cta-band reveal">
       <div>
-        <h3>Not sure what you actually need?</h3>
+        <h3>Not sure what you actually need??</h3>
         <p>Tell us what is not working. We will help you separate the real bottleneck from the nice-to-have.</p>
       </div>
-      <a href="/contact.php" class="btn btn-lime btn-lg">Start With a Free Consultation</a>
+      <a href="/contact.php" class="btn btn-lime btn-lg">FREE CONSULTATION</a>
     </div>
   </div>
 </section>

@@ -7,10 +7,10 @@ include __DIR__ . '/includes/header.php';
 
 <?php
 $banner_breadcrumb = 'Digital Marketing';
-$banner_kicker = 'Full-Funnel Digital Marketing';
+$banner_kicker = 'FULL-FUNNEL DIGITAL MARKETING';
 $banner_h1 = 'Stop managing <span class="about-hero-accent">disconnected marketing.</span>';
 $banner_lead = 'Website, search, paid media, creative, and measurement under one senior team - so every channel reinforces the same positioning and lead goals.';
-$banner_primary_label = 'Get a Free Marketing Consultation';
+$banner_primary_label = 'Get a Free Marketing Audit';
 $banner_secondary_label = '';
 $banner_image = '/assets/images/service-google-ads.jpg';
 $banner_float1 = '/assets/images/service-digital-marketing.jpg';
@@ -24,7 +24,7 @@ include __DIR__ . '/includes/page-banner.php';
 <section class="problem-section svc-why-section">
   <div class="container">
     <div class="section-header center problem-head reveal">
-      <p class="subheading">Why This Service Matters</p>
+      <p class="subheading">WHY THIS SERVICE MATTERS</p>
       <h2 class="home-title">Most marketing leaks happen between the channels, not <span class="heading-accent">inside a single dashboard.</span></h2>
       <p class="section-desc center-desc">Your website affects how ads convert. Your reviews affect how quickly people trust you. Your service pages affect search visibility. Your creative affects whether paid social earns attention. When every vendor works in a separate box, the customer sees the gaps. We manage the connections so the whole path feels like one business.</p>
     </div>
@@ -59,12 +59,20 @@ include __DIR__ . '/includes/page-banner.php';
   </div>
 </section>
 
+<!-- WORK -->
+<?php
+$work_eyebrow = 'Featured Work';
+$work_heading = 'REAL WORK. <span class="accent-lime">BUILT TO EARN TRUST.</span>';
+$work_desc = 'Immersive where it helps. Fast where speed matters. Clear where buyers need confidence. Every build should fit the sales cycle behind it.';
+include __DIR__ . '/includes/featured-work.php';
+?>
+
 <!-- OUR PROCESS -->
 <section class="rail-section why-wtf-section" id="process" data-rail>
   <div class="rail-sticky">
     <div class="container">
       <div class="section-header rail-head reveal">
-        <p class="subheading">Our Process</p>
+        <p class="subheading">OUR PROCESS</p>
         <h2 class="home-title">Built around how your customer <span class="heading-accent">actually chooses.</span></h2>
         <p class="section-desc">We manage the system in the order the business needs - not by forcing every channel on day one.</p>
       </div>
@@ -101,18 +109,12 @@ include __DIR__ . '/includes/page-banner.php';
   </div>
 </section>
 
-<!-- WORK -->
-<?php
-$work_eyebrow = 'Featured Work';
-$work_heading = 'See the work. <span class="accent-lime">See what changed.</span>';
-$work_desc = '';
-include __DIR__ . '/includes/featured-work.php';
-?>
+
 
 <!-- REVIEWS -->
 <?php
 $street_section_id = 'testimonials';
-$street_heading = 'Good work should be easy to trust <span class="accent-blue">before the call.</span>';
+$street_heading = '…AND THE CROWD GOES <span class="accent-blue">WTF!</span>';
 $street_desc = '';
 include __DIR__ . '/includes/testimonialslider.php';
 ?>
@@ -157,7 +159,7 @@ include __DIR__ . '/includes/testimonialslider.php';
         </button>
         <div class="faq-panel" role="region">
           <div class="faq-panel-inner">
-            <p>Yes. We first Consultation what is already working, what is weak, and what is missing. The goal is not to replace useful work just because another team built it.</p>
+            <p>Yes. We first audit what is already working, what is weak, and what is missing. The goal is not to replace useful work just because another team built it.</p>
           </div>
         </div>
       </div>
@@ -193,7 +195,7 @@ include __DIR__ . '/includes/testimonialslider.php';
         </button>
         <div class="faq-panel" role="region">
           <div class="faq-panel-inner">
-            <p>Start with the marketing Consultation. We will show you where the system is disconnected, what should be left alone, what should be fixed first, and which services actually make sense from there.</p>
+            <p>Start with the marketing audit. We will show you where the system is disconnected, what should be left alone, what should be fixed first, and which services actually make sense from there.</p>
           </div>
         </div>
       </div>
@@ -211,7 +213,7 @@ include __DIR__ . '/includes/testimonialslider.php';
       <div>
         <h3>Tell us where growth feels stuck.</h3>
       </div>
-      <a href="/contact.php" class="btn btn-lime btn-lg">Start With a Free Consultation</a>
+      <a href="/contact.php" class="btn btn-lime btn-lg">Start With a Free Audit</a>
     </div>
   </div>
 </section>

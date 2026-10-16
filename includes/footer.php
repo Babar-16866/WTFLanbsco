@@ -61,19 +61,6 @@ include __DIR__ . '/contact-section.php';
     <div class="container footer-copy"><p>&copy; <?php echo date('Y'); ?> WTF Labs. All rights reserved.</p></div>
   </footer>
 
-  <div class="quick-contact" aria-label="Contact WTF Labs">
-    <a class="quick-contact-btn quick-contact-call" href="tel:+15123379723" aria-label="Call +1 (512) 337-9723">
-      <span class="quick-contact-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      <span class="quick-contact-text">+1 (512) 337-9723</span>
-    </a>
-    <a class="quick-contact-btn quick-contact-email" href="mailto:info@wtflabsco.com" aria-label="Email info@wtflabsco.com">
-      <span class="quick-contact-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      <span class="quick-contact-text">info@wtflabsco.com</span>
-    </a>
-  </div>
-  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top" hidden>
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 16V4M4.5 9.5 10 4l5.5 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
 
   <?php if ($current_page !== 'works'): ?>
   <!-- Sticky work CTA -->
@@ -190,5 +177,6 @@ include __DIR__ . '/contact-section.php';
   </div>
 
   <script src="/assets/js/main.js?v=<?php echo asset_version('assets/js/main.js'); ?>"></script>
+  
 </body>
 </html>

@@ -10,8 +10,7 @@ $banner_breadcrumb = 'SEO';
 $banner_kicker = 'SEO + Local Search';
 $banner_h1 = 'Be easier to find when homeowners are <span class="about-hero-accent">ready to hire.</span>';
 $banner_lead = 'Technical SEO, service-area strategy, useful content, and conversion-focused pages built to increase qualified local visibility - not vanity traffic.';
-$banner_primary_label = 'Get a Free SEO + Website Consultation';
-$banner_secondary_label = 'See Our Work';
+$banner_primary_label = 'Get a Free SEO + Website Audit';
 $banner_image = '/assets/images/service-seo.jpg';
 $banner_float1 = '/assets/images/excel-landing.webp';
 $banner_float2 = '/assets/images/excel-design-system.webp';
@@ -24,7 +23,7 @@ include __DIR__ . '/includes/page-banner.php';
 <section class="problem-section svc-why-section">
   <div class="container">
     <div class="section-header center problem-head reveal">
-      <p class="subheading">Why This Service Matters</p>
+      <p class="subheading">WHY THIS SERVICE MATTERS</p>
       <h2 class="home-title">If the right homeowner cannot find you, your reputation never gets a chance to <span class="heading-accent">do its job.</span></h2>
       <p class="section-desc center-desc">Good SEO is not about collecting random traffic. It is about showing up for the services you actually want to sell, in the locations you actually want to serve, when the person searching has a real problem to solve. Weak local visibility sends that demand to competitors before you are even considered.</p>
     </div>
@@ -47,12 +46,20 @@ include __DIR__ . '/includes/page-banner.php';
   </div>
 </section>
 
+<!-- WORK -->
+<?php
+$work_eyebrow = 'Featured Work';
+$work_heading = 'REAL WORK. <span class="accent-lime">BUILT TO EARN TRUST.</span>';
+$work_desc = 'Immersive where it helps. Fast where speed matters. Clear where buyers need confidence. Every build should fit the sales cycle behind it.';
+include __DIR__ . '/includes/featured-work.php';
+?>
+
 <!-- OUR PROCESS -->
 <section class="rail-section why-wtf-section" id="process" data-rail>
   <div class="rail-sticky">
     <div class="container">
       <div class="section-header rail-head reveal">
-        <p class="subheading">Our Process</p>
+        <p class="subheading">OUR PROCESS</p>
         <h2 class="home-title">Built around how your customer <span class="heading-accent">actually chooses.</span></h2>
         <p class="section-desc">We focus on the technical foundation, the right service and location pages, useful content, and what visitors do after they arrive.</p>
       </div>
@@ -62,7 +69,7 @@ include __DIR__ . '/includes/page-banner.php';
         <article class="rail-card">
           <span class="rail-num">01</span>
           <h3>How do we find what is holding your search visibility back?</h3>
-          <p>We Consultation technical issues, crawlability, indexing, redirects, page structure, internal links, metadata, speed, service coverage, local relevance, and the conversion path. The goal is to find the problems that matter before publishing more content.</p>
+          <p>We audit technical issues, crawlability, indexing, redirects, page structure, internal links, metadata, speed, service coverage, local relevance, and the conversion path. The goal is to find the problems that matter before publishing more content.</p>
         </article>
         <article class="rail-card">
           <span class="rail-num">02</span>
@@ -89,18 +96,11 @@ include __DIR__ . '/includes/page-banner.php';
   </div>
 </section>
 
-<!-- WORK -->
-<?php
-$work_eyebrow = 'Featured Work';
-$work_heading = 'See the work. <span class="accent-lime">See what changed.</span>';
-$work_desc = '';
-include __DIR__ . '/includes/featured-work.php';
-?>
 
 <!-- REVIEWS -->
 <?php
 $street_section_id = 'testimonials';
-$street_heading = 'Good work should be easy to trust <span class="accent-blue">before the call.</span>';
+$street_heading = '…AND THE CROWD GOES <span class="accent-blue">WTF!</span>';
 $street_desc = '';
 include __DIR__ . '/includes/testimonialslider.php';
 ?>
@@ -181,7 +181,7 @@ include __DIR__ . '/includes/testimonialslider.php';
         </button>
         <div class="faq-panel" role="region">
           <div class="faq-panel-inner">
-            <p>Start with the SEO + website Consultation. We will separate technical problems, missing service or location coverage, content gaps, and conversion issues so you know what deserves attention first.</p>
+            <p>Start with the SEO + website audit. We will separate technical problems, missing service or location coverage, content gaps, and conversion issues so you know what deserves attention first.</p>
           </div>
         </div>
       </div>
@@ -199,7 +199,7 @@ include __DIR__ . '/includes/testimonialslider.php';
       <div>
         <h3>Want to know what is holding back your local sales?</h3>
       </div>
-      <a href="/contact.php" class="btn btn-lime btn-lg">Claim Your FREE Website Consultation</a>
+      <a href="/contact.php" class="btn btn-lime btn-lg">Claim Your FREE Website Audit</a>
     </div>
   </div>
 </section>

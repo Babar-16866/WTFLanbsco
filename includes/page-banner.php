@@ -21,7 +21,6 @@ $banner_lead = $banner_lead ?? '';
 $banner_primary_label = $banner_primary_label ?? 'Free Consultation';
 $banner_primary_href = $banner_primary_href ?? '/contact.php';
 $banner_primary_popup = $banner_primary_popup ?? true;
-$banner_secondary_label = $banner_secondary_label ?? 'See our work';
 $banner_secondary_href = $banner_secondary_href ?? '/works.php';
 $banner_proof = $banner_proof ?? [
   ['400+', 'projects'],
@@ -32,7 +31,6 @@ $banner_proof = $banner_proof ?? [
 $banner_image = $banner_image ?? '/assets/images/mockup-main.webp';
 $banner_float1 = $banner_float1 ?? '/assets/images/team-1.jpg';
 $banner_float2 = $banner_float2 ?? '/assets/images/team-2.jpg';
-$banner_card = $banner_card ?? 'Same senior crew from strategy to launch';
 ?>
 <section class="page-hero about-hero">
   <div class="container">
@@ -75,10 +73,6 @@ $banner_card = $banner_card ?? 'Same senior crew from strategy to launch';
         </div>
         <div class="about-hero-float about-hero-float--2">
           <img src="<?php echo htmlspecialchars($banner_float2); ?>" alt="">
-        </div>
-        <div class="about-hero-card">
-          <span class="about-hero-card-dot"></span>
-          <p><?php echo htmlspecialchars($banner_card); ?></p>
         </div>
         <div class="about-hero-lime-orb"></div>
       </div>

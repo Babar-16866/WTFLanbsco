@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Web Design & Development for Home-Service Businesses | WTF Labs';
-$page_description = 'Premium, fast, conversion-focused websites for remodeling, HVAC, plumbers, roofers, pest control, pool companies, landscapers, and other home-service businesses.';
+$page_description = 'Premium, fast, conversion-focused websites for remodelers, HVAC, plumbers, roofers, pest control, pool companies, landscapers, and other home-service businesses.';
 $current_page = 'services';
 include __DIR__ . '/includes/header.php';
 ?>
@@ -10,7 +10,7 @@ $banner_breadcrumb = 'Web Design';
 $banner_kicker = 'Premium Web Design + Development';
 $banner_h1 = 'Make your business look as good online as <span class="about-hero-accent">the work you do.</span>';
 $banner_lead = 'Custom websites for home-service companies that need to earn trust fast, work beautifully on mobile, and turn visitors into calls, estimates, bookings, and better-fit leads.';
-$banner_primary_label = 'Get Your Free Website Consultation';
+$banner_primary_label = 'Get Your Free Website Audit';
 $banner_secondary_label = 'See Our Work';
 $banner_image = '/assets/images/mockup-main.webp';
 $banner_float1 = '/assets/images/excel-landing.webp';
@@ -24,7 +24,7 @@ include __DIR__ . '/includes/page-banner.php';
 <section class="problem-section svc-why-section">
   <div class="container">
     <div class="section-header center problem-head reveal">
-      <p class="subheading">Why This Service Matters</p>
+      <p class="subheading">WHY THIS SERVICE MATTERS</p>
       <h2 class="home-title">Your website is where homeowners decide whether your price feels <span class="heading-accent">justified.</span></h2>
       <p class="section-desc center-desc">Before someone calls, books, or invites you into their home, they usually check you out. If the website looks cheap, loads slowly, hides the proof, or makes the next step hard, good leads hesitate. A strong site makes the business feel credible before the conversation starts - and helps the right customer move forward with less friction.</p>
     </div>
@@ -47,13 +47,21 @@ include __DIR__ . '/includes/page-banner.php';
   </div>
 </section>
 
+<!-- WORK -->
+<?php
+$work_eyebrow = 'Featured Work';
+$work_heading = 'REAL WORK.<span class="accent-lime">BUILT TO EARN TRUST.</span>';
+$work_desc = 'Immersive where it helps. Fast where speed matters. Clear where buyers need confidence. Every build should fit the sales cycle behind it.';
+include __DIR__ . '/includes/featured-work.php';
+?>
+
 <!-- OUR PROCESS -->
 <section class="rail-section why-wtf-section" id="process" data-rail>
   <div class="rail-sticky">
     <div class="container">
       <div class="section-header rail-head reveal">
-        <p class="subheading">Our Process</p>
-        <h2 class="home-title">Built around how your customer <span class="heading-accent">actually chooses.</span></h2>
+        <p class="subheading">OUR PROCESS</p>
+        <h2 class="home-title">Built around how your customer <span class="heading-accent"> actually chooses.</span></h2>
         <p class="section-desc">We do not start with colors and animations. We start with what the site needs to help the customer understand, trust, and do next.</p>
       </div>
     </div>
@@ -89,18 +97,10 @@ include __DIR__ . '/includes/page-banner.php';
   </div>
 </section>
 
-<!-- WORK -->
-<?php
-$work_eyebrow = 'Featured Work';
-$work_heading = 'See the work. <span class="accent-lime">See what changed.</span>';
-$work_desc = '';
-include __DIR__ . '/includes/featured-work.php';
-?>
-
 <!-- REVIEWS -->
 <?php
 $street_section_id = 'testimonials';
-$street_heading = 'Good work should be easy to trust <span class="accent-blue">before the call.</span>';
+$street_heading = '…AND THE CROWD GOES <span class="accent-blue">WTF!</span>';
 $street_desc = '';
 include __DIR__ . '/includes/testimonialslider.php';
 ?>
@@ -197,9 +197,9 @@ include __DIR__ . '/includes/testimonialslider.php';
   <div class="container">
     <div class="services-cta-band reveal">
       <div>
-        <h3>Don’t let your website undersell<br>the quality of your work.</h3>
+        <h3>Don’t let your website undersell <br>the quality of your work.</h3>
       </div>
-      <a href="/contact.php" class="btn btn-lime btn-lg">Claim Your FREE Website Consultation</a>
+      <a href="/contact.php" class="btn btn-lime btn-lg">Claim Your FREE Website Audit</a>
     </div>
   </div>
 </section>

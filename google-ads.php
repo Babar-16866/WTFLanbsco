@@ -7,7 +7,7 @@ include __DIR__ . '/includes/header.php';
 
 <?php
 $banner_breadcrumb = 'Google Ads';
-$banner_kicker = 'High-Intent Demand';
+$banner_kicker = 'HIGH-INTENT DEMAND';
 $banner_h1 = 'Show up when homeowners are <span class="about-hero-accent">actively looking to hire.</span>';
 $banner_lead = 'Search campaigns, landing pages, call tracking, and ongoing optimization built around qualified local leads - not meaningless click volume.';
 $banner_primary_label = 'Free Ads Strategy Consultation';
@@ -24,7 +24,7 @@ include __DIR__ . '/includes/page-banner.php';
 <section class="problem-section svc-why-section">
   <div class="container">
     <div class="section-header center problem-head reveal">
-      <p class="subheading">Why This Service Matters</p>
+      <p class="subheading">WHY THIS SERVICE MATTERS</p>
       <h2 class="home-title">The click is only valuable if the person behind it has a <span class="heading-accent">real reason to hire you.</span></h2>
       <p class="section-desc center-desc">Home-service search traffic can be expensive because the person searching often needs help now. If the keyword is wrong, the location is wrong, the landing page is weak, or the call never gets tracked, ad spend disappears fast. The campaign and the website have to work as one path from search to qualified lead.</p>
     </div>
@@ -47,12 +47,20 @@ include __DIR__ . '/includes/page-banner.php';
   </div>
 </section>
 
+<!-- WORK -->
+<?php
+$work_eyebrow = 'Featured Work';
+$work_heading = 'REAL WORK. <span class="accent-lime">BUILT TO EARN TRUST.</span>';
+$work_desc = 'Immersive where it helps. Fast where speed matters. Clear where buyers need confidence. Every build should fit the sales cycle behind it.';
+include __DIR__ . '/includes/featured-work.php';
+?>
+
 <!-- OUR PROCESS -->
 <section class="rail-section why-wtf-section" id="process" data-rail>
   <div class="rail-sticky">
     <div class="container">
       <div class="section-header rail-head reveal">
-        <p class="subheading">Our Process</p>
+        <p class="subheading">OUR PROCESS</p>
         <h2 class="home-title">Built around how your customer <span class="heading-accent">actually chooses.</span></h2>
         <p class="section-desc">We manage the campaign around intent, location, message, landing-page fit, tracking, and lead quality.</p>
       </div>
@@ -89,18 +97,10 @@ include __DIR__ . '/includes/page-banner.php';
   </div>
 </section>
 
-<!-- WORK -->
-<?php
-$work_eyebrow = 'Featured Work';
-$work_heading = 'See the work. <span class="accent-lime">See what changed.</span>';
-$work_desc = '';
-include __DIR__ . '/includes/featured-work.php';
-?>
-
 <!-- REVIEWS -->
 <?php
 $street_section_id = 'testimonials';
-$street_heading = 'Good work should be easy to trust <span class="accent-blue">before the call.</span>';
+$street_heading = '…AND THE CROWD GOES <span class="accent-blue">WTF!</span>';
 $street_desc = '';
 include __DIR__ . '/includes/testimonialslider.php';
 ?>
@@ -199,7 +199,7 @@ include __DIR__ . '/includes/testimonialslider.php';
       <div>
         <h3>Paying for clicks but unsure what happens next?</h3>
       </div>
-      <a href="/contact.php" class="btn btn-lime btn-lg">Get a Free Consultation</a>
+      <a href="/contact.php" class="btn btn-lime btn-lg">Get a Free Audit</a>
     </div>
   </div>
 </section>

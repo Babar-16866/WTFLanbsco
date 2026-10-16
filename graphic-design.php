@@ -7,7 +7,7 @@ include __DIR__ . '/includes/header.php';
 
 <?php
 $banner_breadcrumb = 'Graphic Design';
-$banner_kicker = 'Branding + Creative';
+$banner_kicker = 'BRANDING + CREATIVE';
 $banner_h1 = 'Look like the company customers <span class="about-hero-accent">expect to pay more for.</span>';
 $banner_lead = 'Brand systems and campaign creative that make your business feel established, consistent, and credible everywhere homeowners see you.';
 $banner_primary_label = 'Talk About Your Brand';
@@ -24,7 +24,7 @@ include __DIR__ . '/includes/page-banner.php';
 <section class="problem-section svc-why-section">
   <div class="container">
     <div class="section-header center problem-head reveal">
-      <p class="subheading">Why This Service Matters</p>
+      <p class="subheading">WHY THIS SERVICE MATTERS</p>
       <h2 class="home-title">People judge the quality of the business before they ever <span class="heading-accent">meet the crew.</span></h2>
       <p class="section-desc center-desc">A homeowner may see your truck, Google listing, website, yard sign, ad, proposal, and social page before they ever speak to you. If each one looks like a different company, trust drops. A clear brand makes every touchpoint feel like part of the same professional business - and helps quality work stop looking interchangeable with low-bid competitors.</p>
     </div>
@@ -47,12 +47,20 @@ include __DIR__ . '/includes/page-banner.php';
   </div>
 </section>
 
+<!-- WORK -->
+<?php
+$work_eyebrow = 'Featured Work';
+$work_heading = 'REAL WORK. <span class="accent-lime">BUILT TO EARN TRUST.</span>';
+$work_desc = 'Immersive where it helps. Fast where speed matters. Clear where buyers need confidence. Every build should fit the sales cycle behind it.';
+include __DIR__ . '/includes/featured-work.php';
+?>
+
 <!-- OUR PROCESS -->
 <section class="rail-section why-wtf-section" id="process" data-rail>
   <div class="rail-sticky">
     <div class="container">
       <div class="section-header rail-head reveal">
-        <p class="subheading">Our Process</p>
+        <p class="subheading">OUR PROCESS</p>
         <h2 class="home-title">Built around how your customer <span class="heading-accent">actually chooses.</span></h2>
         <p class="section-desc">Branding is more than a logo. We build a visual system that can hold up across the places customers actually see you.</p>
       </div>
@@ -89,18 +97,10 @@ include __DIR__ . '/includes/page-banner.php';
   </div>
 </section>
 
-<!-- WORK -->
-<?php
-$work_eyebrow = 'Featured Work';
-$work_heading = 'See the work. <span class="accent-lime">See what changed.</span>';
-$work_desc = '';
-include __DIR__ . '/includes/featured-work.php';
-?>
-
 <!-- REVIEWS -->
 <?php
 $street_section_id = 'testimonials';
-$street_heading = 'Good work should be easy to trust <span class="accent-blue">before the call.</span>';
+$street_heading = '…AND THE CROWD GOES <span class="accent-blue">WTF!</span>';
 $street_desc = '';
 include __DIR__ . '/includes/testimonialslider.php';
 ?>
