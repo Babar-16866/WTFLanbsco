@@ -12096,3 +12096,7 @@ body.step-popup-open {
   .step-popup-dialog { padding: 26px 16px 20px; border-radius: 22px; max-height: calc(100dvh - 16px); }
   .step-popup-close { top: 10px; right: 10px; width: 34px; height: 34px; }
 }
+html body .form-peek--bottom .form-peek-word--left,
+html body .form-peek--bottom .form-peek-word--right {
+  margin-bottom: 0;
+}
