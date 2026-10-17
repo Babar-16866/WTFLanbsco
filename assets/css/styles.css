@@ -11783,21 +11783,23 @@ html body .form-commit .btn.form-commit-alt,
 html body .form-commit .btn.form-commit-alt:is(:hover, :focus-visible, :active),
 html body .form-commit .btn.form-commit-runaway,
 html body .form-commit .btn.form-commit-runaway:is(:hover, :focus-visible, :active) {
-  background: #FFFFFF;
   color: var(--pal-dark, #10231B);
   box-shadow: none !important;
 }
 html body .form-commit .btn.btn-lime,
 html body .form-commit .btn.btn-lime:is(:hover, :focus-visible, :active) {
-  border: 2px solid rgba(208, 240, 0, 0.349);
+  border: 2px solid rgb(0, 106, 42);
+  background: #2df00026;
 }
 html body .form-commit .btn.form-commit-alt,
 html body .form-commit .btn.form-commit-alt:is(:hover, :focus-visible, :active) {
-  border: 2px solid rgba(232, 186, 46, 0.281);
+  border: 2px solid rgb(204, 173, 0);
+  background: #af00001f;
 }
 html body .form-commit .btn.form-commit-runaway,
 html body .form-commit .btn.form-commit-runaway:is(:hover, :focus-visible, :active) {
-  border: 2px solid rgba(224, 70, 78, 0.322);
+  border: 2px solid rgb(224, 70, 78);
+  background: #c39b6230;
 }
 .about-people {
   margin-top: 96px;
