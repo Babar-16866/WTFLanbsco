@@ -15,6 +15,10 @@ $step_form_ok_id = $step_form_ok_id ?? 'formOk';
           <input type="hidden" name="source" value="<?php echo $step_form_source; ?>">
           <input type="hidden" name="step" value="1">
           <input type="hidden" name="lead_id" value="">
+          <button type="button" class="form-back" data-step-back hidden>
+            <span class="form-back-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span>Back</span>
+          </button>
           <div class="form-step" data-step="1">
             <p class="form-step-title">Let's start here</p>
             <input type="hidden" name="name" value="">
@@ -94,14 +98,21 @@ $step_form_ok_id = $step_form_ok_id ?? 'formOk';
               <button type="submit" class="btn btn-lime btn-lg" name="commitment" value="100% committed">100% Committed, and I promise I won't waste your time</button>
               <button type="button" class="btn btn-lg form-commit-runaway" tabindex="-1" aria-hidden="true">50% committed and I promise I will waste your time</button>
               <button type="button" class="btn btn-lg form-commit-alt" data-not-committed>I'd like to discuss, but I promise I won't waste your time</button>
+              <div class="form-peek form-peek--under" aria-hidden="true">
+                <span class="form-peek-word form-peek-word--left">CATCH ME</span>
+                <span class="form-peek-head form-peek-head--flip"><img src="/assets/images/main-banner.webp" alt="" width="1041" height="1069" loading="lazy"></span>
+                <span class="form-peek-word form-peek-word--right">IF YOU CAN</span>
+              </div>
             </div>
           </div>
           <div class="form-step-note" hidden aria-live="polite"></div>
+          <!--
           <div class="form-peek form-peek--bottom" aria-hidden="true">
             <span class="form-peek-word form-peek-word--left">CATCH ME</span>
             <span class="form-peek-head"><img src="/assets/images/main-banner.webp" alt="" width="1041" height="1069" loading="lazy"></span>
             <span class="form-peek-word form-peek-word--right">IF YOU CAN</span>
           </div>
+          -->
           <p class="form-ok hidden" id="<?php echo $step_form_ok_id; ?>">Thank you! Your submission has been received!</p>
         </form>
 <?php unset($step_form_id, $step_form_source, $step_form_ok_id); ?>

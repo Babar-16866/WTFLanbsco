@@ -673,6 +673,19 @@ document.addEventListener('click', (e) => {
     return !!el.closest('input, textarea, select, [contenteditable="true"]');
   }
 
+  const CONTACT_SEL = 'a[href^="tel:"], a[href^="mailto:"]';
+
+  function inContact(node) {
+    const el = node && node.nodeType === 3 ? node.parentElement : node;
+    return !!(el && el instanceof Element && el.closest(CONTACT_SEL));
+  }
+
+  function selectionIsContact() {
+    const sel = window.getSelection ? window.getSelection() : null;
+    if (!sel || sel.isCollapsed) return false;
+    return inContact(sel.anchorNode) && inContact(sel.focusNode);
+  }
+
   function openProtect() {
     popup.hidden = false;
     document.body.classList.add('protect-popup-open');
@@ -692,13 +705,13 @@ document.addEventListener('click', (e) => {
   });
 
   document.addEventListener('contextmenu', (e) => {
-    if (isEditable(e.target)) return;
+    if (isEditable(e.target) || inContact(e.target)) return;
     e.preventDefault();
     openProtect();
   });
 
   document.addEventListener('copy', (e) => {
-    if (isEditable(e.target)) return;
+    if (isEditable(e.target) || selectionIsContact()) return;
     e.preventDefault();
     openProtect();
   });
@@ -719,6 +732,7 @@ document.addEventListener('click', (e) => {
   document.addEventListener('keydown', (e) => {
     if (isEditable(e.target)) return;
     const key = e.key.toLowerCase();
+    if ((e.ctrlKey || e.metaKey) && key === 'c' && selectionIsContact()) return;
     const block =
       (e.ctrlKey || e.metaKey) &&
       (key === 'c' || key === 'x' || key === 'u' || key === 's' || key === 'a' || key === 'p');
@@ -2140,9 +2154,12 @@ document.addEventListener('click', (e) => {
       leadInput.value = Date.now().toString(36).toUpperCase() + '-' + Math.random().toString(36).slice(2, 6).toUpperCase();
     }
 
+    const backBtn = form.querySelector('[data-step-back]');
+
     function show(n) {
       current = n;
       panels.forEach((panel) => { panel.hidden = Number(panel.dataset.step) !== n; });
+      if (backBtn) backBtn.hidden = n <= 1;
       if (stepInput) stepInput.value = String(n);
       dots.forEach((dot) => {
         const i = Number(dot.dataset.stepDot);
@@ -2223,7 +2240,7 @@ document.addEventListener('click', (e) => {
     function thanksHtml() {
       const first = fieldText('first_name') || fieldText('name').split(/\s+/)[0];
       const industry = fieldText('industry') === 'Other' ? fieldText('industry_other') : fieldText('industry');
-      return '<p class="form-step-note-message">Thanks for sharing this with us ' + escapeText(first) + '. We have already helped multiple ' + escapeText(industry) + ' businesses in increasing their revenues strategically and we\'d like to welcome you on your journey for growth.</p>';
+      return '<p class="form-step-note-message">Thanks for sharing this with us ' + escapeText(first) + '. We have already helped multiple ' + escapeText(industry) + ' Businesses strategically.</p>';
     }
 
     function flash(html, ms, then) {
@@ -2233,6 +2250,7 @@ document.addEventListener('click', (e) => {
       }
       noteBusy = true;
       panels.forEach((panel) => { panel.hidden = true; });
+      if (backBtn) backBtn.hidden = true;
       note.innerHTML = html;
       note.hidden = false;
       note.classList.remove('is-in');
@@ -2277,6 +2295,15 @@ document.addEventListener('click', (e) => {
         show(n);
       });
     });
+
+    if (backBtn) {
+      backBtn.addEventListener('click', () => {
+        if (noteBusy || current <= 1) return;
+        const n = current - 1;
+        for (let i = n; i <= panels.length; i++) delete sent[i];
+        show(n);
+      });
+    }
 
     form.addEventListener('keydown', (e) => {
       if (e.key !== 'Enter' || e.target.tagName === 'TEXTAREA' || e.target.closest('.wtf-select')) return;
@@ -2339,7 +2366,7 @@ document.addEventListener('click', (e) => {
     const runaway = form.querySelector('.form-commit-runaway');
     const commit = form.querySelector('.form-commit');
     const peekTop = form.querySelector('.form-peek--top');
-    const peekBottom = form.querySelector('.form-peek--bottom');
+    const peekBottom = form.querySelector('.form-peek--under');
     if (runaway && commit) {
       let atTop = false;
       let lockUntil = 0;
@@ -2348,14 +2375,6 @@ document.addEventListener('click', (e) => {
       function peek(el) {
         [peekTop, peekBottom].forEach((p) => p && p.classList.remove('is-visible'));
         if (!el) return;
-        if (el === peekBottom) {
-          const z = pageZoom();
-          const host = el.offsetParent || form;
-          const h = host.getBoundingClientRect();
-          const c = commit.getBoundingClientRect();
-          el.style.left = Math.round((c.left - h.left) / z) + 'px';
-          el.style.right = Math.round((h.right - c.right) / z) + 'px';
-        }
         void el.offsetWidth;
         el.classList.add('is-visible');
         clearTimeout(peekTimer);
@@ -2713,5 +2732,27 @@ document.addEventListener('click', (e) => {
   }, true);
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !popup.hidden) close();
+  });
+})();
+
+(function initIntroCenter() {
+  document.querySelectorAll('.contact-layout').forEach((layout) => {
+    const intro = layout.querySelector('.contact-intro');
+    const wrap = layout.querySelector('.contact-form-wrap');
+    const first = wrap ? wrap.querySelector('.form-step[data-step="1"]') : null;
+    if (!intro || !wrap || !first) return;
+    function align() {
+      if (first.hidden) return;
+      intro.style.marginTop = '0px';
+      const stacked = getComputedStyle(layout).gridTemplateColumns.split(' ').length < 2;
+      if (stacked) return;
+      const z = pageZoom();
+      const diff = (wrap.getBoundingClientRect().height - intro.getBoundingClientRect().height) / 2 / z;
+      intro.style.marginTop = Math.max(0, Math.round(diff)) + 'px';
+    }
+    align();
+    window.addEventListener('load', align);
+    window.addEventListener('resize', align);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(align);
   });
 })();

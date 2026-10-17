@@ -1,6 +1,6 @@
 <?php
 $work_eyebrow = $work_eyebrow ?? '';
-$work_heading = $work_heading ?? 'INSPIRATIONAL WORK. <span class="accent-lime">BUILT TO EARN TRUST.</span>';
+$work_heading = $work_heading ?? 'GREAT WORK. <span class="accent-lime">BUILT TO EARN TRUST.</span>';
 $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. Clear <span class="text-underline-lime">where buyers</span> need confidence. Every build should fit the sales cycle behind it.';
 ?>
 <section class="home-work-section" id="works">

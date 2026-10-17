@@ -50,7 +50,7 @@ include __DIR__ . '/includes/page-banner.php';
 <!-- WORK -->
 <?php
 $work_eyebrow = 'Featured Work';
-$work_heading = 'REAL WORK. <span class="accent-lime">BUILT TO EARN TRUST.</span>';
+$work_heading = 'GREAT WORK. <span class="accent-lime">BUILT TO EARN TRUST.</span>';
 $work_desc = 'Immersive where it helps. Fast where speed matters. Clear where buyers need confidence. Every build should fit the sales cycle behind it.';
 include __DIR__ . '/includes/featured-work.php';
 ?>

@@ -394,7 +394,7 @@ include __DIR__ . '/includes/header.php';
 <section class="home-work-section" id="works">
   <div class="container">
     <div class="section-header center reveal">
-      <h2 class="home-title">INSPIRATIONAL WORK. <span class="accent-lime">BUILT TO EARN TRUST.</span></h2>
+      <h2 class="home-title">GREAT WORK. <span class="accent-lime">BUILT TO EARN TRUST.</span></h2>
       <p class="section-desc center-desc">Immersive where it helps. Fast where speed matters. Clear <span class="text-underline-lime">where buyers</span> need confidence. Every build should fit the sales process behind it.</p>
     </div>
 
