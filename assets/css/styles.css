@@ -12149,13 +12149,13 @@ html body .form-commit > .form-peek--under {
 }
 html body .form-peek--under .form-peek-word--left,
 html body .form-peek--under .form-peek-word--right {
-  padding: 0.12em 0 0;
+  padding: 0.13em 0 0;
   margin: 0;
 }
-html body .form-peek--under .form-peek-head--flip {
+html body .form-commit > .form-peek--under:not(.is-visible) .form-peek-head--flip {
   transform: translateY(-110%) rotate(180deg);
 }
-html body .form-peek--under.is-visible .form-peek-head--flip {
+html body .form-commit > .form-peek--under.is-visible .form-peek-head--flip {
   transform: translateY(0) rotate(180deg);
 }
 @media (max-width: 640px) {
