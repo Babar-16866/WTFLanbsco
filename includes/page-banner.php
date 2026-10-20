@@ -24,6 +24,7 @@ $banner_primary_popup = $banner_primary_popup ?? true;
 $banner_primary_step = $banner_primary_step ?? false;
 $banner_secondary_label = $banner_secondary_label ?? '';
 $banner_secondary_href = $banner_secondary_href ?? '/works.php';
+$banner_micro = $banner_micro ?? '';
 $banner_proof = $banner_proof ?? [
   ['400+', 'projects'],
   ['2018', 'since'],
@@ -54,6 +55,9 @@ $banner_float2 = $banner_float2 ?? '/assets/images/team-2.jpg';
             <a href="<?php echo htmlspecialchars($banner_secondary_href); ?>" class="btn btn-outline-white btn-lg"><?php echo htmlspecialchars($banner_secondary_label); ?></a>
           <?php endif; ?>
         </div>
+        <?php if ($banner_micro !== ''): ?>
+          <p class="page-hero-micro"><?php echo htmlspecialchars($banner_micro); ?></p>
+        <?php endif; ?>
         <?php if (!empty($banner_proof)): ?>
           <div class="about-hero-proof">
             <?php foreach ($banner_proof as $chip): ?>
@@ -87,7 +91,7 @@ unset(
   $banner_kicker, $banner_breadcrumb, $banner_crumb_label, $banner_crumb_href,
   $banner_h1, $banner_lead,
   $banner_primary_label, $banner_primary_href, $banner_primary_popup, $banner_primary_step,
-  $banner_secondary_label, $banner_secondary_href,
+  $banner_secondary_label, $banner_secondary_href, $banner_micro,
   $banner_proof, $banner_image, $banner_float1, $banner_float2, $banner_card
 );
 ?>

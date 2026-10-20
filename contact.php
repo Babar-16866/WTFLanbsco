@@ -1,17 +1,18 @@
 <?php
-$page_title = 'Contact | WTF Labs';
-$page_description = 'Let\'s discuss your next website. WTF Labs will help you define the right next step.';
+$page_title = 'Contact WTF Labs | Free Website & Marketing Audit';
+$page_description = 'Talk to WTF Labs about premium web design, SEO, Google Ads and digital marketing. Tell us what isn\'t working and get a clear next step for your business.';
 $current_page = 'contact';
 include __DIR__ . '/includes/header.php';
 ?>
 
 <?php
-$banner_kicker = 'Contact';
-$banner_h1 = 'Let\'s discuss your <span class="about-hero-accent">next website</span>';
-$banner_lead = 'Tell us about your goals — we\'ll help you define the right next step. Real replies, usually within one business day.';
-$banner_primary_label = 'Free Consultation';
-$banner_secondary_label = 'WhatsApp';
-$banner_secondary_href = 'https://wa.me/15123379723';
+$banner_kicker = 'LET\'S TALK ABOUT YOUR NEXT MOVE';
+$banner_h1 = 'Tell us what\'s not working. <span class="about-hero-accent">We\'ll help you find the fix.</span>';
+$banner_lead = 'Maybe your website looks ten years behind your actual work. Maybe the phone isn\'t ringing enough. Maybe you\'re getting leads, just not the ones worth your crews\' time. Whatever the bottleneck, start here. We\'ll listen, ask the right questions and tell you what makes sense next.';
+$banner_primary_label = 'Claim Your FREE Audit';
+$banner_secondary_label = 'Prefer to Talk? Contact Us';
+$banner_secondary_href = 'tel:+15123379723';
+$banner_micro = 'Real replies, usually within one business day.';
 $banner_image = '/assets/images/people-office.jpg';
 $banner_float1 = '/assets/images/team-1.jpg';
 $banner_float2 = '/assets/images/team-3.jpg';
@@ -21,11 +22,11 @@ include __DIR__ . '/includes/page-banner.php';
 
 <section class="page-section contact-page-section">
   <div class="container">
-    <div class="contact-page-card reveal">
+    <div class="contact-page-card reveal" id="send-message">
       <aside class="contact-page-aside">
-        <p class="contact-page-label">Get in touch</p>
-        <h2>WTF Labs</h2>
-        <p class="contact-page-lead">One senior team from strategy to launch. Real replies - usually within one business day.</p>
+        <p class="contact-page-label">REAL PEOPLE. REAL ANSWERS.</p>
+        <h2>Talk to the team that will actually work on the problem.</h2>
+        <p class="contact-page-lead">No need to show up knowing whether you need SEO, a landing page, a redesign or the entire marketing setup. Tell us what you're trying to improve. We'll help you narrow it down.</p>
 
         <ul class="contact-page-details">
           <li>
@@ -58,10 +59,9 @@ include __DIR__ . '/includes/page-banner.php';
         </ul>
 
         <div class="contact-page-links">
-          <a href="https://wa.me/15123379723" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          <a href="/how-we-work.php">How we work</a>
-          <a href="/about.php">About us</a>
-          <a href="/faqs.php">FAQs</a>
+          <a href="/works.php">See Our Work</a>
+          <a href="/how-we-work.php">How We Work</a>
+          <a href="/about.php">About WTF Labs</a>
         </div>
       </aside>
 
@@ -169,56 +169,69 @@ include __DIR__ . '/includes/page-banner.php';
           <p class="form-ok hidden" id="formOk">Thank you! Your submission has been received!</p>
         </form>
         */ ?>
-        <p class="contact-page-label">Send us a message</p>
-        <h3>How can we help?</h3>
-        <form class="contact-form contact-page-form contact-simple-form" id="contactPageForm" action="/send-mail.php" method="post" enctype="multipart/form-data">
+        <p class="contact-page-label">START WITH THE BASICS</p>
+        <h3>What would you like to improve?</h3>
+        <p class="contact-page-form-lead">A few details help us understand your business before the first reply. No 20-page questionnaire required.</p>
+        <?php if (isset($_GET['error'])): ?>
+          <p class="contact-form-error" role="alert">That didn't go through. Please try again or email <a href="mailto:info@wtflabsco.com">info@wtflabsco.com</a>.</p>
+        <?php endif; ?>
+        <form class="contact-form contact-page-form contact-simple-form" id="contactPageForm" action="/send-mail.php" method="post">
           <input type="text" name="website" value="" tabindex="-1" autocomplete="off" class="hp-field" aria-hidden="true">
           <input type="hidden" name="source" value="contact-page">
-          <div class="field">
-            <label for="cpName">Name</label>
-            <input id="cpName" type="text" name="name" required autocomplete="name" placeholder="Jane Doe">
+          <div class="contact-form-row">
+            <div class="field">
+              <label for="cpName">Your name</label>
+              <input id="cpName" type="text" name="name" required autocomplete="name" placeholder="What should we call you?">
+            </div>
+            <div class="field">
+              <label for="cpEmail">Work email</label>
+              <input id="cpEmail" type="email" name="email" required autocomplete="email" placeholder="you@yourbusiness.com">
+            </div>
           </div>
           <div class="contact-form-row">
             <div class="field">
-              <label for="cpPhone">Number</label>
-              <input id="cpPhone" type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+1 (512) 337-9723">
+              <label for="cpPhone">Phone (optional)</label>
+              <input id="cpPhone" type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="Best number if you prefer a call">
             </div>
             <div class="field">
-              <label for="cpEmail">Email</label>
-              <input id="cpEmail" type="email" name="email" required autocomplete="email" placeholder="jane@company.com">
+              <label for="cpBusiness">Business name</label>
+              <input id="cpBusiness" type="text" name="business_name" required autocomplete="organization" placeholder="What's your company called?">
             </div>
           </div>
           <div class="field">
-            <label for="cpSubject">Subject</label>
-            <select id="cpSubject" name="subject" required data-subject-select>
-              <option value="" disabled selected>Select a subject</option>
-              <option>Job Application</option>
-              <option>General Inquiry</option>
-              <option>Complaint</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="field contact-job-field" hidden>
-            <label for="cpJob">Job you want to apply for</label>
-            <input id="cpJob" type="text" name="job_title" placeholder="e.g. Web Designer">
-          </div>
-          <div class="field contact-job-field" hidden>
-            <label for="cpCv">Upload CV</label>
-            <label class="cv-upload" for="cpCv">
-              <input id="cpCv" type="file" name="cv" accept=".pdf,.doc,.docx">
-              <span class="cv-upload-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 16V4m0 0-4.5 4.5M12 4l4.5 4.5M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-              <span class="cv-upload-text">Choose file <small>PDF, DOC or DOCX - max 5 MB</small></span>
-            </label>
-          </div>
-          <div class="field contact-subject-other" hidden>
-            <label for="cpSubjectOther">Your subject</label>
-            <input id="cpSubjectOther" type="text" name="subject_other" placeholder="Type your subject">
+            <label for="cpSite">Website (optional)</label>
+            <input id="cpSite" type="url" name="business_website" autocomplete="url" inputmode="url" placeholder="https://yourwebsite.com">
           </div>
           <div class="field">
-            <label for="cpMessage">Message</label>
-            <textarea id="cpMessage" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+            <label for="cpHelp">What do you need help with?</label>
+            <select id="cpHelp" name="help" required data-subject-select="Something Else">
+              <option value="" disabled selected>Select an option</option>
+              <option>FREE Website &amp; Marketing Audit</option>
+              <option>Web Design / Redesign</option>
+              <option>SEO / Google Ads / Digital Marketing</option>
+              <option>Website + Marketing</option>
+              <option>Something Else</option>
+            </select>
           </div>
-          <button type="submit" class="btn btn-lime btn-lg btn-block">Send Message</button>
+          <div class="field contact-subject-other" hidden>
+            <label for="cpHelpOther">Tell us what you need</label>
+            <input id="cpHelpOther" type="text" name="help_other" placeholder="Type what you need help with">
+          </div>
+          <div class="field">
+            <label for="cpMessage">What's the biggest challenge right now?</label>
+            <textarea id="cpMessage" name="message" rows="5" required placeholder="Tell us what's happening and what you'd like to change. A few sentences are plenty."></textarea>
+          </div>
+          <div class="field">
+            <label for="cpStart">When are you hoping to start? (optional)</label>
+            <select id="cpStart" name="start_time">
+              <option value="" selected>Select an option</option>
+              <option>As soon as practical</option>
+              <option>In the next 1–3 months</option>
+              <option>Just exploring</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-lime btn-lg btn-block">Let's Figure This Out</button>
+          <p class="contact-form-micro">No spam. No surprise sales marathon. Just a practical next step.</p>
         </form>
       </div>
     </div>
@@ -228,41 +241,41 @@ include __DIR__ . '/includes/page-banner.php';
 <section class="faq-section" id="contact-faq">
   <div class="container">
     <div class="section-header reveal">
-      <p class="subheading">Before you write</p>
-      <h2>Quick answers while you <span class="heading-accent">reach out</span></h2>
+      <p class="subheading">BEFORE YOU HIT SEND</p>
+      <h2>Quick answers. <span class="heading-accent">No complicated sales pitch.</span></h2>
     </div>
     <div class="faq-list reveal">
       <div class="faq-item">
         <button class="faq-trigger" type="button" aria-expanded="false">
           <span class="faq-num">01</span>
-          <span class="faq-question">How much does a website project cost?</span>
+          <span class="faq-question">What happens during the FREE Audit?</span>
           <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
         </button>
-        <div class="faq-panel" role="region"><div class="faq-panel-inner"><p>Website projects start at $10,000. Most full-cycle B2B website engagements fall between $25,000 and $50,000.</p></div></div>
+        <div class="faq-panel" role="region"><div class="faq-panel-inner"><p>We review the current website, digital visibility and the path customers take to contact you. You'll get practical observations on what's helping, what's getting in the way and what we'd prioritize first — not a generic automated report.</p></div></div>
       </div>
       <div class="faq-item">
         <button class="faq-trigger" type="button" aria-expanded="false">
           <span class="faq-num">02</span>
-          <span class="faq-question">How are payments structured?</span>
+          <span class="faq-question">Do I need to know exactly which service I want?</span>
           <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
         </button>
-        <div class="faq-panel" role="region"><div class="faq-panel-inner"><p>Full-cycle: 30% upfront, 40% after design, 30% on completion. Smaller projects: 50/50.</p></div></div>
+        <div class="faq-panel" role="region"><div class="faq-panel-inner"><p>No. Tell us the result you want or the problem you're seeing. We can help identify whether the next move is web design, local SEO, ads, creative, tracking or a combination.</p></div></div>
       </div>
       <div class="faq-item">
         <button class="faq-trigger" type="button" aria-expanded="false">
           <span class="faq-num">03</span>
-          <span class="faq-question">How fast do you reply?</span>
+          <span class="faq-question">How quickly will someone get back to me?</span>
           <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
         </button>
-        <div class="faq-panel" role="region"><div class="faq-panel-inner"><p>We typically respond within one business day with next steps and any clarifying questions.</p></div></div>
+        <div class="faq-panel" role="region"><div class="faq-panel-inner"><p>Our current aim is to reply within one business day. If more information is needed to give you a useful answer, we'll ask directly.</p></div></div>
       </div>
       <div class="faq-item">
         <button class="faq-trigger" type="button" aria-expanded="false">
           <span class="faq-num">04</span>
-          <span class="faq-question">Can you move faster if we have a hard deadline?</span>
+          <span class="faq-question">Can you work with an existing website or marketing agency?</span>
           <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
         </button>
-        <div class="faq-panel" role="region"><div class="faq-panel-inner"><p>Yes, when the deadline is realistic. We can increase the team and run tasks in parallel.</p></div></div>
+        <div class="faq-panel" role="region"><div class="faq-panel-inner"><p>Yes. We can assess what you already have, keep the parts that work and recommend changes only where there's a practical reason.</p></div></div>
       </div>
       <div class="faq-item">
         <button class="faq-trigger" type="button" aria-expanded="false">
@@ -270,11 +283,22 @@ include __DIR__ . '/includes/page-banner.php';
           <span class="faq-question">What should I include in my message?</span>
           <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
         </button>
-        <div class="faq-panel" role="region"><div class="faq-panel-inner"><p>Goals, timeline, budget range, and any links to your current site or references - enough for us to give a useful first reply.</p></div></div>
+        <div class="faq-panel" role="region"><div class="faq-panel-inner"><p>Your business name, website if you have one, key services, service area and the main result you're after. If you have a launch deadline or a budget range, sharing it helps us recommend a realistic plan.</p></div></div>
       </div>
     </div>
     <div class="faq-all-wrap reveal">
       <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="page-section about-cta-section">
+  <div class="container">
+    <div class="services-cta-band reveal">
+      <div>
+        <h3>Great work deserves better marketing. You've found the right place to start.</h3>
+      </div>
+      <a href="#send-message" class="btn btn-lime btn-lg">Send Your Message</a>
     </div>
   </div>
 </section>

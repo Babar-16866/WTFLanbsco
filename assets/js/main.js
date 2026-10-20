@@ -1433,6 +1433,29 @@ document.addEventListener('click', (e) => {
       return Math.min(cards.length - 1, Math.max(0, Math.round(p * (cards.length - 1))));
     }
 
+    let glideRaf = 0;
+    function glide(top) {
+      cancelAnimationFrame(glideRaf);
+      const from = window.scrollY;
+      const dist = top - from;
+      const ms = Math.min(720, 380 + Math.abs(dist) * 0.6);
+      const t0 = performance.now();
+      busyUntil = t0 + ms + 60;
+      section.classList.add('is-stepping');
+      (function frame(now) {
+        const p = Math.min(1, (now - t0) / ms);
+        const e = 1 - Math.pow(1 - p, 3);
+        window.scrollTo({ top: Math.round(from + dist * e), behavior: 'instant' });
+        lastY = window.scrollY;
+        if (p < 1) {
+          glideRaf = requestAnimationFrame(frame);
+          return;
+        }
+        update();
+        setTimeout(() => section.classList.remove('is-stepping'), 200);
+      })(t0);
+    }
+
     function go(dir) {
       const now = performance.now();
       if (now < busyUntil) return true;
@@ -1476,11 +1499,9 @@ document.addEventListener('click', (e) => {
       if (crossIn) {
         e.preventDefault();
         if (now < busyUntil) return;
-        busyUntil = now + 380;
         stepAt = now;
         current = dir > 0 ? 0 : cards.length - 1;
-        window.scrollTo({ top: Math.round(dir > 0 ? b.start : b.end), behavior: 'instant' });
-        update();
+        glide(Math.round(dir > 0 ? b.start : b.end));
         return;
       }
       if (!inZone(dir)) {
@@ -1547,10 +1568,7 @@ document.addEventListener('click', (e) => {
         if (!touchMoved) {
           touchMoved = true;
           current = dir > 0 ? 0 : cards.length - 1;
-          busyUntil = performance.now() + 700;
-          window.scrollTo({ top: Math.round(dir > 0 ? b.start : b.end), behavior: 'instant' });
-          lastY = window.scrollY;
-          update();
+          glide(Math.round(dir > 0 ? b.start : b.end));
         }
         return;
       }
@@ -2666,37 +2684,14 @@ document.addEventListener('click', (e) => {
     const form = select.closest('form');
     if (!form) return;
     const field = form.querySelector('.contact-subject-other');
-    const jobFields = Array.from(form.querySelectorAll('.contact-job-field'));
-    const cv = form.querySelector('input[name="cv"]');
-    const cvText = form.querySelector('.cv-upload-text');
-    const cvDefault = cvText ? cvText.innerHTML : '';
-    const toggle = (wrap, show) => {
-      const input = wrap.querySelector('input');
-      wrap.hidden = !show;
+    if (!field) return;
+    const input = field.querySelector('input');
+    const sync = () => {
+      const show = select.value === select.dataset.subjectSelect;
+      field.hidden = !show;
       input.required = show;
       if (!show) input.value = '';
     };
-    const sync = () => {
-      if (field) toggle(field, select.value === 'Other');
-      const job = select.value === 'Job Application';
-      jobFields.forEach((wrap) => toggle(wrap, job));
-      if (!job && cvText) cvText.innerHTML = cvDefault;
-    };
-    if (cv && cvText) {
-      cv.addEventListener('change', () => {
-        const file = cv.files && cv.files[0];
-        cv.setCustomValidity('');
-        if (!file) { cvText.innerHTML = cvDefault; return; }
-        if (file.size > 5 * 1024 * 1024) {
-          cv.setCustomValidity('Please upload a file smaller than 5 MB.');
-          cv.reportValidity();
-          cv.value = '';
-          cvText.innerHTML = cvDefault;
-          return;
-        }
-        cvText.textContent = file.name;
-      });
-    }
     select.addEventListener('change', sync);
     sync();
   });

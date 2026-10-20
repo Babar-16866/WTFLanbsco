@@ -1,16 +1,16 @@
 <?php
-$page_title = 'Industries | WTF Labs';
-$page_description = 'Websites, local SEO, Google Ads, and social ads for remodeling, HVAC, plumbing, roofing, pest control, pool services, landscaping, handyman, and power washing businesses.';
+$page_title = 'Web Design & Marketing for Home-Service Industries | WTF Labs';
+$page_description = 'Websites and digital marketing for remodelers, roofers, power washing, HVAC, plumbing, handyman, landscaping, pool service and pest control businesses.';
 $current_page = 'industries';
 include __DIR__ . '/includes/header.php';
 ?>
 
 <?php
-$banner_kicker = 'Industries';
-$banner_h1 = '<span class="about-hero-accent">Who</span> we help grow';
-$banner_lead = 'From remodeling and HVAC to roofing, pool, and power washing — one senior team building websites and campaigns that keep local service businesses booked.';
-$banner_primary_label = 'Free Consultation';
-$banner_secondary_label = 'See our work';
+$banner_kicker = 'INDUSTRIES WE BUILD FOR';
+$banner_h1 = 'Different trades. Different customers. One rule: <span class="about-hero-accent">make quality obvious.</span>';
+$banner_lead = 'A homeowner planning a $50K remodel doesn\'t buy like someone with a broken AC. And neither buys like someone choosing a weekly pool service. We build websites and marketing around the way people actually hire businesses in your trade — not a one-size-fits-all contractor template.';
+$banner_primary_label = 'Claim Your FREE Audit';
+$banner_secondary_label = 'See Our Work';
 $banner_image = '/assets/images/industry-remodelers-1.webp';
 $banner_float1 = '/assets/images/industry-hvac-1.webp';
 $banner_float2 = '/assets/images/industry-roofing-1.webp';
@@ -21,157 +21,164 @@ include __DIR__ . '/includes/page-banner.php';
 <section class="page-section">
   <div class="container">
 
+    <div class="section-header center reveal">
+      <p class="subheading">FIND YOUR TRADE</p>
+      <h2>Your customers have a reason to choose you. <span class="heading-accent">Let's make it easier to see.</span></h2>
+      <p class="section-desc center-desc">Explore the nine home-service industries we focus on. Different challenges, different sales cycles, and different ways to turn online attention into real opportunities.</p>
+    </div>
+
     <div class="services-detail-grid" id="industriesGrid">
       <!-- Overview cards: visible on All -->
-      <article class="service-detail-card" data-level="overview" data-tags="remodelers">
+      <article class="service-detail-card industry-overview-card" data-level="overview" data-tags="remodelers">
         <div class="service-detail-media">
-          <a href="/remodelers.php"><img loading="lazy" src="/assets/images/industry-remodelers-1.webp" alt="Remodelers"></a>
+          <a href="/remodelers.php"><img loading="lazy" src="/assets/images/industry-remodelers-1.webp" alt="Remodeling"></a>
         </div>
         <div class="service-detail-body">
           <h2><a href="/remodelers.php">Remodeling</a></h2>
-          <p>Websites and lead gen that help remodeling companies win bigger kitchen, bath, and whole-home projects.</p>
+          <p class="industry-overview-headline">Make the craftsmanship worth the quote — before the first walkthrough.</p>
+          <p>The homeowner sees your finished kitchen, compares your process and checks your reputation before inviting you over. Show the transformation, build confidence and attract better-fit project inquiries.</p>
           <ul>
-            <li>Portfolio-led project galleries</li>
-            <li>Quote forms that qualify budgets</li>
-            <li>Local SEO for high-value jobs</li>
+            <li>Immersive project galleries and before/after proof</li>
+            <li>Consultation forms that capture budget and timing</li>
+            <li>Local visibility for the projects you want more of</li>
           </ul>
-          <a href="/remodelers.php" class="text-link-blue card-more-link">Learn more
-            &rarr;</a>
+          <a href="/remodelers.php" class="text-link-blue card-more-link">Explore Remodeling &rarr;</a>
         </div>
       </article>
 
-      <article class="service-detail-card" data-level="overview" data-tags="hvac">
-        <div class="service-detail-media">
-          <a href="/hvac.php"><img loading="lazy" src="/assets/images/industry-hvac-1.webp" alt="HVAC"></a>
-        </div>
-        <div class="service-detail-body">
-          <h2><a href="/hvac.php">HVAC</a></h2>
-          <p>Websites and campaigns that keep HVAC techs booked through peak season and the slow months.</p>
-          <ul>
-            <li>Emergency &amp; seasonal service pages</li>
-            <li>Online booking and call tracking</li>
-            <li>Maintenance plan sign-ups</li>
-          </ul>
-          <a href="/hvac.php" class="text-link-blue card-more-link">Learn more &rarr;</a>
-        </div>
-      </article>
-
-      <article class="service-detail-card" data-level="overview" data-tags="plumbing">
-        <div class="service-detail-media">
-          <a href="/plumbing.php"><img loading="lazy" src="/assets/images/industry-plumbing-1.webp" alt="Plumbing"></a>
-        </div>
-        <div class="service-detail-body">
-          <h2><a href="/plumbing.php">Plumbing</a></h2>
-          <p>Websites and ads that make your plumbing company the first call for leaks, clogs, and water heaters.</p>
-          <ul>
-            <li>24/7 emergency call paths</li>
-            <li>Water heater &amp; repipe landing pages</li>
-            <li>Local SEO for every service area</li>
-          </ul>
-          <a href="/plumbing.php" class="text-link-blue card-more-link">Learn more
-            &rarr;</a>
-        </div>
-      </article>
-
-      <article class="service-detail-card" data-level="overview" data-tags="roofing">
+      <article class="service-detail-card industry-overview-card" data-level="overview" data-tags="roofing">
         <div class="service-detail-media">
           <a href="/roofing.php"><img loading="lazy" src="/assets/images/industry-roofing-1.webp" alt="Roofing"></a>
         </div>
         <div class="service-detail-body">
           <h2><a href="/roofing.php">Roofing</a></h2>
-          <p>Websites and lead gen that help roofing contractors win replacements, repairs, and storm work.</p>
+          <p class="industry-overview-headline">Be the trusted choice when the roof — and the decision — matters.</p>
+          <p>Whether it's storm damage, repairs or a full replacement, homeowners need a reason to feel safe making a high-stakes choice. Show proof, explain the next step and make inspections easier to request.</p>
           <ul>
-            <li>Free inspection booking</li>
-            <li>Storm &amp; insurance claim pages</li>
-            <li>Financing and warranty callouts</li>
+            <li>Project and warranty proof</li>
+            <li>Inspection request paths</li>
+            <li>Local search and storm-season campaigns</li>
           </ul>
-          <a href="/roofing.php" class="text-link-blue card-more-link">Learn more
-            &rarr;</a>
+          <a href="/roofing.php" class="text-link-blue card-more-link">Explore Roofing &rarr;</a>
         </div>
       </article>
 
-      <article class="service-detail-card" data-level="overview" data-tags="pest-control">
-        <div class="service-detail-media">
-          <a href="/pest-control.php"><img loading="lazy" src="/assets/images/industry-pest-control-1.webp" alt="Pest Control"></a>
-        </div>
-        <div class="service-detail-body">
-          <h2><a href="/pest-control.php">Pest Control</a></h2>
-          <p>Websites and campaigns that turn one-time pest calls into recurring service plans.</p>
-          <ul>
-            <li>Pest-specific service pages</li>
-            <li>Recurring plan sign-ups</li>
-            <li>Seasonal campaign planning</li>
-          </ul>
-          <a href="/pest-control.php" class="text-link-blue card-more-link">Learn more
-            &rarr;</a>
-        </div>
-      </article>
-
-      <article class="service-detail-card" data-level="overview" data-tags="pool-services">
-        <div class="service-detail-media">
-          <a href="/pool-services.php"><img loading="lazy" src="/assets/images/industry-pool-services-1.webp" alt="Pool Services"></a>
-        </div>
-        <div class="service-detail-body">
-          <h2><a href="/pool-services.php">Pool Services</a></h2>
-          <p>Websites and marketing that grow weekly pool routes, repairs, and seasonal openings.</p>
-          <ul>
-            <li>Weekly service plan sign-ups</li>
-            <li>Repair &amp; equipment pages</li>
-            <li>Opening and closing campaigns</li>
-          </ul>
-          <a href="/pool-services.php" class="text-link-blue card-more-link">Learn more
-            &rarr;</a>
-        </div>
-      </article>
-
-      <article class="service-detail-card" data-level="overview" data-tags="landscaping">
-        <div class="service-detail-media">
-          <a href="/landscaping.php"><img loading="lazy" src="/assets/images/industry-landscaping-1.webp" alt="Landscaping"></a>
-        </div>
-        <div class="service-detail-body">
-          <h2><a href="/landscaping.php">Landscaping</a></h2>
-          <p>Websites and lead gen that help landscapers win design-build projects and maintenance contracts.</p>
-          <ul>
-            <li>Project galleries &amp; design showcases</li>
-            <li>Maintenance contract sign-ups</li>
-            <li>Seasonal lead campaigns</li>
-          </ul>
-          <a href="/landscaping.php" class="text-link-blue card-more-link">Learn more
-            &rarr;</a>
-        </div>
-      </article>
-
-      <article class="service-detail-card" data-level="overview" data-tags="handyman">
-        <div class="service-detail-media">
-          <a href="/handyman.php"><img loading="lazy" src="/assets/images/industry-handyman-1.webp" alt="Handyman"></a>
-        </div>
-        <div class="service-detail-body">
-          <h2><a href="/handyman.php">Handyman</a></h2>
-          <p>Websites and local marketing that keep handyman businesses booked with repeat customers.</p>
-          <ul>
-            <li>Clear service lists &amp; pricing cues</li>
-            <li>Easy online booking</li>
-            <li>Repeat customer campaigns</li>
-          </ul>
-          <a href="/handyman.php" class="text-link-blue card-more-link">Learn more
-            &rarr;</a>
-        </div>
-      </article>
-
-      <article class="service-detail-card" data-level="overview" data-tags="power-washing">
+      <article class="service-detail-card industry-overview-card" data-level="overview" data-tags="power-washing">
         <div class="service-detail-media">
           <a href="/power-washing.php"><img loading="lazy" src="/assets/images/industry-power-washing-1.webp" alt="Power Washing"></a>
         </div>
         <div class="service-detail-body">
           <h2><a href="/power-washing.php">Power Washing</a></h2>
-          <p>Websites and campaigns that fill power washing schedules with homes, driveways, and commercial jobs.</p>
+          <p class="industry-overview-headline">Let the before-and-after do some of the selling.</p>
+          <p>Driveways, siding, patios and commercial exteriors are visual proof waiting to happen. Make your results easy to see, your coverage easy to understand and the quote easy to request.</p>
           <ul>
-            <li>Instant quote forms</li>
             <li>Before/after galleries</li>
-            <li>Residential &amp; commercial pages</li>
+            <li>Fast quote requests</li>
+            <li>Seasonal residential and commercial campaigns</li>
           </ul>
-          <a href="/power-washing.php" class="text-link-blue card-more-link">Learn more
-            &rarr;</a>
+          <a href="/power-washing.php" class="text-link-blue card-more-link">Explore Power Washing &rarr;</a>
+        </div>
+      </article>
+
+      <article class="service-detail-card industry-overview-card" data-level="overview" data-tags="hvac">
+        <div class="service-detail-media">
+          <a href="/hvac.php"><img loading="lazy" src="/assets/images/industry-hvac-1.webp" alt="HVAC"></a>
+        </div>
+        <div class="service-detail-body">
+          <h2><a href="/hvac.php">HVAC</a></h2>
+          <p class="industry-overview-headline">When the AC quits, your website shouldn't slow down the rescue.</p>
+          <p>Urgent service customers want a clear path to help. Replacement customers need confidence in the investment. Your digital experience should make room for both without making either work harder.</p>
+          <ul>
+            <li>Fast mobile click-to-call and booking</li>
+            <li>Repair versus replacement journeys</li>
+            <li>Maintenance plan visibility and lead tracking</li>
+          </ul>
+          <a href="/hvac.php" class="text-link-blue card-more-link">Explore HVAC &rarr;</a>
+        </div>
+      </article>
+
+      <article class="service-detail-card industry-overview-card" data-level="overview" data-tags="plumbing">
+        <div class="service-detail-media">
+          <a href="/plumbing.php"><img loading="lazy" src="/assets/images/industry-plumbing-1.webp" alt="Plumbing"></a>
+        </div>
+        <div class="service-detail-body">
+          <h2><a href="/plumbing.php">Plumbing</a></h2>
+          <p class="industry-overview-headline">Be easy to trust. Even easier to call.</p>
+          <p>From a leak that can't wait to a water-heater replacement that needs research, plumbing buyers need clear services, credible proof and a direct next step. We design around the urgency and value of each job.</p>
+          <ul>
+            <li>Emergency call paths</li>
+            <li>Service-specific landing pages</li>
+            <li>Reviews, service areas and appointment requests</li>
+          </ul>
+          <a href="/plumbing.php" class="text-link-blue card-more-link">Explore Plumbing &rarr;</a>
+        </div>
+      </article>
+
+      <article class="service-detail-card industry-overview-card" data-level="overview" data-tags="handyman">
+        <div class="service-detail-media">
+          <a href="/handyman.php"><img loading="lazy" src="/assets/images/industry-handyman-1.webp" alt="Handyman"></a>
+        </div>
+        <div class="service-detail-body">
+          <h2><a href="/handyman.php">Handyman</a></h2>
+          <p class="industry-overview-headline">Make it simple to see what you fix — and book the right job.</p>
+          <p>A long list of odd jobs shouldn't turn into a confusing website. Explain the work you take on, show that you're dependable and help homeowners request the right service without endless back-and-forth.</p>
+          <ul>
+            <li>Organized service categories</li>
+            <li>Easy estimate and booking forms</li>
+            <li>Local trust and repeat-customer campaigns</li>
+          </ul>
+          <a href="/handyman.php" class="text-link-blue card-more-link">Explore Handyman &rarr;</a>
+        </div>
+      </article>
+
+      <article class="service-detail-card industry-overview-card" data-level="overview" data-tags="landscaping">
+        <div class="service-detail-media">
+          <a href="/landscaping.php"><img loading="lazy" src="/assets/images/industry-landscaping-1.webp" alt="Landscaping"></a>
+        </div>
+        <div class="service-detail-body">
+          <h2><a href="/landscaping.php">Landscaping</a></h2>
+          <p class="industry-overview-headline">Win the dream yard. Then keep the property looking its best.</p>
+          <p>Design-build projects and routine maintenance attract different buyers. Show finished spaces with pride, make your service areas clear and create simple paths for consultations and recurring care.</p>
+          <ul>
+            <li>Project-led design showcases</li>
+            <li>Maintenance plan inquiries</li>
+            <li>Neighborhood-focused search and seasonal campaigns</li>
+          </ul>
+          <a href="/landscaping.php" class="text-link-blue card-more-link">Explore Landscaping &rarr;</a>
+        </div>
+      </article>
+
+      <article class="service-detail-card industry-overview-card" data-level="overview" data-tags="pool-services">
+        <div class="service-detail-media">
+          <a href="/pool-services.php"><img loading="lazy" src="/assets/images/industry-pool-services-1.webp" alt="Pool Service"></a>
+        </div>
+        <div class="service-detail-body">
+          <h2><a href="/pool-services.php">Pool Service</a></h2>
+          <p class="industry-overview-headline">Turn &ldquo;Can you clean my pool?&rdquo; into a lasting customer relationship.</p>
+          <p>Make weekly service plans, repair options and coverage easy to understand. Give homeowners the confidence and convenience to choose ongoing pool care.</p>
+          <ul>
+            <li>Plan comparisons and recurring signup</li>
+            <li>ZIP-code/service-area clarity</li>
+            <li>Pool repair and seasonal promotion pages</li>
+          </ul>
+          <a href="/pool-services.php" class="text-link-blue card-more-link">Explore Pool Services &rarr;</a>
+        </div>
+      </article>
+
+      <article class="service-detail-card industry-overview-card" data-level="overview" data-tags="pest-control">
+        <div class="service-detail-media">
+          <a href="/pest-control.php"><img loading="lazy" src="/assets/images/industry-pest-control-1.webp" alt="Pest Control"></a>
+        </div>
+        <div class="service-detail-body">
+          <h2><a href="/pest-control.php">Pest Control</a></h2>
+          <p class="industry-overview-headline">Sell the peace of mind, not just the one-time spray.</p>
+          <p>Homeowners want a problem handled — and ideally kept from coming back. Build clear service journeys that explain treatment options, earn trust and make ongoing protection straightforward.</p>
+          <ul>
+            <li>Pest-specific service pages</li>
+            <li>Quarterly or annual plan inquiries</li>
+            <li>Local proof and seasonal campaigns</li>
+          </ul>
+          <a href="/pest-control.php" class="text-link-blue card-more-link">Explore Pest Control &rarr;</a>
         </div>
       </article>
 
@@ -1375,9 +1382,9 @@ include __DIR__ . '/includes/page-banner.php';
       </article>
 
       <article class="service-detail-card services-cta-band industry-cta-card">
-        <h3>Don't see your industry?</h3>
-        <p>Ask us - we tailor engagements for local service businesses of every size.</p>
-        <a href="/contact.php" class="btn btn-lime btn-lg">Let's talk</a>
+        <h3>Don't see your exact industry?</h3>
+        <p>We also take on closely related property and field-service projects when the fit is right. Tell us what you do and the kind of jobs you want more of.</p>
+        <a href="/contact.php" class="btn btn-lime btn-lg">Let's Talk</a>
       </article>
     </div>
 
@@ -1389,13 +1396,13 @@ include __DIR__ . '/includes/page-banner.php';
   <div class="container">
     <div class="section-header reveal">
       <p class="subheading">Industries FAQs</p>
-      <h2>Common questions before <span class="heading-accent">you hire</span></h2>
+      <h2>Different trades. <span class="heading-accent">Straight answers.</span></h2>
     </div>
     <div class="faq-list reveal">
       <div class="faq-item">
         <button class="faq-trigger" type="button" aria-expanded="false">
           <span class="faq-num">01</span>
-          <span class="faq-question">Do you only work with home service businesses?</span>
+          <span class="faq-question">Is your approach really different for each industry?</span>
           <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18"
               viewBox="0 0 18 18" fill="none">
               <path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
@@ -1403,15 +1410,14 @@ include __DIR__ . '/includes/page-banner.php';
         </button>
         <div class="faq-panel" role="region">
           <div class="faq-panel-inner">
-            <p>No, but home and field service companies are a big part of our work. We know how these customers search,
-              compare, and book.</p>
+            <p>Yes. A remodeler needs project proof and qualified consultations. An HVAC operator needs fast calls and clear booking. A pool service company may need recurring plan signups. We start with the buying journey, not an interchangeable template.</p>
           </div>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-trigger" type="button" aria-expanded="false">
           <span class="faq-num">02</span>
-          <span class="faq-question">Can you work with a single-location business?</span>
+          <span class="faq-question">Can you work with a single-location company or a growing multi-crew business?</span>
           <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18"
               viewBox="0 0 18 18" fill="none">
               <path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
@@ -1419,15 +1425,14 @@ include __DIR__ . '/includes/page-banner.php';
         </button>
         <div class="faq-panel" role="region">
           <div class="faq-panel-inner">
-            <p>Yes. Many of our industry clients are owner-operated or single-location teams. We scale the plan to your
-              size and goals.</p>
+            <p>Yes. The strategy follows your current footprint, service area and goals. We can prioritize one city or service line first, then plan for more locations or services when that makes sense.</p>
           </div>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-trigger" type="button" aria-expanded="false">
           <span class="faq-num">03</span>
-          <span class="faq-question">Will our site connect to our booking or CRM software?</span>
+          <span class="faq-question">Can our website connect to scheduling or CRM software?</span>
           <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18"
               viewBox="0 0 18 18" fill="none">
               <path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
@@ -1435,15 +1440,14 @@ include __DIR__ . '/includes/page-banner.php';
         </button>
         <div class="faq-panel" role="region">
           <div class="faq-panel-inner">
-            <p>We integrate with tools like ServiceTitan, Housecall Pro, Jobber, and HubSpot so leads land where your
-              team already works.</p>
+            <p>Where a tool supports integration, we can scope connections to booking, lead management and customer workflows. We'll review the systems you already use before recommending changes.</p>
           </div>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-trigger" type="button" aria-expanded="false">
           <span class="faq-num">04</span>
-          <span class="faq-question">How soon will we see more leads?</span>
+          <span class="faq-question">Can you target higher-value jobs or tighter service areas?</span>
           <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18"
               viewBox="0 0 18 18" fill="none">
               <path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
@@ -1451,15 +1455,14 @@ include __DIR__ . '/includes/page-banner.php';
         </button>
         <div class="faq-panel" role="region">
           <div class="faq-panel-inner">
-            <p>Paid campaigns can bring leads within weeks. Local SEO usually builds over three to six months and keeps
-              compounding.</p>
+            <p>Yes. We plan website content, local search and campaigns around the services and locations you actually want to grow, rather than treating every lead as equally valuable.</p>
           </div>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-trigger" type="button" aria-expanded="false">
           <span class="faq-num">05</span>
-          <span class="faq-question">Is my industry not listed?</span>
+          <span class="faq-question">Should I start with a website or marketing?</span>
           <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18"
               viewBox="0 0 18 18" fill="none">
               <path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
@@ -1467,14 +1470,25 @@ include __DIR__ . '/includes/page-banner.php';
         </button>
         <div class="faq-panel" role="region">
           <div class="faq-panel-inner">
-            <p>Ask us. If you run a local service business, the same playbook usually applies - we tailor it to your
-              market.</p>
+            <p>If the site loses good visitors, fixing the experience may come first. If it already converts but too few suitable homeowners see it, visibility may be the bigger opportunity. The free audit helps separate the two.</p>
           </div>
         </div>
       </div>
     </div>
     <div class="faq-all-wrap reveal">
       <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="page-section about-cta-section">
+  <div class="container">
+    <div class="services-cta-band reveal">
+      <div>
+        <h3>You know your trade. We know how to make it easier to choose you.</h3>
+        <p>Show us the business you want to build. We'll show you what your digital presence can do better.</p>
+      </div>
+      <a href="/contact.php" class="btn btn-lime btn-lg" data-open-popup>Claim Your FREE Audit</a>
     </div>
   </div>
 </section>

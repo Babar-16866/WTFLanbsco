@@ -65,7 +65,7 @@ if ($name === '' || mb_strlen($name) < 2) {
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
   $errors[] = 'email';
 }
-if ($phone === '' && !$form_page) {
+if ($phone === '' && !$form_page && $source !== 'contact-page') {
   $errors[] = 'phone';
 }
 if ($message === '' && !$partial && $step !== 3) {
@@ -172,6 +172,11 @@ if (!$sent) {
 if ($partial) {
   header('Content-Type: application/json');
   echo json_encode(['ok' => (bool)$sent]);
+  exit;
+}
+
+if ($source === 'contact-page') {
+  header('Location: ' . ($sent ? '/thank-you.php?from=contact' : '/contact.php?error=1#send-message'));
   exit;
 }
 
