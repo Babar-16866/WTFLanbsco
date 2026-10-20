@@ -12201,3 +12201,54 @@ html body .form-commit > .form-peek--under.is-visible .form-peek-head--flip {
 .form-back:focus-visible .form-back-icon {
   transform: translateX(-3px);
 }
+html body .page-hero {
+  --ph-sec: 120px;
+  --ph-about-top: 48px;
+  --ph-about-x: 40px;
+  --ph-box-top: 56px;
+  --ph-box-x: 48px;
+  padding-top: 0;
+}
+html body .page-hero > .container {
+  max-width: none;
+  padding: 0;
+}
+html body .page-hero :is(.about-hero-box, .page-hero-box) {
+  border-radius: 0 0 20px 20px;
+  background-color: var(--pal-primary);
+  background-image: var(--pal-texture-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+}
+html body .page-hero .about-hero-box {
+  padding-top: calc(var(--ph-sec) + var(--ph-about-top));
+  padding-left: calc(max(20px, (100% - 1280px) / 2) + var(--ph-about-x));
+  padding-right: calc(max(20px, (100% - 1280px) / 2) + var(--ph-about-x));
+}
+html body .page-hero .page-hero-box {
+  padding-top: calc(var(--ph-sec) + var(--ph-box-top));
+  padding-left: calc(max(20px, (100% - 1280px) / 2) + var(--ph-box-x));
+  padding-right: calc(max(20px, (100% - 1280px) / 2) + var(--ph-box-x));
+}
+@media (max-width: 1100px) {
+  html body .page-hero {
+    --ph-about-top: 40px;
+    --ph-about-x: 28px;
+  }
+}
+@media (max-width: 980px) {
+  html body .page-hero {
+    --ph-sec: 104px;
+  }
+}
+@media (max-width: 768px) {
+  html body .page-hero {
+    --ph-sec: 100px;
+    --ph-about-top: 32px;
+    --ph-about-x: 18px;
+    --ph-box-top: 32px;
+    --ph-box-x: 20px;
+  }
+}
