@@ -49,29 +49,29 @@ include __DIR__ . '/includes/page-banner.php';
 </section>
 
 <!-- MORE THAN A PRETTY WEBSITE -->
-<section class="rail-section why-wtf-section" id="why-wtf-labs" data-rail>
+<section class="rail-section why-wtf-section rail-section--fixed" id="why-wtf-labs">
   <div class="rail-sticky">
     <div class="container">
-      <div class="section-header rail-head reveal">
+      <div class="section-header center rail-head reveal">
         <p class="subheading">MORE THAN A PRETTY WEBSITE</p>
         <h2 class="home-title">Your next customer is already judging your business <span class="heading-accent">online.</span></h2>
-        <p class="section-desc">A referral hears your name and looks you up. A homeowner with a leaking pipe grabs their phone. Someone comparing pool services wants to know what a monthly plan includes. Three completely different situations. One common question: <strong>&ldquo;Can I trust this business enough to take the next step?&rdquo;</strong></p>
-        <p class="section-desc">If your website makes that answer difficult, a better-looking competitor can win the job before you even know you were considered. We make sure your digital first impression supports the real work behind it.</p>
+        <p class="section-desc center-desc">A referral hears your name and looks you up. A homeowner with a leaking pipe grabs their phone. Someone comparing pool services wants to know what a monthly plan includes. Three completely different situations. One common question: <strong>&ldquo;Can I trust this business enough to take the next step?&rdquo;</strong></p>
+        <p class="section-desc center-desc">If your website makes that answer difficult, a better-looking competitor can win the job before you even know you were considered. We make sure your digital first impression supports the real work behind it.</p>
       </div>
     </div>
     <div class="rail-viewport">
-      <div class="rail-track rail-track--wide">
-        <article class="rail-card">
+      <div class="rail-track">
+        <article class="rail-card is-active">
           <span class="rail-num rail-num--text">Premium projects</span>
           <h3>Show the quality. Justify the quote.</h3>
           <p>For remodeling and roofing, immersive project galleries, before-and-afters, strong reviews and a clear process help serious homeowners see the craftsmanship behind your price.</p>
         </article>
-        <article class="rail-card">
+        <article class="rail-card is-active">
           <span class="rail-num rail-num--text">Urgent service calls</span>
           <h3>Less searching. More calling.</h3>
           <p>For HVAC and plumbing, mobile speed, visible phone numbers, location relevance and straightforward booking help people reach you while the need is urgent.</p>
         </article>
-        <article class="rail-card">
+        <article class="rail-card is-active">
           <span class="rail-num rail-num--text">Recurring and repeat service</span>
           <h3>Make coming back feel easy.</h3>
           <p>For pest control, pool service and landscaping, clear coverage, plan comparisons, repeat scheduling and simple inquiry paths make ongoing care easier to choose.</p>

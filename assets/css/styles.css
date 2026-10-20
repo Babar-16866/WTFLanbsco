@@ -12455,3 +12455,23 @@ html body :is(.btn-outline-white, .thank-btn-secondary).btn:is(:hover, :focus-vi
   justify-content: center;
   text-align: center;
 }
+.rail-section--fixed .rail-sticky {
+  position: static;
+  min-height: 0;
+}
+.rail-section--fixed .rail-head {
+  margin-left: auto;
+  margin-right: auto;
+}
+.rail-section--fixed .rail-track {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media (max-width: 900px) {
+  .rail-section--fixed .rail-track {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
