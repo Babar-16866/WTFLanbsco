@@ -28,20 +28,6 @@ include __DIR__ . '/includes/page-banner.php';
         <h2>No disappearing strategists. No mystery handoffs. No agency circus.</h2>
         <p>You know what it's like when somebody promises you one thing, then sends a different crew to do the job. We don't think your website or marketing should feel like that.</p>
         <p>Our approach is simple: understand the business, put the right senior people on the problem, communicate clearly, and build something that actually earns its place in your operation. Beautiful design matters. So do the details behind it: Speed, usability, trust and what happens after someone clicks.</p>
-        <div class="about-crew-cards">
-          <article class="why-done-card about-crew-card">
-            <h4>Senior team, start to finish</h4>
-            <p>The people shaping the strategy stay close to the actual work, so the vision doesn't disappear between sales and delivery.</p>
-          </article>
-          <article class="why-done-card about-crew-card">
-            <h4>Thoughtful process, clear ownership</h4>
-            <p>You know what we're working on, where your feedback is needed and what comes next. Less chasing. More progress.</p>
-          </article>
-          <article class="why-done-card about-crew-card">
-            <h4>Built around your customers</h4>
-            <p>We don't sell the same website to a remodeling contractor, an HVAC dispatcher and a pest-control route owner. The customer journey is different, so the strategy should be too.</p>
-          </article>
-        </div>
       </div>
       <div class="about-split-media">
         <img loading="lazy" src="/assets/images/about-startup-lounge.webp" alt="WTF Labs office lounge">
@@ -49,6 +35,20 @@ include __DIR__ . '/includes/page-banner.php';
           <img loading="lazy" src="/assets/images/team-1.jpg" alt="">
           <img loading="lazy" src="/assets/images/team-3.jpg" alt="">
         </div>
+      </div>
+      <div class="about-crew-cards">
+        <article class="why-done-card about-crew-card">
+          <h4>Senior team, start to finish</h4>
+          <p>The people shaping the strategy stay close to the actual work, so the vision doesn't disappear between sales and delivery.</p>
+        </article>
+        <article class="why-done-card about-crew-card">
+          <h4>Thoughtful process, clear ownership</h4>
+          <p>You know what we're working on, where your feedback is needed and what comes next. Less chasing. More progress.</p>
+        </article>
+        <article class="why-done-card about-crew-card">
+          <h4>Built around your customers</h4>
+          <p>We don't sell the same website to a remodeling contractor, an HVAC dispatcher and a pest-control route owner. The customer journey is different, so the strategy should be too.</p>
+        </article>
       </div>
     </div>
 

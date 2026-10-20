@@ -97,7 +97,7 @@ include __DIR__ . '/includes/page-banner.php';
         <div class="svc-panel-body">
           <h3>SEO and local search</h3>
           <p>Help homeowners find your services in the areas you actually want to serve. We work on search-friendly pages, technical foundations, useful local content and visibility that connects to real inquiries.</p>
-          <span class="svc-panel-link">View Service &rarr;</span>
+          <span class="svc-panel-link">Explore SEO &amp; Local Search &rarr;</span>
         </div>
       </a>
       <a href="/google-ads.php" class="svc-panel">
@@ -107,7 +107,7 @@ include __DIR__ . '/includes/page-banner.php';
         <div class="svc-panel-body">
           <h3>Google Ads</h3>
           <p>Be visible when someone is actively searching for the work you do. Campaigns, location targeting, landing pages and tracking are built around qualified calls and estimate requests — not empty click volume.</p>
-          <span class="svc-panel-link">View Service &rarr;</span>
+          <span class="svc-panel-link">Explore Google Ads &rarr;</span>
         </div>
       </a>
       <a href="/social-media-advertising.php" class="svc-panel">
@@ -117,7 +117,7 @@ include __DIR__ . '/includes/page-banner.php';
         <div class="svc-panel-body">
           <h3>Social media advertising</h3>
           <p>Turn projects, reviews, transformation videos and seasonal offers into attention worth earning. We use creative, targeted campaigns and retargeting to build familiarity before the customer is ready to book.</p>
-          <span class="svc-panel-link">View Service &rarr;</span>
+          <span class="svc-panel-link">Explore Social Media Advertising &rarr;</span>
         </div>
       </a>
       <a href="/graphic-design.php" class="svc-panel">
@@ -127,7 +127,17 @@ include __DIR__ . '/includes/page-banner.php';
         <div class="svc-panel-body">
           <h3>Branding and creative</h3>
           <p>If your website says premium but your ads, truck graphics and social content say otherwise, buyers notice. We bring your visuals and messaging into one recognizable, trustworthy identity.</p>
-          <span class="svc-panel-link">View Service &rarr;</span>
+          <span class="svc-panel-link">Explore Branding &amp; Creative &rarr;</span>
+        </div>
+      </a>
+      <a href="/web-design.php" class="svc-panel">
+        <img loading="lazy" src="/assets/images/dm-channel-6.jpg" alt="Landing pages and conversion strategy">
+        <span class="svc-panel-label">Landing pages and conversion strategy</span>
+        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
+        <div class="svc-panel-body">
+          <h3>Landing pages and conversion strategy</h3>
+          <p>Don't send a homeowner searching for an emergency AC repair to the same page as someone planning a full system replacement. Match the offer, evidence and next step to the reason they clicked.</p>
+          <span class="svc-panel-link">Explore Web Design &amp; Development &rarr;</span>
         </div>
       </a>
       <a href="/digital-marketing.php" class="svc-panel">
@@ -137,7 +147,7 @@ include __DIR__ . '/includes/page-banner.php';
         <div class="svc-panel-body">
           <h3>Connected marketing and measurement</h3>
           <p>We bring the pieces together where it makes sense, tracking calls, forms, bookings and lead quality so decisions are tied to business opportunities, not dashboard decorations.</p>
-          <span class="svc-panel-link">View Service &rarr;</span>
+          <span class="svc-panel-link">Explore Full-Service Marketing &rarr;</span>
         </div>
       </a>
     </div>
@@ -178,6 +188,12 @@ include __DIR__ . '/includes/page-banner.php';
       </article>
       <article class="why-done-card channel-card">
         <span class="rail-num">05</span>
+        <h4>Landing pages and conversion strategy</h4>
+        <p>Don't send a homeowner searching for an emergency AC repair to the same page as someone planning a full system replacement. Match the offer, evidence and next step to the reason they clicked.</p>
+        <a href="/web-design.php" class="btn btn-lime">Explore Web Design &amp; Development</a>
+      </article>
+      <article class="why-done-card channel-card">
+        <span class="rail-num">06</span>
         <h4>Connected marketing and measurement</h4>
         <p>We bring the pieces together where it makes sense, tracking calls, forms, bookings and lead quality so decisions are tied to business opportunities, not dashboard decorations.</p>
         <a href="/digital-marketing.php" class="btn btn-lime">Explore Full-Service Marketing</a>

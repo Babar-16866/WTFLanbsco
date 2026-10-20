@@ -12347,20 +12347,19 @@ html body :is(.btn-outline-white, .thank-btn-secondary).btn:is(:hover, :focus-vi
   }
 }
 .about-crew-cards {
+  grid-column: 1 / -1;
   display: grid;
-  gap: 12px;
-  margin-top: 4px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: -16px;
 }
 .about-crew-card {
   min-height: 0;
-  padding: 20px 22px;
 }
-.about-crew-card h4 {
-  font-size: 18px;
-  margin-bottom: 6px;
-}
-.about-crew-card p {
-  font-size: 14px;
+@media (max-width: 900px) {
+  .about-crew-cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 .about-person-bio {
   display: block;
@@ -12474,4 +12473,43 @@ html body :is(.btn-outline-white, .thank-btn-secondary).btn:is(:hover, :focus-vi
   .rail-section--fixed .rail-track {
     grid-template-columns: minmax(0, 1fr);
   }
+}
+.page-hero-actions:has(a[href^="tel:"]) .btn-lg {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+.about-timeline-wrap:has(.about-timeline--two) {
+  background-color: var(--pal-primary);
+  background-image: var(--pal-texture-image), linear-gradient(150deg, var(--pal-primary-2) 0%, var(--pal-primary) 45%, var(--pal-dark) 100%);
+  background-size: cover, auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply, normal;
+  border-color: color-mix(in srgb, var(--pal-glow) 14%, transparent);
+}
+.about-timeline--two .about-timeline-item,
+.about-timeline--two .about-timeline-item--lime {
+  background-color: var(--pal-primary-2);
+  background-image: var(--pal-texture-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  border: 1px solid color-mix(in srgb, var(--pal-glow) 18%, transparent);
+  color: var(--pal-light);
+}
+.about-timeline--two .about-timeline-item h3,
+.about-timeline--two .about-timeline-item strong {
+  color: var(--pal-light);
+}
+.about-timeline--two .about-timeline-item p {
+  color: color-mix(in srgb, var(--pal-light) 78%, transparent);
+}
+.about-timeline--two .about-timeline-item--lime .about-timeline-dot {
+  background: var(--lime);
+  border-color: color-mix(in srgb, var(--pal-primary) 21%, var(--pal-dark));
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--pal-accent) 25%, transparent);
+}
+.about-timeline-wrap .about-timeline-punch {
+  color: var(--pal-gold);
 }
