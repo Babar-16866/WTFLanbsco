@@ -51,8 +51,8 @@ require_once __DIR__ . '/config.php';
         <li class="nav-dropdown">
           <a href="/services.php" class="nav-dropdown-btn"<?php echo $current_page === 'services' ? ' aria-current="page"' : ''; ?>>Services <span>&#9662;</span></a>
           <div class="nav-dropdown-menu">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/digital-marketing.php">Digital Marketing</a>
+            <a href="/web-design-services.php">Web Design</a>
+            <a href="/digital-marketing-services.php">Digital Marketing</a>
             <a href="/services.php#featured-services" data-nav-nudge>Click One 👆 There's More!</a>
           </div>
         </li>
