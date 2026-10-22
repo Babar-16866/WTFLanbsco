@@ -224,8 +224,6 @@ include __DIR__ . '/includes/header.php';
       </article>
     </div>
 
-    <p class="home-works-empty" id="homeWorksGridEmpty" hidden>More projects in this category are coming soon.</p>
-
     <div class="home-work-cta"></div>
   </div>
 </section>
