@@ -154,6 +154,7 @@ include __DIR__ . '/includes/page-banner.php';
   </div>
 </section>
 
+<!--
 <section class="problem-section channel-cards-section">
   <div class="container">
     <div class="section-header center problem-head reveal">
@@ -201,6 +202,9 @@ include __DIR__ . '/includes/page-banner.php';
     </div>
   </div>
 </section>
+
+-->
+
 
 <!-- WORK -->
 <?php

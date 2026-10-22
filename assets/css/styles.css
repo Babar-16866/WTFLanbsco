@@ -8199,12 +8199,12 @@ img {
   width: 100%;
 }
 .rail-head {
-  max-width: 760px;
+  max-width: 880px;
   margin-bottom: 40px;
 }
 .rail-head .section-desc {
   margin-top: 14px;
-  max-width: 620px;
+  max-width: 880px;
 }
 .rail-track {
   display: flex;
@@ -8343,7 +8343,7 @@ img {
 }
 .home-work-section .section-desc {
   color: color-mix(in srgb, var(--white) 65%, transparent);
-  max-width: 640px;
+  max-width: 730px;
 }
 :where([data-palette]) .home-work-section .section-desc {
   color: color-mix(in srgb, var(--pal-light) 65%, transparent);
@@ -9122,6 +9122,7 @@ body.street-modal-open {
 /* ===== SERVICES SHOWCASE ===== */
 .svc-showcase {
   padding: 72px 0 8px;
+  padding-bottom:50px;
 }
 .svc-panels {
   display: flex;
@@ -12512,4 +12513,8 @@ html body :is(.btn-outline-white, .thank-btn-secondary).btn:is(:hover, :focus-vi
 }
 .about-timeline-wrap .about-timeline-punch {
   color: var(--pal-gold);
+}
+
+.wh{
+    max-width: 730px !important;
 }

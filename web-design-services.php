@@ -86,8 +86,8 @@ include __DIR__ . '/includes/page-banner.php';
   <div class="container">
     <div class="section-header center reveal">
       <p class="subheading">WHAT WE CAN BUILD</p>
-      <h2>The right website for the job. <span class="heading-accent">Not the longest menu in town.</span></h2>
-      <p class="section-desc center-desc">Some businesses need a beautiful, focused website. Others need a campaign landing page, an online store or a whole digital operation behind the scenes. We help you choose what makes commercial sense - then build it properly.</p>
+      <h2>The right website for the job. <span class="heading-accent"><br>Not the longest menu in town.</span></h2>
+      <p class="section-desc center-desc wh">Some businesses need a beautiful, focused website. Others need a campaign landing page, an online store or a whole digital operation behind the scenes. We help you choose what makes commercial sense - then build it properly.</p>
     </div>
     <div class="svc-panels reveal" id="svcPanels">
       <a href="/web-design.php" class="svc-panel is-active">
