@@ -8,7 +8,7 @@ include __DIR__ . '/includes/header.php';
 <section class="ihero-section">
   <div class="ihero-box">
     <header class="ihero-header reveal">
-      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> Industry</p>
+      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> Handyman</p>
       <h1 class="ihero-heading">Handyman marketing that keeps your calendar <span class="accent-lime">full</span></h1>
       <p class="ihero-lead">We help handyman businesses look professional, show up in local searches, and turn one small fix into a customer who calls you for everything.</p>
     </header>

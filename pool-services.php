@@ -8,7 +8,7 @@ include __DIR__ . '/includes/header.php';
 <section class="ihero-section">
   <div class="ihero-box">
     <header class="ihero-header reveal">
-      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> Industry</p>
+      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> Pool Services</p>
       <h1 class="ihero-heading">Pool service marketing that grows your <span class="accent-lime">routes</span></h1>
       <p class="ihero-lead">We help pool companies fill weekly routes, sell equipment upgrades, and stay booked through openings, closings, and repair season.</p>
     </header>

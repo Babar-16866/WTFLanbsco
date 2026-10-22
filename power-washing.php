@@ -8,7 +8,7 @@ include __DIR__ . '/includes/header.php';
 <section class="ihero-section">
   <div class="ihero-box">
     <header class="ihero-header reveal">
-      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> Industry</p>
+      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> Power Washing</p>
       <h1 class="ihero-heading">Power washing marketing that shows <span class="accent-lime">real results</span></h1>
       <p class="ihero-lead">Nothing sells power washing like a clean before/after. We build the website, local rankings, and ads that turn those results into a full schedule.</p>
     </header>

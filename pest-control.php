@@ -8,7 +8,7 @@ include __DIR__ . '/includes/header.php';
 <section class="ihero-section">
   <div class="ihero-box">
     <header class="ihero-header reveal">
-      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> Industry</p>
+      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> Pest Control</p>
       <h1 class="ihero-heading">Pest control marketing that builds <span class="accent-lime">recurring revenue</span></h1>
       <p class="ihero-lead">We help pest control companies win the first call and keep the customer - with a clear website, strong local rankings, and campaigns built around the seasons.</p>
     </header>
