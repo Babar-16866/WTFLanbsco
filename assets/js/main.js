@@ -2755,11 +2755,5 @@ document.addEventListener('click', (e) => {
 })();
 
 (function initTradeLinks() {
-  document.querySelectorAll('[data-trade-links] [data-industry]').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const value = btn.getAttribute('data-industry');
-      const target = value === 'all' ? '/works.php' : '/' + value + '.php';
-      if (location.pathname !== target) window.location.href = target;
-    });
-  });
+  document.querySelectorAll('[data-trade-links] [data-industry].is-active').forEach((btn) => btn.click());
 })();

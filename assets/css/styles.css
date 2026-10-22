@@ -13091,3 +13091,17 @@ html body .form-disclaimer a[href] {
     text-align: center;
   }
 }
+html[data-palette]:not(:has(.hero-section)) body .home-work-cta .works-show-more.btn {
+  --btn-grad: none;
+  background: var(--pal-gold, #C39B62);
+  border: 1px solid color-mix(in srgb, var(--pal-light, #FBF7EC) 22%, transparent);
+  color: var(--pal-dark, #10231B);
+}
+html[data-palette]:not(:has(.hero-section)) body .home-work-cta .works-show-more.btn:hover {
+  background: var(--pal-gold, #C39B62);
+  transform: translateY(-2px);
+}
+html[data-palette]:not(:has(.hero-section)) body .home-work-cta .works-show-more.btn::before,
+html[data-palette]:not(:has(.hero-section)) body .home-work-cta .works-show-more.btn::after {
+  content: none !important;
+}
