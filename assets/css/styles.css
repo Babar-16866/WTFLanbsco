@@ -12537,10 +12537,10 @@ html body :is(.btn-outline-white, .thank-btn-secondary).btn:is(:hover, :focus-vi
 }
 html,
 body {
-  cursor: url("/assets/images/cursor-arrow.svg") 4 3, auto;
+  cursor: url("/assets/images/cursor-arrow.svg") 22 13, auto;
 }
 :is(a[href], button:not(:disabled), [role="button"], summary, select, label[for], input[type="submit"], input[type="button"], input[type="checkbox"], input[type="radio"], input[type="file"], .btn, [data-open-popup], [data-open-step-popup], .nav-dropdown-btn > span, .faq-trigger, .budget-pills label, .check, .works-filter, .field .wtf-select-trigger, .wtf-select-option, .home-works-grid .work-card, .street-card--video, .form-step-dot.is-done, .contact-simple-form .cv-upload) {
-  cursor: url("/assets/images/cursor-pointer.svg") 11 3, pointer;
+  cursor: url("/assets/images/cursor-pointer.svg") 10 3, pointer;
 }
 :is(input:not([type]), input[type="text"], input[type="email"], input[type="tel"], input[type="url"], input[type="number"], input[type="search"], textarea) {
   cursor: text;
