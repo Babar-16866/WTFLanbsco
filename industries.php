@@ -5,18 +5,52 @@ $current_page = 'industries';
 include __DIR__ . '/includes/header.php';
 ?>
 
-<?php
-$banner_kicker = 'INDUSTRIES WE BUILD FOR';
-$banner_h1 = 'Different trades. Different customers. One rule: <span class="about-hero-accent">make quality obvious.</span>';
-$banner_lead = 'A homeowner planning a $50K remodel doesn\'t buy like someone with a broken AC. And neither buys like someone choosing a weekly pool service. We build websites and marketing around the way people actually hire businesses in your trade — not a one-size-fits-all contractor template.';
-$banner_primary_label = 'Claim Your FREE Audit';
-$banner_secondary_label = 'See Our Work';
-$banner_image = '/assets/images/industry-remodelers-1.webp';
-$banner_float1 = '/assets/images/industry-hvac-1.webp';
-$banner_float2 = '/assets/images/industry-roofing-1.webp';
-$banner_card = 'Local service growth — one senior pod.';
-include __DIR__ . '/includes/page-banner.php';
-?>
+<section class="ihero-section">
+  <div class="ihero-box">
+    <header class="ihero-header reveal">
+      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> INDUSTRIES WE BUILD FOR</p>
+      <h1 class="ihero-heading">Different trades. Different customers. One rule: <span class="accent-lime">make quality obvious.</span></h1>
+      <p class="ihero-lead">A homeowner planning a $50K remodel doesn&#x27;t buy like someone with a broken AC. And neither buys like someone choosing a weekly pool service. We build websites and marketing around the way people actually hire businesses in your trade — not a one-size-fits-all contractor template.</p>
+    </header>
+    <!--
+    <div class="about-hero-proof">
+      <div class="about-hero-proof-item">
+        <strong>400+</strong>
+        <span>projects</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>2018</strong>
+        <span>since</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>4.8</strong>
+        <span>rating</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>48+</strong>
+        <span>reviews</span>
+      </div>
+    </div>
+    -->
+    <div class="ihero-stage">
+      <div class="ihero-canvas">
+        <div class="ihero-side ihero-side-left">
+          <img src="/assets/images/hero-industries-left.webp" alt="">
+        </div>
+        <div class="ihero-side ihero-side-right">
+          <img src="/assets/images/hero-industries-right.webp" alt="">
+        </div>
+        <div class="ihero-banner">
+          <img src="/assets/images/hero-industries-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
+        </div>
+      </div>
+      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-popup><span class="ihero-primary-label">Claim Your FREE Audit</span></a>
+      <div class="ihero-secondary reveal reveal-delay-1">
+        <a href="/works.php" class="ihero-secondary-link"><span class="ihero-secondary-dot"></span><span class="ihero-secondary-text">See Our Work</span></a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="page-section">
   <div class="container">

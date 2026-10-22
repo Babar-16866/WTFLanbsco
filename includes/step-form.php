@@ -114,5 +114,6 @@ $step_form_ok_id = $step_form_ok_id ?? 'formOk';
           </div>
           -->
           <p class="form-ok hidden" id="<?php echo $step_form_ok_id; ?>">Thank you! Your submission has been received!</p>
+          <p class="form-disclaimer">By providing your phone number and submitting the form, you consent to be contacted by SMS and agree to our <a href="/privacy-policy.php#phone-number">Privacy Policy</a>. Message and data rates may apply.</p>
         </form>
 <?php unset($step_form_id, $step_form_source, $step_form_ok_id); ?>

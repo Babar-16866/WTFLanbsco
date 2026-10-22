@@ -5,19 +5,50 @@ $current_page = 'services';
 include __DIR__ . '/includes/header.php';
 ?>
 
-<?php
-$banner_breadcrumb = 'SEO';
-$banner_kicker = 'SEO + Local Search';
-$banner_h1 = 'Be easier to find when homeowners are <span class="about-hero-accent">ready to hire.</span>';
-$banner_lead = 'Technical SEO, service-area strategy, useful content, and conversion-focused pages built to increase qualified local visibility - not vanity traffic.';
-$banner_primary_label = 'Get a Free SEO + Website Audit';
-$banner_primary_step = true;
-$banner_image = '/assets/images/service-seo.jpg';
-$banner_float1 = '/assets/images/excel-landing.webp';
-$banner_float2 = '/assets/images/excel-design-system.webp';
-$banner_card = 'Rankings that turn into pipeline.';
-include __DIR__ . '/includes/page-banner.php';
-?>
+<section class="ihero-section">
+  <div class="ihero-box">
+    <header class="ihero-header reveal">
+      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> SEO + Local Search</p>
+      <h1 class="ihero-heading">Be easier to find when homeowners are <span class="accent-lime">ready to hire.</span></h1>
+      <p class="ihero-lead">Technical SEO, service-area strategy, useful content, and conversion-focused pages built to increase qualified local visibility - not vanity traffic.</p>
+    </header>
+    <!--
+    <div class="about-hero-proof">
+      <div class="about-hero-proof-item">
+        <strong>400+</strong>
+        <span>projects</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>2018</strong>
+        <span>since</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>4.8</strong>
+        <span>rating</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>48+</strong>
+        <span>reviews</span>
+      </div>
+    </div>
+    -->
+    <div class="ihero-stage">
+      <div class="ihero-canvas">
+        <div class="ihero-side ihero-side-left">
+          <img src="/assets/images/hero-seo-left.webp" alt="">
+        </div>
+        <div class="ihero-side ihero-side-right">
+          <img src="/assets/images/hero-seo-right.webp" alt="">
+        </div>
+        <div class="ihero-banner">
+          <img src="/assets/images/hero-seo-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
+        </div>
+      </div>
+      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-step-popup><span class="ihero-primary-label">Get a Free SEO + Website Audit</span></a>
+      <div class="ihero-secondary"></div>
+    </div>
+  </div>
+</section>
 
 
 <!-- WHY THIS SERVICE MATTERS -->

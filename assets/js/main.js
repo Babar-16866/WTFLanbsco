@@ -598,6 +598,7 @@ document.addEventListener('click', (e) => {
 
 
 // Custom theme cursor (desktop only)
+/*
 (function initCustomCursor() {
   const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
   const reduceMotion = { matches: false };
@@ -661,6 +662,7 @@ document.addEventListener('click', (e) => {
     requestAnimationFrame(tick);
   }
 })();
+*/
 
 
 // Content protection — right-click modal + block copy

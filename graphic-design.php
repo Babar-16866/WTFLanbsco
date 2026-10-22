@@ -5,20 +5,50 @@ $current_page = 'services';
 include __DIR__ . '/includes/header.php';
 ?>
 
-<?php
-$banner_breadcrumb = 'Graphic Design';
-$banner_kicker = 'BRANDING + CREATIVE';
-$banner_h1 = 'Look like the company customers <span class="about-hero-accent">expect to pay more for.</span>';
-$banner_lead = 'Brand systems and campaign creative that make your business feel established, consistent, and credible everywhere homeowners see you.';
-$banner_primary_label = 'Talk About Your Brand';
-$banner_primary_step = true;
-$banner_secondary_label = '';
-$banner_image = '/assets/images/service-graphic-design.jpg';
-$banner_float1 = '/assets/images/excel-branding.webp';
-$banner_float2 = '/assets/images/branding-2.webp';
-$banner_card = 'Identity systems that ship on-brand.';
-include __DIR__ . '/includes/page-banner.php';
-?>
+<section class="ihero-section">
+  <div class="ihero-box">
+    <header class="ihero-header reveal">
+      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> BRANDING + CREATIVE</p>
+      <h1 class="ihero-heading">Look like the company customers <span class="accent-lime">expect to pay more for.</span></h1>
+      <p class="ihero-lead">Brand systems and campaign creative that make your business feel established, consistent, and credible everywhere homeowners see you.</p>
+    </header>
+    <!--
+    <div class="about-hero-proof">
+      <div class="about-hero-proof-item">
+        <strong>400+</strong>
+        <span>projects</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>2018</strong>
+        <span>since</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>4.8</strong>
+        <span>rating</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>48+</strong>
+        <span>reviews</span>
+      </div>
+    </div>
+    -->
+    <div class="ihero-stage">
+      <div class="ihero-canvas">
+        <div class="ihero-side ihero-side-left">
+          <img src="/assets/images/hero-graphic-design-left.webp" alt="">
+        </div>
+        <div class="ihero-side ihero-side-right">
+          <img src="/assets/images/hero-graphic-design-right.webp" alt="">
+        </div>
+        <div class="ihero-banner">
+          <img src="/assets/images/hero-graphic-design-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
+        </div>
+      </div>
+      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-step-popup><span class="ihero-primary-label">Talk About Your Brand</span></a>
+      <div class="ihero-secondary"></div>
+    </div>
+  </div>
+</section>
 
 
 <!-- WHY THIS SERVICE MATTERS -->

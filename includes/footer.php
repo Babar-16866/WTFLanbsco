@@ -159,6 +159,7 @@ include __DIR__ . '/contact-section.php';
             <textarea name="message" rows="2" required placeholder="Goals, timeline, links, anything useful..."></textarea>
           </div>
           <button type="submit" class="btn btn-lime btn-block promo-popup-submit">Submit</button>
+          <p class="form-disclaimer">By providing your phone number and submitting the form, you consent to be contacted by SMS and agree to our <a href="/privacy-policy.php#phone-number">Privacy Policy</a>. Message and data rates may apply.</p>
         </form>
 
         <p class="promo-popup-ok" id="promoPopupOk" hidden>Thank you! Your submission has been received!</p>

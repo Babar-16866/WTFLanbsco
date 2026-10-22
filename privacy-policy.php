@@ -61,7 +61,10 @@ include __DIR__ . '/includes/header.php';
       <h2>10. Changes</h2>
       <p>We may update this Privacy Policy from time to time. The &ldquo;Last updated&rdquo; date at the top will reflect the latest revision.</p>
 
-      <h2>11. Contact</h2>
+      <h2 id="phone-number">11. Phone Number</h2>
+      <p>The phone numbers we collect and the consent we received will not be shared with 3rd party providers.</p>
+
+      <h2>12. Contact</h2>
       <p>Questions about this policy? Email <a href="mailto:info@wtflabsco.com">info@wtflabsco.com</a> or call <a href="tel:+15123379723">+1 (512) 337-9723</a>.</p>
     </article>
   </div>

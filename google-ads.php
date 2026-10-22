@@ -5,20 +5,50 @@ $current_page = 'services';
 include __DIR__ . '/includes/header.php';
 ?>
 
-<?php
-$banner_breadcrumb = 'Google Ads';
-$banner_kicker = 'HIGH-INTENT DEMAND';
-$banner_h1 = 'Show up when homeowners are <span class="about-hero-accent">actively looking to hire.</span>';
-$banner_lead = 'Search campaigns, landing pages, call tracking, and ongoing optimization built around qualified local leads - not meaningless click volume.';
-$banner_primary_label = 'Free Ads Strategy Consultation';
-$banner_primary_step = true;
-$banner_secondary_label = '';
-$banner_image = '/assets/images/excel-landing.webp';
-$banner_float1 = '/assets/images/mockup-2.webp';
-$banner_float2 = '/assets/images/work-kia.webp';
-$banner_card = 'Intent traffic. Clear attribution.';
-include __DIR__ . '/includes/page-banner.php';
-?>
+<section class="ihero-section">
+  <div class="ihero-box">
+    <header class="ihero-header reveal">
+      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> HIGH-INTENT DEMAND</p>
+      <h1 class="ihero-heading">Show up when homeowners are <span class="accent-lime">actively looking to hire.</span></h1>
+      <p class="ihero-lead">Search campaigns, landing pages, call tracking, and ongoing optimization built around qualified local leads - not meaningless click volume.</p>
+    </header>
+    <!--
+    <div class="about-hero-proof">
+      <div class="about-hero-proof-item">
+        <strong>400+</strong>
+        <span>projects</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>2018</strong>
+        <span>since</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>4.8</strong>
+        <span>rating</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>48+</strong>
+        <span>reviews</span>
+      </div>
+    </div>
+    -->
+    <div class="ihero-stage">
+      <div class="ihero-canvas">
+        <div class="ihero-side ihero-side-left">
+          <img src="/assets/images/hero-google-ads-left.webp" alt="">
+        </div>
+        <div class="ihero-side ihero-side-right">
+          <img src="/assets/images/hero-google-ads-right.webp" alt="">
+        </div>
+        <div class="ihero-banner">
+          <img src="/assets/images/hero-google-ads-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
+        </div>
+      </div>
+      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-step-popup><span class="ihero-primary-label">Free Ads Strategy Consultation</span></a>
+      <div class="ihero-secondary"></div>
+    </div>
+  </div>
+</section>
 
 
 <!-- WHY THIS SERVICE MATTERS -->

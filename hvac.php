@@ -5,21 +5,52 @@ $current_page = 'industries';
 include __DIR__ . '/includes/header.php';
 ?>
 
-<?php
-$banner_crumb_label = 'Industries';
-$banner_crumb_href = '/industries.php';
-$banner_breadcrumb = 'HVAC';
-$banner_kicker = 'Industry';
-$banner_h1 = 'HVAC marketing that keeps your trucks <span class="about-hero-accent">booked</span>';
-$banner_lead = 'From emergency AC repair to furnace installs and maintenance plans - we build the site, search presence, and ads that fill your schedule year-round.';
-$banner_primary_label = 'Free Consultation';
-$banner_secondary_label = 'See our work';
-$banner_image = '/assets/images/industry-hvac-1.webp';
-$banner_float1 = '/assets/images/industry-hvac-2.webp';
-$banner_float2 = '/assets/images/industry-hvac-3.webp';
-$banner_card = 'More service calls, fewer empty slots.';
-include __DIR__ . '/includes/page-banner.php';
-?>
+<section class="ihero-section">
+  <div class="ihero-box">
+    <header class="ihero-header reveal">
+      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> Industry</p>
+      <h1 class="ihero-heading">HVAC marketing that keeps your trucks <span class="accent-lime">booked</span></h1>
+      <p class="ihero-lead">From emergency AC repair to furnace installs and maintenance plans - we build the site, search presence, and ads that fill your schedule year-round.</p>
+    </header>
+    <!--
+    <div class="about-hero-proof">
+      <div class="about-hero-proof-item">
+        <strong>400+</strong>
+        <span>projects</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>2018</strong>
+        <span>since</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>4.8</strong>
+        <span>rating</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>48+</strong>
+        <span>reviews</span>
+      </div>
+    </div>
+    -->
+    <div class="ihero-stage">
+      <div class="ihero-canvas">
+        <div class="ihero-side ihero-side-left">
+          <img src="/assets/images/hero-hvac-left.webp" alt="">
+        </div>
+        <div class="ihero-side ihero-side-right">
+          <img src="/assets/images/hero-hvac-right.webp" alt="">
+        </div>
+        <div class="ihero-banner">
+          <img src="/assets/images/hero-hvac-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
+        </div>
+      </div>
+      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-popup><span class="ihero-primary-label">Free Consultation</span></a>
+      <div class="ihero-secondary reveal reveal-delay-1">
+        <a href="/works.php" class="ihero-secondary-link"><span class="ihero-secondary-dot"></span><span class="ihero-secondary-text">See our work</span></a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="page-section industry-nav-section">
   <div class="container">

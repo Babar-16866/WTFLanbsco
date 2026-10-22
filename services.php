@@ -5,17 +5,53 @@ $current_page = 'services';
 include __DIR__ . '/includes/header.php';
 ?>
 
-<?php
-$banner_kicker = 'WEB + MARKETING UNDER ONE ROOF';
-$banner_h1 = 'Everything your digital presence needs to look stronger, work smarter, <span class="about-hero-accent">and win better jobs.</span>';
-$banner_lead = 'Premium websites, local search, paid media, creative, and tracking built as one connected system for quality home-service businesses.';
-$banner_primary_label = 'Free Consultation';
-$banner_primary_step = true;
-$banner_image = '/assets/images/service-web-design.jpg';
-$banner_float1 = '/assets/images/service-graphic-design.jpg';
-$banner_float2 = '/assets/images/service-social-media.jpg';
-include __DIR__ . '/includes/page-banner.php';
-?>
+<section class="ihero-section">
+  <div class="ihero-box">
+    <header class="ihero-header reveal">
+      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> WEB + MARKETING UNDER ONE ROOF</p>
+      <h1 class="ihero-heading" aria-label="Everything your digital presence needs to look stronger, work smarter, win better jobs.">
+          <span aria-hidden="true">Everything your digital presence needs to look</span> <br class="ihero-heading-br">
+          <span class="accent-lime typewriter" data-typewriter="stronger|work smarter|win better jobs." aria-hidden="true"></span>
+        </h1>
+      <p class="ihero-lead">Premium websites, local search, paid media, creative, and tracking built as one connected system for quality home-service businesses.</p>
+    </header>
+    <!--
+    <div class="about-hero-proof">
+      <div class="about-hero-proof-item">
+        <strong>400+</strong>
+        <span>projects</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>2018</strong>
+        <span>since</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>4.8</strong>
+        <span>rating</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>48+</strong>
+        <span>reviews</span>
+      </div>
+    </div>
+    -->
+    <div class="ihero-stage">
+      <div class="ihero-canvas">
+        <div class="ihero-side ihero-side-left">
+          <img src="/assets/images/hero-services-left.webp" alt="">
+        </div>
+        <div class="ihero-side ihero-side-right">
+          <img src="/assets/images/hero-services-right.webp" alt="">
+        </div>
+        <div class="ihero-banner">
+          <img src="/assets/images/hero-services-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
+        </div>
+      </div>
+      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-step-popup><span class="ihero-primary-label">Free Consultation</span></a>
+      <div class="ihero-secondary"></div>
+    </div>
+  </div>
+</section>
 
 <!-- SERVICES SHOWCASE -->
 <section class="svc-showcase" id="featured-services">

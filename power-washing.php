@@ -5,21 +5,52 @@ $current_page = 'industries';
 include __DIR__ . '/includes/header.php';
 ?>
 
-<?php
-$banner_crumb_label = 'Industries';
-$banner_crumb_href = '/industries.php';
-$banner_breadcrumb = 'Power Washing';
-$banner_kicker = 'Industry';
-$banner_h1 = 'Power washing marketing that shows <span class="about-hero-accent">real results</span>';
-$banner_lead = 'Nothing sells power washing like a clean before/after. We build the website, local rankings, and ads that turn those results into a full schedule.';
-$banner_primary_label = 'Free Consultation';
-$banner_secondary_label = 'See our work';
-$banner_image = '/assets/images/industry-power-washing-1.webp';
-$banner_float1 = '/assets/images/industry-power-washing-2.webp';
-$banner_float2 = '/assets/images/industry-power-washing-3.webp';
-$banner_card = 'Before/after proof that books jobs.';
-include __DIR__ . '/includes/page-banner.php';
-?>
+<section class="ihero-section">
+  <div class="ihero-box">
+    <header class="ihero-header reveal">
+      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> Industry</p>
+      <h1 class="ihero-heading">Power washing marketing that shows <span class="accent-lime">real results</span></h1>
+      <p class="ihero-lead">Nothing sells power washing like a clean before/after. We build the website, local rankings, and ads that turn those results into a full schedule.</p>
+    </header>
+    <!--
+    <div class="about-hero-proof">
+      <div class="about-hero-proof-item">
+        <strong>400+</strong>
+        <span>projects</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>2018</strong>
+        <span>since</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>4.8</strong>
+        <span>rating</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>48+</strong>
+        <span>reviews</span>
+      </div>
+    </div>
+    -->
+    <div class="ihero-stage">
+      <div class="ihero-canvas">
+        <div class="ihero-side ihero-side-left">
+          <img src="/assets/images/hero-power-washing-left.webp" alt="">
+        </div>
+        <div class="ihero-side ihero-side-right">
+          <img src="/assets/images/hero-power-washing-right.webp" alt="">
+        </div>
+        <div class="ihero-banner">
+          <img src="/assets/images/hero-power-washing-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
+        </div>
+      </div>
+      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-popup><span class="ihero-primary-label">Free Consultation</span></a>
+      <div class="ihero-secondary reveal reveal-delay-1">
+        <a href="/works.php" class="ihero-secondary-link"><span class="ihero-secondary-dot"></span><span class="ihero-secondary-text">See our work</span></a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="page-section industry-nav-section">
   <div class="container">

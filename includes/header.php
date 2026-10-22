@@ -59,15 +59,15 @@ require_once __DIR__ . '/config.php';
         <li class="nav-dropdown">
           <a href="/industries.php" class="nav-dropdown-btn"<?php echo $current_page === 'industries' ? ' aria-current="page"' : ''; ?>>Industries <span>&#9662;</span></a>
           <div class="nav-dropdown-menu">
-            <a href="/industries.php#remodelers">Remodeling</a>
-            <a href="/industries.php#hvac">HVAC</a>
-            <a href="/industries.php#landscaping">Landscaping</a>
-            <a href="/industries.php#roofing">Roofing</a>
-            <a href="/industries.php#plumbing">Plumbing</a>
-            <a href="/industries.php#pool-services">Pool Services</a>
-            <a href="/industries.php#power-washing">Power Washing</a>
-            <a href="/industries.php#handyman">Handyman</a>
-            <a href="/industries.php#pest-control">Pest Control</a>
+            <a href="/remodelers.php">Remodeling</a>
+            <a href="/hvac.php">HVAC</a>
+            <a href="/landscaping.php">Landscaping</a>
+            <a href="/roofing.php">Roofing</a>
+            <a href="/plumbing.php">Plumbing</a>
+            <a href="/pool-services.php">Pool Services</a>
+            <a href="/power-washing.php">Power Washing</a>
+            <a href="/handyman.php">Handyman</a>
+            <a href="/pest-control.php">Pest Control</a>
           </div>
         </li>
         <li><a href="/works.php"<?php echo $current_page === 'works' ? ' aria-current="page"' : ''; ?>>Work</a></li>

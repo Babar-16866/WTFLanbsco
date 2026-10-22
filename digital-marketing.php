@@ -5,20 +5,50 @@ $current_page = 'services';
 include __DIR__ . '/includes/header.php';
 ?>
 
-<?php
-$banner_breadcrumb = 'Digital Marketing';
-$banner_kicker = 'FULL-FUNNEL DIGITAL MARKETING';
-$banner_h1 = 'Stop managing <span class="about-hero-accent">disconnected marketing.</span>';
-$banner_lead = 'Website, search, paid media, creative, and measurement under one senior team - so every channel reinforces the same positioning and lead goals.';
-$banner_primary_label = 'Get a Free Marketing Audit';
-$banner_primary_step = true;
-$banner_secondary_label = '';
-$banner_image = '/assets/images/service-google-ads.jpg';
-$banner_float1 = '/assets/images/service-digital-marketing.jpg';
-$banner_float2 = '/assets/images/excel-spatial.webp';
-$banner_card = 'One team. One growth system.';
-include __DIR__ . '/includes/page-banner.php';
-?>
+<section class="ihero-section">
+  <div class="ihero-box">
+    <header class="ihero-header reveal">
+      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> FULL-FUNNEL DIGITAL MARKETING</p>
+      <h1 class="ihero-heading">Stop managing <span class="accent-lime">disconnected marketing.</span></h1>
+      <p class="ihero-lead">Website, search, paid media, creative, and measurement under one senior team - so every channel reinforces the same positioning and lead goals.</p>
+    </header>
+    <!--
+    <div class="about-hero-proof">
+      <div class="about-hero-proof-item">
+        <strong>400+</strong>
+        <span>projects</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>2018</strong>
+        <span>since</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>4.8</strong>
+        <span>rating</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>48+</strong>
+        <span>reviews</span>
+      </div>
+    </div>
+    -->
+    <div class="ihero-stage">
+      <div class="ihero-canvas">
+        <div class="ihero-side ihero-side-left">
+          <img src="/assets/images/hero-digital-marketing-left.webp" alt="">
+        </div>
+        <div class="ihero-side ihero-side-right">
+          <img src="/assets/images/hero-digital-marketing-right.webp" alt="">
+        </div>
+        <div class="ihero-banner">
+          <img src="/assets/images/hero-digital-marketing-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
+        </div>
+      </div>
+      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-step-popup><span class="ihero-primary-label">Get a Free Marketing Audit</span></a>
+      <div class="ihero-secondary"></div>
+    </div>
+  </div>
+</section>
 
 
 <!-- WHY THIS SERVICE MATTERS -->

@@ -5,20 +5,52 @@ $current_page = 'about';
 include __DIR__ . '/includes/header.php';
 ?>
 
-<?php
-$banner_kicker = 'ABOUT WTF LABS';
-$banner_h1 = 'The team you wish you\'d <span class="about-hero-accent">hired the first time.</span>';
-$banner_lead = 'You\'ve got crews to manage, jobs to finish and customers to look after. You don\'t need to manage your agency too. We built WTF Labs around senior-level craft, straight answers and people who stick with the work from the first conversation to launch, and beyond.';
-$banner_primary_label = 'Talk to Us';
-$banner_secondary_label = 'See Our Work';
-$banner_secondary_href = '/works.php';
-$banner_proof = [['400+', 'projects'], ['2018', 'since'], ['4.8', 'rating'], ['0', 'churn']];
-$banner_image = '/assets/images/people-main.jpg';
-$banner_float1 = '/assets/images/team-1.jpg';
-$banner_float2 = '/assets/images/team-2.jpg';
-$banner_card = 'Same senior crew from strategy to launch';
-include __DIR__ . '/includes/page-banner.php';
-?>
+<section class="ihero-section">
+  <div class="ihero-box">
+    <header class="ihero-header reveal">
+      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> ABOUT WTF LABS</p>
+      <h1 class="ihero-heading">The team you wish you'd <span class="accent-lime">hired the first time.</span></h1>
+      <p class="ihero-lead">You&#x27;ve got crews to manage, jobs to finish and customers to look after. You don&#x27;t need to manage your agency too. We built WTF Labs around senior-level craft, straight answers and people who stick with the work from the first conversation to launch, and beyond.</p>
+    </header>
+    <!--
+    <div class="about-hero-proof">
+      <div class="about-hero-proof-item">
+        <strong>400+</strong>
+        <span>projects</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>2018</strong>
+        <span>since</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>4.8</strong>
+        <span>rating</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>0</strong>
+        <span>churn</span>
+      </div>
+    </div>
+    -->
+    <div class="ihero-stage">
+      <div class="ihero-canvas">
+        <div class="ihero-side ihero-side-left">
+          <img src="/assets/images/hero-about-left.webp" alt="">
+        </div>
+        <div class="ihero-side ihero-side-right">
+          <img src="/assets/images/hero-about-right.webp" alt="">
+        </div>
+        <div class="ihero-banner">
+          <img src="/assets/images/hero-about-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
+        </div>
+      </div>
+      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-popup><span class="ihero-primary-label">Talk to Us</span></a>
+      <div class="ihero-secondary reveal reveal-delay-1">
+        <a href="/works.php" class="ihero-secondary-link"><span class="ihero-secondary-dot"></span><span class="ihero-secondary-text">See Our Work</span></a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="page-section about-page">
   <div class="container">

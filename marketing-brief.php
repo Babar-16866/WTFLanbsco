@@ -6,20 +6,52 @@ $hide_contact_section = true;
 include __DIR__ . '/includes/header.php';
 ?>
 
-<?php
-$banner_kicker = 'Marketing Brief';
-$banner_h1 = 'Plan marketing that brings <span class="about-hero-accent">real leads</span>';
-$banner_lead = 'Share your goals, market, and current channels. We\'ll come back with a focused plan for SEO, Google Ads, and social — built around booked jobs, not vanity metrics.';
-$banner_primary_label = 'Fill out the brief';
-$banner_primary_href = '#brief-form';
-$banner_primary_popup = false;
-$banner_secondary_label = 'See our work';
-$banner_image = '/assets/images/service-digital-marketing.jpg';
-$banner_float1 = '/assets/images/service-google-ads.jpg';
-$banner_float2 = '/assets/images/service-social-media.jpg';
-$banner_card = 'Channels tied to booked jobs.';
-include __DIR__ . '/includes/page-banner.php';
-?>
+<section class="ihero-section">
+  <div class="ihero-box">
+    <header class="ihero-header reveal">
+      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> Marketing Brief</p>
+      <h1 class="ihero-heading">Plan marketing that brings <span class="accent-lime">real leads</span></h1>
+      <p class="ihero-lead">Share your goals, market, and current channels. We&#x27;ll come back with a focused plan for SEO, Google Ads, and social — built around booked jobs, not vanity metrics.</p>
+    </header>
+    <!--
+    <div class="about-hero-proof">
+      <div class="about-hero-proof-item">
+        <strong>400+</strong>
+        <span>projects</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>2018</strong>
+        <span>since</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>4.8</strong>
+        <span>rating</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>48+</strong>
+        <span>reviews</span>
+      </div>
+    </div>
+    -->
+    <div class="ihero-stage">
+      <div class="ihero-canvas">
+        <div class="ihero-side ihero-side-left">
+          <img src="/assets/images/hero-marketing-brief-left.webp" alt="">
+        </div>
+        <div class="ihero-side ihero-side-right">
+          <img src="/assets/images/hero-marketing-brief-right.webp" alt="">
+        </div>
+        <div class="ihero-banner">
+          <img src="/assets/images/hero-marketing-brief-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
+        </div>
+      </div>
+      <a href="#brief-form" class="ihero-primary reveal reveal-delay-3"><span class="ihero-primary-label">Fill out the brief</span></a>
+      <div class="ihero-secondary reveal reveal-delay-1">
+        <a href="/works.php" class="ihero-secondary-link"><span class="ihero-secondary-dot"></span><span class="ihero-secondary-text">See our work</span></a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="page-section contact-page-section" id="brief-form">
   <div class="container">
@@ -185,6 +217,7 @@ include __DIR__ . '/includes/page-banner.php';
             <span>I agree to the <a href="/privacy-policy.php">Privacy Policy</a> and <a href="/terms-and-conditions.php">Terms of use</a>.</span>
           </label>
           <button type="submit" class="btn btn-lime btn-lg btn-block">Send marketing brief</button>
+          <p class="form-disclaimer">By providing your phone number and submitting the form, you consent to be contacted by SMS and agree to our <a href="/privacy-policy.php#phone-number">Privacy Policy</a>. Message and data rates may apply.</p>
         </form>
       </div>
     </div>

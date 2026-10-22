@@ -5,21 +5,52 @@ $current_page = 'industries';
 include __DIR__ . '/includes/header.php';
 ?>
 
-<?php
-$banner_crumb_label = 'Industries';
-$banner_crumb_href = '/industries.php';
-$banner_breadcrumb = 'Remodeling';
-$banner_kicker = 'Industry';
-$banner_h1 = 'Remodeling marketing that wins <span class="about-hero-accent">bigger jobs</span>';
-$banner_lead = 'Websites, local SEO, and ads that show off your craftsmanship and bring in homeowners ready to invest in a kitchen, bath, or full remodel.';
-$banner_primary_label = 'Free Consultation';
-$banner_secondary_label = 'See our work';
-$banner_image = '/assets/images/industry-remodelers-1.webp';
-$banner_float1 = '/assets/images/industry-remodelers-2.webp';
-$banner_float2 = '/assets/images/industry-remodelers-3.webp';
-$banner_card = 'Portfolios that sell the next remodel.';
-include __DIR__ . '/includes/page-banner.php';
-?>
+<section class="ihero-section">
+  <div class="ihero-box">
+    <header class="ihero-header reveal">
+      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> Industry</p>
+      <h1 class="ihero-heading">Remodeling marketing that wins <span class="accent-lime">bigger jobs</span></h1>
+      <p class="ihero-lead">Websites, local SEO, and ads that show off your craftsmanship and bring in homeowners ready to invest in a kitchen, bath, or full remodel.</p>
+    </header>
+    <!--
+    <div class="about-hero-proof">
+      <div class="about-hero-proof-item">
+        <strong>400+</strong>
+        <span>projects</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>2018</strong>
+        <span>since</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>4.8</strong>
+        <span>rating</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>48+</strong>
+        <span>reviews</span>
+      </div>
+    </div>
+    -->
+    <div class="ihero-stage">
+      <div class="ihero-canvas">
+        <div class="ihero-side ihero-side-left">
+          <img src="/assets/images/hero-remodelers-left.webp" alt="">
+        </div>
+        <div class="ihero-side ihero-side-right">
+          <img src="/assets/images/hero-remodelers-right.webp" alt="">
+        </div>
+        <div class="ihero-banner">
+          <img src="/assets/images/hero-remodelers-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
+        </div>
+      </div>
+      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-popup><span class="ihero-primary-label">Free Consultation</span></a>
+      <div class="ihero-secondary reveal reveal-delay-1">
+        <a href="/works.php" class="ihero-secondary-link"><span class="ihero-secondary-dot"></span><span class="ihero-secondary-text">See our work</span></a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="page-section industry-nav-section">
   <div class="container">

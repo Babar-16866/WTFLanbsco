@@ -5,21 +5,52 @@ $current_page = 'industries';
 include __DIR__ . '/includes/header.php';
 ?>
 
-<?php
-$banner_crumb_label = 'Industries';
-$banner_crumb_href = '/industries.php';
-$banner_breadcrumb = 'Pool Services';
-$banner_kicker = 'Industry';
-$banner_h1 = 'Pool service marketing that grows your <span class="about-hero-accent">routes</span>';
-$banner_lead = 'We help pool companies fill weekly routes, sell equipment upgrades, and stay booked through openings, closings, and repair season.';
-$banner_primary_label = 'Free Consultation';
-$banner_secondary_label = 'See our work';
-$banner_image = '/assets/images/industry-pool-services-1.webp';
-$banner_float1 = '/assets/images/industry-pool-services-2.webp';
-$banner_float2 = '/assets/images/industry-pool-services-3.webp';
-$banner_card = 'Fuller routes, steadier revenue.';
-include __DIR__ . '/includes/page-banner.php';
-?>
+<section class="ihero-section">
+  <div class="ihero-box">
+    <header class="ihero-header reveal">
+      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> Industry</p>
+      <h1 class="ihero-heading">Pool service marketing that grows your <span class="accent-lime">routes</span></h1>
+      <p class="ihero-lead">We help pool companies fill weekly routes, sell equipment upgrades, and stay booked through openings, closings, and repair season.</p>
+    </header>
+    <!--
+    <div class="about-hero-proof">
+      <div class="about-hero-proof-item">
+        <strong>400+</strong>
+        <span>projects</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>2018</strong>
+        <span>since</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>4.8</strong>
+        <span>rating</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>48+</strong>
+        <span>reviews</span>
+      </div>
+    </div>
+    -->
+    <div class="ihero-stage">
+      <div class="ihero-canvas">
+        <div class="ihero-side ihero-side-left">
+          <img src="/assets/images/hero-pool-services-left.webp" alt="">
+        </div>
+        <div class="ihero-side ihero-side-right">
+          <img src="/assets/images/hero-pool-services-right.webp" alt="">
+        </div>
+        <div class="ihero-banner">
+          <img src="/assets/images/hero-pool-services-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
+        </div>
+      </div>
+      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-popup><span class="ihero-primary-label">Free Consultation</span></a>
+      <div class="ihero-secondary reveal reveal-delay-1">
+        <a href="/works.php" class="ihero-secondary-link"><span class="ihero-secondary-dot"></span><span class="ihero-secondary-text">See our work</span></a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="page-section industry-nav-section">
   <div class="container">

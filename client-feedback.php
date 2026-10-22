@@ -6,20 +6,52 @@ $hide_contact_section = true;
 include __DIR__ . '/includes/header.php';
 ?>
 
-<?php
-$banner_kicker = 'Client Feedback';
-$banner_h1 = 'How did we <span class="about-hero-accent">do?</span>';
-$banner_lead = 'Your honest feedback shapes how we work. Tell us what went well, what didn\'t, and what we should do differently next time.';
-$banner_primary_label = 'Share feedback';
-$banner_primary_href = '#feedback-form';
-$banner_primary_popup = false;
-$banner_secondary_label = 'See our work';
-$banner_image = '/assets/images/people-collab.jpg';
-$banner_float1 = '/assets/images/team-2.jpg';
-$banner_float2 = '/assets/images/team-3.jpg';
-$banner_card = 'Every answer is read by the team.';
-include __DIR__ . '/includes/page-banner.php';
-?>
+<section class="ihero-section">
+  <div class="ihero-box">
+    <header class="ihero-header reveal">
+      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> Client Feedback</p>
+      <h1 class="ihero-heading">How did we <span class="accent-lime">do?</span></h1>
+      <p class="ihero-lead">Your honest feedback shapes how we work. Tell us what went well, what didn&#x27;t, and what we should do differently next time.</p>
+    </header>
+    <!--
+    <div class="about-hero-proof">
+      <div class="about-hero-proof-item">
+        <strong>400+</strong>
+        <span>projects</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>2018</strong>
+        <span>since</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>4.8</strong>
+        <span>rating</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>48+</strong>
+        <span>reviews</span>
+      </div>
+    </div>
+    -->
+    <div class="ihero-stage">
+      <div class="ihero-canvas">
+        <div class="ihero-side ihero-side-left">
+          <img src="/assets/images/hero-client-feedback-left.webp" alt="">
+        </div>
+        <div class="ihero-side ihero-side-right">
+          <img src="/assets/images/hero-client-feedback-right.webp" alt="">
+        </div>
+        <div class="ihero-banner">
+          <img src="/assets/images/hero-client-feedback-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
+        </div>
+      </div>
+      <a href="#feedback-form" class="ihero-primary reveal reveal-delay-3"><span class="ihero-primary-label">Share feedback</span></a>
+      <div class="ihero-secondary reveal reveal-delay-1">
+        <a href="/works.php" class="ihero-secondary-link"><span class="ihero-secondary-dot"></span><span class="ihero-secondary-text">See our work</span></a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="page-section contact-page-section" id="feedback-form">
   <div class="container">
@@ -154,6 +186,7 @@ include __DIR__ . '/includes/page-banner.php';
             <span>I agree to the <a href="/privacy-policy.php">Privacy Policy</a> and <a href="/terms-and-conditions.php">Terms of use</a>.</span>
           </label>
           <button type="submit" class="btn btn-lime btn-lg btn-block">Send feedback</button>
+          <p class="form-disclaimer">By providing your phone number and submitting the form, you consent to be contacted by SMS and agree to our <a href="/privacy-policy.php#phone-number">Privacy Policy</a>. Message and data rates may apply.</p>
         </form>
       </div>
     </div>

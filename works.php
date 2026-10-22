@@ -5,19 +5,52 @@ $current_page = 'works';
 include __DIR__ . '/includes/header.php';
 ?>
 
-<?php
-$banner_kicker = 'Our work';
-$banner_h1 = 'These sites are live. And they <span class="about-hero-accent">deliver</span>.';
-$banner_lead = 'From MVPs to platforms, from startups to global brands — every case designed from scratch. No templates. No shortcuts.';
-$banner_primary_label = 'Start a project';
-$banner_secondary_label = 'Our services';
-$banner_secondary_href = '/services.php';
-$banner_image = '/assets/images/mockup-main.webp';
-$banner_float1 = '/assets/images/mockup-3.webp';
-$banner_float2 = '/assets/images/excel-mobile.webp';
-$banner_card = 'Real launches. Real results. No templates.';
-include __DIR__ . '/includes/page-banner.php';
-?>
+<section class="ihero-section">
+  <div class="ihero-box">
+    <header class="ihero-header reveal">
+      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> Our work</p>
+      <h1 class="ihero-heading">These sites are live. And they <span class="accent-lime">deliver</span>.</h1>
+      <p class="ihero-lead">From MVPs to platforms, from startups to global brands — every case designed from scratch. No templates. No shortcuts.</p>
+    </header>
+    <!--
+    <div class="about-hero-proof">
+      <div class="about-hero-proof-item">
+        <strong>400+</strong>
+        <span>projects</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>2018</strong>
+        <span>since</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>4.8</strong>
+        <span>rating</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>48+</strong>
+        <span>reviews</span>
+      </div>
+    </div>
+    -->
+    <div class="ihero-stage">
+      <div class="ihero-canvas">
+        <div class="ihero-side ihero-side-left">
+          <img src="/assets/images/hero-works-left.webp" alt="">
+        </div>
+        <div class="ihero-side ihero-side-right">
+          <img src="/assets/images/hero-works-right.webp" alt="">
+        </div>
+        <div class="ihero-banner">
+          <img src="/assets/images/hero-works-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
+        </div>
+      </div>
+      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-popup><span class="ihero-primary-label">Start a project</span></a>
+      <div class="ihero-secondary reveal reveal-delay-1">
+        <a href="/services.php" class="ihero-secondary-link"><span class="ihero-secondary-dot"></span><span class="ihero-secondary-text">Our services</span></a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <?php /*
 <section class="page-section">

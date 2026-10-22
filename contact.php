@@ -5,20 +5,53 @@ $current_page = 'contact';
 include __DIR__ . '/includes/header.php';
 ?>
 
-<?php
-$banner_kicker = 'LET\'S TALK ABOUT YOUR NEXT MOVE';
-$banner_h1 = 'Tell us what\'s not working. <span class="about-hero-accent">We\'ll help you find the fix.</span>';
-$banner_lead = 'Maybe your website looks ten years behind your actual work. Maybe the phone isn\'t ringing enough. Maybe you\'re getting leads, just not the ones worth your crews\' time. Whatever the bottleneck, start here. We\'ll listen, ask the right questions and tell you what makes sense next.';
-$banner_primary_label = 'Claim Your FREE Audit';
-$banner_secondary_label = 'Prefer to Talk? Contact Us';
-$banner_secondary_href = 'tel:+15123379723';
-$banner_micro = 'Real replies, usually within one business day.';
-$banner_image = '/assets/images/people-office.jpg';
-$banner_float1 = '/assets/images/team-1.jpg';
-$banner_float2 = '/assets/images/team-3.jpg';
-$banner_card = 'One senior team. Clear next steps.';
-include __DIR__ . '/includes/page-banner.php';
-?>
+<section class="ihero-section">
+  <div class="ihero-box">
+    <header class="ihero-header reveal">
+      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> LET&#x27;S TALK ABOUT YOUR NEXT MOVE</p>
+      <h1 class="ihero-heading">Tell us what's not working. <span class="accent-lime">We'll help you find the fix.</span></h1>
+      <p class="ihero-lead">Maybe your website looks ten years behind your actual work. Maybe the phone isn&#x27;t ringing enough. Maybe you&#x27;re getting leads, just not the ones worth your crews&#x27; time. Whatever the bottleneck, start here. We&#x27;ll listen, ask the right questions and tell you what makes sense next.</p>
+      <p class="ihero-micro">Real replies, usually within one business day.</p>
+    </header>
+    <!--
+    <div class="about-hero-proof">
+      <div class="about-hero-proof-item">
+        <strong>400+</strong>
+        <span>projects</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>2018</strong>
+        <span>since</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>4.8</strong>
+        <span>rating</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>48+</strong>
+        <span>reviews</span>
+      </div>
+    </div>
+    -->
+    <div class="ihero-stage">
+      <div class="ihero-canvas">
+        <div class="ihero-side ihero-side-left">
+          <img src="/assets/images/hero-contact-left.webp" alt="">
+        </div>
+        <div class="ihero-side ihero-side-right">
+          <img src="/assets/images/hero-contact-right.webp" alt="">
+        </div>
+        <div class="ihero-banner">
+          <img src="/assets/images/hero-contact-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
+        </div>
+      </div>
+      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-popup><span class="ihero-primary-label">Claim Your FREE Audit</span></a>
+      <div class="ihero-secondary reveal reveal-delay-1">
+        <a href="tel:+15123379723" class="ihero-secondary-link"><span class="ihero-secondary-dot"></span><span class="ihero-secondary-text">Prefer to Talk? Contact Us</span></a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="page-section contact-page-section">
   <div class="container">
@@ -232,6 +265,7 @@ include __DIR__ . '/includes/page-banner.php';
           </div>
           <button type="submit" class="btn btn-lime btn-lg btn-block">Let's Figure This Out</button>
           <p class="contact-form-micro">No spam. No surprise sales marathon. Just a practical next step.</p>
+          <p class="form-disclaimer">By providing your phone number and submitting the form, you consent to be contacted by SMS and agree to our <a href="/privacy-policy.php#phone-number">Privacy Policy</a>. Message and data rates may apply.</p>
         </form>
       </div>
     </div>

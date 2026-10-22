@@ -5,21 +5,52 @@ $current_page = 'insights';
 include __DIR__ . '/includes/header.php';
 ?>
 
-<?php
-$banner_kicker = 'Insights';
-$banner_h1 = 'Straight talk on <span class="about-hero-accent">growth</span>';
-$banner_lead = 'Practical playbooks for local service businesses — what wins the call, the booking, and the bigger job. No fluff, just what we see working.';
-$banner_primary_label = 'Get a free consultation';
-$banner_primary_href = '/contact.php';
-$banner_primary_popup = false;
-$banner_primary_step = true;
-$banner_secondary_label = 'See our work';
-$banner_image = '/assets/images/industry-remodelers-2.webp';
-$banner_float1 = '/assets/images/industry-hvac-1.webp';
-$banner_float2 = '/assets/images/industry-pool-services-1.webp';
-$banner_card = 'Lessons from real local campaigns.';
-include __DIR__ . '/includes/page-banner.php';
-?>
+<section class="ihero-section">
+  <div class="ihero-box">
+    <header class="ihero-header reveal">
+      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> Insights</p>
+      <h1 class="ihero-heading">Straight talk on <span class="accent-lime">growth</span></h1>
+      <p class="ihero-lead">Practical playbooks for local service businesses — what wins the call, the booking, and the bigger job. No fluff, just what we see working.</p>
+    </header>
+    <!--
+    <div class="about-hero-proof">
+      <div class="about-hero-proof-item">
+        <strong>400+</strong>
+        <span>projects</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>2018</strong>
+        <span>since</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>4.8</strong>
+        <span>rating</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>48+</strong>
+        <span>reviews</span>
+      </div>
+    </div>
+    -->
+    <div class="ihero-stage">
+      <div class="ihero-canvas">
+        <div class="ihero-side ihero-side-left">
+          <img src="/assets/images/hero-insights-left.webp" alt="">
+        </div>
+        <div class="ihero-side ihero-side-right">
+          <img src="/assets/images/hero-insights-right.webp" alt="">
+        </div>
+        <div class="ihero-banner">
+          <img src="/assets/images/hero-insights-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
+        </div>
+      </div>
+      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-step-popup><span class="ihero-primary-label">Get a free consultation</span></a>
+      <div class="ihero-secondary reveal reveal-delay-1">
+        <a href="/works.php" class="ihero-secondary-link"><span class="ihero-secondary-dot"></span><span class="ihero-secondary-text">See our work</span></a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="page-section" id="top-insights">
   <div class="container">

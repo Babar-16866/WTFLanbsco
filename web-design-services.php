@@ -5,20 +5,52 @@ $current_page = 'services';
 include __DIR__ . '/includes/header.php';
 ?>
 
-<?php
-$banner_breadcrumb = 'Web Design';
-$banner_kicker = 'PREMIUM WEB DESIGN + DEVELOPMENT';
-$banner_h1 = 'Make the right first impression. <span class="about-hero-accent">Then make it count.</span>';
-$banner_lead = 'Your website should do more than look expensive. It should make your quality obvious, help people trust you, and turn interest into the next call, estimate, booking or sale. We build distinctive, high-performing digital experiences around how your customers actually choose.';
-$banner_primary_label = 'Claim Your FREE Website Audit';
-$banner_primary_step = true;
-$banner_secondary_label = 'See Our Work';
-$banner_secondary_href = '/works.php';
-$banner_image = '/assets/images/wd-hero.jpg';
-$banner_float1 = '/assets/images/wd-float-1.jpg';
-$banner_float2 = '/assets/images/wd-float-2.jpg';
-include __DIR__ . '/includes/page-banner.php';
-?>
+<section class="ihero-section">
+  <div class="ihero-box">
+    <header class="ihero-header reveal">
+      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> PREMIUM WEB DESIGN + DEVELOPMENT</p>
+      <h1 class="ihero-heading">Make the right first impression. <span class="accent-lime">Then make it count.</span></h1>
+      <p class="ihero-lead">Your website should do more than look expensive. It should make your quality obvious, help people trust you, and turn interest into the next call, estimate, booking or sale. We build distinctive, high-performing digital experiences around how your customers actually choose.</p>
+    </header>
+    <!--
+    <div class="about-hero-proof">
+      <div class="about-hero-proof-item">
+        <strong>400+</strong>
+        <span>projects</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>2018</strong>
+        <span>since</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>4.8</strong>
+        <span>rating</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>48+</strong>
+        <span>reviews</span>
+      </div>
+    </div>
+    -->
+    <div class="ihero-stage">
+      <div class="ihero-canvas">
+        <div class="ihero-side ihero-side-left">
+          <img src="/assets/images/hero-web-design-services-left.webp" alt="">
+        </div>
+        <div class="ihero-side ihero-side-right">
+          <img src="/assets/images/hero-web-design-services-right.webp" alt="">
+        </div>
+        <div class="ihero-banner">
+          <img src="/assets/images/hero-web-design-services-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
+        </div>
+      </div>
+      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-step-popup><span class="ihero-primary-label">Claim Your FREE Website Audit</span></a>
+      <div class="ihero-secondary reveal reveal-delay-1">
+        <a href="/works.php" class="ihero-secondary-link"><span class="ihero-secondary-dot"></span><span class="ihero-secondary-text">See Our Work</span></a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- NICHE STRIP -->
 <section class="niche-strip" aria-label="Industries we serve">

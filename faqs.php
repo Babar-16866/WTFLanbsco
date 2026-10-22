@@ -5,19 +5,52 @@ $current_page = 'faqs';
 include __DIR__ . '/includes/header.php';
 ?>
 
-<?php
-$banner_kicker = 'FAQs';
-$banner_h1 = 'Still have <span class="about-hero-accent">questions?</span>';
-$banner_lead = 'Straight answers on pricing, process, platforms, timelines, and how we work — the questions we hear most often.';
-$banner_primary_label = 'Ask us anything';
-$banner_secondary_label = 'See services';
-$banner_secondary_href = '/services.php';
-$banner_image = '/assets/images/faq-main.jpg';
-$banner_float1 = '/assets/images/mockup-3.webp';
-$banner_float2 = '/assets/images/product-ui.webp';
-$banner_card = 'Clear answers. No fluff. Senior team.';
-include __DIR__ . '/includes/page-banner.php';
-?>
+<section class="ihero-section">
+  <div class="ihero-box">
+    <header class="ihero-header reveal">
+      <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> FAQs</p>
+      <h1 class="ihero-heading">Still have <span class="accent-lime">questions?</span></h1>
+      <p class="ihero-lead">Straight answers on pricing, process, platforms, timelines, and how we work — the questions we hear most often.</p>
+    </header>
+    <!--
+    <div class="about-hero-proof">
+      <div class="about-hero-proof-item">
+        <strong>400+</strong>
+        <span>projects</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>2018</strong>
+        <span>since</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>4.8</strong>
+        <span>rating</span>
+      </div>
+      <div class="about-hero-proof-item">
+        <strong>48+</strong>
+        <span>reviews</span>
+      </div>
+    </div>
+    -->
+    <div class="ihero-stage">
+      <div class="ihero-canvas">
+        <div class="ihero-side ihero-side-left">
+          <img src="/assets/images/hero-faqs-left.webp" alt="">
+        </div>
+        <div class="ihero-side ihero-side-right">
+          <img src="/assets/images/hero-faqs-right.webp" alt="">
+        </div>
+        <div class="ihero-banner">
+          <img src="/assets/images/hero-faqs-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
+        </div>
+      </div>
+      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-popup><span class="ihero-primary-label">Ask us anything</span></a>
+      <div class="ihero-secondary reveal reveal-delay-1">
+        <a href="/services.php" class="ihero-secondary-link"><span class="ihero-secondary-dot"></span><span class="ihero-secondary-text">See services</span></a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="faq-section faq-page-section" id="faqs">
   <div class="container">
