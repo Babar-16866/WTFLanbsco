@@ -46,7 +46,7 @@ include __DIR__ . '/includes/header.php';
       </div>
       <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-step-popup><span class="ihero-primary-label">Get Your Free Website Audit</span></a>
       <div class="ihero-secondary reveal reveal-delay-1">
-        <a href="/works.php" class="ihero-secondary-link"><span class="ihero-secondary-dot"></span><span class="ihero-secondary-text">See Our Work</span></a>
+        <a href="/works.php" class="btn btn-outline-white btn-lg">See Our Work</a>
       </div>
     </div>
   </div>

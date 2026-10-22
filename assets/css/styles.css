@@ -12886,3 +12886,7 @@ html body .form-disclaimer a[href] {
     text-align: center;
   }
 }
+.ihero-secondary {
+  width: auto;
+  max-width: none;
+}
