@@ -54,10 +54,10 @@ include __DIR__ . '/includes/header.php';
 
 <section class="page-section industry-nav-section">
   <div class="container">
-    <div class="works-filter-stack works-filter-stack--center home-filter-stack" data-industry-nav data-current="handyman">
+    <div class="works-filter-stack works-filter-stack--center home-filter-stack" data-trade-links>
       <div class="home-filter-row is-done">
         <p class="home-filter-label">Select the Industry and services</p>
-        <div class="works-filters" id="indIndustries" role="tablist" aria-label="Filter by industry">
+        <div class="works-filters" id="homeWorksIndustries" role="tablist" aria-label="Filter by industry">
           <button type="button" class="works-filter" data-industry="all" role="tab" aria-selected="false">Featured</button>
           <button type="button" class="works-filter" data-industry="remodelers" role="tab" aria-selected="false">Remodeling</button>
           <button type="button" class="works-filter" data-industry="hvac" role="tab" aria-selected="false">HVAC</button>
@@ -71,7 +71,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </div>
       <div class="home-filter-row">
-        <div class="works-filters" id="indServices" role="tablist" aria-label="Filter by service">
+        <div class="works-filters" id="homeWorksFilters" role="tablist" aria-label="Filter by service">
           <button type="button" class="works-filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
           <button type="button" class="works-filter" data-filter="web-development" role="tab" aria-selected="false">Web Design</button>
           <button type="button" class="works-filter" data-filter="seo" role="tab" aria-selected="false">SEO</button>
@@ -81,11 +81,255 @@ include __DIR__ . '/includes/header.php';
       </div>
       <div class="home-filter-row">
         <span class="home-filter-label" aria-hidden="true"></span>
-        <div class="works-subfilters" id="indSubs" role="tablist" aria-label="Filter by subcategory" hidden></div>
+        <div class="works-subfilters" id="homeWorksSubfilters" role="tablist" aria-label="Filter by subcategory" hidden></div>
+      </div>
+    </div>
+
+    <div class="works-grid home-works-grid reveal" id="homeWorksGrid" data-smooth>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wix" data-industries="handyman" data-live="https://www.columbushandyman.net/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-columbus-handyman.webp" alt="Columbus Handyman">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Columbus, OH</span>
+            <span>Wix</span>
+          </div>
+          <h2>Columbus Handyman</h2>
+          <p>A Wix site for a licensed Central Ohio handyman and general contractor with 21+ years of experience.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="handyman" data-live="https://kwhandymanmiamifl.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-kw-handyman.webp" alt="KW Handyman">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Miami, FL</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>KW Handyman</h2>
+          <p>A custom-built site for a Miami handyman and facility management company with nationwide reach.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="handyman" data-live="/live-preview?site=tri-miami-handyman-services">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-tri-miami-handyman-services.webp" alt="TRI Miami Handyman Services">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Miami, FL</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>TRI Miami Handyman Services</h2>
+          <p>A custom-built site for a Miami-Dade remodeling and property improvement company.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="handyman" data-live="https://prohandymanmia.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-pro-handyman-miami.webp" alt="Pro Handyman Miami">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Miami, FL</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Pro Handyman Miami</h2>
+          <p>A WordPress site for a Miami-Dade handyman voted best in Miami, covering repairs and maintenance.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="handyman" data-live="https://allin1dallas.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-all-in-1-handy-man.webp" alt="All In 1 Handy Man">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Dallas, TX</span>
+            <span>WordPress</span>
+          </div>
+          <h2>All In 1 Handy Man</h2>
+          <p>A WordPress site for a Dallas and Richardson handyman with a quick service request form.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="handyman" data-live="https://h2gservices.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-h2g-handyman-services.webp" alt="H2G Handyman Services">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Irving, TX</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>H2G Handyman Services</h2>
+          <p>A custom-built site for an Irving handyman offering TV mounting, assembly, painting and repairs.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="handyman" data-live="https://hprohandyman.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-h-pro-handyman.webp" alt="H-PRO Handyman">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Florida</span>
+            <span>WordPress</span>
+          </div>
+          <h2>H-PRO Handyman</h2>
+          <p>A WordPress site for a handyman specializing in TV mounting, furniture assembly and hanging services.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="handyman" data-live="/live-preview?site=extreme-handyman-services">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-extreme-handyman-services.webp" alt="Extreme Handyman Services">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Sacramento, CA</span>
+            <span>Squarespace</span>
+          </div>
+          <h2>Extreme Handyman Services</h2>
+          <p>A Squarespace site for a Sacramento handyman providing reliable home repairs since 2006.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="handyman" data-live="https://thehandymansflive.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-the-handyman-sf.webp" alt="The Handyman SF">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>San Francisco, CA</span>
+            <span>WordPress</span>
+          </div>
+          <h2>The Handyman SF</h2>
+          <p>A WordPress site for a same-day San Francisco handyman with text-to-quote booking.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="handyman" data-live="https://fullhousepros.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-fullhouse-pros.webp" alt="Fullhouse Pros">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>San Francisco Bay Area</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Fullhouse Pros</h2>
+          <p>A WordPress site for a Bay Area remodeling and handyman company built around fast estimates.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="handyman" data-live="https://imthatguyhandyman.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-i-m-that-guy-handyman.webp" alt="I’m That Guy Handyman">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Tulsa, OK</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>I’m That Guy Handyman</h2>
+          <p>A custom-built site for a family-owned Jenks and Tulsa handyman with 240+ five-star reviews.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="handyman" data-live="https://extremehandyman.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-extreme-handyman-service.webp" alt="Extreme Handyman® Service">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Seattle, WA</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Extreme Handyman® Service</h2>
+          <p>A WordPress site for a licensed Seattle and Bellevue handyman with 30+ years of experience.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <p class="home-works-empty" id="homeWorksGridEmpty" hidden>More projects in this category are coming soon.</p>
+
+    <div class="home-work-cta"></div>
+  </div>
+</section>
+
+<div class="work-modal" id="workModal" hidden>
+  <div class="work-modal-backdrop" data-work-close></div>
+  <div class="work-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="workModalTitle">
+    <button class="work-modal-close" type="button" data-work-close aria-label="Close">&times;</button>
+    <div class="work-modal-scroll">
+      <div class="work-modal-media">
+        <img loading="lazy" id="workModalImg" src="" alt="">
+      </div>
+      <div class="work-modal-body">
+        <p class="work-modal-eyebrow" id="workModalEyebrow"></p>
+        <h3 id="workModalTitle"></h3>
+        <div class="work-card-meta work-modal-meta" id="workModalMeta"></div>
+        <p class="work-modal-text" id="workModalText"></p>
+        <div class="work-card-tags work-modal-tags" id="workModalTags"></div>
+        <div class="work-modal-actions">
+          <a href="/contact.php" class="btn btn-lime" data-open-popup>Start a similar project</a>
+          <a href="/works.php" class="text-link-blue">See all work &rarr;</a>
+        </div>
       </div>
     </div>
   </div>
-</section>
+</div>
+
+<div class="live-modal" id="liveModal" hidden>
+  <div class="live-modal-backdrop" data-live-close></div>
+  <div class="live-modal-dialog" role="dialog" aria-modal="true" aria-label="Live website preview">
+    <button class="live-modal-close" type="button" data-live-close aria-label="Close">&times;</button>
+    <div class="live-modal-loader" aria-hidden="true"><span></span></div>
+    <div class="live-modal-progress" aria-hidden="true"></div>
+    <iframe class="live-modal-frame" id="liveModalFrame" title="Live website preview" src="about:blank"></iframe>
+  </div>
+</div>
 
 <section class="svc-section svc-work">
   <div class="container">

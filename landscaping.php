@@ -54,10 +54,10 @@ include __DIR__ . '/includes/header.php';
 
 <section class="page-section industry-nav-section">
   <div class="container">
-    <div class="works-filter-stack works-filter-stack--center home-filter-stack" data-industry-nav data-current="landscaping">
+    <div class="works-filter-stack works-filter-stack--center home-filter-stack" data-trade-links>
       <div class="home-filter-row is-done">
         <p class="home-filter-label">Select the Industry and services</p>
-        <div class="works-filters" id="indIndustries" role="tablist" aria-label="Filter by industry">
+        <div class="works-filters" id="homeWorksIndustries" role="tablist" aria-label="Filter by industry">
           <button type="button" class="works-filter" data-industry="all" role="tab" aria-selected="false">Featured</button>
           <button type="button" class="works-filter" data-industry="remodelers" role="tab" aria-selected="false">Remodeling</button>
           <button type="button" class="works-filter" data-industry="hvac" role="tab" aria-selected="false">HVAC</button>
@@ -71,7 +71,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </div>
       <div class="home-filter-row">
-        <div class="works-filters" id="indServices" role="tablist" aria-label="Filter by service">
+        <div class="works-filters" id="homeWorksFilters" role="tablist" aria-label="Filter by service">
           <button type="button" class="works-filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
           <button type="button" class="works-filter" data-filter="web-development" role="tab" aria-selected="false">Web Design</button>
           <button type="button" class="works-filter" data-filter="seo" role="tab" aria-selected="false">SEO</button>
@@ -81,11 +81,119 @@ include __DIR__ . '/includes/header.php';
       </div>
       <div class="home-filter-row">
         <span class="home-filter-label" aria-hidden="true"></span>
-        <div class="works-subfilters" id="indSubs" role="tablist" aria-label="Filter by subcategory" hidden></div>
+        <div class="works-subfilters" id="homeWorksSubfilters" role="tablist" aria-label="Filter by subcategory" hidden></div>
+      </div>
+    </div>
+
+    <div class="works-grid home-works-grid reveal" id="homeWorksGrid" data-smooth>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="landscaping" data-live="https://www.handmlandscaping.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-handm-landscaping.webp" alt="H&amp;M Landscaping">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Flint, MI</span>
+            <span>Squarespace</span>
+          </div>
+          <h2>H&amp;M Landscaping</h2>
+          <p>A Squarespace site for a Genesee County landscaper covering design, construction and maintenance.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="landscaping" data-live="https://landscapedesignhouston.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-texan-landscape-group.webp" alt="Texan Landscape Group">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Houston, TX</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>Texan Landscape Group</h2>
+          <p>A full-service landscaping site for a Houston design-build-maintain team, with project stats and quote paths.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="landscaping" data-live="https://www.2galslandscaping.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-2-gals-landscaping.webp" alt="2 Gals Landscaping">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Houston, TX</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>2 Gals Landscaping</h2>
+          <p>An elegant site for a Houston landscaping and construction company focused on native gardens and hardscaping.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="landscaping" data-live="https://evergreenlawncaretx.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-evergreen-outdoor.webp" alt="Evergreen Outdoor">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Houston, TX</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Evergreen Outdoor</h2>
+          <p>A WordPress site for a Houston lawn care company, with an estimate form right in the hero.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <p class="home-works-empty" id="homeWorksGridEmpty" hidden>More projects in this category are coming soon.</p>
+
+    <div class="home-work-cta"></div>
+  </div>
+</section>
+
+<div class="work-modal" id="workModal" hidden>
+  <div class="work-modal-backdrop" data-work-close></div>
+  <div class="work-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="workModalTitle">
+    <button class="work-modal-close" type="button" data-work-close aria-label="Close">&times;</button>
+    <div class="work-modal-scroll">
+      <div class="work-modal-media">
+        <img loading="lazy" id="workModalImg" src="" alt="">
+      </div>
+      <div class="work-modal-body">
+        <p class="work-modal-eyebrow" id="workModalEyebrow"></p>
+        <h3 id="workModalTitle"></h3>
+        <div class="work-card-meta work-modal-meta" id="workModalMeta"></div>
+        <p class="work-modal-text" id="workModalText"></p>
+        <div class="work-card-tags work-modal-tags" id="workModalTags"></div>
+        <div class="work-modal-actions">
+          <a href="/contact.php" class="btn btn-lime" data-open-popup>Start a similar project</a>
+          <a href="/works.php" class="text-link-blue">See all work &rarr;</a>
+        </div>
       </div>
     </div>
   </div>
-</section>
+</div>
+
+<div class="live-modal" id="liveModal" hidden>
+  <div class="live-modal-backdrop" data-live-close></div>
+  <div class="live-modal-dialog" role="dialog" aria-modal="true" aria-label="Live website preview">
+    <button class="live-modal-close" type="button" data-live-close aria-label="Close">&times;</button>
+    <div class="live-modal-loader" aria-hidden="true"><span></span></div>
+    <div class="live-modal-progress" aria-hidden="true"></div>
+    <iframe class="live-modal-frame" id="liveModalFrame" title="Live website preview" src="about:blank"></iframe>
+  </div>
+</div>
 
 <section class="svc-section svc-work">
   <div class="container">

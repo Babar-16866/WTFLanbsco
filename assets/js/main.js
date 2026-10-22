@@ -2753,3 +2753,13 @@ document.addEventListener('click', (e) => {
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(align);
   });
 })();
+
+(function initTradeLinks() {
+  document.querySelectorAll('[data-trade-links] [data-industry]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const value = btn.getAttribute('data-industry');
+      const target = value === 'all' ? '/works.php' : '/' + value + '.php';
+      if (location.pathname !== target) window.location.href = target;
+    });
+  });
+})();

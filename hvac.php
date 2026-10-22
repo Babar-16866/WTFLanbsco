@@ -54,10 +54,10 @@ include __DIR__ . '/includes/header.php';
 
 <section class="page-section industry-nav-section">
   <div class="container">
-    <div class="works-filter-stack works-filter-stack--center home-filter-stack" data-industry-nav data-current="hvac">
+    <div class="works-filter-stack works-filter-stack--center home-filter-stack" data-trade-links>
       <div class="home-filter-row is-done">
         <p class="home-filter-label">Select the Industry and services</p>
-        <div class="works-filters" id="indIndustries" role="tablist" aria-label="Filter by industry">
+        <div class="works-filters" id="homeWorksIndustries" role="tablist" aria-label="Filter by industry">
           <button type="button" class="works-filter" data-industry="all" role="tab" aria-selected="false">Featured</button>
           <button type="button" class="works-filter" data-industry="remodelers" role="tab" aria-selected="false">Remodeling</button>
           <button type="button" class="works-filter is-active" data-industry="hvac" role="tab" aria-selected="true">HVAC</button>
@@ -71,7 +71,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </div>
       <div class="home-filter-row">
-        <div class="works-filters" id="indServices" role="tablist" aria-label="Filter by service">
+        <div class="works-filters" id="homeWorksFilters" role="tablist" aria-label="Filter by service">
           <button type="button" class="works-filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
           <button type="button" class="works-filter" data-filter="web-development" role="tab" aria-selected="false">Web Design</button>
           <button type="button" class="works-filter" data-filter="seo" role="tab" aria-selected="false">SEO</button>
@@ -81,11 +81,170 @@ include __DIR__ . '/includes/header.php';
       </div>
       <div class="home-filter-row">
         <span class="home-filter-label" aria-hidden="true"></span>
-        <div class="works-subfilters" id="indSubs" role="tablist" aria-label="Filter by subcategory" hidden></div>
+        <div class="works-subfilters" id="homeWorksSubfilters" role="tablist" aria-label="Filter by subcategory" hidden></div>
+      </div>
+    </div>
+
+    <div class="works-grid home-works-grid reveal" id="homeWorksGrid" data-smooth>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="hvac" data-live="https://www.paragonmechanical.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-paragon-mechanical.webp" alt="Paragon Mechanical">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Silicon Valley, CA</span>
+            <span>Squarespace</span>
+          </div>
+          <h2>Paragon Mechanical</h2>
+          <p>A Squarespace site for a full-service Silicon Valley mechanical, HVAC and plumbing contractor.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wix" data-industries="hvac" data-live="https://www.airbossheatingandcooling.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-airboss-heating-and-cooling.webp" alt="Airboss Heating &amp; Cooling">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>North Carolina</span>
+            <span>Wix</span>
+          </div>
+          <h2>Airboss Heating &amp; Cooling</h2>
+          <p>A Wix site for a certified North Carolina HVAC service and installation company.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="hvac" data-live="https://www.davisair.net/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-davis-air-conditioning-and-heating.webp" alt="Davis Air Conditioning &amp; Heating">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Clermont, FL</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Davis Air Conditioning &amp; Heating</h2>
+          <p>A WordPress site for a family-owned Clermont HVAC company with free estimates.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="hvac" data-live="https://www.tanousnj.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-tanous-hvac.webp" alt="Tanous HVAC">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Hoboken, NJ</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Tanous HVAC</h2>
+          <p>A WordPress site for a family-owned Hudson County HVAC company answering calls 24/7.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="hvac" data-live="https://kalosflorida.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/industry-hvac-3.webp" alt="Kalos Services">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Central Florida</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Kalos Services</h2>
+          <p>A WordPress site for a family-owned HVAC, electrical and plumbing company in Central Florida.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="hvac" data-live="https://www.aircorheatingcooling.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-aircor-heating-and-cooling.webp" alt="Aircor Heating &amp; Cooling">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Chicago, IL</span>
+            <span>Squarespace</span>
+          </div>
+          <h2>Aircor Heating &amp; Cooling</h2>
+          <p>A Squarespace site for a Chicago HVAC company focused on comfort and healthy air.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="hvac" data-live="https://www.alexandersheating.com/?utm_source=direct&amp;utm_medium=none&amp;utm_campaign=Direct">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-alexander-s-heating-and-ac.webp" alt="Alexander’s Heating &amp; AC">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Redmond, WA</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Alexander’s Heating &amp; AC</h2>
+          <p>A WordPress site for an Eastside HVAC company with online booking and service requests.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <p class="home-works-empty" id="homeWorksGridEmpty" hidden>More projects in this category are coming soon.</p>
+
+    <div class="home-work-cta"></div>
+  </div>
+</section>
+
+<div class="work-modal" id="workModal" hidden>
+  <div class="work-modal-backdrop" data-work-close></div>
+  <div class="work-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="workModalTitle">
+    <button class="work-modal-close" type="button" data-work-close aria-label="Close">&times;</button>
+    <div class="work-modal-scroll">
+      <div class="work-modal-media">
+        <img loading="lazy" id="workModalImg" src="" alt="">
+      </div>
+      <div class="work-modal-body">
+        <p class="work-modal-eyebrow" id="workModalEyebrow"></p>
+        <h3 id="workModalTitle"></h3>
+        <div class="work-card-meta work-modal-meta" id="workModalMeta"></div>
+        <p class="work-modal-text" id="workModalText"></p>
+        <div class="work-card-tags work-modal-tags" id="workModalTags"></div>
+        <div class="work-modal-actions">
+          <a href="/contact.php" class="btn btn-lime" data-open-popup>Start a similar project</a>
+          <a href="/works.php" class="text-link-blue">See all work &rarr;</a>
+        </div>
       </div>
     </div>
   </div>
-</section>
+</div>
+
+<div class="live-modal" id="liveModal" hidden>
+  <div class="live-modal-backdrop" data-live-close></div>
+  <div class="live-modal-dialog" role="dialog" aria-modal="true" aria-label="Live website preview">
+    <button class="live-modal-close" type="button" data-live-close aria-label="Close">&times;</button>
+    <div class="live-modal-loader" aria-hidden="true"><span></span></div>
+    <div class="live-modal-progress" aria-hidden="true"></div>
+    <iframe class="live-modal-frame" id="liveModalFrame" title="Live website preview" src="about:blank"></iframe>
+  </div>
+</div>
 
 <section class="svc-section svc-work">
   <div class="container">

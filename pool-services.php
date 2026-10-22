@@ -54,10 +54,10 @@ include __DIR__ . '/includes/header.php';
 
 <section class="page-section industry-nav-section">
   <div class="container">
-    <div class="works-filter-stack works-filter-stack--center home-filter-stack" data-industry-nav data-current="pool-services">
+    <div class="works-filter-stack works-filter-stack--center home-filter-stack" data-trade-links>
       <div class="home-filter-row is-done">
         <p class="home-filter-label">Select the Industry and services</p>
-        <div class="works-filters" id="indIndustries" role="tablist" aria-label="Filter by industry">
+        <div class="works-filters" id="homeWorksIndustries" role="tablist" aria-label="Filter by industry">
           <button type="button" class="works-filter" data-industry="all" role="tab" aria-selected="false">Featured</button>
           <button type="button" class="works-filter" data-industry="remodelers" role="tab" aria-selected="false">Remodeling</button>
           <button type="button" class="works-filter" data-industry="hvac" role="tab" aria-selected="false">HVAC</button>
@@ -71,7 +71,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </div>
       <div class="home-filter-row">
-        <div class="works-filters" id="indServices" role="tablist" aria-label="Filter by service">
+        <div class="works-filters" id="homeWorksFilters" role="tablist" aria-label="Filter by service">
           <button type="button" class="works-filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
           <button type="button" class="works-filter" data-filter="web-development" role="tab" aria-selected="false">Web Design</button>
           <button type="button" class="works-filter" data-filter="seo" role="tab" aria-selected="false">SEO</button>
@@ -81,11 +81,136 @@ include __DIR__ . '/includes/header.php';
       </div>
       <div class="home-filter-row">
         <span class="home-filter-label" aria-hidden="true"></span>
-        <div class="works-subfilters" id="indSubs" role="tablist" aria-label="Filter by subcategory" hidden></div>
+        <div class="works-subfilters" id="homeWorksSubfilters" role="tablist" aria-label="Filter by subcategory" hidden></div>
+      </div>
+    </div>
+
+    <div class="works-grid home-works-grid reveal" id="homeWorksGrid" data-smooth>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="pool-services" data-live="https://southtexaspooltilecleaning.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-south-texas-pool-tile-cleaning.webp" alt="South Texas Pool Tile Cleaning">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>San Antonio, TX</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>South Texas Pool Tile Cleaning</h2>
+          <p>A bold site for a San Antonio pool tile cleaning, repair and resurfacing specialist with free estimates.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="pool-services" data-live="/live-preview?site=summit-pool-and-spa">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-summit-pool-and-spa.webp" alt="Summit Pool &amp; Spa">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>East Bay, CA</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Summit Pool &amp; Spa</h2>
+          <p>A WordPress site for an East Bay pool service focused on consistent maintenance and clear communication.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="pool-services" data-live="/live-preview?site=asa-pools-and-hot-tubs">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-asa-pools-and-hot-tubs.webp" alt="ASA Pools &amp; Hot Tubs">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Seattle, WA</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>ASA Pools &amp; Hot Tubs</h2>
+          <p>A custom-built site for a Seattle pool and hot tub service with a quote form in the first screen.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="pool-services" data-live="https://slcpoolservice.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/industry-pool-services-2.webp" alt="SLC Pool Service">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Salt Lake City, UT</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>SLC Pool Service</h2>
+          <p>A fast custom site for a family-owned Utah pool repair, maintenance and diagnostics company.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="pool-services" data-live="https://www.aqualecu.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-aqua-lecu-pool-services.webp" alt="Aqua Lecu Pool Services">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Orlando, FL</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>Aqua Lecu Pool Services</h2>
+          <p>A clean site for an Orlando pool cleaning company with no contracts and free estimates.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <p class="home-works-empty" id="homeWorksGridEmpty" hidden>More projects in this category are coming soon.</p>
+
+    <div class="home-work-cta"></div>
+  </div>
+</section>
+
+<div class="work-modal" id="workModal" hidden>
+  <div class="work-modal-backdrop" data-work-close></div>
+  <div class="work-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="workModalTitle">
+    <button class="work-modal-close" type="button" data-work-close aria-label="Close">&times;</button>
+    <div class="work-modal-scroll">
+      <div class="work-modal-media">
+        <img loading="lazy" id="workModalImg" src="" alt="">
+      </div>
+      <div class="work-modal-body">
+        <p class="work-modal-eyebrow" id="workModalEyebrow"></p>
+        <h3 id="workModalTitle"></h3>
+        <div class="work-card-meta work-modal-meta" id="workModalMeta"></div>
+        <p class="work-modal-text" id="workModalText"></p>
+        <div class="work-card-tags work-modal-tags" id="workModalTags"></div>
+        <div class="work-modal-actions">
+          <a href="/contact.php" class="btn btn-lime" data-open-popup>Start a similar project</a>
+          <a href="/works.php" class="text-link-blue">See all work &rarr;</a>
+        </div>
       </div>
     </div>
   </div>
-</section>
+</div>
+
+<div class="live-modal" id="liveModal" hidden>
+  <div class="live-modal-backdrop" data-live-close></div>
+  <div class="live-modal-dialog" role="dialog" aria-modal="true" aria-label="Live website preview">
+    <button class="live-modal-close" type="button" data-live-close aria-label="Close">&times;</button>
+    <div class="live-modal-loader" aria-hidden="true"><span></span></div>
+    <div class="live-modal-progress" aria-hidden="true"></div>
+    <iframe class="live-modal-frame" id="liveModalFrame" title="Live website preview" src="about:blank"></iframe>
+  </div>
+</div>
 
 <section class="svc-section svc-work">
   <div class="container">

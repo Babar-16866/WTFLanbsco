@@ -54,10 +54,10 @@ include __DIR__ . '/includes/header.php';
 
 <section class="page-section industry-nav-section">
   <div class="container">
-    <div class="works-filter-stack works-filter-stack--center home-filter-stack" data-industry-nav data-current="plumbing">
+    <div class="works-filter-stack works-filter-stack--center home-filter-stack" data-trade-links>
       <div class="home-filter-row is-done">
         <p class="home-filter-label">Select the Industry and services</p>
-        <div class="works-filters" id="indIndustries" role="tablist" aria-label="Filter by industry">
+        <div class="works-filters" id="homeWorksIndustries" role="tablist" aria-label="Filter by industry">
           <button type="button" class="works-filter" data-industry="all" role="tab" aria-selected="false">Featured</button>
           <button type="button" class="works-filter" data-industry="remodelers" role="tab" aria-selected="false">Remodeling</button>
           <button type="button" class="works-filter" data-industry="hvac" role="tab" aria-selected="false">HVAC</button>
@@ -71,7 +71,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </div>
       <div class="home-filter-row">
-        <div class="works-filters" id="indServices" role="tablist" aria-label="Filter by service">
+        <div class="works-filters" id="homeWorksFilters" role="tablist" aria-label="Filter by service">
           <button type="button" class="works-filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
           <button type="button" class="works-filter" data-filter="web-development" role="tab" aria-selected="false">Web Design</button>
           <button type="button" class="works-filter" data-filter="seo" role="tab" aria-selected="false">SEO</button>
@@ -81,11 +81,221 @@ include __DIR__ . '/includes/header.php';
       </div>
       <div class="home-filter-row">
         <span class="home-filter-label" aria-hidden="true"></span>
-        <div class="works-subfilters" id="indSubs" role="tablist" aria-label="Filter by subcategory" hidden></div>
+        <div class="works-subfilters" id="homeWorksSubfilters" role="tablist" aria-label="Filter by subcategory" hidden></div>
+      </div>
+    </div>
+
+    <div class="works-grid home-works-grid reveal" id="homeWorksGrid" data-smooth>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="plumbing" data-live="https://edwardsplumbingllc.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-edwards-plumbing.webp" alt="Edwards Plumbing">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Phoenix, AZ</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Edwards Plumbing</h2>
+          <p>A WordPress site for a family-owned Phoenix-area plumbing company with free estimates.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="plumbing" data-live="/live-preview?site=mns-plumbing">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-mns-plumbing.webp" alt="MNS Plumbing">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Anthem, AZ</span>
+            <span>Squarespace</span>
+          </div>
+          <h2>MNS Plumbing</h2>
+          <p>A Squarespace site for an Anthem plumbing company offering same-day repairs and installations.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="plumbing" data-live="https://www.uniplumb.com.au/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-uniplumb.webp" alt="Uniplumb">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Sunshine Coast, AU</span>
+            <span>Squarespace</span>
+          </div>
+          <h2>Uniplumb</h2>
+          <p>A clean Squarespace site for a Sunshine Coast plumbing, drainage and renovation company.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="plumbing" data-live="https://reliantplumbing.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/industry-plumbing-3.webp" alt="Reliant Plumbing">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Austin, TX</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Reliant Plumbing</h2>
+          <p>A WordPress site for a 24/7 Texas plumbing company with online booking and free estimates.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="plumbing" data-live="https://beyondwow.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-beyond-wow-plumbing.webp" alt="Beyond Wow Plumbing">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Austin, TX</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Beyond Wow Plumbing</h2>
+          <p>A bold WordPress site for Austin’s trusted plumber since 1980, with 4,600+ reviews.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="plumbing" data-live="https://www.plumbersthatcare.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-economy-plumbing-services.webp" alt="Economy Plumbing Services">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Austin, TX</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>Economy Plumbing Services</h2>
+          <p>A custom-built site for master plumbers serving Austin and Marble Falls since 2012.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="plumbing" data-live="https://oandmplumbing.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-o-and-m-plumbing.webp" alt="O &amp; M Plumbing">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Pflugerville, TX</span>
+            <span>WordPress</span>
+          </div>
+          <h2>O &amp; M Plumbing</h2>
+          <p>A WordPress site for a Pflugerville and Austin plumber handling residential and commercial work.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="plumbing" data-live="https://miamidadeplumbingcompany.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-miami-dade-plumbing.webp" alt="Miami Dade Plumbing">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Miami, FL</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>Miami Dade Plumbing</h2>
+          <p>A custom-built site for a mobile Miami-Dade plumber covering leaks, drains and water heaters 24/7.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="plumbing" data-live="https://sunlandplumbing.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-sunland-plumbing.webp" alt="Sunland Plumbing">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Austin, TX</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Sunland Plumbing</h2>
+          <p>A WordPress site for Austin’s water heater specialists with upfront, all-in pricing.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="plumbing" data-live="https://captainplumbertx.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-captain-plumber.webp" alt="Captain Plumber">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Dripping Springs, TX</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Captain Plumber</h2>
+          <p>A bold WordPress site for a locally owned Dripping Springs plumber offering same-day service.</p>
+          <div class="work-card-tags">
+            <a href="/web-design.php">Web Design</a>
+            <a href="/web-development.php">Web Development</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <p class="home-works-empty" id="homeWorksGridEmpty" hidden>More projects in this category are coming soon.</p>
+
+    <div class="home-work-cta"></div>
+  </div>
+</section>
+
+<div class="work-modal" id="workModal" hidden>
+  <div class="work-modal-backdrop" data-work-close></div>
+  <div class="work-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="workModalTitle">
+    <button class="work-modal-close" type="button" data-work-close aria-label="Close">&times;</button>
+    <div class="work-modal-scroll">
+      <div class="work-modal-media">
+        <img loading="lazy" id="workModalImg" src="" alt="">
+      </div>
+      <div class="work-modal-body">
+        <p class="work-modal-eyebrow" id="workModalEyebrow"></p>
+        <h3 id="workModalTitle"></h3>
+        <div class="work-card-meta work-modal-meta" id="workModalMeta"></div>
+        <p class="work-modal-text" id="workModalText"></p>
+        <div class="work-card-tags work-modal-tags" id="workModalTags"></div>
+        <div class="work-modal-actions">
+          <a href="/contact.php" class="btn btn-lime" data-open-popup>Start a similar project</a>
+          <a href="/works.php" class="text-link-blue">See all work &rarr;</a>
+        </div>
       </div>
     </div>
   </div>
-</section>
+</div>
+
+<div class="live-modal" id="liveModal" hidden>
+  <div class="live-modal-backdrop" data-live-close></div>
+  <div class="live-modal-dialog" role="dialog" aria-modal="true" aria-label="Live website preview">
+    <button class="live-modal-close" type="button" data-live-close aria-label="Close">&times;</button>
+    <div class="live-modal-loader" aria-hidden="true"><span></span></div>
+    <div class="live-modal-progress" aria-hidden="true"></div>
+    <iframe class="live-modal-frame" id="liveModalFrame" title="Live website preview" src="about:blank"></iframe>
+  </div>
+</div>
 
 <section class="svc-section svc-work">
   <div class="container">
