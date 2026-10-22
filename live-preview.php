@@ -23,6 +23,7 @@ $sites = [
   'tri-miami-handyman-services' => 'https://trimiamihandymanservices.com/',
   'extreme-handyman-services' => 'https://www.theextremehandyman.com/',
   'mns-plumbing' => 'https://www.mnsplumbing.com/',
+  'tanous-hvac' => 'https://www.tanousnj.com/',
 ];
 
 $slug = (string)($_GET['site'] ?? '');
@@ -39,7 +40,7 @@ if ($path === '' || $path[0] !== '/' || str_starts_with($path, '//')) {
 }
 $url = 'https://' . $homeHost . $path;
 
-$cacheFile = sys_get_temp_dir() . '/wtf-live-' . md5($url) . '.html';
+$cacheFile = sys_get_temp_dir() . '/wtf-live2-' . md5($url) . '.html';
 $html = '';
 $finalUrl = $url;
 if (is_file($cacheFile) && time() - filemtime($cacheFile) < 900) {
@@ -88,7 +89,7 @@ if (is_file($cacheFile) && time() - filemtime($cacheFile) < 900) {
     [$html] = $fetch('https://web.archive.org/web/2id_/' . $url, 12);
     $finalUrl = $url;
     if ($html !== '') {
-      $html = preg_replace('#https?://web.archive.org/web/d+(?:[a-z]{2}_)?/#i', '', $html);
+      $html = preg_replace('#https?://web.archive.org/web/\d+(?:[a-z]{2}_)?/#i', '', $html);
     }
   }
   if ($html === '') {
@@ -102,6 +103,35 @@ if (is_file($cacheFile) && time() - filemtime($cacheFile) < 900) {
   $base = 'https://' . $finalHost . '/';
   $html = preg_replace('/<meta[^>]+http-equiv=["\']?(content-security-policy|x-frame-options)["\']?[^>]*>/i', '', $html);
   $html = preg_replace('/<base\b[^>]*>/i', '', $html);
+  $abs = function (string $ref) use ($finalUrl, $finalHost): string {
+    $ref = trim($ref);
+    if ($ref === '' || preg_match('#^(?:[a-z][a-z0-9+.-]*:|//|\#)#i', $ref)) {
+      return str_starts_with($ref, '//') ? 'https:' . $ref : $ref;
+    }
+    if ($ref[0] === '/') {
+      return 'https://' . $finalHost . $ref;
+    }
+    $dir = (string)parse_url($finalUrl, PHP_URL_PATH);
+    $dir = $dir === '' ? '/' : substr($dir, 0, (int)strrpos($dir, '/') + 1);
+    return 'https://' . $finalHost . $dir . $ref;
+  };
+  $html = preg_replace_callback('/(<(?:link|script|img|source|video|audio|iframe|input|embed)\b[^>]*?\s(?:href|src|poster|data-src)\s*=\s*)(["\'])(.*?)\2/is', function ($m) use ($abs) {
+    return $m[1] . $m[2] . htmlspecialchars($abs(html_entity_decode($m[3], ENT_QUOTES)), ENT_QUOTES) . $m[2];
+  }, $html);
+  $html = preg_replace_callback('/(\s(?:srcset|data-srcset)\s*=\s*)(["\'])(.*?)\2/is', function ($m) use ($abs) {
+    $parts = array_map(function ($c) use ($abs) {
+      $c = trim($c);
+      if ($c === '') {
+        return $c;
+      }
+      $bits = preg_split('/\s+/', $c, 2);
+      return $abs($bits[0]) . (isset($bits[1]) ? ' ' . $bits[1] : '');
+    }, explode(',', html_entity_decode($m[3], ENT_QUOTES)));
+    return $m[1] . $m[2] . htmlspecialchars(implode(', ', $parts), ENT_QUOTES) . $m[2];
+  }, $html);
+  $html = preg_replace_callback('/url\(\s*(["\']?)(?!data:|https?:|\/\/|\#)([^"\')]+)\1\s*\)/i', function ($m) use ($abs) {
+    return 'url(' . $m[1] . $abs($m[2]) . $m[1] . ')';
+  }, $html);
   $inject = '<base href="' . htmlspecialchars($base, ENT_QUOTES) . '">'
     . '<style>div.needsclick[class*="kl-private-reset-css"][role="dialog"],div.needsclick[class*="kl-private-reset-css"][aria-modal]{display:none!important}</style>'
     . '<script>new MutationObserver(function(){document.querySelectorAll("div.needsclick[class*=kl-private-reset-css]").forEach(function(e){var c=getComputedStyle(e);if(c.position==="fixed"&&e.offsetWidth>=innerWidth*0.9)e.style.setProperty("display","none","important")})}).observe(document.documentElement,{childList:true,subtree:true});</script>'
@@ -118,6 +148,6 @@ if (is_file($cacheFile) && time() - filemtime($cacheFile) < 900) {
 }
 
 header('Content-Type: text/html; charset=UTF-8');
-header('Cache-Control: public, max-age=300');
+header('Cache-Control: no-store');
 header('X-Robots-Tag: noindex');
 echo $html;
