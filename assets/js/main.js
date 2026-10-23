@@ -287,14 +287,6 @@ document.querySelectorAll('.brand-card').forEach((card) => {
   });
 });
 
-// Fan buttons - expand on click for mobile
-const fanGroup = document.getElementById('fanButtons');
-fanGroup?.addEventListener('click', (e) => {
-  if (window.innerWidth <= 768) {
-    fanGroup.classList.toggle('expanded');
-  }
-});
-
 // What we excel at — horizontal carousel
 const excelTrack = document.getElementById('excelTrack');
 const excelPrev = document.getElementById('excelPrev');
@@ -933,114 +925,6 @@ document.addEventListener('click', (e) => {
   }
 
   bindFilterPair('worksFilters', 'worksSubfilters', 'worksGrid', '.work-card', 'worksIndustries');
-  bindFilterPair('servicesFilters', 'servicesSubfilters', 'servicesGrid', '.service-detail-card', 'servicesIndustries');
-  bindFilterPair('industriesFilters', 'industriesSubfilters', 'industriesGrid', '.service-detail-card');
-
-  // Industry navs
-  const industryNav = document.querySelector('[data-industry-nav]');
-  const indIndustries = document.getElementById('indIndustries');
-  const indServices = document.getElementById('indServices');
-  const indSubs = document.getElementById('indSubs');
-  const indGrid = document.getElementById('industriesGrid');
-  let indIndustry = industryNav && industryNav.dataset.current ? industryNav.dataset.current : 'all';
-  let indService = 'all';
-  let indSub = 'all';
-
-  function setActive(group, attr, value) {
-    group.querySelectorAll('[' + attr + ']').forEach((el) => {
-      const on = el.getAttribute(attr) === value;
-      el.classList.toggle('is-active', on);
-      el.setAttribute('aria-selected', on ? 'true' : 'false');
-    });
-  }
-
-  function renderIndSubs() {
-    indSubs.innerHTML = '';
-    indSub = 'all';
-    const list = SUBS[indService];
-    indSubs.hidden = !list;
-    indSubs.classList.toggle('is-open', !!list);
-    if (!list) return;
-    list.forEach((item, index) => {
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'works-filter works-subfilter' + (index === 0 ? ' is-active' : '');
-      btn.setAttribute('data-sub', item.id);
-      btn.setAttribute('role', 'tab');
-      btn.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
-      btn.textContent = item.label;
-      indSubs.appendChild(btn);
-    });
-  }
-
-  function applyIndustryFilter() {
-    if (!indGrid) return;
-    const industryBtn = indIndustries.querySelector('[data-industry="' + indIndustry + '"]');
-    const industryName = indIndustry !== 'all' && industryBtn ? industryBtn.textContent.replace(/\s+/g, ' ').trim() : '';
-    indGrid.querySelectorAll('.service-detail-card').forEach((card) => {
-      const level = card.getAttribute('data-level');
-      let show;
-      if (level === 'svc') {
-        const svc = card.getAttribute('data-service');
-        show = indService !== 'all' && (svc === indService || (indService === 'web-development' && svc === 'web-design'));
-        if (show && indSub !== 'all') show = hasToken(card.getAttribute('data-subs') || '', indSub);
-        const kicker = card.querySelector('.service-detail-kicker');
-        if (kicker) {
-          if (!kicker.dataset.base) kicker.dataset.base = kicker.textContent;
-          kicker.textContent = industryName ? industryName + ' · ' + kicker.dataset.base : kicker.dataset.base;
-        }
-      } else if (indService !== 'all') {
-        show = false;
-      } else if (indIndustry === 'all') {
-        show = level === 'overview';
-      } else {
-        show = level === 'sub' && hasToken(card.getAttribute('data-tags') || '', indIndustry);
-      }
-      card.hidden = !show;
-    });    indGrid.dispatchEvent(new CustomEvent('industries:filtered'));
-  }
-
-
-  function goToIndustries() {
-    const parts = [indIndustry, indService, indSub].map(encodeURIComponent);
-    window.location.href = '/industries.php#' + parts.join('/');
-  }
-
-  if (industryNav && indIndustries && indServices && indSubs) {
-    indIndustries.addEventListener('click', (e) => {
-      const btn = e.target.closest('[data-industry]');
-      if (!btn) return;
-      indIndustry = btn.getAttribute('data-industry');
-      setActive(indIndustries, 'data-industry', indIndustry);
-      if (!indGrid) { goToIndustries(); return; }
-      applyIndustryFilter();
-    });
-    indServices.addEventListener('click', (e) => {
-      const btn = e.target.closest('[data-filter]');
-      if (!btn) return;
-      indService = btn.getAttribute('data-filter');
-      setActive(indServices, 'data-filter', indService);
-      renderIndSubs();
-      if (indGrid) applyIndustryFilter();
-    });
-    indSubs.addEventListener('click', (e) => {
-      const btn = e.target.closest('[data-sub]');
-      if (!btn) return;
-      indSub = btn.getAttribute('data-sub');
-      setActive(indSubs, 'data-sub', indSub);
-      if (!indGrid) { goToIndustries(); return; }
-      applyIndustryFilter();
-    });
-
-    if (indGrid && window.location.hash) {
-      const [ind, svc, sub] = decodeURIComponent(window.location.hash.slice(1)).split('/');
-      if (ind && indIndustries.querySelector('[data-industry="' + CSS.escape(ind) + '"]')) indIndustries.querySelector('[data-industry="' + CSS.escape(ind) + '"]').click();
-      if (svc && indServices.querySelector('[data-filter="' + CSS.escape(svc) + '"]')) indServices.querySelector('[data-filter="' + CSS.escape(svc) + '"]').click();
-      if (sub && indSubs.querySelector('[data-sub="' + CSS.escape(sub) + '"]')) indSubs.querySelector('[data-sub="' + CSS.escape(sub) + '"]').click();
-      history.replaceState(null, '', window.location.pathname + window.location.search);
-    }
-    applyIndustryFilter();
-  }
 
   // Filter from link
   function selectFromHash() {
@@ -1053,9 +937,7 @@ document.addEventListener('click', (e) => {
       window.addEventListener('load', jump, { once: true });
       return;
     }
-    const showcase = document.querySelector('.svc-showcase');
-    if (showcase && document.querySelector('#servicesFilters [data-filter="' + CSS.escape(id) + '"]')) showcase.hidden = true;
-    ['servicesFilters', 'industriesFilters', 'worksFilters'].forEach((filtersId) => {
+    ['worksFilters'].forEach((filtersId) => {
       const btn = document.querySelector('#' + filtersId + ' [data-filter="' + CSS.escape(id) + '"]');
       if (!btn) return;
       btn.click();
@@ -2089,17 +1971,6 @@ document.addEventListener('click', (e) => {
     panels.forEach((p) => p.classList.toggle('is-active', p === panel));
   }
 
-  // Selected service
-  const filters = document.getElementById('servicesFilters');
-  function syncWithFilter() {
-    const btn = filters && filters.querySelector('.is-active');
-    const id = btn ? btn.getAttribute('data-filter') : 'all';
-    const match = panels.find((p) => (p.getAttribute('href') || '').endsWith('#' + id));
-    if (match) activate(match);
-  }
-  filters?.addEventListener('click', () => setTimeout(syncWithFilter, 0));
-  syncWithFilter();
-
   panels.forEach((panel) => {
     panel.addEventListener('mouseenter', () => {
       if (canHover) activate(panel);
@@ -2116,7 +1987,7 @@ document.addEventListener('click', (e) => {
 })();
 
 // Filter labels
-[['homeWorksIndustries', 'homeWorksFilters', 'homeWorksSubfilters'], ['servicesIndustries', 'servicesFilters', 'servicesSubfilters'], ['worksIndustries', 'worksFilters', 'worksSubfilters'], ['indIndustries', 'indServices', 'indSubs']].forEach(([industriesId, servicesId, subsId]) => {
+[['homeWorksIndustries', 'homeWorksFilters', 'homeWorksSubfilters'], ['worksIndustries', 'worksFilters', 'worksSubfilters']].forEach(([industriesId, servicesId, subsId]) => {
   const industries = document.getElementById(industriesId);
   const services = document.getElementById(servicesId);
   const subs = document.getElementById(subsId);
@@ -2531,44 +2402,6 @@ document.addEventListener('click', (e) => {
   });
 })();
 
-// Back to top
-(function initBackToTop() {
-  const btn = document.getElementById('backToTop');
-  if (!btn) return;
-  const hero = document.querySelector('.hero-section, .page-hero') || document.querySelector('section');
-  btn.hidden = false;
-  let ticking = false;
-  function sync() {
-    ticking = false;
-    const show = hero ? hero.getBoundingClientRect().bottom < 80 : window.scrollY > window.innerHeight;
-    btn.classList.toggle('is-visible', show);
-    btn.tabIndex = show ? 0 : -1;
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
-    btn.style.setProperty('--btt-progress', (progress * 360).toFixed(1) + 'deg');
-  }
-  window.addEventListener('scroll', () => {
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(sync);
-  }, { passive: true });
-  window.addEventListener('resize', sync);
-  btn.addEventListener('click', () => {
-    const root = document.documentElement;
-    root.dataset.autoScroll = '1';
-    const started = performance.now();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    (function watch() {
-      if (window.scrollY <= 1 || performance.now() - started > 4000) {
-        if (window.scrollY > 1) window.scrollTo({ top: 0, behavior: 'instant' });
-        delete root.dataset.autoScroll;
-        return;
-      }
-      requestAnimationFrame(watch);
-    })();
-  });
-  sync();
-})();
 
 // Join handoff
 (function initJoinHandoff() {
@@ -2621,31 +2454,6 @@ document.addEventListener('click', (e) => {
   sync();
 })();
 
-// Industries show more
-(function initIndustriesShowMore() {
-  const LIMIT = 4;
-  const grid = document.getElementById('industriesGrid');
-  const btn = document.getElementById('industriesShowMore');
-  if (!grid || !btn) return;
-  let expanded = false;
-  function apply() {
-    const visible = Array.from(grid.querySelectorAll('.service-detail-card')).filter((card) => !card.hidden);
-    grid.querySelectorAll('.service-detail-card').forEach((card) => card.classList.remove('is-over-limit'));
-    visible.forEach((card, i) => card.classList.toggle('is-over-limit', !expanded && i >= LIMIT));
-    btn.hidden = visible.length <= LIMIT;
-    btn.textContent = expanded ? 'Show Less' : 'Show More';
-  }
-  grid.addEventListener('industries:filtered', () => {
-    expanded = false;
-    apply();
-  });
-  btn.addEventListener('click', () => {
-    expanded = !expanded;
-    apply();
-    if (!expanded) grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-  apply();
-})();
 
 (function initNavNudge() {
   document.querySelectorAll('[data-nav-nudge]').forEach((link) => {
@@ -2756,4 +2564,62 @@ document.addEventListener('click', (e) => {
 
 (function initTradeLinks() {
   document.querySelectorAll('[data-trade-links] [data-industry].is-active').forEach((btn) => btn.click());
+})();
+
+
+(function initHeroCarousel() {
+  const POS = ['is-center', 'is-left-1', 'is-right-1', 'is-left-2', 'is-right-2'];
+  document.querySelectorAll('[data-hcar]').forEach((root) => {
+    const cards = Array.from(root.querySelectorAll('.hcar-card'));
+    const total = cards.length;
+    if (!total) return;
+    let current = 0;
+    let busy = false;
+    let timer = 0;
+
+    function render() {
+      cards.forEach((card, i) => {
+        const off = (i - current + total) % total;
+        let pos = '';
+        if (off === 0) pos = 'is-center';
+        else if (off === 1) pos = 'is-right-1';
+        else if (off === total - 1) pos = 'is-left-1';
+        else if (off === 2 && total >= 5) pos = 'is-right-2';
+        else if (off === total - 2 && total >= 5) pos = 'is-left-2';
+        card.classList.remove(...POS);
+        if (pos) card.classList.add(pos);
+        card.setAttribute('aria-hidden', off === 0 ? 'false' : 'true');
+      });
+    }
+
+    function go(index) {
+      if (busy || total < 2) return;
+      busy = true;
+      current = (index + total) % total;
+      render();
+      setTimeout(() => { busy = false; }, 800);
+      restart();
+    }
+
+    function restart() {
+      clearInterval(timer);
+      if (total > 1) timer = setInterval(() => go(current + 1), 5000);
+    }
+
+    root.querySelector('.hcar-prev')?.addEventListener('click', () => go(current - 1));
+    root.querySelector('.hcar-next')?.addEventListener('click', () => go(current + 1));
+    cards.forEach((card, i) => card.addEventListener('click', () => { if (i !== current) go(i); }));
+
+    let startX = null;
+    root.addEventListener('touchstart', (e) => { startX = e.changedTouches[0].clientX; }, { passive: true });
+    root.addEventListener('touchend', (e) => {
+      if (startX === null) return;
+      const diff = startX - e.changedTouches[0].clientX;
+      startX = null;
+      if (Math.abs(diff) > 50) go(current + (diff > 0 ? 1 : -1));
+    }, { passive: true });
+
+    render();
+    restart();
+  });
 })();

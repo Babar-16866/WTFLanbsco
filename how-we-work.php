@@ -42,6 +42,7 @@ $processes = [
     </div>
     -->
     <div class="ihero-stage">
+      <!--
       <div class="ihero-canvas">
         <div class="ihero-side ihero-side-left">
           <img src="/assets/images/hero-how-we-work-left.webp" alt="">
@@ -53,11 +54,48 @@ $processes = [
           <img src="/assets/images/hero-how-we-work-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
         </div>
       </div>
+      -->
+      <div class="hcar" data-hcar>
+        <div class="hcar-track">
+          <div class="hcar-card"><img src="/assets/images/hcar-how-we-work-1.webp" alt="How We Work image 1" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-how-we-work-2.webp" alt="How We Work image 2" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-how-we-work-3.webp" alt="How We Work image 3" loading="lazy"></div>
+        </div>
+        <div class="hcar-nav">
+          <button type="button" class="hcar-arrow hcar-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" class="hcar-arrow hcar-next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
       <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-popup><span class="ihero-primary-label">Start a project</span></a>
       <div class="ihero-secondary reveal reveal-delay-1">
         <a href="/works.php" class="ihero-secondary-btn"><span class="ihero-secondary-label">See our work</span></a>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="niche-strip" aria-label="What we cover">
+  <div class="niche-strip-track">
+    <ul class="niche-strip-list">
+      <li>Discovery</li>
+      <li>Strategy</li>
+      <li>Planning</li>
+      <li>Design</li>
+      <li>Development</li>
+      <li>Launch</li>
+      <li>Tracking</li>
+      <li>Optimization</li>
+    </ul>
+    <ul class="niche-strip-list" aria-hidden="true">
+      <li>Discovery</li>
+      <li>Strategy</li>
+      <li>Planning</li>
+      <li>Design</li>
+      <li>Development</li>
+      <li>Launch</li>
+      <li>Tracking</li>
+      <li>Optimization</li>
+    </ul>
   </div>
 </section>
 

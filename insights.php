@@ -33,6 +33,7 @@ include __DIR__ . '/includes/header.php';
     </div>
     -->
     <div class="ihero-stage">
+      <!--
       <div class="ihero-canvas">
         <div class="ihero-side ihero-side-left">
           <img src="/assets/images/hero-insights-left.webp" alt="">
@@ -44,11 +45,48 @@ include __DIR__ . '/includes/header.php';
           <img src="/assets/images/hero-insights-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
         </div>
       </div>
+      -->
+      <div class="hcar" data-hcar>
+        <div class="hcar-track">
+          <div class="hcar-card"><img src="/assets/images/hcar-insights-1.webp" alt="Insights image 1" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-insights-2.webp" alt="Insights image 2" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-insights-3.webp" alt="Insights image 3" loading="lazy"></div>
+        </div>
+        <div class="hcar-nav">
+          <button type="button" class="hcar-arrow hcar-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" class="hcar-arrow hcar-next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
       <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-step-popup><span class="ihero-primary-label">Get a free consultation</span></a>
       <div class="ihero-secondary reveal reveal-delay-1">
         <a href="/works.php" class="ihero-secondary-btn"><span class="ihero-secondary-label">See our work</span></a>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="niche-strip" aria-label="What we cover">
+  <div class="niche-strip-track">
+    <ul class="niche-strip-list">
+      <li>Web Design Tips</li>
+      <li>SEO Guides</li>
+      <li>Google Ads Tips</li>
+      <li>Social Media Ideas</li>
+      <li>Branding Advice</li>
+      <li>Conversion Tips</li>
+      <li>Case Studies</li>
+      <li>Industry Trends</li>
+    </ul>
+    <ul class="niche-strip-list" aria-hidden="true">
+      <li>Web Design Tips</li>
+      <li>SEO Guides</li>
+      <li>Google Ads Tips</li>
+      <li>Social Media Ideas</li>
+      <li>Branding Advice</li>
+      <li>Conversion Tips</li>
+      <li>Case Studies</li>
+      <li>Industry Trends</li>
+    </ul>
   </div>
 </section>
 

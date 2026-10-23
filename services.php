@@ -10,8 +10,8 @@ include __DIR__ . '/includes/header.php';
     <header class="ihero-header reveal">
       <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> WEB + MARKETING UNDER ONE ROOF</p>
       <h1 class="ihero-heading" aria-label="Everything your digital presence needs to look stronger, work smarter, win better jobs.">
-          <span aria-hidden="true">Everything your digital presence needs to look</span> <br class="ihero-heading-br">
-          <span class="accent-lime typewriter" data-typewriter="stronger|work smarter|win better jobs." aria-hidden="true"></span>
+          <span aria-hidden="true">Everything your Busniess <br> needs Online to </span> <br class="ihero-heading-br">
+          <span class="accent-lime typewriter" data-typewriter="look stronger.|work smarter.|win better jobs." aria-hidden="true"></span>
         </h1>
       <p class="ihero-lead">Premium websites, local search, paid media, creative, and tracking built as one connected system for quality home-service businesses.</p>
     </header>
@@ -34,9 +34,12 @@ include __DIR__ . '/includes/header.php';
         <span>reviews</span>
       </div>
     </div>
+    
     -->
     <div class="ihero-stage">
+      <!--
       <div class="ihero-canvas">
+
         <div class="ihero-side ihero-side-left">
           <img src="/assets/images/hero-services-left.webp" alt="">
         </div>
@@ -46,10 +49,49 @@ include __DIR__ . '/includes/header.php';
         <div class="ihero-banner">
           <img src="/assets/images/hero-services-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
         </div>
+      
+      </div>
+      -->
+      <div class="hcar" data-hcar>
+        <div class="hcar-track">
+          <div class="hcar-card"><img src="/assets/images/hcar-services-1.webp" alt="Services image 1" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-services-2.webp" alt="Services image 2" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-services-3.webp" alt="Services image 3" loading="lazy"></div>
+        </div>
+        <div class="hcar-nav">
+          <button type="button" class="hcar-arrow hcar-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" class="hcar-arrow hcar-next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
       </div>
       <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-step-popup><span class="ihero-primary-label">Free Consultation</span></a>
       <div class="ihero-secondary"></div>
+        </div>
+     
     </div>
+</section>
+
+<section class="niche-strip" aria-label="What we cover">
+  <div class="niche-strip-track">
+    <ul class="niche-strip-list">
+      <li>Web Design</li>
+      <li>Web Development</li>
+      <li>SEO &amp; Local Search</li>
+      <li>Google Ads</li>
+      <li>Social Media Ads</li>
+      <li>Branding &amp; Creative</li>
+      <li>Digital Marketing</li>
+      <li>Hosting &amp; Maintenance</li>
+    </ul>
+    <ul class="niche-strip-list" aria-hidden="true">
+      <li>Web Design</li>
+      <li>Web Development</li>
+      <li>SEO &amp; Local Search</li>
+      <li>Google Ads</li>
+      <li>Social Media Ads</li>
+      <li>Branding &amp; Creative</li>
+      <li>Digital Marketing</li>
+      <li>Hosting &amp; Maintenance</li>
+    </ul>
   </div>
 </section>
 
@@ -137,7 +179,7 @@ include __DIR__ . '/includes/header.php';
   <div class="container">
     <div class="section-header center puzzle-head reveal">
       <p class="subheading">WHY IT MATTERS</p>
-      <h2 class="home-title">Your marketing should not <span class="heading-accent">work in pieces.</span></h2>
+      <h2 class="home-title">Your marketing should not <br> <span class="heading-accent">work in pieces.</span></h2>
       <p class="section-desc center-desc">A good ad can still waste money if it sends people to a weak page. Strong SEO can still underperform if the website feels dated. A great-looking website can still sit quiet if nobody can find it. We connect the parts so each one helps the others do their job.</p>
     </div>
     <div class="puzzle-grid reveal">

@@ -33,6 +33,7 @@ include __DIR__ . '/includes/header.php';
     </div>
     -->
     <div class="ihero-stage">
+      <!--
       <div class="ihero-canvas">
         <div class="ihero-side ihero-side-left">
           <img src="/assets/images/hero-graphic-design-left.webp" alt="">
@@ -44,9 +45,48 @@ include __DIR__ . '/includes/header.php';
           <img src="/assets/images/hero-graphic-design-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
         </div>
       </div>
+      -->
+      <div class="hcar" data-hcar>
+        <div class="hcar-track">
+          <div class="hcar-card"><img src="/assets/images/hcar-graphic-design-1.webp" alt="Graphic Design image 1" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-graphic-design-2.webp" alt="Graphic Design image 2" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-graphic-design-3.webp" alt="Graphic Design image 3" loading="lazy"></div>
+        </div>
+        <div class="hcar-nav">
+          <button type="button" class="hcar-arrow hcar-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" class="hcar-arrow hcar-next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
       <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-step-popup><span class="ihero-primary-label">Talk About Your Brand</span></a>
       <div class="ihero-secondary"></div>
     </div>
+  </div>
+</section>
+
+<section class="niche-strip" aria-label="What we cover">
+  <div class="niche-strip-track">
+    <ul class="niche-strip-list">
+      <li>Logo Design</li>
+      <li>Brand Identity</li>
+      <li>Truck Wraps</li>
+      <li>Yard Signs</li>
+      <li>Flyers</li>
+      <li>Business Cards</li>
+      <li>Social Graphics</li>
+      <li>Ad Creative</li>
+      <li>Brand Guidelines</li>
+    </ul>
+    <ul class="niche-strip-list" aria-hidden="true">
+      <li>Logo Design</li>
+      <li>Brand Identity</li>
+      <li>Truck Wraps</li>
+      <li>Yard Signs</li>
+      <li>Flyers</li>
+      <li>Business Cards</li>
+      <li>Social Graphics</li>
+      <li>Ad Creative</li>
+      <li>Brand Guidelines</li>
+    </ul>
   </div>
 </section>
 

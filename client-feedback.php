@@ -34,6 +34,7 @@ include __DIR__ . '/includes/header.php';
     </div>
     -->
     <div class="ihero-stage">
+      <!--
       <div class="ihero-canvas">
         <div class="ihero-side ihero-side-left">
           <img src="/assets/images/hero-client-feedback-left.webp" alt="">
@@ -45,11 +46,46 @@ include __DIR__ . '/includes/header.php';
           <img src="/assets/images/hero-client-feedback-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
         </div>
       </div>
+      -->
+      <div class="hcar" data-hcar>
+        <div class="hcar-track">
+          <div class="hcar-card"><img src="/assets/images/hcar-client-feedback-1.webp" alt="Client Feedback image 1" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-client-feedback-2.webp" alt="Client Feedback image 2" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-client-feedback-3.webp" alt="Client Feedback image 3" loading="lazy"></div>
+        </div>
+        <div class="hcar-nav">
+          <button type="button" class="hcar-arrow hcar-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" class="hcar-arrow hcar-next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
       <a href="#feedback-form" class="ihero-primary reveal reveal-delay-3"><span class="ihero-primary-label">Share feedback</span></a>
       <div class="ihero-secondary reveal reveal-delay-1">
         <a href="/works.php" class="ihero-secondary-btn"><span class="ihero-secondary-label">See our work</span></a>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="niche-strip" aria-label="What we cover">
+  <div class="niche-strip-track">
+    <ul class="niche-strip-list">
+      <li>Client Reviews</li>
+      <li>Honest Feedback</li>
+      <li>Project Experience</li>
+      <li>Communication</li>
+      <li>Results</li>
+      <li>Support</li>
+      <li>Recommendations</li>
+    </ul>
+    <ul class="niche-strip-list" aria-hidden="true">
+      <li>Client Reviews</li>
+      <li>Honest Feedback</li>
+      <li>Project Experience</li>
+      <li>Communication</li>
+      <li>Results</li>
+      <li>Support</li>
+      <li>Recommendations</li>
+    </ul>
   </div>
 </section>
 

@@ -15,6 +15,31 @@ include __DIR__ . '/includes/header.php';
   </div>
 </section>
 
+<section class="niche-strip" aria-label="What we cover">
+  <div class="niche-strip-track">
+    <ul class="niche-strip-list">
+      <li>Deposits &amp; Milestones</li>
+      <li>Cancellations</li>
+      <li>Revisions</li>
+      <li>Third-Party Fees</li>
+      <li>Refund Requests</li>
+      <li>Chargebacks</li>
+      <li>Signed Agreements</li>
+      <li>Contact</li>
+    </ul>
+    <ul class="niche-strip-list" aria-hidden="true">
+      <li>Deposits &amp; Milestones</li>
+      <li>Cancellations</li>
+      <li>Revisions</li>
+      <li>Third-Party Fees</li>
+      <li>Refund Requests</li>
+      <li>Chargebacks</li>
+      <li>Signed Agreements</li>
+      <li>Contact</li>
+    </ul>
+  </div>
+</section>
+
 <section class="page-section legal-section">
   <div class="container">
     <article class="legal-content reveal">

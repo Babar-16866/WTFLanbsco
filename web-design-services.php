@@ -33,6 +33,7 @@ include __DIR__ . '/includes/header.php';
     </div>
     -->
     <div class="ihero-stage">
+      <!--
       <div class="ihero-canvas">
         <div class="ihero-side ihero-side-left">
           <img src="/assets/images/hero-web-design-services-left.webp" alt="">
@@ -42,6 +43,18 @@ include __DIR__ . '/includes/header.php';
         </div>
         <div class="ihero-banner">
           <img src="/assets/images/hero-web-design-services-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
+        </div>
+      </div>
+      -->
+      <div class="hcar" data-hcar>
+        <div class="hcar-track">
+          <div class="hcar-card"><img src="/assets/images/hcar-web-design-services-1.webp" alt="Home-service website design" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-web-design-services-2.webp" alt="Landscaping website design" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-web-design-services-3.webp" alt="HVAC website design" loading="lazy"></div>
+        </div>
+        <div class="hcar-nav">
+          <button type="button" class="hcar-arrow hcar-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" class="hcar-arrow hcar-next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </div>
       <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-step-popup><span class="ihero-primary-label">Claim Your FREE Website Audit</span></a>
@@ -56,26 +69,30 @@ include __DIR__ . '/includes/header.php';
 <section class="niche-strip" aria-label="Industries we serve">
   <div class="niche-strip-track">
     <ul class="niche-strip-list">
-      <li>Remodeling</li>
-      <li>HVAC</li>
-      <li>Plumbing</li>
-      <li>Roofing</li>
-      <li>Pool Services</li>
-      <li>Landscaping</li>
-      <li>Pest Control</li>
-      <li>Handyman</li>
-      <li>Power Washing</li>
+      <li>Premium Websites</li>
+      <li>Landing Pages</li>
+      <li>Informational Websites</li>
+      <li>Immersive Websites</li>
+      <li>WordPress Websites</li>
+      <li>Shopify Websites</li>
+      <li>Web Apps</li>
+      <li>Web Portals</li>
+      <li>CRM Workflows</li>
+      <li>Website Hosting</li>
+      <li>Website Maintenance</li>
     </ul>
     <ul class="niche-strip-list" aria-hidden="true">
-      <li>Remodeling</li>
-      <li>HVAC</li>
-      <li>Plumbing</li>
-      <li>Roofing</li>
-      <li>Pool Services</li>
-      <li>Landscaping</li>
-      <li>Pest Control</li>
-      <li>Handyman</li>
-      <li>Power Washing</li>
+      <li>Premium Websites</li>
+      <li>Landing Pages</li>
+      <li>Informational Websites</li>
+      <li>Immersive Websites</li>
+      <li>WordPress Websites</li>
+      <li>Shopify Websites</li>
+      <li>Web Apps</li>
+      <li>Web Portals</li>
+      <li>CRM Workflows</li>
+      <li>Website Hosting</li>
+      <li>Website Maintenance</li>
     </ul>
   </div>
 </section>
@@ -86,7 +103,7 @@ include __DIR__ . '/includes/header.php';
     <div class="container">
       <div class="section-header center rail-head reveal">
         <p class="subheading">MORE THAN A PRETTY WEBSITE</p>
-        <h2 class="home-title">Your next customer is already judging your business <span class="heading-accent">online.</span></h2>
+        <h2 class="home-title">Your next customer is already <br> judging <span class="heading-accent">your business online.</span></h2>
         <p class="section-desc center-desc">A referral hears your name and looks you up. A homeowner with a leaking pipe grabs their phone. Someone comparing pool services wants to know what a monthly plan includes. Three completely different situations. One common question: <strong>&ldquo;Can I trust this business enough to take the next step?&rdquo;</strong></p>
         <p class="section-desc center-desc">If your website makes that answer difficult, a better-looking competitor can win the job before you even know you were considered. We make sure your digital first impression supports the real work behind it.</p>
       </div>
@@ -94,18 +111,18 @@ include __DIR__ . '/includes/header.php';
     <div class="rail-viewport">
       <div class="rail-track">
         <article class="rail-card is-active">
-          <span class="rail-num rail-num--text">Premium projects</span>
-          <h3>Show the quality. Justify the quote.</h3>
+          <span class="rail-num rail-num--text">PREMIUM PROJECTS</span>
+          <h3><i>"Show the quality. Justify the quote."</i></h3>
           <p>For remodeling and roofing, immersive project galleries, before-and-afters, strong reviews and a clear process help serious homeowners see the craftsmanship behind your price.</p>
         </article>
         <article class="rail-card is-active">
-          <span class="rail-num rail-num--text">Urgent service calls</span>
-          <h3>Less searching. More calling.</h3>
+          <span class="rail-num rail-num--text">URGENT CALLS</span>
+          <h3><i>"Less searching. More calling."</i></h3>
           <p>For HVAC and plumbing, mobile speed, visible phone numbers, location relevance and straightforward booking help people reach you while the need is urgent.</p>
         </article>
         <article class="rail-card is-active">
-          <span class="rail-num rail-num--text">Recurring and repeat service</span>
-          <h3>Make coming back feel easy.</h3>
+          <span class="rail-num rail-num--text">RECURRING SERVICES</span>
+          <h3><i>"Make coming back feel easy."</i></h3>
           <p>For pest control, pool service and landscaping, clear coverage, plan comparisons, repeat scheduling and simple inquiry paths make ongoing care easier to choose.</p>
         </article>
       </div>
@@ -210,7 +227,7 @@ include __DIR__ . '/includes/header.php';
 <!-- WORK -->
 <?php
 $work_eyebrow = 'REAL WORK, NOT JUST BIG PROMISES';
-$work_heading = 'Built to look different.<span class="accent-lime"> Designed to do a job.</span>';
+$work_heading = 'Built to look different. <br> Designed to do <span class="accent-lime">  a job.</span>';
 $work_desc = 'A remodeling site should help homeowners picture the transformation. An HVAC site should help someone get help without hunting for a phone number. A landscaping site should make the finished work and the next step impossible to miss.';
 include __DIR__ . '/includes/featured-work.php';
 ?>
@@ -221,7 +238,7 @@ include __DIR__ . '/includes/featured-work.php';
     <div class="container">
       <div class="section-header rail-head reveal">
         <p class="subheading">THE THINKING BEHIND THE BUILD</p>
-        <h2 class="home-title">We don't start with animations. <span class="heading-accent">We start with what your website needs to accomplish.</span></h2>
+        <h2 class="home-title">Built around your goals, <span class="heading-accent">not guesses.</span></h2>
       </div>
     </div>
     <div class="rail-viewport">

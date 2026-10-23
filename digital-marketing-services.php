@@ -33,6 +33,7 @@ include __DIR__ . '/includes/header.php';
     </div>
     -->
     <div class="ihero-stage">
+      <!--
       <div class="ihero-canvas">
         <div class="ihero-side ihero-side-left">
           <img src="/assets/images/hero-digital-marketing-services-left.webp" alt="">
@@ -42,6 +43,18 @@ include __DIR__ . '/includes/header.php';
         </div>
         <div class="ihero-banner">
           <img src="/assets/images/hero-digital-marketing-services-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
+        </div>
+      </div>
+      -->
+      <div class="hcar" data-hcar>
+        <div class="hcar-track">
+          <div class="hcar-card"><img src="/assets/images/hcar-digital-marketing-services-1.webp" alt="Digital Marketing Services image 1" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-digital-marketing-services-2.webp" alt="Digital Marketing Services image 2" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-digital-marketing-services-3.webp" alt="Digital Marketing Services image 3" loading="lazy"></div>
+        </div>
+        <div class="hcar-nav">
+          <button type="button" class="hcar-arrow hcar-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" class="hcar-arrow hcar-next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </div>
       <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-step-popup><span class="ihero-primary-label">Claim Your FREE Marketing Audit</span></a>
@@ -56,26 +69,28 @@ include __DIR__ . '/includes/header.php';
 <section class="niche-strip" aria-label="Industries we serve">
   <div class="niche-strip-track">
     <ul class="niche-strip-list">
-      <li>Remodeling</li>
-      <li>HVAC</li>
-      <li>Plumbing</li>
-      <li>Roofing</li>
-      <li>Pool Services</li>
-      <li>Landscaping</li>
-      <li>Pest Control</li>
-      <li>Handyman</li>
-      <li>Power Washing</li>
+      <li>SEO</li>
+      <li>Local Search</li>
+      <li>Google Ads</li>
+      <li>Social Media Advertising</li>
+      <li>Branding</li>
+      <li>Creative</li>
+      <li>Landing Pages</li>
+      <li>Conversion Strategy</li>
+      <li>Call Tracking</li>
+      <li>Lead Measurement</li>
     </ul>
     <ul class="niche-strip-list" aria-hidden="true">
-      <li>Remodeling</li>
-      <li>HVAC</li>
-      <li>Plumbing</li>
-      <li>Roofing</li>
-      <li>Pool Services</li>
-      <li>Landscaping</li>
-      <li>Pest Control</li>
-      <li>Handyman</li>
-      <li>Power Washing</li>
+      <li>SEO</li>
+      <li>Local Search</li>
+      <li>Google Ads</li>
+      <li>Social Media Advertising</li>
+      <li>Branding</li>
+      <li>Creative</li>
+      <li>Landing Pages</li>
+      <li>Conversion Strategy</li>
+      <li>Call Tracking</li>
+      <li>Lead Measurement</li>
     </ul>
   </div>
 </section>

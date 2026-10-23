@@ -33,6 +33,7 @@ include __DIR__ . '/includes/header.php';
     </div>
     -->
     <div class="ihero-stage">
+      <!--
       <div class="ihero-canvas">
         <div class="ihero-side ihero-side-left">
           <img src="/assets/images/hero-web-design-left.webp" alt="">
@@ -44,11 +45,50 @@ include __DIR__ . '/includes/header.php';
           <img src="/assets/images/hero-web-design-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
         </div>
       </div>
+      -->
+      <div class="hcar" data-hcar>
+        <div class="hcar-track">
+          <div class="hcar-card"><img src="/assets/images/hcar-web-design-1.webp" alt="Remodeling website design" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-web-design-2.webp" alt="Power washing website design" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-web-design-3.webp" alt="Roofing website design" loading="lazy"></div>
+        </div>
+        <div class="hcar-nav">
+          <button type="button" class="hcar-arrow hcar-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" class="hcar-arrow hcar-next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
       <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-step-popup><span class="ihero-primary-label">Get Your Free Website Audit</span></a>
       <div class="ihero-secondary reveal reveal-delay-1">
         <a href="/works.php" class="ihero-secondary-btn"><span class="ihero-secondary-label">See Our Work</span></a>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="niche-strip" aria-label="What we cover">
+  <div class="niche-strip-track">
+    <ul class="niche-strip-list">
+      <li>Custom Websites</li>
+      <li>Mobile-First Design</li>
+      <li>Project Galleries</li>
+      <li>Before &amp; After Sliders</li>
+      <li>Quote Forms</li>
+      <li>Online Booking</li>
+      <li>Service Pages</li>
+      <li>Review Showcases</li>
+      <li>Fast Load Speed</li>
+    </ul>
+    <ul class="niche-strip-list" aria-hidden="true">
+      <li>Custom Websites</li>
+      <li>Mobile-First Design</li>
+      <li>Project Galleries</li>
+      <li>Before &amp; After Sliders</li>
+      <li>Quote Forms</li>
+      <li>Online Booking</li>
+      <li>Service Pages</li>
+      <li>Review Showcases</li>
+      <li>Fast Load Speed</li>
+    </ul>
   </div>
 </section>
 

@@ -9,7 +9,7 @@ include __DIR__ . '/includes/header.php';
   <div class="ihero-box">
     <header class="ihero-header reveal">
       <p class="ihero-eyebrow"><span class="ihero-eyebrow-dot"></span> INDUSTRIES WE BUILD FOR</p>
-      <h1 class="ihero-heading">Different trades. Different customers. One rule: <span class="accent-lime">make quality obvious.</span></h1>
+      <h1 class="ihero-heading">Different industries. One rule.<br> <span class="accent-lime">make quality obvious.</span></h1>
       <p class="ihero-lead">A homeowner planning a $50K remodel doesn&#x27;t buy like someone with a broken AC. And neither buys like someone choosing a weekly pool service. We build websites and marketing around the way people actually hire businesses in your trade — not a one-size-fits-all contractor template.</p>
     </header>
     <!--
@@ -33,6 +33,7 @@ include __DIR__ . '/includes/header.php';
     </div>
     -->
     <div class="ihero-stage">
+      <!--
       <div class="ihero-canvas">
         <div class="ihero-side ihero-side-left">
           <img src="/assets/images/hero-industries-left.webp" alt="">
@@ -44,11 +45,50 @@ include __DIR__ . '/includes/header.php';
           <img src="/assets/images/hero-industries-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
         </div>
       </div>
+      -->
+      <div class="hcar" data-hcar>
+        <div class="hcar-track">
+          <div class="hcar-card"><img src="/assets/images/hcar-industries-1.webp" alt="Industries image 1" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-industries-2.webp" alt="Industries image 2" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-industries-3.webp" alt="Industries image 3" loading="lazy"></div>
+        </div>
+        <div class="hcar-nav">
+          <button type="button" class="hcar-arrow hcar-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" class="hcar-arrow hcar-next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
       <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-popup><span class="ihero-primary-label">Claim Your FREE Audit</span></a>
       <div class="ihero-secondary reveal reveal-delay-1">
         <a href="/works.php" class="ihero-secondary-btn"><span class="ihero-secondary-label">See Our Work</span></a>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="niche-strip" aria-label="What we cover">
+  <div class="niche-strip-track">
+    <ul class="niche-strip-list">
+      <li>Remodelers</li>
+      <li>Roofers</li>
+      <li>Power Washers</li>
+      <li>HVAC Contractors</li>
+      <li>Plumbers</li>
+      <li>Handymen</li>
+      <li>Landscapers</li>
+      <li>Pool Service Pros</li>
+      <li>Pest Control Pros</li>
+    </ul>
+    <ul class="niche-strip-list" aria-hidden="true">
+      <li>Remodelers</li>
+      <li>Roofers</li>
+      <li>Power Washers</li>
+      <li>HVAC Contractors</li>
+      <li>Plumbers</li>
+      <li>Handymen</li>
+      <li>Landscapers</li>
+      <li>Pool Service Pros</li>
+      <li>Pest Control Pros</li>
+    </ul>
   </div>
 </section>
 

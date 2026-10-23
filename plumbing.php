@@ -33,6 +33,7 @@ include __DIR__ . '/includes/header.php';
     </div>
     -->
     <div class="ihero-stage">
+      <!--
       <div class="ihero-canvas">
         <div class="ihero-side ihero-side-left">
           <img src="/assets/images/hero-plumbing-left.webp" alt="">
@@ -44,11 +45,48 @@ include __DIR__ . '/includes/header.php';
           <img src="/assets/images/hero-plumbing-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
         </div>
       </div>
+      -->
+      <div class="hcar" data-hcar>
+        <div class="hcar-track">
+          <div class="hcar-card"><img src="/assets/images/hcar-plumbing-1.webp" alt="Plumbing image 1" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-plumbing-2.webp" alt="Plumbing image 2" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-plumbing-3.webp" alt="Plumbing image 3" loading="lazy"></div>
+        </div>
+        <div class="hcar-nav">
+          <button type="button" class="hcar-arrow hcar-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" class="hcar-arrow hcar-next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
       <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-popup><span class="ihero-primary-label">Free Consultation</span></a>
       <div class="ihero-secondary reveal reveal-delay-1">
         <a href="/works.php" class="ihero-secondary-btn"><span class="ihero-secondary-label">See our work</span></a>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="niche-strip" aria-label="What we cover">
+  <div class="niche-strip-track">
+    <ul class="niche-strip-list">
+      <li>Emergency Plumbing</li>
+      <li>Leak Repair</li>
+      <li>Drain Cleaning</li>
+      <li>Water Heaters</li>
+      <li>Repiping</li>
+      <li>Sewer Lines</li>
+      <li>Fixture Installation</li>
+      <li>Gas Lines</li>
+    </ul>
+    <ul class="niche-strip-list" aria-hidden="true">
+      <li>Emergency Plumbing</li>
+      <li>Leak Repair</li>
+      <li>Drain Cleaning</li>
+      <li>Water Heaters</li>
+      <li>Repiping</li>
+      <li>Sewer Lines</li>
+      <li>Fixture Installation</li>
+      <li>Gas Lines</li>
+    </ul>
   </div>
 </section>
 
