@@ -15,30 +15,6 @@ include __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<section class="niche-strip" aria-label="What we cover">
-  <div class="niche-strip-track">
-    <ul class="niche-strip-list">
-      <li>Your Privacy</li>
-      <li>Information We Collect</li>
-      <li>How We Use It</li>
-      <li>Cookies</li>
-      <li>No Data Selling</li>
-      <li>Data Security</li>
-      <li>Your Rights</li>
-      <li>Phone Number Consent</li>
-    </ul>
-    <ul class="niche-strip-list" aria-hidden="true">
-      <li>Your Privacy</li>
-      <li>Information We Collect</li>
-      <li>How We Use It</li>
-      <li>Cookies</li>
-      <li>No Data Selling</li>
-      <li>Data Security</li>
-      <li>Your Rights</li>
-      <li>Phone Number Consent</li>
-    </ul>
-  </div>
-</section>
 
 <section class="page-section legal-section">
   <div class="container">

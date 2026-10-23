@@ -37,27 +37,5 @@ include __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<section class="niche-strip" aria-label="What we cover">
-  <div class="niche-strip-track">
-    <ul class="niche-strip-list">
-      <li>Message Received</li>
-      <li>Real People</li>
-      <li>Fast Replies</li>
-      <li>Clear Next Steps</li>
-      <li>Free Audit</li>
-      <li>Strategy Call</li>
-      <li>No Pressure</li>
-    </ul>
-    <ul class="niche-strip-list" aria-hidden="true">
-      <li>Message Received</li>
-      <li>Real People</li>
-      <li>Fast Replies</li>
-      <li>Clear Next Steps</li>
-      <li>Free Audit</li>
-      <li>Strategy Call</li>
-      <li>No Pressure</li>
-    </ul>
-  </div>
-</section>
 
 <?php include __DIR__ . '/includes/footer.php'; ?>

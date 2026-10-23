@@ -189,6 +189,5 @@ $street_desc = $street_desc ?? '';
 
   <div class="container street-cta reveal">
     <a href="/contact.php" class="btn btn-lime btn-lg" data-open-popup>I Wanna Join Them!</a>
-    <a href="/contact.php" class="btn btn-lime btn-lg street-join-float" data-open-popup aria-hidden="true" tabindex="-1">I Wanna Join Them!</a>
   </div>
 </section>

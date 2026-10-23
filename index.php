@@ -1657,7 +1657,6 @@ include __DIR__ . '/includes/header.php';
 
     <div class="home-work-cta">
       <a href="/contact.php" class="btn btn-lime btn-lg" data-open-popup>I&rsquo;m sold! Call me!</a>
-      <a href="/contact.php" class="btn btn-lime btn-lg street-join-float street-join-float--light" data-open-popup aria-hidden="true" tabindex="-1">I&rsquo;m sold! Call me!</a>
     </div>
   </div>
 </section>
@@ -1730,7 +1729,6 @@ include __DIR__ . '/includes/header.php';
     </div>
     <div class="container rail-cta">
       <a href="/contact.php" class="btn btn-lime btn-lg" data-open-step-popup>Let&rsquo;s Do Step 1</a>
-      <a href="/contact.php" class="btn btn-lime btn-lg street-join-float" data-open-step-popup aria-hidden="true" tabindex="-1">Let&rsquo;s Do Step 1</a>
     </div>
   </div>
 </section>

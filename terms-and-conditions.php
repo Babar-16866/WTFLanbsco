@@ -15,30 +15,6 @@ include __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<section class="niche-strip" aria-label="What we cover">
-  <div class="niche-strip-track">
-    <ul class="niche-strip-list">
-      <li>Services</li>
-      <li>Client Responsibilities</li>
-      <li>Intellectual Property</li>
-      <li>Payments</li>
-      <li>Acceptable Use</li>
-      <li>Confidentiality</li>
-      <li>Governing Law</li>
-      <li>Contact</li>
-    </ul>
-    <ul class="niche-strip-list" aria-hidden="true">
-      <li>Services</li>
-      <li>Client Responsibilities</li>
-      <li>Intellectual Property</li>
-      <li>Payments</li>
-      <li>Acceptable Use</li>
-      <li>Confidentiality</li>
-      <li>Governing Law</li>
-      <li>Contact</li>
-    </ul>
-  </div>
-</section>
 
 <section class="page-section legal-section">
   <div class="container">

@@ -301,7 +301,6 @@ include __DIR__ . '/includes/featured-work.php';
     </div>
     <div class="container rail-cta">
       <a href="/contact.php" class="btn btn-lime btn-lg" data-open-step-popup>Let&rsquo;s Do Step 1</a>
-      <a href="/contact.php" class="btn btn-lime btn-lg street-join-float" data-open-step-popup aria-hidden="true" tabindex="-1">Let&rsquo;s Do Step 1</a>
     </div>
   </div>
 </section>

@@ -138,6 +138,7 @@ include __DIR__ . '/includes/header.php';
       <h2>The right website for the job. <span class="heading-accent"><br>Not the longest menu in town.</span></h2>
       <p class="section-desc center-desc wh">Some businesses need a beautiful, focused website. Others need a campaign landing page, an online store or a whole digital operation behind the scenes. We help you choose what makes commercial sense - then build it properly.</p>
     </div>
+    <!--
     <div class="svc-panels reveal" id="svcPanels">
       <a href="/web-design.php" class="svc-panel is-active">
         <img loading="lazy" src="/assets/images/wd-build-1.jpg" alt="Premium business websites">
@@ -217,6 +218,76 @@ include __DIR__ . '/includes/header.php';
         </div>
       </a>
     </div>
+    -->
+    <div class="wtabs reveal" data-wtabs>
+      <div class="wtabs-list" role="tablist" aria-label="What we can build">
+        <button type="button" class="wtabs-tab is-active" role="tab" id="wtabsTab1" aria-controls="wtabsPanel1" aria-selected="true"><span class="wtabs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8M12 18v3"/></svg></span><span class="wtabs-name">Premium business websites</span><span class="wtabs-bar" aria-hidden="true"></span></button>
+        <button type="button" class="wtabs-tab" role="tab" id="wtabsTab2" aria-controls="wtabsPanel2" aria-selected="false"><span class="wtabs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16l-6 8v6l-4 2v-8z"/></svg></span><span class="wtabs-name">Landing pages and sales funnels</span><span class="wtabs-bar" aria-hidden="true"></span></button>
+        <button type="button" class="wtabs-tab" role="tab" id="wtabsTab3" aria-controls="wtabsPanel3" aria-selected="false"><span class="wtabs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h4"/></svg></span><span class="wtabs-name">One-page and informational websites</span><span class="wtabs-bar" aria-hidden="true"></span></button>
+        <button type="button" class="wtabs-tab" role="tab" id="wtabsTab4" aria-controls="wtabsPanel4" aria-selected="false"><span class="wtabs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></span><span class="wtabs-name">Immersive, high-end web experiences</span><span class="wtabs-bar" aria-hidden="true"></span></button>
+        <button type="button" class="wtabs-tab" role="tab" id="wtabsTab5" aria-controls="wtabsPanel5" aria-selected="false"><span class="wtabs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l-1.5 11a2 2 0 0 1-2 1.7H8.5a2 2 0 0 1-2-1.7z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg></span><span class="wtabs-name">WordPress, Shopify and e-commerce</span><span class="wtabs-bar" aria-hidden="true"></span></button>
+        <button type="button" class="wtabs-tab" role="tab" id="wtabsTab6" aria-controls="wtabsPanel6" aria-selected="false"><span class="wtabs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 17.5h7M17.5 14v7"/></svg></span><span class="wtabs-name">Web apps, portals and CRM workflows</span><span class="wtabs-bar" aria-hidden="true"></span></button>
+        <button type="button" class="wtabs-tab" role="tab" id="wtabsTab7" aria-controls="wtabsPanel7" aria-selected="false"><span class="wtabs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></span><span class="wtabs-name">Hosting, maintenance and ongoing improvements</span><span class="wtabs-bar" aria-hidden="true"></span></button>
+      </div>
+      <div class="wtabs-panels">
+        <article class="wtabs-panel is-active" role="tabpanel" id="wtabsPanel1" aria-labelledby="wtabsTab1">
+          <div class="wtabs-media"><img src="/assets/images/wd-build-1.jpg" alt="Premium business websites" loading="lazy"></div>
+          <div class="wtabs-copy">
+            <h3>Premium business websites</h3>
+            <p>Custom, multi-page websites that explain your services, prove your quality, and guide the right customers to a clear next step. Built around your brand; not dressed-up contractor templates.</p>
+            <a href="/web-design.php" class="btn btn-lime wtabs-link">View Service <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+        <article class="wtabs-panel" role="tabpanel" id="wtabsPanel2" aria-labelledby="wtabsTab2" aria-hidden="true">
+          <div class="wtabs-media"><img src="/assets/images/wd-build-2.jpg" alt="Landing pages and sales funnels" loading="lazy"></div>
+          <div class="wtabs-copy">
+            <h3>Landing pages and sales funnels</h3>
+            <p>Focused pages for Google Ads, social campaigns, promotions or high-value services. One message, the right proof, and one obvious action: without paying for clicks that land on a confusing homepage.</p>
+            <a href="/web-design.php" class="btn btn-lime wtabs-link">View Service <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+        <article class="wtabs-panel" role="tabpanel" id="wtabsPanel3" aria-labelledby="wtabsTab3" aria-hidden="true">
+          <div class="wtabs-media"><img src="/assets/images/wd-build-3.jpg" alt="One-page and informational websites" loading="lazy"></div>
+          <div class="wtabs-copy">
+            <h3>One-page and informational websites</h3>
+            <p>Clean, confident websites for a business that needs a sharper presence without unnecessary complexity. The essential story, services, trust signals and contact path, all in the right order.</p>
+            <a href="/web-design.php" class="btn btn-lime wtabs-link">View Service <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+        <article class="wtabs-panel" role="tabpanel" id="wtabsPanel4" aria-labelledby="wtabsTab4" aria-hidden="true">
+          <div class="wtabs-media"><img src="/assets/images/wd-build-4.jpg" alt="Immersive, high-end web experiences" loading="lazy"></div>
+          <div class="wtabs-copy">
+            <h3>Immersive, high-end web experiences</h3>
+            <p>Cinematic project storytelling, purposeful motion, before-and-after sliders, interactive galleries and memorable detail. Attention-grabbing where it helps; fast and straightforward where it matters more.</p>
+            <a href="/web-design.php" class="btn btn-lime wtabs-link">View Service <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+        <article class="wtabs-panel" role="tabpanel" id="wtabsPanel5" aria-labelledby="wtabsTab5" aria-hidden="true">
+          <div class="wtabs-media"><img src="/assets/images/wd-build-5.jpg" alt="WordPress, Shopify and e-commerce" loading="lazy"></div>
+          <div class="wtabs-copy">
+            <h3>WordPress, Shopify and e-commerce</h3>
+            <p>Content-managed websites, Shopify stores and tailored online selling experiences when your business needs to publish, manage products or sell online. The platform follows the goal, not the other way around.</p>
+            <a href="/web-development.php" class="btn btn-lime wtabs-link">View Service <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+        <article class="wtabs-panel" role="tabpanel" id="wtabsPanel6" aria-labelledby="wtabsTab6" aria-hidden="true">
+          <div class="wtabs-media"><img src="/assets/images/wd-build-6.jpg" alt="Web apps, portals and CRM workflows" loading="lazy"></div>
+          <div class="wtabs-copy">
+            <h3>Web apps, portals and CRM workflows</h3>
+            <p>For bigger operational needs, we can plan custom dashboards, client portals, booking tools, lead workflows and integrations that cut repetitive admin work and fit how your team operates.</p>
+            <a href="/web-development.php" class="btn btn-lime wtabs-link">View Service <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+        <article class="wtabs-panel" role="tabpanel" id="wtabsPanel7" aria-labelledby="wtabsTab7" aria-hidden="true">
+          <div class="wtabs-media"><img src="/assets/images/wd-build-7.jpg" alt="Hosting, maintenance and ongoing improvements" loading="lazy"></div>
+          <div class="wtabs-copy">
+            <h3>Hosting, maintenance and ongoing improvements</h3>
+            <p>Launch is the start, not the finish. Hosting, updates, fixes, monitoring and site improvements can keep the experience dependable as your services and business evolve.</p>
+            <a href="/web-development.php" class="btn btn-lime wtabs-link">View Service <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
     <div class="svc-showcase-foot reveal">
       <p class="section-desc center-desc">Not sure which of these you need? That's a strategy question, not homework we expect you to finish before calling.</p>
       <a href="/contact.php" class="btn btn-lime btn-lg" data-open-step-popup>Help Me Choose the Right Build</a>
@@ -272,7 +343,6 @@ include __DIR__ . '/includes/featured-work.php';
     </div>
     <div class="container rail-cta">
       <a href="/contact.php" class="btn btn-lime btn-lg" data-open-step-popup>Let&rsquo;s Do Step 1</a>
-      <a href="/contact.php" class="btn btn-lime btn-lg street-join-float" data-open-step-popup aria-hidden="true" tabindex="-1">Let&rsquo;s Do Step 1</a>
     </div>
   </div>
 </section>
