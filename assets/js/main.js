@@ -2626,36 +2626,3 @@ document.addEventListener('click', (e) => {
     show(0);
   });
 })();
-
-(function initRmx() {
-  const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-  if (fine) {
-    document.querySelectorAll('[data-rmx-tilt]').forEach((el) => {
-      el.addEventListener('mousemove', (e) => {
-        const r = el.getBoundingClientRect();
-        const x = (e.clientX - r.left) / r.width - 0.5;
-        const y = (e.clientY - r.top) / r.height - 0.5;
-        el.style.setProperty('--ry', (x * 10).toFixed(2) + 'deg');
-        el.style.setProperty('--rx', (-y * 8).toFixed(2) + 'deg');
-      });
-      el.addEventListener('mouseleave', () => {
-        el.style.setProperty('--ry', '0deg');
-        el.style.setProperty('--rx', '0deg');
-      });
-    });
-  }
-  const stage = document.querySelector('[data-rmx-stage]');
-  const tabs = Array.from(document.querySelectorAll('[data-rmx-tab]'));
-  if (!stage || !tabs.length) return;
-  tabs.forEach((tab) => {
-    tab.addEventListener('click', () => {
-      const n = tab.getAttribute('data-rmx-tab');
-      tabs.forEach((t) => {
-        const on = t === tab;
-        t.classList.toggle('is-active', on);
-        t.setAttribute('aria-selected', on ? 'true' : 'false');
-      });
-      stage.querySelectorAll('[data-rmx-pane]').forEach((pane) => pane.classList.toggle('is-active', pane.getAttribute('data-rmx-pane') === n));
-    });
-  });
-})();
