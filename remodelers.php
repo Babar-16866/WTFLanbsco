@@ -1574,12 +1574,6 @@ include __DIR__ . '/includes/testimonialslider.php';
 <div class="rx">
 
 <section class="rx-hero" data-rx-hero>
-  <div class="rx-hero-grid" aria-hidden="true"></div>
-  <svg class="rx-hero-dims" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
-    <path class="rx-draw" d="M60 140H1380M60 132v16M1380 132v16"/>
-    <path class="rx-draw" d="M100 180V820M92 180h16M92 820h16"/>
-    <path class="rx-draw rx-draw--soft" d="M640 860H1380M640 852v16M1380 852v16"/>
-  </svg>
   <div class="rx-hero-inner">
     <div class="rx-hero-copy">
       <p class="rx-hero-tag">Remodeling</p>
@@ -1591,17 +1585,11 @@ include __DIR__ . '/includes/testimonialslider.php';
       <div class="rx-hero-actions"><a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a></div>
     </div>
     <div class="rx-hero-stage" data-rx-tilt>
-      <div class="rx-plane" aria-hidden="true"></div>
       <div class="rx-hero-phones">
         <img fetchpriority="high" src="/assets/images/rmx-hero.webp" alt="Remodeling company website on two phones: reviews, consult booking, before and after slider and project galleries" width="2375" height="1546">
       </div>
     </div>
   </div>
-  <dl class="rx-titleblock" aria-hidden="true">
-    <div><dt>Project</dt><dd>Your next remodel</dd></div>
-    <div><dt>Drawn by</dt><dd>WTF Labs</dd></div>
-    <div><dt>Sheet</dt><dd>A-01</dd></div>
-  </dl>
 </section>
 
 <section class="rx-tapes" aria-label="Review platforms homeowners check">
@@ -1613,35 +1601,35 @@ include __DIR__ . '/includes/testimonialslider.php';
   <div class="rx-exp-pin">
     <div class="rx-exp-head" data-rx-reveal>
       <p class="subheading">Our remodeling expertise</p>
-      <h2 class="rx-h2">Everything you need to <span class="rx-gold">win the walkthrough.</span></h2>
-      <p class="rx-sub">Built only for remodelers. Every page, ad and form is designed to sell premium projects.</p>
+      <h2 class="rx-h2">What we build <span class="rx-gold">for remodelers.</span></h2>
+      <p class="rx-sub">Every page, ad and form is set up to sell kitchens, baths and additions, not small repair calls.</p>
       <div class="rx-exp-progress" aria-hidden="true"><span></span></div>
     </div>
     <div class="rx-exp-view">
       <div class="rx-exp-track">
       <article class="rx-exp-card">
         <figure class="rx-exp-media"><img src="/assets/images/rm-kitchen-2.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
-        <div class="rx-exp-body"><span class="rx-exp-n">01</span><h3>Portfolio-led websites</h3><p>Your finished kitchens and baths become the sales pitch, framed like a design magazine.</p></div>
+        <div class="rx-exp-body"><h3>Portfolio-led websites</h3><p>Your finished kitchens and baths become the sales pitch, framed like a design magazine.</p></div>
       </article>
       <article class="rx-exp-card">
         <figure class="rx-exp-media"><img src="/assets/images/rm-bath-2.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
-        <div class="rx-exp-body"><span class="rx-exp-n">02</span><h3>Before and after storytelling</h3><p>Drag-to-reveal sliders that show the transformation in one swipe.</p></div>
+        <div class="rx-exp-body"><h3>Before and after storytelling</h3><p>Drag-to-reveal sliders that show the transformation in one swipe.</p></div>
       </article>
       <article class="rx-exp-card">
         <figure class="rx-exp-media"><img src="/assets/images/rm-design-1.webp" alt="" width="1600" height="1164" loading="lazy" decoding="async"></figure>
-        <div class="rx-exp-body"><span class="rx-exp-n">03</span><h3>Budget-ready consult forms</h3><p>Capture project type, budget and timing before the first call.</p></div>
+        <div class="rx-exp-body"><h3>Budget-ready consult forms</h3><p>Capture project type, budget and timing before the first call.</p></div>
       </article>
       <article class="rx-exp-card">
         <figure class="rx-exp-media"><img src="/assets/images/rm-exterior-1.webp" alt="" width="1600" height="900" loading="lazy" decoding="async"></figure>
-        <div class="rx-exp-body"><span class="rx-exp-n">04</span><h3>Local SEO for big-ticket jobs</h3><p>Rank for kitchen, bath and addition searches in the towns you want.</p></div>
+        <div class="rx-exp-body"><h3>Local SEO for big-ticket jobs</h3><p>Rank for kitchen, bath and addition searches in the towns you want.</p></div>
       </article>
       <article class="rx-exp-card">
         <figure class="rx-exp-media"><img src="/assets/images/rm-crew-2.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
-        <div class="rx-exp-body"><span class="rx-exp-n">05</span><h3>Google and Meta ads</h3><p>Campaigns built around consultations, not cheap clicks.</p></div>
+        <div class="rx-exp-body"><h3>Google and Meta ads</h3><p>Campaigns built around consultations, not cheap clicks.</p></div>
       </article>
       <article class="rx-exp-card">
         <figure class="rx-exp-media"><img src="/assets/images/rm-living-2.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
-        <div class="rx-exp-body"><span class="rx-exp-n">06</span><h3>Reviews and reputation</h3><p>Turn happy clients into five-star proof on every platform.</p></div>
+        <div class="rx-exp-body"><h3>Reviews and reputation</h3><p>Turn happy clients into five-star proof on every platform.</p></div>
       </article>
       </div>
     </div>
@@ -1652,7 +1640,7 @@ include __DIR__ . '/includes/testimonialslider.php';
   <div class="rx-ba-pin">
     <div class="rx-ba-copy">
       <p class="subheading">Benefits for remodelers</p>
-      <h2 class="rx-h2">What a better website <span class="rx-gold">does for your business.</span></h2>
+      <h2 class="rx-h2">What changes when the site <span class="rx-gold">matches your work.</span></h2>
       <ol class="rx-ben-list"><li class="rx-ben-item is-active"><span class="rx-ben-n">01</span><div><h3>Bigger average jobs</h3><p>Premium design attracts homeowners planning $40K+ projects.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">02</span><div><h3>Better-fit leads</h3><p>Budget and timeline filters weed out tire-kickers early.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">03</span><div><h3>Instant credibility</h3><p>Reviews, licenses and real photos build trust before the visit.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">04</span><div><h3>Less time quoting</h3><p>Consult forms give you the full picture before you drive out.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">05</span><div><h3>Steady pipeline</h3><p>SEO and ads keep consultations booked in slow seasons too.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">06</span><div><h3>More referrals</h3><p>A site worth sharing turns past clients into your sales team.</p></div></li></ol>
       <a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
     </div>
@@ -1676,8 +1664,6 @@ include __DIR__ . '/includes/testimonialslider.php';
     </div>
     <div class="rx-ask-art" data-rx-tilt>
       <img src="/assets/images/rmx-duo-quote.webp" alt="Remodeling quote form and reviews on phones" width="1400" height="1520" loading="lazy" decoding="async">
-      <span class="rx-chip rx-chip--a"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z" fill="currentColor"/></svg>New lead: $58K kitchen</span>
-      <span class="rx-chip rx-chip--b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Consult booked: Tue 11:30</span>
     </div>
   </div>
 </section>
@@ -1687,22 +1673,22 @@ include __DIR__ . '/includes/testimonialslider.php';
   <div class="rx-wrap">
     <div class="rx-niches-head" data-rx-reveal>
       <p class="subheading">Remodeling niches we serve</p>
-      <h2 class="rx-h2">Whatever you build, <span class="rx-gold">we help you sell it.</span></h2>
-      <p class="rx-sub">From one-room refreshes to full design-build firms, each niche gets pages, ads and proof built around how its buyers decide.</p>
+      <h2 class="rx-h2">Kitchens, baths, basements <span class="rx-gold">and everything between.</span></h2>
+      <p class="rx-sub">Each trade gets its own pages, ads and project photos. A basement buyer asks different questions than a kitchen buyer.</p>
     </div>
     <ul class="rx-niche-list">
-      <li class="rx-niche" data-img="/assets/images/rm-kitchen-4.webp"><span class="rx-niche-n">01</span><span class="rx-niche-thumb"><img src="/assets/images/rm-kitchen-4.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span><span class="rx-niche-name">Kitchen remodelers</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
-      <li class="rx-niche" data-img="/assets/images/rm-bath-1.webp"><span class="rx-niche-n">02</span><span class="rx-niche-thumb"><img src="/assets/images/rm-bath-1.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span><span class="rx-niche-name">Bathroom remodelers</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
-      <li class="rx-niche" data-img="/assets/images/rm-basement-2.webp"><span class="rx-niche-n">03</span><span class="rx-niche-thumb"><img src="/assets/images/rm-basement-2.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span><span class="rx-niche-name">Basement finishing</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
-      <li class="rx-niche" data-img="/assets/images/rm-addition-2.webp"><span class="rx-niche-n">04</span><span class="rx-niche-thumb"><img src="/assets/images/rm-addition-2.webp" alt="" width="1600" height="1076" loading="lazy" decoding="async"></span><span class="rx-niche-name">Home additions</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
-      <li class="rx-niche" data-img="/assets/images/rm-living-1.webp"><span class="rx-niche-n">05</span><span class="rx-niche-thumb"><img src="/assets/images/rm-living-1.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span><span class="rx-niche-name">Whole-home renovations</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
-      <li class="rx-niche" data-img="/assets/images/rm-cabinet-2.webp"><span class="rx-niche-n">06</span><span class="rx-niche-thumb"><img src="/assets/images/rm-cabinet-2.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span><span class="rx-niche-name">Custom cabinetry</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
-      <li class="rx-niche" data-img="/assets/images/rm-tile-1.webp"><span class="rx-niche-n">07</span><span class="rx-niche-thumb"><img src="/assets/images/rm-tile-1.webp" alt="" width="1600" height="1278" loading="lazy" decoding="async"></span><span class="rx-niche-name">Flooring and tile</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
-      <li class="rx-niche" data-img="/assets/images/rm-outdoor-2.webp"><span class="rx-niche-n">08</span><span class="rx-niche-thumb"><img src="/assets/images/rm-outdoor-2.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span><span class="rx-niche-name">Outdoor living</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
-      <li class="rx-niche" data-img="/assets/images/rm-exterior-2.webp"><span class="rx-niche-n">09</span><span class="rx-niche-thumb"><img src="/assets/images/rm-exterior-2.webp" alt="" width="1600" height="1244" loading="lazy" decoding="async"></span><span class="rx-niche-name">ADUs and garage conversions</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
-      <li class="rx-niche" data-img="/assets/images/rm-floor-1.webp"><span class="rx-niche-n">10</span><span class="rx-niche-thumb"><img src="/assets/images/rm-floor-1.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span><span class="rx-niche-name">Interior finishing</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
-      <li class="rx-niche" data-img="/assets/images/rm-plan-1.webp"><span class="rx-niche-n">11</span><span class="rx-niche-thumb"><img src="/assets/images/rm-plan-1.webp" alt="" width="1600" height="900" loading="lazy" decoding="async"></span><span class="rx-niche-name">Design-build firms</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
-      <li class="rx-niche" data-img="/assets/images/rm-kitchen-3.webp"><span class="rx-niche-n">12</span><span class="rx-niche-thumb"><img src="/assets/images/rm-kitchen-3.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span><span class="rx-niche-name">Light commercial remodels</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
+      <li class="rx-niche" data-img="/assets/images/rm-kitchen-4.webp"><span class="rx-niche-thumb"><img src="/assets/images/rm-kitchen-4.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span><span class="rx-niche-name">Kitchen remodelers</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
+      <li class="rx-niche" data-img="/assets/images/rm-bath-1.webp"><span class="rx-niche-thumb"><img src="/assets/images/rm-bath-1.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span><span class="rx-niche-name">Bathroom remodelers</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
+      <li class="rx-niche" data-img="/assets/images/rm-basement-2.webp"><span class="rx-niche-thumb"><img src="/assets/images/rm-basement-2.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span><span class="rx-niche-name">Basement finishing</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
+      <li class="rx-niche" data-img="/assets/images/rm-addition-2.webp"><span class="rx-niche-thumb"><img src="/assets/images/rm-addition-2.webp" alt="" width="1600" height="1076" loading="lazy" decoding="async"></span><span class="rx-niche-name">Home additions</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
+      <li class="rx-niche" data-img="/assets/images/rm-living-1.webp"><span class="rx-niche-thumb"><img src="/assets/images/rm-living-1.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span><span class="rx-niche-name">Whole-home renovations</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
+      <li class="rx-niche" data-img="/assets/images/rm-cabinet-2.webp"><span class="rx-niche-thumb"><img src="/assets/images/rm-cabinet-2.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span><span class="rx-niche-name">Custom cabinetry</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
+      <li class="rx-niche" data-img="/assets/images/rm-tile-1.webp"><span class="rx-niche-thumb"><img src="/assets/images/rm-tile-1.webp" alt="" width="1600" height="1278" loading="lazy" decoding="async"></span><span class="rx-niche-name">Flooring and tile</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
+      <li class="rx-niche" data-img="/assets/images/rm-outdoor-2.webp"><span class="rx-niche-thumb"><img src="/assets/images/rm-outdoor-2.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span><span class="rx-niche-name">Outdoor living</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
+      <li class="rx-niche" data-img="/assets/images/rm-exterior-2.webp"><span class="rx-niche-thumb"><img src="/assets/images/rm-exterior-2.webp" alt="" width="1600" height="1244" loading="lazy" decoding="async"></span><span class="rx-niche-name">ADUs and garage conversions</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
+      <li class="rx-niche" data-img="/assets/images/rm-floor-1.webp"><span class="rx-niche-thumb"><img src="/assets/images/rm-floor-1.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span><span class="rx-niche-name">Interior finishing</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
+      <li class="rx-niche" data-img="/assets/images/rm-plan-1.webp"><span class="rx-niche-thumb"><img src="/assets/images/rm-plan-1.webp" alt="" width="1600" height="900" loading="lazy" decoding="async"></span><span class="rx-niche-name">Design-build firms</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
+      <li class="rx-niche" data-img="/assets/images/rm-kitchen-3.webp"><span class="rx-niche-thumb"><img src="/assets/images/rm-kitchen-3.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span><span class="rx-niche-name">Light commercial remodels</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
     </ul>
   </div>
   <div class="rx-niche-float" aria-hidden="true"><img src="" alt=""></div>
@@ -1713,14 +1699,13 @@ include __DIR__ . '/includes/testimonialslider.php';
   <div class="rx-wrap">
     <div class="rx-inside-head" data-rx-reveal>
       <p class="subheading">Inside a remodeler website</p>
-      <h2 class="rx-h2">Built for every step <span class="rx-gold">of the remodel.</span></h2>
-      <p class="rx-sub">What homeowners see, what you manage, and how the two connect.</p>
+      <h2 class="rx-h2">What homeowners see <span class="rx-gold">and what you manage.</span></h2>
+      <p class="rx-sub">Tap through the four screens. Each one comes built into the sites we make for remodelers.</p>
     </div>
-    <div class="rx-tabs" role="tablist" aria-label="Inside a remodeler website"><button type="button" class="rx-tab is-active" role="tab" id="rxTab0" aria-controls="rxStage" aria-selected="true" data-rx-tab="0"><span class="rx-tab-n">01</span><span class="rx-tab-name">Homeowner pages</span><span class="rx-tab-bar" aria-hidden="true"></span></button><button type="button" class="rx-tab" role="tab" id="rxTab1" aria-controls="rxStage" aria-selected="false" data-rx-tab="1"><span class="rx-tab-n">02</span><span class="rx-tab-name">Project showcase</span><span class="rx-tab-bar" aria-hidden="true"></span></button><button type="button" class="rx-tab" role="tab" id="rxTab2" aria-controls="rxStage" aria-selected="false" data-rx-tab="2"><span class="rx-tab-n">03</span><span class="rx-tab-name">Owner dashboard</span><span class="rx-tab-bar" aria-hidden="true"></span></button><button type="button" class="rx-tab" role="tab" id="rxTab3" aria-controls="rxStage" aria-selected="false" data-rx-tab="3"><span class="rx-tab-n">04</span><span class="rx-tab-name">Budget planner</span><span class="rx-tab-bar" aria-hidden="true"></span></button></div>
+    <div class="rx-tabs" role="tablist" aria-label="Inside a remodeler website"><button type="button" class="rx-tab is-active" role="tab" id="rxTab0" aria-controls="rxStage" aria-selected="true" data-rx-tab="0"><span class="rx-tab-name">Homeowner pages</span><span class="rx-tab-bar" aria-hidden="true"></span></button><button type="button" class="rx-tab" role="tab" id="rxTab1" aria-controls="rxStage" aria-selected="false" data-rx-tab="1"><span class="rx-tab-name">Project showcase</span><span class="rx-tab-bar" aria-hidden="true"></span></button><button type="button" class="rx-tab" role="tab" id="rxTab2" aria-controls="rxStage" aria-selected="false" data-rx-tab="2"><span class="rx-tab-name">Owner dashboard</span><span class="rx-tab-bar" aria-hidden="true"></span></button><button type="button" class="rx-tab" role="tab" id="rxTab3" aria-controls="rxStage" aria-selected="false" data-rx-tab="3"><span class="rx-tab-name">Budget planner</span><span class="rx-tab-bar" aria-hidden="true"></span></button></div>
     <div class="rx-stage" id="rxStage" role="tabpanel" aria-live="polite">
       <div class="rx-stage-col rx-stage-col--l"><div class="rx-feats is-active" data-rx-pane="0"><div class="rx-feat"><h3>Clear service pages</h3><p>Kitchens, baths and additions each get a page that sells.</p></div><div class="rx-feat"><h3>Process at a glance</h3><p>Show the steps so buyers know what happens next.</p></div><div class="rx-feat"><h3>Photo-first layouts</h3><p>Your best projects lead every page, not stock images.</p></div></div><div class="rx-feats" data-rx-pane="1"><div class="rx-feat"><h3>Filter by room</h3><p>Homeowners jump straight to kitchens, baths or basements.</p></div><div class="rx-feat"><h3>Filter by town</h3><p>Show the work you did a few streets away.</p></div><div class="rx-feat"><h3>Project stories</h3><p>Scope, timeline and finish details for every job.</p></div></div><div class="rx-feats" data-rx-pane="2"><div class="rx-feat"><h3>Every lead in one place</h3><p>Calls, forms and bookings land in a single inbox.</p></div><div class="rx-feat"><h3>Budget at a glance</h3><p>See project type and budget before you call back.</p></div><div class="rx-feat"><h3>Hot lead alerts</h3><p>Big jobs get flagged so you reply first.</p></div></div><div class="rx-feats" data-rx-pane="3"><div class="rx-feat"><h3>Instant ballpark</h3><p>Homeowners see a realistic range in seconds.</p></div><div class="rx-feat"><h3>Line-item preview</h3><p>Cabinets, counters and flooring broken out simply.</p></div><div class="rx-feat"><h3>Financing options</h3><p>Monthly estimates make big projects feel reachable.</p></div></div></div>
       <div class="rx-stage-phone">
-        <span class="rx-ring" aria-hidden="true"></span>
         <div class="rx-stage-screens"><img class="rx-screen is-active" data-rx-pane="0" src="/assets/images/rmx-tab-1.webp" alt="Homeowner pages screen" width="720" height="1400" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="1" src="/assets/images/rmx-tab-2.webp" alt="Project showcase screen" width="720" height="1400" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="2" src="/assets/images/rmx-tab-3.webp" alt="Owner dashboard screen" width="720" height="1400" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="3" src="/assets/images/rmx-tab-4.webp" alt="Budget planner screen" width="720" height="1400" loading="lazy" decoding="async"></div>
       </div>
       <div class="rx-stage-col rx-stage-col--r"><div class="rx-feats is-active" data-rx-pane="0"><div class="rx-feat"><h3>One-tap consult</h3><p>Booking sits on every screen, always one thumb away.</p></div><div class="rx-feat"><h3>Local proof</h3><p>Neighborhood projects and reviews near the homeowner.</p></div><div class="rx-feat"><h3>Fast on any phone</h3><p>Pages load quickly even on weak mobile signal.</p></div></div><div class="rx-feats" data-rx-pane="1"><div class="rx-feat"><h3>Big, sharp photos</h3><p>Full-width images that make craftsmanship obvious.</p></div><div class="rx-feat"><h3>Before and after</h3><p>Swipe-to-reveal comparisons that sell the change.</p></div><div class="rx-feat"><h3>Ask about this</h3><p>A request button tied to each project you show.</p></div></div><div class="rx-feats" data-rx-pane="2"><div class="rx-feat"><h3>Pipeline value</h3><p>Know what is booked and what is still open.</p></div><div class="rx-feat"><h3>Source tracking</h3><p>See which ads and searches bring real jobs.</p></div><div class="rx-feat"><h3>One-tap follow-up</h3><p>Call or text the homeowner straight from the lead.</p></div></div><div class="rx-feats" data-rx-pane="3"><div class="rx-feat"><h3>Fewer price shocks</h3><p>Expectations are set before you walk in.</p></div><div class="rx-feat"><h3>Qualified requests</h3><p>Only serious, budget-aware buyers reach out.</p></div><div class="rx-feat"><h3>Exact pricing CTA</h3><p>One button moves them to a real quote.</p></div></div></div>
