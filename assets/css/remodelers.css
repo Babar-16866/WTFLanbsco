@@ -1237,3 +1237,11 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
     background-size: 100% 88%;
   }
 }
+html body section.page-section.industry-nav-section {
+  padding-bottom: 80px;
+}
+@media (max-width: 640px) {
+  html body section.page-section.industry-nav-section {
+    padding-bottom: 56px;
+  }
+}
