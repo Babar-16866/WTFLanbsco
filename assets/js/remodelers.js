@@ -95,23 +95,29 @@
     const stage = ba.querySelector('[data-rx-ba-stage]');
     const items = Array.from(ba.querySelectorAll('.rx-ben-item'));
     const setP = (v) => stage.style.setProperty('--p', clamp(v, 0, 1).toFixed(4));
+    let drag = false;
+    let manual = false;
     layouts.push(() => ba.classList.toggle('is-pin', wide() && !reduce));
     tasks.push(() => {
       if (!ba.classList.contains('is-pin')) return;
       const r = ba.getBoundingClientRect();
       const span = r.height - pin.getBoundingClientRect().height;
       const p = span > 0 ? clamp(-r.top / span, 0, 1) : 0;
-      setP((p - 0.04) / 0.9);
+      if (!manual) setP((p - 0.04) / 0.9);
       const idx = Math.min(items.length - 1, Math.floor(p * items.length));
       items.forEach((it, i) => it.classList.toggle('is-active', i === idx));
     });
-    let drag = false;
     const fromEvent = (e) => {
       const r = stage.getBoundingClientRect();
       setP((e.clientX - r.left) / r.width);
     };
     stage.addEventListener('pointerdown', (e) => {
-      if (ba.classList.contains('is-pin')) return;
+      const onHandle = e.target.closest('.rx-ba-handle span');
+      if (ba.classList.contains('is-pin') && !onHandle) return;
+      if (onHandle) {
+        e.preventDefault();
+        manual = true;
+      }
       drag = true;
       stage.setPointerCapture(e.pointerId);
       fromEvent(e);

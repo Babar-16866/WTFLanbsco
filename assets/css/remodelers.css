@@ -600,6 +600,8 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   border-radius: 50%;
   background: var(--rx-lime);
   box-shadow: 0 10px 24px rgba(6, 20, 14, 0.3);
+  cursor: ew-resize;
+  touch-action: none;
 }
 .rx-ba-handle span::before,
 .rx-ba-handle span::after {
