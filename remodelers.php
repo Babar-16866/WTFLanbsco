@@ -1612,7 +1612,7 @@ include __DIR__ . '/includes/testimonialslider.php';
 <section class="rx-exp" data-rx-hscroll>
   <div class="rx-exp-pin">
     <div class="rx-exp-head" data-rx-reveal>
-      <p class="rx-sheet"><span class="rx-sheet-code">A-02</span><span class="rx-sheet-rule" aria-hidden="true"></span><span>Our remodeling expertise</span></p>
+      <p class="subheading">Our remodeling expertise</p>
       <h2 class="rx-h2">Everything you need to <span class="rx-gold">win the walkthrough.</span></h2>
       <p class="rx-sub">Built only for remodelers. Every page, ad and form is designed to sell premium projects.</p>
       <div class="rx-exp-progress" aria-hidden="true"><span></span></div>
@@ -1651,7 +1651,7 @@ include __DIR__ . '/includes/testimonialslider.php';
 <section class="rx-ba" data-rx-ba>
   <div class="rx-ba-pin">
     <div class="rx-ba-copy">
-      <p class="rx-sheet"><span class="rx-sheet-code">A-03</span><span class="rx-sheet-rule" aria-hidden="true"></span><span>Benefits for remodelers</span></p>
+      <p class="subheading">Benefits for remodelers</p>
       <h2 class="rx-h2">What a better website <span class="rx-gold">does for your business.</span></h2>
       <ol class="rx-ben-list"><li class="rx-ben-item is-active"><span class="rx-ben-n">01</span><div><h3>Bigger average jobs</h3><p>Premium design attracts homeowners planning $40K+ projects.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">02</span><div><h3>Better-fit leads</h3><p>Budget and timeline filters weed out tire-kickers early.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">03</span><div><h3>Instant credibility</h3><p>Reviews, licenses and real photos build trust before the visit.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">04</span><div><h3>Less time quoting</h3><p>Consult forms give you the full picture before you drive out.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">05</span><div><h3>Steady pipeline</h3><p>SEO and ads keep consultations booked in slow seasons too.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">06</span><div><h3>More referrals</h3><p>A site worth sharing turns past clients into your sales team.</p></div></li></ol>
       <a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
@@ -1669,7 +1669,7 @@ include __DIR__ . '/includes/testimonialslider.php';
 <section class="rx-ask" data-rx-ask>
   <div class="rx-ask-inner">
     <div class="rx-ask-copy">
-      <p class="rx-sheet"><span class="rx-sheet-code">A-04</span><span class="rx-sheet-rule" aria-hidden="true"></span><span>The real question</span></p>
+      <p class="subheading">The real question</p>
       <h2 class="rx-ask-q" aria-label="Still losing $60K kitchens to the contractor with the better website?"><span aria-hidden="true"><span class="rx-w">Still</span> <span class="rx-w">losing</span> <span class="rx-w rx-w--gold">$60K</span> <span class="rx-w">kitchens</span> <span class="rx-w">to</span> <span class="rx-w">the</span> <span class="rx-w">contractor</span> <span class="rx-w">with</span> <span class="rx-w">the</span> <span class="rx-w">better</span> <span class="rx-w">website?</span></span></h2>
       <p>Homeowners judge your work by your website before they ever meet you. We make your projects look as good online as they do in person, so the right clients call you first.</p>
       <a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
@@ -1686,7 +1686,7 @@ include __DIR__ . '/includes/testimonialslider.php';
   <div class="rx-ruler" data-rx-reveal aria-hidden="true"></div>
   <div class="rx-wrap">
     <div class="rx-niches-head" data-rx-reveal>
-      <p class="rx-sheet"><span class="rx-sheet-code">A-05</span><span class="rx-sheet-rule" aria-hidden="true"></span><span>Remodeling niches we serve</span></p>
+      <p class="subheading">Remodeling niches we serve</p>
       <h2 class="rx-h2">Whatever you build, <span class="rx-gold">we help you sell it.</span></h2>
       <p class="rx-sub">From one-room refreshes to full design-build firms, each niche gets pages, ads and proof built around how its buyers decide.</p>
     </div>
@@ -1712,7 +1712,7 @@ include __DIR__ . '/includes/testimonialslider.php';
   <div class="rx-ruler" data-rx-reveal aria-hidden="true"></div>
   <div class="rx-wrap">
     <div class="rx-inside-head" data-rx-reveal>
-      <p class="rx-sheet"><span class="rx-sheet-code">A-06</span><span class="rx-sheet-rule" aria-hidden="true"></span><span>Inside a remodeler website</span></p>
+      <p class="subheading">Inside a remodeler website</p>
       <h2 class="rx-h2">Built for every step <span class="rx-gold">of the remodel.</span></h2>
       <p class="rx-sub">What homeowners see, what you manage, and how the two connect.</p>
     </div>
@@ -1732,7 +1732,7 @@ include __DIR__ . '/includes/testimonialslider.php';
   <div class="rx-team-card">
     <div class="rx-team-art" data-rx-tilt><img src="/assets/images/rmx-trio.webp" alt="Remodeling services, project tracker and consult booking on phones" width="1840" height="1495" loading="lazy" decoding="async"></div>
     <div class="rx-team-copy">
-      <p class="rx-sheet"><span class="rx-sheet-code">A-07</span><span class="rx-sheet-rule" aria-hidden="true"></span><span>Why WTF Labs</span></p>
+      <p class="subheading">Why WTF Labs</p>
       <h2 class="rx-h2">Looking for a team that actually understands remodeling?</h2>
       <p>We have built websites for kitchen, bath and design-build firms. We know how your buyers shop, so we design every page to turn browsing into booked consultations.</p>
       <a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>

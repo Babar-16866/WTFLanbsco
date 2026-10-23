@@ -113,49 +113,30 @@
   box-shadow: 9px 9px 0 var(--rx-gold);
 }
 
-.rx-sheet {
+.rx .subheading {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  margin: 0 0 22px;
-  font-family: var(--rx-display);
-  font-size: 16px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
+  gap: 10px;
+  margin: 0 0 20px;
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  white-space: nowrap;
-  color: #C39B62;
 }
-.rx-sheet-code {
-  padding: 3px 8px 2px;
-  border: 2px solid currentColor;
-  border-radius: 3px;
-  letter-spacing: 0.04em;
-}
-.rx-sheet-rule {
-  position: relative;
-  width: 44px;
-  height: 2px;
-  background: currentColor;
-}
-.rx-sheet-rule::before,
-.rx-sheet-rule::after {
+.rx .subheading::before {
   content: "";
-  position: absolute;
-  top: -4px;
-  width: 2px;
-  height: 10px;
-  background: currentColor;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
-.rx-sheet-rule::before {
-  left: 0;
+html body .rx :is(.rx-ask, .rx-team) .subheading {
+  color: #C5E602 !important;
+  -webkit-text-fill-color: #C5E602 !important;
 }
-.rx-sheet-rule::after {
-  right: 0;
-}
-.rx-ask .rx-sheet,
-.rx-team .rx-sheet {
-  color: #C5E602;
+html body .rx :is(.rx-ask, .rx-team) .subheading::before {
+  background: #C5E602 !important;
 }
 .rx-h2 {
   margin: 0 0 20px;
@@ -881,7 +862,7 @@
 .rx-w--gold {
   color: var(--rx-lime);
 }
-.rx-ask-copy > p:not(.rx-sheet) {
+.rx-ask-copy > p:not(.subheading) {
   max-width: 540px;
   margin: 0 0 36px;
   font-size: 17.5px;
@@ -1288,7 +1269,7 @@
   color: var(--rx-cream);
   font-size: clamp(46px, 5vw, 84px);
 }
-.rx-team-copy > p:not(.rx-sheet) {
+.rx-team-copy > p:not(.subheading) {
   margin: 0 0 36px;
   font-size: 17.5px;
   line-height: 1.65;
@@ -1335,8 +1316,8 @@
   .rx-team-copy {
     text-align: center;
   }
-  .rx-ask-copy > p:not(.rx-sheet),
-  .rx-team-copy > p:not(.rx-sheet) {
+  .rx-ask-copy > p:not(.subheading),
+  .rx-team-copy > p:not(.subheading) {
     margin-inline: auto;
   }
   .rx-ask-art,
@@ -1395,13 +1376,6 @@
   }
 }
 @media (max-width: 640px) {
-  .rx-sheet {
-    gap: 10px;
-    font-size: 14px;
-  }
-  .rx-sheet-rule {
-    display: none;
-  }
   .rx-cta {
     height: 56px;
   }
