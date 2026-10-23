@@ -78,7 +78,6 @@
       const span = r.height - pin.getBoundingClientRect().height;
       const p = span > 0 ? clamp(-r.top / span, 0, 1) : 0;
       track.style.setProperty('--hx', (p * dist).toFixed(1));
-      exp.style.setProperty('--hq', p.toFixed(3));
       const vr = view.getBoundingClientRect();
       const cx = vr.left + vr.width / 2;
       cards.forEach((c) => {
@@ -204,7 +203,6 @@
     let timer = 0;
     let visible = false;
     let outTimer = 0;
-    list.style.setProperty('--rx-delay', DELAY + 'ms');
     const schedule = () => {
       clearTimeout(timer);
       if (!visible || reduce) return;
@@ -242,7 +240,6 @@
     });
     new IntersectionObserver((entries) => {
       visible = entries[0].isIntersecting;
-      list.classList.toggle('is-paused', !visible || reduce);
       if (visible) show(cur);
       else clearTimeout(timer);
     }, { threshold: 0.35 }).observe(tabsSec.querySelector('.rx-stage'));

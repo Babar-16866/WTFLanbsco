@@ -11,7 +11,6 @@
   --rx-mut: rgba(16, 35, 27, 0.68);
   --rx-line: rgba(16, 35, 27, 0.16);
   --rx-card: #FBF7EC;
-  --rx-drop: #10231B;
   --rx-grid: rgba(16, 35, 27, 0.045);
   --rx-grid2: rgba(16, 35, 27, 0.07);
   --rx-display: "Big Shoulders Display", "Arial Narrow", sans-serif;
@@ -34,7 +33,6 @@
   --rx-mut: rgba(243, 238, 223, 0.66);
   --rx-line: rgba(243, 238, 223, 0.14);
   --rx-card: #12271E;
-  --rx-drop: #C39B62;
   --rx-grid: rgba(243, 238, 223, 0.03);
   --rx-grid2: rgba(243, 238, 223, 0.05);
 }
@@ -60,18 +58,18 @@
   display: inline-flex;
   align-items: stretch;
   height: 60px;
-  border: 2px solid var(--rx-gd);
-  border-radius: 4px;
+  padding: 6px;
+  border-radius: 999px;
   background: var(--rx-lime);
   color: var(--rx-gd);
-  box-shadow: 6px 6px 0 var(--rx-gd);
+  box-shadow: 0 12px 28px rgba(6, 20, 14, 0.18);
   text-decoration: none;
   transition: transform 0.25s var(--rx-ease), box-shadow 0.25s var(--rx-ease);
 }
 .rx-cta span {
   display: flex;
   align-items: center;
-  padding: 0 24px;
+  padding: 0 16px 0 22px;
   font-family: var(--rx-display);
   font-size: 23px;
   font-weight: 800;
@@ -82,8 +80,8 @@
 .rx-cta i {
   display: grid;
   place-items: center;
-  width: 58px;
-  border-left: 2px solid var(--rx-gd);
+  width: 48px;
+  border-radius: 50%;
   background: var(--rx-gd);
   color: var(--rx-lime);
 }
@@ -94,25 +92,15 @@
 }
 .rx-cta:hover,
 .rx-cta:focus-visible {
-  transform: translate(-3px, -3px);
-  box-shadow: 9px 9px 0 var(--rx-gd);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(6, 20, 14, 0.24);
 }
 .rx-cta:hover svg {
   transform: translate(2px, -2px);
 }
 .rx-cta:active {
-  transform: translate(3px, 3px);
-  box-shadow: 2px 2px 0 var(--rx-gd);
+  transform: translateY(0);
 }
-:is(.rx-hero, .rx-ask, .rx-team-card) .rx-cta,
-[data-theme="dark"] .rx .rx-cta {
-  box-shadow: 6px 6px 0 var(--rx-gold);
-}
-:is(.rx-hero, .rx-ask, .rx-team-card) .rx-cta:hover,
-[data-theme="dark"] .rx .rx-cta:hover {
-  box-shadow: 9px 9px 0 var(--rx-gold);
-}
-
 .rx .subheading {
   display: inline-flex;
   align-items: center;
@@ -151,24 +139,15 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   color: var(--rx-gold);
 }
 .rx-mark {
-  position: relative;
-  z-index: 0;
   padding: 0 0.08em;
-  background: none;
+  background: linear-gradient(var(--rx-lime), var(--rx-lime)) 0 60% / 0% 88% no-repeat;
   color: var(--rx-gd);
-}
-.rx-mark::before {
-  content: "";
-  position: absolute;
-  inset: 0.08em -0.02em 0.02em;
-  z-index: -1;
-  background: var(--rx-lime);
-  transform: skewX(-8deg) scaleX(0);
-  transform-origin: 0 50%;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
   animation: rx-swipe 0.8s 1s var(--rx-ease) forwards;
 }
 @keyframes rx-swipe {
-  to { transform: skewX(-8deg) scaleX(1); }
+  to { background-size: 100% 88%; }
 }
 .rx-sub {
   max-width: 540px;
@@ -214,7 +193,7 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   isolation: isolate;
   min-height: var(--rx-vh);
   padding: 150px 0 110px;
-  border-radius: 0 0 6px 6px;
+  border-radius: 0 0 var(--radius, 32px) var(--radius, 32px);
   background-color: var(--pal-primary, #1E4233);
   background-image: var(--pal-texture-image);
   background-size: cover;
@@ -253,8 +232,8 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   content: "";
   width: 9px;
   height: 9px;
+  border-radius: 50%;
   background: #C5E602;
-  transform: rotate(45deg);
 }
 .rx-h1 {
   grid-column: 1 / -1;
@@ -262,7 +241,7 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   position: relative;
   z-index: 1;
   margin: 0;
-  font-size: clamp(56px, 8.4vw, 150px);
+  font-size: clamp(56px, 8.4vw, 120px);
   font-weight: 900;
   line-height: 0.86;
   letter-spacing: -0.005em;
@@ -306,7 +285,7 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   grid-row: 3 / span 2;
   position: relative;
   z-index: 2;
-  margin-top: -60px;
+  margin-top: 30px;
   perspective: 1600px;
 }
 .rx-hero-phones {
@@ -341,7 +320,6 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   width: 120%;
   overflow: hidden;
   pointer-events: auto;
-  border-block: 2px solid var(--rx-gd);
 }
 .rx-tape--back {
   top: 88px;
@@ -386,8 +364,8 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
 .rx-tape--back .rx-tape-set i {
   width: 8px;
   height: 8px;
+  border-radius: 50%;
   background: var(--rx-gd);
-  transform: rotate(45deg);
 }
 .rx-logo {
   display: inline-flex;
@@ -406,7 +384,6 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   width: 42px;
   height: 42px;
   padding: 8px;
-  border: 2px solid var(--rx-gd);
   border-radius: 50%;
   background: var(--rx-cream);
   flex-shrink: 0;
@@ -425,9 +402,6 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
 .rx-exp-head {
   width: min(1280px, calc(100% - 48px));
   margin-inline: auto;
-}
-.rx-exp-progress {
-  display: none;
 }
 .rx-exp-view {
   overflow-x: auto;
@@ -455,10 +429,9 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   position: relative;
   aspect-ratio: 4 / 5;
   margin: 0 0 20px;
-  border: 2px solid var(--rx-ink);
-  border-radius: 6px;
+  border-radius: 22px;
   overflow: hidden;
-  box-shadow: 10px 10px 0 var(--rx-drop);
+  box-shadow: 0 24px 50px rgba(6, 20, 14, 0.18);
 }
 .rx-exp-media img {
   position: absolute;
@@ -509,22 +482,6 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
 .rx-exp.is-pin .rx-exp-head .rx-h2 {
   font-size: clamp(48px, 4.6vw, 76px);
 }
-.rx-exp.is-pin .rx-exp-progress {
-  display: block;
-  width: 220px;
-  height: 10px;
-  margin-top: 34px;
-  border: 2px solid var(--rx-ink);
-  overflow: hidden;
-}
-.rx-exp.is-pin .rx-exp-progress span {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: var(--rx-lime);
-  transform: scaleX(var(--hq, 0));
-  transform-origin: 0 50%;
-}
 .rx-exp.is-pin .rx-exp-view {
   flex: 1;
   min-width: 0;
@@ -558,7 +515,7 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   margin: 26px 0 36px;
   padding: 0;
   list-style: none;
-  border-bottom: 2px solid var(--rx-ink);
+  border-bottom: 1px solid var(--rx-line);
 }
 .rx-ben-item {
   position: relative;
@@ -604,10 +561,9 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
 .rx-ba-stage {
   position: relative;
   aspect-ratio: 4 / 4.4;
-  border: 2px solid var(--rx-ink);
-  border-radius: 6px;
+  border-radius: 26px;
   overflow: hidden;
-  box-shadow: 14px 14px 0 var(--rx-drop);
+  box-shadow: 0 30px 60px rgba(6, 20, 14, 0.22);
   touch-action: pan-y;
   cursor: ew-resize;
   --p: 0.5;
@@ -641,10 +597,9 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   width: 60px;
   height: 60px;
   margin: -30px 0 0 -30px;
-  border: 2px solid var(--rx-gd);
-  border-radius: 4px;
+  border-radius: 50%;
   background: var(--rx-lime);
-  box-shadow: 5px 5px 0 var(--rx-gd);
+  box-shadow: 0 10px 24px rgba(6, 20, 14, 0.3);
 }
 .rx-ba-handle span::before,
 .rx-ba-handle span::after {
@@ -667,9 +622,8 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
 .rx-ba-chip {
   position: absolute;
   top: 20px;
-  padding: 6px 12px 5px;
-  border: 2px solid var(--rx-gd);
-  border-radius: 3px;
+  padding: 7px 14px 6px;
+  border-radius: 999px;
   background: var(--rx-cream);
   color: var(--rx-gd);
   font-family: var(--rx-display);
@@ -713,10 +667,9 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
 .rx-ask {
   position: relative;
   isolation: isolate;
-  margin: 40px 30px 40px 16px;
+  margin: 40px 16px;
   padding: 120px 0;
-  border: 2px solid var(--rx-gd);
-  border-radius: 6px;
+  border-radius: var(--radius, 32px);
   background-color: var(--pal-primary, #1E4233);
   background-image: var(--pal-texture-image);
   background-size: cover;
@@ -724,7 +677,6 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   background-blend-mode: multiply;
   color: var(--rx-cream);
   overflow: hidden;
-  box-shadow: 14px 14px 0 var(--rx-gold);
 }
 .rx-ask-inner {
   display: grid;
@@ -798,10 +750,10 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   gap: 16px;
   min-height: 92px;
   padding: 12px 10px 12px 0;
-  border-top: 2px solid var(--rx-ink);
+  border-top: 1px solid var(--rx-line);
 }
 .rx-niche:nth-last-child(-n + 2) {
-  border-bottom: 2px solid var(--rx-ink);
+  border-bottom: 1px solid var(--rx-line);
 }
 .rx-niche::before {
   content: "";
@@ -830,8 +782,8 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   place-items: center;
   width: 46px;
   height: 46px;
-  border: 2px solid var(--rx-ink);
-  border-radius: 4px;
+  border: 1px solid var(--rx-line);
+  border-radius: 50%;
   color: var(--rx-ink);
   transition: background-color 0.4s, transform 0.6s var(--rx-ease), color 0.3s, border-color 0.3s;
 }
@@ -859,14 +811,13 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   z-index: 40;
   width: 300px;
   aspect-ratio: 4 / 3;
-  border: 2px solid var(--rx-gd);
-  border-radius: 6px;
+  border-radius: 18px;
   overflow: hidden;
   pointer-events: none;
   opacity: 0;
   transform: translate3d(var(--fx, 0px), var(--fy, 0px), 0) rotate(var(--fr, 0deg)) scale(var(--fs, 0.7));
   transition: opacity 0.35s, transform 0.5s var(--rx-ease);
-  box-shadow: 10px 10px 0 var(--rx-gd);
+  box-shadow: 0 24px 50px rgba(6, 20, 14, 0.3);
 }
 .rx-niche-float.is-on {
   opacity: 1;
@@ -892,10 +843,10 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   margin: 54px 0 0;
-  border: 2px solid var(--rx-ink);
-  border-radius: 6px;
+  padding: 6px;
+  border: 1px solid var(--rx-line);
+  border-radius: 999px;
   background: var(--rx-card);
-  overflow: hidden;
 }
 .rx-tab {
   position: relative;
@@ -906,6 +857,7 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   padding: 20px 8px 18px;
   border: 0;
   background: none;
+  border-radius: 999px;
   color: var(--rx-mut);
   font-family: var(--rx-display);
   font-size: 23px;
@@ -916,38 +868,9 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   cursor: pointer;
   transition: color 0.4s, background-color 0.4s;
 }
-.rx-tab + .rx-tab {
-  border-left: 2px solid var(--rx-ink);
-}
-.rx-tab-bar {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 5px;
-  overflow: hidden;
-}
-.rx-tab-bar::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--rx-lime);
-  transform: scaleX(0);
-  transform-origin: 0 50%;
-}
 .rx-tab.is-active {
   background: var(--rx-gd);
   color: var(--rx-cream);
-}
-.rx-tab.is-active .rx-tab-bar::after {
-  animation: rx-fill var(--rx-delay, 7s) linear forwards;
-}
-.rx-tabs.is-paused .rx-tab.is-active .rx-tab-bar::after {
-  animation: none;
-  transform: scaleX(1);
-}
-@keyframes rx-fill {
-  to { transform: scaleX(1); }
 }
 .rx-stage {
   display: grid;
@@ -974,10 +897,10 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
 .rx-feat {
   position: relative;
   padding: 18px 22px;
-  border: 2px solid var(--rx-ink);
-  border-radius: 6px;
+  border: 1px solid var(--rx-line);
+  border-radius: 18px;
   background: var(--rx-card);
-  box-shadow: 6px 6px 0 var(--rx-drop);
+  box-shadow: 0 10px 26px rgba(6, 20, 14, 0.08);
   opacity: 0;
   transform: translateY(14px);
   transition: opacity 0.5s var(--rx-ease), transform 0.5s var(--rx-ease);
@@ -997,7 +920,7 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   position: absolute;
   top: 50%;
   width: 44px;
-  border-top: 2px dashed var(--rx-gold);
+  border-top: 1.5px dashed var(--rx-gold);
 }
 .rx-stage-col--l .rx-feat {
   text-align: right;
@@ -1049,7 +972,7 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
 }
 
 .rx-team {
-  padding: 30px 30px 110px 16px;
+  padding: 30px 16px 110px;
 }
 .rx-team-card {
   position: relative;
@@ -1059,8 +982,7 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   align-items: center;
   gap: 60px;
   padding: 90px max(24px, calc((100% - 1280px) / 2));
-  border: 2px solid var(--rx-gd);
-  border-radius: 6px;
+  border-radius: var(--radius, 32px);
   background-color: var(--pal-primary, #1E4233);
   background-image: var(--pal-texture-image);
   background-size: cover;
@@ -1068,7 +990,7 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   background-blend-mode: multiply;
   color: var(--rx-cream);
   overflow: hidden;
-  clip-path: inset(0 calc(var(--e, 0) * 7%) round 6px);
+  clip-path: inset(0 calc(var(--e, 0) * 7%) round var(--radius, 32px));
 }
 .rx-team-copy .rx-h2 {
   color: var(--rx-cream);
@@ -1166,14 +1088,8 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   .rx-tabs {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .rx-tab + .rx-tab {
-    border-left: 0;
-  }
-  .rx-tab:nth-child(even) {
-    border-left: 2px solid var(--rx-ink);
-  }
-  .rx-tab:nth-child(n + 3) {
-    border-top: 2px solid var(--rx-ink);
+  .rx-tabs {
+    border-radius: 24px;
   }
 }
 @media (max-width: 640px) {
@@ -1198,7 +1114,7 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
     width: calc(100% - 32px);
   }
   .rx-h1 {
-    font-size: clamp(50px, 15vw, 72px);
+    font-size: clamp(38px, 13.4vw, 72px);
   }
   .rx-hero-lead {
     font-size: 16px;
@@ -1248,9 +1164,6 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   .rx-exp-card:nth-child(even) {
     margin-top: 0;
   }
-  .rx-exp-media {
-    box-shadow: 6px 6px 0 var(--rx-drop);
-  }
   .rx-ba {
     padding: 64px 0;
   }
@@ -1260,12 +1173,10 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   .rx-ba-stage {
     order: -1;
     aspect-ratio: 4 / 3.6;
-    box-shadow: 8px 8px 0 var(--rx-drop);
   }
   .rx-ask {
-    margin: 20px 18px 30px 10px;
+    margin: 20px 10px 30px;
     padding: 72px 0;
-    box-shadow: 8px 8px 0 var(--rx-gold);
   }
   .rx-ask-q {
     font-size: clamp(44px, 13vw, 62px);
@@ -1287,8 +1198,7 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
     display: block;
     width: 64px;
     height: 52px;
-    border: 2px solid var(--rx-ink);
-    border-radius: 4px;
+    border-radius: 12px;
     overflow: hidden;
   }
   .rx-niche-thumb img {
@@ -1309,7 +1219,7 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
     gap: 8px;
   }
   .rx-team {
-    padding: 20px 18px 72px 10px;
+    padding: 20px 10px 72px;
   }
   .rx-team-card {
     gap: 30px;
@@ -1323,7 +1233,7 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
     animation: none !important;
     transition: none !important;
   }
-  .rx-mark::before {
-    transform: skewX(-8deg);
+  .rx-mark {
+    background-size: 100% 88%;
   }
 }
