@@ -9964,6 +9964,17 @@ html body .form-disclaimer a[href] {
 @media (min-width: 1101px) {
   .hcar {
     height: calc(100% - 4px);
+    justify-content: center;
+    --hcar-box: clamp(720px, 100svh, 920px);
+  }
+  .hcar-track {
+    flex: none;
+    height: calc(var(--hcar-box) * 0.36);
+  }
+}
+@media (min-width: 1101px) and (max-width: 1600px) {
+  .hcar {
+    --hcar-box: clamp(720px, calc(100svh / 0.85), calc(920px / 0.85));
   }
 }
 @media (max-width: 1100px) {
@@ -10057,7 +10068,7 @@ html[data-palette] body .page-section .home-work-cta .works-show-more.btn.btn:ho
 .wtabs-list {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   gap: 12px;
 }
 .wtabs-tab {
@@ -10180,6 +10191,17 @@ html[data-palette] body .page-section .home-work-cta .works-show-more.btn.btn:ho
   font-size: 16px;
   line-height: 1.6;
   color: var(--text-muted);
+}
+@media (min-width: 981px) {
+  .wtabs-copy {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wtabs-link {
+    margin-top: auto;
+  }
 }
 @media (max-width: 980px) {
   .wtabs {
