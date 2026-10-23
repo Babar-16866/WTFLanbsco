@@ -1740,14 +1740,10 @@ include __DIR__ . '/includes/testimonialslider.php';
   </div>
 </section>
 
-<section class="rx-work page-section industry-nav-section" id="work">
+</div>
+
+<section class="page-section industry-nav-section">
   <div class="container">
-  <div class="rx-ruler" data-rx-reveal aria-hidden="true"></div>
-    <div class="rx-work-head" data-rx-reveal>
-      <p class="rx-sheet"><span class="rx-sheet-code">A-08</span><span class="rx-sheet-rule" aria-hidden="true"></span><span>Remodeling websites we built</span></p>
-      <h2 class="rx-h2">Real remodelers. <span class="rx-gold">Real websites.</span></h2>
-      <p class="rx-sub">Pick a trade and a service, then open any project to see the live site.</p>
-    </div>
     <div class="works-filter-stack works-filter-stack--center home-filter-stack" data-trade-links>
       <div class="home-filter-row is-done">
         <p class="home-filter-label">Select the Industry and services</p>
@@ -2941,10 +2937,6 @@ include __DIR__ . '/includes/testimonialslider.php';
     <div class="home-work-cta"></div>
   </div>
 </section>
-  </div>
-</section>
-
-</div>
 
 <div class="work-modal" id="workModal" hidden>
   <div class="work-modal-backdrop" data-work-close></div>
@@ -2986,61 +2978,84 @@ include __DIR__ . '/includes/testimonialslider.php';
 ?>
 </div>
 
-<section class="faq-section rx-faq" id="faqs">
-  <div class="rx-ruler" data-rx-reveal aria-hidden="true"></div>
+<section class="faq-section" id="faqs">
   <div class="container">
-    <div class="rx-faq-head">
-      <p class="rx-sheet"><span class="rx-sheet-code">A-09</span><span class="rx-sheet-rule" aria-hidden="true"></span><span>Remodeling FAQs</span></p>
-      <h2 class="rx-h2">Questions remodelers <span class="rx-gold">ask us first.</span></h2>
+    <div class="section-header reveal">
+      <p class="subheading">Remodeling FAQs</p>
+      <h2>Questions about <span class="heading-accent">Remodeling</span></h2>
     </div>
     <div class="faq-list reveal">
       <div class="faq-item">
         <button class="faq-trigger" type="button" aria-expanded="false">
           <span class="faq-num">01</span>
-          <span class="faq-question">How much does a remodeling website cost?</span>
+          <span class="faq-question">Can you showcase our past projects?</span>
           <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
         </button>
-        <div class="faq-panel" role="region"><div class="faq-panel-inner"><p>It depends on pages, galleries and features like budget forms or financing tools. Most remodeler sites start with a focused build and grow from there. A free consultation gives you a clear quote.</p></div></div>
+        <div class="faq-panel" role="region">
+          <div class="faq-panel-inner">
+            <p>Yes. We build project galleries with before/after sliders, project details, and short stories so homeowners can see the quality of your work.</p>
+          </div>
+        </div>
       </div>
       <div class="faq-item">
         <button class="faq-trigger" type="button" aria-expanded="false">
           <span class="faq-num">02</span>
-          <span class="faq-question">Can you use photos of my past projects?</span>
+          <span class="faq-question">How do you filter out low-budget leads?</span>
           <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
         </button>
-        <div class="faq-panel" role="region"><div class="faq-panel-inner"><p>Yes, and we should. Real kitchens, baths and additions sell far better than stock photos. We help you choose, edit and organize your best work.</p></div></div>
+        <div class="faq-panel" role="region">
+          <div class="faq-panel-inner">
+            <p>Quote forms ask about project type, timeline, and budget range up front, so your team spends time on jobs worth quoting.</p>
+          </div>
+        </div>
       </div>
       <div class="faq-item">
         <button class="faq-trigger" type="button" aria-expanded="false">
           <span class="faq-num">03</span>
-          <span class="faq-question">Will the website bring me bigger jobs?</span>
+          <span class="faq-question">Do you help with reviews and Houzz-style profiles?</span>
           <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
         </button>
-        <div class="faq-panel" role="region"><div class="faq-panel-inner"><p>Premium design, project galleries and budget-aware forms attract homeowners planning larger remodels and filter out price shoppers early.</p></div></div>
+        <div class="faq-panel" role="region">
+          <div class="faq-panel-inner">
+            <p>We set up review requests after each project and keep your Google Business Profile and directory listings consistent.</p>
+          </div>
+        </div>
       </div>
       <div class="faq-item">
         <button class="faq-trigger" type="button" aria-expanded="false">
           <span class="faq-num">04</span>
-          <span class="faq-question">How long does a remodeler website take?</span>
+          <span class="faq-question">How much does a website project cost?</span>
           <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
         </button>
-        <div class="faq-panel" role="region"><div class="faq-panel-inner"><p>Most projects launch in four to eight weeks, depending on page count and how quickly photos and content come together.</p></div></div>
+        <div class="faq-panel" role="region">
+          <div class="faq-panel-inner">
+            <p>Website projects start at $10,000. Most full-cycle B2B website engagements fall between $25,000 and $50,000. A focused landing page or smaller corporate site may fall in the $10,000–$20,000 range. Complex platforms may exceed $50,000. After the first conversation we give a realistic estimate.</p>
+          </div>
+        </div>
       </div>
       <div class="faq-item">
         <button class="faq-trigger" type="button" aria-expanded="false">
           <span class="faq-num">05</span>
-          <span class="faq-question">Do you handle SEO and ads too?</span>
+          <span class="faq-question">Which platform and technology stack should we use?</span>
           <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
         </button>
-        <div class="faq-panel" role="region"><div class="faq-panel-inner"><p>Yes. We can run local SEO, Google Ads and social ads around the projects you want more of, all connected to the same website.</p></div></div>
+        <div class="faq-panel" role="region">
+          <div class="faq-panel-inner">
+            <p>We recommend based on your business, content, integrations, and long-term plans. We build with Webflow, WordPress, Shopify, HubSpot, React, Vue, Node.js, Laravel, and Strapi. If you already have technical requirements, we work within them.</p>
+          </div>
+        </div>
       </div>
       <div class="faq-item">
         <button class="faq-trigger" type="button" aria-expanded="false">
           <span class="faq-num">06</span>
-          <span class="faq-question">Can I update projects myself?</span>
+          <span class="faq-question">Can you move faster if we have a hard deadline?</span>
           <span class="faq-icon-wrap" aria-hidden="true"><svg class="faq-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
         </button>
-        <div class="faq-panel" role="region"><div class="faq-panel-inner"><p>Yes. We set up an easy way to add new projects, photos and reviews, and we train you on it before launch.</p></div></div>
+        <div class="faq-panel" role="region">
+          <div class="faq-panel-inner">
+            <p>Yes, when the deadline is realistic and trade-offs are understood. We can expand the team, run design and development in parallel, and prioritize what is required for launch - then refine after go-live.</p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="faq-all-wrap reveal">
