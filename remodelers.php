@@ -1567,6 +1567,8 @@ include __DIR__ . '/includes/testimonialslider.php';
 
 */ ?>
 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/remodelers.css?v=<?php echo asset_version('assets/css/remodelers.css'); ?>">
 <script>document.documentElement.classList.add('rx-js');</script>
 <div class="rx">
@@ -1582,13 +1584,11 @@ include __DIR__ . '/includes/testimonialslider.php';
     <div class="rx-hero-copy">
       <p class="rx-hero-tag">Remodeling</p>
       <h1 class="rx-h1">
-        <span class="rx-line"><span>Make your</span></span>
-        <span class="rx-line"><span>craftsmanship</span></span>
-        <span class="rx-line"><span class="rx-gold">sell the next</span></span>
-        <span class="rx-line"><span class="rx-gold">big remodel.</span></span>
+        <span class="rx-line"><span>Make your craftsmanship</span></span>
+        <span class="rx-line"><span>sell the next <mark class="rx-mark">big remodel.</mark></span></span>
       </h1>
       <p class="rx-hero-lead">Websites, local search and ads that show off your best work and bring in homeowners ready to invest in a kitchen, bath or whole-home remodel.</p>
-      <div class="rx-hero-actions"><a href="/contact.php" class="btn btn-lime btn-lg rx-cta" data-open-popup>Free Consultation</a></div>
+      <div class="rx-hero-actions"><a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a></div>
     </div>
     <div class="rx-hero-stage" data-rx-tilt>
       <div class="rx-plane" aria-hidden="true"></div>
@@ -1654,7 +1654,7 @@ include __DIR__ . '/includes/testimonialslider.php';
       <p class="rx-sheet"><span class="rx-sheet-code">A-03</span><span class="rx-sheet-rule" aria-hidden="true"></span><span>Benefits for remodelers</span></p>
       <h2 class="rx-h2">What a better website <span class="rx-gold">does for your business.</span></h2>
       <ol class="rx-ben-list"><li class="rx-ben-item is-active"><span class="rx-ben-n">01</span><div><h3>Bigger average jobs</h3><p>Premium design attracts homeowners planning $40K+ projects.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">02</span><div><h3>Better-fit leads</h3><p>Budget and timeline filters weed out tire-kickers early.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">03</span><div><h3>Instant credibility</h3><p>Reviews, licenses and real photos build trust before the visit.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">04</span><div><h3>Less time quoting</h3><p>Consult forms give you the full picture before you drive out.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">05</span><div><h3>Steady pipeline</h3><p>SEO and ads keep consultations booked in slow seasons too.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">06</span><div><h3>More referrals</h3><p>A site worth sharing turns past clients into your sales team.</p></div></li></ol>
-      <a href="/contact.php" class="btn btn-lime btn-lg rx-cta" data-open-popup>Free Consultation</a>
+      <a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
     </div>
     <div class="rx-ba-stage" data-rx-ba-stage>
       <img class="rx-ba-before" src="/assets/images/rm-basement-raw.webp" alt="Unfinished basement before the remodel" width="1600" height="1067" loading="lazy" decoding="async">
@@ -1672,7 +1672,7 @@ include __DIR__ . '/includes/testimonialslider.php';
       <p class="rx-sheet"><span class="rx-sheet-code">A-04</span><span class="rx-sheet-rule" aria-hidden="true"></span><span>The real question</span></p>
       <h2 class="rx-ask-q" aria-label="Still losing $60K kitchens to the contractor with the better website?"><span aria-hidden="true"><span class="rx-w">Still</span> <span class="rx-w">losing</span> <span class="rx-w rx-w--gold">$60K</span> <span class="rx-w">kitchens</span> <span class="rx-w">to</span> <span class="rx-w">the</span> <span class="rx-w">contractor</span> <span class="rx-w">with</span> <span class="rx-w">the</span> <span class="rx-w">better</span> <span class="rx-w">website?</span></span></h2>
       <p>Homeowners judge your work by your website before they ever meet you. We make your projects look as good online as they do in person, so the right clients call you first.</p>
-      <a href="/contact.php" class="btn btn-lime btn-lg rx-cta" data-open-popup>Free Consultation</a>
+      <a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
     </div>
     <div class="rx-ask-art" data-rx-tilt>
       <img src="/assets/images/rmx-duo-quote.webp" alt="Remodeling quote form and reviews on phones" width="1400" height="1520" loading="lazy" decoding="async">
@@ -1683,6 +1683,7 @@ include __DIR__ . '/includes/testimonialslider.php';
 </section>
 
 <section class="rx-niches" data-rx-niches>
+  <div class="rx-ruler" data-rx-reveal aria-hidden="true"></div>
   <div class="rx-wrap">
     <div class="rx-niches-head" data-rx-reveal>
       <p class="rx-sheet"><span class="rx-sheet-code">A-05</span><span class="rx-sheet-rule" aria-hidden="true"></span><span>Remodeling niches we serve</span></p>
@@ -1708,6 +1709,7 @@ include __DIR__ . '/includes/testimonialslider.php';
 </section>
 
 <section class="rx-inside" data-rx-tabs>
+  <div class="rx-ruler" data-rx-reveal aria-hidden="true"></div>
   <div class="rx-wrap">
     <div class="rx-inside-head" data-rx-reveal>
       <p class="rx-sheet"><span class="rx-sheet-code">A-06</span><span class="rx-sheet-rule" aria-hidden="true"></span><span>Inside a remodeler website</span></p>
@@ -1733,13 +1735,14 @@ include __DIR__ . '/includes/testimonialslider.php';
       <p class="rx-sheet"><span class="rx-sheet-code">A-07</span><span class="rx-sheet-rule" aria-hidden="true"></span><span>Why WTF Labs</span></p>
       <h2 class="rx-h2">Looking for a team that actually understands remodeling?</h2>
       <p>We have built websites for kitchen, bath and design-build firms. We know how your buyers shop, so we design every page to turn browsing into booked consultations.</p>
-      <a href="/contact.php" class="btn btn-lime btn-lg rx-cta" data-open-popup>Free Consultation</a>
+      <a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
     </div>
   </div>
 </section>
 
 <section class="rx-work page-section industry-nav-section" id="work">
   <div class="container">
+  <div class="rx-ruler" data-rx-reveal aria-hidden="true"></div>
     <div class="rx-work-head" data-rx-reveal>
       <p class="rx-sheet"><span class="rx-sheet-code">A-08</span><span class="rx-sheet-rule" aria-hidden="true"></span><span>Remodeling websites we built</span></p>
       <h2 class="rx-h2">Real remodelers. <span class="rx-gold">Real websites.</span></h2>
@@ -2976,12 +2979,15 @@ include __DIR__ . '/includes/testimonialslider.php';
   </div>
 </div>
 
+<div class="rx-canvas">
 <?php
 $street_section_id = 'testimonials';
 include __DIR__ . '/includes/testimonialslider.php';
 ?>
+</div>
 
 <section class="faq-section rx-faq" id="faqs">
+  <div class="rx-ruler" data-rx-reveal aria-hidden="true"></div>
   <div class="container">
     <div class="rx-faq-head">
       <p class="rx-sheet"><span class="rx-sheet-code">A-09</span><span class="rx-sheet-rule" aria-hidden="true"></span><span>Remodeling FAQs</span></p>
