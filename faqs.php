@@ -51,6 +51,9 @@ include __DIR__ . '/includes/header.php';
           <div class="hcar-card"><img src="/assets/images/hcar-faqs-1.webp" alt="FAQs image 1" loading="lazy"></div>
           <div class="hcar-card"><img src="/assets/images/hcar-faqs-2.webp" alt="FAQs image 2" loading="lazy"></div>
           <div class="hcar-card"><img src="/assets/images/hcar-faqs-3.webp" alt="FAQs image 3" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-faqs-4.webp" alt="FAQs image 4" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-faqs-5.webp" alt="FAQs image 5" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-faqs-6.webp" alt="FAQs image 6" loading="lazy"></div>
         </div>
         <div class="hcar-nav">
           <button type="button" class="hcar-arrow hcar-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -441,12 +444,24 @@ include __DIR__ . '/includes/header.php';
       </div>
     </div>
 
+    <!--
     <div class="services-cta-band reveal">
       <div>
         <h3>Didn't find your answer?</h3>
         <p>Tell us what you're building - we'll respond quickly.</p>
       </div>
       <a href="/contact.php" class="btn btn-lime btn-lg" data-open-popup>Contact us</a>
+    </div>
+    -->
+    <div class="services-cta-band services-cta-band--split reveal">
+      <div class="svc-cta-copy">
+        <h3>Didn't find your answer?</h3>
+        <p>Tell us what you're building - we'll respond quickly.</p>
+        <div class="svc-cta-act">
+          <a href="/contact.php" class="btn btn-lime btn-lg" data-open-popup>Contact us</a>
+        </div>
+      </div>
+      <div class="svc-cta-art"><img src="/assets/images/cta-phones-faqs.webp" alt="Website audit, FAQ and contact form screens on phones" width="1280" height="1120" loading="lazy"></div>
     </div>
   </div>
 </section>

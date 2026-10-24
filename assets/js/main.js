@@ -1248,6 +1248,8 @@ document.addEventListener('click', (e) => {
     let isStatic = false;
     let hold = 0;
     let lastWidth = 0;
+    let endAt = 0;
+    let atEnd = false;
 
     function setActive(index) {
       cards.forEach((card, i) => card.classList.toggle('is-active', i === index));
@@ -1260,6 +1262,9 @@ document.addEventListener('click', (e) => {
       const progress = total > 0 ? Math.min(1, Math.max(0, (stickTop - section.getBoundingClientRect().top / z - hold) / total)) : 0;
       track.style.transform = `translate3d(${-progress * distance}px, 0, 0)`;
       setActive(Math.round(progress * (cards.length - 1)));
+      const end = progress >= 0.999;
+      if (end && !atEnd) endAt = performance.now();
+      atEnd = end;
     }
 
     function measure() {
@@ -1290,6 +1295,12 @@ document.addEventListener('click', (e) => {
     let busyUntil = 0;
     let touchY = null;
     let touchMoved = false;
+
+    function endLocked(dir) {
+      if (dir <= 0 || isStatic || performance.now() - endAt >= 2000) return false;
+      const b = bounds();
+      return window.scrollY >= b.end - 2 && window.scrollY <= b.end + 2;
+    }
 
     function bounds() {
       const z = pageZoom();
@@ -1378,6 +1389,10 @@ document.addEventListener('click', (e) => {
       lastAbs = abs;
       const b = bounds();
       const y = window.scrollY;
+      if (endLocked(dir)) {
+        e.preventDefault();
+        return;
+      }
       const reach = Math.max(abs, 100) * 1.5 + 260;
       const crossIn = (dir > 0 && y < b.start - 2 && b.start - y <= reach) || (dir < 0 && y > b.end + 2 && y - b.end <= reach);
       if (crossIn) {
@@ -1445,6 +1460,10 @@ document.addEventListener('click', (e) => {
       if (e.defaultPrevented || touchY === null || isStatic) return;
       const dy = touchY - e.touches[0].clientY;
       const dir = dy > 0 ? 1 : -1;
+      if (endLocked(dir)) {
+        e.preventDefault();
+        return;
+      }
       const b = bounds();
       const y = window.scrollY;
       if ((dir > 0 && y < b.start - 2 && y + Math.abs(dy) * 1.2 > b.start) || (dir < 0 && y > b.end + 2 && y - Math.abs(dy) * 1.2 < b.end)) {
@@ -1475,6 +1494,10 @@ document.addEventListener('click', (e) => {
       const map = { ArrowDown: 1, PageDown: 1, ' ': 1, ArrowUp: -1, PageUp: -1 };
       const dir = map[e.key];
       if (e.defaultPrevented || !dir || e.target.closest('input, textarea, select, [contenteditable]')) return;
+      if (endLocked(dir)) {
+        e.preventDefault();
+        return;
+      }
       if (!inZone(dir)) return;
       if (go(dir) || performance.now() < busyUntil) e.preventDefault();
     });
@@ -1676,7 +1699,18 @@ document.addEventListener('click', (e) => {
   const footer = document.querySelector('.site-footer');
   const banner = document.getElementById('cookieBanner');
   const hero = document.querySelector('.hero-section, .page-hero, main > section, section');
-  let ready = !hero;
+  let gate = null;
+  if (hero) {
+    let next = hero.nextElementSibling;
+    if (next && next.matches('.niche-strip, .rx-tapes')) {
+      next = next.nextElementSibling;
+      while (next && !next.matches('section')) next = next.nextElementSibling;
+      gate = next ? (next.querySelector('h1, h2') || next) : hero;
+    } else {
+      gate = hero;
+    }
+  }
+  let ready = !gate;
   let footerVisible = false;
   let contactVisible = false;
   let workVisible = false;
@@ -1687,7 +1721,7 @@ document.addEventListener('click', (e) => {
   const workSeen = new Set();
 
   function sync() {
-    const show = ready && !footerVisible && !contactVisible && !workVisible && !finalVisible;
+    const show = ready && window.scrollY > 0 && !footerVisible && !contactVisible && !workVisible && !finalVisible;
     cta.classList.toggle('is-visible', show);
     cta.setAttribute('aria-hidden', show ? 'false' : 'true');
     cta.tabIndex = show ? 0 : -1;
@@ -1695,11 +1729,12 @@ document.addEventListener('click', (e) => {
     cta.style.setProperty('--sticky-offset', bannerOpen ? (banner.offsetHeight + 12) + 'px' : '0px');
   }
 
-  if (hero) {
+  if (gate) {
     new IntersectionObserver((entries) => {
-      ready = !entries[0].isIntersecting;
+      const entry = entries[0];
+      ready = gate === hero ? !entry.isIntersecting : entry.isIntersecting || entry.boundingClientRect.top < 0;
       sync();
-    }).observe(hero);
+    }).observe(gate);
   }
 
   if (footer) {
@@ -1739,6 +1774,9 @@ document.addEventListener('click', (e) => {
     document.getElementById(id)?.addEventListener('click', () => setTimeout(sync, 0));
   });
   window.addEventListener('resize', sync);
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 0 !== cta.classList.contains('is-visible')) sync();
+  }, { passive: true });
 })();
 
 // Testimonial videos

@@ -51,6 +51,9 @@ include __DIR__ . '/includes/header.php';
           <div class="hcar-card"><img src="/assets/images/hcar-social-media-advertising-1.webp" alt="Social Media Advertising image 1" loading="lazy"></div>
           <div class="hcar-card"><img src="/assets/images/hcar-social-media-advertising-2.webp" alt="Social Media Advertising image 2" loading="lazy"></div>
           <div class="hcar-card"><img src="/assets/images/hcar-social-media-advertising-3.webp" alt="Social Media Advertising image 3" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-social-media-advertising-4.webp" alt="Social Media Advertising image 4" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-social-media-advertising-5.webp" alt="Social Media Advertising image 5" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-social-media-advertising-6.webp" alt="Social Media Advertising image 6" loading="lazy"></div>
         </div>
         <div class="hcar-nav">
           <button type="button" class="hcar-arrow hcar-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -267,11 +270,22 @@ include __DIR__ . '/includes/testimonialslider.php';
 <!-- CTA -->
 <section class="page-section services-cta-section">
   <div class="container">
+    <!--
     <div class="services-cta-band reveal">
       <div>
         <h3>Better creative. Better targeting. Better landing experience.</h3>
       </div>
       <a href="/contact.php" class="btn btn-lime btn-lg">Start With a Free Audit</a>
+    </div>
+    -->
+    <div class="services-cta-band services-cta-band--split reveal">
+      <div class="svc-cta-copy">
+        <h3>Better creative. Better targeting. Better landing experience.</h3>
+        <div class="svc-cta-act">
+          <a href="/contact.php" class="btn btn-lime btn-lg">Start With a Free Audit</a>
+        </div>
+      </div>
+      <div class="svc-cta-art"><img src="/assets/images/cta-phones-social-media-advertising.webp" alt="Facebook lead form, Instagram sponsored post and analytics screens on phones" width="1280" height="1120" loading="lazy"></div>
     </div>
   </div>
 </section>

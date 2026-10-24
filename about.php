@@ -51,6 +51,9 @@ include __DIR__ . '/includes/header.php';
           <div class="hcar-card"><img src="/assets/images/hcar-about-1.webp" alt="About image 1" loading="lazy"></div>
           <div class="hcar-card"><img src="/assets/images/hcar-about-2.webp" alt="About image 2" loading="lazy"></div>
           <div class="hcar-card"><img src="/assets/images/hcar-about-3.webp" alt="About image 3" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-about-4.webp" alt="About image 4" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-about-5.webp" alt="About image 5" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-about-6.webp" alt="About image 6" loading="lazy"></div>
         </div>
         <div class="hcar-nav">
           <button type="button" class="hcar-arrow hcar-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -268,12 +271,24 @@ include __DIR__ . '/includes/testimonialslider.php';
 
 <section class="page-section about-cta-section">
   <div class="container">
+    <!--
     <div class="services-cta-band reveal">
       <div>
         <h3>Want a team that treats your goals like more than another ticket?</h3>
         <p>Tell us what you're trying to build. We'll help you figure out the smartest next step, even if that means starting smaller.</p>
       </div>
       <a href="/contact.php" class="btn btn-lime btn-lg" data-open-popup>Let's Talk</a>
+    </div>
+    -->
+    <div class="services-cta-band services-cta-band--split reveal">
+      <div class="svc-cta-copy">
+        <h3>Want a team that treats your goals like more than another ticket?</h3>
+        <p>Tell us what you're trying to build. We'll help you figure out the smartest next step, even if that means starting smaller.</p>
+        <div class="svc-cta-act">
+          <a href="/contact.php" class="btn btn-lime btn-lg" data-open-popup>Let's Talk</a>
+        </div>
+      </div>
+      <div class="svc-cta-art"><img src="/assets/images/cta-phones-about.webp" alt="Project timeline, team and lead report screens on phones" width="1280" height="1120" loading="lazy"></div>
     </div>
   </div>
 </section>

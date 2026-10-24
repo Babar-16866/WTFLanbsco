@@ -51,6 +51,9 @@ include __DIR__ . '/includes/header.php';
           <div class="hcar-card"><img src="/assets/images/hcar-web-design-1.webp" alt="Remodeling website design" loading="lazy"></div>
           <div class="hcar-card"><img src="/assets/images/hcar-web-design-2.webp" alt="Power washing website design" loading="lazy"></div>
           <div class="hcar-card"><img src="/assets/images/hcar-web-design-3.webp" alt="Roofing website design" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-web-design-4.webp" alt="Builder website design" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-web-design-5.webp" alt="Power washing website design" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-web-design-6.webp" alt="Plumbing website design" loading="lazy"></div>
         </div>
         <div class="hcar-nav">
           <button type="button" class="hcar-arrow hcar-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -268,11 +271,22 @@ include __DIR__ . '/includes/testimonialslider.php';
 <!-- CTA -->
 <section class="page-section services-cta-section">
   <div class="container">
+    <!--
     <div class="services-cta-band reveal">
       <div>
         <h3>Don’t let your website undersell <br>the quality of your work.</h3>
       </div>
       <a href="/contact.php" class="btn btn-lime btn-lg">Claim Your FREE Website Audit</a>
+    </div>
+    -->
+    <div class="services-cta-band services-cta-band--split reveal">
+      <div class="svc-cta-copy">
+        <h3>Don’t let your website undersell <br>the quality of your work.</h3>
+        <div class="svc-cta-act">
+          <a href="/contact.php" class="btn btn-lime btn-lg">Claim Your FREE Website Audit</a>
+        </div>
+      </div>
+      <div class="svc-cta-art"><img src="/assets/images/cta-phones-web-design.webp" alt="Project gallery, contractor homepage and booking page screens on phones" width="1280" height="1120" loading="lazy"></div>
     </div>
   </div>
 </section>

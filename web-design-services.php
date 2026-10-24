@@ -51,6 +51,9 @@ include __DIR__ . '/includes/header.php';
           <div class="hcar-card"><img src="/assets/images/hcar-web-design-services-1.webp" alt="Home-service website design" loading="lazy"></div>
           <div class="hcar-card"><img src="/assets/images/hcar-web-design-services-2.webp" alt="Landscaping website design" loading="lazy"></div>
           <div class="hcar-card"><img src="/assets/images/hcar-web-design-services-3.webp" alt="HVAC website design" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-web-design-services-4.webp" alt="Landscaping website design" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-web-design-services-5.webp" alt="HVAC website design" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-web-design-services-6.webp" alt="Remodeling website design" loading="lazy"></div>
         </div>
         <div class="hcar-nav">
           <button type="button" class="hcar-arrow hcar-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -235,7 +238,7 @@ include __DIR__ . '/includes/header.php';
           <div class="wtabs-copy">
             <h3>Premium business websites</h3>
             <p>Custom, multi-page websites that explain your services, prove your quality, and guide the right customers to a clear next step. Built around your brand; not dressed-up contractor templates.</p>
-            <a href="/web-design.php" class="btn btn-lime wtabs-link">View Service <span aria-hidden="true">&rarr;</span></a>
+            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
           </div>
         </article>
         <article class="wtabs-panel" role="tabpanel" id="wtabsPanel2" aria-labelledby="wtabsTab2" aria-hidden="true">
@@ -243,7 +246,7 @@ include __DIR__ . '/includes/header.php';
           <div class="wtabs-copy">
             <h3>Landing pages and sales funnels</h3>
             <p>Focused pages for Google Ads, social campaigns, promotions or high-value services. One message, the right proof, and one obvious action: without paying for clicks that land on a confusing homepage.</p>
-            <a href="/web-design.php" class="btn btn-lime wtabs-link">View Service <span aria-hidden="true">&rarr;</span></a>
+            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
           </div>
         </article>
         <article class="wtabs-panel" role="tabpanel" id="wtabsPanel3" aria-labelledby="wtabsTab3" aria-hidden="true">
@@ -251,7 +254,7 @@ include __DIR__ . '/includes/header.php';
           <div class="wtabs-copy">
             <h3>One-page and informational websites</h3>
             <p>Clean, confident websites for a business that needs a sharper presence without unnecessary complexity. The essential story, services, trust signals and contact path, all in the right order.</p>
-            <a href="/web-design.php" class="btn btn-lime wtabs-link">View Service <span aria-hidden="true">&rarr;</span></a>
+            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
           </div>
         </article>
         <article class="wtabs-panel" role="tabpanel" id="wtabsPanel4" aria-labelledby="wtabsTab4" aria-hidden="true">
@@ -259,7 +262,7 @@ include __DIR__ . '/includes/header.php';
           <div class="wtabs-copy">
             <h3>Immersive, high-end web experiences</h3>
             <p>Cinematic project storytelling, purposeful motion, before-and-after sliders, interactive galleries and memorable detail. Attention-grabbing where it helps; fast and straightforward where it matters more.</p>
-            <a href="/web-design.php" class="btn btn-lime wtabs-link">View Service <span aria-hidden="true">&rarr;</span></a>
+            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
           </div>
         </article>
         <article class="wtabs-panel" role="tabpanel" id="wtabsPanel5" aria-labelledby="wtabsTab5" aria-hidden="true">
@@ -267,7 +270,7 @@ include __DIR__ . '/includes/header.php';
           <div class="wtabs-copy">
             <h3>WordPress, Shopify and e-commerce</h3>
             <p>Content-managed websites, Shopify stores and tailored online selling experiences when your business needs to publish, manage products or sell online. The platform follows the goal, not the other way around.</p>
-            <a href="/web-development.php" class="btn btn-lime wtabs-link">View Service <span aria-hidden="true">&rarr;</span></a>
+            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
           </div>
         </article>
         <article class="wtabs-panel" role="tabpanel" id="wtabsPanel6" aria-labelledby="wtabsTab6" aria-hidden="true">
@@ -275,7 +278,7 @@ include __DIR__ . '/includes/header.php';
           <div class="wtabs-copy">
             <h3>Web apps, portals and CRM workflows</h3>
             <p>For bigger operational needs, we can plan custom dashboards, client portals, booking tools, lead workflows and integrations that cut repetitive admin work and fit how your team operates.</p>
-            <a href="/web-development.php" class="btn btn-lime wtabs-link">View Service <span aria-hidden="true">&rarr;</span></a>
+            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
           </div>
         </article>
         <article class="wtabs-panel" role="tabpanel" id="wtabsPanel7" aria-labelledby="wtabsTab7" aria-hidden="true">
@@ -283,14 +286,13 @@ include __DIR__ . '/includes/header.php';
           <div class="wtabs-copy">
             <h3>Hosting, maintenance and ongoing improvements</h3>
             <p>Launch is the start, not the finish. Hosting, updates, fixes, monitoring and site improvements can keep the experience dependable as your services and business evolve.</p>
-            <a href="/web-development.php" class="btn btn-lime wtabs-link">View Service <span aria-hidden="true">&rarr;</span></a>
+            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
           </div>
         </article>
       </div>
     </div>
     <div class="svc-showcase-foot reveal">
       <p class="section-desc center-desc">Not sure which of these you need? That's a strategy question, not homework we expect you to finish before calling.</p>
-      <a href="/contact.php" class="btn btn-lime btn-lg" data-open-step-popup>Help Me Choose the Right Build</a>
     </div>
   </div>
 </section>
@@ -445,6 +447,7 @@ include __DIR__ . '/includes/testimonialslider.php';
 <!-- CTA -->
 <section class="page-section services-cta-section">
   <div class="container">
+    <!--
     <div class="services-cta-band reveal">
       <div>
         <h3>Your work already looks good in real life. Let's make sure your website proves it.</h3>
@@ -454,6 +457,18 @@ include __DIR__ . '/includes/testimonialslider.php';
         <a href="/contact.php" class="btn btn-lime btn-lg">Claim Your FREE Website Audit</a>
         <p class="services-cta-micro">Useful feedback. No pressure. No mystery jargon.</p>
       </div>
+    </div>
+    -->
+    <div class="services-cta-band services-cta-band--split reveal">
+      <div class="svc-cta-copy">
+        <h3>Your work already looks good in real life. Let's make sure your website proves it.</h3>
+        <p>We'll review your current site, show you where buyers may be hesitating, and recommend what we'd fix first. No bloated shopping list.</p>
+        <div class="svc-cta-act">
+          <a href="/contact.php" class="btn btn-lime btn-lg">Claim Your FREE Website Audit</a>
+          <p class="services-cta-micro">Useful feedback. No pressure. No mystery jargon.</p>
+        </div>
+      </div>
+      <div class="svc-cta-art"><img src="/assets/images/cta-phones-web-design-services.webp" alt="Website audit, contractor homepage and project gallery screens on phones" width="1280" height="1120" loading="lazy"></div>
     </div>
   </div>
 </section>

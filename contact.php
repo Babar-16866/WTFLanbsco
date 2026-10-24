@@ -52,6 +52,9 @@ include __DIR__ . '/includes/header.php';
           <div class="hcar-card"><img src="/assets/images/hcar-contact-1.webp" alt="Contact image 1" loading="lazy"></div>
           <div class="hcar-card"><img src="/assets/images/hcar-contact-2.webp" alt="Contact image 2" loading="lazy"></div>
           <div class="hcar-card"><img src="/assets/images/hcar-contact-3.webp" alt="Contact image 3" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-contact-4.webp" alt="Contact image 4" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-contact-5.webp" alt="Contact image 5" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-contact-6.webp" alt="Contact image 6" loading="lazy"></div>
         </div>
         <div class="hcar-nav">
           <button type="button" class="hcar-arrow hcar-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -366,11 +369,22 @@ include __DIR__ . '/includes/header.php';
 
 <section class="page-section about-cta-section">
   <div class="container">
+    <!--
     <div class="services-cta-band reveal">
       <div>
         <h3>Great work deserves better marketing. You've found the right place to start.</h3>
       </div>
       <a href="#send-message" class="btn btn-lime btn-lg">Send Your Message</a>
+    </div>
+    -->
+    <div class="services-cta-band services-cta-band--split reveal">
+      <div class="svc-cta-copy">
+        <h3>Great work deserves better marketing. You've found the right place to start.</h3>
+        <div class="svc-cta-act">
+          <a href="#send-message" class="btn btn-lime btn-lg">Send Your Message</a>
+        </div>
+      </div>
+      <div class="svc-cta-art"><img src="/assets/images/cta-phones-contact.webp" alt="Online booking, contact form and Google profile screens on phones" width="1280" height="1120" loading="lazy"></div>
     </div>
   </div>
 </section>

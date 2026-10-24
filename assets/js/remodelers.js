@@ -57,6 +57,31 @@
     const track = exp.querySelector('.rx-exp-track');
     const cards = Array.from(exp.querySelectorAll('.rx-exp-card'));
     let dist = 0;
+    let endAt = 0;
+    let atEnd = false;
+    const endY = () => window.scrollY + exp.getBoundingClientRect().bottom - pin.getBoundingClientRect().height;
+    const locked = () => {
+      if (!exp.classList.contains('is-pin') || performance.now() - endAt >= 2000) return false;
+      return Math.abs(window.scrollY - endY()) <= 2;
+    };
+    window.addEventListener('wheel', (e) => {
+      if (!exp.classList.contains('is-pin') || e.deltaY <= 0) return;
+      const y = window.scrollY;
+      const ey = endY();
+      const delta = e.deltaMode === 1 ? e.deltaY * 40 : e.deltaMode === 2 ? e.deltaY * window.innerHeight : e.deltaY;
+      if (y < ey - 2 && y + delta > ey + 2) {
+        e.preventDefault();
+        window.scrollTo({ top: ey, behavior: 'instant' });
+        endAt = performance.now();
+        atEnd = true;
+        return;
+      }
+      if (locked()) e.preventDefault();
+    }, { passive: false });
+    window.addEventListener('keydown', (e) => {
+      if (!['ArrowDown', 'PageDown', ' '].includes(e.key) || e.target.closest('input, textarea, select, [contenteditable]')) return;
+      if (locked()) e.preventDefault();
+    });
     layouts.push(() => {
       const on = wide() && !reduce;
       exp.classList.toggle('is-pin', on);
@@ -77,6 +102,9 @@
       const r = exp.getBoundingClientRect();
       const span = r.height - pin.getBoundingClientRect().height;
       const p = span > 0 ? clamp(-r.top / span, 0, 1) : 0;
+      const isEnd = p >= 0.999;
+      if (isEnd && !atEnd) endAt = performance.now();
+      atEnd = isEnd;
       track.style.setProperty('--hx', (p * dist).toFixed(1));
       const vr = view.getBoundingClientRect();
       const cx = vr.left + vr.width / 2;
@@ -96,28 +124,33 @@
     const items = Array.from(ba.querySelectorAll('.rx-ben-item'));
     const setP = (v) => stage.style.setProperty('--p', clamp(v, 0, 1).toFixed(4));
     let drag = false;
-    let manual = false;
     layouts.push(() => ba.classList.toggle('is-pin', wide() && !reduce));
     tasks.push(() => {
       if (!ba.classList.contains('is-pin')) return;
       const r = ba.getBoundingClientRect();
       const span = r.height - pin.getBoundingClientRect().height;
       const p = span > 0 ? clamp(-r.top / span, 0, 1) : 0;
-      if (!manual) setP((p - 0.04) / 0.9);
+      setP((p - 0.04) / 0.9);
       const idx = Math.min(items.length - 1, Math.floor(p * items.length));
       items.forEach((it, i) => it.classList.toggle('is-active', i === idx));
     });
     const fromEvent = (e) => {
       const r = stage.getBoundingClientRect();
-      setP((e.clientX - r.left) / r.width);
+      const v = clamp((e.clientX - r.left) / r.width, 0, 1);
+      if (!ba.classList.contains('is-pin')) {
+        setP(v);
+        return;
+      }
+      const br = ba.getBoundingClientRect();
+      const span = br.height - pin.getBoundingClientRect().height;
+      if (span <= 0) return;
+      const p = clamp(v * 0.9 + 0.04, 0, 1);
+      window.scrollTo({ top: Math.round(window.scrollY + br.top + p * span), behavior: 'instant' });
     };
     stage.addEventListener('pointerdown', (e) => {
       const onHandle = e.target.closest('.rx-ba-handle span');
       if (ba.classList.contains('is-pin') && !onHandle) return;
-      if (onHandle) {
-        e.preventDefault();
-        manual = true;
-      }
+      if (onHandle) e.preventDefault();
       drag = true;
       stage.setPointerCapture(e.pointerId);
       fromEvent(e);
@@ -152,22 +185,23 @@
   const ask = root.querySelector('[data-rx-ask]');
   if (ask) {
     const words = Array.from(ask.querySelectorAll('.rx-w'));
+    const q = ask.querySelector('.rx-ask-q');
+    let lit = 0;
+    let want = 0;
+    let stepTimer = 0;
+    const step = () => {
+      stepTimer = 0;
+      if (lit === want) return;
+      lit += lit < want ? 1 : -1;
+      words.forEach((w, i) => w.classList.toggle('is-on', i < lit));
+      stepTimer = setTimeout(step, 110);
+    };
     tasks.push(() => {
-      const r = ask.getBoundingClientRect();
+      const r = q.getBoundingClientRect();
       const vh = viewH();
-      const p = reduce ? 1 : clamp((vh * 0.85 - r.top) / (vh * 0.6), 0, 1);
-      const on = Math.round(p * words.length);
-      words.forEach((w, i) => w.classList.toggle('is-on', i < on));
-    });
-  }
-
-  const team = root.querySelector('[data-rx-grow]');
-  if (team && !reduce) {
-    const card = team.querySelector('.rx-team-card');
-    tasks.push(() => {
-      const r = team.getBoundingClientRect();
-      const vh = viewH();
-      card.style.setProperty('--e', (1 - clamp((vh - r.top) / (vh * 0.75), 0, 1)).toFixed(3));
+      const p = reduce ? 1 : clamp((vh * 0.9 - r.top) / (vh * 0.55), 0, 1);
+      want = Math.round(p * words.length);
+      if (!stepTimer) step();
     });
   }
 
@@ -175,17 +209,10 @@
   if (niches && fine) {
     const float = niches.querySelector('.rx-niche-float');
     const fimg = float.querySelector('img');
+    const rows = Array.from(niches.querySelectorAll('.rx-niche'));
     let lastX = 0;
-    niches.querySelectorAll('.rx-niche').forEach((row) => {
-      row.addEventListener('pointerenter', () => {
-        if (!wide()) return;
-        const src = row.getAttribute('data-img');
-        if (fimg.getAttribute('src') !== src) fimg.setAttribute('src', src);
-        float.classList.add('is-on');
-      });
-    });
-    niches.querySelector('.rx-niche-list').addEventListener('pointerleave', () => float.classList.remove('is-on'));
-    niches.addEventListener('pointermove', (e) => {
+    let hoverRow = null;
+    const place = (e) => {
       const z = zoom();
       const x = e.clientX / z;
       const y = e.clientY / z;
@@ -194,7 +221,45 @@
       float.style.setProperty('--fx', (x + 28).toFixed(1) + 'px');
       float.style.setProperty('--fy', (y - 110).toFixed(1) + 'px');
       float.style.setProperty('--fr', v.toFixed(2) + 'deg');
+    };
+    const preload = new IntersectionObserver((entries) => {
+      if (!entries[0].isIntersecting) return;
+      preload.disconnect();
+      rows.forEach((row) => {
+        const im = new Image();
+        im.src = row.getAttribute('data-img');
+      });
+    }, { rootMargin: '600px 0px' });
+    preload.observe(niches);
+    rows.forEach((row) => {
+      row.addEventListener('pointerenter', (e) => {
+        if (!wide()) return;
+        hoverRow = row;
+        if (!float.classList.contains('is-on')) {
+          lastX = e.clientX / zoom();
+          float.style.transition = 'none';
+          place(e);
+          void float.offsetWidth;
+          float.style.transition = '';
+        }
+        const show = () => {
+          if (hoverRow === row) float.classList.add('is-on');
+        };
+        const src = row.getAttribute('data-img');
+        if (fimg.getAttribute('src') !== src) {
+          fimg.setAttribute('src', src);
+          if (fimg.complete && fimg.naturalWidth) show();
+          else fimg.addEventListener('load', show, { once: true });
+        } else {
+          show();
+        }
+      });
     });
+    niches.querySelector('.rx-niche-list').addEventListener('pointerleave', () => {
+      hoverRow = null;
+      float.classList.remove('is-on');
+    });
+    niches.addEventListener('pointermove', place);
     window.addEventListener('scroll', () => float.classList.remove('is-on'), { passive: true });
   }
 

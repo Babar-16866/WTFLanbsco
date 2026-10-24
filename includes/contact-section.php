@@ -11,7 +11,9 @@ if (!empty($hide_contact_section)) {
   <div class="container">
     <div class="contact-layout reveal">
       <div class="contact-intro">
-        <?php if (($page_palette ?? '') === 'index2'): ?>
+        <?php if (!empty($contact_heading)): ?>
+        <h2><?php echo $contact_heading; ?></h2>
+        <?php elseif (($page_palette ?? '') === 'index2'): ?>
         <h2>Let's have a <span>conversation</span></h2>
         <?php else: ?>
         <h2>Let's discuss your <span>next website</span>.</h2>

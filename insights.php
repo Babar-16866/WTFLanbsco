@@ -51,6 +51,9 @@ include __DIR__ . '/includes/header.php';
           <div class="hcar-card"><img src="/assets/images/hcar-insights-1.webp" alt="Insights image 1" loading="lazy"></div>
           <div class="hcar-card"><img src="/assets/images/hcar-insights-2.webp" alt="Insights image 2" loading="lazy"></div>
           <div class="hcar-card"><img src="/assets/images/hcar-insights-3.webp" alt="Insights image 3" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-insights-4.webp" alt="Insights image 4" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-insights-5.webp" alt="Insights image 5" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-insights-6.webp" alt="Insights image 6" loading="lazy"></div>
         </div>
         <div class="hcar-nav">
           <button type="button" class="hcar-arrow hcar-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -184,12 +187,24 @@ include __DIR__ . '/includes/header.php';
       </article>
     </div>
 
+    <!--
     <div class="services-cta-band reveal">
       <div>
         <h3>Want to know what your site is missing?</h3>
         <p>Get a free audit with a clear list of what to fix first.</p>
       </div>
       <a href="/contact.php" class="btn btn-lime btn-lg" data-open-step-popup>Get a free consultation</a>
+    </div>
+    -->
+    <div class="services-cta-band services-cta-band--split reveal">
+      <div class="svc-cta-copy">
+        <h3>Want to know what your site is missing?</h3>
+        <p>Get a free audit with a clear list of what to fix first.</p>
+        <div class="svc-cta-act">
+          <a href="/contact.php" class="btn btn-lime btn-lg" data-open-step-popup>Get a free consultation</a>
+        </div>
+      </div>
+      <div class="svc-cta-art"><img src="/assets/images/cta-phones-insights.webp" alt="Website analytics, blog article and audit screens on phones" width="1280" height="1120" loading="lazy"></div>
     </div>
   </div>
 </section>

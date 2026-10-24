@@ -57,6 +57,9 @@ include __DIR__ . '/includes/header.php';
           <div class="hcar-card"><img src="/assets/images/hcar-services-1.webp" alt="Services image 1" loading="lazy"></div>
           <div class="hcar-card"><img src="/assets/images/hcar-services-2.webp" alt="Services image 2" loading="lazy"></div>
           <div class="hcar-card"><img src="/assets/images/hcar-services-3.webp" alt="Services image 3" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-services-4.webp" alt="Services image 4" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-services-5.webp" alt="Services image 5" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-services-6.webp" alt="Services image 6" loading="lazy"></div>
         </div>
         <div class="hcar-nav">
           <button type="button" class="hcar-arrow hcar-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -102,6 +105,7 @@ include __DIR__ . '/includes/header.php';
       <p class="subheading">FEATURED SERVICES</p>
       <h2>What we help home-service businesses do <span class="heading-accent">better.</span></h2>
     </div>
+    <!--
     <div class="svc-panels reveal" id="svcPanels">
       <a href="/web-design.php" class="svc-panel is-active">
         <img loading="lazy" src="/assets/images/service-web-design.jpg" alt="Web Design &amp; Development">
@@ -169,6 +173,67 @@ include __DIR__ . '/includes/header.php';
           <span class="svc-panel-link">View Service &rarr;</span>
         </div>
       </a>
+    </div>
+    -->
+    <div class="wtabs reveal" data-wtabs>
+      <div class="wtabs-list" role="tablist" aria-label="Featured services">
+        <button type="button" class="wtabs-tab is-active" role="tab" id="wtabsTab1" aria-controls="wtabsPanel1" aria-selected="true"><span class="wtabs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8M12 18v3"/></svg></span><span class="wtabs-name">Web Design &amp; Development</span><span class="wtabs-bar" aria-hidden="true"></span></button>
+        <button type="button" class="wtabs-tab" role="tab" id="wtabsTab2" aria-controls="wtabsPanel2" aria-selected="false"><span class="wtabs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span><span class="wtabs-name">SEO &amp; & Local Search</span><span class="wtabs-bar" aria-hidden="true"></span></button>
+        <button type="button" class="wtabs-tab" role="tab" id="wtabsTab3" aria-controls="wtabsPanel3" aria-selected="false"><span class="wtabs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l14-6v14L3 13z"/><path d="M7 13v5a2 2 0 0 0 4 0v-3.5"/><path d="M20 9v6"/></svg></span><span class="wtabs-name">Google Ads</span><span class="wtabs-bar" aria-hidden="true"></span></button>
+        <button type="button" class="wtabs-tab" role="tab" id="wtabsTab4" aria-controls="wtabsPanel4" aria-selected="false"><span class="wtabs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/></svg></span><span class="wtabs-name">Social Media Advertising</span><span class="wtabs-bar" aria-hidden="true"></span></button>
+        <button type="button" class="wtabs-tab" role="tab" id="wtabsTab5" aria-controls="wtabsPanel5" aria-selected="false"><span class="wtabs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><circle cx="11" cy="11" r="2"/></svg></span><span class="wtabs-name">Branding &amp; & Creative</span><span class="wtabs-bar" aria-hidden="true"></span></button>
+        <button type="button" class="wtabs-tab" role="tab" id="wtabsTab6" aria-controls="wtabsPanel6" aria-selected="false"><span class="wtabs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><span class="wtabs-name">Full-Service Digital Marketing</span><span class="wtabs-bar" aria-hidden="true"></span></button>
+      </div>
+      <div class="wtabs-panels">
+        <article class="wtabs-panel is-active" role="tabpanel" id="wtabsPanel1" aria-labelledby="wtabsTab1">
+          <div class="wtabs-media"><img src="/assets/images/service-web-design.jpg" alt="Web Design &amp; Development" loading="lazy"></div>
+          <div class="wtabs-copy">
+            <h3>Web Design &amp; Development</h3>
+            <p>Make your business look as good online as the work you do - with a fast, custom website built to earn trust and turn visits into calls, estimates, bookings, and better-fit leads. </p>
+            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
+          </div>
+        </article>
+        <article class="wtabs-panel" role="tabpanel" id="wtabsPanel2" aria-labelledby="wtabsTab2" aria-hidden="true">
+          <div class="wtabs-media"><img src="/assets/images/service-seo.jpg" alt="SEO &amp; Local Search" loading="lazy"></div>
+          <div class="wtabs-copy">
+            <h3>SEO &amp; & Local Search</h3>
+            <p>Help the right homeowners find you when they are already looking for the services you want to sell - in the areas you actually want to serve.</p>
+            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
+          </div>
+        </article>
+        <article class="wtabs-panel" role="tabpanel" id="wtabsPanel3" aria-labelledby="wtabsTab3" aria-hidden="true">
+          <div class="wtabs-media"><img src="/assets/images/service-google-ads.jpg" alt="Google Ads" loading="lazy"></div>
+          <div class="wtabs-copy">
+            <h3>Google Ads</h3>
+            <p>Capture high-intent searches with campaigns, landing pages, and tracking built around qualified calls and estimate requests - not empty click volume.</p>
+            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
+          </div>
+        </article>
+        <article class="wtabs-panel" role="tabpanel" id="wtabsPanel4" aria-labelledby="wtabsTab4" aria-hidden="true">
+          <div class="wtabs-media"><img src="/assets/images/service-social-media.jpg" alt="Social Media Advertising" loading="lazy"></div>
+          <div class="wtabs-copy">
+            <h3>Social Media Advertising</h3>
+            <p>Turn your best projects, reviews, offers, and service proof into paid campaigns that build demand, retarget interested homeowners, and keep your name familiar.</p>
+            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
+          </div>
+        </article>
+        <article class="wtabs-panel" role="tabpanel" id="wtabsPanel5" aria-labelledby="wtabsTab5" aria-hidden="true">
+          <div class="wtabs-media"><img src="/assets/images/service-graphic-design.jpg" alt="Branding &amp; Creative" loading="lazy"></div>
+          <div class="wtabs-copy">
+            <h3>Branding &amp; & Creative</h3>
+            <p>Create a clear, consistent look across your website, ads, trucks, social posts, signs, proposals, and sales materials so the whole business feels established.</p>
+            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
+          </div>
+        </article>
+        <article class="wtabs-panel" role="tabpanel" id="wtabsPanel6" aria-labelledby="wtabsTab6" aria-hidden="true">
+          <div class="wtabs-media"><img src="/assets/images/service-digital-marketing.jpg" alt="Full-Service Digital Marketing" loading="lazy"></div>
+          <div class="wtabs-copy">
+            <h3>Full-Service Digital Marketing</h3>
+            <p>Bring website, search, ads, creative, and tracking under one strategy so every channel supports the same message, audience, and lead goals.</p>
+            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
+          </div>
+        </article>
+      </div>
     </div>
   </div>
 </section>
@@ -351,12 +416,24 @@ include __DIR__ . '/includes/testimonialslider.php';
 <!-- CTA -->
 <section class="page-section services-cta-section">
   <div class="container">
+    <!--
     <div class="services-cta-band reveal">
       <div>
         <h3>Not sure what you actually need??</h3>
         <p>Tell us what is not working. We will help you separate the real bottleneck from the nice-to-have.</p>
       </div>
       <a href="/contact.php" class="btn btn-lime btn-lg">FREE CONSULTATION</a>
+    </div>
+    -->
+    <div class="services-cta-band services-cta-band--split reveal">
+      <div class="svc-cta-copy">
+        <h3>Not sure what you actually need??</h3>
+        <p>Tell us what is not working. We will help you separate the real bottleneck from the nice-to-have.</p>
+        <div class="svc-cta-act">
+          <a href="/contact.php" class="btn btn-lime btn-lg">FREE CONSULTATION</a>
+        </div>
+      </div>
+      <div class="svc-cta-art"><img src="/assets/images/cta-phones-services.webp" alt="Local search results, contractor website and lead report screens on phones" width="1280" height="1120" loading="lazy"></div>
     </div>
   </div>
 </section>

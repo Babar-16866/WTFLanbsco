@@ -51,6 +51,9 @@ include __DIR__ . '/includes/header.php';
           <div class="hcar-card"><img src="/assets/images/hcar-seo-1.webp" alt="SEO image 1" loading="lazy"></div>
           <div class="hcar-card"><img src="/assets/images/hcar-seo-2.webp" alt="SEO image 2" loading="lazy"></div>
           <div class="hcar-card"><img src="/assets/images/hcar-seo-3.webp" alt="SEO image 3" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-seo-4.webp" alt="SEO image 4" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-seo-5.webp" alt="SEO image 5" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-seo-6.webp" alt="SEO image 6" loading="lazy"></div>
         </div>
         <div class="hcar-nav">
           <button type="button" class="hcar-arrow hcar-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -267,11 +270,22 @@ include __DIR__ . '/includes/testimonialslider.php';
 <!-- CTA -->
 <section class="page-section services-cta-section">
   <div class="container">
+    <!--
     <div class="services-cta-band reveal">
       <div>
         <h3>Want to know what is holding back your local sales?</h3>
       </div>
       <a href="/contact.php" class="btn btn-lime btn-lg">Claim Your FREE Website Audit</a>
+    </div>
+    -->
+    <div class="services-cta-band services-cta-band--split reveal">
+      <div class="svc-cta-copy">
+        <h3>Want to know what is holding back your local sales?</h3>
+        <div class="svc-cta-act">
+          <a href="/contact.php" class="btn btn-lime btn-lg">Claim Your FREE Website Audit</a>
+        </div>
+      </div>
+      <div class="svc-cta-art"><img src="/assets/images/cta-phones-seo.webp" alt="Google Business Profile, local map results and site audit screens on phones" width="1280" height="1120" loading="lazy"></div>
     </div>
   </div>
 </section>

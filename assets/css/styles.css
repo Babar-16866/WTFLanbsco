@@ -9117,6 +9117,11 @@ html body :is(.btn-outline-white, .thank-btn-secondary).btn:is(:hover, :focus-vi
 .svc-showcase-foot .section-desc {
   margin: 0;
 }
+@media (max-width: 768px) {
+  .svc-showcase-foot:not(:has(.btn)) {
+    padding-bottom: 48px;
+  }
+}
 .services-cta-action {
   display: flex;
   flex-direction: column;
@@ -9920,9 +9925,9 @@ html body .form-disclaimer a[href] {
 .hcar-card.is-left-2,
 .hcar-card.is-right-2 {
   z-index: 1;
-  opacity: 0.55;
+  opacity: 0;
   filter: grayscale(100%) brightness(0.7);
-  pointer-events: auto;
+  pointer-events: none;
 }
 .hcar-card.is-left-2 {
   transform: translate(-50%, -50%) translateX(-104%) scale(0.64);
@@ -10245,5 +10250,80 @@ html[data-palette] body .page-section .home-work-cta .works-show-more.btn.btn:ho
 @media (max-width: 460px) {
   .wtabs-ico {
     display: none;
+  }
+}
+.services-cta-band--split {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: 24px;
+  min-height: 430px;
+  padding: 56px 0 56px 56px;
+  overflow: hidden;
+}
+.services-cta-band--split .svc-cta-copy {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+}
+.services-cta-band--split h3 {
+  font-size: clamp(26px, 2.4vw, 34px);
+  line-height: 1.12;
+}
+.services-cta-band--split .svc-cta-copy > p {
+  max-width: 520px;
+  margin-top: 12px;
+}
+.services-cta-band--split .svc-cta-act {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 28px;
+}
+.services-cta-band--split .services-cta-micro {
+  margin: 0;
+  text-align: left;
+}
+.services-cta-band--split .svc-cta-art {
+  position: relative;
+  align-self: stretch;
+  min-height: 300px;
+  margin: -56px 0;
+}
+.services-cta-band--split .svc-cta-art img {
+  position: absolute;
+  right: 16px;
+  bottom: 0;
+  width: min(100%, 520px);
+  height: auto;
+}
+@media (max-width: 900px) {
+  .services-cta-band--split {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+    padding: 40px 28px 0;
+    text-align: left;
+  }
+  .services-cta-band--split .svc-cta-art {
+    height: 320px;
+    min-height: 0;
+    margin: 8px -28px 0;
+  }
+  .services-cta-band--split .svc-cta-art img {
+    right: auto;
+    left: 50%;
+    width: min(100%, 460px);
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 480px) {
+  .services-cta-band--split {
+    padding: 32px 20px 0;
+  }
+  .services-cta-band--split .svc-cta-art {
+    height: 270px;
+    margin: 4px -20px 0;
   }
 }

@@ -51,6 +51,9 @@ include __DIR__ . '/includes/header.php';
           <div class="hcar-card"><img src="/assets/images/hcar-digital-marketing-1.webp" alt="Digital Marketing image 1" loading="lazy"></div>
           <div class="hcar-card"><img src="/assets/images/hcar-digital-marketing-2.webp" alt="Digital Marketing image 2" loading="lazy"></div>
           <div class="hcar-card"><img src="/assets/images/hcar-digital-marketing-3.webp" alt="Digital Marketing image 3" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-digital-marketing-4.webp" alt="Digital Marketing image 4" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-digital-marketing-5.webp" alt="Digital Marketing image 5" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-digital-marketing-6.webp" alt="Digital Marketing image 6" loading="lazy"></div>
         </div>
         <div class="hcar-nav">
           <button type="button" class="hcar-arrow hcar-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -280,11 +283,22 @@ include __DIR__ . '/includes/testimonialslider.php';
 <!-- CTA -->
 <section class="page-section services-cta-section">
   <div class="container">
+    <!--
     <div class="services-cta-band reveal">
       <div>
         <h3>Tell us where growth feels stuck.</h3>
       </div>
       <a href="/contact.php" class="btn btn-lime btn-lg">Start With a Free Audit</a>
+    </div>
+    -->
+    <div class="services-cta-band services-cta-band--split reveal">
+      <div class="svc-cta-copy">
+        <h3>Tell us where growth feels stuck.</h3>
+        <div class="svc-cta-act">
+          <a href="/contact.php" class="btn btn-lime btn-lg">Start With a Free Audit</a>
+        </div>
+      </div>
+      <div class="svc-cta-art"><img src="/assets/images/cta-phones-digital-marketing.webp" alt="Local search results, website analytics and lead report screens on phones" width="1280" height="1120" loading="lazy"></div>
     </div>
   </div>
 </section>

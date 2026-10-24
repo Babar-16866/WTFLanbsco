@@ -51,6 +51,9 @@ include __DIR__ . '/includes/header.php';
           <div class="hcar-card"><img src="/assets/images/hcar-industries-1.webp" alt="Industries image 1" loading="lazy"></div>
           <div class="hcar-card"><img src="/assets/images/hcar-industries-2.webp" alt="Industries image 2" loading="lazy"></div>
           <div class="hcar-card"><img src="/assets/images/hcar-industries-3.webp" alt="Industries image 3" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-industries-4.webp" alt="Industries image 4" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-industries-5.webp" alt="Industries image 5" loading="lazy"></div>
+          <div class="hcar-card"><img src="/assets/images/hcar-industries-6.webp" alt="Industries image 6" loading="lazy"></div>
         </div>
         <div class="hcar-nav">
           <button type="button" class="hcar-arrow hcar-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>

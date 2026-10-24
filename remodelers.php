@@ -1586,7 +1586,7 @@ include __DIR__ . '/includes/testimonialslider.php';
     </div>
     <div class="rx-hero-stage" data-rx-tilt>
       <div class="rx-hero-phones">
-        <img fetchpriority="high" src="/assets/images/rmx-hero.webp" alt="Remodeling company website on two phones: reviews, consult booking, before and after slider and project galleries" width="2375" height="1546">
+        <img fetchpriority="high" src="/assets/images/rmx-hero.webp" alt="Remodeling company website on two phones: reviews, consult booking, before and after slider and project galleries" width="2376" height="1546">
       </div>
     </div>
   </div>
@@ -1662,7 +1662,7 @@ include __DIR__ . '/includes/testimonialslider.php';
       <a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
     </div>
     <div class="rx-ask-art" data-rx-tilt>
-      <img src="/assets/images/rmx-duo-quote.webp" alt="Remodeling quote form and reviews on phones" width="1400" height="1520" loading="lazy" decoding="async">
+      <img src="/assets/images/rmx-duo-quote.webp" alt="Remodeling website estimate page and reviews page on phones" width="1400" height="1520" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -1676,18 +1676,18 @@ include __DIR__ . '/includes/testimonialslider.php';
       <p class="rx-sub">Each trade gets its own pages, ads and project photos. A basement buyer asks different questions than a kitchen buyer.</p>
     </div>
     <ul class="rx-niche-list">
-      <li class="rx-niche" data-img="/assets/images/rm-kitchen-4.webp"><span class="rx-niche-thumb"><img src="/assets/images/rm-kitchen-4.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span><span class="rx-niche-name">Kitchen remodelers</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
-      <li class="rx-niche" data-img="/assets/images/rm-bath-1.webp"><span class="rx-niche-thumb"><img src="/assets/images/rm-bath-1.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span><span class="rx-niche-name">Bathroom remodelers</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
-      <li class="rx-niche" data-img="/assets/images/rm-basement-2.webp"><span class="rx-niche-thumb"><img src="/assets/images/rm-basement-2.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span><span class="rx-niche-name">Basement finishing</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
-      <li class="rx-niche" data-img="/assets/images/rm-addition-2.webp"><span class="rx-niche-thumb"><img src="/assets/images/rm-addition-2.webp" alt="" width="1600" height="1076" loading="lazy" decoding="async"></span><span class="rx-niche-name">Home additions</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
-      <li class="rx-niche" data-img="/assets/images/rm-living-1.webp"><span class="rx-niche-thumb"><img src="/assets/images/rm-living-1.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span><span class="rx-niche-name">Whole-home renovations</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
-      <li class="rx-niche" data-img="/assets/images/rm-cabinet-2.webp"><span class="rx-niche-thumb"><img src="/assets/images/rm-cabinet-2.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span><span class="rx-niche-name">Custom cabinetry</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
-      <li class="rx-niche" data-img="/assets/images/rm-tile-1.webp"><span class="rx-niche-thumb"><img src="/assets/images/rm-tile-1.webp" alt="" width="1600" height="1278" loading="lazy" decoding="async"></span><span class="rx-niche-name">Flooring and tile</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
-      <li class="rx-niche" data-img="/assets/images/rm-outdoor-2.webp"><span class="rx-niche-thumb"><img src="/assets/images/rm-outdoor-2.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span><span class="rx-niche-name">Outdoor living</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
-      <li class="rx-niche" data-img="/assets/images/rm-exterior-2.webp"><span class="rx-niche-thumb"><img src="/assets/images/rm-exterior-2.webp" alt="" width="1600" height="1244" loading="lazy" decoding="async"></span><span class="rx-niche-name">ADUs and garage conversions</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
-      <li class="rx-niche" data-img="/assets/images/rm-floor-1.webp"><span class="rx-niche-thumb"><img src="/assets/images/rm-floor-1.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span><span class="rx-niche-name">Interior finishing</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
-      <li class="rx-niche" data-img="/assets/images/rm-plan-1.webp"><span class="rx-niche-thumb"><img src="/assets/images/rm-plan-1.webp" alt="" width="1600" height="900" loading="lazy" decoding="async"></span><span class="rx-niche-name">Design-build firms</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
-      <li class="rx-niche" data-img="/assets/images/rm-kitchen-3.webp"><span class="rx-niche-thumb"><img src="/assets/images/rm-kitchen-3.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span><span class="rx-niche-name">Light commercial remodels</span><span class="rx-niche-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></li>
+      <li class="rx-niche" data-img="/assets/images/rm-kitchen-4.webp"><span class="rx-niche-name">Kitchen remodelers</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/rm-kitchen-4.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/rm-bath-1.webp"><span class="rx-niche-name">Bathroom remodelers</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/rm-bath-1.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/rm-basement-2.webp"><span class="rx-niche-name">Basement finishing</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/rm-basement-2.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/rm-addition-2.webp"><span class="rx-niche-name">Home additions</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/rm-addition-2.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/rm-living-1.webp"><span class="rx-niche-name">Whole-home renovations</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/rm-living-1.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/rm-cabinet-2.webp"><span class="rx-niche-name">Custom cabinetry</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/rm-cabinet-2.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/rm-tile-1.webp"><span class="rx-niche-name">Flooring and tile</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/rm-tile-1.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/rm-outdoor-2.webp"><span class="rx-niche-name">Outdoor living</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/rm-outdoor-2.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/rm-exterior-2.webp"><span class="rx-niche-name">ADUs and garage conversions</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/rm-exterior-2.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/rm-floor-1.webp"><span class="rx-niche-name">Interior finishing</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/rm-floor-1.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/rm-plan-1.webp"><span class="rx-niche-name">Design-build firms</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/rm-plan-1.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/rm-kitchen-3.webp"><span class="rx-niche-name">Light commercial remodels</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/rm-kitchen-3.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
     </ul>
   </div>
   <div class="rx-niche-float" aria-hidden="true"><img src="" alt=""></div>
@@ -1712,9 +1712,9 @@ include __DIR__ . '/includes/testimonialslider.php';
   </div>
 </section>
 
-<section class="rx-team" data-rx-grow>
+<section class="rx-team">
   <div class="rx-team-card">
-    <div class="rx-team-art" data-rx-tilt><img src="/assets/images/rmx-trio.webp" alt="Remodeling services, project tracker and consult booking on phones" width="1840" height="1495" loading="lazy" decoding="async"></div>
+    <div class="rx-team-art" data-rx-tilt><img src="/assets/images/rmx-trio.webp" alt="Remodeling website services page, project story and consult booking page on phones" width="1840" height="1496" loading="lazy" decoding="async"></div>
     <div class="rx-team-copy">
       <p class="subheading">Why WTF Labs</p>
       <h2 class="rx-h2">Looking for a team that actually understands remodeling?</h2>
@@ -1726,6 +1726,7 @@ include __DIR__ . '/includes/testimonialslider.php';
 
 </div>
 
+<div class="rx-canvas rx-work-canvas">
 <section class="page-section industry-nav-section">
   <div class="container">
     <div class="works-filter-stack works-filter-stack--center home-filter-stack" data-trade-links>
@@ -2921,6 +2922,7 @@ include __DIR__ . '/includes/testimonialslider.php';
     <div class="home-work-cta"></div>
   </div>
 </section>
+</div>
 
 <div class="work-modal" id="workModal" hidden>
   <div class="work-modal-backdrop" data-work-close></div>
@@ -2962,6 +2964,7 @@ include __DIR__ . '/includes/testimonialslider.php';
 ?>
 </div>
 
+<div class="rx-canvas rx-faq-canvas">
 <section class="faq-section" id="faqs">
   <div class="container">
     <div class="section-header reveal">
@@ -3047,7 +3050,11 @@ include __DIR__ . '/includes/testimonialslider.php';
     </div>
   </div>
 </section>
+</div>
 
 <script src="/assets/js/remodelers.js?v=<?php echo asset_version('assets/js/remodelers.js'); ?>" defer></script>
 
-<?php include __DIR__ . '/includes/footer.php'; ?>
+<?php
+$contact_heading = 'Let&rsquo;s talk about your <span>next big remodel.</span>';
+include __DIR__ . '/includes/footer.php';
+?>
