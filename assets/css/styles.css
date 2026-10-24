@@ -7516,6 +7516,9 @@ html[data-palette] body .thank-btn-secondary:hover {
   flex-direction: column;
   gap: 12px;
 }
+.contact-form--home .form-step > [data-step-next] {
+  margin-top: 4px;
+}
 .contact-form--home .form-step[hidden] {
   display: none;
 }

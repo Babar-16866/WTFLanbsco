@@ -57,30 +57,59 @@
     const track = exp.querySelector('.rx-exp-track');
     const cards = Array.from(exp.querySelectorAll('.rx-exp-card'));
     let dist = 0;
-    let endAt = 0;
     let atEnd = false;
+    let holdLeft = 0;
+    let lastWheel = 0;
+    let heldGesture = false;
+    const HOLD = 2;
     const endY = () => window.scrollY + exp.getBoundingClientRect().bottom - pin.getBoundingClientRect().height;
-    const locked = () => {
-      if (!exp.classList.contains('is-pin') || performance.now() - endAt >= 2000) return false;
-      return Math.abs(window.scrollY - endY()) <= 2;
+    const atEndNow = () => exp.classList.contains('is-pin') && Math.abs(window.scrollY - endY()) <= 2;
+    const consume = (fresh) => {
+      if (holdLeft <= 0 || !atEndNow()) return false;
+      if (fresh) holdLeft -= 1;
+      return true;
     };
     window.addEventListener('wheel', (e) => {
       if (!exp.classList.contains('is-pin') || e.deltaY <= 0) return;
+      const now = performance.now();
+      const fresh = now - lastWheel > 220;
+      lastWheel = now;
       const y = window.scrollY;
       const ey = endY();
-      const delta = e.deltaMode === 1 ? e.deltaY * 40 : e.deltaMode === 2 ? e.deltaY * window.innerHeight : e.deltaY;
-      if (y < ey - 2 && y + delta > ey + 2) {
+      const delta = (e.deltaMode === 1 ? e.deltaY * 40 : e.deltaMode === 2 ? e.deltaY * window.innerHeight : e.deltaY) / zoom();
+      if (y < ey - 2 && y + delta * 1.2 > ey - 2) {
         e.preventDefault();
         window.scrollTo({ top: ey, behavior: 'instant' });
-        endAt = performance.now();
         atEnd = true;
+        holdLeft = HOLD;
+        heldGesture = true;
         return;
       }
-      if (locked()) e.preventDefault();
+      if (fresh) {
+        heldGesture = holdLeft > 0 && atEndNow();
+        if (heldGesture) holdLeft -= 1;
+      }
+      if (heldGesture && atEndNow()) e.preventDefault();
+    }, { passive: false });
+    let touchStartY = null;
+    let touchCounted = false;
+    window.addEventListener('touchstart', (e) => {
+      touchStartY = e.touches.length === 1 ? e.touches[0].clientY : null;
+      touchCounted = false;
+    }, { passive: true });
+    window.addEventListener('touchmove', (e) => {
+      if (touchStartY === null || touchStartY - e.touches[0].clientY <= 0) return;
+      if (holdLeft > 0 && atEndNow()) {
+        e.preventDefault();
+        if (!touchCounted) {
+          touchCounted = true;
+          holdLeft -= 1;
+        }
+      }
     }, { passive: false });
     window.addEventListener('keydown', (e) => {
       if (!['ArrowDown', 'PageDown', ' '].includes(e.key) || e.target.closest('input, textarea, select, [contenteditable]')) return;
-      if (locked()) e.preventDefault();
+      if (consume(!e.repeat)) e.preventDefault();
     });
     layouts.push(() => {
       const on = wide() && !reduce;
@@ -103,7 +132,8 @@
       const span = r.height - pin.getBoundingClientRect().height;
       const p = span > 0 ? clamp(-r.top / span, 0, 1) : 0;
       const isEnd = p >= 0.999;
-      if (isEnd && !atEnd) endAt = performance.now();
+      if (isEnd && !atEnd) holdLeft = HOLD;
+      if (p < 0.98) holdLeft = 0;
       atEnd = isEnd;
       track.style.setProperty('--hx', (p * dist).toFixed(1));
       const vr = view.getBoundingClientRect();
@@ -124,7 +154,38 @@
     const items = Array.from(ba.querySelectorAll('.rx-ben-item'));
     const setP = (v) => stage.style.setProperty('--p', clamp(v, 0, 1).toFixed(4));
     let drag = false;
-    layouts.push(() => ba.classList.toggle('is-pin', wide() && !reduce));
+    let benIdx = -1;
+    const benD = items.map(() => null);
+    const placeBen = (idx) => {
+      benIdx = idx;
+      const n = items.length;
+      items.forEach((it, i) => {
+        const d = ((i - idx + n + Math.floor(n / 2)) % n) - Math.floor(n / 2);
+        const a = Math.abs(d);
+        const wrap = benD[i] !== null && Math.abs(d - benD[i]) > 1;
+        benD[i] = d;
+        it.classList.toggle('is-wrap', wrap);
+        it.style.setProperty('--d', d);
+        it.style.setProperty('--op', a === 0 ? 1 : a === 1 ? 0.55 : a === 2 ? 0.25 : 0);
+        it.style.setProperty('--bl', (a === 0 ? 0 : a === 1 ? 1.5 : 3.5) + 'px');
+        it.classList.toggle('is-active', i === idx);
+        if (wrap) {
+          void it.offsetWidth;
+          requestAnimationFrame(() => requestAnimationFrame(() => it.classList.remove('is-wrap')));
+        }
+      });
+    };
+    layouts.push(() => {
+      const on = wide() && !reduce;
+      ba.classList.toggle('is-pin', on);
+      if (!on) {
+        benIdx = -1;
+        items.forEach((it) => {
+          ['--d', '--op', '--bl'].forEach((v) => it.style.removeProperty(v));
+          it.classList.remove('is-wrap');
+        });
+      }
+    });
     tasks.push(() => {
       if (!ba.classList.contains('is-pin')) return;
       const r = ba.getBoundingClientRect();
@@ -132,7 +193,7 @@
       const p = span > 0 ? clamp(-r.top / span, 0, 1) : 0;
       setP((p - 0.04) / 0.9);
       const idx = Math.min(items.length - 1, Math.floor(p * items.length));
-      items.forEach((it, i) => it.classList.toggle('is-active', i === idx));
+      if (idx !== benIdx) placeBen(idx);
     });
     const fromEvent = (e) => {
       const r = stage.getBoundingClientRect();

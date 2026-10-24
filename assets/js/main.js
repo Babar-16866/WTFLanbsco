@@ -48,11 +48,34 @@ window.addEventListener('scroll', () => {
 
 // Header hide on scroll down
 const siteHeader = document.querySelector('.site-header');
+const headerHideZones = Array.from(document.querySelectorAll('[data-hide-header]'));
 let lastY = 0;
+let headerHidden = false;
+let upScrolls = 0;
+let lastUpAt = 0;
 window.addEventListener('scroll', () => {
   const y = window.scrollY;
   if (siteHeader) {
-    siteHeader.style.transform = y > 120 && y > lastY ? 'translateY(-120%)' : 'translateY(0)';
+    const inZone = headerHideZones.some((zone) => {
+      const r = zone.getBoundingClientRect();
+      return r.top <= 1 && r.bottom >= window.innerHeight - 1;
+    });
+    if (inZone) {
+      headerHidden = true;
+      upScrolls = 0;
+    } else if (y <= 120) {
+      headerHidden = false;
+      upScrolls = 0;
+    } else if (y > lastY) {
+      headerHidden = true;
+      upScrolls = 0;
+    } else if (y < lastY && headerHidden) {
+      const now = performance.now();
+      if (now - lastUpAt > 250) upScrolls += 1;
+      lastUpAt = now;
+      if (upScrolls >= 2) headerHidden = false;
+    }
+    siteHeader.style.transform = headerHidden ? 'translateY(-120%)' : 'translateY(0)';
   }
   lastY = y;
 }, { passive: true });

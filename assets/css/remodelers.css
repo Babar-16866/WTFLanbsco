@@ -311,7 +311,7 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   position: relative;
   z-index: 3;
   height: 190px;
-  margin-top: -56px;
+  margin-top: calc(-64px - 2.4vw);
   pointer-events: none;
 }
 .rx-tape {
@@ -656,14 +656,50 @@ html body .rx :is(.rx-ask, .rx-team) .subheading::before {
   height: min(calc(var(--rx-vh) - 180px), 760px);
   cursor: default;
 }
+.rx-ba.is-pin .rx-ben-list {
+  --row: 76px;
+  position: relative;
+  height: calc(var(--row) * 5);
+  border-bottom: 0;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 22%, #000 78%, transparent 100%);
+  mask-image: linear-gradient(180deg, transparent 0, #000 22%, #000 78%, transparent 100%);
+}
 .rx-ba.is-pin .rx-ben-item {
-  opacity: 0.32;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  align-items: center;
+  height: var(--row);
+  margin-top: calc(var(--row) / -2);
+  padding: 0;
+  border-top: 0;
+  opacity: var(--op, 0);
+  filter: blur(var(--bl, 0px));
+  transform: translateY(calc(var(--d, 0) * var(--row)));
+  transition: transform 0.7s var(--rx-ease), opacity 0.7s var(--rx-ease), filter 0.7s var(--rx-ease);
 }
-.rx-ba.is-pin .rx-ben-item.is-active {
-  opacity: 1;
+.rx-ba.is-pin .rx-ben-item.is-wrap {
+  transition: none;
 }
-.rx-ba.is-pin .rx-ben-item.is-active::before {
-  transform: scaleX(1);
+.rx-ba.is-pin .rx-ben-item::before {
+  display: none;
+}
+.rx-ba.is-pin .rx-ben-item h3,
+.rx-ba.is-pin .rx-ben-item p,
+.rx-ba.is-pin .rx-ben-n {
+  transition: font-size 0.5s var(--rx-ease);
+}
+.rx-ba.is-pin .rx-ben-item.is-active h3 {
+  font-size: 32px;
+}
+.rx-ba.is-pin .rx-ben-item.is-active p {
+  font-size: 16px;
+  color: var(--rx-ink);
+}
+.rx-ba.is-pin .rx-ben-item.is-active .rx-ben-n {
+  font-size: 38px;
 }
 
 .rx-ask {
@@ -1574,5 +1610,90 @@ html body #contact button.btn[data-step-next]::after {
     margin-left: 14px;
     border-radius: 50%;
     background: #10231B url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C5E602' stroke-width='2.4' stroke-linecap='square'%3E%3Cpath d='M6 18L18 6M8 6h10v10'/%3E%3C/svg%3E") center / 19px no-repeat;
+  }
+}
+.rx-ask-phone {
+  --pw: 330px;
+  position: relative;
+  width: var(--pw);
+  margin-inline: auto;
+  padding: 12px;
+  border-radius: 54px;
+  background: linear-gradient(145deg, #2b302d, #0b0d0c 60%);
+  box-shadow: 0 40px 70px rgba(0, 0, 0, 0.45), inset 0 0 0 2px #3a3f3c;
+}
+.rx-ask-island {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  z-index: 2;
+  width: 96px;
+  height: 28px;
+  margin-left: -48px;
+  border-radius: 20px;
+  background: #000;
+  pointer-events: none;
+}
+.rx-ask-screen {
+  position: relative;
+  height: calc((var(--pw) - 24px) * 844 / 390);
+  border-radius: 43px;
+  overflow: hidden;
+  background: #fff;
+}
+.rx-ask-screen iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 390px;
+  height: 844px;
+  border: 0;
+  transform: scale(calc((var(--pw) - 24px) / 390px));
+  transform-origin: 0 0;
+}
+@media (max-width: 640px) {
+  .rx-ask-phone {
+    --pw: 280px;
+  }
+}
+:root[data-palette] body .rx-work-canvas section.page-section.industry-nav-section,
+html body .rx-work-canvas section.page-section.industry-nav-section {
+  margin: 20px;
+  padding: 100px 0;
+  border-radius: 20px;
+  background-color: #1E4233;
+  background-image: var(--pal-texture-image), linear-gradient(150deg, #24503E 0%, #1E4233 45%, #10231B 100%);
+  background-size: cover, auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply, normal;
+  color: #FBF7EC;
+}
+html body .rx-work-canvas .industry-nav-section .home-filter-label {
+  color: #C5E602 !important;
+  -webkit-text-fill-color: #C5E602 !important;
+}
+html body .rx-work-canvas .industry-nav-section .home-filter-label::before,
+html body .rx-work-canvas .industry-nav-section .home-filter-label::after {
+  background: #C5E602 !important;
+}
+@media (max-width: 640px) {
+  :root[data-palette] body .rx-work-canvas section.page-section.industry-nav-section,
+  html body .rx-work-canvas section.page-section.industry-nav-section {
+    margin: 12px;
+    padding: 64px 0;
+  }
+}
+@media (max-width: 640px) {
+  .rx-h1 .rx-mark {
+    white-space: nowrap;
+  }
+}
+@media (max-width: 640px) {
+  .rx-cta i {
+    flex-shrink: 0;
+    align-self: center;
+    width: 44px;
+    height: 44px;
   }
 }

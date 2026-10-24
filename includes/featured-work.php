@@ -81,7 +81,7 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
         </div>
       </article>
 
-      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="remodelers" data-live="https://miaremodelingcontractors.com/" data-live-tab>
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="remodelers" data-live="https://miaremodelingcontractors.com/">
         <div class="work-card-media">
           <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/industry-remodelers-2.webp" alt="Mia Remodeling Contractors">
         </div>

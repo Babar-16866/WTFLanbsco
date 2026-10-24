@@ -160,7 +160,7 @@ include __DIR__ . '/includes/header.php';
           </div>
         </div>
       </article>
-      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="remodelers" data-live="https://miaremodelingcontractors.com/" data-live-tab>
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="remodelers" data-live="https://miaremodelingcontractors.com/">
         <div class="work-card-media">
           <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/industry-remodelers-2.webp" alt="Mia Remodeling Contractors">
         </div>
@@ -1635,7 +1635,7 @@ include __DIR__ . '/includes/testimonialslider.php';
   </div>
 </section>
 
-<section class="rx-ba" data-rx-ba>
+<section class="rx-ba" data-rx-ba data-hide-header>
   <div class="rx-ba-pin">
     <div class="rx-ba-copy">
       <p class="subheading">Benefits for remodelers</p>
@@ -1662,7 +1662,8 @@ include __DIR__ . '/includes/testimonialslider.php';
       <a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
     </div>
     <div class="rx-ask-art" data-rx-tilt>
-      <img src="/assets/images/rmx-duo-quote.webp" alt="Remodeling website estimate page and reviews page on phones" width="1400" height="1520" loading="lazy" decoding="async">
+      <!-- <img src="/assets/images/rmx-duo-quote.webp" alt="Remodeling website estimate page and reviews page on phones" width="1400" height="1520" loading="lazy" decoding="async"> -->
+      <div class="rx-ask-phone"><span class="rx-ask-island" aria-hidden="true"></span><div class="rx-ask-screen"><iframe src="https://miaremodelingcontractors.com/" title="Mia Remodeling Contractors website on mobile" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms"></iframe></div></div>
     </div>
   </div>
 </section>
@@ -1795,7 +1796,7 @@ include __DIR__ . '/includes/testimonialslider.php';
           </div>
         </div>
       </article>
-      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="remodelers" data-live="https://miaremodelingcontractors.com/" data-live-tab>
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="remodelers" data-live="https://miaremodelingcontractors.com/">
         <div class="work-card-media">
           <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/industry-remodelers-2.webp" alt="Mia Remodeling Contractors">
         </div>
