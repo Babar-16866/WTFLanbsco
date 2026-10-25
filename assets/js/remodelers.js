@@ -279,6 +279,55 @@
       askFallback.hidden = false;
       askFrame.hidden = true;
     });
+    const attachDrag = () => {
+      let win = null;
+      let doc = null;
+      try {
+        win = askFrame.contentWindow;
+        doc = askFrame.contentDocument;
+        void doc.documentElement;
+      } catch (err) {
+        return;
+      }
+      if (!doc || !win || !doc.body || win.location.href === 'about:blank' || doc.__rxDrag) return;
+      doc.__rxDrag = true;
+      let startY = null;
+      let lastY = 0;
+      let moved = false;
+      doc.documentElement.style.cursor = 'grab';
+      doc.addEventListener('mousedown', (e) => {
+        if (e.button !== 0) return;
+        startY = e.clientY;
+        lastY = e.clientY;
+        moved = false;
+      }, true);
+      doc.addEventListener('mousemove', (e) => {
+        if (startY === null) return;
+        if (!moved && Math.abs(e.clientY - startY) > 4) {
+          moved = true;
+          doc.documentElement.style.cursor = 'grabbing';
+        }
+        if (!moved) return;
+        e.preventDefault();
+        win.scrollBy({ top: lastY - e.clientY, behavior: 'instant' });
+        lastY = e.clientY;
+      }, true);
+      const end = () => {
+        startY = null;
+        doc.documentElement.style.cursor = 'grab';
+      };
+      doc.addEventListener('mouseup', end, true);
+      win.addEventListener('blur', end);
+      doc.addEventListener('dragstart', (e) => e.preventDefault());
+      doc.addEventListener('click', (e) => {
+        if (!moved) return;
+        moved = false;
+        e.preventDefault();
+        e.stopPropagation();
+      }, true);
+    };
+    askFrame.addEventListener('load', attachDrag);
+    setInterval(attachDrag, 500);
   }
 
   const ask = root.querySelector('[data-rx-ask]');
