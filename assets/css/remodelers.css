@@ -1714,3 +1714,8 @@ html body .rx-work-canvas .industry-nav-section .home-filter-label::after {
 .rx-ba.is-pin .rx-ben-item.is-active {
   cursor: default;
 }
+.rx-ba.is-pin .rx-ben-list {
+  touch-action: pan-x;
+  user-select: none;
+  -webkit-user-select: none;
+}

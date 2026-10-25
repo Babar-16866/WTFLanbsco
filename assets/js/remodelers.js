@@ -175,6 +175,9 @@
     const setP = (v) => stage.style.setProperty('--p', clamp(v, 0, 1).toFixed(4));
     let drag = false;
     let benIdx = -1;
+    let scrollIdx = 0;
+    let benOffset = 0;
+    const wrapIdx = (v) => ((v % items.length) + items.length) % items.length;
     const benD = items.map(() => null);
     const placeBen = (idx) => {
       benIdx = idx;
@@ -212,17 +215,55 @@
       const span = r.height - pin.getBoundingClientRect().height;
       const p = span > 0 ? clamp(-r.top / span, 0, 1) : 0;
       setP((p - 0.04) / 0.9);
-      const idx = Math.min(items.length - 1, Math.floor(p * items.length));
+      scrollIdx = Math.min(items.length - 1, Math.floor(p * items.length));
+      const idx = wrapIdx(scrollIdx + benOffset);
       if (idx !== benIdx) placeBen(idx);
     });
+    const stepBen = (steps) => {
+      if (!steps) return;
+      benOffset += steps;
+      placeBen(wrapIdx(scrollIdx + benOffset));
+    };
+    const relOf = (i) => {
+      const n = items.length;
+      return ((i - benIdx + n + Math.floor(n / 2)) % n) - Math.floor(n / 2);
+    };
+    const benList = ba.querySelector('.rx-ben-list');
+    let benDrag = null;
+    let benMoved = false;
+    benList.addEventListener('pointerdown', (e) => {
+      if (!ba.classList.contains('is-pin') || e.button !== 0) return;
+      benDrag = { y: e.clientY, id: e.pointerId, applied: 0 };
+      benMoved = false;
+    });
+    benList.addEventListener('pointermove', (e) => {
+      if (!benDrag || e.pointerId !== benDrag.id) return;
+      const row = (items[0].offsetHeight || 76) * zoom();
+      const dy = e.clientY - benDrag.y;
+      if (!benMoved && Math.abs(dy) > 6) {
+        benMoved = true;
+        try { benList.setPointerCapture(e.pointerId); } catch (err) {}
+      }
+      const target = dy < 0 ? Math.floor(-dy / row + 0.4) : -Math.floor(dy / row + 0.4);
+      if (target !== benDrag.applied) {
+        stepBen(target - benDrag.applied);
+        benDrag.applied = target;
+      }
+    });
+    const benEnd = () => {
+      benDrag = null;
+    };
+    benList.addEventListener('pointerup', benEnd);
+    benList.addEventListener('pointercancel', benEnd);
+    benList.addEventListener('dragstart', (e) => e.preventDefault());
     items.forEach((it, i) => {
       it.addEventListener('click', () => {
-        if (!ba.classList.contains('is-pin') || i === benIdx) return;
-        const br = ba.getBoundingClientRect();
-        const span = br.height - pin.getBoundingClientRect().height;
-        if (span <= 0) return;
-        const p = (i + 0.5) / items.length;
-        window.scrollTo({ top: Math.round(window.scrollY + br.top + p * span), behavior: 'smooth' });
+        if (!ba.classList.contains('is-pin')) return;
+        if (benMoved) {
+          benMoved = false;
+          return;
+        }
+        if (i !== benIdx) stepBen(relOf(i));
       });
     });
     const fromEvent = (e) => {
