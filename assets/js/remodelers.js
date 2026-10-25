@@ -60,7 +60,7 @@
     let zone = 0;
     let inZone = false;
     let lockUntil = 0;
-    const LOCK_MS = 1500;
+    const LOCK_MS = 1000;
     const isPinned = () => exp.classList.contains('is-pin');
     const geo = () => {
       const r = exp.getBoundingClientRect();
@@ -101,7 +101,7 @@
         return;
       }
       dist = Math.max(0, track.scrollWidth - view.clientWidth);
-      zone = Math.round(window.innerHeight * 0.5);
+      zone = Math.round(window.innerHeight * 0.35);
       exp.style.height = 'calc(var(--rx-vh) + ' + (dist + zone) + 'px)';
     });
     tasks.push(() => {
@@ -112,9 +112,6 @@
       if (nowIn && !inZone) lockUntil = performance.now() + LOCK_MS;
       if (g.pos < g.travel - 40) lockUntil = 0;
       inZone = nowIn;
-      if (performance.now() < lockUntil && g.pos > g.travel + zone * 0.85) {
-        window.scrollTo({ top: Math.round(window.scrollY - (g.pos - (g.travel + zone * 0.5))), behavior: 'instant' });
-      }
       track.style.setProperty('--hx', (p * dist).toFixed(1));
       const vr = view.getBoundingClientRect();
       const cx = vr.left + vr.width / 2;
