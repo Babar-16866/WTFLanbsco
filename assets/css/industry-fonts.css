@@ -64,6 +64,13 @@ html[data-theme="dark"]:has(.rx--hv) body #contact.contact-section {
   background-repeat: no-repeat, no-repeat;
   background-attachment: scroll;
 }
+@media (max-width: 767px) {
+  :root:has(.rx--hv) body {
+    background-image:
+      linear-gradient(color-mix(in srgb, var(--hv-bg-base), transparent var(--hv-bg-opacity)), color-mix(in srgb, var(--hv-bg-base), transparent var(--hv-bg-opacity))),
+      url("/assets/images/Translucent Warm-Cool Flowing Waves-mobile.webp");
+  }
+}
 html[data-theme="dark"]:has(.rx--hv) body {
   --hv-bg-base: #0C1A14;
   background-color: #0C1A14;
