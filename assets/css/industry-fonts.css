@@ -56,7 +56,7 @@ html[data-theme="dark"]:has(.rx--hv) body #contact.contact-section {
   background-image:
     linear-gradient(color-mix(in srgb, var(--hv-bg-base), transparent var(--hv-bg-opacity)), color-mix(in srgb, var(--hv-bg-base), transparent var(--hv-bg-opacity))),
     /* url("/assets/images/flowing-cool-to-warm-gradient-ribbons.webp"); */
-    url("/assets/images/flowing-cool-to-warm-gradient-ribbons-tall.webp");
+    url("/assets/images/Translucent Warm-Cool Flowing Waves.webp");
   /* background-size: 100% 100%, 100% auto; */
   background-size: 100% 100%, 100% 100%;
   background-position: top center;
