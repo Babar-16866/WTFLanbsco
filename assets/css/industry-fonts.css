@@ -1,0 +1,103 @@
+/* Handyman */
+:root:has(.rx--hm) :is(.rx, .rx-canvas) {
+  --rx-display: "Oswald", "Arial Narrow", sans-serif;
+  --rx-text: "Work Sans", system-ui, sans-serif;
+}
+:root:has(.rx--hm) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact .contact-intro h2, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime) {
+  font-family: "Oswald", "Arial Narrow", sans-serif;
+}
+:root:has(.rx--hm) body #contact.contact-section {
+  font-family: "Work Sans", system-ui, sans-serif;
+}
+
+/* HVAC */
+:root:has(.rx--hv) :is(.rx, .rx-canvas) {
+  --rx-display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --rx-text: "Barlow", system-ui, sans-serif;
+}
+:root:has(.rx--hv) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact .contact-intro h2, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime) {
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+}
+:root:has(.rx--hv) body #contact.contact-section {
+  font-family: "Barlow", system-ui, sans-serif;
+}
+
+/* Landscaping */
+:root:has(.rx--ls) :is(.rx, .rx-canvas) {
+  --rx-display: "Antonio", "Arial Narrow", sans-serif;
+  --rx-text: "Figtree", system-ui, sans-serif;
+}
+:root:has(.rx--ls) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact .contact-intro h2, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime) {
+  font-family: "Antonio", "Arial Narrow", sans-serif;
+}
+:root:has(.rx--ls) body #contact.contact-section {
+  font-family: "Figtree", system-ui, sans-serif;
+}
+
+/* Pest Control */
+:root:has(.rx--pc) :is(.rx, .rx-canvas) {
+  --rx-display: "Sofia Sans Extra Condensed", "Arial Narrow", sans-serif;
+  --rx-text: "Sofia Sans", system-ui, sans-serif;
+}
+:root:has(.rx--pc) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact .contact-intro h2, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime) {
+  font-family: "Sofia Sans Extra Condensed", "Arial Narrow", sans-serif;
+}
+:root:has(.rx--pc) body #contact.contact-section {
+  font-family: "Sofia Sans", system-ui, sans-serif;
+}
+
+/* Plumbing */
+:root:has(.rx--pl) :is(.rx, .rx-canvas) {
+  --rx-display: "Saira Condensed", "Arial Narrow", sans-serif;
+  --rx-text: "Nunito Sans", system-ui, sans-serif;
+}
+:root:has(.rx--pl) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact .contact-intro h2, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime) {
+  font-family: "Saira Condensed", "Arial Narrow", sans-serif;
+}
+:root:has(.rx--pl) body #contact.contact-section {
+  font-family: "Nunito Sans", system-ui, sans-serif;
+}
+
+/* Pool Services */
+:root:has(.rx--po) :is(.rx, .rx-canvas) {
+  --rx-display: "Encode Sans Condensed", "Arial Narrow", sans-serif;
+  --rx-text: "Lexend", system-ui, sans-serif;
+}
+:root:has(.rx--po) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact .contact-intro h2, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime) {
+  font-family: "Encode Sans Condensed", "Arial Narrow", sans-serif;
+}
+:root:has(.rx--po) body #contact.contact-section {
+  font-family: "Lexend", system-ui, sans-serif;
+}
+
+/* Power Washing */
+:root:has(.rx--pw) :is(.rx, .rx-canvas) {
+  --rx-display: "Anton", "Impact", sans-serif;
+  --rx-text: "Rubik", system-ui, sans-serif;
+}
+:root:has(.rx--pw) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact .contact-intro h2, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime) {
+  font-family: "Anton", "Impact", sans-serif;
+}
+:root:has(.rx--pw) body #contact.contact-section {
+  font-family: "Rubik", system-ui, sans-serif;
+}
+
+:root:has(.rx--pw) :is(.rx, .rx-canvas, #contact, .site-header .nav-pill) {
+  font-synthesis: none;
+}
+
+/* Roofing */
+:root:has(.rx--rf) :is(.rx, .rx-canvas) {
+  --rx-display: "Bebas Neue", "Impact", sans-serif;
+  --rx-text: "Source Sans 3", system-ui, sans-serif;
+}
+:root:has(.rx--rf) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact .contact-intro h2, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime) {
+  font-family: "Bebas Neue", "Impact", sans-serif;
+}
+:root:has(.rx--rf) body #contact.contact-section {
+  font-family: "Source Sans 3", system-ui, sans-serif;
+}
+
+:root:has(.rx--rf) :is(.rx, .rx-canvas, #contact, .site-header .nav-pill) {
+  font-synthesis: none;
+}
