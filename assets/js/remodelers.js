@@ -57,46 +57,24 @@
     const track = exp.querySelector('.rx-exp-track');
     const cards = Array.from(exp.querySelectorAll('.rx-exp-card'));
     let dist = 0;
-    let atEnd = false;
+    let zone = 0;
+    let inZone = false;
     let lockUntil = 0;
-    let gliding = false;
     const LOCK_MS = 2000;
-    const endY = () => window.scrollY + exp.getBoundingClientRect().bottom - pin.getBoundingClientRect().height;
     const isPinned = () => exp.classList.contains('is-pin');
-    const locked = () => isPinned() && (gliding || (performance.now() < lockUntil && Math.abs(window.scrollY - endY()) <= 4));
-    const glideTo = (top) => {
-      const from = window.scrollY;
-      const dist = top - from;
-      const ms = 450;
-      const t0 = performance.now();
-      gliding = true;
-      const step = (t) => {
-        const k = clamp((t - t0) / ms, 0, 1);
-        const ease = 1 - Math.pow(1 - k, 3);
-        window.scrollTo({ top: from + dist * ease, behavior: 'instant' });
-        if (k < 1) {
-          requestAnimationFrame(step);
-          return;
-        }
-        gliding = false;
-        lockUntil = performance.now() + LOCK_MS;
-      };
-      requestAnimationFrame(step);
+    const geo = () => {
+      const r = exp.getBoundingClientRect();
+      const span = r.height - pin.getBoundingClientRect().height;
+      const travel = Math.max(0, span - zone);
+      return { pos: -r.top, span, travel };
+    };
+    const locked = () => {
+      if (!isPinned() || performance.now() >= lockUntil) return false;
+      const g = geo();
+      return g.pos >= g.travel - 2 && g.pos <= g.span;
     };
     window.addEventListener('wheel', (e) => {
-      if (!isPinned() || e.deltaY <= 0) return;
-      if (locked()) {
-        e.preventDefault();
-        return;
-      }
-      const y = window.scrollY;
-      const ey = endY();
-      const delta = (e.deltaMode === 1 ? e.deltaY * 40 : e.deltaMode === 2 ? e.deltaY * window.innerHeight : e.deltaY) / zoom();
-      if (y < ey - 2 && y + delta * 1.2 > ey - 2) {
-        e.preventDefault();
-        atEnd = true;
-        glideTo(ey);
-      }
+      if (e.deltaY > 0 && locked()) e.preventDefault();
     }, { passive: false });
     let touchStartY = null;
     window.addEventListener('touchstart', (e) => {
@@ -123,17 +101,20 @@
         return;
       }
       dist = Math.max(0, track.scrollWidth - view.clientWidth);
-      exp.style.height = 'calc(var(--rx-vh) + ' + dist + 'px)';
+      zone = Math.round(window.innerHeight * 0.9);
+      exp.style.height = 'calc(var(--rx-vh) + ' + (dist + zone) + 'px)';
     });
     tasks.push(() => {
-      if (!exp.classList.contains('is-pin')) return;
-      const r = exp.getBoundingClientRect();
-      const span = r.height - pin.getBoundingClientRect().height;
-      const p = span > 0 ? clamp(-r.top / span, 0, 1) : 0;
-      const isEnd = p >= 0.999;
-      if (isEnd && !atEnd && !gliding) lockUntil = performance.now() + LOCK_MS;
-      if (p < 0.98) lockUntil = 0;
-      atEnd = isEnd;
+      if (!isPinned()) return;
+      const g = geo();
+      const p = g.travel > 0 ? clamp(g.pos / g.travel, 0, 1) : 0;
+      const nowIn = g.pos >= g.travel - 1 && g.pos <= g.span;
+      if (nowIn && !inZone) lockUntil = performance.now() + LOCK_MS;
+      if (g.pos < g.travel - 40) lockUntil = 0;
+      inZone = nowIn;
+      if (performance.now() < lockUntil && g.pos > g.travel + zone * 0.85) {
+        window.scrollTo({ top: Math.round(window.scrollY - (g.pos - (g.travel + zone * 0.5))), behavior: 'instant' });
+      }
       track.style.setProperty('--hx', (p * dist).toFixed(1));
       const vr = view.getBoundingClientRect();
       const cx = vr.left + vr.width / 2;
