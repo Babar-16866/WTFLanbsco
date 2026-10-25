@@ -26,9 +26,9 @@
 :root:has(.rx--hv) {
   --hv-bg-opacity: 50%;
 }
-:root:has(.rx--hv) :is(.rx, .rx-canvas),
+/* :root:has(.rx--hv) :is(.rx, .rx-canvas),
 :root:has(.rx--hv) body #contact.contact-section {
-  /* --hv-bg-base: var(--rx-paper, #F3EEDF); */
+  --hv-bg-base: var(--rx-paper, #F3EEDF);
   --hv-bg-base: #FFFFFF;
   background-color: #FFFFFF;
   background-image:
@@ -39,9 +39,9 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-/* :root:has(.rx--hv) body #contact.contact-section {
+:root:has(.rx--hv) body #contact.contact-section {
   --hv-bg-base: #F3EEDF;
-} */
+}
 html[data-theme="dark"]:has(.rx--hv) :is(.rx, .rx-canvas) {
   --hv-bg-base: var(--rx-paper);
   background-color: var(--rx-paper);
@@ -49,6 +49,30 @@ html[data-theme="dark"]:has(.rx--hv) :is(.rx, .rx-canvas) {
 html[data-theme="dark"]:has(.rx--hv) body #contact.contact-section {
   --hv-bg-base: #0C1A14;
   background-color: #0C1A14;
+} */
+:root:has(.rx--hv) body {
+  --hv-bg-base: #FFFFFF;
+  background-color: #FFFFFF;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--hv-bg-base), transparent var(--hv-bg-opacity)), color-mix(in srgb, var(--hv-bg-base), transparent var(--hv-bg-opacity))),
+    url("/assets/images/flowing-cool-to-warm-gradient-ribbons.webp");
+  background-size: 100% 100%, 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat, repeat-y;
+  background-attachment: scroll;
+}
+html[data-theme="dark"]:has(.rx--hv) body {
+  --hv-bg-base: #0C1A14;
+  background-color: #0C1A14;
+}
+html:root[data-palette]:has(.rx--hv) body::before {
+  content: none;
+}
+:root:has(.rx--hv) :is(.rx, .rx-canvas),
+:root:has(.rx--hv) body #contact.contact-section,
+html[data-theme="dark"]:has(.rx--hv) body #contact.contact-section {
+  background-color: transparent;
+  background-image: none;
 }
 
 /* Landscaping */
