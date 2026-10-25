@@ -1715,7 +1715,7 @@ include __DIR__ . '/includes/testimonialslider.php';
 
 <section class="rx-team">
   <div class="rx-team-card">
-    <div class="rx-team-art" data-rx-tilt><img src="/assets/images/rmx-trio.webp" alt="Remodeling website services page, project story and consult booking page on phones" width="1840" height="1496" loading="lazy" decoding="async"></div>
+    <div class="rx-team-art" data-rx-tilt><img src="/assets/images/rmx-trio.webp" alt="Remodeling website services page, project page and contact page on phones" width="1840" height="1496" loading="lazy" decoding="async"></div>
     <div class="rx-team-copy">
       <p class="subheading">Why WTF Labs</p>
       <h2 class="rx-h2">Looking for a team that actually understands remodeling?</h2>
