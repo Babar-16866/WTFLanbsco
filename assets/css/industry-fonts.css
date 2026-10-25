@@ -24,7 +24,7 @@
 
 /* HVAC background: Flowing Cool-to-Warm Gradient Ribbons (opacity: change --hv-bg-opacity) */
 :root:has(.rx--hv) {
-  --hv-bg-opacity: 20%;
+  --hv-bg-opacity: 50%;
 }
 :root:has(.rx--hv) :is(.rx, .rx-canvas),
 :root:has(.rx--hv) body #contact.contact-section {
