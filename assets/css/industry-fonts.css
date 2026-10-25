@@ -22,6 +22,28 @@
   font-family: "Barlow", system-ui, sans-serif;
 }
 
+/* HVAC background: Flowing Cool-to-Warm Gradient Ribbons (opacity: change --hv-bg-opacity) */
+:root:has(.rx--hv) {
+  --hv-bg-opacity: 20%;
+}
+:root:has(.rx--hv) :is(.rx, .rx-canvas),
+:root:has(.rx--hv) body #contact.contact-section {
+  --hv-bg-base: var(--rx-paper, #F3EEDF);
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--hv-bg-base), transparent var(--hv-bg-opacity)), color-mix(in srgb, var(--hv-bg-base), transparent var(--hv-bg-opacity))),
+    url("/assets/images/flowing-cool-to-warm-gradient-ribbons.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+:root:has(.rx--hv) body #contact.contact-section {
+  --hv-bg-base: #F3EEDF;
+}
+html[data-theme="dark"]:has(.rx--hv) body #contact.contact-section {
+  --hv-bg-base: #0C1A14;
+}
+
 /* Landscaping */
 :root:has(.rx--ls) :is(.rx, .rx-canvas) {
   --rx-display: "Antonio", "Arial Narrow", sans-serif;
