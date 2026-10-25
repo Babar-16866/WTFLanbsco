@@ -63,7 +63,7 @@
     let heldGesture = false;
     let heldAt = 0;
     const HOLD = 2;
-    const HOLD_MS = 1000;
+    const HOLD_MS = 2000;
     const waiting = () => performance.now() - heldAt < HOLD_MS;
     const endY = () => window.scrollY + exp.getBoundingClientRect().bottom - pin.getBoundingClientRect().height;
     const atEndNow = () => exp.classList.contains('is-pin') && Math.abs(window.scrollY - endY()) <= 2;
