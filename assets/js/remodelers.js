@@ -60,7 +60,7 @@
     let zone = 0;
     let inZone = false;
     let lockUntil = 0;
-    const LOCK_MS = 2000;
+    const LOCK_MS = 1500;
     const isPinned = () => exp.classList.contains('is-pin');
     const geo = () => {
       const r = exp.getBoundingClientRect();
@@ -101,7 +101,7 @@
         return;
       }
       dist = Math.max(0, track.scrollWidth - view.clientWidth);
-      zone = Math.round(window.innerHeight * 0.9);
+      zone = Math.round(window.innerHeight * 0.5);
       exp.style.height = 'calc(var(--rx-vh) + ' + (dist + zone) + 'px)';
     });
     tasks.push(() => {
