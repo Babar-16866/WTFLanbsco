@@ -61,13 +61,22 @@
     let holdLeft = 0;
     let lastWheel = 0;
     let heldGesture = false;
+    let heldAt = 0;
     const HOLD = 2;
+    const HOLD_MS = 1000;
+    const waiting = () => performance.now() - heldAt < HOLD_MS;
     const endY = () => window.scrollY + exp.getBoundingClientRect().bottom - pin.getBoundingClientRect().height;
     const atEndNow = () => exp.classList.contains('is-pin') && Math.abs(window.scrollY - endY()) <= 2;
     const consume = (fresh) => {
-      if (holdLeft <= 0 || !atEndNow()) return false;
-      if (fresh) holdLeft -= 1;
-      return true;
+      if (!atEndNow()) return false;
+      if (holdLeft > 0) {
+        if (fresh) {
+          holdLeft -= 1;
+          heldAt = performance.now();
+        }
+        return true;
+      }
+      return waiting();
     };
     window.addEventListener('wheel', (e) => {
       if (!exp.classList.contains('is-pin') || e.deltaY <= 0) return;
@@ -83,13 +92,20 @@
         atEnd = true;
         holdLeft = HOLD;
         heldGesture = true;
+        heldAt = now;
         return;
       }
       if (fresh) {
-        heldGesture = holdLeft > 0 && atEndNow();
-        if (heldGesture) holdLeft -= 1;
+        heldGesture = atEndNow() && (holdLeft > 0 || waiting());
+        if (heldGesture && holdLeft > 0) {
+          holdLeft -= 1;
+          heldAt = now;
+        }
+      } else if (heldGesture && holdLeft > 0 && now - heldAt > 400) {
+        holdLeft -= 1;
+        heldAt = now;
       }
-      if (heldGesture && atEndNow()) e.preventDefault();
+      if (heldGesture && atEndNow() && (holdLeft > 0 || waiting())) e.preventDefault();
     }, { passive: false });
     let touchStartY = null;
     let touchCounted = false;
@@ -99,11 +115,12 @@
     }, { passive: true });
     window.addEventListener('touchmove', (e) => {
       if (touchStartY === null || touchStartY - e.touches[0].clientY <= 0) return;
-      if (holdLeft > 0 && atEndNow()) {
+      if (atEndNow() && (holdLeft > 0 || waiting())) {
         e.preventDefault();
-        if (!touchCounted) {
+        if (!touchCounted && holdLeft > 0) {
           touchCounted = true;
           holdLeft -= 1;
+          heldAt = performance.now();
         }
       }
     }, { passive: false });
@@ -132,7 +149,10 @@
       const span = r.height - pin.getBoundingClientRect().height;
       const p = span > 0 ? clamp(-r.top / span, 0, 1) : 0;
       const isEnd = p >= 0.999;
-      if (isEnd && !atEnd) holdLeft = HOLD;
+      if (isEnd && !atEnd) {
+        holdLeft = HOLD;
+        heldAt = performance.now();
+      }
       if (p < 0.98) holdLeft = 0;
       atEnd = isEnd;
       track.style.setProperty('--hx', (p * dist).toFixed(1));
@@ -195,6 +215,16 @@
       const idx = Math.min(items.length - 1, Math.floor(p * items.length));
       if (idx !== benIdx) placeBen(idx);
     });
+    items.forEach((it, i) => {
+      it.addEventListener('click', () => {
+        if (!ba.classList.contains('is-pin') || i === benIdx) return;
+        const br = ba.getBoundingClientRect();
+        const span = br.height - pin.getBoundingClientRect().height;
+        if (span <= 0) return;
+        const p = (i + 0.5) / items.length;
+        window.scrollTo({ top: Math.round(window.scrollY + br.top + p * span), behavior: 'smooth' });
+      });
+    });
     const fromEvent = (e) => {
       const r = stage.getBoundingClientRect();
       const v = clamp((e.clientX - r.left) / r.width, 0, 1);
@@ -241,6 +271,16 @@
       }, { threshold: 0.4 });
       intro.observe(stage);
     }
+  }
+
+  const askFrame = root.querySelector('.rx-ask-screen iframe');
+  const askFallback = root.querySelector('.rx-ask-fallback');
+  if (askFrame && askFallback) {
+    window.addEventListener('message', (e) => {
+      if (e.origin !== window.location.origin || !e.data || !e.data.wtfLiveFail || e.source !== askFrame.contentWindow) return;
+      askFallback.hidden = false;
+      askFrame.hidden = true;
+    });
   }
 
   const ask = root.querySelector('[data-rx-ask]');

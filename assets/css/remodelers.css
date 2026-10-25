@@ -1697,3 +1697,20 @@ html body .rx-work-canvas .industry-nav-section .home-filter-label::after {
     height: 44px;
   }
 }
+.rx-ask-fallback {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.rx-ask-fallback[hidden] {
+  display: none;
+}
+.rx-ba.is-pin .rx-ben-item {
+  cursor: pointer;
+}
+.rx-ba.is-pin .rx-ben-item.is-active {
+  cursor: default;
+}

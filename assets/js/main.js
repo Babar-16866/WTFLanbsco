@@ -1592,6 +1592,38 @@ document.addEventListener('click', (e) => {
   let liveLoaded = false;
   let revealTimer = 0;
 
+  let liveFallback = null;
+  let liveCard = null;
+  if (liveFrame) {
+    liveFrame.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox');
+    liveFallback = document.createElement('img');
+    liveFallback.className = 'live-modal-fallback';
+    liveFallback.alt = '';
+    liveFallback.hidden = true;
+    liveFrame.insertAdjacentElement('afterend', liveFallback);
+    window.addEventListener('message', (e) => {
+      if (e.origin !== window.location.origin || !e.data || !e.data.wtfLiveFail || e.source !== liveFrame.contentWindow) return;
+      const shot = liveCard && liveCard.querySelector('.work-card-media img');
+      if (!shot) return;
+      liveFallback.src = shot.getAttribute('src');
+      liveFallback.alt = shot.getAttribute('alt') || '';
+      liveFallback.hidden = false;
+      markLoaded();
+    });
+  }
+
+  const PROXIED = new Set(['miaremodelingcontractors-com','beyondwow-com','tadlockroofing-com','2galslandscaping-com','timemachineatx-com','aqualecu-com','agropestpros-com','arrownj-com','aptivepestcontrol-com','foreverroofing-net','vh1roofing-com','prohandymanmia-com','h2gservices-com','hprohandyman-com','thehandymansflive-com','reliantplumbing-com','oandmplumbing-com','sunlandplumbing-com','aircorheatingcooling-com']);
+
+  function previewUrl(url) {
+    let u;
+    try { u = new URL(url, window.location.href); } catch (e) { return url; }
+    if (u.origin === window.location.origin) return url;
+    const slug = u.hostname.toLowerCase().replace(/^www\./, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    if (!PROXIED.has(slug)) return url;
+    const path = u.pathname + u.search;
+    return '/live-preview?site=' + encodeURIComponent(slug) + (path && path !== '/' ? '&path=' + encodeURIComponent(path) : '');
+  }
+
   function markLoaded() {
     clearTimeout(revealTimer);
     if (!liveFrame.dataset.url) return;
@@ -1600,7 +1632,9 @@ document.addEventListener('click', (e) => {
   }
 
   function loadLive(url) {
+    url = previewUrl(url);
     if (liveFrame.dataset.url === url) return;
+    if (liveFallback) liveFallback.hidden = true;
     liveLoaded = false;
     live.classList.remove('is-loaded');
     liveFrame.dataset.url = url;
@@ -1621,6 +1655,7 @@ document.addEventListener('click', (e) => {
       link.href = origin;
       document.head.appendChild(link);
     }
+    liveCard = card;
     loadLive(url);
   }
 
@@ -1638,6 +1673,7 @@ document.addEventListener('click', (e) => {
   function openLive(card) {
     if (!live || !liveFrame) return;
     lastFocus = card;
+    liveCard = card;
     clearTimeout(warmTimer);
     loadLive(card.getAttribute('data-live'));
     live.classList.toggle('is-loaded', liveLoaded);
