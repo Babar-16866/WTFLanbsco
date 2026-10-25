@@ -58,75 +58,57 @@
     const cards = Array.from(exp.querySelectorAll('.rx-exp-card'));
     let dist = 0;
     let atEnd = false;
-    let holdLeft = 0;
-    let lastWheel = 0;
-    let heldGesture = false;
-    let heldAt = 0;
-    const HOLD = 2;
-    const HOLD_MS = 2000;
-    const waiting = () => performance.now() - heldAt < HOLD_MS;
+    let lockUntil = 0;
+    let gliding = false;
+    const LOCK_MS = 2000;
     const endY = () => window.scrollY + exp.getBoundingClientRect().bottom - pin.getBoundingClientRect().height;
-    const atEndNow = () => exp.classList.contains('is-pin') && Math.abs(window.scrollY - endY()) <= 2;
-    const consume = (fresh) => {
-      if (!atEndNow()) return false;
-      if (holdLeft > 0) {
-        if (fresh) {
-          holdLeft -= 1;
-          heldAt = performance.now();
+    const isPinned = () => exp.classList.contains('is-pin');
+    const locked = () => isPinned() && (gliding || (performance.now() < lockUntil && Math.abs(window.scrollY - endY()) <= 4));
+    const glideTo = (top) => {
+      const from = window.scrollY;
+      const dist = top - from;
+      const ms = 450;
+      const t0 = performance.now();
+      gliding = true;
+      const step = (t) => {
+        const k = clamp((t - t0) / ms, 0, 1);
+        const ease = 1 - Math.pow(1 - k, 3);
+        window.scrollTo({ top: from + dist * ease, behavior: 'instant' });
+        if (k < 1) {
+          requestAnimationFrame(step);
+          return;
         }
-        return true;
-      }
-      return waiting();
+        gliding = false;
+        lockUntil = performance.now() + LOCK_MS;
+      };
+      requestAnimationFrame(step);
     };
     window.addEventListener('wheel', (e) => {
-      if (!exp.classList.contains('is-pin') || e.deltaY <= 0) return;
-      const now = performance.now();
-      const fresh = now - lastWheel > 220;
-      lastWheel = now;
+      if (!isPinned() || e.deltaY <= 0) return;
+      if (locked()) {
+        e.preventDefault();
+        return;
+      }
       const y = window.scrollY;
       const ey = endY();
       const delta = (e.deltaMode === 1 ? e.deltaY * 40 : e.deltaMode === 2 ? e.deltaY * window.innerHeight : e.deltaY) / zoom();
       if (y < ey - 2 && y + delta * 1.2 > ey - 2) {
         e.preventDefault();
-        window.scrollTo({ top: ey, behavior: 'instant' });
         atEnd = true;
-        holdLeft = HOLD;
-        heldGesture = true;
-        heldAt = now;
-        return;
+        glideTo(ey);
       }
-      if (fresh) {
-        heldGesture = atEndNow() && (holdLeft > 0 || waiting());
-        if (heldGesture && holdLeft > 0) {
-          holdLeft -= 1;
-          heldAt = now;
-        }
-      } else if (heldGesture && holdLeft > 0 && now - heldAt > 400) {
-        holdLeft -= 1;
-        heldAt = now;
-      }
-      if (heldGesture && atEndNow() && (holdLeft > 0 || waiting())) e.preventDefault();
     }, { passive: false });
     let touchStartY = null;
-    let touchCounted = false;
     window.addEventListener('touchstart', (e) => {
       touchStartY = e.touches.length === 1 ? e.touches[0].clientY : null;
-      touchCounted = false;
     }, { passive: true });
     window.addEventListener('touchmove', (e) => {
       if (touchStartY === null || touchStartY - e.touches[0].clientY <= 0) return;
-      if (atEndNow() && (holdLeft > 0 || waiting())) {
-        e.preventDefault();
-        if (!touchCounted && holdLeft > 0) {
-          touchCounted = true;
-          holdLeft -= 1;
-          heldAt = performance.now();
-        }
-      }
+      if (locked()) e.preventDefault();
     }, { passive: false });
     window.addEventListener('keydown', (e) => {
       if (!['ArrowDown', 'PageDown', ' '].includes(e.key) || e.target.closest('input, textarea, select, [contenteditable]')) return;
-      if (consume(!e.repeat)) e.preventDefault();
+      if (locked()) e.preventDefault();
     });
     layouts.push(() => {
       const on = wide() && !reduce;
@@ -149,11 +131,8 @@
       const span = r.height - pin.getBoundingClientRect().height;
       const p = span > 0 ? clamp(-r.top / span, 0, 1) : 0;
       const isEnd = p >= 0.999;
-      if (isEnd && !atEnd) {
-        holdLeft = HOLD;
-        heldAt = performance.now();
-      }
-      if (p < 0.98) holdLeft = 0;
+      if (isEnd && !atEnd && !gliding) lockUntil = performance.now() + LOCK_MS;
+      if (p < 0.98) lockUntil = 0;
       atEnd = isEnd;
       track.style.setProperty('--hx', (p * dist).toFixed(1));
       const vr = view.getBoundingClientRect();
