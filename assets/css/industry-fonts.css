@@ -28,7 +28,9 @@
 }
 :root:has(.rx--hv) :is(.rx, .rx-canvas),
 :root:has(.rx--hv) body #contact.contact-section {
-  --hv-bg-base: var(--rx-paper, #F3EEDF);
+  /* --hv-bg-base: var(--rx-paper, #F3EEDF); */
+  --hv-bg-base: #FFFFFF;
+  background-color: #FFFFFF;
   background-image:
     linear-gradient(color-mix(in srgb, var(--hv-bg-base), transparent var(--hv-bg-opacity)), color-mix(in srgb, var(--hv-bg-base), transparent var(--hv-bg-opacity))),
     url("/assets/images/flowing-cool-to-warm-gradient-ribbons.webp");
@@ -37,11 +39,16 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-:root:has(.rx--hv) body #contact.contact-section {
+/* :root:has(.rx--hv) body #contact.contact-section {
   --hv-bg-base: #F3EEDF;
+} */
+html[data-theme="dark"]:has(.rx--hv) :is(.rx, .rx-canvas) {
+  --hv-bg-base: var(--rx-paper);
+  background-color: var(--rx-paper);
 }
 html[data-theme="dark"]:has(.rx--hv) body #contact.contact-section {
   --hv-bg-base: #0C1A14;
+  background-color: #0C1A14;
 }
 
 /* Landscaping */
