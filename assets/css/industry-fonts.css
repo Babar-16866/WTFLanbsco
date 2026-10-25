@@ -70,7 +70,8 @@ html[data-theme="dark"]:has(.rx--hv) body #contact.contact-section {
     background-image:
       linear-gradient(color-mix(in srgb, var(--hv-bg-base), transparent var(--hv-bg-opacity)), color-mix(in srgb, var(--hv-bg-base), transparent var(--hv-bg-opacity))),
       /* url("/assets/images/Translucent Warm-Cool Flowing Waves-mobile.webp"); */
-      url("/assets/images/Ethereal Warm-to-Cool Flowing Ribbons (2)_result-mobile.webp");
+      /* url("/assets/images/Ethereal Warm-to-Cool Flowing Ribbons (2)_result-mobile.webp"); */
+      url("/assets/images/Ethereal Warm-to-Cool Flowing Ribbons (2)_result.webp");
   }
 }
 html[data-theme="dark"]:has(.rx--hv) body {
