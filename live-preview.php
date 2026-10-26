@@ -194,7 +194,7 @@ if ($path === '' || $path[0] !== '/' || str_starts_with($path, '//')) {
 }
 $url = 'https://' . $homeHost . $path;
 
-$cacheFile = sys_get_temp_dir() . '/wtf-live5-' . md5($url) . '.html';
+$cacheFile = sys_get_temp_dir() . '/wtf-live6-' . md5($url) . '.html';
 $html = '';
 $finalUrl = $url;
 if (is_file($cacheFile) && time() - filemtime($cacheFile) < 86400) {
@@ -299,6 +299,19 @@ if (is_file($cacheFile) && time() - filemtime($cacheFile) < 86400) {
   }, $html);
   $html = preg_replace_callback('/url\(\s*(["\']?)(?!data:|https?:|\/\/|\#)([^"\')]+)\1\s*\)/i', function ($m) use ($abs) {
     return 'url(' . $m[1] . $abs($m[2]) . $m[1] . ')';
+  }, $html);
+  $heavy = '(?:googletagmanager\.com|google-analytics\.com|connect\.facebook\.net|callrail\.com|google\.com\/recaptcha|gstatic\.com\/recaptcha|recaptcha\.net|hotjar\.com|clarity\.ms|klaviyo\.com|podium\.com|birdeye\.com|tidio\.co|userway\.org|acsbapp\.com|accessibe\.com|livechatinc\.com|hs-scripts\.com|hs-analytics\.net|leadconnectorhq\.com|msgsndr\.com|doubleclick\.net|bing\.com\/bat|snap\.licdn\.com|tiktok\.com\/i18n\/pixel|analytics\.tiktok\.com)';
+  $html = preg_replace('/<script\b[^>]*\ssrc\s*=\s*["\'][^"\']*' . $heavy . '[^"\']*["\'][^>]*>\s*<\/script>/is', '', $html);
+  $html = preg_replace('/<link\b[^>]*\shref\s*=\s*["\'][^"\']*' . $heavy . '[^"\']*["\'][^>]*>/is', '', $html);
+  $html = preg_replace_callback('/<iframe\b[^>]*>/i', function ($m) {
+    $tag = $m[0];
+    if (preg_match('/\ssrc\s*=\s*["\'][^"\']*(?:recaptcha|callrail)/i', $tag)) {
+      return preg_replace('/\ssrc\s*=\s*(["\']).*?\1/is', ' src="about:blank"', $tag);
+    }
+    if (stripos($tag, 'loading=') === false) {
+      return substr($tag, 0, -1) . ' loading="lazy">';
+    }
+    return $tag;
   }, $html);
   $inject = '<meta name="referrer" content="no-referrer"><base href="' . htmlspecialchars($base, ENT_QUOTES) . '">'
     . '<style>div.needsclick[class*="kl-private-reset-css"][role="dialog"],div.needsclick[class*="kl-private-reset-css"][aria-modal]{display:none!important}</style>'

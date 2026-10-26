@@ -95,6 +95,7 @@ include __DIR__ . '/includes/header.php';
   </div>
 </section>
 
+<?php /*
 <section class="page-section">
   <div class="container">
 
@@ -1469,6 +1470,198 @@ include __DIR__ . '/includes/header.php';
   </div>
 </section>
 
+*/ ?>
+<section class="page-section ind-index" id="trades">
+  <div class="container">
+    <div class="section-header center reveal">
+      <p class="subheading">FIND YOUR TRADE</p>
+      <h2>Your customers have a reason to choose you. <span class="heading-accent">Let's make it easier to see.</span></h2>
+      <p class="section-desc center-desc">Explore the nine home-service industries we focus on. Different challenges, different sales cycles, and different ways to turn online attention into real opportunities.</p>
+    </div>
+    <div class="ind-board reveal" data-ind-board>
+      <div class="ind-preview" aria-hidden="true">
+        <div class="ind-preview-frame">
+          <img class="ind-preview-img is-active" data-i="0" src="/assets/images/industry-remodelers-1.webp" alt="" loading="lazy" decoding="async">
+          <img class="ind-preview-img" data-i="1" src="/assets/images/industry-roofing-1.webp" alt="" loading="lazy" decoding="async">
+          <img class="ind-preview-img" data-i="2" src="/assets/images/industry-power-washing-1.webp" alt="" loading="lazy" decoding="async">
+          <img class="ind-preview-img" data-i="3" src="/assets/images/industry-hvac-1.webp" alt="" loading="lazy" decoding="async">
+          <img class="ind-preview-img" data-i="4" src="/assets/images/industry-plumbing-1.webp" alt="" loading="lazy" decoding="async">
+          <img class="ind-preview-img" data-i="5" src="/assets/images/industry-handyman-1.webp" alt="" loading="lazy" decoding="async">
+          <img class="ind-preview-img" data-i="6" src="/assets/images/industry-landscaping-1.webp" alt="" loading="lazy" decoding="async">
+          <img class="ind-preview-img" data-i="7" src="/assets/images/industry-pool-services-1.webp" alt="" loading="lazy" decoding="async">
+          <img class="ind-preview-img" data-i="8" src="/assets/images/industry-pest-control-1.webp" alt="" loading="lazy" decoding="async">
+          <div class="ind-preview-cap">
+            <p class="ind-preview-text is-active" data-i="0">The homeowner sees your finished kitchen, compares your process and checks your reputation before inviting you over. Show the transformation, build confidence and attract better-fit project inquiries.</p>
+            <p class="ind-preview-text" data-i="1">Whether it's storm damage, repairs or a full replacement, homeowners need a reason to feel safe making a high-stakes choice. Show proof, explain the next step and make inspections easier to request.</p>
+            <p class="ind-preview-text" data-i="2">Driveways, siding, patios and commercial exteriors are visual proof waiting to happen. Make your results easy to see, your coverage easy to understand and the quote easy to request.</p>
+            <p class="ind-preview-text" data-i="3">Urgent service customers want a clear path to help. Replacement customers need confidence in the investment. Your digital experience should make room for both without making either work harder.</p>
+            <p class="ind-preview-text" data-i="4">From a leak that can't wait to a water-heater replacement that needs research, plumbing buyers need clear services, credible proof and a direct next step. We design around the urgency and value of each job.</p>
+            <p class="ind-preview-text" data-i="5">A long list of odd jobs shouldn't turn into a confusing website. Explain the work you take on, show that you're dependable and help homeowners request the right service without endless back-and-forth.</p>
+            <p class="ind-preview-text" data-i="6">Design-build projects and routine maintenance attract different buyers. Show finished spaces with pride, make your service areas clear and create simple paths for consultations and recurring care.</p>
+            <p class="ind-preview-text" data-i="7">Make weekly service plans, repair options and coverage easy to understand. Give homeowners the confidence and convenience to choose ongoing pool care.</p>
+            <p class="ind-preview-text" data-i="8">Homeowners want a problem handled — and ideally kept from coming back. Build clear service journeys that explain treatment options, earn trust and make ongoing protection straightforward.</p>
+          </div>
+        </div>
+      </div>
+      <ol class="ind-list">
+        <li class="ind-row is-active" data-i="0">
+          <a href="/remodelers.php" class="ind-link">
+            <span class="ind-num">01</span>
+            <span class="ind-main">
+              <img class="ind-thumb" src="/assets/images/industry-remodelers-1.webp" alt="" loading="lazy" decoding="async">
+              <span class="ind-name">Remodeling</span>
+              <span class="ind-line">Make the craftsmanship worth the quote — before the first walkthrough.</span>
+            </span>
+            <span class="ind-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></span>
+          </a>
+          <ul class="ind-tags"><li>Immersive project galleries and before/after proof</li><li>Consultation forms that capture budget and timing</li><li>Local visibility for the projects you want more of</li></ul>
+        </li>
+        <li class="ind-row" data-i="1">
+          <a href="/roofing.php" class="ind-link">
+            <span class="ind-num">02</span>
+            <span class="ind-main">
+              <img class="ind-thumb" src="/assets/images/industry-roofing-1.webp" alt="" loading="lazy" decoding="async">
+              <span class="ind-name">Roofing</span>
+              <span class="ind-line">Be the trusted choice when the roof — and the decision — matters.</span>
+            </span>
+            <span class="ind-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></span>
+          </a>
+          <ul class="ind-tags"><li>Project and warranty proof</li><li>Inspection request paths</li><li>Local search and storm-season campaigns</li></ul>
+        </li>
+        <li class="ind-row" data-i="2">
+          <a href="/power-washing.php" class="ind-link">
+            <span class="ind-num">03</span>
+            <span class="ind-main">
+              <img class="ind-thumb" src="/assets/images/industry-power-washing-1.webp" alt="" loading="lazy" decoding="async">
+              <span class="ind-name">Power Washing</span>
+              <span class="ind-line">Let the before-and-after do some of the selling.</span>
+            </span>
+            <span class="ind-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></span>
+          </a>
+          <ul class="ind-tags"><li>Before/after galleries</li><li>Fast quote requests</li><li>Seasonal residential and commercial campaigns</li></ul>
+        </li>
+        <li class="ind-row" data-i="3">
+          <a href="/hvac.php" class="ind-link">
+            <span class="ind-num">04</span>
+            <span class="ind-main">
+              <img class="ind-thumb" src="/assets/images/industry-hvac-1.webp" alt="" loading="lazy" decoding="async">
+              <span class="ind-name">HVAC</span>
+              <span class="ind-line">When the AC quits, your website shouldn't slow down the rescue.</span>
+            </span>
+            <span class="ind-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></span>
+          </a>
+          <ul class="ind-tags"><li>Fast mobile click-to-call and booking</li><li>Repair versus replacement journeys</li><li>Maintenance plan visibility and lead tracking</li></ul>
+        </li>
+        <li class="ind-row" data-i="4">
+          <a href="/plumbing.php" class="ind-link">
+            <span class="ind-num">05</span>
+            <span class="ind-main">
+              <img class="ind-thumb" src="/assets/images/industry-plumbing-1.webp" alt="" loading="lazy" decoding="async">
+              <span class="ind-name">Plumbing</span>
+              <span class="ind-line">Be easy to trust. Even easier to call.</span>
+            </span>
+            <span class="ind-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></span>
+          </a>
+          <ul class="ind-tags"><li>Emergency call paths</li><li>Service-specific landing pages</li><li>Reviews, service areas and appointment requests</li></ul>
+        </li>
+        <li class="ind-row" data-i="5">
+          <a href="/handyman.php" class="ind-link">
+            <span class="ind-num">06</span>
+            <span class="ind-main">
+              <img class="ind-thumb" src="/assets/images/industry-handyman-1.webp" alt="" loading="lazy" decoding="async">
+              <span class="ind-name">Handyman</span>
+              <span class="ind-line">Make it simple to see what you fix — and book the right job.</span>
+            </span>
+            <span class="ind-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></span>
+          </a>
+          <ul class="ind-tags"><li>Organized service categories</li><li>Easy estimate and booking forms</li><li>Local trust and repeat-customer campaigns</li></ul>
+        </li>
+        <li class="ind-row" data-i="6">
+          <a href="/landscaping.php" class="ind-link">
+            <span class="ind-num">07</span>
+            <span class="ind-main">
+              <img class="ind-thumb" src="/assets/images/industry-landscaping-1.webp" alt="" loading="lazy" decoding="async">
+              <span class="ind-name">Landscaping</span>
+              <span class="ind-line">Win the dream yard. Then keep the property looking its best.</span>
+            </span>
+            <span class="ind-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></span>
+          </a>
+          <ul class="ind-tags"><li>Project-led design showcases</li><li>Maintenance plan inquiries</li><li>Neighborhood-focused search and seasonal campaigns</li></ul>
+        </li>
+        <li class="ind-row" data-i="7">
+          <a href="/pool-services.php" class="ind-link">
+            <span class="ind-num">08</span>
+            <span class="ind-main">
+              <img class="ind-thumb" src="/assets/images/industry-pool-services-1.webp" alt="" loading="lazy" decoding="async">
+              <span class="ind-name">Pool Service</span>
+              <span class="ind-line">Turn &ldquo;Can you clean my pool?&rdquo; into a lasting customer relationship.</span>
+            </span>
+            <span class="ind-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></span>
+          </a>
+          <ul class="ind-tags"><li>Plan comparisons and recurring signup</li><li>ZIP-code/service-area clarity</li><li>Pool repair and seasonal promotion pages</li></ul>
+        </li>
+        <li class="ind-row" data-i="8">
+          <a href="/pest-control.php" class="ind-link">
+            <span class="ind-num">09</span>
+            <span class="ind-main">
+              <img class="ind-thumb" src="/assets/images/industry-pest-control-1.webp" alt="" loading="lazy" decoding="async">
+              <span class="ind-name">Pest Control</span>
+              <span class="ind-line">Sell the peace of mind, not just the one-time spray.</span>
+            </span>
+            <span class="ind-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></span>
+          </a>
+          <ul class="ind-tags"><li>Pest-specific service pages</li><li>Quarterly or annual plan inquiries</li><li>Local proof and seasonal campaigns</li></ul>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="page-section ind-stack">
+  <div class="container">
+    <div class="ind-stack-box reveal">
+      <div class="ind-stack-head">
+        <p class="subheading">IN EVERY TRADE</p>
+        <h2>One team for the site, the search <span class="heading-accent">and the ads.</span></h2>
+        <p>Every industry gets the same four building blocks. What changes is the message, the offer and the pages each trade needs.</p>
+      </div>
+      <ol class="ind-stack-list">
+        <li><span class="ind-stack-num">01</span><h3>Websites</h3><p>Fast, mobile-first sites built around the way your buyers shop, with booking and quote forms on every page.</p><a href="/web-design.php" class="ind-stack-link">Learn more <span aria-hidden="true">&rarr;</span></a></li>
+        <li><span class="ind-stack-num">02</span><h3>Local SEO</h3><p>Service and city pages, Google Business Profile work and reviews that put you in the map pack where you want work.</p><a href="/seo.php" class="ind-stack-link">Learn more <span aria-hidden="true">&rarr;</span></a></li>
+        <li><span class="ind-stack-num">03</span><h3>Google Ads</h3><p>Campaigns built around calls and booked jobs, with tracking that shows which clicks turned into revenue.</p><a href="/google-ads.php" class="ind-stack-link">Learn more <span aria-hidden="true">&rarr;</span></a></li>
+        <li><span class="ind-stack-num">04</span><h3>Social Media</h3><p>Project photos, reviews and seasonal offers that keep you in front of homeowners between jobs.</p><a href="/social-media-advertising.php" class="ind-stack-link">Learn more <span aria-hidden="true">&rarr;</span></a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="page-section ind-more">
+  <div class="container">
+    <div class="service-detail-card services-cta-band industry-cta-card ind-more-band reveal">
+      <h3>Don't see your exact industry?</h3>
+      <p>We also take on closely related property and field-service projects when the fit is right. Tell us what you do and the kind of jobs you want more of.</p>
+      <a href="/contact.php" class="btn btn-lime btn-lg">Let's Talk</a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  const board = document.querySelector('[data-ind-board]');
+  if (!board) return;
+  const rows = board.querySelectorAll('.ind-row');
+  const parts = board.querySelectorAll('.ind-preview [data-i]');
+  const show = (i) => {
+    rows.forEach((r) => r.classList.toggle('is-active', r.dataset.i === i));
+    parts.forEach((p) => p.classList.toggle('is-active', p.dataset.i === i));
+  };
+  rows.forEach((r) => {
+    r.addEventListener('mouseenter', () => show(r.dataset.i));
+    r.addEventListener('focusin', () => show(r.dataset.i));
+  });
+})();
+</script>
+
 <section class="faq-section" id="faqs">
   <div class="container">
     <div class="section-header reveal">
@@ -1552,8 +1745,10 @@ include __DIR__ . '/includes/header.php';
         </div>
       </div>
     </div>
-    <div class="faq-all-wrap reveal">
-      <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a>
+    <div class="faq-all-wrap faq-ask reveal">
+      <!-- <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a> -->
+      <div class="section-header faq-ask-head"><h2 class="faq-ask-title">Still have questions?</h2></div>
+      <a href="tel:+15123379723" class="btn btn-lime faq-all-btn faq-call-btn">Call Now <span aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
 </section>

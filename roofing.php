@@ -2,6 +2,7 @@
 $page_title = 'Roofing | WTF Labs';
 $page_description = 'Websites and lead gen that help roofing contractors win replacements, repairs, and storm work.';
 $current_page = 'industries';
+$header_cta_call = true;
 include __DIR__ . '/includes/header.php';
 ?>
 
@@ -1561,8 +1562,10 @@ include __DIR__ . '/includes/testimonialslider.php';
         </div>
       </div>
     </div>
-    <div class="faq-all-wrap reveal">
-      <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a>
+    <div class="faq-all-wrap faq-ask reveal">
+      <!-- <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a> -->
+      <div class="section-header faq-ask-head"><h2 class="faq-ask-title">Still have questions?</h2></div>
+      <a href="tel:+15123379723" class="btn btn-lime faq-all-btn faq-call-btn">Call Now <span aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
 </section>
@@ -1570,7 +1573,7 @@ include __DIR__ . '/includes/testimonialslider.php';
 */ ?>
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:wght@400;500;600;700;800&family=Big+Shoulders+Display:wght@700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/remodelers.css?v=<?php echo asset_version('assets/css/remodelers.css'); ?>">
 <link rel="stylesheet" href="/assets/css/industry-fonts.css?v=<?php echo asset_version('assets/css/industry-fonts.css'); ?>">
 <script>document.documentElement.classList.add('rx-js');</script>
@@ -1585,7 +1588,7 @@ include __DIR__ . '/includes/testimonialslider.php';
         <span class="rx-line"><span>before the <mark class="rx-mark">next storm hits.</mark></span></span>
       </h1>
       <p class="rx-hero-lead">Websites, local search and ads that make homeowners trust you with a five-figure roof and book the inspection today.</p>
-      <div class="rx-hero-actions"><a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a></div>
+      <div class="rx-hero-actions"><a href="tel:+15123379723" class="rx-cta"><span>BOOK A CALL</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a></div>
     </div>
     <div class="rx-hero-stage" data-rx-tilt>
       <div class="rx-hero-phones">
@@ -1644,11 +1647,11 @@ include __DIR__ . '/includes/testimonialslider.php';
       <p class="subheading">Benefits for roofers</p>
       <h2 class="rx-h2">What changes when the site <span class="rx-gold">builds trust like your crew.</span></h2>
       <ol class="rx-ben-list"><li class="rx-ben-item is-active"><span class="rx-ben-n">01</span><div><h3>Bigger average jobs</h3><p>Replacement pages bring in $15K+ roof buyers.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">02</span><div><h3>Better-fit leads</h3><p>Roof age and damage filters sort real jobs fast.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">03</span><div><h3>Instant credibility</h3><p>Certifications, warranties and reviews up front.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">04</span><div><h3>Smoother claims</h3><p>Insurance pages prepare homeowners before you arrive.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">05</span><div><h3>Storm-season surge</h3><p>Ads and pages scale up the day after hail.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">06</span><div><h3>More referrals</h3><p>A new roof on the street sells the neighbors.</p></div></li></ol>
-      <a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
+      <a href="tel:+15123379723" class="rx-cta"><span>BOOK A CALL</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
     </div>
     <div class="rx-ba-stage" data-rx-ba-stage>
-      <img class="rx-ba-before" src="/assets/images/rf-ba-before.webp" alt="Worn, mossy roof before replacement" width="1600" height="1067" loading="lazy" decoding="async">
-      <div class="rx-ba-after"><img src="/assets/images/rf-ba-after.webp" alt="The same house with a new roof" width="1600" height="1067" loading="lazy" decoding="async"></div>
+      <img class="rx-ba-before" src="/assets/images/rf-ba-before.webp" alt="Damaged, sagging roof before replacement" width="1600" height="1067" loading="lazy" decoding="async">
+      <div class="rx-ba-after"><img src="/assets/images/rf-ba-after.webp" alt="A house with a new roof" width="1600" height="1067" loading="lazy" decoding="async"></div>
       <span class="rx-ba-handle" aria-hidden="true"><span></span></span>
       <span class="rx-ba-chip rx-ba-chip--b">Before</span>
       <span class="rx-ba-chip rx-ba-chip--a">After</span>
@@ -1662,7 +1665,7 @@ include __DIR__ . '/includes/testimonialslider.php';
       <p class="subheading">The real question</p>
       <h2 class="rx-ask-q" aria-label="Still losing $20K roofs to the roofer with the better website?"><span aria-hidden="true"><span class="rx-w">Still</span> <span class="rx-w">losing</span> <span class="rx-w rx-w--gold">$20K</span> <span class="rx-w">roofs</span> <span class="rx-w">to</span> <span class="rx-w">the</span> <span class="rx-w">roofer</span> <span class="rx-w">with</span> <span class="rx-w">the</span> <span class="rx-w">better</span> <span class="rx-w">website?</span></span></h2>
       <p>A roof is one of the biggest checks a homeowner writes. They pick the roofer who looks most trustworthy online, and we make sure that is you.</p>
-      <a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
+      <a href="tel:+15123379723" class="rx-cta"><span>BOOK A CALL</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
     </div>
     <div class="rx-ask-art" data-rx-tilt>
       <div class="rx-ask-phone"><span class="rx-ask-island" aria-hidden="true"></span><div class="rx-ask-screen"><iframe src="/live-preview?site=yurasroofing-com" title="Yuras Roofing website on mobile" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms"></iframe><img class="rx-ask-fallback" src="/assets/images/rf-ask-phone.jpg" alt="Yuras Roofing website on mobile" loading="lazy" hidden></div></div>
@@ -1722,7 +1725,7 @@ include __DIR__ . '/includes/testimonialslider.php';
       <p class="subheading">Why WTF Labs</p>
       <h2 class="rx-h2">Looking for a team that actually understands roofing?</h2>
       <p>We have built websites for residential and storm restoration roofers. We know how homeowners choose for a five-figure job, so we design every page to turn searches into inspections.</p>
-      <a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
+      <a href="tel:+15123379723" class="rx-cta"><span>BOOK A CALL</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
     </div>
   </div>
 </section>
@@ -3048,8 +3051,10 @@ include __DIR__ . '/includes/testimonialslider.php';
         </div>
       </div>
     </div>
-    <div class="faq-all-wrap reveal">
-      <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a>
+    <div class="faq-all-wrap faq-ask reveal">
+      <!-- <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a> -->
+      <div class="section-header faq-ask-head"><h2 class="faq-ask-title">Still have questions?</h2></div>
+      <a href="tel:+15123379723" class="btn btn-lime faq-all-btn faq-call-btn">Call Now <span aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
 </section>

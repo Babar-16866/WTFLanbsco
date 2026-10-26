@@ -361,8 +361,10 @@ include __DIR__ . '/includes/header.php';
         <div class="faq-panel" role="region"><div class="faq-panel-inner"><p>Your business name, website if you have one, key services, service area and the main result you're after. If you have a launch deadline or a budget range, sharing it helps us recommend a realistic plan.</p></div></div>
       </div>
     </div>
-    <div class="faq-all-wrap reveal">
-      <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a>
+    <div class="faq-all-wrap faq-ask reveal">
+      <!-- <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a> -->
+      <div class="section-header faq-ask-head"><h2 class="faq-ask-title">Still have questions?</h2></div>
+      <a href="tel:+15123379723" class="btn btn-lime faq-all-btn faq-call-btn">Call Now <span aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
 </section>

@@ -2,6 +2,7 @@
 $page_title = 'Pest Control | WTF Labs';
 $page_description = 'Websites and campaigns that turn one-time pest calls into recurring service plans.';
 $current_page = 'industries';
+$header_cta_call = true;
 include __DIR__ . '/includes/header.php';
 ?>
 
@@ -1561,8 +1562,10 @@ include __DIR__ . '/includes/testimonialslider.php';
         </div>
       </div>
     </div>
-    <div class="faq-all-wrap reveal">
-      <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a>
+    <div class="faq-all-wrap faq-ask reveal">
+      <!-- <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a> -->
+      <div class="section-header faq-ask-head"><h2 class="faq-ask-title">Still have questions?</h2></div>
+      <a href="tel:+15123379723" class="btn btn-lime faq-all-btn faq-call-btn">Call Now <span aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
 </section>
@@ -1570,7 +1573,7 @@ include __DIR__ . '/includes/testimonialslider.php';
 */ ?>
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@600;700;800;900&family=Sofia+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@600;700;800;900&family=Sofia+Sans:wght@400;500;600;700;800&family=Big+Shoulders+Display:wght@700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/remodelers.css?v=<?php echo asset_version('assets/css/remodelers.css'); ?>">
 <link rel="stylesheet" href="/assets/css/industry-fonts.css?v=<?php echo asset_version('assets/css/industry-fonts.css'); ?>">
 <script>document.documentElement.classList.add('rx-js');</script>
@@ -1585,7 +1588,7 @@ include __DIR__ . '/includes/testimonialslider.php';
         <span class="rx-line"><span>into <mark class="rx-mark">yearly plans.</mark></span></span>
       </h1>
       <p class="rx-hero-lead">Websites, local search and ads that win the first inspection and keep homeowners on a recurring plan for years.</p>
-      <div class="rx-hero-actions"><a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a></div>
+      <div class="rx-hero-actions"><a href="tel:+15123379723" class="rx-cta"><span>BOOK A CALL</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a></div>
     </div>
     <div class="rx-hero-stage" data-rx-tilt>
       <div class="rx-hero-phones">
@@ -1644,11 +1647,11 @@ include __DIR__ . '/includes/testimonialslider.php';
       <p class="subheading">Benefits for pest control</p>
       <h2 class="rx-h2">What changes when the site <span class="rx-gold">sells the plan for you.</span></h2>
       <ol class="rx-ben-list"><li class="rx-ben-item is-active"><span class="rx-ben-n">01</span><div><h3>More recurring revenue</h3><p>Plan pages turn one-time calls into yearly accounts.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">02</span><div><h3>Better-fit leads</h3><p>Pest and home details sort urgent jobs from browsers.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">03</span><div><h3>Instant credibility</h3><p>Licenses, family-safe products and reviews up front.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">04</span><div><h3>Denser routes</h3><p>Local pages win more homes on the streets you service.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">05</span><div><h3>Steady year-round work</h3><p>Seasonal campaigns fill the quiet months.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">06</span><div><h3>Lower cancellations</h3><p>Clear plans and reports keep customers on board.</p></div></li></ol>
-      <a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
+      <a href="tel:+15123379723" class="rx-cta"><span>BOOK A CALL</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
     </div>
     <div class="rx-ba-stage" data-rx-ba-stage>
-      <img class="rx-ba-before" src="/assets/images/pc-ba-before.webp" alt="Dim, grimy kitchen before treatment" width="1600" height="1067" loading="lazy" decoding="async">
-      <div class="rx-ba-after"><img src="/assets/images/pc-ba-after.webp" alt="The same kitchen clean and pest-free" width="1600" height="1067" loading="lazy" decoding="async"></div>
+      <img class="rx-ba-before" src="/assets/images/pc-ba-before.webp" alt="Ants swarming across a surface before treatment" width="1600" height="1067" loading="lazy" decoding="async">
+      <div class="rx-ba-after"><img src="/assets/images/pc-ba-after.webp" alt="A clean, pest-free kitchen after treatment" width="1600" height="1067" loading="lazy" decoding="async"></div>
       <span class="rx-ba-handle" aria-hidden="true"><span></span></span>
       <span class="rx-ba-chip rx-ba-chip--b">Before</span>
       <span class="rx-ba-chip rx-ba-chip--a">After</span>
@@ -1662,7 +1665,7 @@ include __DIR__ . '/includes/testimonialslider.php';
       <p class="subheading">The real question</p>
       <h2 class="rx-ask-q" aria-label="Still losing $600-a-year plans to the company with the better website?"><span aria-hidden="true"><span class="rx-w">Still</span> <span class="rx-w">losing</span> <span class="rx-w rx-w--gold">$600-a-year</span> <span class="rx-w">plans</span> <span class="rx-w">to</span> <span class="rx-w">the</span> <span class="rx-w">company</span> <span class="rx-w">with</span> <span class="rx-w">the</span> <span class="rx-w">better</span> <span class="rx-w">website?</span></span></h2>
       <p>A homeowner with ants in the kitchen calls whoever looks safest and most professional online. We make your company that choice, then keep them on a plan.</p>
-      <a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
+      <a href="tel:+15123379723" class="rx-cta"><span>BOOK A CALL</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
     </div>
     <div class="rx-ask-art" data-rx-tilt>
       <div class="rx-ask-phone"><span class="rx-ask-island" aria-hidden="true"></span><div class="rx-ask-screen"><iframe src="/live-preview?site=nozzlenolen-com" title="Nozzle Nolen website on mobile" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms"></iframe><img class="rx-ask-fallback" src="/assets/images/pc-ask-phone.jpg" alt="Nozzle Nolen website on mobile" loading="lazy" hidden></div></div>
@@ -1722,7 +1725,7 @@ include __DIR__ . '/includes/testimonialslider.php';
       <p class="subheading">Why WTF Labs</p>
       <h2 class="rx-h2">Looking for a team that actually understands pest control?</h2>
       <p>We have built websites for pest control companies large and small. We know how worried homeowners choose, so we design every page to turn a scare into a long-term plan.</p>
-      <a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
+      <a href="tel:+15123379723" class="rx-cta"><span>BOOK A CALL</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
     </div>
   </div>
 </section>
@@ -3048,8 +3051,10 @@ include __DIR__ . '/includes/testimonialslider.php';
         </div>
       </div>
     </div>
-    <div class="faq-all-wrap reveal">
-      <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a>
+    <div class="faq-all-wrap faq-ask reveal">
+      <!-- <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a> -->
+      <div class="section-header faq-ask-head"><h2 class="faq-ask-title">Still have questions?</h2></div>
+      <a href="tel:+15123379723" class="btn btn-lime faq-all-btn faq-call-btn">Call Now <span aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
 </section>

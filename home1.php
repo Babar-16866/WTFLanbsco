@@ -1886,8 +1886,10 @@ include __DIR__ . '/includes/testimonialslider.php';
         </div>
       </div>
     </div>
-    <div class="faq-all-wrap reveal">
-      <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a>
+    <div class="faq-all-wrap faq-ask reveal">
+      <!-- <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a> -->
+      <div class="section-header faq-ask-head"><h2 class="faq-ask-title">Still have questions?</h2></div>
+      <a href="tel:+15123379723" class="btn btn-lime faq-all-btn faq-call-btn">Call Now <span aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
 </section>

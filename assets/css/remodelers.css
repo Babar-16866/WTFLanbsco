@@ -1315,7 +1315,7 @@ html body a.sticky-work-cta.btn.btn-lime::after {
 .rx-work-canvas .home-filter-row.is-done .home-filter-label {
   opacity: 1;
 }
-html[data-palette] body .rx-work-canvas .home-work-cta .works-show-more.btn.btn,
+/* html[data-palette] body .rx-work-canvas .home-work-cta .works-show-more.btn.btn,
 html[data-palette] body .rx-work-canvas .home-work-cta .works-show-more.btn.btn:hover,
 html body .rx-work-canvas .home-work-cta .works-show-more.btn.btn {
   display: inline-flex;
@@ -1351,6 +1351,26 @@ html body .rx-work-canvas .home-work-cta .works-show-more.btn:is(.btn, #rxShowMo
   margin-left: 16px;
   border-radius: 50%;
   background: #10231B url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C5E602' stroke-width='2.4' stroke-linecap='square'%3E%3Cpath d='M6 18L18 6M8 6h10v10'/%3E%3C/svg%3E") center / 22px no-repeat;
+} */
+html[data-palette] body .rx-work-canvas .home-work-cta .works-show-more.btn.btn,
+html[data-palette] body .rx-work-canvas .home-work-cta .works-show-more.btn.btn:hover,
+html body .rx-work-canvas .home-work-cta .works-show-more.btn.btn {
+  font-family: "Big Shoulders Display", "Arial Narrow", sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  text-transform: uppercase;
+  padding: 16px 30px;
+  background: color-mix(in srgb, var(--pal-light, #FBF7EC) 10%, transparent);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 1px solid color-mix(in srgb, var(--pal-light, #FBF7EC) 22%, transparent);
+  color: var(--pal-light, #FBF7EC);
+}
+html[data-palette] body .rx-work-canvas .home-work-cta .works-show-more.btn.btn:hover {
+  transform: translateY(-3px);
+  border-color: var(--lime, #C5E602);
 }
 .rx-canvas .street-head h2,
 .rx-canvas #testimonials .street-head h2 {
@@ -1623,6 +1643,7 @@ html body #contact button.btn[data-step-next]::after {
   box-shadow: 0 40px 70px rgba(0, 0, 0, 0.45), inset 0 0 0 2px #3a3f3c;
 }
 .rx-ask-island {
+  display: none;
   position: absolute;
   top: 22px;
   left: 50%;
@@ -1718,4 +1739,82 @@ html body .rx-work-canvas .industry-nav-section .home-filter-label::after {
   touch-action: pan-x;
   user-select: none;
   -webkit-user-select: none;
+}
+.rx-ask-progress {
+  position: absolute;
+  top: 44px;
+  right: 5px;
+  z-index: 3;
+  width: 3px;
+  height: calc((100% - 88px) * var(--p, 0));
+  border-radius: 3px;
+  background: #C5E602;
+  border: 1px solid rgba(30, 66, 51, 0.35);
+  pointer-events: none;
+}
+.rx-team-card {
+  width: 80%;
+  margin-inline: auto;
+  gap: clamp(32px, 4vw, 56px);
+  padding: clamp(56px, 6vw, 84px) clamp(28px, 4.5vw, 72px);
+}
+.rx-team-copy .rx-h2 {
+  font-size: clamp(40px, 4vw, 70px);
+}
+@media (max-width: 1100px) {
+  .rx-team-card {
+    width: 90%;
+  }
+}
+@media (max-width: 640px) {
+  .rx-team-card {
+    width: 100%;
+    padding: 56px 20px;
+  }
+}
+.rx .rx-hero-lead {
+  font-size: 20px;
+  line-height: 1.6;
+}
+.rx .rx-sub {
+  font-size: 19px;
+}
+.rx .rx-exp-body p {
+  font-size: 16.5px;
+  line-height: 1.55;
+}
+.rx .rx-ben-item p {
+  font-size: 17.5px;
+  line-height: 1.5;
+}
+.rx .rx-ask-copy > p:not(.subheading),
+.rx .rx-team-copy > p:not(.subheading) {
+  font-size: 19px;
+}
+.rx .rx-feat p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+html body .rx-faq-canvas .faq-panel-inner p {
+  font-size: 16.5px;
+  line-height: 1.65;
+}
+html body .rx-work-canvas .work-card-body p {
+  font-size: 15.5px;
+  line-height: 1.55;
+}
+@media (max-width: 640px) {
+  .rx .rx-hero-lead {
+    font-size: 17px;
+  }
+  .rx .rx-sub,
+  .rx .rx-ask-copy > p:not(.subheading),
+  .rx .rx-team-copy > p:not(.subheading) {
+    font-size: 17.5px;
+  }
+  .rx .rx-exp-body p,
+  .rx .rx-ben-item p,
+  .rx .rx-feat p {
+    font-size: 16px;
+  }
 }

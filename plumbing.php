@@ -2,6 +2,7 @@
 $page_title = 'Plumbing | WTF Labs';
 $page_description = 'Websites and ads that make your plumbing company the first call for leaks, clogs, and water heaters.';
 $current_page = 'industries';
+$header_cta_call = true;
 include __DIR__ . '/includes/header.php';
 ?>
 
@@ -1561,8 +1562,10 @@ include __DIR__ . '/includes/testimonialslider.php';
         </div>
       </div>
     </div>
-    <div class="faq-all-wrap reveal">
-      <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a>
+    <div class="faq-all-wrap faq-ask reveal">
+      <!-- <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a> -->
+      <div class="section-header faq-ask-head"><h2 class="faq-ask-title">Still have questions?</h2></div>
+      <a href="tel:+15123379723" class="btn btn-lime faq-all-btn faq-call-btn">Call Now <span aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
 </section>
@@ -1570,7 +1573,7 @@ include __DIR__ . '/includes/testimonialslider.php';
 */ ?>
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Nunito+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Nunito+Sans:wght@400;500;600;700;800&family=Big+Shoulders+Display:wght@700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/remodelers.css?v=<?php echo asset_version('assets/css/remodelers.css'); ?>">
 <link rel="stylesheet" href="/assets/css/industry-fonts.css?v=<?php echo asset_version('assets/css/industry-fonts.css'); ?>">
 <script>document.documentElement.classList.add('rx-js');</script>
@@ -1582,10 +1585,10 @@ include __DIR__ . '/includes/testimonialslider.php';
       <p class="rx-hero-tag">Plumbing</p>
       <h1 class="rx-h1">
         <span class="rx-line"><span>Be the first plumber</span></span>
-        <span class="rx-line"><span>they call <mark class="rx-mark">at 2 AM.</mark></span></span>
+        <span class="rx-line"><span>they call <mark class="rx-mark">at 2&nbsp;AM.</mark></span></span>
       </h1>
       <p class="rx-hero-lead">Websites, local search and ads that win emergency calls the moment a pipe bursts and turn them into customers for life.</p>
-      <div class="rx-hero-actions"><a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a></div>
+      <div class="rx-hero-actions"><a href="tel:+15123379723" class="rx-cta"><span>BOOK A CALL</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a></div>
     </div>
     <div class="rx-hero-stage" data-rx-tilt>
       <div class="rx-hero-phones">
@@ -1644,11 +1647,11 @@ include __DIR__ . '/includes/testimonialslider.php';
       <p class="subheading">Benefits for plumbers</p>
       <h2 class="rx-h2">What changes when the site <span class="rx-gold">answers the emergency.</span></h2>
       <ol class="rx-ben-list"><li class="rx-ben-item is-active"><span class="rx-ben-n">01</span><div><h3>More emergency calls</h3><p>Tap-to-call wins the panicked late-night search.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">02</span><div><h3>Bigger tickets</h3><p>Water heater and repipe pages lift the average job.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">03</span><div><h3>Instant credibility</h3><p>Licenses, upfront pricing and reviews before the visit.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">04</span><div><h3>Smarter dispatch</h3><p>Problem and address details arrive with the call.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">05</span><div><h3>Steady pipeline</h3><p>SEO and ads keep vans busy in quiet weeks too.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">06</span><div><h3>More repeat customers</h3><p>One good fix turns into the family plumber.</p></div></li></ol>
-      <a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
+      <a href="tel:+15123379723" class="rx-cta"><span>BOOK A CALL</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
     </div>
     <div class="rx-ba-stage" data-rx-ba-stage>
-      <img class="rx-ba-before" src="/assets/images/pl-ba-before.webp" alt="Dated, dingy bathroom before the re-plumb" width="1600" height="1067" loading="lazy" decoding="async">
-      <div class="rx-ba-after"><img src="/assets/images/pl-ba-after.webp" alt="The same bathroom with new plumbing and fixtures" width="1600" height="1067" loading="lazy" decoding="async"></div>
+      <img class="rx-ba-before" src="/assets/images/pl-ba-before.webp" alt="Broken bathroom with rusty pipes before the re-plumb" width="1600" height="1067" loading="lazy" decoding="async">
+      <div class="rx-ba-after"><img src="/assets/images/pl-ba-after.webp" alt="A bathroom with new plumbing and fixtures" width="1600" height="1067" loading="lazy" decoding="async"></div>
       <span class="rx-ba-handle" aria-hidden="true"><span></span></span>
       <span class="rx-ba-chip rx-ba-chip--b">Before</span>
       <span class="rx-ba-chip rx-ba-chip--a">After</span>
@@ -1662,7 +1665,7 @@ include __DIR__ . '/includes/testimonialslider.php';
       <p class="subheading">The real question</p>
       <h2 class="rx-ask-q" aria-label="Still losing 2 AM emergencies to the plumber with the better website?"><span aria-hidden="true"><span class="rx-w">Still</span> <span class="rx-w">losing</span> <span class="rx-w rx-w--gold">2 AM</span> <span class="rx-w">emergencies</span> <span class="rx-w">to</span> <span class="rx-w">the</span> <span class="rx-w">plumber</span> <span class="rx-w">with</span> <span class="rx-w">the</span> <span class="rx-w">better</span> <span class="rx-w">website?</span></span></h2>
       <p>When water is on the floor, homeowners call the first plumber who looks reliable. We make sure that is you, from the search result to the tap-to-call button.</p>
-      <a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
+      <a href="tel:+15123379723" class="rx-cta"><span>BOOK A CALL</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
     </div>
     <div class="rx-ask-art" data-rx-tilt>
       <div class="rx-ask-phone"><span class="rx-ask-island" aria-hidden="true"></span><div class="rx-ask-screen"><iframe src="/live-preview?site=mns-plumbing" title="MNS Plumbing website on mobile" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms"></iframe><img class="rx-ask-fallback" src="/assets/images/pl-ask-phone.jpg" alt="MNS Plumbing website on mobile" loading="lazy" hidden></div></div>
@@ -1722,7 +1725,7 @@ include __DIR__ . '/includes/testimonialslider.php';
       <p class="subheading">Why WTF Labs</p>
       <h2 class="rx-h2">Looking for a team that actually understands plumbing?</h2>
       <p>We have built websites for residential and commercial plumbers. We know how homeowners pick a plumber under pressure, so we design every page to turn searches into calls.</p>
-      <a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
+      <a href="tel:+15123379723" class="rx-cta"><span>BOOK A CALL</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
     </div>
   </div>
 </section>
@@ -3048,8 +3051,10 @@ include __DIR__ . '/includes/testimonialslider.php';
         </div>
       </div>
     </div>
-    <div class="faq-all-wrap reveal">
-      <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a>
+    <div class="faq-all-wrap faq-ask reveal">
+      <!-- <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a> -->
+      <div class="section-header faq-ask-head"><h2 class="faq-ask-title">Still have questions?</h2></div>
+      <a href="tel:+15123379723" class="btn btn-lime faq-all-btn faq-call-btn">Call Now <span aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
 </section>

@@ -83,7 +83,11 @@ require_once __DIR__ . '/config.php';
           <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3 7 7 0 1 0 21 14.5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
         </svg>
       </button>
+      <?php if (!empty($header_cta_call)): ?>
+      <a href="tel:+15123379723" class="btn btn-lime btn-sm">BOOK A CALL</a>
+      <?php else: ?>
       <a href="/contact.php" class="btn btn-lime btn-sm" data-open-step-popup>FREE Consultation</a>
+      <?php endif; ?>
       <button class="nav-burger" type="button" aria-label="Menu"><span></span><span></span></button>
     </nav>
     

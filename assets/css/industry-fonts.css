@@ -3,7 +3,10 @@
   --rx-display: "Oswald", "Arial Narrow", sans-serif;
   --rx-text: "Work Sans", system-ui, sans-serif;
 }
-:root:has(.rx--hm) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact .contact-intro h2, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime) {
+/* :root:has(.rx--hm) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact .contact-intro h2, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime) {
+  font-family: "Oswald", "Arial Narrow", sans-serif;
+} */
+:root:has(.rx--hm) body #contact .contact-intro h2 {
   font-family: "Oswald", "Arial Narrow", sans-serif;
 }
 :root:has(.rx--hm) body #contact.contact-section {
@@ -15,7 +18,10 @@
   --rx-display: "Barlow Condensed", "Arial Narrow", sans-serif;
   --rx-text: "Barlow", system-ui, sans-serif;
 }
-:root:has(.rx--hv) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact .contact-intro h2, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime) {
+/* :root:has(.rx--hv) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact .contact-intro h2, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime) {
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+} */
+:root:has(.rx--hv) body #contact .contact-intro h2 {
   font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
 }
 :root:has(.rx--hv) body #contact.contact-section {
@@ -50,19 +56,19 @@ html[data-theme="dark"]:has(.rx--hv) body #contact.contact-section {
   --hv-bg-base: #0C1A14;
   background-color: #0C1A14;
 } */
-:root:has(.rx--hv) body {
+/* :root:has(.rx--hv) body {
   --hv-bg-base: #FFFFFF;
   background-color: #FFFFFF;
   background-image:
     linear-gradient(color-mix(in srgb, var(--hv-bg-base), transparent var(--hv-bg-opacity)), color-mix(in srgb, var(--hv-bg-base), transparent var(--hv-bg-opacity))),
-    /* url("/assets/images/flowing-cool-to-warm-gradient-ribbons.webp"); */
-    /* url("/assets/images/Translucent Warm-Cool Flowing Waves.webp"); */
-    /* url("/assets/images/Ethereal Warm-to-Cool Flowing Ribbons (2)_result.webp"); */
+    ( url("/assets/images/flowing-cool-to-warm-gradient-ribbons.webp"); )
+    ( url("/assets/images/Translucent Warm-Cool Flowing Waves.webp"); )
+    ( url("/assets/images/Ethereal Warm-to-Cool Flowing Ribbons (2)_result.webp"); )
     url("/assets/images/Warm-Cool Flowing Ribbon Gradient (1)_result.webp");
-  /* background-size: 100% 100%, 100% auto; */
+  ( background-size: 100% 100%, 100% auto; )
   background-size: 100% 100%, 100% 100%;
   background-position: top center;
-  /* background-repeat: no-repeat, repeat-y; */
+  ( background-repeat: no-repeat, repeat-y; )
   background-repeat: no-repeat, no-repeat;
   background-attachment: scroll;
 }
@@ -70,9 +76,9 @@ html[data-theme="dark"]:has(.rx--hv) body #contact.contact-section {
   :root:has(.rx--hv) body {
     background-image:
       linear-gradient(color-mix(in srgb, var(--hv-bg-base), transparent var(--hv-bg-opacity)), color-mix(in srgb, var(--hv-bg-base), transparent var(--hv-bg-opacity))),
-      /* url("/assets/images/Translucent Warm-Cool Flowing Waves-mobile.webp"); */
-      /* url("/assets/images/Ethereal Warm-to-Cool Flowing Ribbons (2)_result-mobile.webp"); */
-      /* url("/assets/images/Ethereal Warm-to-Cool Flowing Ribbons (2)_result.webp"); */
+      ( url("/assets/images/Translucent Warm-Cool Flowing Waves-mobile.webp"); )
+      ( url("/assets/images/Ethereal Warm-to-Cool Flowing Ribbons (2)_result-mobile.webp"); )
+      ( url("/assets/images/Ethereal Warm-to-Cool Flowing Ribbons (2)_result.webp"); )
       url("/assets/images/Warm-Cool Flowing Ribbon Gradient (1)_result.webp");
   }
 }
@@ -82,6 +88,29 @@ html[data-theme="dark"]:has(.rx--hv) body {
 }
 html:root[data-palette]:has(.rx--hv) body::before {
   content: none;
+} */
+:root:has(.rx--hv) body {
+  --hv-bg-base: #FFFFFF;
+  background-color: #FFFFFF;
+  background-image: none;
+}
+html[data-theme="dark"]:has(.rx--hv) body {
+  --hv-bg-base: #0C1A14;
+  background-color: #0C1A14;
+}
+html:root:has(.rx.rx--hv) body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-color: var(--hv-bg-base);
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--hv-bg-base), transparent var(--hv-bg-opacity)), color-mix(in srgb, var(--hv-bg-base), transparent var(--hv-bg-opacity))),
+    url("/assets/images/Warm-Cool Flowing Ribbon Gradient (1)_result.webp");
+  background-size: 100% 100%, 100% auto;
+  background-position: 0 0, center var(--hv-bg-y, 0%);
+  background-repeat: no-repeat, no-repeat;
 }
 :root:has(.rx--hv) :is(.rx, .rx-canvas),
 :root:has(.rx--hv) body #contact.contact-section,
@@ -92,11 +121,16 @@ html[data-theme="dark"]:has(.rx--hv) body #contact.contact-section {
 
 /* Landscaping */
 :root:has(.rx--ls) :is(.rx, .rx-canvas) {
-  --rx-display: "Antonio", "Arial Narrow", sans-serif;
+  /* --rx-display: "Antonio", "Arial Narrow", sans-serif; */
+  --rx-display: "Fraunces", Georgia, serif;
   --rx-text: "Figtree", system-ui, sans-serif;
 }
-:root:has(.rx--ls) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact .contact-intro h2, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime) {
+/* :root:has(.rx--ls) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact .contact-intro h2, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime) {
   font-family: "Antonio", "Arial Narrow", sans-serif;
+} */
+:root:has(.rx--ls) body #contact .contact-intro h2 {
+  /* font-family: "Antonio", "Arial Narrow", sans-serif; */
+  font-family: "Fraunces", Georgia, serif;
 }
 :root:has(.rx--ls) body #contact.contact-section {
   font-family: "Figtree", system-ui, sans-serif;
@@ -107,7 +141,10 @@ html[data-theme="dark"]:has(.rx--hv) body #contact.contact-section {
   --rx-display: "Sofia Sans Extra Condensed", "Arial Narrow", sans-serif;
   --rx-text: "Sofia Sans", system-ui, sans-serif;
 }
-:root:has(.rx--pc) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact .contact-intro h2, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime) {
+/* :root:has(.rx--pc) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact .contact-intro h2, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime) {
+  font-family: "Sofia Sans Extra Condensed", "Arial Narrow", sans-serif;
+} */
+:root:has(.rx--pc) body #contact .contact-intro h2 {
   font-family: "Sofia Sans Extra Condensed", "Arial Narrow", sans-serif;
 }
 :root:has(.rx--pc) body #contact.contact-section {
@@ -119,7 +156,10 @@ html[data-theme="dark"]:has(.rx--hv) body #contact.contact-section {
   --rx-display: "Saira Condensed", "Arial Narrow", sans-serif;
   --rx-text: "Nunito Sans", system-ui, sans-serif;
 }
-:root:has(.rx--pl) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact .contact-intro h2, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime) {
+/* :root:has(.rx--pl) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact .contact-intro h2, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime) {
+  font-family: "Saira Condensed", "Arial Narrow", sans-serif;
+} */
+:root:has(.rx--pl) body #contact .contact-intro h2 {
   font-family: "Saira Condensed", "Arial Narrow", sans-serif;
 }
 :root:has(.rx--pl) body #contact.contact-section {
@@ -128,11 +168,16 @@ html[data-theme="dark"]:has(.rx--hv) body #contact.contact-section {
 
 /* Pool Services */
 :root:has(.rx--po) :is(.rx, .rx-canvas) {
-  --rx-display: "Encode Sans Condensed", "Arial Narrow", sans-serif;
+  /* --rx-display: "Encode Sans Condensed", "Arial Narrow", sans-serif; */
+  --rx-display: "Outfit", "Arial", sans-serif;
   --rx-text: "Lexend", system-ui, sans-serif;
 }
-:root:has(.rx--po) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact .contact-intro h2, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime) {
+/* :root:has(.rx--po) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact .contact-intro h2, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime) {
   font-family: "Encode Sans Condensed", "Arial Narrow", sans-serif;
+} */
+:root:has(.rx--po) body #contact .contact-intro h2 {
+  /* font-family: "Encode Sans Condensed", "Arial Narrow", sans-serif; */
+  font-family: "Outfit", "Arial", sans-serif;
 }
 :root:has(.rx--po) body #contact.contact-section {
   font-family: "Lexend", system-ui, sans-serif;
@@ -140,26 +185,34 @@ html[data-theme="dark"]:has(.rx--hv) body #contact.contact-section {
 
 /* Power Washing */
 :root:has(.rx--pw) :is(.rx, .rx-canvas) {
-  --rx-display: "Anton", "Impact", sans-serif;
+  /* --rx-display: "Anton", "Impact", sans-serif; */
+  --rx-display: "League Spartan", "Arial", sans-serif;
   --rx-text: "Rubik", system-ui, sans-serif;
 }
-:root:has(.rx--pw) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact .contact-intro h2, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime) {
+/* :root:has(.rx--pw) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact .contact-intro h2, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime) {
   font-family: "Anton", "Impact", sans-serif;
+} */
+:root:has(.rx--pw) body #contact .contact-intro h2 {
+  /* font-family: "Anton", "Impact", sans-serif; */
+  font-family: "League Spartan", "Arial", sans-serif;
 }
 :root:has(.rx--pw) body #contact.contact-section {
   font-family: "Rubik", system-ui, sans-serif;
 }
 
-:root:has(.rx--pw) :is(.rx, .rx-canvas, #contact, .site-header .nav-pill) {
+/* :root:has(.rx--pw) :is(.rx, .rx-canvas, #contact, .site-header .nav-pill) {
   font-synthesis: none;
-}
+} */
 
 /* Roofing */
 :root:has(.rx--rf) :is(.rx, .rx-canvas) {
   --rx-display: "Bebas Neue", "Impact", sans-serif;
   --rx-text: "Source Sans 3", system-ui, sans-serif;
 }
-:root:has(.rx--rf) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact .contact-intro h2, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime) {
+/* :root:has(.rx--rf) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact .contact-intro h2, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime) {
+  font-family: "Bebas Neue", "Impact", sans-serif;
+} */
+:root:has(.rx--rf) body #contact .contact-intro h2 {
   font-family: "Bebas Neue", "Impact", sans-serif;
 }
 :root:has(.rx--rf) body #contact.contact-section {
@@ -168,4 +221,123 @@ html[data-theme="dark"]:has(.rx--hv) body #contact.contact-section {
 
 :root:has(.rx--rf) :is(.rx, .rx-canvas, #contact, .site-header .nav-pill) {
   font-synthesis: none;
+}
+
+/* Buttons on industry pages use the remodelers button font */
+:root:has(.rx[class*="rx--"]) :is(body a.sticky-work-cta.btn.btn-lime, body .rx-work-canvas .home-work-cta .works-show-more.btn.btn, body #contact button.btn[data-step-next], body .site-header .nav-pill > a.btn.btn-lime, body .rx .rx-cta, body .rx-faq-canvas a.faq-all-btn.btn, body .rx .rx-tab-name) {
+  font-family: "Big Shoulders Display", "Arial Narrow", sans-serif;
+}
+
+/* Hero highlight: same lime band placement as remodelers for each font */
+:root:has(.rx[class*="rx--"]) .rx-h1 .rx-mark {
+  padding-block: 0.12em;
+  background-position: 0 var(--mk-y, 60%);
+  background-size: 0% var(--mk-h, 88%);
+}
+@keyframes rx-swipe {
+  to { background-size: 100% var(--mk-h, 88%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  :root:has(.rx[class*="rx--"]) .rx-h1 .rx-mark {
+    background-size: 100% var(--mk-h, 88%);
+  }
+}
+:root:has(.rx--hm) .rx-h1 .rx-mark { --mk-y: 0.396em; --mk-h: 1.078em; }
+:root:has(.rx--hv) .rx-h1 .rx-mark { --mk-y: 0.335em; --mk-h: 0.924em; }
+:root:has(.rx--ls) .rx-h1 .rx-mark { --mk-y: 0.291em; --mk-h: 0.946em; }
+:root:has(.rx--pc) .rx-h1 .rx-mark { --mk-y: 0.282em; --mk-h: 0.869em; }
+:root:has(.rx--pl) .rx-h1 .rx-mark { --mk-y: 0.487em; --mk-h: 0.902em; }
+:root:has(.rx--po) .rx-h1 .rx-mark { --mk-y: 0.316em; --mk-h: 0.946em; }
+:root:has(.rx--pw) .rx-h1 .rx-mark { --mk-y: 0.073em; --mk-h: 0.880em; }
+:root:has(.rx--rf) .rx-h1 .rx-mark { --mk-y: 0.266em; --mk-h: 0.946em; }
+
+/* Page line-art backgrounds (replace the blueprint grid on these pages) */
+:root:has(.rx--hm) :is(.rx, .rx-canvas),
+:root:has(.rx--hm) body #contact.contact-section {
+  background-image: url("/assets/images/bg-hm.svg");
+  background-size: auto;
+  background-repeat: repeat;
+}
+html[data-theme="dark"]:has(.rx--hm) :is(.rx, .rx-canvas),
+html[data-theme="dark"]:has(.rx--hm) body #contact.contact-section {
+  background-image: url("/assets/images/bg-hm-dark.svg");
+}
+:root:has(.rx--ls) :is(.rx, .rx-canvas),
+:root:has(.rx--ls) body #contact.contact-section {
+  background-image: url("/assets/images/bg-ls.svg");
+  background-size: auto;
+  background-repeat: repeat;
+}
+html[data-theme="dark"]:has(.rx--ls) :is(.rx, .rx-canvas),
+html[data-theme="dark"]:has(.rx--ls) body #contact.contact-section {
+  background-image: url("/assets/images/bg-ls-dark.svg");
+}
+:root:has(.rx--pc) :is(.rx, .rx-canvas),
+:root:has(.rx--pc) body #contact.contact-section {
+  background-image: url("/assets/images/bg-pc.svg");
+  background-size: auto;
+  background-repeat: repeat;
+}
+html[data-theme="dark"]:has(.rx--pc) :is(.rx, .rx-canvas),
+html[data-theme="dark"]:has(.rx--pc) body #contact.contact-section {
+  background-image: url("/assets/images/bg-pc-dark.svg");
+}
+:root:has(.rx--pl) :is(.rx, .rx-canvas),
+:root:has(.rx--pl) body #contact.contact-section {
+  background-image: url("/assets/images/bg-pl.svg");
+  background-size: auto;
+  background-repeat: repeat;
+}
+html[data-theme="dark"]:has(.rx--pl) :is(.rx, .rx-canvas),
+html[data-theme="dark"]:has(.rx--pl) body #contact.contact-section {
+  background-image: url("/assets/images/bg-pl-dark.svg");
+}
+:root:has(.rx--po) :is(.rx, .rx-canvas),
+:root:has(.rx--po) body #contact.contact-section {
+  background-image: url("/assets/images/bg-po.svg");
+  background-size: auto;
+  background-repeat: repeat;
+}
+html[data-theme="dark"]:has(.rx--po) :is(.rx, .rx-canvas),
+html[data-theme="dark"]:has(.rx--po) body #contact.contact-section {
+  background-image: url("/assets/images/bg-po-dark.svg");
+}
+:root:has(.rx--pw) :is(.rx, .rx-canvas),
+:root:has(.rx--pw) body #contact.contact-section {
+  background-image: url("/assets/images/bg-pw.svg");
+  background-size: auto;
+  background-repeat: repeat;
+}
+html[data-theme="dark"]:has(.rx--pw) :is(.rx, .rx-canvas),
+html[data-theme="dark"]:has(.rx--pw) body #contact.contact-section {
+  background-image: url("/assets/images/bg-pw-dark.svg");
+}
+:root:has(.rx--rf) :is(.rx, .rx-canvas),
+:root:has(.rx--rf) body #contact.contact-section {
+  background-image: url("/assets/images/bg-rf.svg");
+  background-size: auto;
+  background-repeat: repeat;
+}
+html[data-theme="dark"]:has(.rx--rf) :is(.rx, .rx-canvas),
+html[data-theme="dark"]:has(.rx--rf) body #contact.contact-section {
+  background-image: url("/assets/images/bg-rf-dark.svg");
+}
+
+/* Phones: let the hero highlight wrap so long phrases never run off screen */
+@media (max-width: 640px) {
+  :root:has(.rx[class*="rx--"]) .rx-h1 .rx-mark {
+    white-space: normal;
+  }
+  :root:has(.rx--ls) .rx .rx-h1 {
+    font-size: clamp(34px, 10.4vw, 56px);
+  }
+  :root:has(.rx--ls) :is(.rx .rx-h2, .rx .rx-ask-q, .rx-canvas .street-head h2, .rx-faq-canvas .section-header h2) {
+    font-size: clamp(30px, 8.6vw, 46px);
+  }
+  :root:has(.rx--ls) body #contact .contact-intro h2 {
+    font-size: clamp(30px, 8.6vw, 46px);
+  }
+  :root:has(.rx--ls) .rx .rx-niche-name {
+    font-size: 22px;
+  }
 }

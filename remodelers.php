@@ -2,6 +2,7 @@
 $page_title = 'Remodeling | WTF Labs';
 $page_description = 'Websites and lead gen that help remodeling companies win bigger kitchen, bath, and whole-home projects.';
 $current_page = 'industries';
+$header_cta_call = true;
 include __DIR__ . '/includes/header.php';
 ?>
 
@@ -1559,8 +1560,10 @@ include __DIR__ . '/includes/testimonialslider.php';
         </div>
       </div>
     </div>
-    <div class="faq-all-wrap reveal">
-      <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a>
+    <div class="faq-all-wrap faq-ask reveal">
+      <!-- <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a> -->
+      <div class="section-header faq-ask-head"><h2 class="faq-ask-title">Still have questions?</h2></div>
+      <a href="tel:+15123379723" class="btn btn-lime faq-all-btn faq-call-btn">Call Now <span aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
 </section>
@@ -1582,7 +1585,7 @@ include __DIR__ . '/includes/testimonialslider.php';
         <span class="rx-line"><span>sell the next <mark class="rx-mark">big remodel.</mark></span></span>
       </h1>
       <p class="rx-hero-lead">Websites, local search and ads that show off your best work and bring in homeowners ready to invest in a kitchen, bath or whole-home remodel.</p>
-      <div class="rx-hero-actions"><a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a></div>
+      <div class="rx-hero-actions"><a href="tel:+15123379723" class="rx-cta"><span>BOOK A CALL</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a></div>
     </div>
     <div class="rx-hero-stage" data-rx-tilt>
       <div class="rx-hero-phones">
@@ -1641,7 +1644,7 @@ include __DIR__ . '/includes/testimonialslider.php';
       <p class="subheading">Benefits for remodelers</p>
       <h2 class="rx-h2">What changes when the site <span class="rx-gold">matches your work.</span></h2>
       <ol class="rx-ben-list"><li class="rx-ben-item is-active"><span class="rx-ben-n">01</span><div><h3>Bigger average jobs</h3><p>Premium design attracts homeowners planning $40K+ projects.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">02</span><div><h3>Better-fit leads</h3><p>Budget and timeline filters weed out tire-kickers early.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">03</span><div><h3>Instant credibility</h3><p>Reviews, licenses and real photos build trust before the visit.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">04</span><div><h3>Less time quoting</h3><p>Consult forms give you the full picture before you drive out.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">05</span><div><h3>Steady pipeline</h3><p>SEO and ads keep consultations booked in slow seasons too.</p></div></li><li class="rx-ben-item"><span class="rx-ben-n">06</span><div><h3>More referrals</h3><p>A site worth sharing turns past clients into your sales team.</p></div></li></ol>
-      <a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
+      <a href="tel:+15123379723" class="rx-cta"><span>BOOK A CALL</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
     </div>
     <div class="rx-ba-stage" data-rx-ba-stage>
       <img class="rx-ba-before" src="/assets/images/rm-basement-raw.webp" alt="Unfinished basement before the remodel" width="1600" height="1067" loading="lazy" decoding="async">
@@ -1659,7 +1662,7 @@ include __DIR__ . '/includes/testimonialslider.php';
       <p class="subheading">The real question</p>
       <h2 class="rx-ask-q" aria-label="Still losing $60K kitchens to the contractor with the better website?"><span aria-hidden="true"><span class="rx-w">Still</span> <span class="rx-w">losing</span> <span class="rx-w rx-w--gold">$60K</span> <span class="rx-w">kitchens</span> <span class="rx-w">to</span> <span class="rx-w">the</span> <span class="rx-w">contractor</span> <span class="rx-w">with</span> <span class="rx-w">the</span> <span class="rx-w">better</span> <span class="rx-w">website?</span></span></h2>
       <p>Homeowners judge your work by your website before they ever meet you. We make your projects look as good online as they do in person, so the right clients call you first.</p>
-      <a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
+      <a href="tel:+15123379723" class="rx-cta"><span>BOOK A CALL</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
     </div>
     <div class="rx-ask-art" data-rx-tilt>
       <!-- <img src="/assets/images/rmx-duo-quote.webp" alt="Remodeling website estimate page and reviews page on phones" width="1400" height="1520" loading="lazy" decoding="async"> -->
@@ -1720,7 +1723,7 @@ include __DIR__ . '/includes/testimonialslider.php';
       <p class="subheading">Why WTF Labs</p>
       <h2 class="rx-h2">Looking for a team that actually understands remodeling?</h2>
       <p>We have built websites for kitchen, bath and design-build firms. We know how your buyers shop, so we design every page to turn browsing into booked consultations.</p>
-      <a href="/contact.php" class="rx-cta" data-open-popup><span>Free Consultation</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
+      <a href="tel:+15123379723" class="rx-cta"><span>BOOK A CALL</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
     </div>
   </div>
 </section>
@@ -3046,8 +3049,10 @@ include __DIR__ . '/includes/testimonialslider.php';
         </div>
       </div>
     </div>
-    <div class="faq-all-wrap reveal">
-      <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a>
+    <div class="faq-all-wrap faq-ask reveal">
+      <!-- <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a> -->
+      <div class="section-header faq-ask-head"><h2 class="faq-ask-title">Still have questions?</h2></div>
+      <a href="tel:+15123379723" class="btn btn-lime faq-all-btn faq-call-btn">Call Now <span aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
 </section>

@@ -274,6 +274,13 @@
   const askFrame = root.querySelector('.rx-ask-screen iframe');
   const askFallback = root.querySelector('.rx-ask-fallback');
   if (askFrame && askFallback) {
+    const askProgress = document.createElement('span');
+    askProgress.className = 'rx-ask-progress';
+    askProgress.setAttribute('aria-hidden', 'true');
+    askFrame.parentElement.appendChild(askProgress);
+    const loadAsk = () => setTimeout(() => askFrame.setAttribute('loading', 'eager'), 600);
+    if (document.readyState === 'complete') loadAsk();
+    else window.addEventListener('load', loadAsk, { once: true });
     window.addEventListener('message', (e) => {
       if (e.origin !== window.location.origin || !e.data || !e.data.wtfLiveFail || e.source !== askFrame.contentWindow) return;
       askFallback.hidden = false;
@@ -291,6 +298,16 @@
       }
       if (!doc || !win || !doc.body || win.location.href === 'about:blank' || doc.__rxDrag) return;
       doc.__rxDrag = true;
+      const hideBar = doc.createElement('style');
+      hideBar.textContent = 'html,body{scrollbar-width:none!important;-ms-overflow-style:none!important}html::-webkit-scrollbar,body::-webkit-scrollbar{display:none!important;width:0!important;height:0!important}';
+      (doc.head || doc.documentElement).appendChild(hideBar);
+      const syncProgress = () => {
+        const max = doc.documentElement.scrollHeight - win.innerHeight;
+        askProgress.style.setProperty('--p', max > 0 ? Math.min(1, win.scrollY / max) : 0);
+      };
+      win.addEventListener('scroll', syncProgress, { passive: true });
+      win.addEventListener('resize', syncProgress);
+      syncProgress();
       let startY = null;
       let lastY = 0;
       let moved = false;
@@ -462,6 +479,14 @@
       if (visible) show(cur);
       else clearTimeout(timer);
     }, { threshold: 0.35 }).observe(tabsSec.querySelector('.rx-stage'));
+  }
+
+  if (root.classList.contains('rx--hv')) {
+    const html = document.documentElement;
+    tasks.push(() => {
+      const max = html.scrollHeight - window.innerHeight;
+      html.style.setProperty('--hv-bg-y', (max > 0 ? clamp(window.scrollY / max, 0, 1) * 100 : 0) + '%');
+    });
   }
 
   let ticking = false;

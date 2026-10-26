@@ -264,8 +264,10 @@ include __DIR__ . '/includes/header.php';
         <div class="faq-panel" role="region"><div class="faq-panel-inner"><p>Tell us in the form and we'll get in touch within one business day to fix it. You can also reach us at <a href="mailto:info@wtflabsco.com">info@wtflabsco.com</a>.</p></div></div>
       </div>
     </div>
-    <div class="faq-all-wrap reveal">
-      <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a>
+    <div class="faq-all-wrap faq-ask reveal">
+      <!-- <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a> -->
+      <div class="section-header faq-ask-head"><h2 class="faq-ask-title">Still have questions?</h2></div>
+      <a href="tel:+15123379723" class="btn btn-lime faq-all-btn faq-call-btn">Call Now <span aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
 </section>
