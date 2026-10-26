@@ -13,40 +13,7 @@ include __DIR__ . '/includes/header.php';
       <h1 class="ihero-heading">Plan marketing that brings <span class="accent-lime">real leads</span></h1>
       <p class="ihero-lead">Share your goals, market, and current channels. We&#x27;ll come back with a focused plan for SEO, Google Ads, and social — built around booked jobs, not vanity metrics.</p>
     </header>
-    <!--
-    <div class="about-hero-proof">
-      <div class="about-hero-proof-item">
-        <strong>400+</strong>
-        <span>projects</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>2018</strong>
-        <span>since</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>4.8</strong>
-        <span>rating</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>48+</strong>
-        <span>reviews</span>
-      </div>
-    </div>
-    -->
     <div class="ihero-stage">
-      <!--
-      <div class="ihero-canvas">
-        <div class="ihero-side ihero-side-left">
-          <img src="/assets/images/hero-marketing-brief-left.webp" alt="">
-        </div>
-        <div class="ihero-side ihero-side-right">
-          <img src="/assets/images/hero-marketing-brief-right.webp" alt="">
-        </div>
-        <div class="ihero-banner">
-          <img src="/assets/images/hero-marketing-brief-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
-        </div>
-      </div>
-      -->
       <div class="hcar" data-hcar>
         <div class="hcar-track">
           <div class="hcar-card"><img src="/assets/images/hcar-marketing-brief-1.webp" alt="Marketing Brief image 1" loading="lazy"></div>
@@ -306,7 +273,6 @@ include __DIR__ . '/includes/header.php';
       </div>
     </div>
     <div class="faq-all-wrap faq-ask reveal">
-      <!-- <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a> -->
       <div class="section-header faq-ask-head"><h2 class="faq-ask-title">Still have questions?</h2></div>
       <a href="tel:+15123379723" class="btn btn-lime faq-all-btn faq-call-btn">Call Now <span aria-hidden="true">&rarr;</span></a>
     </div>

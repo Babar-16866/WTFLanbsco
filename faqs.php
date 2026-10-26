@@ -12,40 +12,7 @@ include __DIR__ . '/includes/header.php';
       <h1 class="ihero-heading">Still have <span class="accent-lime">questions?</span></h1>
       <p class="ihero-lead">Straight answers on pricing, process, platforms, timelines, and how we work — the questions we hear most often.</p>
     </header>
-    <!--
-    <div class="about-hero-proof">
-      <div class="about-hero-proof-item">
-        <strong>400+</strong>
-        <span>projects</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>2018</strong>
-        <span>since</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>4.8</strong>
-        <span>rating</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>48+</strong>
-        <span>reviews</span>
-      </div>
-    </div>
-    -->
     <div class="ihero-stage">
-      <!--
-      <div class="ihero-canvas">
-        <div class="ihero-side ihero-side-left">
-          <img src="/assets/images/hero-faqs-left.webp" alt="">
-        </div>
-        <div class="ihero-side ihero-side-right">
-          <img src="/assets/images/hero-faqs-right.webp" alt="">
-        </div>
-        <div class="ihero-banner">
-          <img src="/assets/images/hero-faqs-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
-        </div>
-      </div>
-      -->
       <div class="hcar" data-hcar>
         <div class="hcar-track">
           <div class="hcar-card"><img src="/assets/images/hcar-faqs-1.webp" alt="FAQs image 1" loading="lazy"></div>
@@ -444,15 +411,6 @@ include __DIR__ . '/includes/header.php';
       </div>
     </div>
 
-    <!--
-    <div class="services-cta-band reveal">
-      <div>
-        <h3>Didn't find your answer?</h3>
-        <p>Tell us what you're building - we'll respond quickly.</p>
-      </div>
-      <a href="/contact.php" class="btn btn-lime btn-lg" data-open-popup>Contact us</a>
-    </div>
-    -->
     <div class="services-cta-band services-cta-band--split reveal">
       <div class="svc-cta-copy">
         <h3>Didn't find your answer?</h3>

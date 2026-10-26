@@ -106,13 +106,6 @@ $step_form_ok_id = $step_form_ok_id ?? 'formOk';
             </div>
           </div>
           <div class="form-step-note" hidden aria-live="polite"></div>
-          <!--
-          <div class="form-peek form-peek--bottom" aria-hidden="true">
-            <span class="form-peek-word form-peek-word--left">CATCH ME</span>
-            <span class="form-peek-head"><img src="/assets/images/main-banner.webp" alt="" width="1041" height="1069" loading="lazy"></span>
-            <span class="form-peek-word form-peek-word--right">IF YOU CAN</span>
-          </div>
-          -->
           <p class="form-ok hidden" id="<?php echo $step_form_ok_id; ?>">Thank you! Your submission has been received!</p>
           <p class="form-disclaimer">By providing your phone number and submitting the form, you consent to be contacted by SMS and agree to our <a href="/privacy-policy.php#phone-number">Privacy Policy</a>. Message and data rates may apply.</p>
         </form>

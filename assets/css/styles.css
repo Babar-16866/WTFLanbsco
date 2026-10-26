@@ -7530,7 +7530,6 @@ html[data-palette] body .thank-btn-secondary:hover {
   gap: 12px;
 }
 .contact-form--home .form-step > [data-step-next] {
-  /* margin-top: 4px; */
   margin-top: 19px;
 }
 .contact-form--home .form-step[hidden] {
@@ -9485,20 +9484,6 @@ html body .form-disclaimer a[href] {
   object-fit: contain;
   filter: drop-shadow(0 16px 28px color-mix(in srgb, var(--black) 30%, transparent));
 }
-/*
-.ihero-side-left {
-  left: -42%;
-  animation: mockup-float 6s ease-in-out infinite;
-  --r: -8deg;
-}
-*/
-/*
-.ihero-side-right {
-  right: -42%;
-  animation: mockup-float 5.5s ease-in-out infinite 0.4s;
-  --r: 8deg;
-}
-*/
 .ihero-primary {
   position: absolute;
   left: -6px;
@@ -10701,11 +10686,16 @@ html body .faq-section .faq-all-wrap.faq-ask .faq-call-btn {
 
 /* Industries: keep the preview pinned until the last trade is reached */
 @media (min-width: 901px) {
-  .ind-preview {
-    top: max(110px, calc(50vh - 260px));
+  .ind-board {
+    align-items: stretch;
   }
-  .ind-list {
-    padding-bottom: 420px;
+  .ind-preview {
+    align-self: start;
+    top: max(90px, calc(50vh - 320px));
+  }
+  .ind-preview-frame {
+    aspect-ratio: auto;
+    height: min(640px, calc(100vh - 180px));
   }
 }
 
@@ -10757,5 +10747,52 @@ html body .faq-section .faq-all-wrap.faq-ask .faq-call-btn {
 @media (max-width: 480px) {
   .services-cta-band--split.ind-cta-split {
     padding: 32px 20px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .ind-preview {
+    top: max(90px, calc(50vh / 0.85 - 320px));
+  }
+  .ind-preview-frame {
+    height: min(640px, calc(100vh / 0.85 - 180px));
+  }
+}
+
+/* Industries: tabs sit together instead of spreading to the panel height */
+.ind-svc .wtabs {
+  align-items: start;
+}
+.ind-svc .wtabs-list {
+  justify-content: flex-start;
+  gap: 8px;
+}
+.ind-svc .wtabs-tab {
+  padding: 11px 18px;
+}
+.ind-svc .wtabs-ico {
+  width: 34px;
+  height: 34px;
+}
+/* Split CTA cards: lime green glow */
+html body .services-cta-band.services-cta-band--split {
+  background-color: var(--pal-primary, #1E4233);
+  background-image:
+    radial-gradient(46% 78% at 0% 0%, rgba(197, 230, 2, 0.5), rgba(197, 230, 2, 0) 72%),
+    radial-gradient(22% 60% at 0% 55%, rgba(197, 230, 2, 0.22), rgba(197, 230, 2, 0) 70%),
+    radial-gradient(34% 62% at 100% 100%, rgba(197, 230, 2, 0.38), rgba(197, 230, 2, 0) 72%),
+    var(--pal-texture-image);
+  background-size: 100% 100%, 100% 100%, 100% 100%, cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: normal, normal, normal, multiply;
+}
+/* Industries: last CTA card at 80% width */
+.ind-cta-split.ind-cta-split--narrow {
+  width: 80%;
+  margin-inline: auto;
+}
+@media (max-width: 900px) {
+  .ind-cta-split.ind-cta-split--narrow {
+    width: 100%;
   }
 }

@@ -15,43 +15,7 @@ include __DIR__ . '/includes/header.php';
         </h1>
       <p class="ihero-lead">Premium websites, local search, paid media, creative, and tracking built as one connected system for quality home-service businesses.</p>
     </header>
-    <!--
-    <div class="about-hero-proof">
-      <div class="about-hero-proof-item">
-        <strong>400+</strong>
-        <span>projects</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>2018</strong>
-        <span>since</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>4.8</strong>
-        <span>rating</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>48+</strong>
-        <span>reviews</span>
-      </div>
-    </div>
-    
-    -->
     <div class="ihero-stage">
-      <!--
-      <div class="ihero-canvas">
-
-        <div class="ihero-side ihero-side-left">
-          <img src="/assets/images/hero-services-left.webp" alt="">
-        </div>
-        <div class="ihero-side ihero-side-right">
-          <img src="/assets/images/hero-services-right.webp" alt="">
-        </div>
-        <div class="ihero-banner">
-          <img src="/assets/images/hero-services-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
-        </div>
-      
-      </div>
-      -->
       <div class="hcar" data-hcar>
         <div class="hcar-track">
           <div class="hcar-card"><img src="/assets/images/hcar-services-1.webp" alt="Services image 1" loading="lazy"></div>
@@ -105,76 +69,6 @@ include __DIR__ . '/includes/header.php';
       <p class="subheading">FEATURED SERVICES</p>
       <h2>What we help home-service businesses do <span class="heading-accent">better.</span></h2>
     </div>
-    <!--
-    <div class="svc-panels reveal" id="svcPanels">
-      <a href="/web-design.php" class="svc-panel is-active">
-        <img loading="lazy" src="/assets/images/service-web-design.jpg" alt="Web Design &amp; Development">
-        <span class="svc-panel-num">01</span>
-        <span class="svc-panel-label">Web Design & &amp; Development</span>
-        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
-        <div class="svc-panel-body">
-          <h3>Web Design &amp; Development</h3>
-          <p>Make your business look as good online as the work you do - with a fast, custom website built to earn trust and turn visits into calls, estimates, bookings, and better-fit leads. </p>
-          <span class="svc-panel-link">View Service &rarr;</span>
-        </div>
-      </a>
-      <a href="/seo.php" class="svc-panel">
-        <img loading="lazy" src="/assets/images/service-seo.jpg" alt="SEO &amp; Local Search">
-        <span class="svc-panel-num">02</span>
-        <span class="svc-panel-label">SEO &amp; & Local Search</span>
-        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
-        <div class="svc-panel-body">
-          <h3>SEO &amp; & Local Search</h3>
-          <p>Help the right homeowners find you when they are already looking for the services you want to sell - in the areas you actually want to serve.</p>
-          <span class="svc-panel-link">View Service &rarr;</span>
-        </div>
-      </a>
-      <a href="/google-ads.php" class="svc-panel">
-        <img loading="lazy" src="/assets/images/service-google-ads.jpg" alt="Google Ads">
-        <span class="svc-panel-num">03</span>
-        <span class="svc-panel-label">Google Ads</span>
-        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
-        <div class="svc-panel-body">
-          <h3>Google Ads</h3>
-          <p>Capture high-intent searches with campaigns, landing pages, and tracking built around qualified calls and estimate requests - not empty click volume.</p>
-          <span class="svc-panel-link">View Service &rarr;</span>
-        </div>
-      </a>
-      <a href="/social-media-advertising.php" class="svc-panel">
-        <img loading="lazy" src="/assets/images/service-social-media.jpg" alt="Social Media Advertising">
-        <span class="svc-panel-num">04</span>
-        <span class="svc-panel-label">Social Media Advertising</span>
-        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
-        <div class="svc-panel-body">
-          <h3>Social Media Advertising</h3>
-          <p>Turn your best projects, reviews, offers, and service proof into paid campaigns that build demand, retarget interested homeowners, and keep your name familiar.</p>
-          <span class="svc-panel-link">View Service &rarr;</span>
-        </div>
-      </a>
-      <a href="/graphic-design.php" class="svc-panel">
-        <img loading="lazy" src="/assets/images/service-graphic-design.jpg" alt="Branding &amp; Creative">
-        <span class="svc-panel-num">05</span>
-        <span class="svc-panel-label">Branding &amp; & Creative</span>
-        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
-        <div class="svc-panel-body">
-          <h3>Branding &amp; & Creative</h3>
-          <p>Create a clear, consistent look across your website, ads, trucks, social posts, signs, proposals, and sales materials so the whole business feels established.</p>
-          <span class="svc-panel-link">View Service &rarr;</span>
-        </div>
-      </a>
-      <a href="/digital-marketing.php" class="svc-panel">
-        <img loading="lazy" src="/assets/images/service-digital-marketing.jpg" alt="Full-Service Digital Marketing">
-        <span class="svc-panel-num">06</span>
-        <span class="svc-panel-label">Full-Service Digital Marketing</span>
-        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
-        <div class="svc-panel-body">
-          <h3>Full-Service Digital Marketing</h3>
-          <p>Bring website, search, ads, creative, and tracking under one strategy so every channel supports the same message, audience, and lead goals.</p>
-          <span class="svc-panel-link">View Service &rarr;</span>
-        </div>
-      </a>
-    </div>
-    -->
     <div class="wtabs reveal" data-wtabs>
       <div class="wtabs-list" role="tablist" aria-label="Featured services">
         <button type="button" class="wtabs-tab is-active" role="tab" id="wtabsTab1" aria-controls="wtabsPanel1" aria-selected="true"><span class="wtabs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8M12 18v3"/></svg></span><span class="wtabs-name">Web Design &amp; Development</span><span class="wtabs-bar" aria-hidden="true"></span></button>
@@ -408,7 +302,6 @@ include __DIR__ . '/includes/testimonialslider.php';
       </div>
     </div>
     <div class="faq-all-wrap faq-ask reveal">
-      <!-- <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a> -->
       <div class="section-header faq-ask-head"><h2 class="faq-ask-title">Still have questions?</h2></div>
       <a href="tel:+15123379723" class="btn btn-lime faq-all-btn faq-call-btn">Call Now <span aria-hidden="true">&rarr;</span></a>
     </div>
@@ -418,15 +311,6 @@ include __DIR__ . '/includes/testimonialslider.php';
 <!-- CTA -->
 <section class="page-section services-cta-section">
   <div class="container">
-    <!--
-    <div class="services-cta-band reveal">
-      <div>
-        <h3>Not sure what you actually need??</h3>
-        <p>Tell us what is not working. We will help you separate the real bottleneck from the nice-to-have.</p>
-      </div>
-      <a href="/contact.php" class="btn btn-lime btn-lg">FREE CONSULTATION</a>
-    </div>
-    -->
     <div class="services-cta-band services-cta-band--split reveal">
       <div class="svc-cta-copy">
         <h3>Not sure what you actually need??</h3>

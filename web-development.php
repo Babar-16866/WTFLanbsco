@@ -12,40 +12,7 @@ include __DIR__ . '/includes/header.php';
       <h1 class="ihero-heading">Make your business look as good online as <span class="accent-lime">the work you do.</span></h1>
       <p class="ihero-lead">Custom websites for home-service companies that need to earn trust fast, work beautifully on mobile, and turn visitors into calls, estimates, bookings, and better-fit leads.</p>
     </header>
-    <!--
-    <div class="about-hero-proof">
-      <div class="about-hero-proof-item">
-        <strong>400+</strong>
-        <span>projects</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>2018</strong>
-        <span>since</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>4.8</strong>
-        <span>rating</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>48+</strong>
-        <span>reviews</span>
-      </div>
-    </div>
-    -->
     <div class="ihero-stage">
-      <!--
-      <div class="ihero-canvas">
-        <div class="ihero-side ihero-side-left">
-          <img src="/assets/images/hero-web-development-left.webp" alt="">
-        </div>
-        <div class="ihero-side ihero-side-right">
-          <img src="/assets/images/hero-web-development-right.webp" alt="">
-        </div>
-        <div class="ihero-banner">
-          <img src="/assets/images/hero-web-development-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
-        </div>
-      </div>
-      -->
       <div class="hcar" data-hcar>
         <div class="hcar-track">
           <div class="hcar-card"><img src="/assets/images/hcar-web-development-1.webp" alt="HVAC website development" loading="lazy"></div>
@@ -265,7 +232,6 @@ include __DIR__ . '/includes/testimonialslider.php';
       </div>
     </div>
     <div class="faq-all-wrap faq-ask reveal">
-      <!-- <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a> -->
       <div class="section-header faq-ask-head"><h2 class="faq-ask-title">Still have questions?</h2></div>
       <a href="tel:+15123379723" class="btn btn-lime faq-all-btn faq-call-btn">Call Now <span aria-hidden="true">&rarr;</span></a>
     </div>
@@ -275,14 +241,6 @@ include __DIR__ . '/includes/testimonialslider.php';
 <!-- CTA -->
 <section class="page-section services-cta-section">
   <div class="container">
-    <!--
-    <div class="services-cta-band reveal">
-      <div>
-        <h3>Don’t let your website undersell<br>the quality of your work.</h3>
-      </div>
-      <a href="/contact.php" class="btn btn-lime btn-lg">Claim Your FREE Website Consultation</a>
-    </div>
-    -->
     <div class="services-cta-band services-cta-band--split reveal">
       <div class="svc-cta-copy">
         <h3>Don’t let your website undersell<br>the quality of your work.</h3>

@@ -12,40 +12,7 @@ include __DIR__ . '/includes/header.php';
       <h1 class="ihero-heading">The team you wish you'd <span class="accent-lime">hired the first time.</span></h1>
       <p class="ihero-lead">You&#x27;ve got crews to manage, jobs to finish and customers to look after. You don&#x27;t need to manage your agency too. We built WTF Labs around senior-level craft, straight answers and people who stick with the work from the first conversation to launch, and beyond.</p>
     </header>
-    <!--
-    <div class="about-hero-proof">
-      <div class="about-hero-proof-item">
-        <strong>400+</strong>
-        <span>projects</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>2018</strong>
-        <span>since</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>4.8</strong>
-        <span>rating</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>0</strong>
-        <span>churn</span>
-      </div>
-    </div>
-    -->
     <div class="ihero-stage">
-      <!--
-      <div class="ihero-canvas">
-        <div class="ihero-side ihero-side-left">
-          <img src="/assets/images/hero-about-left.webp" alt="">
-        </div>
-        <div class="ihero-side ihero-side-right">
-          <img src="/assets/images/hero-about-right.webp" alt="">
-        </div>
-        <div class="ihero-banner">
-          <img src="/assets/images/hero-about-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
-        </div>
-      </div>
-      -->
       <div class="hcar" data-hcar>
         <div class="hcar-track">
           <div class="hcar-card"><img src="/assets/images/hcar-about-1.webp" alt="About image 1" loading="lazy"></div>
@@ -183,22 +150,6 @@ include __DIR__ . '/includes/header.php';
       <p class="about-timeline-punch">We got tired of asking WTF. So we decided to do something about it.</p>
     </div>
 
-    <?php /*
-    <div class="about-team-strip reveal">
-      <div class="about-team-strip-copy">
-        <p class="faq-page-label"><span></span> The people</p>
-        <h2>Faces behind the work</h2>
-        <p>Designers, engineers, and strategists who stay — so your context never resets mid-project.</p>
-      </div>
-      <div class="about-team-photos">
-        <img loading="lazy" src="/assets/images/team-1.jpg" alt="Team">
-        <img loading="lazy" src="/assets/images/team-2.jpg" alt="Team">
-        <img loading="lazy" src="/assets/images/team-3.jpg" alt="Team">
-        <img loading="lazy" src="/assets/images/people-main.jpg" alt="Team">
-        <img loading="lazy" src="/assets/images/people-collab.jpg" alt="Team">
-      </div>
-    </div>
-    */ ?>
 
     <div class="about-maturity reveal">
       <div class="about-maturity-panel">
@@ -271,15 +222,6 @@ include __DIR__ . '/includes/testimonialslider.php';
 
 <section class="page-section about-cta-section">
   <div class="container">
-    <!--
-    <div class="services-cta-band reveal">
-      <div>
-        <h3>Want a team that treats your goals like more than another ticket?</h3>
-        <p>Tell us what you're trying to build. We'll help you figure out the smartest next step, even if that means starting smaller.</p>
-      </div>
-      <a href="/contact.php" class="btn btn-lime btn-lg" data-open-popup>Let's Talk</a>
-    </div>
-    -->
     <div class="services-cta-band services-cta-band--split reveal">
       <div class="svc-cta-copy">
         <h3>Want a team that treats your goals like more than another ticket?</h3>
@@ -342,7 +284,6 @@ include __DIR__ . '/includes/testimonialslider.php';
       </div>
     </div>
     <div class="faq-all-wrap faq-ask reveal">
-      <!-- <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a> -->
       <div class="section-header faq-ask-head"><h2 class="faq-ask-title">Still have questions?</h2></div>
       <a href="tel:+15123379723" class="btn btn-lime faq-all-btn faq-call-btn">Call Now <span aria-hidden="true">&rarr;</span></a>
     </div>

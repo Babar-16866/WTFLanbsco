@@ -44,20 +44,6 @@ include __DIR__ . '/includes/header.php';
     </div>
 
     <div class="hero-canvas" id="heroCanvas">
-      <!--
-      <div class="float-mockup mockup-1" data-depth="0.03">
-        <img src="/assets/images/hero-mia-laptop.jpg" alt="">
-      </div>
-      <div class="float-mockup mockup-2" data-depth="0.05">
-        <img src="/assets/images/hero-mia-phone.jpg" alt="">
-      </div>
-      <div class="float-mockup mockup-3" data-depth="0.04">
-        <img src="/assets/images/service-social-media.jpg" alt="">
-      </div>
-      <div class="float-mockup mockup-4" data-depth="0.06">
-        <img src="/assets/images/hero-mia-billboard.jpg" alt="">
-      </div>
-      -->
       <div class="float-mockup mockup-tall mockup-tall-left" data-depth="0.04">
         <img src="/assets/images/hero-mia-billboard.jpg" alt="">
       </div>
@@ -1886,7 +1872,6 @@ include __DIR__ . '/includes/testimonialslider.php';
       </div>
     </div>
     <div class="faq-all-wrap faq-ask reveal">
-      <!-- <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a> -->
       <div class="section-header faq-ask-head"><h2 class="faq-ask-title">Still have questions?</h2></div>
       <a href="tel:+15123379723" class="btn btn-lime faq-all-btn faq-call-btn">Call Now <span aria-hidden="true">&rarr;</span></a>
     </div>

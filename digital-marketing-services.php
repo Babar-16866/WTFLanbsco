@@ -12,40 +12,7 @@ include __DIR__ . '/includes/header.php';
       <h1 class="ihero-heading">Get found. Build trust. <span class="accent-lime">Win the right jobs.</span></h1>
       <p class="ihero-lead">The next homeowner doesn&#x27;t care about impressions, click-through rates or how many reports your agency sends. They want to know who can solve their problem — and why they should choose you. We connect search, advertising, creative and your website so more of the right people can make that decision with confidence.</p>
     </header>
-    <!--
-    <div class="about-hero-proof">
-      <div class="about-hero-proof-item">
-        <strong>400+</strong>
-        <span>projects</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>2018</strong>
-        <span>since</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>4.8</strong>
-        <span>rating</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>48+</strong>
-        <span>reviews</span>
-      </div>
-    </div>
-    -->
     <div class="ihero-stage">
-      <!--
-      <div class="ihero-canvas">
-        <div class="ihero-side ihero-side-left">
-          <img src="/assets/images/hero-digital-marketing-services-left.webp" alt="">
-        </div>
-        <div class="ihero-side ihero-side-right">
-          <img src="/assets/images/hero-digital-marketing-services-right.webp" alt="">
-        </div>
-        <div class="ihero-banner">
-          <img src="/assets/images/hero-digital-marketing-services-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
-        </div>
-      </div>
-      -->
       <div class="hcar" data-hcar>
         <div class="hcar-track">
           <div class="hcar-card"><img src="/assets/images/hcar-digital-marketing-services-1.webp" alt="Digital Marketing Services image 1" loading="lazy"></div>
@@ -139,70 +106,6 @@ include __DIR__ . '/includes/header.php';
       <h2>Different channels. <span class="heading-accent">One clear reason to choose you.</span></h2>
       <p class="section-desc center-desc">We can manage a specific bottleneck or connect multiple parts of your marketing. The right starting point depends on where customers are getting lost.</p>
     </div>
-    <!--
-    <div class="svc-panels reveal" id="svcPanels">
-      <a href="/seo.php" class="svc-panel is-active">
-        <img loading="lazy" src="/assets/images/dm-channel-1.jpg" alt="SEO and local search">
-        <span class="svc-panel-label">SEO and local search</span>
-        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
-        <div class="svc-panel-body">
-          <h3>SEO and local search</h3>
-          <p>Help homeowners find your services in the areas you actually want to serve. We work on search-friendly pages, technical foundations, useful local content and visibility that connects to real inquiries.</p>
-          <span class="svc-panel-link">Explore SEO &amp; Local Search &rarr;</span>
-        </div>
-      </a>
-      <a href="/google-ads.php" class="svc-panel">
-        <img loading="lazy" src="/assets/images/dm-channel-2.jpg" alt="Google Ads">
-        <span class="svc-panel-label">Google Ads</span>
-        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
-        <div class="svc-panel-body">
-          <h3>Google Ads</h3>
-          <p>Be visible when someone is actively searching for the work you do. Campaigns, location targeting, landing pages and tracking are built around qualified calls and estimate requests — not empty click volume.</p>
-          <span class="svc-panel-link">Explore Google Ads &rarr;</span>
-        </div>
-      </a>
-      <a href="/social-media-advertising.php" class="svc-panel">
-        <img loading="lazy" src="/assets/images/dm-channel-3.jpg" alt="Social media advertising">
-        <span class="svc-panel-label">Social media advertising</span>
-        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
-        <div class="svc-panel-body">
-          <h3>Social media advertising</h3>
-          <p>Turn projects, reviews, transformation videos and seasonal offers into attention worth earning. We use creative, targeted campaigns and retargeting to build familiarity before the customer is ready to book.</p>
-          <span class="svc-panel-link">Explore Social Media Advertising &rarr;</span>
-        </div>
-      </a>
-      <a href="/graphic-design.php" class="svc-panel">
-        <img loading="lazy" src="/assets/images/dm-channel-4.jpg" alt="Branding and creative">
-        <span class="svc-panel-label">Branding and creative</span>
-        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
-        <div class="svc-panel-body">
-          <h3>Branding and creative</h3>
-          <p>If your website says premium but your ads, truck graphics and social content say otherwise, buyers notice. We bring your visuals and messaging into one recognizable, trustworthy identity.</p>
-          <span class="svc-panel-link">Explore Branding &amp; Creative &rarr;</span>
-        </div>
-      </a>
-      <a href="/web-design.php" class="svc-panel">
-        <img loading="lazy" src="/assets/images/dm-channel-6.jpg" alt="Landing pages and conversion strategy">
-        <span class="svc-panel-label">Landing pages and conversion strategy</span>
-        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
-        <div class="svc-panel-body">
-          <h3>Landing pages and conversion strategy</h3>
-          <p>Don't send a homeowner searching for an emergency AC repair to the same page as someone planning a full system replacement. Match the offer, evidence and next step to the reason they clicked.</p>
-          <span class="svc-panel-link">Explore Web Design &amp; Development &rarr;</span>
-        </div>
-      </a>
-      <a href="/digital-marketing.php" class="svc-panel">
-        <img loading="lazy" src="/assets/images/dm-channel-5.jpg" alt="Connected marketing and measurement">
-        <span class="svc-panel-label">Connected marketing and measurement</span>
-        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
-        <div class="svc-panel-body">
-          <h3>Connected marketing and measurement</h3>
-          <p>We bring the pieces together where it makes sense, tracking calls, forms, bookings and lead quality so decisions are tied to business opportunities, not dashboard decorations.</p>
-          <span class="svc-panel-link">Explore Full-Service Marketing &rarr;</span>
-        </div>
-      </a>
-    </div>
-    -->
     <div class="wtabs reveal" data-wtabs>
       <div class="wtabs-list" role="tablist" aria-label="Marketing channels">
         <button type="button" class="wtabs-tab is-active" role="tab" id="wtabsTab1" aria-controls="wtabsPanel1" aria-selected="true"><span class="wtabs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span><span class="wtabs-name">SEO and local search</span><span class="wtabs-bar" aria-hidden="true"></span></button>
@@ -266,56 +169,6 @@ include __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<!--
-<section class="problem-section channel-cards-section">
-  <div class="container">
-    <div class="section-header center problem-head reveal">
-      <p class="subheading">WHAT'S WORKING TOGETHER</p>
-      <h2 class="home-title">Different channels. <span class="heading-accent">One clear reason to choose you.</span></h2>
-      <p class="section-desc center-desc">We can manage a specific bottleneck or connect multiple parts of your marketing. The right starting point depends on where customers are getting lost.</p>
-    </div>
-    <div class="channel-cards reveal">
-      <article class="why-done-card channel-card">
-        <span class="rail-num">01</span>
-        <h4>SEO and local search</h4>
-        <p>Help homeowners find your services in the areas you actually want to serve. We work on search-friendly pages, technical foundations, useful local content and visibility that connects to real inquiries.</p>
-        <a href="/seo.php" class="btn btn-lime">Explore SEO &amp; Local Search</a>
-      </article>
-      <article class="why-done-card channel-card">
-        <span class="rail-num">02</span>
-        <h4>Google Ads</h4>
-        <p>Be visible when someone is actively searching for the work you do. Campaigns, location targeting, landing pages and tracking are built around qualified calls and estimate requests — not empty click volume.</p>
-        <a href="/google-ads.php" class="btn btn-lime">Explore Google Ads</a>
-      </article>
-      <article class="why-done-card channel-card">
-        <span class="rail-num">03</span>
-        <h4>Social media advertising</h4>
-        <p>Turn projects, reviews, transformation videos and seasonal offers into attention worth earning. We use creative, targeted campaigns and retargeting to build familiarity before the customer is ready to book.</p>
-        <a href="/social-media-advertising.php" class="btn btn-lime">Explore Social Media Advertising</a>
-      </article>
-      <article class="why-done-card channel-card">
-        <span class="rail-num">04</span>
-        <h4>Branding and creative</h4>
-        <p>If your website says premium but your ads, truck graphics and social content say otherwise, buyers notice. We bring your visuals and messaging into one recognizable, trustworthy identity.</p>
-        <a href="/graphic-design.php" class="btn btn-lime">Explore Branding &amp; Creative</a>
-      </article>
-      <article class="why-done-card channel-card">
-        <span class="rail-num">05</span>
-        <h4>Landing pages and conversion strategy</h4>
-        <p>Don't send a homeowner searching for an emergency AC repair to the same page as someone planning a full system replacement. Match the offer, evidence and next step to the reason they clicked.</p>
-        <a href="/web-design.php" class="btn btn-lime">Explore Web Design &amp; Development</a>
-      </article>
-      <article class="why-done-card channel-card">
-        <span class="rail-num">06</span>
-        <h4>Connected marketing and measurement</h4>
-        <p>We bring the pieces together where it makes sense, tracking calls, forms, bookings and lead quality so decisions are tied to business opportunities, not dashboard decorations.</p>
-        <a href="/digital-marketing.php" class="btn btn-lime">Explore Full-Service Marketing</a>
-      </article>
-    </div>
-  </div>
-</section>
-
--->
 
 
 <!-- WORK -->
@@ -460,7 +313,6 @@ include __DIR__ . '/includes/testimonialslider.php';
       </div>
     </div>
     <div class="faq-all-wrap faq-ask reveal">
-      <!-- <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a> -->
       <div class="section-header faq-ask-head"><h2 class="faq-ask-title">Still have questions?</h2></div>
       <a href="tel:+15123379723" class="btn btn-lime faq-all-btn faq-call-btn">Call Now <span aria-hidden="true">&rarr;</span></a>
     </div>
@@ -470,18 +322,6 @@ include __DIR__ . '/includes/testimonialslider.php';
 <!-- CTA -->
 <section class="page-section services-cta-section">
   <div class="container">
-    <!--
-    <div class="services-cta-band reveal">
-      <div>
-        <h3>You're already good at the work. Let's get more of the right people to see it.</h3>
-        <p>We'll look at the journey from first impression to inquiry and point out the opportunities worth fixing first.</p>
-      </div>
-      <div class="services-cta-action">
-        <a href="/contact.php" class="btn btn-lime btn-lg">Claim Your FREE Marketing Audit</a>
-        <p class="services-cta-micro">No generic 50-page report. Just a useful conversation about what can work better.</p>
-      </div>
-    </div>
-    -->
     <div class="services-cta-band services-cta-band--split reveal">
       <div class="svc-cta-copy">
         <h3>You're already good at the work. Let's get more of the right people to see it.</h3>

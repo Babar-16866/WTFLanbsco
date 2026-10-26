@@ -12,40 +12,7 @@ include __DIR__ . '/includes/header.php';
       <h1 class="ihero-heading">Straight talk on <span class="accent-lime">growth</span></h1>
       <p class="ihero-lead">Practical playbooks for local service businesses — what wins the call, the booking, and the bigger job. No fluff, just what we see working.</p>
     </header>
-    <!--
-    <div class="about-hero-proof">
-      <div class="about-hero-proof-item">
-        <strong>400+</strong>
-        <span>projects</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>2018</strong>
-        <span>since</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>4.8</strong>
-        <span>rating</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>48+</strong>
-        <span>reviews</span>
-      </div>
-    </div>
-    -->
     <div class="ihero-stage">
-      <!--
-      <div class="ihero-canvas">
-        <div class="ihero-side ihero-side-left">
-          <img src="/assets/images/hero-insights-left.webp" alt="">
-        </div>
-        <div class="ihero-side ihero-side-right">
-          <img src="/assets/images/hero-insights-right.webp" alt="">
-        </div>
-        <div class="ihero-banner">
-          <img src="/assets/images/hero-insights-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
-        </div>
-      </div>
-      -->
       <div class="hcar" data-hcar>
         <div class="hcar-track">
           <div class="hcar-card"><img src="/assets/images/hcar-insights-1.webp" alt="Insights image 1" loading="lazy"></div>
@@ -187,15 +154,6 @@ include __DIR__ . '/includes/header.php';
       </article>
     </div>
 
-    <!--
-    <div class="services-cta-band reveal">
-      <div>
-        <h3>Want to know what your site is missing?</h3>
-        <p>Get a free audit with a clear list of what to fix first.</p>
-      </div>
-      <a href="/contact.php" class="btn btn-lime btn-lg" data-open-step-popup>Get a free consultation</a>
-    </div>
-    -->
     <div class="services-cta-band services-cta-band--split reveal">
       <div class="svc-cta-copy">
         <h3>Want to know what your site is missing?</h3>

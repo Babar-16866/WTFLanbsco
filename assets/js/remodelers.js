@@ -481,15 +481,6 @@
     }, { threshold: 0.35 }).observe(tabsSec.querySelector('.rx-stage'));
   }
 
-  /*
-  if (root.classList.contains('rx--hv')) {
-    const html = document.documentElement;
-    tasks.push(() => {
-      const max = html.scrollHeight - window.innerHeight;
-      html.style.setProperty('--hv-bg-y', (max > 0 ? clamp(window.scrollY / max, 0, 1) * 100 : 0) + '%');
-    });
-  }
-  */
 
   let ticking = false;
   const frame = () => {

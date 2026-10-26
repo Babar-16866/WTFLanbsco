@@ -12,40 +12,7 @@ include __DIR__ . '/includes/header.php';
       <h1 class="ihero-heading">Make the right first impression. <span class="accent-lime">Then make it count.</span></h1>
       <p class="ihero-lead">Your website should do more than look expensive. It should make your quality obvious, help people trust you, and turn interest into the next call, estimate, booking or sale. We build distinctive, high-performing digital experiences around how your customers actually choose.</p>
     </header>
-    <!--
-    <div class="about-hero-proof">
-      <div class="about-hero-proof-item">
-        <strong>400+</strong>
-        <span>projects</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>2018</strong>
-        <span>since</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>4.8</strong>
-        <span>rating</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>48+</strong>
-        <span>reviews</span>
-      </div>
-    </div>
-    -->
     <div class="ihero-stage">
-      <!--
-      <div class="ihero-canvas">
-        <div class="ihero-side ihero-side-left">
-          <img src="/assets/images/hero-web-design-services-left.webp" alt="">
-        </div>
-        <div class="ihero-side ihero-side-right">
-          <img src="/assets/images/hero-web-design-services-right.webp" alt="">
-        </div>
-        <div class="ihero-banner">
-          <img src="/assets/images/hero-web-design-services-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
-        </div>
-      </div>
-      -->
       <div class="hcar" data-hcar>
         <div class="hcar-track">
           <div class="hcar-card"><img src="/assets/images/hcar-web-design-services-1.webp" alt="Home-service website design" loading="lazy"></div>
@@ -141,87 +108,6 @@ include __DIR__ . '/includes/header.php';
       <h2>The right website for the job. <span class="heading-accent"><br>Not the longest menu in town.</span></h2>
       <p class="section-desc center-desc wh">Some businesses need a beautiful, focused website. Others need a campaign landing page, an online store or a whole digital operation behind the scenes. We help you choose what makes commercial sense - then build it properly.</p>
     </div>
-    <!--
-    <div class="svc-panels reveal" id="svcPanels">
-      <a href="/web-design.php" class="svc-panel is-active">
-        <img loading="lazy" src="/assets/images/wd-build-1.jpg" alt="Premium business websites">
-        <span class="svc-panel-num">01</span>
-        <span class="svc-panel-label">Premium business websites</span>
-        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
-        <div class="svc-panel-body">
-          <h3>Premium business websites</h3>
-          <p>Custom, multi-page websites that explain your services, prove your quality, and guide the right customers to a clear next step. Built around your brand; not dressed-up contractor templates.</p>
-          <span class="svc-panel-link">View Service &rarr;</span>
-        </div>
-      </a>
-      <a href="/web-design.php" class="svc-panel">
-        <img loading="lazy" src="/assets/images/wd-build-2.jpg" alt="Landing pages and sales funnels">
-        <span class="svc-panel-num">02</span>
-        <span class="svc-panel-label">Landing pages and sales funnels</span>
-        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
-        <div class="svc-panel-body">
-          <h3>Landing pages and sales funnels</h3>
-          <p>Focused pages for Google Ads, social campaigns, promotions or high-value services. One message, the right proof, and one obvious action: without paying for clicks that land on a confusing homepage.</p>
-          <span class="svc-panel-link">View Service &rarr;</span>
-        </div>
-      </a>
-      <a href="/web-design.php" class="svc-panel">
-        <img loading="lazy" src="/assets/images/wd-build-3.jpg" alt="One-page and informational websites">
-        <span class="svc-panel-num">03</span>
-        <span class="svc-panel-label">One-page and informational websites</span>
-        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
-        <div class="svc-panel-body">
-          <h3>One-page and informational websites</h3>
-          <p>Clean, confident websites for a business that needs a sharper presence without unnecessary complexity. The essential story, services, trust signals and contact path, all in the right order.</p>
-          <span class="svc-panel-link">View Service &rarr;</span>
-        </div>
-      </a>
-      <a href="/web-design.php" class="svc-panel">
-        <img loading="lazy" src="/assets/images/wd-build-4.jpg" alt="Immersive, high-end web experiences">
-        <span class="svc-panel-num">04</span>
-        <span class="svc-panel-label">Immersive, high-end web experiences</span>
-        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
-        <div class="svc-panel-body">
-          <h3>Immersive, high-end web experiences</h3>
-          <p>Cinematic project storytelling, purposeful motion, before-and-after sliders, interactive galleries and memorable detail. Attention-grabbing where it helps; fast and straightforward where it matters more.</p>
-          <span class="svc-panel-link">View Service &rarr;</span>
-        </div>
-      </a>
-      <a href="/web-development.php" class="svc-panel">
-        <img loading="lazy" src="/assets/images/wd-build-5.jpg" alt="WordPress, Shopify and e-commerce">
-        <span class="svc-panel-num">05</span>
-        <span class="svc-panel-label">WordPress, Shopify and e-commerce</span>
-        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
-        <div class="svc-panel-body">
-          <h3>WordPress, Shopify and e-commerce</h3>
-          <p>Content-managed websites, Shopify stores and tailored online selling experiences when your business needs to publish, manage products or sell online. The platform follows the goal, not the other way around.</p>
-          <span class="svc-panel-link">View Service &rarr;</span>
-        </div>
-      </a>
-      <a href="/web-development.php" class="svc-panel">
-        <img loading="lazy" src="/assets/images/wd-build-6.jpg" alt="Web apps, portals and CRM workflows">
-        <span class="svc-panel-num">06</span>
-        <span class="svc-panel-label">Web apps, portals and CRM workflows</span>
-        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
-        <div class="svc-panel-body">
-          <h3>Web apps, portals and CRM workflows</h3>
-          <p>For bigger operational needs, we can plan custom dashboards, client portals, booking tools, lead workflows and integrations that cut repetitive admin work and fit how your team operates.</p>
-          <span class="svc-panel-link">View Service &rarr;</span>
-        </div>
-      </a>
-      <a href="/web-development.php" class="svc-panel">
-        <img loading="lazy" src="/assets/images/wd-build-7.jpg" alt="Hosting, maintenance and ongoing improvements">
-        <span class="svc-panel-num">07</span>
-        <span class="svc-panel-label">Hosting, maintenance and ongoing improvements</span>
-        <span class="svc-panel-enter" aria-hidden="true">Enter</span>
-        <div class="svc-panel-body">
-          <h3>Hosting, maintenance and ongoing improvements</h3>
-          <p>Launch is the start, not the finish. Hosting, updates, fixes, monitoring and site improvements can keep the experience dependable as your services and business evolve.</p>
-          <span class="svc-panel-link">View Service &rarr;</span>
-        </div>
-      </a>
-    </div>
-    -->
     <div class="wtabs reveal" data-wtabs>
       <div class="wtabs-list" role="tablist" aria-label="What we can build">
         <button type="button" class="wtabs-tab is-active" role="tab" id="wtabsTab1" aria-controls="wtabsPanel1" aria-selected="true"><span class="wtabs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8M12 18v3"/></svg></span><span class="wtabs-name">Premium business websites</span><span class="wtabs-bar" aria-hidden="true"></span></button>
@@ -439,7 +325,6 @@ include __DIR__ . '/includes/testimonialslider.php';
       </div>
     </div>
     <div class="faq-all-wrap faq-ask reveal">
-      <!-- <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a> -->
       <div class="section-header faq-ask-head"><h2 class="faq-ask-title">Still have questions?</h2></div>
       <a href="tel:+15123379723" class="btn btn-lime faq-all-btn faq-call-btn">Call Now <span aria-hidden="true">&rarr;</span></a>
     </div>
@@ -449,18 +334,6 @@ include __DIR__ . '/includes/testimonialslider.php';
 <!-- CTA -->
 <section class="page-section services-cta-section">
   <div class="container">
-    <!--
-    <div class="services-cta-band reveal">
-      <div>
-        <h3>Your work already looks good in real life. Let's make sure your website proves it.</h3>
-        <p>We'll review your current site, show you where buyers may be hesitating, and recommend what we'd fix first. No bloated shopping list.</p>
-      </div>
-      <div class="services-cta-action">
-        <a href="/contact.php" class="btn btn-lime btn-lg">Claim Your FREE Website Audit</a>
-        <p class="services-cta-micro">Useful feedback. No pressure. No mystery jargon.</p>
-      </div>
-    </div>
-    -->
     <div class="services-cta-band services-cta-band--split reveal">
       <div class="svc-cta-copy">
         <h3>Your work already looks good in real life. Let's make sure your website proves it.</h3>

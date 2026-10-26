@@ -53,7 +53,7 @@ let lastY = 0;
 let headerHidden = false;
 let upScrolls = 0;
 let lastUpAt = 0;
-const rxHeaderPage = !!document.querySelector('.rx .rx-hero');
+const rxHeaderPage = true;
 if (rxHeaderPage && siteHeader) {
   let upGestures = 0;
   let lastWheelUp = 0;
@@ -683,71 +683,6 @@ document.addEventListener('click', (e) => {
 
 
 // Custom theme cursor (desktop only)
-/*
-(function initCustomCursor() {
-  const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
-  const reduceMotion = { matches: false };
-  if (!finePointer.matches || reduceMotion.matches) return;
-
-  const root = document.createElement('div');
-  root.className = 'custom-cursor';
-  root.setAttribute('aria-hidden', 'true');
-  root.innerHTML = '<span class="custom-cursor-ring"></span><span class="custom-cursor-dot"></span>';
-  document.body.appendChild(root);
-  document.documentElement.classList.add('has-custom-cursor');
-
-  const ring = root.querySelector('.custom-cursor-ring');
-  let x = window.innerWidth / 2;
-  let y = window.innerHeight / 2;
-  let rx = x;
-  let ry = y;
-  let visible = false;
-
-  let running = false;
-
-  const move = (e) => {
-    const z = pageZoom();
-    x = e.clientX / z;
-    y = e.clientY / z;
-    if (!visible) {
-      visible = true;
-      root.classList.add('is-visible');
-      rx = x;
-      ry = y;
-    }
-    if (!running) {
-      running = true;
-      requestAnimationFrame(tick);
-    }
-  };
-
-  document.addEventListener('mousemove', move, { passive: true });
-  document.addEventListener('mouseleave', () => {
-    visible = false;
-    root.classList.remove('is-visible');
-  });
-
-  document.addEventListener('mousedown', () => root.classList.add('is-down'));
-  document.addEventListener('mouseup', () => root.classList.remove('is-down'));
-
-  document.addEventListener('mouseover', (e) => {
-    const hit = e.target.closest('a, button, [role="button"], input, textarea, select, label, .excel-track');
-    root.classList.toggle('is-hover', !!hit);
-  });
-
-  function tick() {
-    rx += (x - rx) * 0.22;
-    ry += (y - ry) * 0.22;
-    root.style.transform = `translate3d(${x}px, ${y}px, 0)`;
-    if (ring) ring.style.transform = `translate3d(${rx - x}px, ${ry - y}px, 0)`;
-    if (Math.abs(x - rx) < 0.1 && Math.abs(y - ry) < 0.1) {
-      running = false;
-      return;
-    }
-    requestAnimationFrame(tick);
-  }
-})();
-*/
 
 
 // Content protection — right-click modal + block copy

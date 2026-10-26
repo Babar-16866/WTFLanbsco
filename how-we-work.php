@@ -21,40 +21,7 @@ $processes = [
       <h1 class="ihero-heading">No chaos. No scope creep. A <span class="accent-lime">6-process</span> system.</h1>
       <p class="ihero-lead">Since 2018 we have been refining the same senior team and the same system — to build websites, platforms, and apps that pay off.</p>
     </header>
-    <!--
-    <div class="about-hero-proof">
-      <div class="about-hero-proof-item">
-        <strong>400+</strong>
-        <span>projects</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>2018</strong>
-        <span>since</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>4.8</strong>
-        <span>rating</span>
-      </div>
-      <div class="about-hero-proof-item">
-        <strong>48+</strong>
-        <span>reviews</span>
-      </div>
-    </div>
-    -->
     <div class="ihero-stage">
-      <!--
-      <div class="ihero-canvas">
-        <div class="ihero-side ihero-side-left">
-          <img src="/assets/images/hero-how-we-work-left.webp" alt="">
-        </div>
-        <div class="ihero-side ihero-side-right">
-          <img src="/assets/images/hero-how-we-work-right.webp" alt="">
-        </div>
-        <div class="ihero-banner">
-          <img src="/assets/images/hero-how-we-work-main.webp" alt="" class="ihero-banner-img" fetchpriority="high">
-        </div>
-      </div>
-      -->
       <div class="hcar" data-hcar>
         <div class="hcar-track">
           <div class="hcar-card"><img src="/assets/images/hcar-how-we-work-1.webp" alt="How We Work image 1" loading="lazy"></div>
@@ -144,15 +111,6 @@ $processes = [
       </div>
     </div>
 
-    <!--
-    <div class="services-cta-band reveal">
-      <div>
-        <h3>Let's discuss your next website</h3>
-        <p>We'll help you define the right next step.</p>
-      </div>
-      <a href="/contact.php" class="btn btn-lime btn-lg">Free Consultation</a>
-    </div>
-    -->
     <div class="services-cta-band services-cta-band--split reveal">
       <div class="svc-cta-copy">
         <h3>Let's discuss your next website</h3>
@@ -215,7 +173,6 @@ $processes = [
       </div>
     </div>
     <div class="faq-all-wrap faq-ask reveal">
-      <!-- <a href="/faqs.php" class="btn btn-lime faq-all-btn">View all FAQs <span aria-hidden="true">&rarr;</span></a> -->
       <div class="section-header faq-ask-head"><h2 class="faq-ask-title">Still have questions?</h2></div>
       <a href="tel:+15123379723" class="btn btn-lime faq-all-btn faq-call-btn">Call Now <span aria-hidden="true">&rarr;</span></a>
     </div>
