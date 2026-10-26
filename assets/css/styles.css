@@ -10786,3 +10786,11 @@ html body .services-cta-band.services-cta-band--split {
   background-repeat: no-repeat;
   background-blend-mode: normal, normal, normal, multiply;
 }
+
+/* Fixed three-card rows: let the card shadows show in full */
+.rail-section--fixed .rail-sticky {
+  overflow: visible;
+}
+.rail-section--fixed .rail-track {
+  padding-bottom: 40px;
+}

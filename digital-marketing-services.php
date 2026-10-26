@@ -66,29 +66,29 @@ include __DIR__ . '/includes/header.php';
 </section>
 
 <!-- STOP LEAKING GOOD OPPORTUNITIES -->
-<section class="rail-section why-wtf-section" id="why-wtf-labs" data-rail>
+<section class="rail-section why-wtf-section rail-section--fixed" id="why-wtf-labs">
   <div class="rail-sticky">
     <div class="container">
-      <div class="section-header rail-head reveal">
+      <div class="section-header center rail-head reveal">
         <p class="subheading">STOP LEAKING GOOD OPPORTUNITIES</p>
         <h2 class="home-title">More attention won't fix a broken buying <span class="heading-accent">journey.</span></h2>
-        <p class="section-desc">A homeowner sees your ad, searches your name, compares your reviews, lands on your website and makes a decision. If your message changes at every step, if the page loads slowly, or if the proof isn't there, your marketing budget can end up doing the competitor's work for them.</p>
-        <p class="section-desc">Good digital marketing isn't a collection of disconnected campaigns. It's a clear path from <strong>&ldquo;I need someone&rdquo;</strong> to <strong>&ldquo;These are the people I'm calling.&rdquo;</strong></p>
+        <p class="section-desc center-desc">A homeowner sees your ad, searches your name, compares your reviews, lands on your website and makes a decision. If your message changes at every step, if the page loads slowly, or if the proof isn't there, your marketing budget can end up doing the competitor's work for them.</p>
+        <p class="section-desc center-desc">Good digital marketing isn't a collection of disconnected campaigns. It's a clear path from <strong>&ldquo;I need someone&rdquo;</strong> to <strong>&ldquo;These are the people I'm calling.&rdquo;</strong></p>
       </div>
     </div>
     <div class="rail-viewport">
-      <div class="rail-track rail-track--wide">
-        <article class="rail-card">
+      <div class="rail-track">
+        <article class="rail-card is-active">
           <span class="rail-num rail-num--text">High-value projects</span>
           <h3>Be worth the estimate before you arrive.</h3>
           <p>Remodeling, roofing, and other project-led services need visible craftsmanship, persuasive case studies, local credibility and campaigns that attract homeowners who value quality — not just the lowest bid.</p>
         </article>
-        <article class="rail-card">
+        <article class="rail-card is-active">
           <span class="rail-num rail-num--text">Urgent repairs</span>
           <h3>Show up when the clock is ticking.</h3>
           <p>HVAC and plumbing buyers often need answers immediately. Relevant local searches, focused ads, fast mobile pages and obvious call paths help reduce the time between need and contact.</p>
         </article>
-        <article class="rail-card">
+        <article class="rail-card is-active">
           <span class="rail-num rail-num--text">Ongoing service</span>
           <h3>Turn one visit into a longer relationship.</h3>
           <p>Pest control, pool service and landscaping businesses benefit from campaigns around service areas, seasonal demand, recurring plans and customer retention — not just another one-time inquiry.</p>

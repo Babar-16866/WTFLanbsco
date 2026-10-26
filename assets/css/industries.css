@@ -2044,3 +2044,22 @@ html[data-theme="dark"]:has(.rx--rf) body #contact.contact-section {
 :root:has(.rx[class*="rx--"]) body .rx-canvas .works-filter {
   font-family: "Manrope", system-ui, sans-serif;
 }
+
+/* Industry inner pages: larger active benefit heading and text */
+:root:has(.rx[class*="rx--"]) .rx-ba.is-pin .rx-ben-item.is-active h3 {
+  font-size: 38px;
+}
+:root:has(.rx[class*="rx--"]) .rx-ba.is-pin .rx-ben-item.is-active p {
+  font-size: 19px;
+}
+@media (max-width: 640px) {
+  :root:has(.rx[class*="rx--"]) .rx-ba.is-pin .rx-ben-item.is-active h3 {
+    font-size: 30px;
+  }
+  :root:has(.rx[class*="rx--"]) .rx-ba.is-pin .rx-ben-item.is-active p {
+    font-size: 17px;
+  }
+}
+:root:has(.rx[class*="rx--"]) .rx-ba.is-pin .rx-ben-list {
+  --row: 100px;
+}
