@@ -1573,7 +1573,7 @@ include __DIR__ . '/includes/testimonialslider.php';
 */ ?>
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600..900&family=Figtree:wght@400;500;600;700;800&family=Big+Shoulders+Display:wght@700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,600..900&family=Figtree:wght@400;500;600;700;800&family=Big+Shoulders+Display:wght@700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/remodelers.css?v=<?php echo asset_version('assets/css/remodelers.css'); ?>">
 <link rel="stylesheet" href="/assets/css/industry-fonts.css?v=<?php echo asset_version('assets/css/industry-fonts.css'); ?>">
 <script>document.documentElement.classList.add('rx-js');</script>
@@ -1682,18 +1682,18 @@ include __DIR__ . '/includes/testimonialslider.php';
       <p class="rx-sub">Each service gets its own pages, ads and photos. A patio buyer asks different questions than a lawn care client.</p>
     </div>
     <ul class="rx-niche-list">
-      <li class="rx-niche" data-img="/assets/images/ls-n-1.webp"><span class="rx-niche-name">Landscape design</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/ls-n-1.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
-      <li class="rx-niche" data-img="/assets/images/ls-n-2.webp"><span class="rx-niche-name">Lawn care</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/ls-n-2.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
-      <li class="rx-niche" data-img="/assets/images/ls-n-3.webp"><span class="rx-niche-name">Patios and hardscapes</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/ls-n-3.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
-      <li class="rx-niche" data-img="/assets/images/ls-n-4.webp"><span class="rx-niche-name">Outdoor lighting</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/ls-n-4.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
-      <li class="rx-niche" data-img="/assets/images/ls-n-5.webp"><span class="rx-niche-name">Irrigation</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/ls-n-5.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
-      <li class="rx-niche" data-img="/assets/images/ls-n-6.webp"><span class="rx-niche-name">Planting and beds</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/ls-n-6.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
-      <li class="rx-niche" data-img="/assets/images/ls-n-7.webp"><span class="rx-niche-name">Seasonal cleanup</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/ls-n-7.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
-      <li class="rx-niche" data-img="/assets/images/ls-n-8.webp"><span class="rx-niche-name">Tree trimming</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/ls-n-8.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
-      <li class="rx-niche" data-img="/assets/images/ls-n-9.webp"><span class="rx-niche-name">Retaining walls</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/ls-n-9.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
-      <li class="rx-niche" data-img="/assets/images/ls-n-10.webp"><span class="rx-niche-name">Sod installation</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/ls-n-10.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
-      <li class="rx-niche" data-img="/assets/images/ls-n-11.webp"><span class="rx-niche-name">Water features</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/ls-n-11.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
-      <li class="rx-niche" data-img="/assets/images/ls-n-12.webp"><span class="rx-niche-name">Commercial grounds</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/ls-n-12.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/ls-n-1-sm.webp"><span class="rx-niche-name">Landscape design</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/ls-n-1-sm.webp" alt="" width="56" height="56" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/ls-n-2-sm.webp"><span class="rx-niche-name">Lawn care</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/ls-n-2-sm.webp" alt="" width="56" height="56" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/ls-n-3-sm.webp"><span class="rx-niche-name">Patios and hardscapes</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/ls-n-3-sm.webp" alt="" width="56" height="56" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/ls-n-4-sm.webp"><span class="rx-niche-name">Outdoor lighting</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/ls-n-4-sm.webp" alt="" width="56" height="56" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/ls-n-5-sm.webp"><span class="rx-niche-name">Irrigation</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/ls-n-5-sm.webp" alt="" width="56" height="56" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/ls-n-6-sm.webp"><span class="rx-niche-name">Planting and beds</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/ls-n-6-sm.webp" alt="" width="56" height="56" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/ls-n-7-sm.webp"><span class="rx-niche-name">Seasonal cleanup</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/ls-n-7-sm.webp" alt="" width="56" height="56" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/ls-n-8-sm.webp"><span class="rx-niche-name">Tree trimming</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/ls-n-8-sm.webp" alt="" width="56" height="56" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/ls-n-9-sm.webp"><span class="rx-niche-name">Retaining walls</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/ls-n-9-sm.webp" alt="" width="56" height="56" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/ls-n-10-sm.webp"><span class="rx-niche-name">Sod installation</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/ls-n-10-sm.webp" alt="" width="56" height="56" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/ls-n-11-sm.webp"><span class="rx-niche-name">Water features</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/ls-n-11-sm.webp" alt="" width="56" height="56" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/ls-n-12-sm.webp"><span class="rx-niche-name">Commercial grounds</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/ls-n-12-sm.webp" alt="" width="56" height="56" decoding="async"></span></li>
     </ul>
   </div>
   <div class="rx-niche-float" aria-hidden="true"><img src="" alt=""></div>

@@ -394,7 +394,7 @@
         const im = new Image();
         im.src = row.getAttribute('data-img');
       });
-    }, { rootMargin: '600px 0px' });
+    }, { rootMargin: '1400px 0px' });
     preload.observe(niches);
     rows.forEach((row) => {
       row.addEventListener('pointerenter', (e) => {
@@ -481,6 +481,7 @@
     }, { threshold: 0.35 }).observe(tabsSec.querySelector('.rx-stage'));
   }
 
+  /*
   if (root.classList.contains('rx--hv')) {
     const html = document.documentElement;
     tasks.push(() => {
@@ -488,6 +489,7 @@
       html.style.setProperty('--hv-bg-y', (max > 0 ? clamp(window.scrollY / max, 0, 1) * 100 : 0) + '%');
     });
   }
+  */
 
   let ticking = false;
   const frame = () => {

@@ -53,7 +53,77 @@ let lastY = 0;
 let headerHidden = false;
 let upScrolls = 0;
 let lastUpAt = 0;
+const rxHeaderPage = !!document.querySelector('.rx .rx-hero');
+if (rxHeaderPage && siteHeader) {
+  let upGestures = 0;
+  let lastWheelUp = 0;
+  let lastScrollUp = 0;
+  let lastGestureAt = 0;
+  let downAcc = 0;
+  let touchY = 0;
+  let touchCounted = false;
+  const inHideZone = () => headerHideZones.some((zone) => {
+    const r = zone.getBoundingClientRect();
+    return r.top <= 1 && r.bottom >= window.innerHeight - 1;
+  });
+  const apply = () => {
+    siteHeader.style.transform = headerHidden ? 'translateY(-120%)' : 'translateY(0)';
+  };
+  const addUp = () => {
+    lastGestureAt = performance.now();
+    downAcc = 0;
+    if (inHideZone() || window.scrollY <= 120) return;
+    upGestures += 1;
+    if (upGestures >= 2 && headerHidden) {
+      headerHidden = false;
+      apply();
+    }
+  };
+  window.addEventListener('wheel', (e) => {
+    if (e.deltaY >= 0) return;
+    const now = performance.now();
+    if (now - lastWheelUp > 150) addUp();
+    lastWheelUp = now;
+  }, { passive: true });
+  window.addEventListener('touchstart', (e) => {
+    touchY = e.touches[0].clientY;
+    touchCounted = false;
+  }, { passive: true });
+  window.addEventListener('touchmove', (e) => {
+    if (touchCounted || e.touches[0].clientY - touchY < 12) return;
+    touchCounted = true;
+    addUp();
+  }, { passive: true });
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowUp' || e.key === 'PageUp' || e.key === 'Home') addUp();
+  });
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    const dy = y - lastY;
+    const now = performance.now();
+    if (inHideZone()) {
+      headerHidden = true;
+      upGestures = 0;
+    } else if (y <= 120) {
+      headerHidden = false;
+      upGestures = 0;
+    } else if (dy > 0) {
+      downAcc += dy;
+      if (downAcc > 24) {
+        headerHidden = true;
+        upGestures = 0;
+      }
+    } else if (dy < 0) {
+      if (now - lastGestureAt > 400 && now - lastScrollUp > 220) addUp();
+      lastScrollUp = now;
+      if (upGestures >= 2) headerHidden = false;
+    }
+    apply();
+    lastY = y;
+  }, { passive: true });
+}
 window.addEventListener('scroll', () => {
+  if (rxHeaderPage) return;
   const y = window.scrollY;
   if (siteHeader) {
     const inZone = headerHideZones.some((zone) => {

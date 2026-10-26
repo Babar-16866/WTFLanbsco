@@ -10698,3 +10698,64 @@ html body .faq-section .faq-all-wrap.faq-ask .faq-call-btn {
 .ind-more .ind-more-band {
   margin: 0;
 }
+
+/* Industries: keep the preview pinned until the last trade is reached */
+@media (min-width: 901px) {
+  .ind-preview {
+    top: max(110px, calc(50vh - 260px));
+  }
+  .ind-list {
+    padding-bottom: 420px;
+  }
+}
+
+/* Industries: split CTA bands, art on the left */
+.services-cta-band--split.ind-cta-split {
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: clamp(24px, 4vw, 56px);
+  min-height: 0;
+  padding: 48px 56px 48px 40px;
+  box-shadow: none;
+}
+.ind-cta-split .svc-cta-art {
+  min-height: 0;
+  margin: 0;
+}
+.ind-cta-split .svc-cta-art img {
+  position: static;
+  display: block;
+  width: min(100%, 540px);
+  margin: 0 auto;
+}
+.ind-cta-split .subheading {
+  margin-bottom: 14px;
+  color: var(--pal-accent, #D0F000);
+}
+.ind-cta-split h3 {
+  font-size: clamp(30px, 3.2vw, 48px);
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+.ind-cta .ind-cta-split {
+  margin-top: 0;
+}
+@media (max-width: 900px) {
+  .services-cta-band--split.ind-cta-split {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 40px 28px;
+  }
+  .ind-cta-split .svc-cta-art {
+    order: 2;
+    height: auto;
+    margin: 8px 0 0;
+  }
+  .ind-cta-split .svc-cta-art img {
+    transform: none;
+    width: min(100%, 440px);
+  }
+}
+@media (max-width: 480px) {
+  .services-cta-band--split.ind-cta-split {
+    padding: 32px 20px;
+  }
+}

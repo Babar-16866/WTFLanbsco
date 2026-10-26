@@ -1573,7 +1573,7 @@ include __DIR__ . '/includes/testimonialslider.php';
 */ ?>
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Lexend:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,600..700&family=Lexend:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/remodelers.css?v=<?php echo asset_version('assets/css/remodelers.css'); ?>">
 <link rel="stylesheet" href="/assets/css/industry-fonts.css?v=<?php echo asset_version('assets/css/industry-fonts.css'); ?>">
 <script>document.documentElement.classList.add('rx-js');</script>
@@ -1584,8 +1584,8 @@ include __DIR__ . '/includes/testimonialslider.php';
     <div class="rx-hero-copy">
       <p class="rx-hero-tag">Pool Services</p>
       <h1 class="rx-h1">
-        <span class="rx-line"><span>Grow your routes</span></span>
-        <span class="rx-line"><span>with pools that stay <mark class="rx-mark">spotless.</mark></span></span>
+        <span class="rx-line"><span>Grow your routes with</span></span>
+        <span class="rx-line"><span>pools that stay <mark class="rx-mark">spotless.</mark></span></span>
       </h1>
       <p class="rx-hero-lead">Websites, local search and ads that fill your weekly routes and sell the repairs and upgrades that come with them.</p>
       <div class="rx-hero-actions"><a href="tel:+15123379723" class="rx-cta"><span>BOOK A CALL</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a></div>
@@ -1682,18 +1682,18 @@ include __DIR__ . '/includes/testimonialslider.php';
       <p class="rx-sub">Each service gets its own pages, ads and photos. A green pool owner asks different questions than a pump upgrade.</p>
     </div>
     <ul class="rx-niche-list">
-      <li class="rx-niche" data-img="/assets/images/po-n-1.webp"><span class="rx-niche-name">Weekly pool cleaning</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/po-n-1.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
-      <li class="rx-niche" data-img="/assets/images/po-n-2.webp"><span class="rx-niche-name">Pool repair</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/po-n-2.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
-      <li class="rx-niche" data-img="/assets/images/po-n-3.webp"><span class="rx-niche-name">Equipment upgrades</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/po-n-3.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
-      <li class="rx-niche" data-img="/assets/images/po-n-4.webp"><span class="rx-niche-name">Green to clean</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/po-n-4.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
-      <li class="rx-niche" data-img="/assets/images/po-n-5.webp"><span class="rx-niche-name">Pool openings</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/po-n-5.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
-      <li class="rx-niche" data-img="/assets/images/po-n-6.webp"><span class="rx-niche-name">Pool closings</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/po-n-6.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
-      <li class="rx-niche" data-img="/assets/images/po-n-7.webp"><span class="rx-niche-name">Chemical balancing</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/po-n-7.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
-      <li class="rx-niche" data-img="/assets/images/po-n-8.webp"><span class="rx-niche-name">Hot tub service</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/po-n-8.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
-      <li class="rx-niche" data-img="/assets/images/po-n-9.webp"><span class="rx-niche-name">Tile cleaning</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/po-n-9.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
-      <li class="rx-niche" data-img="/assets/images/po-n-10.webp"><span class="rx-niche-name">Leak detection</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/po-n-10.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
-      <li class="rx-niche" data-img="/assets/images/po-n-11.webp"><span class="rx-niche-name">Resurfacing</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/po-n-11.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
-      <li class="rx-niche" data-img="/assets/images/po-n-12.webp"><span class="rx-niche-name">Commercial pools</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/po-n-12.webp" alt="" width="56" height="56" loading="lazy" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/po-n-1-sm.webp"><span class="rx-niche-name">Weekly pool cleaning</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/po-n-1-sm.webp" alt="" width="56" height="56" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/po-n-2-sm.webp"><span class="rx-niche-name">Pool repair</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/po-n-2-sm.webp" alt="" width="56" height="56" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/po-n-3-sm.webp"><span class="rx-niche-name">Equipment upgrades</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/po-n-3-sm.webp" alt="" width="56" height="56" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/po-n-4-sm.webp"><span class="rx-niche-name">Green to clean</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/po-n-4-sm.webp" alt="" width="56" height="56" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/po-n-5-sm.webp"><span class="rx-niche-name">Pool openings</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/po-n-5-sm.webp" alt="" width="56" height="56" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/po-n-6-sm.webp"><span class="rx-niche-name">Pool closings</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/po-n-6-sm.webp" alt="" width="56" height="56" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/po-n-7-sm.webp"><span class="rx-niche-name">Chemical balancing</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/po-n-7-sm.webp" alt="" width="56" height="56" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/po-n-8-sm.webp"><span class="rx-niche-name">Hot tub service</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/po-n-8-sm.webp" alt="" width="56" height="56" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/po-n-9-sm.webp"><span class="rx-niche-name">Tile cleaning</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/po-n-9-sm.webp" alt="" width="56" height="56" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/po-n-10-sm.webp"><span class="rx-niche-name">Leak detection</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/po-n-10-sm.webp" alt="" width="56" height="56" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/po-n-11-sm.webp"><span class="rx-niche-name">Resurfacing</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/po-n-11-sm.webp" alt="" width="56" height="56" decoding="async"></span></li>
+      <li class="rx-niche" data-img="/assets/images/po-n-12-sm.webp"><span class="rx-niche-name">Commercial pools</span><span class="rx-niche-arrow" aria-hidden="true"><img src="/assets/images/po-n-12-sm.webp" alt="" width="56" height="56" decoding="async"></span></li>
     </ul>
   </div>
   <div class="rx-niche-float" aria-hidden="true"><img src="" alt=""></div>

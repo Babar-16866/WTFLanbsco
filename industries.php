@@ -1617,7 +1617,7 @@ include __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<section class="page-section ind-stack">
+<!-- <section class="page-section ind-stack">
   <div class="container">
     <div class="ind-stack-box reveal">
       <div class="ind-stack-head">
@@ -1633,14 +1633,95 @@ include __DIR__ . '/includes/header.php';
       </ol>
     </div>
   </div>
+</section> -->
+<section class="svc-showcase ind-svc" id="featured-services">
+  <div class="container">
+    <div class="section-header center reveal">
+      <p class="subheading">IN EVERY TRADE</p>
+      <h2>One team for the site, the search <span class="heading-accent">and the ads.</span></h2>
+    </div>
+    <div class="wtabs reveal" data-wtabs>
+      <div class="wtabs-list" role="tablist" aria-label="Featured services">
+        <button type="button" class="wtabs-tab is-active" role="tab" id="wtabsTab1" aria-controls="wtabsPanel1" aria-selected="true"><span class="wtabs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8M12 18v3"/></svg></span><span class="wtabs-name">Web Design &amp; Development</span><span class="wtabs-bar" aria-hidden="true"></span></button>
+        <button type="button" class="wtabs-tab" role="tab" id="wtabsTab2" aria-controls="wtabsPanel2" aria-selected="false"><span class="wtabs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span><span class="wtabs-name">SEO &amp; & Local Search</span><span class="wtabs-bar" aria-hidden="true"></span></button>
+        <button type="button" class="wtabs-tab" role="tab" id="wtabsTab3" aria-controls="wtabsPanel3" aria-selected="false"><span class="wtabs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l14-6v14L3 13z"/><path d="M7 13v5a2 2 0 0 0 4 0v-3.5"/><path d="M20 9v6"/></svg></span><span class="wtabs-name">Google Ads</span><span class="wtabs-bar" aria-hidden="true"></span></button>
+        <button type="button" class="wtabs-tab" role="tab" id="wtabsTab4" aria-controls="wtabsPanel4" aria-selected="false"><span class="wtabs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/></svg></span><span class="wtabs-name">Social Media Advertising</span><span class="wtabs-bar" aria-hidden="true"></span></button>
+      </div>
+      <div class="wtabs-panels">
+        <article class="wtabs-panel is-active" role="tabpanel" id="wtabsPanel1" aria-labelledby="wtabsTab1">
+          <div class="wtabs-media"><img src="/assets/images/service-web-design.jpg" alt="Web Design &amp; Development" loading="lazy"></div>
+          <div class="wtabs-copy">
+            <h3>Web Design &amp; Development</h3>
+            <p>Make your business look as good online as the work you do - with a fast, custom website built to earn trust and turn visits into calls, estimates, bookings, and better-fit leads. </p>
+            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
+          </div>
+        </article>
+        <article class="wtabs-panel" role="tabpanel" id="wtabsPanel2" aria-labelledby="wtabsTab2" aria-hidden="true">
+          <div class="wtabs-media"><img src="/assets/images/service-seo.jpg" alt="SEO &amp; Local Search" loading="lazy"></div>
+          <div class="wtabs-copy">
+            <h3>SEO &amp; & Local Search</h3>
+            <p>Help the right homeowners find you when they are already looking for the services you want to sell - in the areas you actually want to serve.</p>
+            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
+          </div>
+        </article>
+        <article class="wtabs-panel" role="tabpanel" id="wtabsPanel3" aria-labelledby="wtabsTab3" aria-hidden="true">
+          <div class="wtabs-media"><img src="/assets/images/service-google-ads.jpg" alt="Google Ads" loading="lazy"></div>
+          <div class="wtabs-copy">
+            <h3>Google Ads</h3>
+            <p>Capture high-intent searches with campaigns, landing pages, and tracking built around qualified calls and estimate requests - not empty click volume.</p>
+            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
+          </div>
+        </article>
+        <article class="wtabs-panel" role="tabpanel" id="wtabsPanel4" aria-labelledby="wtabsTab4" aria-hidden="true">
+          <div class="wtabs-media"><img src="/assets/images/service-social-media.jpg" alt="Social Media Advertising" loading="lazy"></div>
+          <div class="wtabs-copy">
+            <h3>Social Media Advertising</h3>
+            <p>Turn your best projects, reviews, offers, and service proof into paid campaigns that build demand, retarget interested homeowners, and keep your name familiar.</p>
+            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="page-section ind-more">
+<!-- WORK -->
+<?php
+$work_eyebrow = 'Featured Work';
+$work_heading = 'GREAT WORK.<span class="accent-lime"> BUILT TO EARN TRUST.</span>';
+$work_desc = ' Immersive where it helps. Fast where speed matters. Clear where buyers need confidence. Every build should fit the sales cycle behind it.';
+include __DIR__ . '/includes/featured-work.php';
+?>
+
+<!-- REVIEWS -->
+<?php
+$street_section_id = 'testimonials';
+$street_heading = '…AND THE CROWD GOES <span class="accent-blue">WTF!</span>';
+$street_desc = '';
+include __DIR__ . '/includes/testimonialslider.php';
+?>
+
+<!-- <section class="page-section ind-more">
   <div class="container">
     <div class="service-detail-card services-cta-band industry-cta-card ind-more-band reveal">
       <h3>Don't see your exact industry?</h3>
       <p>We also take on closely related property and field-service projects when the fit is right. Tell us what you do and the kind of jobs you want more of.</p>
       <a href="/contact.php" class="btn btn-lime btn-lg">Let's Talk</a>
+    </div>
+  </div>
+</section> -->
+<section class="page-section ind-cta">
+  <div class="container">
+    <div class="services-cta-band services-cta-band--split ind-cta-split reveal">
+      <div class="svc-cta-art"><img src="/assets/images/cta-phones-industries.webp" alt="Roofing, pest control and landscaping websites on phones" width="1280" height="1120" loading="lazy" decoding="async"></div>
+      <div class="svc-cta-copy">
+        <p class="subheading">WHY WTF LABS</p>
+        <h3>Don't see your exact industry?</h3>
+        <p>We also take on closely related property and field-service projects when the fit is right. Tell us what you do and the kind of jobs you want more of.</p>
+        <div class="svc-cta-act">
+          <a href="/contact.php" class="btn btn-lime btn-lg">Let's Talk</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1659,6 +1740,23 @@ include __DIR__ . '/includes/header.php';
     r.addEventListener('mouseenter', () => show(r.dataset.i));
     r.addEventListener('focusin', () => show(r.dataset.i));
   });
+  const desk = window.matchMedia('(min-width: 901px)');
+  let ticking = false;
+  const onScroll = () => {
+    ticking = false;
+    if (!desk.matches) return;
+    const line = window.innerHeight * 0.42;
+    let pick = rows[0];
+    rows.forEach((r) => {
+      if (r.getBoundingClientRect().top <= line) pick = r;
+    });
+    if (!pick.classList.contains('is-active')) show(pick.dataset.i);
+  };
+  window.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(onScroll);
+  }, { passive: true });
 })();
 </script>
 
@@ -1753,7 +1851,7 @@ include __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<section class="page-section about-cta-section">
+<!-- <section class="page-section about-cta-section">
   <div class="container">
     <div class="services-cta-band reveal">
       <div>
@@ -1761,6 +1859,21 @@ include __DIR__ . '/includes/header.php';
         <p>Show us the business you want to build. We'll show you what your digital presence can do better.</p>
       </div>
       <a href="/contact.php" class="btn btn-lime btn-lg" data-open-popup>Claim Your FREE Audit</a>
+    </div>
+  </div>
+</section> -->
+<section class="page-section ind-cta">
+  <div class="container">
+    <div class="services-cta-band services-cta-band--split ind-cta-split reveal">
+      <div class="svc-cta-art"><img src="/assets/images/cta-phones-industries-2.webp" alt="Handyman, plumbing and pool service websites on phones" width="1280" height="1120" loading="lazy" decoding="async"></div>
+      <div class="svc-cta-copy">
+        <p class="subheading">YOUR TRADE, BUILT TO WIN</p>
+        <h3>You know your trade. We know how to make it easier to choose you.</h3>
+        <p>Show us the business you want to build. We'll show you what your digital presence can do better.</p>
+        <div class="svc-cta-act">
+          <a href="/contact.php" class="btn btn-lime btn-lg" data-open-popup>Claim Your FREE Audit</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
