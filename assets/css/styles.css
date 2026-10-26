@@ -10786,13 +10786,3 @@ html body .services-cta-band.services-cta-band--split {
   background-repeat: no-repeat;
   background-blend-mode: normal, normal, normal, multiply;
 }
-/* Industries: last CTA card at 80% width */
-.ind-cta-split.ind-cta-split--narrow {
-  width: 80%;
-  margin-inline: auto;
-}
-@media (max-width: 900px) {
-  .ind-cta-split.ind-cta-split--narrow {
-    width: 100%;
-  }
-}

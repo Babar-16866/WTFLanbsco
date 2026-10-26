@@ -356,6 +356,18 @@ include __DIR__ . '/includes/testimonialslider.php';
   });
   const desk = window.matchMedia('(min-width: 901px)');
   let ticking = false;
+  let lockUntil = 0;
+  let lockedOnce = false;
+  let lastY = window.scrollY;
+  const locked = () => performance.now() < lockUntil;
+  const block = (e) => {
+    if (locked()) e.preventDefault();
+  };
+  window.addEventListener('wheel', block, { passive: false });
+  window.addEventListener('touchmove', block, { passive: false });
+  window.addEventListener('keydown', (e) => {
+    if (locked() && ['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', ' ', 'Spacebar', 'End', 'Home'].includes(e.key)) e.preventDefault();
+  });
   const onScroll = () => {
     ticking = false;
     if (!desk.matches) return;
@@ -365,6 +377,13 @@ include __DIR__ . '/includes/testimonialslider.php';
     const p = total > 0 ? Math.min(0.999, Math.max(0, (f.top - b.top) / total)) : 0;
     const pick = rows[Math.floor(p * rows.length)];
     if (!pick.classList.contains('is-active')) show(pick.dataset.i);
+    const last = pick === rows[rows.length - 1];
+    if (last && !lockedOnce && window.scrollY > lastY) {
+      lockedOnce = true;
+      lockUntil = performance.now() + 1000;
+    }
+    if (!last && window.scrollY < lastY) lockedOnce = false;
+    lastY = window.scrollY;
   };
   window.addEventListener('scroll', () => {
     scrollingUntil = performance.now() + 250;
@@ -468,7 +487,7 @@ include __DIR__ . '/includes/testimonialslider.php';
 
 <section class="page-section ind-cta">
   <div class="container">
-    <div class="services-cta-band services-cta-band--split ind-cta-split ind-cta-split--narrow reveal">
+    <div class="services-cta-band services-cta-band--split ind-cta-split reveal">
       <div class="svc-cta-art"><img src="/assets/images/cta-phones-industries-2.webp" alt="Handyman, plumbing and pool service websites on phones" width="1280" height="1120" loading="lazy" decoding="async"></div>
       <div class="svc-cta-copy">
         <p class="subheading">YOUR TRADE, BUILT TO WIN</p>

@@ -492,6 +492,26 @@
     ticking = true;
     requestAnimationFrame(frame);
   };
+  const eager = (scope) => {
+    scope.querySelectorAll('img[loading="lazy"]').forEach((img) => {
+      img.loading = 'eager';
+    });
+  };
+  const sections = Array.from(document.querySelectorAll('.rx > section, .rx-canvas > section, .rx-canvas'));
+  if ('IntersectionObserver' in window) {
+    const ahead = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        ahead.unobserve(entry.target);
+        eager(entry.target);
+      });
+    }, { rootMargin: '1800px 0px 1800px 0px' });
+    sections.forEach((sec) => ahead.observe(sec));
+  }
+  window.addEventListener('load', () => {
+    setTimeout(() => sections.forEach(eager), 1500);
+  }, { once: true });
+
   const relayout = () => {
     layouts.forEach((l) => l());
     request();
