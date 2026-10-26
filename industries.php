@@ -1736,8 +1736,12 @@ include __DIR__ . '/includes/testimonialslider.php';
     rows.forEach((r) => r.classList.toggle('is-active', r.dataset.i === i));
     parts.forEach((p) => p.classList.toggle('is-active', p.dataset.i === i));
   };
+  let scrollingUntil = 0;
   rows.forEach((r) => {
-    r.addEventListener('mouseenter', () => show(r.dataset.i));
+    r.addEventListener('pointermove', () => {
+      if (performance.now() < scrollingUntil) return;
+      if (!r.classList.contains('is-active')) show(r.dataset.i);
+    });
     r.addEventListener('focusin', () => show(r.dataset.i));
   });
   const desk = window.matchMedia('(min-width: 901px)');
@@ -1753,10 +1757,12 @@ include __DIR__ . '/includes/testimonialslider.php';
     if (!pick.classList.contains('is-active')) show(pick.dataset.i);
   };
   window.addEventListener('scroll', () => {
+    scrollingUntil = performance.now() + 250;
     if (ticking) return;
     ticking = true;
     requestAnimationFrame(onScroll);
   }, { passive: true });
+  onScroll();
 })();
 </script>
 
