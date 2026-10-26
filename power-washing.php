@@ -84,8 +84,8 @@ include __DIR__ . '/includes/header.php';
       <a href="tel:+15123379723" class="rx-cta"><span>BOOK A CALL</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
     </div>
     <div class="rx-ba-stage" data-rx-ba-stage>
-      <img class="rx-ba-before" src="/assets/images/pw-ba-before.webp" alt="Moss and grime in paving joints before washing" width="1600" height="1067" loading="lazy" decoding="async">
-      <div class="rx-ba-after"><img src="/assets/images/pw-ba-after.webp" alt="A clean driveway after washing" width="1600" height="1067" loading="lazy" decoding="async"></div>
+      <img class="rx-ba-before" src="/assets/images/pw-ba-before.webp" alt="Grimy, weathered deck boards" width="1600" height="1067" loading="lazy" decoding="async">
+      <div class="rx-ba-after"><img src="/assets/images/pw-ba-after.webp" alt="A clean deck ready for the patio set" width="1600" height="1067" loading="lazy" decoding="async"></div>
       <span class="rx-ba-handle" aria-hidden="true"><span></span></span>
       <span class="rx-ba-chip rx-ba-chip--b">Before</span>
       <span class="rx-ba-chip rx-ba-chip--a">After</span>
