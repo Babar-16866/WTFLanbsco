@@ -208,98 +208,40 @@ include __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<section class="svc-showcase ind-svc" id="featured-services">
-  <div class="container">
-    <div class="section-header center reveal">
-      <p class="subheading">IN EVERY TRADE</p>
-      <h2>One team for the site, the search <span class="heading-accent">and the ads.</span></h2>
+<section class="rail-section how-rail-section" id="process" data-rail>
+  <div class="rail-sticky">
+    <div class="container">
+      <div class="section-header rail-head reveal">
+        <p class="subheading">IN EVERY TRADE</p>
+        <h2 class="home-title">ONE TEAM FOR THE SITE, THE SEARCH <span class="heading-accent">AND THE ADS.</span></h2>
+      </div>
     </div>
-    <div class="wtabs reveal" data-wtabs>
-      <div class="wtabs-list" role="tablist" aria-label="Industries">
-        <button type="button" class="wtabs-tab is-active" role="tab" id="indTab1" aria-controls="indPanel1" aria-selected="true"><span class="wtabs-ico"><svg viewBox="-34 -34 68 68" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M-30 4 l30 -28 l30 28 M-22 -4 v32 h44 v-32 M-6 28 v-16 h12 v16 M14 -14 v-12 h8 v20"/></svg></span><span class="wtabs-name">Remodeling</span><span class="wtabs-bar" aria-hidden="true"></span></button>
-        <button type="button" class="wtabs-tab" role="tab" id="indTab2" aria-controls="indPanel2" aria-selected="false"><span class="wtabs-ico"><svg viewBox="-34 -34 68 68" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M-30 -14 a10 10 0 0 0 20 0 a10 10 0 0 0 20 0 a10 10 0 0 0 20 0 M-20 4 a10 10 0 0 0 20 0 a10 10 0 0 0 20 0 M-30 22 a10 10 0 0 0 20 0 a10 10 0 0 0 20 0 a10 10 0 0 0 20 0"/></svg></span><span class="wtabs-name">Roofing</span><span class="wtabs-bar" aria-hidden="true"></span></button>
-        <button type="button" class="wtabs-tab" role="tab" id="indTab3" aria-controls="indPanel3" aria-selected="false"><span class="wtabs-ico"><svg viewBox="-34 -34 68 68" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M-30 -8 h40 v12 h-40 z M-8 4 l-6 24 h12 l4 -24 M10 -2 h22 M-30 -4 h-4 M-2 8 c4 0 6 4 4 8"/></svg></span><span class="wtabs-name">Power Washing</span><span class="wtabs-bar" aria-hidden="true"></span></button>
-        <button type="button" class="wtabs-tab" role="tab" id="indTab4" aria-controls="indPanel4" aria-selected="false"><span class="wtabs-ico"><svg viewBox="-34 -34 68 68" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M0 -28 v56 M-24 -14 l48 28 M-24 14 l48 -28 M-6 -24 l6 6 l6 -6 M-6 24 l6 -6 l6 6"/></svg></span><span class="wtabs-name">HVAC</span><span class="wtabs-bar" aria-hidden="true"></span></button>
-        <button type="button" class="wtabs-tab" role="tab" id="indTab5" aria-controls="indPanel5" aria-selected="false"><span class="wtabs-ico"><svg viewBox="-34 -34 68 68" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M-28 -10 h20 a14 14 0 0 1 14 14 v6 M-28 -18 v16 M-16 -10 v-10 h-8 h16 M2 14 a3 3 0 0 0 6 0 c0 -3 -3 -6 -3 -6 c0 0 -3 3 -3 6 M-2 22 a3 3 0 0 0 6 0 c0 -3 -3 -6 -3 -6 c0 0 -3 3 -3 6"/></svg></span><span class="wtabs-name">Plumbing</span><span class="wtabs-bar" aria-hidden="true"></span></button>
-        <button type="button" class="wtabs-tab" role="tab" id="indTab6" aria-controls="indPanel6" aria-selected="false"><span class="wtabs-ico"><svg viewBox="-34 -34 68 68" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M-26 -20 h30 a6 6 0 0 1 6 6 v6 h-36 z M-4 -8 v40 M4 -8 v40 M-4 32 h8"/></svg></span><span class="wtabs-name">Handyman</span><span class="wtabs-bar" aria-hidden="true"></span></button>
-        <button type="button" class="wtabs-tab" role="tab" id="indTab7" aria-controls="indPanel7" aria-selected="false"><span class="wtabs-ico"><svg viewBox="-34 -34 68 68" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M-24 24 C-24 -10 4 -28 28 -28 C28 -4 10 24 -24 24 z M-24 24 L14 -14 M-6 6 l10 2 M2 -2 l10 2"/></svg></span><span class="wtabs-name">Landscaping</span><span class="wtabs-bar" aria-hidden="true"></span></button>
-        <button type="button" class="wtabs-tab" role="tab" id="indTab8" aria-controls="indPanel8" aria-selected="false"><span class="wtabs-ico"><svg viewBox="-34 -34 68 68" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M-14 -32 v64 M14 -32 v64 M-14 -32 c0 -8 -10 -8 -10 0 M14 -32 c0 -8 10 -8 10 0 M-14 -14 h28 M-14 2 h28 M-14 18 h28"/></svg></span><span class="wtabs-name">Pool Service</span><span class="wtabs-bar" aria-hidden="true"></span></button>
-        <button type="button" class="wtabs-tab" role="tab" id="indTab9" aria-controls="indPanel9" aria-selected="false"><span class="wtabs-ico"><svg viewBox="-34 -34 68 68" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M-16 0 a6 5 0 1 0 0.1 0 M-4 0 a5 4 0 1 0 0.1 0 M10 0 a8 6 0 1 0 0.1 0 M-22 -2 l-6 -10 M-22 -2 l-8 -4 M-8 -2 l-6 -12 M-8 2 l-6 12 M-2 -2 l2 -12 M-2 2 l2 12 M4 -2 l8 -10 M4 2 l8 10"/></svg></span><span class="wtabs-name">Pest Control</span><span class="wtabs-bar" aria-hidden="true"></span></button>
-      </div>
-      <div class="wtabs-panels">
-        <article class="wtabs-panel is-active" role="tabpanel" id="indPanel1" aria-labelledby="indTab1">
-          <div class="wtabs-media"><img src="/assets/images/industry-remodelers-2.webp" alt="Remodeling" loading="lazy" decoding="async"></div>
-          <div class="wtabs-copy">
-            <h3>Make the craftsmanship worth the quote — before the first walkthrough.</h3>
-            <p>The homeowner sees your finished kitchen, compares your process and checks your reputation before inviting you over. Show the transformation, build confidence and attract better-fit project inquiries.</p>
-            <a href="/remodelers.php" class="btn btn-lime wtabs-link">Explore Remodeling</a>
-          </div>
+    <div class="rail-viewport">
+      <div class="rail-track">
+        <article class="rail-card">
+          <span class="rail-num">01</span>
+          <h3>Websites</h3>
+          <p>Fast, mobile-first sites built around the way your buyers shop, with booking and quote forms on every page.</p>
         </article>
-        <article class="wtabs-panel" role="tabpanel" id="indPanel2" aria-labelledby="indTab2" aria-hidden="true">
-          <div class="wtabs-media"><img src="/assets/images/industry-roofing-2.webp" alt="Roofing" loading="lazy" decoding="async"></div>
-          <div class="wtabs-copy">
-            <h3>Be the trusted choice when the roof — and the decision — matters.</h3>
-            <p>Whether it's storm damage, repairs or a full replacement, homeowners need a reason to feel safe making a high-stakes choice. Show proof, explain the next step and make inspections easier to request.</p>
-            <a href="/roofing.php" class="btn btn-lime wtabs-link">Explore Roofing</a>
-          </div>
+        <article class="rail-card">
+          <span class="rail-num">02</span>
+          <h3>Local SEO</h3>
+          <p>Service and city pages, Google Business Profile work and reviews that put you in the map pack where you want work.</p>
         </article>
-        <article class="wtabs-panel" role="tabpanel" id="indPanel3" aria-labelledby="indTab3" aria-hidden="true">
-          <div class="wtabs-media"><img src="/assets/images/industry-power-washing-2.webp" alt="Power Washing" loading="lazy" decoding="async"></div>
-          <div class="wtabs-copy">
-            <h3>Let the before-and-after do some of the selling.</h3>
-            <p>Driveways, siding, patios and commercial exteriors are visual proof waiting to happen. Make your results easy to see, your coverage easy to understand and the quote easy to request.</p>
-            <a href="/power-washing.php" class="btn btn-lime wtabs-link">Explore Power Washing</a>
-          </div>
+        <article class="rail-card">
+          <span class="rail-num">03</span>
+          <h3>Google Ads</h3>
+          <p>Campaigns built around calls and booked jobs, with tracking that shows which clicks turned into revenue.</p>
         </article>
-        <article class="wtabs-panel" role="tabpanel" id="indPanel4" aria-labelledby="indTab4" aria-hidden="true">
-          <div class="wtabs-media"><img src="/assets/images/industry-hvac-2.webp" alt="HVAC" loading="lazy" decoding="async"></div>
-          <div class="wtabs-copy">
-            <h3>When the AC quits, your website shouldn't slow down the rescue.</h3>
-            <p>Urgent service customers want a clear path to help. Replacement customers need confidence in the investment. Your digital experience should make room for both without making either work harder.</p>
-            <a href="/hvac.php" class="btn btn-lime wtabs-link">Explore HVAC</a>
-          </div>
-        </article>
-        <article class="wtabs-panel" role="tabpanel" id="indPanel5" aria-labelledby="indTab5" aria-hidden="true">
-          <div class="wtabs-media"><img src="/assets/images/industry-plumbing-2.webp" alt="Plumbing" loading="lazy" decoding="async"></div>
-          <div class="wtabs-copy">
-            <h3>Be easy to trust. Even easier to call.</h3>
-            <p>From a leak that can't wait to a water-heater replacement that needs research, plumbing buyers need clear services, credible proof and a direct next step. We design around the urgency and value of each job.</p>
-            <a href="/plumbing.php" class="btn btn-lime wtabs-link">Explore Plumbing</a>
-          </div>
-        </article>
-        <article class="wtabs-panel" role="tabpanel" id="indPanel6" aria-labelledby="indTab6" aria-hidden="true">
-          <div class="wtabs-media"><img src="/assets/images/industry-handyman-2.webp" alt="Handyman" loading="lazy" decoding="async"></div>
-          <div class="wtabs-copy">
-            <h3>Make it simple to see what you fix — and book the right job.</h3>
-            <p>A long list of odd jobs shouldn't turn into a confusing website. Explain the work you take on, show that you're dependable and help homeowners request the right service without endless back-and-forth.</p>
-            <a href="/handyman.php" class="btn btn-lime wtabs-link">Explore Handyman</a>
-          </div>
-        </article>
-        <article class="wtabs-panel" role="tabpanel" id="indPanel7" aria-labelledby="indTab7" aria-hidden="true">
-          <div class="wtabs-media"><img src="/assets/images/industry-landscaping-2.webp" alt="Landscaping" loading="lazy" decoding="async"></div>
-          <div class="wtabs-copy">
-            <h3>Win the dream yard. Then keep the property looking its best.</h3>
-            <p>Design-build projects and routine maintenance attract different buyers. Show finished spaces with pride, make your service areas clear and create simple paths for consultations and recurring care.</p>
-            <a href="/landscaping.php" class="btn btn-lime wtabs-link">Explore Landscaping</a>
-          </div>
-        </article>
-        <article class="wtabs-panel" role="tabpanel" id="indPanel8" aria-labelledby="indTab8" aria-hidden="true">
-          <div class="wtabs-media"><img src="/assets/images/industry-pool-services-2.webp" alt="Pool Service" loading="lazy" decoding="async"></div>
-          <div class="wtabs-copy">
-            <h3>Turn &ldquo;Can you clean my pool?&rdquo; into a lasting customer relationship.</h3>
-            <p>Make weekly service plans, repair options and coverage easy to understand. Give homeowners the confidence and convenience to choose ongoing pool care.</p>
-            <a href="/pool-services.php" class="btn btn-lime wtabs-link">Explore Pool Service</a>
-          </div>
-        </article>
-        <article class="wtabs-panel" role="tabpanel" id="indPanel9" aria-labelledby="indTab9" aria-hidden="true">
-          <div class="wtabs-media"><img src="/assets/images/industry-pest-control-2.webp" alt="Pest Control" loading="lazy" decoding="async"></div>
-          <div class="wtabs-copy">
-            <h3>Sell the peace of mind, not just the one-time spray.</h3>
-            <p>Homeowners want a problem handled — and ideally kept from coming back. Build clear service journeys that explain treatment options, earn trust and make ongoing protection straightforward.</p>
-            <a href="/pest-control.php" class="btn btn-lime wtabs-link">Explore Pest Control</a>
-          </div>
+        <article class="rail-card">
+          <span class="rail-num">04</span>
+          <h3>Social Media</h3>
+          <p>Project photos, reviews and seasonal offers that keep you in front of homeowners between jobs.</p>
         </article>
       </div>
+    </div>
+    <div class="container rail-cta">
+      <a href="/contact.php" class="btn btn-lime btn-lg" data-open-step-popup>Let&rsquo;s Talk About Your Trade</a>
     </div>
   </div>
 </section>
