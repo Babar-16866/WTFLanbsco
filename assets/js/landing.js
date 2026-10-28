@@ -17,43 +17,37 @@
   }, { threshold: 0.15 });
   document.querySelectorAll('[data-lp-in]').forEach((el) => io.observe(el));
 
-  const statement = root.querySelector('[data-lp-words]');
-  const words = [];
-  if (statement) {
-    const gold = (statement.dataset.gold || '').split('|');
-    const text = statement.textContent.trim();
-    statement.textContent = '';
-    text.split(/\s+/).forEach((w, i) => {
-      const s = document.createElement('span');
-      s.className = 'lp-w' + (gold.includes(w.replace(/[.,]/g, '')) ? ' lp-w--gold' : '');
-      s.textContent = w;
-      statement.appendChild(s);
-      statement.appendChild(document.createTextNode(' '));
-      words.push(s);
-    });
+  const toasts = Array.from(root.querySelectorAll('.lp-toast'));
+  if (toasts.length) {
+    let t = 0;
+    const cycle = () => {
+      toasts.forEach((el, i) => el.classList.toggle('is-on', i === t % toasts.length || i === (t + 1) % toasts.length));
+      t += 1;
+    };
+    setTimeout(cycle, 900);
+    if (!reduce) setInterval(cycle, 2600);
   }
 
-  const art = root.querySelector('.lp-hero-art img');
-  const player = root.querySelector('[data-lp-player]');
+  const wall = root.querySelector('.lp-wall-tilt');
+  const ind = root.querySelector('.lp-ind');
+  const track = ind && ind.querySelector('.lp-ind-track');
+  const bar = ind && ind.querySelector('.lp-ind-bar');
 
   let ticking = false;
   const frame = () => {
     ticking = false;
-    const vh = window.innerHeight / zoom();
-    if (words.length) {
-      const r = statement.getBoundingClientRect();
-      const p = Math.min(1, Math.max(0, (vh * 0.85 - r.top) / (r.height + vh * 0.35)));
-      const on = Math.round(p * words.length);
-      words.forEach((w, i) => w.classList.toggle('is-on', i < on));
-    }
-    if (art && !reduce) {
+    if (wall && !reduce) {
       const r = hero.getBoundingClientRect();
-      art.style.setProperty('--lp-p', Math.min(1, Math.max(0, -r.top / r.height)).toFixed(3));
+      wall.style.setProperty('--lp-p', Math.min(1, Math.max(0, -r.top / r.height)).toFixed(3));
     }
-    if (player && !reduce && window.innerWidth > 800) {
-      const r = player.getBoundingClientRect();
-      const p = Math.min(1, Math.max(0, (vh - r.top) / (vh * 0.9)));
-      player.style.setProperty('--lp-v', p.toFixed(3));
+    if (track && window.innerWidth > 800) {
+      const r = ind.getBoundingClientRect();
+      const vh = window.innerHeight / zoom();
+      const total = r.height - vh;
+      const p = total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
+      const max = Math.max(0, track.scrollWidth - track.parentElement.clientWidth);
+      track.style.setProperty('--lp-x', (p * max).toFixed(1));
+      if (bar) bar.style.setProperty('--lp-ip', p.toFixed(3));
     }
   };
   const request = () => {
@@ -65,6 +59,7 @@
   window.addEventListener('resize', request);
   frame();
 
+  const player = root.querySelector('[data-lp-player]');
   if (player) {
     const video = player.querySelector('video');
     const back = player.querySelector('.lp-skip--back');
@@ -110,39 +105,5 @@
         seek(-5);
       }
     });
-  }
-
-  const list = root.querySelector('.lp-ind-list');
-  const float = root.querySelector('.lp-ind-float');
-  const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-  if (list && float && fine) {
-    const fimg = float.querySelector('img');
-    let lastX = 0;
-    const place = (e) => {
-      const z = zoom();
-      const x = e.clientX / z;
-      const y = e.clientY / z;
-      float.style.setProperty('--fx', (x + 30).toFixed(1) + 'px');
-      float.style.setProperty('--fy', (y - 110).toFixed(1) + 'px');
-      float.style.setProperty('--fr', Math.max(-8, Math.min(8, (x - lastX) * 0.6)).toFixed(2) + 'deg');
-      lastX = x;
-    };
-    list.querySelectorAll('[data-img]').forEach((row) => {
-      const pre = new Image();
-      pre.src = row.dataset.img;
-      row.addEventListener('pointerenter', (e) => {
-        fimg.src = row.dataset.img;
-        if (!float.classList.contains('is-on')) {
-          float.style.transition = 'none';
-          place(e);
-          void float.offsetWidth;
-          float.style.transition = '';
-        }
-        float.classList.add('is-on');
-      });
-    });
-    list.addEventListener('pointermove', place);
-    list.addEventListener('pointerleave', () => float.classList.remove('is-on'));
-    window.addEventListener('scroll', () => float.classList.remove('is-on'), { passive: true });
   }
 })();
