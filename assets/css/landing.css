@@ -1195,10 +1195,13 @@
   }
 }
 .lp-stack-rest {
-  height: 75vh;
+  height: 35vh;
 }
 @media (max-width: 800px) {
   .lp-stack-rest {
-    height: 45vh;
+    height: 25vh;
   }
+}
+.lp-stack .lp-card:nth-last-child(2) {
+  --i: 2 !important;
 }
