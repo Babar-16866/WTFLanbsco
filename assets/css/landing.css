@@ -1175,3 +1175,22 @@
 .lp-wall::after {
   background: linear-gradient(90deg, var(--lp-cream) 0, rgba(243, 238, 223, 0) 8%, rgba(243, 238, 223, 0) 92%, var(--lp-cream) 100%);
 }
+.lp-wall {
+  padding: 80px 0 120px;
+}
+.lp-wall-tilt {
+  gap: 26px;
+}
+.lp-wall-row {
+  gap: 26px;
+}
+.lp-shot {
+  box-shadow: 0 2px 4px rgba(16, 35, 27, 0.06), 0 14px 28px -12px rgba(16, 35, 27, 0.28);
+  outline: 1px solid rgba(251, 247, 236, 0.6);
+  outline-offset: -1px;
+}
+@media (max-width: 800px) {
+  .lp-wall {
+    padding: 50px 0 80px;
+  }
+}
