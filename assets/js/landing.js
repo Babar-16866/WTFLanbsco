@@ -35,7 +35,11 @@
   let lockUntil = 0;
   let lockedOnce = false;
   let lastY = window.scrollY;
+  let lockY = 0;
   const locked = () => performance.now() < lockUntil;
+  window.addEventListener('scroll', () => {
+    if (locked() && Math.abs(window.scrollY - lockY) > 1) window.scrollTo({ top: lockY, behavior: 'instant' });
+  }, { passive: true });
   const block = (e) => {
     if (locked()) e.preventDefault();
   };
@@ -54,18 +58,19 @@
     }
     if (track && window.innerWidth > 800) {
       const r = ind.getBoundingClientRect();
-      const vh = window.innerHeight / zoom();
-      const total = r.height - vh;
+      const total = r.height - window.innerHeight;
       const p = total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
       const max = Math.max(0, track.scrollWidth - track.parentElement.clientWidth);
       track.style.setProperty('--lp-x', (p * max).toFixed(1));
       const y = window.scrollY;
-      if (p >= 0.999 && !lockedOnce && y > lastY) {
+      if (p >= 0.985 && !lockedOnce && y > lastY) {
         lockedOnce = true;
-        lockUntil = performance.now() + 1500;
+        lockY = Math.round(r.top + total + y);
+        lockUntil = performance.now() + 1000;
+        window.scrollTo({ top: lockY, behavior: 'instant' });
       }
-      if (p < 0.95) lockedOnce = false;
-      lastY = y;
+      if (p < 0.9) lockedOnce = false;
+      lastY = window.scrollY;
     }
   };
   const request = () => {

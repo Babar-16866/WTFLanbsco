@@ -64,7 +64,9 @@ include __DIR__ . '/contact-section.php';
 
   <?php if ($current_page !== 'works'): ?>
   <!-- Sticky work CTA -->
+  <?php if (empty($hide_work_cta)): ?>
   <a href="/works.php" class="btn btn-lime sticky-work-cta" id="stickyWorkCta" aria-hidden="true" tabindex="-1">Just Show Me The Work</a>
+  <?php endif; ?>
   <?php endif; ?>
 
   <!-- Brand popup -->

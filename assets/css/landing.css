@@ -1169,3 +1169,9 @@
     top: 50%;
   }
 }
+.lp-wall {
+  background: transparent;
+}
+.lp-wall::after {
+  background: linear-gradient(90deg, var(--lp-cream) 0, rgba(243, 238, 223, 0) 8%, rgba(243, 238, 223, 0) 92%, var(--lp-cream) 100%);
+}
