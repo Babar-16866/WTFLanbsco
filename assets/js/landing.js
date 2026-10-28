@@ -31,7 +31,19 @@
   const wall = root.querySelector('.lp-wall-tilt');
   const ind = root.querySelector('.lp-ind');
   const track = ind && ind.querySelector('.lp-ind-track');
-  const bar = ind && ind.querySelector('.lp-ind-bar');
+
+  let lockUntil = 0;
+  let lockedOnce = false;
+  let lastY = window.scrollY;
+  const locked = () => performance.now() < lockUntil;
+  const block = (e) => {
+    if (locked()) e.preventDefault();
+  };
+  window.addEventListener('wheel', block, { passive: false });
+  window.addEventListener('touchmove', block, { passive: false });
+  window.addEventListener('keydown', (e) => {
+    if (locked() && ['ArrowDown', 'PageDown', ' ', 'End'].includes(e.key)) e.preventDefault();
+  });
 
   let ticking = false;
   const frame = () => {
@@ -47,7 +59,13 @@
       const p = total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
       const max = Math.max(0, track.scrollWidth - track.parentElement.clientWidth);
       track.style.setProperty('--lp-x', (p * max).toFixed(1));
-      if (bar) bar.style.setProperty('--lp-ip', p.toFixed(3));
+      const y = window.scrollY;
+      if (p >= 0.999 && !lockedOnce && y > lastY) {
+        lockedOnce = true;
+        lockUntil = performance.now() + 1500;
+      }
+      if (p < 0.95) lockedOnce = false;
+      lastY = y;
     }
   };
   const request = () => {

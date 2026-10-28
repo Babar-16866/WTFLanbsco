@@ -97,7 +97,6 @@ include __DIR__ . '/includes/header.php';
         <a class="lp-ind-card" href="/power-washing.php"><img src="/assets/images/industry-power-washing-1.webp" alt="" loading="lazy" decoding="async"><b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M6 18L18 6M8 6h10v10"/></svg></b><span><small>08 / 09</small><strong>Power Washing</strong><em>Before-and-afters that sell the next driveway.</em></span></a>
         <a class="lp-ind-card" href="/pest-control.php"><img src="/assets/images/industry-pest-control-1.webp" alt="" loading="lazy" decoding="async"><b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M6 18L18 6M8 6h10v10"/></svg></b><span><small>09 / 09</small><strong>Pest Control</strong><em>One-time sprays turned into yearly plans.</em></span></a>
     </div>
-    <div class="lp-ind-bar" aria-hidden="true"><span></span></div>
   </div>
 </section>
 
