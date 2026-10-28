@@ -37,9 +37,7 @@
   let lastY = window.scrollY;
   let lockY = 0;
   const locked = () => performance.now() < lockUntil;
-  window.addEventListener('scroll', () => {
-    if (locked() && Math.abs(window.scrollY - lockY) > 1) window.scrollTo({ top: lockY, behavior: 'instant' });
-  }, { passive: true });
+
   const block = (e) => {
     if (locked()) e.preventDefault();
   };
@@ -67,7 +65,7 @@
         lockedOnce = true;
         lockY = Math.round(r.top + total + y);
         lockUntil = performance.now() + 1000;
-        window.scrollTo({ top: lockY, behavior: 'instant' });
+        if (Math.abs(window.scrollY - lockY) > 1) window.scrollTo({ top: lockY, behavior: 'instant' });
       }
       if (p < 0.9) lockedOnce = false;
       lastY = window.scrollY;
