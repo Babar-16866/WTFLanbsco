@@ -1194,3 +1194,11 @@
     padding: 50px 0 80px;
   }
 }
+.lp-stack-rest {
+  height: 75vh;
+}
+@media (max-width: 800px) {
+  .lp-stack-rest {
+    height: 45vh;
+  }
+}

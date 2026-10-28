@@ -143,6 +143,7 @@ include __DIR__ . '/includes/header.php';
         </div>
         <div class="lp-card-art"><img src="/assets/images/service-graphic-design.jpg" alt="Looked after" loading="lazy" decoding="async"></div>
       </article>
+      <div class="lp-stack-rest" aria-hidden="true"></div>
     </div>
   </div>
 </section>
