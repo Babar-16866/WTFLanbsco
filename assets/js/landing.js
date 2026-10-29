@@ -94,6 +94,19 @@
     }, 3000);
   }
 
+  const bar = document.querySelector('.lp-bar');
+  const strip = document.querySelector('.lp-strip');
+  if (bar && strip) {
+    const feedEl = document.querySelector('.lp-feed');
+    const syncBar = () => {
+      const past = strip.getBoundingClientRect().bottom < 0;
+      bar.classList.toggle('is-on', past);
+      if (feedEl) feedEl.classList.toggle('is-on', past);
+    };
+    window.addEventListener('scroll', syncBar, { passive: true });
+    syncBar();
+  }
+
   const offer = document.querySelector('.lp-offer-card');
   document.querySelectorAll('[data-lp-reveal]').forEach((el) => {
     el.addEventListener('click', (e) => {
