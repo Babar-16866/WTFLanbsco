@@ -2063,3 +2063,11 @@ html[data-theme="dark"]:has(.rx--rf) body #contact.contact-section {
 :root:has(.rx[class*="rx--"]) .rx-ba.is-pin .rx-ben-list {
   --row: 100px;
 }
+
+/* Industry inner pages: keep the pinned benefits column inside the screen */
+:root:has(.rx[class*="rx--"]) .rx-ba.is-pin .rx-ben-list {
+  height: calc(var(--row) * 4);
+}
+:root:has(.rx[class*="rx--"]) .rx-ba-copy .rx-h2 {
+  font-size: clamp(40px, 3.8vw, 64px);
+}

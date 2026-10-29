@@ -2,8 +2,6 @@
   const root = document.querySelector('.lp');
   if (!root) return;
   document.documentElement.classList.add('lp-js');
-  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const zoom = () => parseFloat(getComputedStyle(document.documentElement).zoom) || 1;
 
   const hero = root.querySelector('.lp-hero');
   requestAnimationFrame(() => hero && hero.classList.add('is-in'));
@@ -17,74 +15,9 @@
   }, { threshold: 0.15 });
   document.querySelectorAll('[data-lp-in]').forEach((el) => io.observe(el));
 
-  const toasts = Array.from(root.querySelectorAll('.lp-toast'));
-  if (toasts.length) {
-    let t = 0;
-    const cycle = () => {
-      toasts.forEach((el, i) => el.classList.toggle('is-on', i === t % toasts.length || i === (t + 1) % toasts.length));
-      t += 1;
-    };
-    setTimeout(cycle, 900);
-    if (!reduce) setInterval(cycle, 2600);
-  }
-
-  const wall = root.querySelector('.lp-wall-tilt');
-  const ind = root.querySelector('.lp-ind');
-  const track = ind && ind.querySelector('.lp-ind-track');
-
-  let lockUntil = 0;
-  let lockedOnce = false;
-  let lastY = window.scrollY;
-  let lockY = 0;
-  const locked = () => performance.now() < lockUntil;
-
-  const block = (e) => {
-    if (locked()) e.preventDefault();
-  };
-  window.addEventListener('wheel', block, { passive: false });
-  window.addEventListener('touchmove', block, { passive: false });
-  window.addEventListener('keydown', (e) => {
-    if (locked() && ['ArrowDown', 'PageDown', ' ', 'End'].includes(e.key)) e.preventDefault();
-  });
-
-  let ticking = false;
-  const frame = () => {
-    ticking = false;
-    if (wall && !reduce) {
-      const r = hero.getBoundingClientRect();
-      wall.style.setProperty('--lp-p', Math.min(1, Math.max(0, -r.top / r.height)).toFixed(3));
-    }
-    if (track && window.innerWidth > 800) {
-      const r = ind.getBoundingClientRect();
-      const total = r.height - window.innerHeight;
-      const p = total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
-      const max = Math.max(0, track.scrollWidth - track.parentElement.clientWidth);
-      track.style.setProperty('--lp-x', (p * max).toFixed(1));
-      const y = window.scrollY;
-      if (p >= 0.985 && !lockedOnce && y > lastY) {
-        lockedOnce = true;
-        lockY = Math.round(r.top + total + y);
-        lockUntil = performance.now() + 1000;
-        if (Math.abs(window.scrollY - lockY) > 1) window.scrollTo({ top: lockY, behavior: 'instant' });
-      }
-      if (p < 0.9) lockedOnce = false;
-      lastY = window.scrollY;
-    }
-  };
-  const request = () => {
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(frame);
-  };
-  window.addEventListener('scroll', request, { passive: true });
-  window.addEventListener('resize', request);
-  frame();
-
   const player = root.querySelector('[data-lp-player]');
   if (player) {
     const video = player.querySelector('video');
-    const back = player.querySelector('.lp-skip--back');
-    const fwd = player.querySelector('.lp-skip--fwd');
     let hideTimer = 0;
     const toggle = () => {
       if (video.paused) video.play();
@@ -107,8 +40,8 @@
       if (e.target.closest('.lp-skip')) return;
       toggle();
     });
-    back.addEventListener('click', () => seek(-5));
-    fwd.addEventListener('click', () => seek(5));
+    player.querySelector('.lp-skip--back').addEventListener('click', () => seek(-5));
+    player.querySelector('.lp-skip--fwd').addEventListener('click', () => seek(5));
     player.addEventListener('mousemove', showSkips);
     player.addEventListener('mouseenter', showSkips);
     player.addEventListener('mouseleave', () => {
@@ -124,6 +57,77 @@
         seek(5);
       } else if (e.key === 'ArrowLeft') {
         seek(-5);
+      }
+    });
+  }
+
+  const feed = document.querySelector('.lp-feed');
+  if (feed) {
+    const people = [
+      ['Mike R.', 'Katy, TX'], ['Sarah L.', 'Austin, TX'], ['Daniel P.', 'Houston, TX'], ['Jessica M.', 'Tampa, FL'],
+      ['Chris B.', 'Dallas, TX'], ['Amanda K.', 'Phoenix, AZ'], ['Ryan T.', 'Orlando, FL'], ['Laura G.', 'Denver, CO'],
+      ['Kevin H.', 'Atlanta, GA'], ['Megan S.', 'Charlotte, NC'],
+    ];
+    const agents = ['Bilal', 'Noman', 'Sara'];
+    const events = [];
+    people.forEach(([n, c], i) => {
+      events.push({ ico: n[0], title: n + ' requested a free plan', sub: c + ' · just now', call: false });
+      events.push({ ico: '☎', title: agents[i % agents.length] + ' is on a call with ' + n, sub: 'Planning their new website', call: true });
+    });
+    let k = 0;
+    const show = () => {
+      const ev = events[k % events.length];
+      k += 1;
+      const el = document.createElement('div');
+      el.className = 'lp-note' + (ev.call ? ' is-call' : '');
+      el.innerHTML = '<i></i><span><strong></strong><small></small></span>';
+      el.querySelector('i').textContent = ev.ico;
+      el.querySelector('strong').textContent = ev.title;
+      el.querySelector('small').textContent = ev.sub;
+      feed.replaceChildren(el);
+      requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('is-on')));
+      setTimeout(() => el.classList.remove('is-on'), 4200);
+    };
+    setTimeout(() => {
+      show();
+      setInterval(show, 7000);
+    }, 3000);
+  }
+
+  const thanks = document.getElementById('lpThanks');
+  const openThanks = () => {
+    const popup = document.getElementById('stepPopup');
+    if (popup && !popup.hidden) {
+      popup.hidden = true;
+      document.body.classList.remove('step-popup-open', 'popup-open');
+    }
+    thanks.querySelector('[data-lp-queue]').textContent = '#' + (7 + Math.floor(Math.random() * 4));
+    thanks.hidden = false;
+  };
+  if (thanks) {
+    thanks.querySelectorAll('[data-lp-thanks-close]').forEach((el) => el.addEventListener('click', () => {
+      thanks.hidden = true;
+    }));
+    const send = (form, extra) => {
+      const data = new FormData(form);
+      Object.keys(extra || {}).forEach((key) => data.set(key, extra[key]));
+      fetch(form.action, { method: 'POST', body: data, keepalive: true }).catch(() => {});
+      form.reset();
+      openThanks();
+    };
+    document.querySelectorAll('form.contact-form--home').forEach((form) => {
+      form.addEventListener('submit', (e) => {
+        if (e.defaultPrevented) return;
+        e.preventDefault();
+        const btn = e.submitter;
+        send(form, btn && btn.name ? { [btn.name]: btn.value } : null);
+      });
+      const notBtn = form.querySelector('[data-not-committed]');
+      if (notBtn) {
+        notBtn.addEventListener('click', (e) => {
+          e.stopImmediatePropagation();
+          send(form, { commitment: 'Not committed' });
+        }, true);
       }
     });
   }
