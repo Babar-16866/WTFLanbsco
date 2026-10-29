@@ -1019,3 +1019,110 @@
     transform: none;
   }
 }
+
+/* Promise bar sits at the bottom like a sticky footer */
+.lp-body {
+  padding-top: 0;
+  padding-bottom: 44px;
+}
+.lp-bar {
+  top: auto;
+  bottom: 0;
+}
+.lp-feed {
+  bottom: 62px;
+}
+.lp-foot {
+  padding-bottom: 40px;
+}
+
+/* Hero without outer margins */
+.lp-hero {
+  margin: 0;
+  border-radius: 0;
+}
+
+/* Positive points */
+.lp-pains i {
+  background: var(--lp-lime);
+  color: var(--lp-deep);
+}
+.lp-pains i svg {
+  width: 13px;
+  height: 13px;
+}
+
+/* Eyebrow dot in the eyebrow colour */
+.lp-kicker::before {
+  background: currentColor;
+}
+
+/* Smaller service cards, all the same size */
+.lp-card {
+  min-height: 0;
+  height: 360px;
+}
+.lp-card-copy {
+  padding: 40px;
+}
+.lp-card h3 {
+  font-size: clamp(38px, 3.6vw, 58px);
+}
+
+/* Website line without a heading */
+.lp-works {
+  padding: 40px 0 10px;
+}
+.lp-works .lp-center:has(.lp-h2:empty) {
+  display: none;
+}
+.lp-works-line {
+  margin-top: 0;
+}
+
+/* Form sits straight on the card, revealed in place */
+.lp-offer-form {
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+.lp-offer-card {
+  grid-template-columns: minmax(0, 1fr);
+  transition: grid-template-columns 0.6s var(--lp-ease);
+}
+.lp-offer-card .lp-offer-form {
+  display: none;
+}
+.lp-offer-card.is-open {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+}
+.lp-offer-card.is-open .lp-offer-form {
+  display: block;
+  animation: lp-form-in 0.6s var(--lp-ease) both;
+}
+.lp-offer-card.is-open [data-lp-reveal] {
+  display: none;
+}
+@keyframes lp-form-in {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+}
+
+@media (max-width: 1000px) {
+  .lp-offer-card.is-open {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  .lp-card {
+    height: auto;
+  }
+}
+@media (max-width: 560px) {
+  .lp-body {
+    padding-bottom: 58px;
+  }
+  .lp-feed {
+    bottom: 70px;
+  }
+}

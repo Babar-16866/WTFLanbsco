@@ -94,13 +94,18 @@
     }, 3000);
   }
 
+  const offer = document.querySelector('.lp-offer-card');
+  document.querySelectorAll('[data-lp-reveal]').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      if (!offer) return;
+      e.preventDefault();
+      offer.classList.add('is-open');
+      document.getElementById('plan').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  });
+
   const thanks = document.getElementById('lpThanks');
   const openThanks = () => {
-    const popup = document.getElementById('stepPopup');
-    if (popup && !popup.hidden) {
-      popup.hidden = true;
-      document.body.classList.remove('step-popup-open', 'popup-open');
-    }
     thanks.querySelector('[data-lp-queue]').textContent = '#' + (7 + Math.floor(Math.random() * 4));
     thanks.hidden = false;
   };
