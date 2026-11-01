@@ -67,7 +67,7 @@ include __DIR__ . '/includes/header.php';
         <div class="rx-exp-body"><h3>Seasonal ad campaigns</h3><p>Openings, summer service and closings timed to the season.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/po-exp-6.webp?v=<?php echo asset_version('assets/images/po-exp-6.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/po-exp-6.webp?v=<?php echo asset_version('assets/images/po-exp-6.webp'); ?>" alt="" width="960" height="1200" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Reviews and reputation</h3><p>Turn happy swimmers into five-star proof on every platform.</p></div>
       </article>
       </div>
