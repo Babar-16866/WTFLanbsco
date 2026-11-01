@@ -2135,7 +2135,6 @@ html body .rx-work-canvas .work-card-body p {
   height: calc(52px * var(--sc));
   padding: 0 calc(12px * var(--sc));
   background: #fff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 .rx-ask-url {
   display: flex;
@@ -2180,31 +2179,12 @@ html body .rx-work-canvas .work-card-body p {
 .rx-ask-tools {
   position: relative;
   flex: none;
-  height: calc(83px * var(--sc));
+  height: calc(80px * var(--sc));
   background: #fff;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
-}
-.rx-ask-tool-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: calc(49px * var(--sc));
-  padding: 0 calc(8px * var(--sc));
-}
-.rx-ask-tool-row svg {
-  width: calc(24px * var(--sc));
-  height: calc(24px * var(--sc));
-  fill: none;
-  stroke: #1a73e8;
-  stroke-width: 2.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-.rx-ask-tool-row svg:last-child {
-  stroke-width: 3.6;
-}
-.rx-ask-tool-row svg.is-off {
-  stroke: #bdc1c6;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
 }
 .rx-ask-home {
   position: absolute;
