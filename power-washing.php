@@ -51,15 +51,15 @@ include __DIR__ . '/includes/header.php';
         <div class="rx-exp-body"><h3>Results-first websites</h3><p>Your best before and afters become the sales pitch on every page.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/pw-exp-2.webp?v=<?php echo asset_version('assets/images/pw-exp-2.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/pw-exp-2.webp?v=<?php echo asset_version('assets/images/pw-exp-2.webp'); ?>" alt="" width="960" height="1200" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Before and after sliders</h3><p>One swipe shows years of grime gone in a single visit.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/pw-exp-3.webp?v=<?php echo asset_version('assets/images/pw-exp-3.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/pw-exp-3.webp?v=<?php echo asset_version('assets/images/pw-exp-3.webp'); ?>" alt="" width="960" height="1200" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Instant quote forms</h3><p>Price from the address and surfaces, booked without phone tag.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/pw-exp-4.webp?v=<?php echo asset_version('assets/images/pw-exp-4.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/pw-exp-4.webp?v=<?php echo asset_version('assets/images/pw-exp-4.webp'); ?>" alt="" width="960" height="1200" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Local SEO by neighborhood</h3><p>Rank for house wash and driveway searches where you work.</p></div>
       </article>
       <article class="rx-exp-card">
@@ -67,7 +67,7 @@ include __DIR__ . '/includes/header.php';
         <div class="rx-exp-body"><h3>Google and Meta ads</h3><p>Video and photo ads built around booked jobs, not likes.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/pw-exp-6.webp?v=<?php echo asset_version('assets/images/pw-exp-6.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/pw-exp-6.webp?v=<?php echo asset_version('assets/images/pw-exp-6.webp'); ?>" alt="" width="960" height="1200" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Reviews and reputation</h3><p>Turn every clean house into five-star proof.</p></div>
       </article>
       </div>
