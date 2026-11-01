@@ -27,9 +27,9 @@ include __DIR__ . '/includes/header.php';
           <button type="button" class="hcar-arrow hcar-next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </div>
-      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-step-popup><span class="ihero-primary-label">Claim Your FREE Marketing Audit</span></a>
+      <a href="/contact" class="ihero-primary reveal reveal-delay-3" data-open-step-popup><span class="ihero-primary-label">Claim Your FREE Marketing Audit</span></a>
       <div class="ihero-secondary reveal reveal-delay-1">
-        <a href="/works.php" class="ihero-secondary-btn"><span class="ihero-secondary-label">See Our Work</span></a>
+        <a href="/works" class="ihero-secondary-btn"><span class="ihero-secondary-label">See Our Work</span></a>
       </div>
     </div>
   </div>
@@ -121,7 +121,7 @@ include __DIR__ . '/includes/header.php';
           <div class="wtabs-copy">
             <h3>SEO and local search</h3>
             <p>Help homeowners find your services in the areas you actually want to serve. We work on search-friendly pages, technical foundations, useful local content and visibility that connects to real inquiries.</p>
-            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
+            <a href="/contact" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
           </div>
         </article>
         <article class="wtabs-panel" role="tabpanel" id="wtabsPanel2" aria-labelledby="wtabsTab2" aria-hidden="true">
@@ -129,7 +129,7 @@ include __DIR__ . '/includes/header.php';
           <div class="wtabs-copy">
             <h3>Google Ads</h3>
             <p>Be visible when someone is actively searching for the work you do. Campaigns, location targeting, landing pages and tracking are built around qualified calls and estimate requests — not empty click volume.</p>
-            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
+            <a href="/contact" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
           </div>
         </article>
         <article class="wtabs-panel" role="tabpanel" id="wtabsPanel3" aria-labelledby="wtabsTab3" aria-hidden="true">
@@ -137,7 +137,7 @@ include __DIR__ . '/includes/header.php';
           <div class="wtabs-copy">
             <h3>Social media advertising</h3>
             <p>Turn projects, reviews, transformation videos and seasonal offers into attention worth earning. We use creative, targeted campaigns and retargeting to build familiarity before the customer is ready to book.</p>
-            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
+            <a href="/contact" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
           </div>
         </article>
         <article class="wtabs-panel" role="tabpanel" id="wtabsPanel4" aria-labelledby="wtabsTab4" aria-hidden="true">
@@ -145,7 +145,7 @@ include __DIR__ . '/includes/header.php';
           <div class="wtabs-copy">
             <h3>Branding and creative</h3>
             <p>If your website says premium but your ads, truck graphics and social content say otherwise, buyers notice. We bring your visuals and messaging into one recognizable, trustworthy identity.</p>
-            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
+            <a href="/contact" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
           </div>
         </article>
         <article class="wtabs-panel" role="tabpanel" id="wtabsPanel5" aria-labelledby="wtabsTab5" aria-hidden="true">
@@ -153,7 +153,7 @@ include __DIR__ . '/includes/header.php';
           <div class="wtabs-copy">
             <h3>Landing pages and conversion strategy</h3>
             <p>Don't send a homeowner searching for an emergency AC repair to the same page as someone planning a full system replacement. Match the offer, evidence and next step to the reason they clicked.</p>
-            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
+            <a href="/contact" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
           </div>
         </article>
         <article class="wtabs-panel" role="tabpanel" id="wtabsPanel6" aria-labelledby="wtabsTab6" aria-hidden="true">
@@ -161,7 +161,7 @@ include __DIR__ . '/includes/header.php';
           <div class="wtabs-copy">
             <h3>Connected marketing and measurement</h3>
             <p>We bring the pieces together where it makes sense, tracking calls, forms, bookings and lead quality so decisions are tied to business opportunities, not dashboard decorations.</p>
-            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
+            <a href="/contact" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
           </div>
         </article>
       </div>
@@ -218,7 +218,7 @@ include __DIR__ . '/includes/featured-work.php';
       </div>
     </div>
     <div class="container rail-cta">
-      <a href="/contact.php" class="btn btn-lime btn-lg" data-open-step-popup>Let&rsquo;s Do Step 1</a>
+      <a href="/contact" class="btn btn-lime btn-lg" data-open-step-popup>Let&rsquo;s Do Step 1</a>
     </div>
   </div>
 </section>
@@ -327,7 +327,7 @@ include __DIR__ . '/includes/testimonialslider.php';
         <h3>You're already good at the work. Let's get more of the right people to see it.</h3>
         <p>We'll look at the journey from first impression to inquiry and point out the opportunities worth fixing first.</p>
         <div class="svc-cta-act">
-          <a href="/contact.php" class="btn btn-lime btn-lg">Claim Your FREE Marketing Audit</a>
+          <a href="/contact" class="btn btn-lime btn-lg">Claim Your FREE Marketing Audit</a>
           <p class="services-cta-micro">No generic 50-page report. Just a useful conversation about what can work better.</p>
         </div>
       </div>

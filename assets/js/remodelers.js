@@ -41,7 +41,7 @@
     });
   }
 
-  const hero = root.querySelector('[data-rx-hero]');
+  const hero = document.querySelector('[data-rx-hero]');
   if (hero && !reduce) {
     const phones = hero.querySelector('.rx-hero-phones');
     tasks.push(() => {
@@ -50,7 +50,7 @@
     });
   }
 
-  const exp = root.querySelector('[data-rx-hscroll]');
+  const exp = document.querySelector('[data-rx-hscroll]');
   if (exp) {
     const pin = exp.querySelector('.rx-exp-pin');
     const view = exp.querySelector('.rx-exp-view');
@@ -124,7 +124,7 @@
     });
   }
 
-  const ba = root.querySelector('[data-rx-ba]');
+  const ba = document.querySelector('[data-rx-ba]');
   if (ba) {
     const pin = ba.querySelector('.rx-ba-pin');
     const stage = ba.querySelector('[data-rx-ba-stage]');
@@ -271,8 +271,8 @@
     }
   }
 
-  const askFrame = root.querySelector('.rx-ask-screen iframe');
-  const askFallback = root.querySelector('.rx-ask-fallback');
+  const askFrame = document.querySelector('.rx-ask-screen iframe');
+  const askFallback = document.querySelector('.rx-ask-fallback');
   if (askFrame && askFallback) {
     const askProgress = document.createElement('span');
     askProgress.className = 'rx-ask-progress';
@@ -347,7 +347,7 @@
     setInterval(attachDrag, 500);
   }
 
-  const ask = root.querySelector('[data-rx-ask]');
+  const ask = document.querySelector('[data-rx-ask]');
   if (ask) {
     const words = Array.from(ask.querySelectorAll('.rx-w'));
     const q = ask.querySelector('.rx-ask-q');
@@ -370,7 +370,7 @@
     });
   }
 
-  const niches = root.querySelector('[data-rx-niches]');
+  const niches = document.querySelector('[data-rx-niches]');
   if (niches && fine) {
     const float = niches.querySelector('.rx-niche-float');
     const fimg = float.querySelector('img');
@@ -428,9 +428,9 @@
     window.addEventListener('scroll', () => float.classList.remove('is-on'), { passive: true });
   }
 
-  const tabsSec = root.querySelector('[data-rx-tabs]');
+  const tabsSec = document.querySelector('[data-rx-tabs]');
   if (tabsSec) {
-    const DELAY = 7000;
+    const DELAY = 10000;
     const list = tabsSec.querySelector('.rx-tabs');
     const tabs = Array.from(tabsSec.querySelectorAll('[data-rx-tab]'));
     const panes = Array.from(tabsSec.querySelectorAll('.rx-feats'));
@@ -481,6 +481,48 @@
     }, { threshold: 0.35 }).observe(tabsSec.querySelector('.rx-stage'));
   }
 
+
+  const indNav = document.querySelector('[data-ind-nav]');
+  if (indNav) {
+    const navItems = Array.from(indNav.children);
+    const openBtn = indNav.querySelector('[data-ind-open]');
+    const closeBtn = indNav.querySelector('[data-ind-close]');
+    const pageTab = indNav.querySelector('[data-industry].is-active');
+    const measure = () => {
+      const open = indNav.classList.contains('is-open');
+      indNav.classList.add('is-measuring');
+      [true, false].forEach((state) => {
+        indNav.classList.toggle('is-open', state);
+        navItems.forEach((el) => {
+          const shown = state ? el !== openBtn : el === openBtn || el.classList.contains('is-active');
+          if (shown) el.style.setProperty('--w', Math.ceil(el.getBoundingClientRect().width / zoom()) + 16 + 'px');
+        });
+      });
+      indNav.classList.toggle('is-open', open);
+      void indNav.offsetWidth;
+      indNav.classList.remove('is-measuring');
+    };
+    const centerActive = () => {
+      const act = indNav.querySelector('[data-industry].is-active');
+      if (!act || indNav.scrollWidth <= indNav.clientWidth + 1) return;
+      const left = act.offsetLeft - (indNav.clientWidth - act.offsetWidth) / 2;
+      indNav.scrollTo({ left: Math.max(0, left), behavior: 'smooth' });
+    };
+    const setOpen = (open) => {
+      if (!open && pageTab && !pageTab.classList.contains('is-active')) pageTab.click();
+      indNav.classList.toggle('is-open', open);
+      if (openBtn) openBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (closeBtn) closeBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (open) setTimeout(centerActive, 650);
+      else indNav.scrollTo({ left: 0 });
+    };
+    measure();
+    indNav.classList.add('is-ready');
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+    window.addEventListener('load', measure, { once: true });
+    if (openBtn) openBtn.addEventListener('click', () => setOpen(true));
+    if (closeBtn) closeBtn.addEventListener('click', () => setOpen(false));
+  }
 
   let ticking = false;
   const frame = () => {

@@ -27,9 +27,9 @@ include __DIR__ . '/includes/header.php';
           <button type="button" class="hcar-arrow hcar-next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </div>
-      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-step-popup><span class="ihero-primary-label">Get a free consultation</span></a>
+      <a href="/contact" class="ihero-primary reveal reveal-delay-3" data-open-step-popup><span class="ihero-primary-label">Get a free consultation</span></a>
       <div class="ihero-secondary reveal reveal-delay-1">
-        <a href="/works.php" class="ihero-secondary-btn"><span class="ihero-secondary-label">See our work</span></a>
+        <a href="/works" class="ihero-secondary-btn"><span class="ihero-secondary-label">See our work</span></a>
       </div>
     </div>
   </div>
@@ -159,7 +159,7 @@ include __DIR__ . '/includes/header.php';
         <h3>Want to know what your site is missing?</h3>
         <p>Get a free audit with a clear list of what to fix first.</p>
         <div class="svc-cta-act">
-          <a href="/contact.php" class="btn btn-lime btn-lg" data-open-step-popup>Get a free consultation</a>
+          <a href="/contact" class="btn btn-lime btn-lg" data-open-step-popup>Get a free consultation</a>
         </div>
       </div>
       <div class="svc-cta-art"><img src="/assets/images/cta-phones-insights.webp" alt="Website analytics, blog article and audit screens on phones" width="1280" height="1120" loading="lazy"></div>

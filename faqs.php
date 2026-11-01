@@ -27,9 +27,9 @@ include __DIR__ . '/includes/header.php';
           <button type="button" class="hcar-arrow hcar-next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </div>
-      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-popup><span class="ihero-primary-label">Ask us anything</span></a>
+      <a href="/contact" class="ihero-primary reveal reveal-delay-3" data-open-popup><span class="ihero-primary-label">Ask us anything</span></a>
       <div class="ihero-secondary reveal reveal-delay-1">
-        <a href="/services.php" class="ihero-secondary-btn"><span class="ihero-secondary-label">See services</span></a>
+        <a href="/services" class="ihero-secondary-btn"><span class="ihero-secondary-label">See services</span></a>
       </div>
     </div>
   </div>
@@ -416,7 +416,7 @@ include __DIR__ . '/includes/header.php';
         <h3>Didn't find your answer?</h3>
         <p>Tell us what you're building - we'll respond quickly.</p>
         <div class="svc-cta-act">
-          <a href="/contact.php" class="btn btn-lime btn-lg" data-open-popup>Contact us</a>
+          <a href="/contact" class="btn btn-lime btn-lg" data-open-popup>Contact us</a>
         </div>
       </div>
       <div class="svc-cta-art"><img src="/assets/images/cta-phones-faqs.webp" alt="Website audit, FAQ and contact form screens on phones" width="1280" height="1120" loading="lazy"></div>

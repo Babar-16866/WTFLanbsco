@@ -30,7 +30,7 @@ include __DIR__ . '/includes/header.php';
       </div>
       <a href="#brief-form" class="ihero-primary reveal reveal-delay-3"><span class="ihero-primary-label">Fill out the brief</span></a>
       <div class="ihero-secondary reveal reveal-delay-1">
-        <a href="/works.php" class="ihero-secondary-btn"><span class="ihero-secondary-label">See our work</span></a>
+        <a href="/works" class="ihero-secondary-btn"><span class="ihero-secondary-label">See our work</span></a>
       </div>
     </div>
   </div>
@@ -100,10 +100,10 @@ include __DIR__ . '/includes/header.php';
         </ul>
 
         <div class="contact-page-links">
-          <a href="/website-brief.php">Website Brief</a>
-          <a href="/contact.php" data-open-step-popup>Free Consultation</a>
-          <a href="/digital-marketing.php">Digital Marketing</a>
-          <a href="/insights.php">Insights</a>
+          <a href="/website-brief">Website Brief</a>
+          <a href="/contact" data-open-step-popup>Free Consultation</a>
+          <a href="/digital-marketing">Digital Marketing</a>
+          <a href="/insights">Insights</a>
         </div>
       </aside>
 
@@ -222,10 +222,10 @@ include __DIR__ . '/includes/header.php';
           </div>
           <label class="check">
             <input type="checkbox" name="terms" required>
-            <span>I agree to the <a href="/privacy-policy.php">Privacy Policy</a> and <a href="/terms-and-conditions.php">Terms of use</a>.</span>
+            <span>I agree to the <a href="/privacy-policy">Privacy Policy</a> and <a href="/terms-and-conditions">Terms of use</a>.</span>
           </label>
           <button type="submit" class="btn btn-lime btn-lg btn-block">Send marketing brief</button>
-          <p class="form-disclaimer">By providing your phone number and submitting the form, you consent to be contacted by SMS and agree to our <a href="/privacy-policy.php#phone-number">Privacy Policy</a>. Message and data rates may apply.</p>
+          <p class="form-disclaimer">By providing your phone number and submitting the form, you consent to be contacted by SMS and agree to our <a href="/privacy-policy#phone-number">Privacy Policy</a>. Message and data rates may apply.</p>
         </form>
       </div>
     </div>

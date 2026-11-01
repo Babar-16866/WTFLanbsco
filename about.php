@@ -27,9 +27,9 @@ include __DIR__ . '/includes/header.php';
           <button type="button" class="hcar-arrow hcar-next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </div>
-      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-popup><span class="ihero-primary-label">Talk to Us</span></a>
+      <a href="/contact" class="ihero-primary reveal reveal-delay-3" data-open-popup><span class="ihero-primary-label">Talk to Us</span></a>
       <div class="ihero-secondary reveal reveal-delay-1">
-        <a href="/works.php" class="ihero-secondary-btn"><span class="ihero-secondary-label">See Our Work</span></a>
+        <a href="/works" class="ihero-secondary-btn"><span class="ihero-secondary-label">See Our Work</span></a>
       </div>
     </div>
   </div>
@@ -190,7 +190,7 @@ include __DIR__ . '/includes/header.php';
           </article>
         </div>
         <div class="about-equation-wrap">
-          <a href="/how-we-work.php" class="btn btn-lime btn-lg">See How We Work</a>
+          <a href="/how-we-work" class="btn btn-lime btn-lg">See How We Work</a>
         </div>
       </div>
     </div>
@@ -227,7 +227,7 @@ include __DIR__ . '/includes/testimonialslider.php';
         <h3>Want a team that treats your goals like more than another ticket?</h3>
         <p>Tell us what you're trying to build. We'll help you figure out the smartest next step, even if that means starting smaller.</p>
         <div class="svc-cta-act">
-          <a href="/contact.php" class="btn btn-lime btn-lg" data-open-popup>Let's Talk</a>
+          <a href="/contact" class="btn btn-lime btn-lg" data-open-popup>Let's Talk</a>
         </div>
       </div>
       <div class="svc-cta-art"><img src="/assets/images/cta-phones-about.webp" alt="Project timeline, team and lead report screens on phones" width="1280" height="1120" loading="lazy"></div>
@@ -297,7 +297,7 @@ include __DIR__ . '/includes/testimonialslider.php';
         <h3>Let's have a conversation.</h3>
         <p>Tell us about the business. We'll help you define the next move.</p>
       </div>
-      <a href="/contact.php" class="btn btn-lime btn-lg" data-open-popup>Claim Your FREE Audit</a>
+      <a href="/contact" class="btn btn-lime btn-lg" data-open-popup>Claim Your FREE Audit</a>
     </div>
   </div>
 </section>

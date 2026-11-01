@@ -28,7 +28,7 @@ include __DIR__ . '/includes/header.php';
           <button type="button" class="hcar-arrow hcar-next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </div>
-      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-popup><span class="ihero-primary-label">Claim Your FREE Audit</span></a>
+      <a href="/contact" class="ihero-primary reveal reveal-delay-3" data-open-popup><span class="ihero-primary-label">Claim Your FREE Audit</span></a>
       <div class="ihero-secondary reveal reveal-delay-1">
         <a href="tel:+15123379723" class="ihero-secondary-btn"><span class="ihero-secondary-label">Prefer to Talk? Contact Us</span></a>
       </div>
@@ -100,9 +100,9 @@ include __DIR__ . '/includes/header.php';
         </ul>
 
         <div class="contact-page-links">
-          <a href="/works.php">See Our Work</a>
-          <a href="/how-we-work.php">How We Work</a>
-          <a href="/about.php">About WTF Labs</a>
+          <a href="/works">See Our Work</a>
+          <a href="/how-we-work">How We Work</a>
+          <a href="/about">About WTF Labs</a>
         </div>
       </aside>
 
@@ -170,7 +170,7 @@ include __DIR__ . '/includes/header.php';
           </div>
           <button type="submit" class="btn btn-lime btn-lg btn-block">Let's Figure This Out</button>
           <p class="contact-form-micro">No spam. No surprise sales marathon. Just a practical next step.</p>
-          <p class="form-disclaimer">By providing your phone number and submitting the form, you consent to be contacted by SMS and agree to our <a href="/privacy-policy.php#phone-number">Privacy Policy</a>. Message and data rates may apply.</p>
+          <p class="form-disclaimer">By providing your phone number and submitting the form, you consent to be contacted by SMS and agree to our <a href="/privacy-policy#phone-number">Privacy Policy</a>. Message and data rates may apply.</p>
         </form>
       </div>
     </div>

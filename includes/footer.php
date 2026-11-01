@@ -17,45 +17,45 @@ include __DIR__ . '/contact-section.php';
       </div>
       <div>
         <h4>Company</h4>
-        <a href="/about.php">About</a>
-        <a href="/works.php">Work</a>
-        <a href="/how-we-work.php">How We Work</a>
-        <a href="/contact.php">Contact</a>
-        <a href="/faqs.php">FAQs</a>
+        <a href="/about">About</a>
+        <a href="/works">Work</a>
+        <a href="/how-we-work">How We Work</a>
+        <a href="/contact">Contact</a>
+        <a href="/faqs">FAQs</a>
       </div>
       <div>
         <h4>Services</h4>
-        <a href="/web-design.php">Web Design &amp; Development</a>
-        <a href="/seo.php">SEO &amp; Local Search</a>
-        <a href="/google-ads.php">Google Ads</a>
-        <a href="/social-media-advertising.php">Social Media Advertising</a>
-        <a href="/graphic-design.php">Branding &amp; Creative</a>
-        <a href="/digital-marketing.php">Full-Service Digital Marketing</a>
+        <a href="/web-design">Web Design &amp; Development</a>
+        <a href="/seo">SEO &amp; Local Search</a>
+        <a href="/google-ads">Google Ads</a>
+        <a href="/social-media-advertising">Social Media Advertising</a>
+        <a href="/graphic-design">Branding &amp; Creative</a>
+        <a href="/digital-marketing">Full-Service Digital Marketing</a>
       </div>
       <div>
         <h4>Industries</h4>
-        <a href="/industries.php#remodelers">Remodeling</a>
-        <a href="/industries.php#hvac">HVAC</a>
-        <a href="/industries.php#landscaping">Landscaping</a>
-        <a href="/industries.php#roofing">Roofing</a>
-        <a href="/industries.php#plumbing">Plumbing</a>
-        <a href="/industries.php#pool-services">Pool Services</a>
-        <a href="/industries.php#power-washing">Power Washing</a>
-        <a href="/industries.php#handyman">Handyman</a>
-        <a href="/industries.php#pest-control">Pest Control</a>
+        <a href="/industries#remodelers">Remodeling</a>
+        <a href="/industries#hvac">HVAC</a>
+        <a href="/industries#landscaping">Landscaping</a>
+        <a href="/industries#roofing">Roofing</a>
+        <a href="/industries#plumbing">Plumbing</a>
+        <a href="/industries#pool-services">Pool Services</a>
+        <a href="/industries#power-washing">Power Washing</a>
+        <a href="/industries#handyman">Handyman</a>
+        <a href="/industries#pest-control">Pest Control</a>
       </div>
       <div>
         <h4>Resources</h4>
-        <a href="/insights.php">Insights</a>
-        <a href="/website-brief.php">Website Brief</a>
-        <a href="/marketing-brief.php">Marketing Brief</a>
-        <a href="/client-feedback.php">Client Feedback</a>
+        <a href="/insights">Insights</a>
+        <a href="/website-brief">Website Brief</a>
+        <a href="/marketing-brief">Marketing Brief</a>
+        <a href="/client-feedback">Client Feedback</a>
       </div>
       <div>
         <h4>Legal</h4>
-        <a href="/privacy-policy.php">Privacy Policy</a>
-        <a href="/terms-and-conditions.php">Terms</a>
-        <a href="/refund-policy.php">Refund Policy</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-and-conditions">Terms</a>
+        <a href="/refund-policy">Refund Policy</a>
       </div>
     </div>
     <div class="container footer-copy"><p>&copy; <?php echo date('Y'); ?> WTF Labs. All rights reserved.</p></div>
@@ -65,7 +65,7 @@ include __DIR__ . '/contact-section.php';
   <?php if ($current_page !== 'works'): ?>
   <!-- Sticky work CTA -->
   <?php if (empty($hide_work_cta)): ?>
-  <a href="/works.php" class="btn btn-lime sticky-work-cta" id="stickyWorkCta" aria-hidden="true" tabindex="-1">Just Show Me The Work</a>
+  <a href="/works" class="btn btn-lime sticky-work-cta" id="stickyWorkCta" aria-hidden="true" tabindex="-1">Just Show Me The Work</a>
   <?php endif; ?>
   <?php endif; ?>
 
@@ -161,7 +161,7 @@ include __DIR__ . '/contact-section.php';
             <textarea name="message" rows="2" required placeholder="Goals, timeline, links, anything useful..."></textarea>
           </div>
           <button type="submit" class="btn btn-lime btn-block promo-popup-submit">Submit</button>
-          <p class="form-disclaimer">By providing your phone number and submitting the form, you consent to be contacted by SMS and agree to our <a href="/privacy-policy.php#phone-number">Privacy Policy</a>. Message and data rates may apply.</p>
+          <p class="form-disclaimer">By providing your phone number and submitting the form, you consent to be contacted by SMS and agree to our <a href="/privacy-policy#phone-number">Privacy Policy</a>. Message and data rates may apply.</p>
         </form>
 
         <p class="promo-popup-ok" id="promoPopupOk" hidden>Thank you! Your submission has been received!</p>

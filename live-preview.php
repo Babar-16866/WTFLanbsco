@@ -99,6 +99,13 @@ if (!isset($sites[$slug])) {
   $fail();
 }
 
+$staleFile = sys_get_temp_dir() . '/wtf-live8-stale-' . md5($slug);
+if (isset($_GET['stale'])) {
+  @touch($staleFile);
+  http_response_code(204);
+  exit;
+}
+
 $home = $sites[$slug];
 $homeHost = (string)parse_url($home, PHP_URL_HOST);
 $bareHost = strtolower((string)preg_replace('/^www\./i', '', $homeHost));
@@ -173,6 +180,7 @@ if (isset($_GET['asset'])) {
     }
     $status = (int)curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
     if ($body === '' || $status >= 400) {
+      @touch($staleFile);
       header('Location: ' . $assetUrl, true, 302);
       exit;
     }
@@ -194,10 +202,14 @@ if ($path === '' || $path[0] !== '/' || str_starts_with($path, '//')) {
 }
 $url = 'https://' . $homeHost . $path;
 
-$cacheFile = sys_get_temp_dir() . '/wtf-live6-' . md5($url) . '.html';
+$cacheFile = sys_get_temp_dir() . '/wtf-live8-' . md5($url) . '.html';
 $html = '';
 $finalUrl = $url;
-if (is_file($cacheFile) && time() - filemtime($cacheFile) < 86400) {
+$cacheFresh = is_file($cacheFile) && time() - filemtime($cacheFile) < 1800;
+if ($cacheFresh && is_file($staleFile) && filemtime($staleFile) > filemtime($cacheFile) && time() - filemtime($cacheFile) > 60) {
+  $cacheFresh = false;
+}
+if ($cacheFresh) {
   $html = (string)file_get_contents($cacheFile);
 } else {
   $fetch = function (string $target, int $timeout): array {
@@ -297,7 +309,7 @@ if (is_file($cacheFile) && time() - filemtime($cacheFile) < 86400) {
     }, explode(',', html_entity_decode($m[3], ENT_QUOTES)));
     return $m[1] . $m[2] . htmlspecialchars(implode(', ', $parts), ENT_QUOTES) . $m[2];
   }, $html);
-  $html = preg_replace_callback('/url\(\s*(["\']?)(?!data:|https?:|\/\/|\#)([^"\')]+)\1\s*\)/i', function ($m) use ($abs) {
+  $html = preg_replace_callback('/(?<![\w.$])url\(\s*(["\']?)(?!data:|https?:|\/\/|\#)([^"\')]+)\1\s*\)/', function ($m) use ($abs) {
     return 'url(' . $m[1] . $abs($m[2]) . $m[1] . ')';
   }, $html);
   $heavy = '(?:googletagmanager\.com|google-analytics\.com|connect\.facebook\.net|callrail\.com|google\.com\/recaptcha|gstatic\.com\/recaptcha|recaptcha\.net|hotjar\.com|clarity\.ms|klaviyo\.com|podium\.com|birdeye\.com|tidio\.co|userway\.org|acsbapp\.com|accessibe\.com|livechatinc\.com|hs-scripts\.com|hs-analytics\.net|leadconnectorhq\.com|msgsndr\.com|doubleclick\.net|bing\.com\/bat|snap\.licdn\.com|tiktok\.com\/i18n\/pixel|analytics\.tiktok\.com)';
@@ -314,7 +326,14 @@ if (is_file($cacheFile) && time() - filemtime($cacheFile) < 86400) {
     return $tag;
   }, $html);
   $inject = '<meta name="referrer" content="no-referrer"><base href="' . htmlspecialchars($base, ENT_QUOTES) . '">'
-    . '<style>div.needsclick[class*="kl-private-reset-css"][role="dialog"],div.needsclick[class*="kl-private-reset-css"][aria-modal]{display:none!important}</style>'
+    . '<style>div.needsclick[class*="kl-private-reset-css"][role="dialog"],div.needsclick[class*="kl-private-reset-css"][aria-modal]{display:none!important}'
+    . '.pum-overlay,.popmake-overlay,.elementor-popup-modal,.dialog-type-lightbox.elementor-popup-modal{display:none!important}'
+    . 'html.pum-open,html.pum-open body,body.dialog-prevent-scroll{overflow:visible!important;padding-right:0!important}'
+    . '*{scrollbar-width:none!important;-ms-overflow-style:none!important}*::-webkit-scrollbar{display:none!important;width:0!important;height:0!important}</style>'
+    . '<script>(function(){var s=' . json_encode($slug) . ',n=0,sent=false;addEventListener("error",function(e){var t=e.target;if(sent||!t||!/^(IMG|LINK|SCRIPT)$/.test(t.tagName))return;'
+    . 'var u=t.src||t.href||"";if(u.indexOf(' . json_encode($finalHost) . ')<0||/^https?:\/\/[^\/]+\/?$/.test(u))return;if(++n<2)return;sent=true;'
+    . 'try{if(sessionStorage.getItem("wtfLiveFix-"+s))return;sessionStorage.setItem("wtfLiveFix-"+s,"1")}catch(x){return}'
+    . 'fetch(location.origin+"/live-preview?site="+encodeURIComponent(s)+"&stale=1").then(function(){setTimeout(function(){location.reload()},300)})},true)})();</script>'
     . '<script>new MutationObserver(function(){document.querySelectorAll("div.needsclick[class*=kl-private-reset-css]").forEach(function(e){var c=getComputedStyle(e);if(c.position==="fixed"&&e.offsetWidth>=innerWidth*0.9)e.style.setProperty("display","none","important")})}).observe(document.documentElement,{childList:true,subtree:true});</script>'
     . '<script>(function(){var s=' . json_encode($slug) . ',h=' . json_encode($finalHost) . ';'
     . 'document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a||a.target==="_blank")return;'

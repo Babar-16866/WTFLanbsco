@@ -1806,39 +1806,6 @@ html body .rx-work-canvas .work-card-body p {
   font-family: "Barlow", system-ui, sans-serif;
 }
 
-/* HVAC background: Flowing Cool-to-Warm Gradient Ribbons (opacity: change --hv-bg-opacity) */
-:root:has(.rx--hv) {
-  --hv-bg-opacity: 50%;
-}
-:root:has(.rx--hv) body {
-  --hv-bg-base: #FFFFFF;
-  background-color: #FFFFFF;
-  background-image: none;
-}
-html[data-theme="dark"]:has(.rx--hv) body {
-  --hv-bg-base: #0C1A14;
-  background-color: #0C1A14;
-}
-html:root:has(.rx.rx--hv) body::before {
-  content: none;
-}
-html:root:has(.rx.rx--hv) body {
-  background-color: var(--hv-bg-base);
-  background-image:
-    linear-gradient(color-mix(in srgb, var(--hv-bg-base), transparent var(--hv-bg-opacity)), color-mix(in srgb, var(--hv-bg-base), transparent var(--hv-bg-opacity))),
-    url("/assets/images/hvac-ribbons-bg.webp");
-  background-size: 100% 100%, cover;
-  background-position: 0 0, center top;
-  background-repeat: no-repeat, no-repeat;
-  background-attachment: scroll, scroll;
-}
-:root:has(.rx--hv) :is(.rx, .rx-canvas),
-:root:has(.rx--hv) body #contact.contact-section,
-html[data-theme="dark"]:has(.rx--hv) body #contact.contact-section {
-  background-color: transparent;
-  background-image: none;
-}
-
 /* Landscaping */
 :root:has(.rx--ls) :is(.rx, .rx-canvas) {
   --rx-display: "Archivo", "Arial Narrow", sans-serif;
@@ -1944,78 +1911,6 @@ html[data-theme="dark"]:has(.rx--hv) body #contact.contact-section {
 :root:has(.rx--pw) .rx-h1 .rx-mark { --mk-y: 0.155em; --mk-h: 0.891em; }
 :root:has(.rx--rf) .rx-h1 .rx-mark { --mk-y: 0.266em; --mk-h: 0.946em; }
 
-/* Page line-art backgrounds (replace the blueprint grid on these pages) */
-:root:has(.rx--hm) :is(.rx, .rx-canvas),
-:root:has(.rx--hm) body #contact.contact-section {
-   background-image: url("/assets/images/bg2-hm.svg");
-  background-size: auto;
-  background-repeat: repeat;
-}
-html[data-theme="dark"]:has(.rx--hm) :is(.rx, .rx-canvas),
-html[data-theme="dark"]:has(.rx--hm) body #contact.contact-section {
-   background-image: url("/assets/images/bg2-hm-dark.svg");
-}
-:root:has(.rx--ls) :is(.rx, .rx-canvas),
-:root:has(.rx--ls) body #contact.contact-section {
-   background-image: url("/assets/images/bg2-ls.svg");
-  background-size: auto;
-  background-repeat: repeat;
-}
-html[data-theme="dark"]:has(.rx--ls) :is(.rx, .rx-canvas),
-html[data-theme="dark"]:has(.rx--ls) body #contact.contact-section {
-   background-image: url("/assets/images/bg2-ls-dark.svg");
-}
-:root:has(.rx--pc) :is(.rx, .rx-canvas),
-:root:has(.rx--pc) body #contact.contact-section {
-   background-image: url("/assets/images/bg2-pc.svg");
-  background-size: auto;
-  background-repeat: repeat;
-}
-html[data-theme="dark"]:has(.rx--pc) :is(.rx, .rx-canvas),
-html[data-theme="dark"]:has(.rx--pc) body #contact.contact-section {
-   background-image: url("/assets/images/bg2-pc-dark.svg");
-}
-:root:has(.rx--pl) :is(.rx, .rx-canvas),
-:root:has(.rx--pl) body #contact.contact-section {
-   background-image: url("/assets/images/bg2-pl.svg");
-  background-size: auto;
-  background-repeat: repeat;
-}
-html[data-theme="dark"]:has(.rx--pl) :is(.rx, .rx-canvas),
-html[data-theme="dark"]:has(.rx--pl) body #contact.contact-section {
-   background-image: url("/assets/images/bg2-pl-dark.svg");
-}
-:root:has(.rx--po) :is(.rx, .rx-canvas),
-:root:has(.rx--po) body #contact.contact-section {
-   background-image: url("/assets/images/bg2-po.svg");
-  background-size: auto;
-  background-repeat: repeat;
-}
-html[data-theme="dark"]:has(.rx--po) :is(.rx, .rx-canvas),
-html[data-theme="dark"]:has(.rx--po) body #contact.contact-section {
-   background-image: url("/assets/images/bg2-po-dark.svg");
-}
-:root:has(.rx--pw) :is(.rx, .rx-canvas),
-:root:has(.rx--pw) body #contact.contact-section {
-   background-image: url("/assets/images/bg2-pw.svg");
-  background-size: auto;
-  background-repeat: repeat;
-}
-html[data-theme="dark"]:has(.rx--pw) :is(.rx, .rx-canvas),
-html[data-theme="dark"]:has(.rx--pw) body #contact.contact-section {
-   background-image: url("/assets/images/bg2-pw-dark.svg");
-}
-:root:has(.rx--rf) :is(.rx, .rx-canvas),
-:root:has(.rx--rf) body #contact.contact-section {
-   background-image: url("/assets/images/bg2-rf.svg");
-  background-size: auto;
-  background-repeat: repeat;
-}
-html[data-theme="dark"]:has(.rx--rf) :is(.rx, .rx-canvas),
-html[data-theme="dark"]:has(.rx--rf) body #contact.contact-section {
-   background-image: url("/assets/images/bg2-rf-dark.svg");
-}
-
 /* Phones: let the hero highlight wrap so long phrases never run off screen */
 @media (max-width: 640px) {
   /* landscaping serif size overrides removed (font is condensed now) */
@@ -2070,4 +1965,282 @@ html[data-theme="dark"]:has(.rx--rf) body #contact.contact-section {
 }
 :root:has(.rx[class*="rx--"]) .rx-ba-copy .rx-h2 {
   font-size: clamp(40px, 3.8vw, 64px);
+}
+
+/* Industry inner pages: before/after image lines up with the copy column, clear of the sticky work button */
+.rx-ba.is-pin .rx-ba-pin {
+  align-content: center;
+  padding-bottom: 100px;
+}
+.rx-ba.is-pin .rx-ba-stage {
+  align-self: stretch;
+  height: auto;
+  min-height: 420px;
+}
+
+/* Industry inner pages: larger benefit numbers, headings and text */
+:root:has(.rx) .rx .rx-ba.is-pin .rx-ben-list {
+  --row: 112px;
+  height: calc(var(--row) * 3.6);
+}
+:root:has(.rx) .rx .rx-ba.is-pin .rx-ben-n {
+  font-size: 34px;
+}
+:root:has(.rx) .rx .rx-ba.is-pin .rx-ben-item h3 {
+  font-size: 28px;
+}
+:root:has(.rx) .rx .rx-ba.is-pin .rx-ben-item p {
+  font-size: 18.5px;
+}
+:root:has(.rx) .rx .rx-ba.is-pin .rx-ben-item.is-active .rx-ben-n {
+  font-size: 48px;
+}
+:root:has(.rx) .rx .rx-ba.is-pin .rx-ben-item.is-active h3 {
+  font-size: 44px;
+}
+:root:has(.rx) .rx .rx-ba.is-pin .rx-ben-item.is-active p {
+  font-size: 21px;
+  color: var(--rx-ink);
+}
+
+/* Industry inner pages: feature cards beside the phone use the hero green */
+.rx .rx-feat {
+  border-color: rgba(251, 247, 236, 0.12);
+  background-color: var(--pal-primary, #1E4233);
+  background-image: var(--pal-texture-image);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+.rx .rx-feat h3 {
+  color: var(--rx-cream);
+}
+.rx .rx-feat p {
+  color: rgba(251, 247, 236, 0.8);
+}
+
+/* Industry inner pages: industry nav opens from the current tab */
+.rx-canvas .works-filters.ind-nav {
+  gap: 0;
+}
+.rx-canvas .ind-nav > .works-filter {
+  margin-inline: 3px;
+}
+.rx-canvas .ind-nav.is-ready > .works-filter {
+  max-width: var(--w, 260px);
+  overflow: hidden;
+  transition: max-width 0.6s var(--rx-ease), padding 0.6s var(--rx-ease), margin 0.6s var(--rx-ease), opacity 0.45s ease, background-color 0.25s ease, color 0.25s ease;
+}
+.rx-canvas .ind-nav.is-ready:not(.is-open) > .works-filter[data-industry]:not(.is-active),
+.rx-canvas .ind-nav.is-ready:not(.is-open) > [data-ind-close],
+.rx-canvas .ind-nav.is-ready.is-open > [data-ind-open] {
+  max-width: 0;
+  padding-inline: 0;
+  margin-inline: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.rx-canvas .ind-nav.is-measuring > .works-filter {
+  max-width: none;
+  transition: none;
+}
+.rx-canvas .ind-nav > .ind-nav-toggle {
+  font-weight: 700;
+}
+
+/* Industry inner pages: live preview phone with iPhone status bar and Chrome bars */
+.rx-ask-art {
+  transform: none;
+}
+.rx-ask-phone {
+  --pw: 330px;
+  --sc: 0.78462;
+  padding: 12px;
+  border-radius: 56px;
+}
+.rx-ask-phone::before,
+.rx-ask-phone::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  border-radius: 2px;
+  background: #1b1f1d;
+}
+.rx-ask-phone::before {
+  left: -4px;
+  top: 150px;
+  height: 92px;
+}
+.rx-ask-phone::after {
+  right: -4px;
+  top: 178px;
+  height: 78px;
+}
+.rx-ask-screen {
+  display: flex;
+  flex-direction: column;
+  height: calc(844px * var(--sc));
+  border-radius: 44px;
+  background: #fff;
+}
+.rx-ask-status {
+  position: relative;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(54px * var(--sc));
+  padding: calc(6px * var(--sc)) calc(30px * var(--sc)) 0 calc(42px * var(--sc));
+  background: #fff;
+  color: #000;
+}
+.rx-ask-time {
+  font-family: -apple-system, "SF Pro Text", "Inter", system-ui, sans-serif;
+  font-size: calc(17px * var(--sc));
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.rx-ask-status .rx-ask-island {
+  display: block;
+  top: calc(11px * var(--sc));
+  width: calc(124px * var(--sc));
+  height: calc(36px * var(--sc));
+  margin-left: calc(-62px * var(--sc));
+  border-radius: 999px;
+}
+.rx-ask-island i {
+  position: absolute;
+  top: 50%;
+  right: calc(13px * var(--sc));
+  width: calc(11px * var(--sc));
+  height: calc(11px * var(--sc));
+  margin-top: calc(-5.5px * var(--sc));
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #3b4d6b 0, #12182a 55%, #05070d 100%);
+}
+.rx-ask-icons {
+  display: flex;
+  align-items: center;
+  gap: calc(6px * var(--sc));
+}
+.rx-ask-icons svg {
+  height: calc(12px * var(--sc));
+  width: auto;
+  fill: currentColor;
+}
+.rx-ask-bar {
+  flex: none;
+  display: flex;
+  align-items: center;
+  height: calc(52px * var(--sc));
+  padding: 0 calc(12px * var(--sc));
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.rx-ask-url {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(6px * var(--sc));
+  width: 100%;
+  height: calc(38px * var(--sc));
+  border-radius: calc(12px * var(--sc));
+  background: #f1f3f4;
+  color: #202124;
+  font-family: -apple-system, "SF Pro Text", "Inter", system-ui, sans-serif;
+  font-size: calc(15px * var(--sc));
+  white-space: nowrap;
+  overflow: hidden;
+}
+.rx-ask-url svg {
+  flex: none;
+  width: calc(14px * var(--sc));
+  height: calc(14px * var(--sc));
+  fill: none;
+  stroke: #5f6368;
+  stroke-width: 2.4;
+}
+.rx-ask-view {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  background: #fff;
+}
+.rx-ask-view iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 390px;
+  height: calc(100% / var(--sc));
+  border: 0;
+  transform: scale(var(--sc));
+  transform-origin: 0 0;
+}
+.rx-ask-tools {
+  position: relative;
+  flex: none;
+  height: calc(83px * var(--sc));
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+.rx-ask-tool-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: calc(49px * var(--sc));
+  padding: 0 calc(8px * var(--sc));
+}
+.rx-ask-tool-row svg {
+  width: calc(24px * var(--sc));
+  height: calc(24px * var(--sc));
+  fill: none;
+  stroke: #1a73e8;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.rx-ask-tool-row svg:last-child {
+  stroke-width: 3.6;
+}
+.rx-ask-tool-row svg.is-off {
+  stroke: #bdc1c6;
+}
+.rx-ask-home {
+  position: absolute;
+  bottom: calc(8px * var(--sc));
+  left: 50%;
+  width: calc(134px * var(--sc));
+  height: calc(5px * var(--sc));
+  margin-left: calc(-67px * var(--sc));
+  border-radius: 999px;
+  background: #000;
+}
+.rx-ask-view .rx-ask-progress {
+  top: 4px;
+  right: 3px;
+  height: calc((100% - 8px) * var(--p, 0));
+}
+@media (max-width: 640px) {
+  .rx-ask-phone {
+    --pw: 280px;
+    --sc: 0.65641;
+    border-radius: 48px;
+  }
+  .rx-ask-screen {
+    border-radius: 38px;
+  }
+}
+
+/* Landscaping and pool FAQs: questions use the same condensed width as the headings */
+:root:has(.rx--ls) .rx-faq-canvas :is(.faq-question, .faq-num) {
+  font-stretch: 62%;
+}
+:root:has(.rx--po) .rx-faq-canvas :is(.faq-question, .faq-num) {
+  font-stretch: 75%;
+}
+
+/* Industry inner pages: tab screens carry room for the full phone shadow */
+.rx-stage-screens {
+  margin: calc(-60 / 360 * 100%) calc(-50 / 360 * 100%);
 }

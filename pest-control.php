@@ -84,14 +84,1263 @@ include __DIR__ . '/includes/header.php';
       <a href="tel:+15123379723" class="rx-cta"><span>BOOK A CALL</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
     </div>
     <div class="rx-ba-stage" data-rx-ba-stage>
-      <img class="rx-ba-before" src="/assets/images/pc-ba-before.webp" alt="Woman upset by cockroaches in her kitchen" width="1600" height="1067" loading="lazy" decoding="async">
-      <div class="rx-ba-after"><img src="/assets/images/pc-ba-after.webp" alt="The same kitchen pest-free, the couple relaxed" width="1600" height="1067" loading="lazy" decoding="async"></div>
+      <img class="rx-ba-before" src="/assets/images/pestcontrol_before.webp" alt="Kitchen counter with ants, cockroaches and a mouse" width="1536" height="1024" loading="lazy" decoding="async">
+      <div class="rx-ba-after"><img src="/assets/images/pestcontrol_after.webp" alt="The same kitchen counter clean and pest-free" width="1536" height="1024" loading="lazy" decoding="async"></div>
       <span class="rx-ba-handle" aria-hidden="true"><span></span></span>
       <span class="rx-ba-chip rx-ba-chip--b">Before</span>
       <span class="rx-ba-chip rx-ba-chip--a">After</span>
     </div>
   </div>
 </section>
+
+</div>
+
+<div class="rx-canvas rx--pc rx-work-canvas">
+<section class="page-section industry-nav-section">
+  <div class="container">
+    <div class="works-filter-stack works-filter-stack--center home-filter-stack" data-trade-links>
+      <div class="home-filter-row is-done">
+        <p class="home-filter-label">Select the Industry and services</p>
+        <!--<div class="works-filters" id="homeWorksIndustries" role="tablist" aria-label="Filter by industry">
+          <button type="button" class="works-filter" data-industry="all" role="tab" aria-selected="false">Featured</button>
+          <button type="button" class="works-filter" data-industry="remodelers" role="tab" aria-selected="false">Remodeling</button>
+          <button type="button" class="works-filter" data-industry="hvac" role="tab" aria-selected="false">HVAC</button>
+          <button type="button" class="works-filter" data-industry="landscaping" role="tab" aria-selected="false">Landscaping</button>
+          <button type="button" class="works-filter" data-industry="roofing" role="tab" aria-selected="false">Roofing</button>
+          <button type="button" class="works-filter" data-industry="plumbing" role="tab" aria-selected="false">Plumbing</button>
+          <button type="button" class="works-filter" data-industry="pool-services" role="tab" aria-selected="false">Pool Services</button>
+          <button type="button" class="works-filter" data-industry="power-washing" role="tab" aria-selected="false">Power Washing</button>
+          <button type="button" class="works-filter" data-industry="handyman" role="tab" aria-selected="false">Handyman</button>
+          <button type="button" class="works-filter is-active" data-industry="pest-control" role="tab" aria-selected="true">Pest Control</button>
+        </div>-->
+        <div class="works-filters ind-nav" id="homeWorksIndustries" role="tablist" aria-label="Filter by industry" data-ind-nav>
+          <button type="button" class="works-filter" data-industry="all" role="tab" aria-selected="false">Featured</button>
+          <button type="button" class="works-filter" data-industry="remodelers" role="tab" aria-selected="false">Remodeling</button>
+          <button type="button" class="works-filter" data-industry="hvac" role="tab" aria-selected="false">HVAC</button>
+          <button type="button" class="works-filter" data-industry="landscaping" role="tab" aria-selected="false">Landscaping</button>
+          <button type="button" class="works-filter" data-industry="roofing" role="tab" aria-selected="false">Roofing</button>
+          <button type="button" class="works-filter" data-industry="plumbing" role="tab" aria-selected="false">Plumbing</button>
+          <button type="button" class="works-filter" data-industry="pool-services" role="tab" aria-selected="false">Pool Services</button>
+          <button type="button" class="works-filter" data-industry="power-washing" role="tab" aria-selected="false">Power Washing</button>
+          <button type="button" class="works-filter" data-industry="handyman" role="tab" aria-selected="false">Handyman</button>
+          <button type="button" class="works-filter is-active" data-industry="pest-control" role="tab" aria-selected="true">Pest Control</button>
+          <button type="button" class="works-filter ind-nav-toggle" data-ind-open aria-expanded="false" aria-controls="homeWorksIndustries">All</button>
+          <button type="button" class="works-filter ind-nav-toggle" data-ind-close aria-expanded="true" aria-controls="homeWorksIndustries">Less</button>
+        </div>
+      </div>
+      <!--<div class="home-filter-row">
+        <div class="works-filters" id="homeWorksFilters" role="tablist" aria-label="Filter by service">
+          <button type="button" class="works-filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button type="button" class="works-filter" data-filter="web-development" role="tab" aria-selected="false">Web Design</button>
+          <button type="button" class="works-filter" data-filter="seo" role="tab" aria-selected="false">SEO</button>
+          <button type="button" class="works-filter" data-filter="social-media-advertising" role="tab" aria-selected="false">Social Media</button>
+          <button type="button" class="works-filter" data-filter="google-ads" role="tab" aria-selected="false">Google Ads</button>
+        </div>
+      </div>-->
+      <div class="home-filter-row">
+        <span class="home-filter-label" aria-hidden="true"></span>
+        <div class="works-subfilters" id="homeWorksSubfilters" role="tablist" aria-label="Filter by subcategory" hidden></div>
+      </div>
+    </div>
+
+    <div class="works-grid home-works-grid reveal" id="homeWorksGrid" data-smooth>
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="remodelers" data-live="https://teamworkhomedesigns.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-teamwork-home-designs.webp" alt="Teamwork Home Designs">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Austin, TX</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Teamwork Home Designs</h2>
+          <p>A clean WordPress site for an Austin general contractor, built around kitchen and bath transformations and a free consultation call.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="remodelers" data-live="https://primeconstructionaustin.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-prime-construction.webp" alt="Prime Construction">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Austin, TX</span>
+            <span>Custom coded</span>
+          </div>
+          <h2>Prime Construction</h2>
+          <p>A custom-built design and build site for an Austin remodeler, leading with finished kitchens, baths and whole-home renovations.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="remodelers" data-live="https://miaremodelingcontractors.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/industry-remodelers-2.webp" alt="Mia Remodeling Contractors">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Miami, FL</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Mia Remodeling Contractors</h2>
+          <p>A WordPress site for a Miami remodeling contractor covering bathrooms, kitchens, decks, patio enclosures and pergolas.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="remodelers" data-live="https://elbazconstructioncorp.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/industry-remodelers-4.webp" alt="Elbaz Construction">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Miami, FL</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Elbaz Construction</h2>
+          <p>A WordPress site for a Miami and Hollywood general contractor focused on kitchen and bathroom remodeling across South Florida.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="landing-pages wix" data-industries="remodelers" data-live="https://www.ymedinaremodeling.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-ymedina-remodeling.webp" alt="YMedina Remodeling">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Miami, FL</span>
+            <span>Wix</span>
+          </div>
+          <h2>YMedina Remodeling</h2>
+          <p>A Wix site for a Miami remodeling company with a free estimate form right in the first screen.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="remodelers" data-live="/live-preview?site=excel-remodeling">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-excel-remodeling.webp" alt="Excel Remodeling">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Maryland</span>
+            <span>Squarespace</span>
+          </div>
+          <h2>Excel Remodeling</h2>
+          <p>A Squarespace site for a Maryland roofing and siding company, built around trust and a free no-pressure estimate.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="remodelers" data-live="https://www.environschicago.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-environs-chicago.webp" alt="Environs Group">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Chicago, IL</span>
+            <span>Squarespace</span>
+          </div>
+          <h2>Environs Group</h2>
+          <p>An elegant Squarespace site for a Chicago builder and interior design studio, showing available homes and recent projects.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wix" data-industries="remodelers" data-live="https://www.unitedelitegroup.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-united-elite-group.webp" alt="United Elite Group">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>New York, NY</span>
+            <span>Wix</span>
+          </div>
+          <h2>United Elite Group</h2>
+          <p>A Wix site for a New York City luxury renovation contractor, with portfolio-led storytelling and a free consultation.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="redesigns squarespace" data-industries="remodelers" data-live="https://www.eurodesignremodel.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-euro-design-remodel.webp" alt="Euro Design Remodel">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Maryland</span>
+            <span>Squarespace</span>
+          </div>
+          <h2>Euro Design Remodel</h2>
+          <p>A Squarespace site for a Maryland bathroom remodeler with 20 years of experience, built to book free design consultations.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="power-washing" data-live="/live-preview?site=austin-pressure-washing-and-roof-cleanin">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-austin-pressure-washing-and-roof-cleanin.webp" alt="Austin Pressure Washing &amp; Roof Cleaning">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Austin, TX</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>Austin Pressure Washing &amp; Roof Cleaning</h2>
+          <p>A dark, premium site for an Austin pressure washing and roof cleaning crew, with reviews and a quote button up front.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="power-washing" data-live="https://timemachineatx.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/industry-power-washing-2.webp" alt="Time Machine ATX">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Austin, TX</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Time Machine ATX</h2>
+          <p>A WordPress site for an award-winning Austin pressure washing company serving homes and commercial properties.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wix" data-industries="power-washing" data-live="https://www.southernshinetexas.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-southern-shine.webp" alt="Southern Shine">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Austin, TX</span>
+            <span>Wix</span>
+          </div>
+          <h2>Southern Shine</h2>
+          <p>A bold Wix site for an Austin exterior cleaning company, built around a fast quote and local trust.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="power-washing" data-live="https://atxcleanprowash.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-atx-clean-pro-wash.webp" alt="ATX Clean Pro Wash">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Austin, TX</span>
+            <span>WordPress</span>
+          </div>
+          <h2>ATX Clean Pro Wash</h2>
+          <p>A sleek WordPress site for a soft wash crew cleaning homes, driveways, roofs, decks and fences.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="power-washing" data-live="https://sonicwashsacramento.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-sonic-wash.webp" alt="Sonic Wash">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Sacramento, CA</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>Sonic Wash</h2>
+          <p>A clean, review-led site for a Sacramento pressure washing company with click-to-call in the first screen.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="landscaping" data-live="https://www.handmlandscaping.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-handm-landscaping.webp" alt="H&amp;M Landscaping">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Flint, MI</span>
+            <span>Squarespace</span>
+          </div>
+          <h2>H&amp;M Landscaping</h2>
+          <p>A Squarespace site for a Genesee County landscaper covering design, construction and maintenance.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="landscaping" data-live="https://landscapedesignhouston.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-texan-landscape-group.webp" alt="Texan Landscape Group">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Houston, TX</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>Texan Landscape Group</h2>
+          <p>A full-service landscaping site for a Houston design-build-maintain team, with project stats and quote paths.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="landscaping" data-live="https://www.2galslandscaping.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-2-gals-landscaping.webp" alt="2 Gals Landscaping">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Houston, TX</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>2 Gals Landscaping</h2>
+          <p>An elegant site for a Houston landscaping and construction company focused on native gardens and hardscaping.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="landscaping" data-live="https://evergreenlawncaretx.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-evergreen-outdoor.webp" alt="Evergreen Outdoor">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Houston, TX</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Evergreen Outdoor</h2>
+          <p>A WordPress site for a Houston lawn care company, with an estimate form right in the hero.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="pool-services" data-live="https://southtexaspooltilecleaning.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-south-texas-pool-tile-cleaning.webp" alt="South Texas Pool Tile Cleaning">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>San Antonio, TX</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>South Texas Pool Tile Cleaning</h2>
+          <p>A bold site for a San Antonio pool tile cleaning, repair and resurfacing specialist with free estimates.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="pool-services" data-live="/live-preview?site=summit-pool-and-spa">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-summit-pool-and-spa.webp" alt="Summit Pool &amp; Spa">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>East Bay, CA</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Summit Pool &amp; Spa</h2>
+          <p>A WordPress site for an East Bay pool service focused on consistent maintenance and clear communication.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="pool-services" data-live="/live-preview?site=asa-pools-and-hot-tubs">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-asa-pools-and-hot-tubs.webp" alt="ASA Pools &amp; Hot Tubs">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Seattle, WA</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>ASA Pools &amp; Hot Tubs</h2>
+          <p>A custom-built site for a Seattle pool and hot tub service with a quote form in the first screen.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="pool-services" data-live="https://slcpoolservice.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/industry-pool-services-2.webp" alt="SLC Pool Service">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Salt Lake City, UT</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>SLC Pool Service</h2>
+          <p>A fast custom site for a family-owned Utah pool repair, maintenance and diagnostics company.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="pool-services" data-live="https://www.aqualecu.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-aqua-lecu-pool-services.webp" alt="Aqua Lecu Pool Services">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Orlando, FL</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>Aqua Lecu Pool Services</h2>
+          <p>A clean site for an Orlando pool cleaning company with no contracts and free estimates.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="pest-control" data-live="https://agropestpros.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-agro-pest-control.webp" alt="Agro Pest Control">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Phoenix, AZ</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>Agro Pest Control</h2>
+          <p>A bright site for an Arizona pest control company built around residential and commercial service paths.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="pest-control" data-live="https://arrownj.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-arrow-pest-control.webp" alt="Arrow Pest Control">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>New Jersey</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Arrow Pest Control</h2>
+          <p>A WordPress site for a New Jersey pest control company protecting homes and businesses since 1973.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="pest-control" data-live="https://nozzlenolen.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-nozzle-nolen.webp" alt="Nozzle Nolen">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Southeast Florida</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Nozzle Nolen</h2>
+          <p>A WordPress site for a Florida pest control company with free inspections and online scheduling.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="pest-control" data-live="https://www.altapestcontrol.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-alta-pest-control.webp" alt="Alta Pest Control">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Texas &amp; Oklahoma</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Alta Pest Control</h2>
+          <p>A WordPress site for an eco-friendly termite, mosquito and pest control company in Texas and Oklahoma.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="pest-control" data-live="https://aptivepestcontrol.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-aptive-pest-control.webp" alt="Aptive Pest Control">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Nationwide</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Aptive Pest Control</h2>
+          <p>A WordPress site for a national residential pest control brand with year-round protection plans.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="pest-control" data-live="https://akelapest.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-akela-pest-control.webp" alt="Akela Pest Control">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Riverside, CA</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Akela Pest Control</h2>
+          <p>A WordPress site for an eco-friendly Riverside pest control company with affordable plans.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="pest-control" data-live="https://beesmartcolorado.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-bee-smart-pest-control.webp" alt="Bee Smart Pest Control">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Denver, CO</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Bee Smart Pest Control</h2>
+          <p>A WordPress site for a local pest control company serving North Denver and Boulder County.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="pest-control" data-live="https://elitewildlifeservices.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-elite-wildlife-services.webp" alt="Elite Wildlife Services">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Houston, TX</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Elite Wildlife Services</h2>
+          <p>A WordPress site for a humane Houston wildlife removal company with an inspection request form.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="roofing" data-live="https://foreverroofing.net/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-forever-roofing.webp" alt="Forever Roofing">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Pacific Northwest</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Forever Roofing</h2>
+          <p>A WordPress site for a roofing, siding and windows company offering free quotes on new installations.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="roofing" data-live="https://ecoroofingnw.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-eco-roofing-and-roof-cleaning.webp" alt="Eco Roofing &amp; Roof Cleaning">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Pacific Northwest</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Eco Roofing &amp; Roof Cleaning</h2>
+          <p>A WordPress site for a top-rated Northwest roofing and roof cleaning company.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="roofing" data-live="https://www.yurasroofing.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-yuras-roofing.webp" alt="Yuras Roofing">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>San Antonio, TX</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>Yuras Roofing</h2>
+          <p>A custom-built site for a family-owned San Antonio roofer since 1949, with an estimate form up front.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="roofing" data-live="https://vh1roofing.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-vh1-roofing.webp" alt="VH1 Roofing">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Tulsa, OK</span>
+            <span>WordPress</span>
+          </div>
+          <h2>VH1 Roofing</h2>
+          <p>A WordPress site for a veteran-supporting Tulsa roofing company with free inspection requests.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="roofing" data-live="https://voyagerexteriors.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-voyager-exteriors.webp" alt="Voyager Exteriors">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Twin Cities, MN</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Voyager Exteriors</h2>
+          <p>A WordPress site for a Twin Cities exterior contractor covering decks, siding and roofing.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="roofing" data-live="https://janneyroofing.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-janney-home-services.webp" alt="Janney Home Services">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Florida</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Janney Home Services</h2>
+          <p>A WordPress site for a Florida roofing and window replacement company with storm-ready solutions.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="roofing" data-live="https://tadlockroofing.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-tadlock-roofing.webp" alt="Tadlock Roofing">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Florida</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Tadlock Roofing</h2>
+          <p>A WordPress site for one of America’s Top 100 roofing contractors serving North Florida.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="roofing" data-live="https://www.lindholmroofing.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-lindholm-roofing.webp" alt="Lindholm Roofing">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Chicago, IL</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Lindholm Roofing</h2>
+          <p>A WordPress site for a family-owned Chicago roofing contractor trusted since 1949.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wix" data-industries="handyman" data-live="https://www.columbushandyman.net/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-columbus-handyman.webp" alt="Columbus Handyman">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Columbus, OH</span>
+            <span>Wix</span>
+          </div>
+          <h2>Columbus Handyman</h2>
+          <p>A Wix site for a licensed Central Ohio handyman and general contractor with 21+ years of experience.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="handyman" data-live="https://kwhandymanmiamifl.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-kw-handyman.webp" alt="KW Handyman">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Miami, FL</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>KW Handyman</h2>
+          <p>A custom-built site for a Miami handyman and facility management company with nationwide reach.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="handyman" data-live="/live-preview?site=tri-miami-handyman-services">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-tri-miami-handyman-services.webp" alt="TRI Miami Handyman Services">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Miami, FL</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>TRI Miami Handyman Services</h2>
+          <p>A custom-built site for a Miami-Dade remodeling and property improvement company.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="handyman" data-live="https://prohandymanmia.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-pro-handyman-miami.webp" alt="Pro Handyman Miami">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Miami, FL</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Pro Handyman Miami</h2>
+          <p>A WordPress site for a Miami-Dade handyman voted best in Miami, covering repairs and maintenance.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="handyman" data-live="https://allin1dallas.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-all-in-1-handy-man.webp" alt="All In 1 Handy Man">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Dallas, TX</span>
+            <span>WordPress</span>
+          </div>
+          <h2>All In 1 Handy Man</h2>
+          <p>A WordPress site for a Dallas and Richardson handyman with a quick service request form.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="handyman" data-live="https://h2gservices.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-h2g-handyman-services.webp" alt="H2G Handyman Services">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Irving, TX</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>H2G Handyman Services</h2>
+          <p>A custom-built site for an Irving handyman offering TV mounting, assembly, painting and repairs.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="handyman" data-live="https://hprohandyman.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-h-pro-handyman.webp" alt="H-PRO Handyman">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Florida</span>
+            <span>WordPress</span>
+          </div>
+          <h2>H-PRO Handyman</h2>
+          <p>A WordPress site for a handyman specializing in TV mounting, furniture assembly and hanging services.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="handyman" data-live="/live-preview?site=extreme-handyman-services">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-extreme-handyman-services.webp" alt="Extreme Handyman Services">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Sacramento, CA</span>
+            <span>Squarespace</span>
+          </div>
+          <h2>Extreme Handyman Services</h2>
+          <p>A Squarespace site for a Sacramento handyman providing reliable home repairs since 2006.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="handyman" data-live="https://thehandymansflive.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-the-handyman-sf.webp" alt="The Handyman SF">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>San Francisco, CA</span>
+            <span>WordPress</span>
+          </div>
+          <h2>The Handyman SF</h2>
+          <p>A WordPress site for a same-day San Francisco handyman with text-to-quote booking.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="handyman" data-live="https://fullhousepros.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-fullhouse-pros.webp" alt="Fullhouse Pros">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>San Francisco Bay Area</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Fullhouse Pros</h2>
+          <p>A WordPress site for a Bay Area remodeling and handyman company built around fast estimates.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="handyman" data-live="https://imthatguyhandyman.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-i-m-that-guy-handyman.webp" alt="I’m That Guy Handyman">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Tulsa, OK</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>I’m That Guy Handyman</h2>
+          <p>A custom-built site for a family-owned Jenks and Tulsa handyman with 240+ five-star reviews.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="handyman" data-live="https://extremehandyman.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-extreme-handyman-service.webp" alt="Extreme Handyman® Service">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Seattle, WA</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Extreme Handyman® Service</h2>
+          <p>A WordPress site for a licensed Seattle and Bellevue handyman with 30+ years of experience.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="plumbing" data-live="https://edwardsplumbingllc.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-edwards-plumbing.webp" alt="Edwards Plumbing">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Phoenix, AZ</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Edwards Plumbing</h2>
+          <p>A WordPress site for a family-owned Phoenix-area plumbing company with free estimates.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="plumbing" data-live="/live-preview?site=mns-plumbing">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-mns-plumbing.webp" alt="MNS Plumbing">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Anthem, AZ</span>
+            <span>Squarespace</span>
+          </div>
+          <h2>MNS Plumbing</h2>
+          <p>A Squarespace site for an Anthem plumbing company offering same-day repairs and installations.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="plumbing" data-live="https://www.uniplumb.com.au/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-uniplumb.webp" alt="Uniplumb">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Sunshine Coast, AU</span>
+            <span>Squarespace</span>
+          </div>
+          <h2>Uniplumb</h2>
+          <p>A clean Squarespace site for a Sunshine Coast plumbing, drainage and renovation company.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="plumbing" data-live="https://reliantplumbing.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/industry-plumbing-3.webp" alt="Reliant Plumbing">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Austin, TX</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Reliant Plumbing</h2>
+          <p>A WordPress site for a 24/7 Texas plumbing company with online booking and free estimates.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="plumbing" data-live="https://beyondwow.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-beyond-wow-plumbing.webp" alt="Beyond Wow Plumbing">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Austin, TX</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Beyond Wow Plumbing</h2>
+          <p>A bold WordPress site for Austin’s trusted plumber since 1980, with 4,600+ reviews.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="plumbing" data-live="https://www.plumbersthatcare.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-economy-plumbing-services.webp" alt="Economy Plumbing Services">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Austin, TX</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>Economy Plumbing Services</h2>
+          <p>A custom-built site for master plumbers serving Austin and Marble Falls since 2012.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="plumbing" data-live="https://oandmplumbing.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-o-and-m-plumbing.webp" alt="O &amp; M Plumbing">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Pflugerville, TX</span>
+            <span>WordPress</span>
+          </div>
+          <h2>O &amp; M Plumbing</h2>
+          <p>A WordPress site for a Pflugerville and Austin plumber handling residential and commercial work.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="plumbing" data-live="https://miamidadeplumbingcompany.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-miami-dade-plumbing.webp" alt="Miami Dade Plumbing">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Miami, FL</span>
+            <span>Custom Web</span>
+          </div>
+          <h2>Miami Dade Plumbing</h2>
+          <p>A custom-built site for a mobile Miami-Dade plumber covering leaks, drains and water heaters 24/7.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="plumbing" data-live="https://sunlandplumbing.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-sunland-plumbing.webp" alt="Sunland Plumbing">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Austin, TX</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Sunland Plumbing</h2>
+          <p>A WordPress site for Austin’s water heater specialists with upfront, all-in pricing.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="plumbing" data-live="https://captainplumbertx.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-captain-plumber.webp" alt="Captain Plumber">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Dripping Springs, TX</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Captain Plumber</h2>
+          <p>A bold WordPress site for a locally owned Dripping Springs plumber offering same-day service.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="hvac" data-live="https://www.paragonmechanical.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-paragon-mechanical.webp" alt="Paragon Mechanical">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Silicon Valley, CA</span>
+            <span>Squarespace</span>
+          </div>
+          <h2>Paragon Mechanical</h2>
+          <p>A Squarespace site for a full-service Silicon Valley mechanical, HVAC and plumbing contractor.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wix" data-industries="hvac" data-live="https://www.airbossheatingandcooling.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-airboss-heating-and-cooling.webp" alt="Airboss Heating &amp; Cooling">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>North Carolina</span>
+            <span>Wix</span>
+          </div>
+          <h2>Airboss Heating &amp; Cooling</h2>
+          <p>A Wix site for a certified North Carolina HVAC service and installation company.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="hvac" data-live="https://www.davisair.net/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-davis-air-conditioning-and-heating.webp" alt="Davis Air Conditioning &amp; Heating">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Clermont, FL</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Davis Air Conditioning &amp; Heating</h2>
+          <p>A WordPress site for a family-owned Clermont HVAC company with free estimates.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="hvac" data-live="/live-preview?site=tanous-hvac">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-tanous-hvac.webp" alt="Tanous HVAC">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Hoboken, NJ</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Tanous HVAC</h2>
+          <p>A WordPress site for a family-owned Hudson County HVAC company answering calls 24/7.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="hvac" data-live="https://kalosflorida.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/industry-hvac-3.webp" alt="Kalos Services">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Central Florida</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Kalos Services</h2>
+          <p>A WordPress site for a family-owned HVAC, electrical and plumbing company in Central Florida.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="hvac" data-live="https://www.aircorheatingcooling.com/">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-aircor-heating-and-cooling.webp" alt="Aircor Heating &amp; Cooling">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Chicago, IL</span>
+            <span>Squarespace</span>
+          </div>
+          <h2>Aircor Heating &amp; Cooling</h2>
+          <p>A Squarespace site for a Chicago HVAC company focused on comfort and healthy air.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="hvac" data-live="https://www.alexandersheating.com/?utm_source=direct&amp;utm_medium=none&amp;utm_campaign=Direct">
+        <div class="work-card-media">
+          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-alexander-s-heating-and-ac.webp" alt="Alexander’s Heating &amp; AC">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-meta">
+            <span>Redmond, WA</span>
+            <span>WordPress</span>
+          </div>
+          <h2>Alexander’s Heating &amp; AC</h2>
+          <p>A WordPress site for an Eastside HVAC company with online booking and service requests.</p>
+          <div class="work-card-tags">
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="home-work-cta"></div>
+  </div>
+</section>
+</div>
+
+<div class="work-modal" id="workModal" hidden>
+  <div class="work-modal-backdrop" data-work-close></div>
+  <div class="work-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="workModalTitle">
+    <button class="work-modal-close" type="button" data-work-close aria-label="Close">&times;</button>
+    <div class="work-modal-scroll">
+      <div class="work-modal-media">
+        <img loading="lazy" id="workModalImg" src="" alt="">
+      </div>
+      <div class="work-modal-body">
+        <p class="work-modal-eyebrow" id="workModalEyebrow"></p>
+        <h3 id="workModalTitle"></h3>
+        <div class="work-card-meta work-modal-meta" id="workModalMeta"></div>
+        <p class="work-modal-text" id="workModalText"></p>
+        <div class="work-card-tags work-modal-tags" id="workModalTags"></div>
+        <div class="work-modal-actions">
+          <a href="/contact" class="btn btn-lime" data-open-popup>Start a similar project</a>
+          <a href="/works" class="text-link-blue">See all work &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="live-modal" id="liveModal" hidden>
+  <div class="live-modal-backdrop" data-live-close></div>
+  <div class="live-modal-dialog" role="dialog" aria-modal="true" aria-label="Live website preview">
+    <button class="live-modal-close" type="button" data-live-close aria-label="Close">&times;</button>
+    <div class="live-modal-loader" aria-hidden="true"><span></span></div>
+    <div class="live-modal-progress" aria-hidden="true"></div>
+    <iframe class="live-modal-frame" id="liveModalFrame" title="Live website preview" src="about:blank"></iframe>
+  </div>
+</div>
+
+<div class="rx rx--pc">
 
 <section class="rx-ask" data-rx-ask>
   <div class="rx-ask-inner">
@@ -101,8 +1350,8 @@ include __DIR__ . '/includes/header.php';
       <p>A homeowner with ants in the kitchen calls whoever looks safest and most professional online. We make your company that choice, then keep them on a plan.</p>
       <a href="tel:+15123379723" class="rx-cta"><span>BOOK A CALL</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
     </div>
-    <div class="rx-ask-art" data-rx-tilt>
-      <div class="rx-ask-phone"><span class="rx-ask-island" aria-hidden="true"></span><div class="rx-ask-screen"><iframe src="/live-preview?site=nozzlenolen-com" title="Nozzle Nolen website on mobile" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms"></iframe><img class="rx-ask-fallback" src="/assets/images/pc-ask-phone.jpg" alt="Nozzle Nolen website on mobile" loading="lazy" hidden></div></div>
+    <div class="rx-ask-art">
+      <div class="rx-ask-phone"><div class="rx-ask-screen"><div class="rx-ask-status" aria-hidden="true"><span class="rx-ask-time">9:41</span><span class="rx-ask-island"><i></i></span><span class="rx-ask-icons"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 16 12"><path d="M8 11.5 5.6 9a3.4 3.4 0 0 1 4.8 0zM3.3 6.8a6.6 6.6 0 0 1 9.4 0l-1.5 1.5a4.5 4.5 0 0 0-6.4 0zM1 4.5a9.9 9.9 0 0 1 14 0l-1.5 1.5a7.8 7.8 0 0 0-11 0z"/></svg><svg class="rx-ask-batt" viewBox="0 0 27 12"><rect x="0.5" y="0.5" width="23" height="11" rx="3.2" fill="none" stroke="currentColor" opacity=".4"/><rect x="2.2" y="2.2" width="19.6" height="7.6" rx="2"/><rect x="24.6" y="4" width="1.8" height="4" rx="0.9" opacity=".45"/></svg></span></div><div class="rx-ask-bar" aria-hidden="true"><span class="rx-ask-url"><svg viewBox="0 0 24 24"><path d="M7 11V8a5 5 0 0 1 10 0v3M6 11h12v9H6z"/></svg>nozzlenolen.com</span></div><div class="rx-ask-view"><iframe src="/live-preview?site=nozzlenolen-com" title="Nozzle Nolen website on mobile" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms"></iframe><img class="rx-ask-fallback" src="/assets/images/pc-ask-phone.jpg" alt="Nozzle Nolen website on mobile" loading="lazy" hidden></div><div class="rx-ask-tools" aria-hidden="true"><span class="rx-ask-tool-row"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg><svg viewBox="0 0 24 24" class="is-off"><path d="M9 5l7 7-7 7"/></svg><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="3"/></svg><svg viewBox="0 0 24 24"><path d="M6 12h.01M12 12h.01M18 12h.01"/></svg></span><span class="rx-ask-home"></span></div></div></div>
     </div>
   </div>
 </section>
@@ -145,13 +1394,23 @@ include __DIR__ . '/includes/header.php';
     <div class="rx-stage" id="rxStage" role="tabpanel" aria-live="polite">
       <div class="rx-stage-col rx-stage-col--l"><div class="rx-feats is-active" data-rx-pane="0"><div class="rx-feat"><h3>Clear service pages</h3><p>Termites, rodents and plans each get a page that sells.</p></div><div class="rx-feat"><h3>Process at a glance</h3><p>Show inspection to treatment so nobody worries.</p></div><div class="rx-feat"><h3>Real tech photos</h3><p>Your techs and trucks lead every page, not stock images.</p></div></div><div class="rx-feats" data-rx-pane="1"><div class="rx-feat"><h3>Filter by pest</h3><p>Homeowners jump straight to the pest they found.</p></div><div class="rx-feat"><h3>Signs to look for</h3><p>Photos that help them name the problem fast.</p></div><div class="rx-feat"><h3>Treatment stories</h3><p>Problem, plan and result for every job.</p></div></div><div class="rx-feats" data-rx-pane="2"><div class="rx-feat"><h3>Every lead in one place</h3><p>Calls, forms and bookings land in a single inbox.</p></div><div class="rx-feat"><h3>Urgency at a glance</h3><p>See termite and rodent calls first.</p></div><div class="rx-feat"><h3>Hot lead alerts</h3><p>Plan-ready homes get flagged so you reply first.</p></div></div><div class="rx-feats" data-rx-pane="3"><div class="rx-feat"><h3>Instant plan price</h3><p>Homeowners see a monthly price in seconds.</p></div><div class="rx-feat"><h3>What is included</h3><p>Visits, monitoring and re-treats listed simply.</p></div><div class="rx-feat"><h3>Easy upgrades</h3><p>Plus and Total tiers lift the average plan.</p></div></div></div>
       <div class="rx-stage-phone">
-        <div class="rx-stage-screens"><img class="rx-screen is-active" data-rx-pane="0" src="/assets/images/pcx-tab-1.webp" alt="Homeowner pages screen" width="720" height="1400" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="1" src="/assets/images/pcx-tab-2.webp" alt="Pest library screen" width="720" height="1400" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="2" src="/assets/images/pcx-tab-3.webp" alt="Owner dashboard screen" width="720" height="1400" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="3" src="/assets/images/pcx-tab-4.webp" alt="Plan builder screen" width="720" height="1400" loading="lazy" decoding="async"></div>
+        <div class="rx-stage-screens"><img class="rx-screen is-active" data-rx-pane="0" src="/assets/images/pcx-tab-1.webp" alt="Homeowner pages screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="1" src="/assets/images/pcx-tab-2.webp" alt="Pest library screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="2" src="/assets/images/pcx-tab-3.webp" alt="Owner dashboard screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="3" src="/assets/images/pcx-tab-4.webp" alt="Plan builder screen" width="920" height="1640" loading="lazy" decoding="async"></div>
       </div>
       <div class="rx-stage-col rx-stage-col--r"><div class="rx-feats is-active" data-rx-pane="0"><div class="rx-feat"><h3>Free inspection button</h3><p>Booking sits on every screen, always one thumb away.</p></div><div class="rx-feat"><h3>Local proof</h3><p>Nearby homes and reviews close to the homeowner.</p></div><div class="rx-feat"><h3>Fast on any phone</h3><p>Pages load quickly even on weak mobile signal.</p></div></div><div class="rx-feats" data-rx-pane="1"><div class="rx-feat"><h3>Big, sharp photos</h3><p>Clear images that make the problem obvious.</p></div><div class="rx-feat"><h3>Before and after</h3><p>Swipe-to-reveal results that sell the service.</p></div><div class="rx-feat"><h3>Book for this pest</h3><p>A request button tied to each pest page.</p></div></div><div class="rx-feats" data-rx-pane="2"><div class="rx-feat"><h3>Recurring value</h3><p>Know how much yearly revenue each month added.</p></div><div class="rx-feat"><h3>Source tracking</h3><p>See which ads and searches bring real plans.</p></div><div class="rx-feat"><h3>One-tap follow-up</h3><p>Call or text the homeowner straight from the lead.</p></div></div><div class="rx-feats" data-rx-pane="3"><div class="rx-feat"><h3>Fewer surprises</h3><p>Price and coverage are clear before the visit.</p></div><div class="rx-feat"><h3>Qualified signups</h3><p>Only ready-to-start homeowners reach out.</p></div><div class="rx-feat"><h3>Start plan CTA</h3><p>One button turns interest into a recurring account.</p></div></div></div>
     </div>
   </div>
 </section>
 
+</div>
+
+<div class="rx-canvas rx--pc">
+<?php
+$street_section_id = 'testimonials';
+include __DIR__ . '/includes/testimonialslider.php';
+?>
+</div>
+
+<div class="rx rx--pc">
 <section class="rx-team">
   <div class="rx-team-card">
     <div class="rx-team-art" data-rx-tilt><img src="/assets/images/pcx-trio.webp" alt="Pest control website services page, results page and contact page on phones" width="1840" height="1496" loading="lazy" decoding="async"></div>
@@ -163,1245 +1422,6 @@ include __DIR__ . '/includes/header.php';
     </div>
   </div>
 </section>
-
-</div>
-
-<div class="rx-canvas rx--pc rx-work-canvas">
-<section class="page-section industry-nav-section">
-  <div class="container">
-    <div class="works-filter-stack works-filter-stack--center home-filter-stack" data-trade-links>
-      <div class="home-filter-row is-done">
-        <p class="home-filter-label">Select the Industry and services</p>
-        <div class="works-filters" id="homeWorksIndustries" role="tablist" aria-label="Filter by industry">
-          <button type="button" class="works-filter" data-industry="all" role="tab" aria-selected="false">Featured</button>
-          <button type="button" class="works-filter" data-industry="remodelers" role="tab" aria-selected="false">Remodeling</button>
-          <button type="button" class="works-filter" data-industry="hvac" role="tab" aria-selected="false">HVAC</button>
-          <button type="button" class="works-filter" data-industry="landscaping" role="tab" aria-selected="false">Landscaping</button>
-          <button type="button" class="works-filter" data-industry="roofing" role="tab" aria-selected="false">Roofing</button>
-          <button type="button" class="works-filter" data-industry="plumbing" role="tab" aria-selected="false">Plumbing</button>
-          <button type="button" class="works-filter" data-industry="pool-services" role="tab" aria-selected="false">Pool Services</button>
-          <button type="button" class="works-filter" data-industry="power-washing" role="tab" aria-selected="false">Power Washing</button>
-          <button type="button" class="works-filter" data-industry="handyman" role="tab" aria-selected="false">Handyman</button>
-          <button type="button" class="works-filter is-active" data-industry="pest-control" role="tab" aria-selected="true">Pest Control</button>
-        </div>
-      </div>
-      <div class="home-filter-row">
-        <div class="works-filters" id="homeWorksFilters" role="tablist" aria-label="Filter by service">
-          <button type="button" class="works-filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
-          <button type="button" class="works-filter" data-filter="web-development" role="tab" aria-selected="false">Web Design</button>
-          <button type="button" class="works-filter" data-filter="seo" role="tab" aria-selected="false">SEO</button>
-          <button type="button" class="works-filter" data-filter="social-media-advertising" role="tab" aria-selected="false">Social Media</button>
-          <button type="button" class="works-filter" data-filter="google-ads" role="tab" aria-selected="false">Google Ads</button>
-        </div>
-      </div>
-      <div class="home-filter-row">
-        <span class="home-filter-label" aria-hidden="true"></span>
-        <div class="works-subfilters" id="homeWorksSubfilters" role="tablist" aria-label="Filter by subcategory" hidden></div>
-      </div>
-    </div>
-
-    <div class="works-grid home-works-grid reveal" id="homeWorksGrid" data-smooth>
-      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="remodelers" data-live="https://teamworkhomedesigns.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-teamwork-home-designs.webp" alt="Teamwork Home Designs">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Austin, TX</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Teamwork Home Designs</h2>
-          <p>A clean WordPress site for an Austin general contractor, built around kitchen and bath transformations and a free consultation call.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="remodelers" data-live="https://primeconstructionaustin.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-prime-construction.webp" alt="Prime Construction">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Austin, TX</span>
-            <span>Custom coded</span>
-          </div>
-          <h2>Prime Construction</h2>
-          <p>A custom-built design and build site for an Austin remodeler, leading with finished kitchens, baths and whole-home renovations.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="remodelers" data-live="https://miaremodelingcontractors.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/industry-remodelers-2.webp" alt="Mia Remodeling Contractors">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Miami, FL</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Mia Remodeling Contractors</h2>
-          <p>A WordPress site for a Miami remodeling contractor covering bathrooms, kitchens, decks, patio enclosures and pergolas.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="remodelers" data-live="https://elbazconstructioncorp.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/industry-remodelers-4.webp" alt="Elbaz Construction">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Miami, FL</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Elbaz Construction</h2>
-          <p>A WordPress site for a Miami and Hollywood general contractor focused on kitchen and bathroom remodeling across South Florida.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="landing-pages wix" data-industries="remodelers" data-live="https://www.ymedinaremodeling.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-ymedina-remodeling.webp" alt="YMedina Remodeling">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Miami, FL</span>
-            <span>Wix</span>
-          </div>
-          <h2>YMedina Remodeling</h2>
-          <p>A Wix site for a Miami remodeling company with a free estimate form right in the first screen.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="remodelers" data-live="/live-preview?site=excel-remodeling">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-excel-remodeling.webp" alt="Excel Remodeling">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Maryland</span>
-            <span>Squarespace</span>
-          </div>
-          <h2>Excel Remodeling</h2>
-          <p>A Squarespace site for a Maryland roofing and siding company, built around trust and a free no-pressure estimate.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="remodelers" data-live="https://www.environschicago.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-environs-chicago.webp" alt="Environs Group">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Chicago, IL</span>
-            <span>Squarespace</span>
-          </div>
-          <h2>Environs Group</h2>
-          <p>An elegant Squarespace site for a Chicago builder and interior design studio, showing available homes and recent projects.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wix" data-industries="remodelers" data-live="https://www.unitedelitegroup.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-united-elite-group.webp" alt="United Elite Group">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>New York, NY</span>
-            <span>Wix</span>
-          </div>
-          <h2>United Elite Group</h2>
-          <p>A Wix site for a New York City luxury renovation contractor, with portfolio-led storytelling and a free consultation.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="redesigns squarespace" data-industries="remodelers" data-live="https://www.eurodesignremodel.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-euro-design-remodel.webp" alt="Euro Design Remodel">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Maryland</span>
-            <span>Squarespace</span>
-          </div>
-          <h2>Euro Design Remodel</h2>
-          <p>A Squarespace site for a Maryland bathroom remodeler with 20 years of experience, built to book free design consultations.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="power-washing" data-live="/live-preview?site=austin-pressure-washing-and-roof-cleanin">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-austin-pressure-washing-and-roof-cleanin.webp" alt="Austin Pressure Washing &amp; Roof Cleaning">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Austin, TX</span>
-            <span>Custom Web</span>
-          </div>
-          <h2>Austin Pressure Washing &amp; Roof Cleaning</h2>
-          <p>A dark, premium site for an Austin pressure washing and roof cleaning crew, with reviews and a quote button up front.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="power-washing" data-live="https://timemachineatx.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/industry-power-washing-2.webp" alt="Time Machine ATX">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Austin, TX</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Time Machine ATX</h2>
-          <p>A WordPress site for an award-winning Austin pressure washing company serving homes and commercial properties.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wix" data-industries="power-washing" data-live="https://www.southernshinetexas.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-southern-shine.webp" alt="Southern Shine">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Austin, TX</span>
-            <span>Wix</span>
-          </div>
-          <h2>Southern Shine</h2>
-          <p>A bold Wix site for an Austin exterior cleaning company, built around a fast quote and local trust.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="power-washing" data-live="https://atxcleanprowash.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-atx-clean-pro-wash.webp" alt="ATX Clean Pro Wash">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Austin, TX</span>
-            <span>WordPress</span>
-          </div>
-          <h2>ATX Clean Pro Wash</h2>
-          <p>A sleek WordPress site for a soft wash crew cleaning homes, driveways, roofs, decks and fences.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="power-washing" data-live="https://sonicwashsacramento.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-sonic-wash.webp" alt="Sonic Wash">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Sacramento, CA</span>
-            <span>Custom Web</span>
-          </div>
-          <h2>Sonic Wash</h2>
-          <p>A clean, review-led site for a Sacramento pressure washing company with click-to-call in the first screen.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="landscaping" data-live="https://www.handmlandscaping.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-handm-landscaping.webp" alt="H&amp;M Landscaping">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Flint, MI</span>
-            <span>Squarespace</span>
-          </div>
-          <h2>H&amp;M Landscaping</h2>
-          <p>A Squarespace site for a Genesee County landscaper covering design, construction and maintenance.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="landscaping" data-live="https://landscapedesignhouston.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-texan-landscape-group.webp" alt="Texan Landscape Group">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Houston, TX</span>
-            <span>Custom Web</span>
-          </div>
-          <h2>Texan Landscape Group</h2>
-          <p>A full-service landscaping site for a Houston design-build-maintain team, with project stats and quote paths.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="landscaping" data-live="https://www.2galslandscaping.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-2-gals-landscaping.webp" alt="2 Gals Landscaping">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Houston, TX</span>
-            <span>Custom Web</span>
-          </div>
-          <h2>2 Gals Landscaping</h2>
-          <p>An elegant site for a Houston landscaping and construction company focused on native gardens and hardscaping.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="landscaping" data-live="https://evergreenlawncaretx.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-evergreen-outdoor.webp" alt="Evergreen Outdoor">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Houston, TX</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Evergreen Outdoor</h2>
-          <p>A WordPress site for a Houston lawn care company, with an estimate form right in the hero.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="pool-services" data-live="https://southtexaspooltilecleaning.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-south-texas-pool-tile-cleaning.webp" alt="South Texas Pool Tile Cleaning">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>San Antonio, TX</span>
-            <span>Custom Web</span>
-          </div>
-          <h2>South Texas Pool Tile Cleaning</h2>
-          <p>A bold site for a San Antonio pool tile cleaning, repair and resurfacing specialist with free estimates.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="pool-services" data-live="/live-preview?site=summit-pool-and-spa">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-summit-pool-and-spa.webp" alt="Summit Pool &amp; Spa">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>East Bay, CA</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Summit Pool &amp; Spa</h2>
-          <p>A WordPress site for an East Bay pool service focused on consistent maintenance and clear communication.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="pool-services" data-live="/live-preview?site=asa-pools-and-hot-tubs">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-asa-pools-and-hot-tubs.webp" alt="ASA Pools &amp; Hot Tubs">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Seattle, WA</span>
-            <span>Custom Web</span>
-          </div>
-          <h2>ASA Pools &amp; Hot Tubs</h2>
-          <p>A custom-built site for a Seattle pool and hot tub service with a quote form in the first screen.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="pool-services" data-live="https://slcpoolservice.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/industry-pool-services-2.webp" alt="SLC Pool Service">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Salt Lake City, UT</span>
-            <span>Custom Web</span>
-          </div>
-          <h2>SLC Pool Service</h2>
-          <p>A fast custom site for a family-owned Utah pool repair, maintenance and diagnostics company.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="pool-services" data-live="https://www.aqualecu.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-aqua-lecu-pool-services.webp" alt="Aqua Lecu Pool Services">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Orlando, FL</span>
-            <span>Custom Web</span>
-          </div>
-          <h2>Aqua Lecu Pool Services</h2>
-          <p>A clean site for an Orlando pool cleaning company with no contracts and free estimates.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="pest-control" data-live="https://agropestpros.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-agro-pest-control.webp" alt="Agro Pest Control">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Phoenix, AZ</span>
-            <span>Custom Web</span>
-          </div>
-          <h2>Agro Pest Control</h2>
-          <p>A bright site for an Arizona pest control company built around residential and commercial service paths.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="pest-control" data-live="https://arrownj.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-arrow-pest-control.webp" alt="Arrow Pest Control">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>New Jersey</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Arrow Pest Control</h2>
-          <p>A WordPress site for a New Jersey pest control company protecting homes and businesses since 1973.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="pest-control" data-live="https://nozzlenolen.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-nozzle-nolen.webp" alt="Nozzle Nolen">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Southeast Florida</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Nozzle Nolen</h2>
-          <p>A WordPress site for a Florida pest control company with free inspections and online scheduling.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="pest-control" data-live="https://www.altapestcontrol.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-alta-pest-control.webp" alt="Alta Pest Control">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Texas &amp; Oklahoma</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Alta Pest Control</h2>
-          <p>A WordPress site for an eco-friendly termite, mosquito and pest control company in Texas and Oklahoma.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="pest-control" data-live="https://aptivepestcontrol.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-aptive-pest-control.webp" alt="Aptive Pest Control">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Nationwide</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Aptive Pest Control</h2>
-          <p>A WordPress site for a national residential pest control brand with year-round protection plans.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="pest-control" data-live="https://akelapest.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-akela-pest-control.webp" alt="Akela Pest Control">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Riverside, CA</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Akela Pest Control</h2>
-          <p>A WordPress site for an eco-friendly Riverside pest control company with affordable plans.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="pest-control" data-live="https://beesmartcolorado.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-bee-smart-pest-control.webp" alt="Bee Smart Pest Control">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Denver, CO</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Bee Smart Pest Control</h2>
-          <p>A WordPress site for a local pest control company serving North Denver and Boulder County.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="pest-control" data-live="https://elitewildlifeservices.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-elite-wildlife-services.webp" alt="Elite Wildlife Services">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Houston, TX</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Elite Wildlife Services</h2>
-          <p>A WordPress site for a humane Houston wildlife removal company with an inspection request form.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="roofing" data-live="https://foreverroofing.net/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-forever-roofing.webp" alt="Forever Roofing">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Pacific Northwest</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Forever Roofing</h2>
-          <p>A WordPress site for a roofing, siding and windows company offering free quotes on new installations.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="roofing" data-live="https://ecoroofingnw.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-eco-roofing-and-roof-cleaning.webp" alt="Eco Roofing &amp; Roof Cleaning">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Pacific Northwest</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Eco Roofing &amp; Roof Cleaning</h2>
-          <p>A WordPress site for a top-rated Northwest roofing and roof cleaning company.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="roofing" data-live="https://www.yurasroofing.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-yuras-roofing.webp" alt="Yuras Roofing">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>San Antonio, TX</span>
-            <span>Custom Web</span>
-          </div>
-          <h2>Yuras Roofing</h2>
-          <p>A custom-built site for a family-owned San Antonio roofer since 1949, with an estimate form up front.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="roofing" data-live="https://vh1roofing.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-vh1-roofing.webp" alt="VH1 Roofing">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Tulsa, OK</span>
-            <span>WordPress</span>
-          </div>
-          <h2>VH1 Roofing</h2>
-          <p>A WordPress site for a veteran-supporting Tulsa roofing company with free inspection requests.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="roofing" data-live="https://voyagerexteriors.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-voyager-exteriors.webp" alt="Voyager Exteriors">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Twin Cities, MN</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Voyager Exteriors</h2>
-          <p>A WordPress site for a Twin Cities exterior contractor covering decks, siding and roofing.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="roofing" data-live="https://janneyroofing.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-janney-home-services.webp" alt="Janney Home Services">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Florida</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Janney Home Services</h2>
-          <p>A WordPress site for a Florida roofing and window replacement company with storm-ready solutions.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="roofing" data-live="https://tadlockroofing.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-tadlock-roofing.webp" alt="Tadlock Roofing">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Florida</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Tadlock Roofing</h2>
-          <p>A WordPress site for one of America’s Top 100 roofing contractors serving North Florida.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="roofing" data-live="https://www.lindholmroofing.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-lindholm-roofing.webp" alt="Lindholm Roofing">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Chicago, IL</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Lindholm Roofing</h2>
-          <p>A WordPress site for a family-owned Chicago roofing contractor trusted since 1949.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wix" data-industries="handyman" data-live="https://www.columbushandyman.net/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-columbus-handyman.webp" alt="Columbus Handyman">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Columbus, OH</span>
-            <span>Wix</span>
-          </div>
-          <h2>Columbus Handyman</h2>
-          <p>A Wix site for a licensed Central Ohio handyman and general contractor with 21+ years of experience.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="handyman" data-live="https://kwhandymanmiamifl.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-kw-handyman.webp" alt="KW Handyman">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Miami, FL</span>
-            <span>Custom Web</span>
-          </div>
-          <h2>KW Handyman</h2>
-          <p>A custom-built site for a Miami handyman and facility management company with nationwide reach.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="handyman" data-live="/live-preview?site=tri-miami-handyman-services">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-tri-miami-handyman-services.webp" alt="TRI Miami Handyman Services">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Miami, FL</span>
-            <span>Custom Web</span>
-          </div>
-          <h2>TRI Miami Handyman Services</h2>
-          <p>A custom-built site for a Miami-Dade remodeling and property improvement company.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="handyman" data-live="https://prohandymanmia.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-pro-handyman-miami.webp" alt="Pro Handyman Miami">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Miami, FL</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Pro Handyman Miami</h2>
-          <p>A WordPress site for a Miami-Dade handyman voted best in Miami, covering repairs and maintenance.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="handyman" data-live="https://allin1dallas.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-all-in-1-handy-man.webp" alt="All In 1 Handy Man">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Dallas, TX</span>
-            <span>WordPress</span>
-          </div>
-          <h2>All In 1 Handy Man</h2>
-          <p>A WordPress site for a Dallas and Richardson handyman with a quick service request form.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="handyman" data-live="https://h2gservices.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-h2g-handyman-services.webp" alt="H2G Handyman Services">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Irving, TX</span>
-            <span>Custom Web</span>
-          </div>
-          <h2>H2G Handyman Services</h2>
-          <p>A custom-built site for an Irving handyman offering TV mounting, assembly, painting and repairs.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="handyman" data-live="https://hprohandyman.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-h-pro-handyman.webp" alt="H-PRO Handyman">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Florida</span>
-            <span>WordPress</span>
-          </div>
-          <h2>H-PRO Handyman</h2>
-          <p>A WordPress site for a handyman specializing in TV mounting, furniture assembly and hanging services.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="handyman" data-live="/live-preview?site=extreme-handyman-services">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-extreme-handyman-services.webp" alt="Extreme Handyman Services">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Sacramento, CA</span>
-            <span>Squarespace</span>
-          </div>
-          <h2>Extreme Handyman Services</h2>
-          <p>A Squarespace site for a Sacramento handyman providing reliable home repairs since 2006.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="handyman" data-live="https://thehandymansflive.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-the-handyman-sf.webp" alt="The Handyman SF">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>San Francisco, CA</span>
-            <span>WordPress</span>
-          </div>
-          <h2>The Handyman SF</h2>
-          <p>A WordPress site for a same-day San Francisco handyman with text-to-quote booking.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="handyman" data-live="https://fullhousepros.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-fullhouse-pros.webp" alt="Fullhouse Pros">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>San Francisco Bay Area</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Fullhouse Pros</h2>
-          <p>A WordPress site for a Bay Area remodeling and handyman company built around fast estimates.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="handyman" data-live="https://imthatguyhandyman.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-i-m-that-guy-handyman.webp" alt="I’m That Guy Handyman">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Tulsa, OK</span>
-            <span>Custom Web</span>
-          </div>
-          <h2>I’m That Guy Handyman</h2>
-          <p>A custom-built site for a family-owned Jenks and Tulsa handyman with 240+ five-star reviews.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="handyman" data-live="https://extremehandyman.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-extreme-handyman-service.webp" alt="Extreme Handyman® Service">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Seattle, WA</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Extreme Handyman® Service</h2>
-          <p>A WordPress site for a licensed Seattle and Bellevue handyman with 30+ years of experience.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="plumbing" data-live="https://edwardsplumbingllc.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-edwards-plumbing.webp" alt="Edwards Plumbing">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Phoenix, AZ</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Edwards Plumbing</h2>
-          <p>A WordPress site for a family-owned Phoenix-area plumbing company with free estimates.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="plumbing" data-live="/live-preview?site=mns-plumbing">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-mns-plumbing.webp" alt="MNS Plumbing">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Anthem, AZ</span>
-            <span>Squarespace</span>
-          </div>
-          <h2>MNS Plumbing</h2>
-          <p>A Squarespace site for an Anthem plumbing company offering same-day repairs and installations.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="plumbing" data-live="https://www.uniplumb.com.au/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-uniplumb.webp" alt="Uniplumb">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Sunshine Coast, AU</span>
-            <span>Squarespace</span>
-          </div>
-          <h2>Uniplumb</h2>
-          <p>A clean Squarespace site for a Sunshine Coast plumbing, drainage and renovation company.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="plumbing" data-live="https://reliantplumbing.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/industry-plumbing-3.webp" alt="Reliant Plumbing">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Austin, TX</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Reliant Plumbing</h2>
-          <p>A WordPress site for a 24/7 Texas plumbing company with online booking and free estimates.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="plumbing" data-live="https://beyondwow.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-beyond-wow-plumbing.webp" alt="Beyond Wow Plumbing">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Austin, TX</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Beyond Wow Plumbing</h2>
-          <p>A bold WordPress site for Austin’s trusted plumber since 1980, with 4,600+ reviews.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="plumbing" data-live="https://www.plumbersthatcare.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-economy-plumbing-services.webp" alt="Economy Plumbing Services">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Austin, TX</span>
-            <span>Custom Web</span>
-          </div>
-          <h2>Economy Plumbing Services</h2>
-          <p>A custom-built site for master plumbers serving Austin and Marble Falls since 2012.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="plumbing" data-live="https://oandmplumbing.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-o-and-m-plumbing.webp" alt="O &amp; M Plumbing">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Pflugerville, TX</span>
-            <span>WordPress</span>
-          </div>
-          <h2>O &amp; M Plumbing</h2>
-          <p>A WordPress site for a Pflugerville and Austin plumber handling residential and commercial work.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites custom-web" data-industries="plumbing" data-live="https://miamidadeplumbingcompany.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-miami-dade-plumbing.webp" alt="Miami Dade Plumbing">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Miami, FL</span>
-            <span>Custom Web</span>
-          </div>
-          <h2>Miami Dade Plumbing</h2>
-          <p>A custom-built site for a mobile Miami-Dade plumber covering leaks, drains and water heaters 24/7.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="plumbing" data-live="https://sunlandplumbing.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-sunland-plumbing.webp" alt="Sunland Plumbing">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Austin, TX</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Sunland Plumbing</h2>
-          <p>A WordPress site for Austin’s water heater specialists with upfront, all-in pricing.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="plumbing" data-live="https://captainplumbertx.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-captain-plumber.webp" alt="Captain Plumber">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Dripping Springs, TX</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Captain Plumber</h2>
-          <p>A bold WordPress site for a locally owned Dripping Springs plumber offering same-day service.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="hvac" data-live="https://www.paragonmechanical.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-paragon-mechanical.webp" alt="Paragon Mechanical">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Silicon Valley, CA</span>
-            <span>Squarespace</span>
-          </div>
-          <h2>Paragon Mechanical</h2>
-          <p>A Squarespace site for a full-service Silicon Valley mechanical, HVAC and plumbing contractor.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wix" data-industries="hvac" data-live="https://www.airbossheatingandcooling.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-airboss-heating-and-cooling.webp" alt="Airboss Heating &amp; Cooling">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>North Carolina</span>
-            <span>Wix</span>
-          </div>
-          <h2>Airboss Heating &amp; Cooling</h2>
-          <p>A Wix site for a certified North Carolina HVAC service and installation company.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="hvac" data-live="https://www.davisair.net/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-davis-air-conditioning-and-heating.webp" alt="Davis Air Conditioning &amp; Heating">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Clermont, FL</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Davis Air Conditioning &amp; Heating</h2>
-          <p>A WordPress site for a family-owned Clermont HVAC company with free estimates.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-featured data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="hvac" data-live="/live-preview?site=tanous-hvac">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-tanous-hvac.webp" alt="Tanous HVAC">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Hoboken, NJ</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Tanous HVAC</h2>
-          <p>A WordPress site for a family-owned Hudson County HVAC company answering calls 24/7.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="hvac" data-live="https://kalosflorida.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/industry-hvac-3.webp" alt="Kalos Services">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Central Florida</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Kalos Services</h2>
-          <p>A WordPress site for a family-owned HVAC, electrical and plumbing company in Central Florida.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites squarespace" data-industries="hvac" data-live="https://www.aircorheatingcooling.com/">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-aircor-heating-and-cooling.webp" alt="Aircor Heating &amp; Cooling">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Chicago, IL</span>
-            <span>Squarespace</span>
-          </div>
-          <h2>Aircor Heating &amp; Cooling</h2>
-          <p>A Squarespace site for a Chicago HVAC company focused on comfort and healthy air.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-      <article class="work-card" data-tags="web-design web-development" data-subs="corporate-sites wordpress" data-industries="hvac" data-live="https://www.alexandersheating.com/?utm_source=direct&amp;utm_medium=none&amp;utm_campaign=Direct">
-        <div class="work-card-media">
-          <img loading="lazy" decoding="async" width="960" height="600" src="/assets/images/work-live-alexander-s-heating-and-ac.webp" alt="Alexander’s Heating &amp; AC">
-        </div>
-        <div class="work-card-body">
-          <div class="work-card-meta">
-            <span>Redmond, WA</span>
-            <span>WordPress</span>
-          </div>
-          <h2>Alexander’s Heating &amp; AC</h2>
-          <p>A WordPress site for an Eastside HVAC company with online booking and service requests.</p>
-          <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <div class="home-work-cta"></div>
-  </div>
-</section>
-</div>
-
-<div class="work-modal" id="workModal" hidden>
-  <div class="work-modal-backdrop" data-work-close></div>
-  <div class="work-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="workModalTitle">
-    <button class="work-modal-close" type="button" data-work-close aria-label="Close">&times;</button>
-    <div class="work-modal-scroll">
-      <div class="work-modal-media">
-        <img loading="lazy" id="workModalImg" src="" alt="">
-      </div>
-      <div class="work-modal-body">
-        <p class="work-modal-eyebrow" id="workModalEyebrow"></p>
-        <h3 id="workModalTitle"></h3>
-        <div class="work-card-meta work-modal-meta" id="workModalMeta"></div>
-        <p class="work-modal-text" id="workModalText"></p>
-        <div class="work-card-tags work-modal-tags" id="workModalTags"></div>
-        <div class="work-modal-actions">
-          <a href="/contact.php" class="btn btn-lime" data-open-popup>Start a similar project</a>
-          <a href="/works.php" class="text-link-blue">See all work &rarr;</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="live-modal" id="liveModal" hidden>
-  <div class="live-modal-backdrop" data-live-close></div>
-  <div class="live-modal-dialog" role="dialog" aria-modal="true" aria-label="Live website preview">
-    <button class="live-modal-close" type="button" data-live-close aria-label="Close">&times;</button>
-    <div class="live-modal-loader" aria-hidden="true"><span></span></div>
-    <div class="live-modal-progress" aria-hidden="true"></div>
-    <iframe class="live-modal-frame" id="liveModalFrame" title="Live website preview" src="about:blank"></iframe>
-  </div>
-</div>
-
-<div class="rx-canvas rx--pc">
-<?php
-$street_section_id = 'testimonials';
-include __DIR__ . '/includes/testimonialslider.php';
-?>
 </div>
 
 <div class="rx-canvas rx--pc rx-faq-canvas">

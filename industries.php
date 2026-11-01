@@ -27,9 +27,9 @@ include __DIR__ . '/includes/header.php';
           <button type="button" class="hcar-arrow hcar-next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </div>
-      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-popup><span class="ihero-primary-label">Claim Your FREE Audit</span></a>
+      <a href="/contact" class="ihero-primary reveal reveal-delay-3" data-open-popup><span class="ihero-primary-label">Claim Your FREE Audit</span></a>
       <div class="ihero-secondary reveal reveal-delay-1">
-        <a href="/works.php" class="ihero-secondary-btn"><span class="ihero-secondary-label">See Our Work</span></a>
+        <a href="/works" class="ihero-secondary-btn"><span class="ihero-secondary-label">See Our Work</span></a>
       </div>
     </div>
   </div>
@@ -96,7 +96,7 @@ include __DIR__ . '/includes/header.php';
       </div>
       <ol class="ind-list">
         <li class="ind-row is-active" data-i="0">
-          <a href="/remodelers.php" class="ind-link">
+          <a href="/remodelers" class="ind-link">
             <span class="ind-num">01</span>
             <span class="ind-main">
               <img class="ind-thumb" src="/assets/images/industry-remodelers-1.webp" alt="" loading="lazy" decoding="async">
@@ -108,7 +108,7 @@ include __DIR__ . '/includes/header.php';
           <ul class="ind-tags"><li>Immersive project galleries and before/after proof</li><li>Consultation forms that capture budget and timing</li><li>Local visibility for the projects you want more of</li></ul>
         </li>
         <li class="ind-row" data-i="1">
-          <a href="/roofing.php" class="ind-link">
+          <a href="/roofing" class="ind-link">
             <span class="ind-num">02</span>
             <span class="ind-main">
               <img class="ind-thumb" src="/assets/images/industry-roofing-1.webp" alt="" loading="lazy" decoding="async">
@@ -120,7 +120,7 @@ include __DIR__ . '/includes/header.php';
           <ul class="ind-tags"><li>Project and warranty proof</li><li>Inspection request paths</li><li>Local search and storm-season campaigns</li></ul>
         </li>
         <li class="ind-row" data-i="2">
-          <a href="/power-washing.php" class="ind-link">
+          <a href="/power-washing" class="ind-link">
             <span class="ind-num">03</span>
             <span class="ind-main">
               <img class="ind-thumb" src="/assets/images/industry-power-washing-1.webp" alt="" loading="lazy" decoding="async">
@@ -132,7 +132,7 @@ include __DIR__ . '/includes/header.php';
           <ul class="ind-tags"><li>Before/after galleries</li><li>Fast quote requests</li><li>Seasonal residential and commercial campaigns</li></ul>
         </li>
         <li class="ind-row" data-i="3">
-          <a href="/hvac.php" class="ind-link">
+          <a href="/hvac" class="ind-link">
             <span class="ind-num">04</span>
             <span class="ind-main">
               <img class="ind-thumb" src="/assets/images/industry-hvac-1.webp" alt="" loading="lazy" decoding="async">
@@ -144,7 +144,7 @@ include __DIR__ . '/includes/header.php';
           <ul class="ind-tags"><li>Fast mobile click-to-call and booking</li><li>Repair versus replacement journeys</li><li>Maintenance plan visibility and lead tracking</li></ul>
         </li>
         <li class="ind-row" data-i="4">
-          <a href="/plumbing.php" class="ind-link">
+          <a href="/plumbing" class="ind-link">
             <span class="ind-num">05</span>
             <span class="ind-main">
               <img class="ind-thumb" src="/assets/images/industry-plumbing-1.webp" alt="" loading="lazy" decoding="async">
@@ -156,7 +156,7 @@ include __DIR__ . '/includes/header.php';
           <ul class="ind-tags"><li>Emergency call paths</li><li>Service-specific landing pages</li><li>Reviews, service areas and appointment requests</li></ul>
         </li>
         <li class="ind-row" data-i="5">
-          <a href="/handyman.php" class="ind-link">
+          <a href="/handyman" class="ind-link">
             <span class="ind-num">06</span>
             <span class="ind-main">
               <img class="ind-thumb" src="/assets/images/industry-handyman-1.webp" alt="" loading="lazy" decoding="async">
@@ -168,7 +168,7 @@ include __DIR__ . '/includes/header.php';
           <ul class="ind-tags"><li>Organized service categories</li><li>Easy estimate and booking forms</li><li>Local trust and repeat-customer campaigns</li></ul>
         </li>
         <li class="ind-row" data-i="6">
-          <a href="/landscaping.php" class="ind-link">
+          <a href="/landscaping" class="ind-link">
             <span class="ind-num">07</span>
             <span class="ind-main">
               <img class="ind-thumb" src="/assets/images/industry-landscaping-1.webp" alt="" loading="lazy" decoding="async">
@@ -180,7 +180,7 @@ include __DIR__ . '/includes/header.php';
           <ul class="ind-tags"><li>Project-led design showcases</li><li>Maintenance plan inquiries</li><li>Neighborhood-focused search and seasonal campaigns</li></ul>
         </li>
         <li class="ind-row" data-i="7">
-          <a href="/pool-services.php" class="ind-link">
+          <a href="/pool-services" class="ind-link">
             <span class="ind-num">08</span>
             <span class="ind-main">
               <img class="ind-thumb" src="/assets/images/industry-pool-services-1.webp" alt="" loading="lazy" decoding="async">
@@ -192,7 +192,7 @@ include __DIR__ . '/includes/header.php';
           <ul class="ind-tags"><li>Plan comparisons and recurring signup</li><li>ZIP-code/service-area clarity</li><li>Pool repair and seasonal promotion pages</li></ul>
         </li>
         <li class="ind-row" data-i="8">
-          <a href="/pest-control.php" class="ind-link">
+          <a href="/pest-control" class="ind-link">
             <span class="ind-num">09</span>
             <span class="ind-main">
               <img class="ind-thumb" src="/assets/images/industry-pest-control-1.webp" alt="" loading="lazy" decoding="async">
@@ -241,7 +241,7 @@ include __DIR__ . '/includes/header.php';
       </div>
     </div>
     <div class="container rail-cta">
-      <a href="/contact.php" class="btn btn-lime btn-lg" data-open-step-popup>Let&rsquo;s Talk About Your Trade</a>
+      <a href="/contact" class="btn btn-lime btn-lg" data-open-step-popup>Let&rsquo;s Talk About Your Trade</a>
     </div>
   </div>
 </section>
@@ -271,7 +271,7 @@ include __DIR__ . '/includes/testimonialslider.php';
         <h3>Don't see your exact industry?</h3>
         <p>We also take on closely related property and field-service projects when the fit is right. Tell us what you do and the kind of jobs you want more of.</p>
         <div class="svc-cta-act">
-          <a href="/contact.php" class="btn btn-lime btn-lg">Let's Talk</a>
+          <a href="/contact" class="btn btn-lime btn-lg">Let's Talk</a>
         </div>
       </div>
     </div>
@@ -436,7 +436,7 @@ include __DIR__ . '/includes/testimonialslider.php';
         <h3>You know your trade. We know how to make it easier to choose you.</h3>
         <p>Show us the business you want to build. We'll show you what your digital presence can do better.</p>
         <div class="svc-cta-act">
-          <a href="/contact.php" class="btn btn-lime btn-lg" data-open-popup>Claim Your FREE Audit</a>
+          <a href="/contact" class="btn btn-lime btn-lg" data-open-popup>Claim Your FREE Audit</a>
         </div>
       </div>
     </div>

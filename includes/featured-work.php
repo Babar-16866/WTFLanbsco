@@ -29,7 +29,7 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <button type="button" class="works-filter" data-industry="pest-control" role="tab" aria-selected="false">Pest Control</button>
         </div>
       </div>
-      <div class="home-filter-row" id="homeWorksServiceRow" hidden>
+      <!--<div class="home-filter-row" id="homeWorksServiceRow" hidden>
         <div class="works-filters" id="homeWorksFilters" role="tablist" aria-label="Filter works by service">
           <button type="button" class="works-filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
           <button type="button" class="works-filter" data-filter="web-development" role="tab" aria-selected="false">Web Design</button>
@@ -37,7 +37,7 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <button type="button" class="works-filter" data-filter="social-media-advertising" role="tab" aria-selected="false">Social Media</button>
           <button type="button" class="works-filter" data-filter="google-ads" role="tab" aria-selected="false">Google Ads</button>
         </div>
-      </div>
+      </div>-->
       <div class="home-filter-row">
         <span class="home-filter-label" aria-hidden="true"></span>
         <div class="works-subfilters" id="homeWorksSubfilters" role="tablist" aria-label="Filter by subcategory" hidden></div>
@@ -57,8 +57,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Teamwork Home Designs</h2>
           <p>A clean WordPress site for an Austin general contractor, built around kitchen and bath transformations and a free consultation call.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -75,8 +75,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Prime Construction</h2>
           <p>A custom-built design and build site for an Austin remodeler, leading with finished kitchens, baths and whole-home renovations.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -93,8 +93,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Mia Remodeling Contractors</h2>
           <p>A WordPress site for a Miami remodeling contractor covering bathrooms, kitchens, decks, patio enclosures and pergolas.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -111,8 +111,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Elbaz Construction</h2>
           <p>A WordPress site for a Miami and Hollywood general contractor focused on kitchen and bathroom remodeling across South Florida.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -129,8 +129,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>YMedina Remodeling</h2>
           <p>A Wix site for a Miami remodeling company with a free estimate form right in the first screen.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -147,8 +147,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Excel Remodeling</h2>
           <p>A Squarespace site for a Maryland roofing and siding company, built around trust and a free no-pressure estimate.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -165,8 +165,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Environs Group</h2>
           <p>An elegant Squarespace site for a Chicago builder and interior design studio, showing available homes and recent projects.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -183,8 +183,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>United Elite Group</h2>
           <p>A Wix site for a New York City luxury renovation contractor, with portfolio-led storytelling and a free consultation.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -201,8 +201,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Euro Design Remodel</h2>
           <p>A Squarespace site for a Maryland bathroom remodeler with 20 years of experience, built to book free design consultations.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -219,8 +219,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Austin Pressure Washing &amp; Roof Cleaning</h2>
           <p>A dark, premium site for an Austin pressure washing and roof cleaning crew, with reviews and a quote button up front.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -237,8 +237,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Time Machine ATX</h2>
           <p>A WordPress site for an award-winning Austin pressure washing company serving homes and commercial properties.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -255,8 +255,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Southern Shine</h2>
           <p>A bold Wix site for an Austin exterior cleaning company, built around a fast quote and local trust.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -273,8 +273,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>ATX Clean Pro Wash</h2>
           <p>A sleek WordPress site for a soft wash crew cleaning homes, driveways, roofs, decks and fences.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -291,8 +291,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Sonic Wash</h2>
           <p>A clean, review-led site for a Sacramento pressure washing company with click-to-call in the first screen.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -309,8 +309,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>H&amp;M Landscaping</h2>
           <p>A Squarespace site for a Genesee County landscaper covering design, construction and maintenance.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -327,8 +327,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Texan Landscape Group</h2>
           <p>A full-service landscaping site for a Houston design-build-maintain team, with project stats and quote paths.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -345,8 +345,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>2 Gals Landscaping</h2>
           <p>An elegant site for a Houston landscaping and construction company focused on native gardens and hardscaping.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -363,8 +363,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Evergreen Outdoor</h2>
           <p>A WordPress site for a Houston lawn care company, with an estimate form right in the hero.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -381,8 +381,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>South Texas Pool Tile Cleaning</h2>
           <p>A bold site for a San Antonio pool tile cleaning, repair and resurfacing specialist with free estimates.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -399,8 +399,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Summit Pool &amp; Spa</h2>
           <p>A WordPress site for an East Bay pool service focused on consistent maintenance and clear communication.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -417,8 +417,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>ASA Pools &amp; Hot Tubs</h2>
           <p>A custom-built site for a Seattle pool and hot tub service with a quote form in the first screen.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -435,8 +435,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>SLC Pool Service</h2>
           <p>A fast custom site for a family-owned Utah pool repair, maintenance and diagnostics company.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -453,8 +453,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Aqua Lecu Pool Services</h2>
           <p>A clean site for an Orlando pool cleaning company with no contracts and free estimates.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -471,8 +471,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Agro Pest Control</h2>
           <p>A bright site for an Arizona pest control company built around residential and commercial service paths.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -489,8 +489,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Arrow Pest Control</h2>
           <p>A WordPress site for a New Jersey pest control company protecting homes and businesses since 1973.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -507,8 +507,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Nozzle Nolen</h2>
           <p>A WordPress site for a Florida pest control company with free inspections and online scheduling.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -525,8 +525,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Alta Pest Control</h2>
           <p>A WordPress site for an eco-friendly termite, mosquito and pest control company in Texas and Oklahoma.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -543,8 +543,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Aptive Pest Control</h2>
           <p>A WordPress site for a national residential pest control brand with year-round protection plans.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -561,8 +561,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Akela Pest Control</h2>
           <p>A WordPress site for an eco-friendly Riverside pest control company with affordable plans.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -579,8 +579,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Bee Smart Pest Control</h2>
           <p>A WordPress site for a local pest control company serving North Denver and Boulder County.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -597,8 +597,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Elite Wildlife Services</h2>
           <p>A WordPress site for a humane Houston wildlife removal company with an inspection request form.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -615,8 +615,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Forever Roofing</h2>
           <p>A WordPress site for a roofing, siding and windows company offering free quotes on new installations.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -633,8 +633,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Eco Roofing &amp; Roof Cleaning</h2>
           <p>A WordPress site for a top-rated Northwest roofing and roof cleaning company.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -651,8 +651,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Yuras Roofing</h2>
           <p>A custom-built site for a family-owned San Antonio roofer since 1949, with an estimate form up front.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -669,8 +669,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>VH1 Roofing</h2>
           <p>A WordPress site for a veteran-supporting Tulsa roofing company with free inspection requests.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -687,8 +687,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Voyager Exteriors</h2>
           <p>A WordPress site for a Twin Cities exterior contractor covering decks, siding and roofing.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -705,8 +705,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Janney Home Services</h2>
           <p>A WordPress site for a Florida roofing and window replacement company with storm-ready solutions.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -723,8 +723,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Tadlock Roofing</h2>
           <p>A WordPress site for one of America’s Top 100 roofing contractors serving North Florida.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -741,8 +741,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Lindholm Roofing</h2>
           <p>A WordPress site for a family-owned Chicago roofing contractor trusted since 1949.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -759,8 +759,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Columbus Handyman</h2>
           <p>A Wix site for a licensed Central Ohio handyman and general contractor with 21+ years of experience.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -777,8 +777,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>KW Handyman</h2>
           <p>A custom-built site for a Miami handyman and facility management company with nationwide reach.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -795,8 +795,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>TRI Miami Handyman Services</h2>
           <p>A custom-built site for a Miami-Dade remodeling and property improvement company.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -813,8 +813,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Pro Handyman Miami</h2>
           <p>A WordPress site for a Miami-Dade handyman voted best in Miami, covering repairs and maintenance.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -831,8 +831,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>All In 1 Handy Man</h2>
           <p>A WordPress site for a Dallas and Richardson handyman with a quick service request form.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -849,8 +849,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>H2G Handyman Services</h2>
           <p>A custom-built site for an Irving handyman offering TV mounting, assembly, painting and repairs.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -867,8 +867,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>H-PRO Handyman</h2>
           <p>A WordPress site for a handyman specializing in TV mounting, furniture assembly and hanging services.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -885,8 +885,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Extreme Handyman Services</h2>
           <p>A Squarespace site for a Sacramento handyman providing reliable home repairs since 2006.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -903,8 +903,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>The Handyman SF</h2>
           <p>A WordPress site for a same-day San Francisco handyman with text-to-quote booking.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -921,8 +921,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Fullhouse Pros</h2>
           <p>A WordPress site for a Bay Area remodeling and handyman company built around fast estimates.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -939,8 +939,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>I’m That Guy Handyman</h2>
           <p>A custom-built site for a family-owned Jenks and Tulsa handyman with 240+ five-star reviews.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -957,8 +957,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Extreme Handyman® Service</h2>
           <p>A WordPress site for a licensed Seattle and Bellevue handyman with 30+ years of experience.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -975,8 +975,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Edwards Plumbing</h2>
           <p>A WordPress site for a family-owned Phoenix-area plumbing company with free estimates.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -993,8 +993,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>MNS Plumbing</h2>
           <p>A Squarespace site for an Anthem plumbing company offering same-day repairs and installations.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -1011,8 +1011,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Uniplumb</h2>
           <p>A clean Squarespace site for a Sunshine Coast plumbing, drainage and renovation company.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -1029,8 +1029,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Reliant Plumbing</h2>
           <p>A WordPress site for a 24/7 Texas plumbing company with online booking and free estimates.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -1047,8 +1047,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Beyond Wow Plumbing</h2>
           <p>A bold WordPress site for Austin’s trusted plumber since 1980, with 4,600+ reviews.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -1065,8 +1065,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Economy Plumbing Services</h2>
           <p>A custom-built site for master plumbers serving Austin and Marble Falls since 2012.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -1083,8 +1083,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>O &amp; M Plumbing</h2>
           <p>A WordPress site for a Pflugerville and Austin plumber handling residential and commercial work.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -1101,8 +1101,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Miami Dade Plumbing</h2>
           <p>A custom-built site for a mobile Miami-Dade plumber covering leaks, drains and water heaters 24/7.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -1119,8 +1119,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Sunland Plumbing</h2>
           <p>A WordPress site for Austin’s water heater specialists with upfront, all-in pricing.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -1137,8 +1137,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Captain Plumber</h2>
           <p>A bold WordPress site for a locally owned Dripping Springs plumber offering same-day service.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -1155,8 +1155,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Paragon Mechanical</h2>
           <p>A Squarespace site for a full-service Silicon Valley mechanical, HVAC and plumbing contractor.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -1173,8 +1173,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Airboss Heating &amp; Cooling</h2>
           <p>A Wix site for a certified North Carolina HVAC service and installation company.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -1191,8 +1191,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Davis Air Conditioning &amp; Heating</h2>
           <p>A WordPress site for a family-owned Clermont HVAC company with free estimates.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -1209,8 +1209,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Tanous HVAC</h2>
           <p>A WordPress site for a family-owned Hudson County HVAC company answering calls 24/7.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -1227,8 +1227,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Kalos Services</h2>
           <p>A WordPress site for a family-owned HVAC, electrical and plumbing company in Central Florida.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -1245,8 +1245,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Aircor Heating &amp; Cooling</h2>
           <p>A Squarespace site for a Chicago HVAC company focused on comfort and healthy air.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
@@ -1263,15 +1263,15 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
           <h2>Alexander’s Heating &amp; AC</h2>
           <p>A WordPress site for an Eastside HVAC company with online booking and service requests.</p>
           <div class="work-card-tags">
-            <a href="/web-design.php">Web Design</a>
-            <a href="/web-development.php">Web Development</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/web-development">Web Development</a>
           </div>
         </div>
       </article>
     </div>
 
     <div class="home-work-cta">
-      <a href="/contact.php" class="btn btn-lime btn-lg" data-open-popup>I&rsquo;m sold! Call me!</a>
+      <a href="/contact" class="btn btn-lime btn-lg" data-open-popup>I&rsquo;m sold! Call me!</a>
     </div>
   </div>
 </section>
@@ -1291,8 +1291,8 @@ $work_desc = $work_desc ?? 'Immersive where it helps. Fast where speed matters. 
         <p class="work-modal-text" id="workModalText"></p>
         <div class="work-card-tags work-modal-tags" id="workModalTags"></div>
         <div class="work-modal-actions">
-          <a href="/contact.php" class="btn btn-lime" data-open-popup>Start a similar project</a>
-          <a href="/works.php" class="text-link-blue">See all work &rarr;</a>
+          <a href="/contact" class="btn btn-lime" data-open-popup>Start a similar project</a>
+          <a href="/works" class="text-link-blue">See all work &rarr;</a>
         </div>
       </div>
     </div>

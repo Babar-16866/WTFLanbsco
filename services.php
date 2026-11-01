@@ -30,7 +30,7 @@ include __DIR__ . '/includes/header.php';
           <button type="button" class="hcar-arrow hcar-next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </div>
-      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-step-popup><span class="ihero-primary-label">Free Consultation</span></a>
+      <a href="/contact" class="ihero-primary reveal reveal-delay-3" data-open-step-popup><span class="ihero-primary-label">Free Consultation</span></a>
       <div class="ihero-secondary"></div>
         </div>
      
@@ -84,7 +84,7 @@ include __DIR__ . '/includes/header.php';
           <div class="wtabs-copy">
             <h3>Web Design &amp; Development</h3>
             <p>Make your business look as good online as the work you do - with a fast, custom website built to earn trust and turn visits into calls, estimates, bookings, and better-fit leads. </p>
-            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
+            <a href="/contact" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
           </div>
         </article>
         <article class="wtabs-panel" role="tabpanel" id="wtabsPanel2" aria-labelledby="wtabsTab2" aria-hidden="true">
@@ -92,7 +92,7 @@ include __DIR__ . '/includes/header.php';
           <div class="wtabs-copy">
             <h3>SEO &amp; & Local Search</h3>
             <p>Help the right homeowners find you when they are already looking for the services you want to sell - in the areas you actually want to serve.</p>
-            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
+            <a href="/contact" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
           </div>
         </article>
         <article class="wtabs-panel" role="tabpanel" id="wtabsPanel3" aria-labelledby="wtabsTab3" aria-hidden="true">
@@ -100,7 +100,7 @@ include __DIR__ . '/includes/header.php';
           <div class="wtabs-copy">
             <h3>Google Ads</h3>
             <p>Capture high-intent searches with campaigns, landing pages, and tracking built around qualified calls and estimate requests - not empty click volume.</p>
-            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
+            <a href="/contact" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
           </div>
         </article>
         <article class="wtabs-panel" role="tabpanel" id="wtabsPanel4" aria-labelledby="wtabsTab4" aria-hidden="true">
@@ -108,7 +108,7 @@ include __DIR__ . '/includes/header.php';
           <div class="wtabs-copy">
             <h3>Social Media Advertising</h3>
             <p>Turn your best projects, reviews, offers, and service proof into paid campaigns that build demand, retarget interested homeowners, and keep your name familiar.</p>
-            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
+            <a href="/contact" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
           </div>
         </article>
         <article class="wtabs-panel" role="tabpanel" id="wtabsPanel5" aria-labelledby="wtabsTab5" aria-hidden="true">
@@ -116,7 +116,7 @@ include __DIR__ . '/includes/header.php';
           <div class="wtabs-copy">
             <h3>Branding &amp; & Creative</h3>
             <p>Create a clear, consistent look across your website, ads, trucks, social posts, signs, proposals, and sales materials so the whole business feels established.</p>
-            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
+            <a href="/contact" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
           </div>
         </article>
         <article class="wtabs-panel" role="tabpanel" id="wtabsPanel6" aria-labelledby="wtabsTab6" aria-hidden="true">
@@ -124,7 +124,7 @@ include __DIR__ . '/includes/header.php';
           <div class="wtabs-copy">
             <h3>Full-Service Digital Marketing</h3>
             <p>Bring website, search, ads, creative, and tracking under one strategy so every channel supports the same message, audience, and lead goals.</p>
-            <a href="/contact.php" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
+            <a href="/contact" class="btn btn-lime wtabs-link" data-open-step-popup>Book a Meeting</a>
           </div>
         </article>
       </div>
@@ -207,7 +207,7 @@ include __DIR__ . '/includes/featured-work.php';
       </div>
     </div>
     <div class="container rail-cta">
-      <a href="/contact.php" class="btn btn-lime btn-lg" data-open-step-popup>Let&rsquo;s Do Step 1</a>
+      <a href="/contact" class="btn btn-lime btn-lg" data-open-step-popup>Let&rsquo;s Do Step 1</a>
     </div>
   </div>
 </section>
@@ -316,7 +316,7 @@ include __DIR__ . '/includes/testimonialslider.php';
         <h3>Not sure what you actually need??</h3>
         <p>Tell us what is not working. We will help you separate the real bottleneck from the nice-to-have.</p>
         <div class="svc-cta-act">
-          <a href="/contact.php" class="btn btn-lime btn-lg">FREE CONSULTATION</a>
+          <a href="/contact" class="btn btn-lime btn-lg">FREE CONSULTATION</a>
         </div>
       </div>
       <div class="svc-cta-art"><img src="/assets/images/cta-phones-services.webp" alt="Local search results, contractor website and lead report screens on phones" width="1280" height="1120" loading="lazy"></div>

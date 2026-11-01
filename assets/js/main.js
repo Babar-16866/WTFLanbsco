@@ -663,14 +663,14 @@ function isContactCta(el) {
   if (el.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]')) return false;
   if (el.matches('a[href*="privacy-policy"], a[href*="terms-and-conditions"], a[href*="refund-policy"]')) return false;
   // Header/footer Contact must navigate to the contact page
-  if (el.closest('.nav-links, .site-footer') && (el.getAttribute('href') || '').includes('contact.php')) {
+  if (el.closest('.nav-links, .site-footer') && /^\/contact(\.php)?(?:[?#]|$)/.test(el.getAttribute('href') || '')) {
     return false;
   }
   if (el.hasAttribute('data-no-popup')) return false;
   if (el.hasAttribute('data-open-popup')) return true;
   const href = (el.getAttribute('href') || '').trim();
   if (!href) return false;
-  if (href === '#contact' || href === '/index.php#contact' || href.endsWith('#contact')) return true;
+  if (href === '#contact' || href === '/index.php#contact' || href === '/#contact' || href.endsWith('#contact')) return true;
   return false;
 }
 
@@ -780,7 +780,7 @@ document.addEventListener('click', (e) => {
     const filters = document.getElementById(filtersId);
     const subfilters = document.getElementById(subfiltersId);
     const grid = document.getElementById(gridId);
-    if (!filters || !subfilters || !grid) return;
+    if (!subfilters || !grid) return;
     const industries = industriesId ? document.getElementById(industriesId) : null;
 
     let activeCategory = 'all';
@@ -896,7 +896,7 @@ document.addEventListener('click', (e) => {
       subfilters.classList.add('is-open');
     }
 
-    filters.addEventListener('click', (e) => {
+    filters?.addEventListener('click', (e) => {
       const btn = e.target.closest('[data-filter]');
       if (!btn || !filters.contains(btn)) return;
       e.preventDefault();
@@ -937,13 +937,13 @@ document.addEventListener('click', (e) => {
       btn.setAttribute('aria-selected', 'true');
       activeIndustry = btn.getAttribute('data-industry') || 'all';
       activeCategory = 'all';
-      filters.querySelectorAll('[data-filter]').forEach((el) => {
+      filters?.querySelectorAll('[data-filter]').forEach((el) => {
         const value = el.getAttribute('data-filter');
         const isAll = value === 'all';
         el.classList.toggle('is-active', isAll);
         el.setAttribute('aria-selected', isAll ? 'true' : 'false');
       });
-      if (filters.closest('#homeWorksServiceRow')) filters.closest('#homeWorksServiceRow').hidden = activeIndustry === 'all';
+      if (filters && filters.closest('#homeWorksServiceRow')) filters.closest('#homeWorksServiceRow').hidden = activeIndustry === 'all';
       renderSubs('all', '');
       smoothFilter();
     });
@@ -2098,25 +2098,25 @@ document.addEventListener('click', (e) => {
   const industries = document.getElementById(industriesId);
   const services = document.getElementById(servicesId);
   const subs = document.getElementById(subsId);
-  if (!industries || !services || !subs) return;
+  if (!industries || !subs) return;
   const industryRow = industries.closest('.home-filter-row');
-  const serviceRow = services.closest('.home-filter-row');
+  const serviceRow = services ? services.closest('.home-filter-row') : null;
 
   industries.addEventListener('click', (e) => {
     const btn = e.target.closest('[data-industry]');
     if (!btn) return;
     industryRow.classList.toggle('is-done', btn.getAttribute('data-industry') !== 'all');
-    serviceRow.classList.remove('is-done');
+    serviceRow?.classList.remove('is-done');
   });
 
-  services.addEventListener('click', (e) => {
+  services?.addEventListener('click', (e) => {
     if (e.target.closest('[data-filter]')) serviceRow.classList.remove('is-done');
   });
 
   subs.addEventListener('click', (e) => {
     const btn = e.target.closest('[data-sub]');
     if (!btn) return;
-    serviceRow.classList.toggle('is-done', btn.getAttribute('data-sub') !== 'all');
+    serviceRow?.classList.toggle('is-done', btn.getAttribute('data-sub') !== 'all');
   });
 });
 
@@ -2356,7 +2356,7 @@ document.addEventListener('click', (e) => {
         data.set('step', String(panels.length));
         data.set('commitment', 'Not committed');
         data.set('_labels', formLabels(form));
-        const done = () => { window.location.href = '/thank-you.php'; };
+        const done = () => { window.location.href = '/thank-you'; };
         fetch(form.action, { method: 'POST', body: data, keepalive: true }).then(done, done);
       });
     }

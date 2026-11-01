@@ -32,7 +32,7 @@ require_once __DIR__ . '/config.php';
   <div class="cookie-banner" id="cookieBanner">
     <div class="cookie-content">
       <h3>This website uses cookies</h3>
-      <p>We use cookies to enhance your experience, analyze site usage, and assist in our marketing efforts. <a href="/about.php">Learn more.</a></p>
+      <p>We use cookies to enhance your experience, analyze site usage, and assist in our marketing efforts. <a href="/about">Learn more.</a></p>
     </div>
     <div class="cookie-actions">
       <button class="btn btn-lime" id="allowCookies">Allow all</button>
@@ -49,30 +49,30 @@ require_once __DIR__ . '/config.php';
       </a>
       <ul class="nav-links">
         <li class="nav-dropdown">
-          <a href="/services.php" class="nav-dropdown-btn"<?php echo $current_page === 'services' ? ' aria-current="page"' : ''; ?>>Services <span>&#9662;</span></a>
+          <a href="/services" class="nav-dropdown-btn"<?php echo $current_page === 'services' ? ' aria-current="page"' : ''; ?>>Services <span>&#9662;</span></a>
           <div class="nav-dropdown-menu">
-            <a href="/web-design-services.php">Web Design</a>
-            <a href="/digital-marketing-services.php">Digital Marketing</a>
-            <a href="/services.php#featured-services" data-nav-nudge>Click One 👆 There's More!</a>
+            <a href="/web-design-services">Web Design</a>
+            <a href="/digital-marketing-services">Digital Marketing</a>
+            <a href="/services#featured-services" data-nav-nudge>Click One 👆 There's More!</a>
           </div>
         </li>
         <li class="nav-dropdown">
-          <a href="/industries.php" class="nav-dropdown-btn"<?php echo $current_page === 'industries' ? ' aria-current="page"' : ''; ?>>Industries <span>&#9662;</span></a>
+          <a href="/industries" class="nav-dropdown-btn"<?php echo $current_page === 'industries' ? ' aria-current="page"' : ''; ?>>Industries <span>&#9662;</span></a>
           <div class="nav-dropdown-menu">
-            <a href="/remodelers.php">Remodeling</a>
-            <a href="/hvac.php">HVAC</a>
-            <a href="/landscaping.php">Landscaping</a>
-            <a href="/roofing.php">Roofing</a>
-            <a href="/plumbing.php">Plumbing</a>
-            <a href="/pool-services.php">Pool Services</a>
-            <a href="/power-washing.php">Power Washing</a>
-            <a href="/handyman.php">Handyman</a>
-            <a href="/pest-control.php">Pest Control</a>
+            <a href="/remodelers">Remodeling</a>
+            <a href="/hvac">HVAC</a>
+            <a href="/landscaping">Landscaping</a>
+            <a href="/roofing">Roofing</a>
+            <a href="/plumbing">Plumbing</a>
+            <a href="/pool-services">Pool Services</a>
+            <a href="/power-washing">Power Washing</a>
+            <a href="/handyman">Handyman</a>
+            <a href="/pest-control">Pest Control</a>
           </div>
         </li>
-        <li><a href="/works.php"<?php echo $current_page === 'works' ? ' aria-current="page"' : ''; ?>>Work</a></li>
-        <li><a href="/insights.php"<?php echo $current_page === 'insights' ? ' aria-current="page"' : ''; ?>>Insights</a></li>
-        <li><a href="/about.php"<?php echo $current_page === 'about' ? ' aria-current="page"' : ''; ?>>About</a></li>
+        <li><a href="/works"<?php echo $current_page === 'works' ? ' aria-current="page"' : ''; ?>>Work</a></li>
+        <li><a href="/insights"<?php echo $current_page === 'insights' ? ' aria-current="page"' : ''; ?>>Insights</a></li>
+        <li><a href="/about"<?php echo $current_page === 'about' ? ' aria-current="page"' : ''; ?>>About</a></li>
       </ul>
       <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" title="Toggle theme">
         <svg class="theme-icon theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -86,7 +86,7 @@ require_once __DIR__ . '/config.php';
       <?php if (!empty($header_cta_call)): ?>
       <a href="tel:+15123379723" class="btn btn-lime btn-sm">BOOK A CALL</a>
       <?php else: ?>
-      <a href="/contact.php" class="btn btn-lime btn-sm" data-open-step-popup>FREE Consultation</a>
+      <a href="/contact" class="btn btn-lime btn-sm" data-open-step-popup>FREE Consultation</a>
       <?php endif; ?>
       <button class="nav-burger" type="button" aria-label="Menu"><span></span><span></span></button>
     </nav>

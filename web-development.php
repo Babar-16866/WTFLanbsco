@@ -27,9 +27,9 @@ include __DIR__ . '/includes/header.php';
           <button type="button" class="hcar-arrow hcar-next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </div>
-      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-step-popup><span class="ihero-primary-label">Get Your Free Website Consultation</span></a>
+      <a href="/contact" class="ihero-primary reveal reveal-delay-3" data-open-step-popup><span class="ihero-primary-label">Get Your Free Website Consultation</span></a>
       <div class="ihero-secondary reveal reveal-delay-1">
-        <a href="/works.php" class="ihero-secondary-btn"><span class="ihero-secondary-label">See Our Work</span></a>
+        <a href="/works" class="ihero-secondary-btn"><span class="ihero-secondary-label">See Our Work</span></a>
       </div>
     </div>
   </div>
@@ -245,7 +245,7 @@ include __DIR__ . '/includes/testimonialslider.php';
       <div class="svc-cta-copy">
         <h3>Don’t let your website undersell<br>the quality of your work.</h3>
         <div class="svc-cta-act">
-          <a href="/contact.php" class="btn btn-lime btn-lg">Claim Your FREE Website Consultation</a>
+          <a href="/contact" class="btn btn-lime btn-lg">Claim Your FREE Website Consultation</a>
         </div>
       </div>
       <div class="svc-cta-art"><img src="/assets/images/cta-phones-web-development.webp" alt="Online booking, booking admin and ad landing page screens on phones" width="1280" height="1120" loading="lazy"></div>

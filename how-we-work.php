@@ -36,9 +36,9 @@ $processes = [
           <button type="button" class="hcar-arrow hcar-next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </div>
-      <a href="/contact.php" class="ihero-primary reveal reveal-delay-3" data-open-popup><span class="ihero-primary-label">Start a project</span></a>
+      <a href="/contact" class="ihero-primary reveal reveal-delay-3" data-open-popup><span class="ihero-primary-label">Start a project</span></a>
       <div class="ihero-secondary reveal reveal-delay-1">
-        <a href="/works.php" class="ihero-secondary-btn"><span class="ihero-secondary-label">See our work</span></a>
+        <a href="/works" class="ihero-secondary-btn"><span class="ihero-secondary-label">See our work</span></a>
       </div>
     </div>
   </div>
@@ -116,7 +116,7 @@ $processes = [
         <h3>Let's discuss your next website</h3>
         <p>We'll help you define the right next step.</p>
         <div class="svc-cta-act">
-          <a href="/contact.php" class="btn btn-lime btn-lg">Free Consultation</a>
+          <a href="/contact" class="btn btn-lime btn-lg">Free Consultation</a>
         </div>
       </div>
       <div class="svc-cta-art"><img src="/assets/images/cta-phones-how-we-work.webp" alt="Website audit, project timeline and finished website screens on phones" width="1280" height="1120" loading="lazy"></div>

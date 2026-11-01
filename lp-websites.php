@@ -158,7 +158,7 @@ include __DIR__ . '/includes/step-form.php';
 <footer class="lp-foot">
   <img src="/assets/images/logo-new.webp" alt="WTF Labs" width="56" height="54" loading="lazy">
   <p>&copy; <?php echo date('Y'); ?> WTF Labs. All rights reserved.</p>
-  <nav><a href="/terms-and-conditions.php">Terms &amp; Conditions</a><a href="/privacy-policy.php">Privacy Policy</a></nav>
+  <nav><a href="/terms-and-conditions">Terms &amp; Conditions</a><a href="/privacy-policy">Privacy Policy</a></nav>
 </footer>
 
 <div class="lp-feed" aria-live="polite"></div>

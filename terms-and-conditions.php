@@ -20,7 +20,7 @@ include __DIR__ . '/includes/header.php';
   <div class="container">
     <article class="legal-content reveal">
       <h2>1. Acceptance of terms</h2>
-      <p>By accessing wtflabs.com or engaging WTF Labs for services, you agree to these Terms and Conditions and our <a href="/privacy-policy.php">Privacy Policy</a>. If you do not agree, please do not use the site or services.</p>
+      <p>By accessing wtflabs.com or engaging WTF Labs for services, you agree to these Terms and Conditions and our <a href="/privacy-policy">Privacy Policy</a>. If you do not agree, please do not use the site or services.</p>
 
       <h2>2. Services</h2>
       <p>We offer website design, development, branding support, SEO, advertising, and related digital services. Specific scope, timeline, and fees are defined in a proposal, quote, or statement of work agreed by both parties.</p>
@@ -36,7 +36,7 @@ include __DIR__ . '/includes/header.php';
       </ul>
 
       <h2>5. Payments</h2>
-      <p>Invoices are due as stated in your proposal. Late payments may pause work. Taxes, if applicable, are additional unless noted otherwise. See our <a href="/refund-policy.php">Refund Policy</a> for cancellation and refund terms.</p>
+      <p>Invoices are due as stated in your proposal. Late payments may pause work. Taxes, if applicable, are additional unless noted otherwise. See our <a href="/refund-policy">Refund Policy</a> for cancellation and refund terms.</p>
 
       <h2>6. Acceptable use of the website</h2>
       <p>You may not misuse the site, attempt unauthorized access, scrape content at scale, or use our materials for unlawful purposes. We may suspend access if we detect abuse.</p>

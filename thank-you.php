@@ -30,7 +30,7 @@ include __DIR__ . '/includes/header.php';
       </ul>
 
       <div class="thank-actions">
-        <a href="/works.php" class="btn btn-lime btn-lg">See our work</a>
+        <a href="/works" class="btn btn-lime btn-lg">See our work</a>
         <a href="/" class="btn btn-lg thank-btn-secondary">Back to home</a>
       </div>
     </div>
