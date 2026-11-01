@@ -26,7 +26,7 @@ include __DIR__ . '/includes/header.php';
     </div>
     <div class="rx-hero-stage" data-rx-tilt>
       <div class="rx-hero-phones">
-        <img fetchpriority="high" src="/assets/images/hmx-hero.webp" alt="Handyman website on two phones: reviews, visit booking, before and after slider and job galleries" width="2376" height="1546">
+        <img fetchpriority="high" src="/assets/images/hmx-hero.webp?v=<?php echo asset_version('assets/images/hmx-hero.webp'); ?>" alt="Handyman website on two phones: reviews, visit booking, before and after slider and job galleries" width="2376" height="1546">
       </div>
     </div>
   </div>
@@ -47,27 +47,27 @@ include __DIR__ . '/includes/header.php';
     <div class="rx-exp-view">
       <div class="rx-exp-track">
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/hm-exp-1.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/hm-exp-1.webp?v=<?php echo asset_version('assets/images/hm-exp-1.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Trust-first websites</h3><p>Real photos, clear prices and reviews that make a stranger let you in the door.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/hm-exp-2.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/hm-exp-2.webp?v=<?php echo asset_version('assets/images/hm-exp-2.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Before and after proof</h3><p>Show the fix, not just the promise, on every service page.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/hm-exp-3.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/hm-exp-3.webp?v=<?php echo asset_version('assets/images/hm-exp-3.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>To-do list booking</h3><p>Homeowners send the full list and photos before you arrive.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/hm-exp-4.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/hm-exp-4.webp?v=<?php echo asset_version('assets/images/hm-exp-4.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Local SEO by neighborhood</h3><p>Show up for repair searches in the zip codes you actually drive to.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/hm-exp-5.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/hm-exp-5.webp?v=<?php echo asset_version('assets/images/hm-exp-5.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Google and Meta ads</h3><p>Campaigns built around booked visits, not cheap clicks.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/hm-exp-6.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/hm-exp-6.webp?v=<?php echo asset_version('assets/images/hm-exp-6.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Reviews and repeat work</h3><p>Turn every finished job into a five-star review and a return visit.</p></div>
       </article>
       </div>
@@ -1394,7 +1394,7 @@ include __DIR__ . '/includes/header.php';
     <div class="rx-stage" id="rxStage" role="tabpanel" aria-live="polite">
       <div class="rx-stage-col rx-stage-col--l"><div class="rx-feats is-active" data-rx-pane="0"><div class="rx-feat"><h3>Clear service pages</h3><p>Drywall, mounting and repairs each get a page that sells.</p></div><div class="rx-feat"><h3>Process at a glance</h3><p>Show the steps so homeowners know what happens next.</p></div><div class="rx-feat"><h3>Photo-first layouts</h3><p>Your real jobs lead every page, not stock images.</p></div></div><div class="rx-feats" data-rx-pane="1"><div class="rx-feat"><h3>Filter by service</h3><p>Homeowners jump straight to drywall, doors or decks.</p></div><div class="rx-feat"><h3>Filter by town</h3><p>Show the work you did a few streets away.</p></div><div class="rx-feat"><h3>Job stories</h3><p>Problem, fix and time on site for every job.</p></div></div><div class="rx-feats" data-rx-pane="2"><div class="rx-feat"><h3>Every lead in one place</h3><p>Calls, forms and bookings land in a single inbox.</p></div><div class="rx-feat"><h3>Job list at a glance</h3><p>See the full to-do list before you call back.</p></div><div class="rx-feat"><h3>Hot lead alerts</h3><p>Bigger jobs get flagged so you reply first.</p></div></div><div class="rx-feats" data-rx-pane="3"><div class="rx-feat"><h3>Instant ballpark</h3><p>Homeowners see a fair range in seconds.</p></div><div class="rx-feat"><h3>Flat price preview</h3><p>Labor, materials and haul-away shown simply.</p></div><div class="rx-feat"><h3>No surprise fees</h3><p>Clear pricing builds trust before the visit.</p></div></div></div>
       <div class="rx-stage-phone">
-        <div class="rx-stage-screens"><img class="rx-screen is-active" data-rx-pane="0" src="/assets/images/hmx-tab-1.webp" alt="Homeowner pages screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="1" src="/assets/images/hmx-tab-2.webp" alt="Job gallery screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="2" src="/assets/images/hmx-tab-3.webp" alt="Owner dashboard screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="3" src="/assets/images/hmx-tab-4.webp" alt="Price check screen" width="920" height="1640" loading="lazy" decoding="async"></div>
+        <div class="rx-stage-screens"><img class="rx-screen is-active" data-rx-pane="0" src="/assets/images/hmx-tab-1.webp?v=<?php echo asset_version('assets/images/hmx-tab-1.webp'); ?>" alt="Homeowner pages screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="1" src="/assets/images/hmx-tab-2.webp?v=<?php echo asset_version('assets/images/hmx-tab-2.webp'); ?>" alt="Job gallery screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="2" src="/assets/images/hmx-tab-3.webp?v=<?php echo asset_version('assets/images/hmx-tab-3.webp'); ?>" alt="Owner dashboard screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="3" src="/assets/images/hmx-tab-4.webp?v=<?php echo asset_version('assets/images/hmx-tab-4.webp'); ?>" alt="Price check screen" width="920" height="1640" loading="lazy" decoding="async"></div>
       </div>
       <div class="rx-stage-col rx-stage-col--r"><div class="rx-feats is-active" data-rx-pane="0"><div class="rx-feat"><h3>One-tap booking</h3><p>Booking sits on every screen, always one thumb away.</p></div><div class="rx-feat"><h3>Local proof</h3><p>Nearby jobs and reviews close to the homeowner.</p></div><div class="rx-feat"><h3>Fast on any phone</h3><p>Pages load quickly even on weak mobile signal.</p></div></div><div class="rx-feats" data-rx-pane="1"><div class="rx-feat"><h3>Big, sharp photos</h3><p>Full-width images that make the quality obvious.</p></div><div class="rx-feat"><h3>Before and after</h3><p>Swipe-to-reveal comparisons that sell the fix.</p></div><div class="rx-feat"><h3>Book this fix</h3><p>A request button tied to each job you show.</p></div></div><div class="rx-feats" data-rx-pane="2"><div class="rx-feat"><h3>Booked revenue</h3><p>Know what is scheduled and what is still open.</p></div><div class="rx-feat"><h3>Source tracking</h3><p>See which ads and searches bring real jobs.</p></div><div class="rx-feat"><h3>One-tap follow-up</h3><p>Call or text the homeowner straight from the lead.</p></div></div><div class="rx-feats" data-rx-pane="3"><div class="rx-feat"><h3>Fewer price shocks</h3><p>Expectations are set before you walk in.</p></div><div class="rx-feat"><h3>Qualified requests</h3><p>Only ready-to-book homeowners reach out.</p></div><div class="rx-feat"><h3>Lock-in CTA</h3><p>One button turns the estimate into a booking.</p></div></div></div>
     </div>
@@ -1413,7 +1413,7 @@ include __DIR__ . '/includes/testimonialslider.php';
 <div class="rx rx--hm">
 <section class="rx-team">
   <div class="rx-team-card">
-    <div class="rx-team-art" data-rx-tilt><img src="/assets/images/hmx-trio.webp" alt="Handyman website services page, job page and contact page on phones" width="1840" height="1496" loading="lazy" decoding="async"></div>
+    <div class="rx-team-art" data-rx-tilt><img src="/assets/images/hmx-trio.webp?v=<?php echo asset_version('assets/images/hmx-trio.webp'); ?>" alt="Handyman website services page, job page and contact page on phones" width="1840" height="1496" loading="lazy" decoding="async"></div>
     <div class="rx-team-copy">
       <p class="subheading">Why WTF Labs</p>
       <h2 class="rx-h2">Looking for a team that actually understands handyman work?</h2>

@@ -26,7 +26,7 @@ include __DIR__ . '/includes/header.php';
     </div>
     <div class="rx-hero-stage" data-rx-tilt>
       <div class="rx-hero-phones">
-        <img fetchpriority="high" src="/assets/images/pcx-hero.webp" alt="Pest control company website on two phones: reviews, free inspection booking, before and after slider and pest pages" width="2376" height="1546">
+        <img fetchpriority="high" src="/assets/images/pcx-hero.webp?v=<?php echo asset_version('assets/images/pcx-hero.webp'); ?>" alt="Pest control company website on two phones: reviews, free inspection booking, before and after slider and pest pages" width="2376" height="1546">
       </div>
     </div>
   </div>
@@ -47,27 +47,27 @@ include __DIR__ . '/includes/header.php';
     <div class="rx-exp-view">
       <div class="rx-exp-track">
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/pc-exp-1.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/pc-exp-1.webp?v=<?php echo asset_version('assets/images/pc-exp-1.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Plan-selling websites</h3><p>Clear plans, prices and guarantees that make recurring service the easy choice.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/pc-exp-2.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/pc-exp-2.webp?v=<?php echo asset_version('assets/images/pc-exp-2.webp'); ?>" alt="" width="960" height="1200" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Pest-by-pest pages</h3><p>Termites, rodents and mosquitoes each get a page that answers real worries.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/pc-exp-3.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/pc-exp-3.webp?v=<?php echo asset_version('assets/images/pc-exp-3.webp'); ?>" alt="" width="960" height="1200" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Inspection booking forms</h3><p>Capture the pest, the home size and the urgency before the visit.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/pc-exp-4.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/pc-exp-4.webp?v=<?php echo asset_version('assets/images/pc-exp-4.webp'); ?>" alt="" width="960" height="1200" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Local SEO by service area</h3><p>Rank for pest searches in every town on your routes.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/pc-exp-5.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/pc-exp-5.webp?v=<?php echo asset_version('assets/images/pc-exp-5.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Seasonal ad campaigns</h3><p>Mosquito, termite and rodent pushes timed to the season.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/pc-exp-6.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/pc-exp-6.webp?v=<?php echo asset_version('assets/images/pc-exp-6.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Reviews and reputation</h3><p>Turn calm, pest-free customers into five-star proof.</p></div>
       </article>
       </div>
@@ -1394,7 +1394,7 @@ include __DIR__ . '/includes/header.php';
     <div class="rx-stage" id="rxStage" role="tabpanel" aria-live="polite">
       <div class="rx-stage-col rx-stage-col--l"><div class="rx-feats is-active" data-rx-pane="0"><div class="rx-feat"><h3>Clear service pages</h3><p>Termites, rodents and plans each get a page that sells.</p></div><div class="rx-feat"><h3>Process at a glance</h3><p>Show inspection to treatment so nobody worries.</p></div><div class="rx-feat"><h3>Real tech photos</h3><p>Your techs and trucks lead every page, not stock images.</p></div></div><div class="rx-feats" data-rx-pane="1"><div class="rx-feat"><h3>Filter by pest</h3><p>Homeowners jump straight to the pest they found.</p></div><div class="rx-feat"><h3>Signs to look for</h3><p>Photos that help them name the problem fast.</p></div><div class="rx-feat"><h3>Treatment stories</h3><p>Problem, plan and result for every job.</p></div></div><div class="rx-feats" data-rx-pane="2"><div class="rx-feat"><h3>Every lead in one place</h3><p>Calls, forms and bookings land in a single inbox.</p></div><div class="rx-feat"><h3>Urgency at a glance</h3><p>See termite and rodent calls first.</p></div><div class="rx-feat"><h3>Hot lead alerts</h3><p>Plan-ready homes get flagged so you reply first.</p></div></div><div class="rx-feats" data-rx-pane="3"><div class="rx-feat"><h3>Instant plan price</h3><p>Homeowners see a monthly price in seconds.</p></div><div class="rx-feat"><h3>What is included</h3><p>Visits, monitoring and re-treats listed simply.</p></div><div class="rx-feat"><h3>Easy upgrades</h3><p>Plus and Total tiers lift the average plan.</p></div></div></div>
       <div class="rx-stage-phone">
-        <div class="rx-stage-screens"><img class="rx-screen is-active" data-rx-pane="0" src="/assets/images/pcx-tab-1.webp" alt="Homeowner pages screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="1" src="/assets/images/pcx-tab-2.webp" alt="Pest library screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="2" src="/assets/images/pcx-tab-3.webp" alt="Owner dashboard screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="3" src="/assets/images/pcx-tab-4.webp" alt="Plan builder screen" width="920" height="1640" loading="lazy" decoding="async"></div>
+        <div class="rx-stage-screens"><img class="rx-screen is-active" data-rx-pane="0" src="/assets/images/pcx-tab-1.webp?v=<?php echo asset_version('assets/images/pcx-tab-1.webp'); ?>" alt="Homeowner pages screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="1" src="/assets/images/pcx-tab-2.webp?v=<?php echo asset_version('assets/images/pcx-tab-2.webp'); ?>" alt="Pest library screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="2" src="/assets/images/pcx-tab-3.webp?v=<?php echo asset_version('assets/images/pcx-tab-3.webp'); ?>" alt="Owner dashboard screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="3" src="/assets/images/pcx-tab-4.webp?v=<?php echo asset_version('assets/images/pcx-tab-4.webp'); ?>" alt="Plan builder screen" width="920" height="1640" loading="lazy" decoding="async"></div>
       </div>
       <div class="rx-stage-col rx-stage-col--r"><div class="rx-feats is-active" data-rx-pane="0"><div class="rx-feat"><h3>Free inspection button</h3><p>Booking sits on every screen, always one thumb away.</p></div><div class="rx-feat"><h3>Local proof</h3><p>Nearby homes and reviews close to the homeowner.</p></div><div class="rx-feat"><h3>Fast on any phone</h3><p>Pages load quickly even on weak mobile signal.</p></div></div><div class="rx-feats" data-rx-pane="1"><div class="rx-feat"><h3>Big, sharp photos</h3><p>Clear images that make the problem obvious.</p></div><div class="rx-feat"><h3>Before and after</h3><p>Swipe-to-reveal results that sell the service.</p></div><div class="rx-feat"><h3>Book for this pest</h3><p>A request button tied to each pest page.</p></div></div><div class="rx-feats" data-rx-pane="2"><div class="rx-feat"><h3>Recurring value</h3><p>Know how much yearly revenue each month added.</p></div><div class="rx-feat"><h3>Source tracking</h3><p>See which ads and searches bring real plans.</p></div><div class="rx-feat"><h3>One-tap follow-up</h3><p>Call or text the homeowner straight from the lead.</p></div></div><div class="rx-feats" data-rx-pane="3"><div class="rx-feat"><h3>Fewer surprises</h3><p>Price and coverage are clear before the visit.</p></div><div class="rx-feat"><h3>Qualified signups</h3><p>Only ready-to-start homeowners reach out.</p></div><div class="rx-feat"><h3>Start plan CTA</h3><p>One button turns interest into a recurring account.</p></div></div></div>
     </div>
@@ -1413,7 +1413,7 @@ include __DIR__ . '/includes/testimonialslider.php';
 <div class="rx rx--pc">
 <section class="rx-team">
   <div class="rx-team-card">
-    <div class="rx-team-art" data-rx-tilt><img src="/assets/images/pcx-trio.webp" alt="Pest control website services page, results page and contact page on phones" width="1840" height="1496" loading="lazy" decoding="async"></div>
+    <div class="rx-team-art" data-rx-tilt><img src="/assets/images/pcx-trio.webp?v=<?php echo asset_version('assets/images/pcx-trio.webp'); ?>" alt="Pest control website services page, results page and contact page on phones" width="1840" height="1496" loading="lazy" decoding="async"></div>
     <div class="rx-team-copy">
       <p class="subheading">Why WTF Labs</p>
       <h2 class="rx-h2">Looking for a team that actually understands pest control?</h2>

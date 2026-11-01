@@ -26,7 +26,7 @@ include __DIR__ . '/includes/header.php';
     </div>
     <div class="rx-hero-stage" data-rx-tilt>
       <div class="rx-hero-phones">
-        <img fetchpriority="high" src="/assets/images/rfx-hero.webp" alt="Roofing company website on two phones: reviews, free inspection booking, before and after slider and roof galleries" width="2376" height="1546">
+        <img fetchpriority="high" src="/assets/images/rfx-hero.webp?v=<?php echo asset_version('assets/images/rfx-hero.webp'); ?>" alt="Roofing company website on two phones: reviews, free inspection booking, before and after slider and roof galleries" width="2376" height="1546">
       </div>
     </div>
   </div>
@@ -47,27 +47,27 @@ include __DIR__ . '/includes/header.php';
     <div class="rx-exp-view">
       <div class="rx-exp-track">
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/rf-exp-1.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/rf-exp-1.webp?v=<?php echo asset_version('assets/images/rf-exp-1.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Trust-first websites</h3><p>Warranties, certifications and real roofs that make a big decision feel safe.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/rf-exp-2.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/rf-exp-2.webp?v=<?php echo asset_version('assets/images/rf-exp-2.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Before and after proof</h3><p>Old roof to new roof in one swipe, house by house.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/rf-exp-3.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/rf-exp-3.webp?v=<?php echo asset_version('assets/images/rf-exp-3.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Inspection booking forms</h3><p>Capture the roof age, the damage and the insurance status up front.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/rf-exp-4.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/rf-exp-4.webp?v=<?php echo asset_version('assets/images/rf-exp-4.webp'); ?>" alt="" width="960" height="1200" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Local SEO by service area</h3><p>Rank for roofing and storm damage searches in your towns.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/rf-exp-5.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/rf-exp-5.webp?v=<?php echo asset_version('assets/images/rf-exp-5.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Storm-ready ad campaigns</h3><p>Ads that switch on fast in the areas a storm just hit.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/rf-exp-6.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/rf-exp-6.webp?v=<?php echo asset_version('assets/images/rf-exp-6.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Reviews and reputation</h3><p>Turn every finished roof into five-star proof.</p></div>
       </article>
       </div>
@@ -1394,7 +1394,7 @@ include __DIR__ . '/includes/header.php';
     <div class="rx-stage" id="rxStage" role="tabpanel" aria-live="polite">
       <div class="rx-stage-col rx-stage-col--l"><div class="rx-feats is-active" data-rx-pane="0"><div class="rx-feat"><h3>Clear service pages</h3><p>Replacement, repair and storms each get a page that sells.</p></div><div class="rx-feat"><h3>Claim steps at a glance</h3><p>Show inspection to new roof so nobody worries.</p></div><div class="rx-feat"><h3>Real roof photos</h3><p>Your finished roofs lead every page, not stock images.</p></div></div><div class="rx-feats" data-rx-pane="1"><div class="rx-feat"><h3>Filter by material</h3><p>Homeowners jump straight to shingle, metal or tile.</p></div><div class="rx-feat"><h3>Filter by town</h3><p>Show the roofs you did a few streets away.</p></div><div class="rx-feat"><h3>Roof stories</h3><p>Damage, material and timeline for every job.</p></div></div><div class="rx-feats" data-rx-pane="2"><div class="rx-feat"><h3>Every lead in one place</h3><p>Calls, forms and bookings land in a single inbox.</p></div><div class="rx-feat"><h3>Claim status at a glance</h3><p>See insurance jobs and roof age before you call.</p></div><div class="rx-feat"><h3>Hot lead alerts</h3><p>Storm and replacement jobs get flagged first.</p></div></div><div class="rx-feats" data-rx-pane="3"><div class="rx-feat"><h3>Instant ballpark</h3><p>Homeowners see a realistic roof range in seconds.</p></div><div class="rx-feat"><h3>Line-item preview</h3><p>Materials, labor and tear-off broken out simply.</p></div><div class="rx-feat"><h3>Financing options</h3><p>Monthly estimates make a new roof feel reachable.</p></div></div></div>
       <div class="rx-stage-phone">
-        <div class="rx-stage-screens"><img class="rx-screen is-active" data-rx-pane="0" src="/assets/images/rfx-tab-1.webp" alt="Homeowner pages screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="1" src="/assets/images/rfx-tab-2.webp" alt="Roof gallery screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="2" src="/assets/images/rfx-tab-3.webp" alt="Owner dashboard screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="3" src="/assets/images/rfx-tab-4.webp" alt="Roof calculator screen" width="920" height="1640" loading="lazy" decoding="async"></div>
+        <div class="rx-stage-screens"><img class="rx-screen is-active" data-rx-pane="0" src="/assets/images/rfx-tab-1.webp?v=<?php echo asset_version('assets/images/rfx-tab-1.webp'); ?>" alt="Homeowner pages screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="1" src="/assets/images/rfx-tab-2.webp?v=<?php echo asset_version('assets/images/rfx-tab-2.webp'); ?>" alt="Roof gallery screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="2" src="/assets/images/rfx-tab-3.webp?v=<?php echo asset_version('assets/images/rfx-tab-3.webp'); ?>" alt="Owner dashboard screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="3" src="/assets/images/rfx-tab-4.webp?v=<?php echo asset_version('assets/images/rfx-tab-4.webp'); ?>" alt="Roof calculator screen" width="920" height="1640" loading="lazy" decoding="async"></div>
       </div>
       <div class="rx-stage-col rx-stage-col--r"><div class="rx-feats is-active" data-rx-pane="0"><div class="rx-feat"><h3>Free inspection button</h3><p>Booking sits on every screen, always one thumb away.</p></div><div class="rx-feat"><h3>Local proof</h3><p>Nearby roofs and reviews close to the homeowner.</p></div><div class="rx-feat"><h3>Fast on any phone</h3><p>Pages load quickly even on weak mobile signal.</p></div></div><div class="rx-feats" data-rx-pane="1"><div class="rx-feat"><h3>Big, sharp photos</h3><p>Clean lines that make the craftsmanship obvious.</p></div><div class="rx-feat"><h3>Before and after</h3><p>Swipe-to-reveal comparisons that sell the roof.</p></div><div class="rx-feat"><h3>Quote this roof</h3><p>A request button tied to each roof you show.</p></div></div><div class="rx-feats" data-rx-pane="2"><div class="rx-feat"><h3>Pipeline value</h3><p>Know what is signed and what is still open.</p></div><div class="rx-feat"><h3>Source tracking</h3><p>See which ads and searches bring real roofs.</p></div><div class="rx-feat"><h3>One-tap follow-up</h3><p>Call or text the homeowner straight from the lead.</p></div></div><div class="rx-feats" data-rx-pane="3"><div class="rx-feat"><h3>Fewer price shocks</h3><p>Expectations are set before the inspection.</p></div><div class="rx-feat"><h3>Qualified requests</h3><p>Only serious, budget-aware buyers reach out.</p></div><div class="rx-feat"><h3>Exact pricing CTA</h3><p>One button moves them to a real quote.</p></div></div></div>
     </div>
@@ -1413,7 +1413,7 @@ include __DIR__ . '/includes/testimonialslider.php';
 <div class="rx rx--rf">
 <section class="rx-team">
   <div class="rx-team-card">
-    <div class="rx-team-art" data-rx-tilt><img src="/assets/images/rfx-trio.webp" alt="Roofing website services page, roof project page and contact page on phones" width="1840" height="1496" loading="lazy" decoding="async"></div>
+    <div class="rx-team-art" data-rx-tilt><img src="/assets/images/rfx-trio.webp?v=<?php echo asset_version('assets/images/rfx-trio.webp'); ?>" alt="Roofing website services page, roof project page and contact page on phones" width="1840" height="1496" loading="lazy" decoding="async"></div>
     <div class="rx-team-copy">
       <p class="subheading">Why WTF Labs</p>
       <h2 class="rx-h2">Looking for a team that actually understands roofing?</h2>

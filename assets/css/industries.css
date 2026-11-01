@@ -1993,13 +1993,13 @@ html body .rx-work-canvas .work-card-body p {
   font-size: 18.5px;
 }
 :root:has(.rx) .rx .rx-ba.is-pin .rx-ben-item.is-active .rx-ben-n {
-  font-size: 48px;
-}
-:root:has(.rx) .rx .rx-ba.is-pin .rx-ben-item.is-active h3 {
   font-size: 44px;
 }
+:root:has(.rx) .rx .rx-ba.is-pin .rx-ben-item.is-active h3 {
+  font-size: 40px;
+}
 :root:has(.rx) .rx .rx-ba.is-pin .rx-ben-item.is-active p {
-  font-size: 21px;
+  font-size: 20px;
   color: var(--rx-ink);
 }
 

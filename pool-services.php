@@ -26,7 +26,7 @@ include __DIR__ . '/includes/header.php';
     </div>
     <div class="rx-hero-stage" data-rx-tilt>
       <div class="rx-hero-phones">
-        <img fetchpriority="high" src="/assets/images/pox-hero.webp" alt="Pool service company website on two phones: reviews, service quote booking, before and after slider and pool results" width="2376" height="1546">
+        <img fetchpriority="high" src="/assets/images/pox-hero.webp?v=<?php echo asset_version('assets/images/pox-hero.webp'); ?>" alt="Pool service company website on two phones: reviews, service quote booking, before and after slider and pool results" width="2376" height="1546">
       </div>
     </div>
   </div>
@@ -47,27 +47,27 @@ include __DIR__ . '/includes/header.php';
     <div class="rx-exp-view">
       <div class="rx-exp-track">
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/po-exp-1.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/po-exp-1.webp?v=<?php echo asset_version('assets/images/po-exp-1.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Route-building websites</h3><p>Clear weekly plans and prices that make recurring service the easy choice.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/po-exp-2.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/po-exp-2.webp?v=<?php echo asset_version('assets/images/po-exp-2.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Green-to-clean proof</h3><p>Before and after results that win the hardest jobs in one swipe.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/po-exp-3.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/po-exp-3.webp?v=<?php echo asset_version('assets/images/po-exp-3.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Smart quote forms</h3><p>Capture pool size, equipment and service wanted before you call.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/po-exp-4.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/po-exp-4.webp?v=<?php echo asset_version('assets/images/po-exp-4.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Local SEO by neighborhood</h3><p>Rank for pool service searches on the streets you already drive.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/po-exp-5.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/po-exp-5.webp?v=<?php echo asset_version('assets/images/po-exp-5.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Seasonal ad campaigns</h3><p>Openings, summer service and closings timed to the season.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/po-exp-6.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/po-exp-6.webp?v=<?php echo asset_version('assets/images/po-exp-6.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Reviews and reputation</h3><p>Turn happy swimmers into five-star proof on every platform.</p></div>
       </article>
       </div>
@@ -1394,7 +1394,7 @@ include __DIR__ . '/includes/header.php';
     <div class="rx-stage" id="rxStage" role="tabpanel" aria-live="polite">
       <div class="rx-stage-col rx-stage-col--l"><div class="rx-feats is-active" data-rx-pane="0"><div class="rx-feat"><h3>Clear service pages</h3><p>Weekly care, repairs and upgrades each get a page that sells.</p></div><div class="rx-feat"><h3>Process at a glance</h3><p>Show what happens on every weekly visit.</p></div><div class="rx-feat"><h3>Real pool photos</h3><p>Your clear pools lead every page, not stock images.</p></div></div><div class="rx-feats" data-rx-pane="1"><div class="rx-feat"><h3>Filter by service</h3><p>Owners jump straight to weekly care, repairs or upgrades.</p></div><div class="rx-feat"><h3>Filter by town</h3><p>Show the pools you service a few streets away.</p></div><div class="rx-feat"><h3>Pool stories</h3><p>Problem, fix and result for every pool.</p></div></div><div class="rx-feats" data-rx-pane="2"><div class="rx-feat"><h3>Every lead in one place</h3><p>Calls, forms and bookings land in a single inbox.</p></div><div class="rx-feat"><h3>Route fit at a glance</h3><p>See which requests sit on your current routes.</p></div><div class="rx-feat"><h3>Hot lead alerts</h3><p>Green pools and repairs get flagged first.</p></div></div><div class="rx-feats" data-rx-pane="3"><div class="rx-feat"><h3>Instant plan price</h3><p>Owners see a monthly price in seconds.</p></div><div class="rx-feat"><h3>What is included</h3><p>Brushing, chemicals and filter care listed simply.</p></div><div class="rx-feat"><h3>Easy upgrades</h3><p>Spa and full-service tiers lift the average plan.</p></div></div></div>
       <div class="rx-stage-phone">
-        <div class="rx-stage-screens"><img class="rx-screen is-active" data-rx-pane="0" src="/assets/images/pox-tab-1.webp" alt="Owner pages screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="1" src="/assets/images/pox-tab-2.webp" alt="Pool showcase screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="2" src="/assets/images/pox-tab-3.webp" alt="Owner dashboard screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="3" src="/assets/images/pox-tab-4.webp" alt="Plan builder screen" width="920" height="1640" loading="lazy" decoding="async"></div>
+        <div class="rx-stage-screens"><img class="rx-screen is-active" data-rx-pane="0" src="/assets/images/pox-tab-1.webp?v=<?php echo asset_version('assets/images/pox-tab-1.webp'); ?>" alt="Owner pages screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="1" src="/assets/images/pox-tab-2.webp?v=<?php echo asset_version('assets/images/pox-tab-2.webp'); ?>" alt="Pool showcase screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="2" src="/assets/images/pox-tab-3.webp?v=<?php echo asset_version('assets/images/pox-tab-3.webp'); ?>" alt="Owner dashboard screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="3" src="/assets/images/pox-tab-4.webp?v=<?php echo asset_version('assets/images/pox-tab-4.webp'); ?>" alt="Plan builder screen" width="920" height="1640" loading="lazy" decoding="async"></div>
       </div>
       <div class="rx-stage-col rx-stage-col--r"><div class="rx-feats is-active" data-rx-pane="0"><div class="rx-feat"><h3>One-tap quote</h3><p>The quote button sits on every screen, one thumb away.</p></div><div class="rx-feat"><h3>Local proof</h3><p>Nearby pools and reviews close to the owner.</p></div><div class="rx-feat"><h3>Fast on any phone</h3><p>Pages load quickly even on weak mobile signal.</p></div></div><div class="rx-feats" data-rx-pane="1"><div class="rx-feat"><h3>Big, sharp photos</h3><p>Blue water that makes the result obvious.</p></div><div class="rx-feat"><h3>Before and after</h3><p>Swipe-to-reveal green-to-clean results.</p></div><div class="rx-feat"><h3>Fix mine like this</h3><p>A request button tied to each pool you show.</p></div></div><div class="rx-feats" data-rx-pane="2"><div class="rx-feat"><h3>Recurring value</h3><p>Know how much monthly revenue each route adds.</p></div><div class="rx-feat"><h3>Source tracking</h3><p>See which ads and searches bring real accounts.</p></div><div class="rx-feat"><h3>One-tap follow-up</h3><p>Call or text the owner straight from the lead.</p></div></div><div class="rx-feats" data-rx-pane="3"><div class="rx-feat"><h3>Fewer surprises</h3><p>Price and visit scope are clear up front.</p></div><div class="rx-feat"><h3>Qualified signups</h3><p>Only ready-to-start owners reach out.</p></div><div class="rx-feat"><h3>Start service CTA</h3><p>One button turns interest into a weekly account.</p></div></div></div>
     </div>
@@ -1413,7 +1413,7 @@ include __DIR__ . '/includes/testimonialslider.php';
 <div class="rx rx--po">
 <section class="rx-team">
   <div class="rx-team-card">
-    <div class="rx-team-art" data-rx-tilt><img src="/assets/images/pox-trio.webp" alt="Pool service website services page, results page and contact page on phones" width="1840" height="1496" loading="lazy" decoding="async"></div>
+    <div class="rx-team-art" data-rx-tilt><img src="/assets/images/pox-trio.webp?v=<?php echo asset_version('assets/images/pox-trio.webp'); ?>" alt="Pool service website services page, results page and contact page on phones" width="1840" height="1496" loading="lazy" decoding="async"></div>
     <div class="rx-team-copy">
       <p class="subheading">Why WTF Labs</p>
       <h2 class="rx-h2">Looking for a team that actually understands pool service?</h2>

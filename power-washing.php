@@ -26,7 +26,7 @@ include __DIR__ . '/includes/header.php';
     </div>
     <div class="rx-hero-stage" data-rx-tilt>
       <div class="rx-hero-phones">
-        <img fetchpriority="high" src="/assets/images/pwx-hero.webp" alt="Pressure washing company website on two phones: reviews, instant quote, before and after slider and results by surface" width="2376" height="1546">
+        <img fetchpriority="high" src="/assets/images/pwx-hero.webp?v=<?php echo asset_version('assets/images/pwx-hero.webp'); ?>" alt="Pressure washing company website on two phones: reviews, instant quote, before and after slider and results by surface" width="2376" height="1546">
       </div>
     </div>
   </div>
@@ -47,27 +47,27 @@ include __DIR__ . '/includes/header.php';
     <div class="rx-exp-view">
       <div class="rx-exp-track">
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/pw-exp-1.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/pw-exp-1.webp?v=<?php echo asset_version('assets/images/pw-exp-1.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Results-first websites</h3><p>Your best before and afters become the sales pitch on every page.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/pw-exp-2.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/pw-exp-2.webp?v=<?php echo asset_version('assets/images/pw-exp-2.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Before and after sliders</h3><p>One swipe shows years of grime gone in a single visit.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/pw-exp-3.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/pw-exp-3.webp?v=<?php echo asset_version('assets/images/pw-exp-3.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Instant quote forms</h3><p>Price from the address and surfaces, booked without phone tag.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/pw-exp-4.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/pw-exp-4.webp?v=<?php echo asset_version('assets/images/pw-exp-4.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Local SEO by neighborhood</h3><p>Rank for house wash and driveway searches where you work.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/pw-exp-5.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/pw-exp-5.webp?v=<?php echo asset_version('assets/images/pw-exp-5.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Google and Meta ads</h3><p>Video and photo ads built around booked jobs, not likes.</p></div>
       </article>
       <article class="rx-exp-card">
-        <figure class="rx-exp-media"><img src="/assets/images/pw-exp-6.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+        <figure class="rx-exp-media"><img src="/assets/images/pw-exp-6.webp?v=<?php echo asset_version('assets/images/pw-exp-6.webp'); ?>" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
         <div class="rx-exp-body"><h3>Reviews and reputation</h3><p>Turn every clean house into five-star proof.</p></div>
       </article>
       </div>
@@ -1394,7 +1394,7 @@ include __DIR__ . '/includes/header.php';
     <div class="rx-stage" id="rxStage" role="tabpanel" aria-live="polite">
       <div class="rx-stage-col rx-stage-col--l"><div class="rx-feats is-active" data-rx-pane="0"><div class="rx-feat"><h3>Clear service pages</h3><p>Houses, driveways and roofs each get a page that sells.</p></div><div class="rx-feat"><h3>Process at a glance</h3><p>Show quote to final walk so nobody guesses.</p></div><div class="rx-feat"><h3>Real job photos</h3><p>Your results lead every page, not stock images.</p></div></div><div class="rx-feats" data-rx-pane="1"><div class="rx-feat"><h3>Filter by surface</h3><p>Homeowners jump straight to driveways, houses or decks.</p></div><div class="rx-feat"><h3>Filter by town</h3><p>Show the jobs you did a few streets away.</p></div><div class="rx-feat"><h3>Job stories</h3><p>Surface, method and time for every job.</p></div></div><div class="rx-feats" data-rx-pane="2"><div class="rx-feat"><h3>Every lead in one place</h3><p>Calls, forms and bookings land in a single inbox.</p></div><div class="rx-feat"><h3>Job size at a glance</h3><p>See surfaces and home size before you call.</p></div><div class="rx-feat"><h3>Hot lead alerts</h3><p>Bundles and commercial jobs get flagged first.</p></div></div><div class="rx-feats" data-rx-pane="3"><div class="rx-feat"><h3>Instant price</h3><p>Homeowners see a real range in seconds.</p></div><div class="rx-feat"><h3>Add-on preview</h3><p>Driveway, gutters and deck priced simply.</p></div><div class="rx-feat"><h3>Bundle savings</h3><p>Discounts lift the average ticket.</p></div></div></div>
       <div class="rx-stage-phone">
-        <div class="rx-stage-screens"><img class="rx-screen is-active" data-rx-pane="0" src="/assets/images/pwx-tab-1.webp" alt="Homeowner pages screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="1" src="/assets/images/pwx-tab-2.webp" alt="Results gallery screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="2" src="/assets/images/pwx-tab-3.webp" alt="Owner dashboard screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="3" src="/assets/images/pwx-tab-4.webp" alt="Instant quote screen" width="920" height="1640" loading="lazy" decoding="async"></div>
+        <div class="rx-stage-screens"><img class="rx-screen is-active" data-rx-pane="0" src="/assets/images/pwx-tab-1.webp?v=<?php echo asset_version('assets/images/pwx-tab-1.webp'); ?>" alt="Homeowner pages screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="1" src="/assets/images/pwx-tab-2.webp?v=<?php echo asset_version('assets/images/pwx-tab-2.webp'); ?>" alt="Results gallery screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="2" src="/assets/images/pwx-tab-3.webp?v=<?php echo asset_version('assets/images/pwx-tab-3.webp'); ?>" alt="Owner dashboard screen" width="920" height="1640" loading="lazy" decoding="async"><img class="rx-screen" data-rx-pane="3" src="/assets/images/pwx-tab-4.webp?v=<?php echo asset_version('assets/images/pwx-tab-4.webp'); ?>" alt="Instant quote screen" width="920" height="1640" loading="lazy" decoding="async"></div>
       </div>
       <div class="rx-stage-col rx-stage-col--r"><div class="rx-feats is-active" data-rx-pane="0"><div class="rx-feat"><h3>Instant quote button</h3><p>The quote sits on every screen, one thumb away.</p></div><div class="rx-feat"><h3>Local proof</h3><p>Nearby jobs and reviews close to the homeowner.</p></div><div class="rx-feat"><h3>Fast on any phone</h3><p>Pages load quickly even on weak mobile signal.</p></div></div><div class="rx-feats" data-rx-pane="1"><div class="rx-feat"><h3>Big, sharp photos</h3><p>Clean results that make the difference obvious.</p></div><div class="rx-feat"><h3>Before and after</h3><p>Swipe-to-reveal comparisons that sell the wash.</p></div><div class="rx-feat"><h3>Quote this job</h3><p>A request button tied to each result you show.</p></div></div><div class="rx-feats" data-rx-pane="2"><div class="rx-feat"><h3>Booked revenue</h3><p>Know what is scheduled and what is still open.</p></div><div class="rx-feat"><h3>Source tracking</h3><p>See which ads and searches bring real jobs.</p></div><div class="rx-feat"><h3>One-tap follow-up</h3><p>Call or text the homeowner straight from the lead.</p></div></div><div class="rx-feats" data-rx-pane="3"><div class="rx-feat"><h3>Fewer price shocks</h3><p>The price is set before you arrive.</p></div><div class="rx-feat"><h3>Qualified requests</h3><p>Only ready-to-book homeowners reach out.</p></div><div class="rx-feat"><h3>Book now CTA</h3><p>One button turns the quote into a date.</p></div></div></div>
     </div>
@@ -1413,7 +1413,7 @@ include __DIR__ . '/includes/testimonialslider.php';
 <div class="rx rx--pw">
 <section class="rx-team">
   <div class="rx-team-card">
-    <div class="rx-team-art" data-rx-tilt><img src="/assets/images/pwx-trio.webp" alt="Power washing website services page, results page and contact page on phones" width="1840" height="1496" loading="lazy" decoding="async"></div>
+    <div class="rx-team-art" data-rx-tilt><img src="/assets/images/pwx-trio.webp?v=<?php echo asset_version('assets/images/pwx-trio.webp'); ?>" alt="Power washing website services page, results page and contact page on phones" width="1840" height="1496" loading="lazy" decoding="async"></div>
     <div class="rx-team-copy">
       <p class="subheading">Why WTF Labs</p>
       <h2 class="rx-h2">Looking for a team that actually understands power washing?</h2>
