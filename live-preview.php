@@ -117,8 +117,16 @@ $selfOrigin = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || ($_
 $assetLink = function (string $absUrl) use ($slug): string {
   return '__WTF_SELF__/live-preview?site=' . rawurlencode($slug) . '&asset=' . rawurlencode($absUrl);
 };
-$proxyFonts = function (string $css, string $baseUrl) use ($hostAllowed, $assetLink): string {
-  return (string)preg_replace_callback('/url\(\s*(["\']?)([^"\')]+)\1\s*\)/i', function ($m) use ($baseUrl, $hostAllowed, $assetLink) {
+$imageExts = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'avif', 'svg', 'ico'];
+$proxyImage = function (string $absUrl) use ($hostAllowed, $assetLink, $imageExts): string {
+  if (!preg_match('#^https?://#i', $absUrl)) {
+    return $absUrl;
+  }
+  $ext = strtolower(pathinfo((string)parse_url($absUrl, PHP_URL_PATH), PATHINFO_EXTENSION));
+  return $hostAllowed((string)parse_url($absUrl, PHP_URL_HOST)) && in_array($ext, $imageExts, true) ? $assetLink($absUrl) : $absUrl;
+};
+$proxyFonts = function (string $css, string $baseUrl) use ($hostAllowed, $assetLink, $imageExts): string {
+  return (string)preg_replace_callback('/url\(\s*(["\']?)([^"\')]+)\1\s*\)/i', function ($m) use ($baseUrl, $hostAllowed, $assetLink, $imageExts) {
     $ref = trim(html_entity_decode($m[2], ENT_QUOTES));
     if ($ref === '' || str_starts_with($ref, 'data:') || str_starts_with($ref, '#')) {
       return $m[0];
@@ -138,7 +146,7 @@ $proxyFonts = function (string $css, string $baseUrl) use ($hostAllowed, $assetL
     }
     $host = (string)parse_url($ref, PHP_URL_HOST);
     $ext = strtolower(pathinfo((string)parse_url($ref, PHP_URL_PATH), PATHINFO_EXTENSION));
-    if ($hostAllowed($host) && in_array($ext, ['woff2', 'woff', 'ttf', 'otf', 'eot', 'css'], true)) {
+    if ($hostAllowed($host) && in_array($ext, array_merge(['woff2', 'woff', 'ttf', 'otf', 'eot', 'css'], $imageExts), true)) {
       return 'url("' . $assetLink($ref) . '")';
     }
     return 'url("' . $ref . '")';
@@ -153,14 +161,19 @@ if (isset($_GET['asset'])) {
     exit;
   }
   $ext = strtolower(pathinfo((string)($ap['path'] ?? ''), PATHINFO_EXTENSION));
-  $types = ['css' => 'text/css; charset=UTF-8', 'woff2' => 'font/woff2', 'woff' => 'font/woff', 'ttf' => 'font/ttf', 'otf' => 'font/otf', 'eot' => 'application/vnd.ms-fontobject'];
+  $types = ['css' => 'text/css; charset=UTF-8', 'woff2' => 'font/woff2', 'woff' => 'font/woff', 'ttf' => 'font/ttf', 'otf' => 'font/otf', 'eot' => 'application/vnd.ms-fontobject', 'jpg' => 'image/jpeg', 'jpeg' => 'image/jpeg', 'png' => 'image/png', 'gif' => 'image/gif', 'webp' => 'image/webp', 'avif' => 'image/avif', 'svg' => 'image/svg+xml', 'ico' => 'image/x-icon'];
+  $isImage = in_array($ext, $imageExts, true);
   if (!isset($types[$ext])) {
     http_response_code(404);
     exit;
   }
-  $assetCache = sys_get_temp_dir() . '/wtf-live4-asset-' . md5($assetUrl);
+  $assetCache = sys_get_temp_dir() . '/wtf-live5-asset-' . md5($assetUrl);
+  $contentType = $types[$ext];
   if (is_file($assetCache) && time() - filemtime($assetCache) < 86400) {
     $body = (string)file_get_contents($assetCache);
+    if ($isImage && is_file($assetCache . '.type')) {
+      $contentType = (string)file_get_contents($assetCache . '.type');
+    }
   } else {
     $ch = curl_init($assetUrl);
     curl_setopt_array($ch, [
@@ -171,6 +184,7 @@ if (isset($_GET['asset'])) {
       CURLOPT_TIMEOUT => 10,
       CURLOPT_ENCODING => '',
       CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+      CURLOPT_HTTPHEADER => $isImage ? ['Accept: image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5'] : [],
     ]);
     $body = (string)curl_exec($ch);
     if ($body === '' && in_array(curl_errno($ch), [35, 51, 58, 60, 77], true)) {
@@ -179,6 +193,10 @@ if (isset($_GET['asset'])) {
       $body = (string)curl_exec($ch);
     }
     $status = (int)curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
+    $upType = strtolower((string)curl_getinfo($ch, CURLINFO_CONTENT_TYPE));
+    if ($isImage && $body !== '' && $status < 400 && !str_starts_with($upType, 'image/')) {
+      $body = '';
+    }
     if ($body === '' || $status >= 400) {
       @touch($staleFile);
       header('Location: ' . $assetUrl, true, 302);
@@ -187,12 +205,16 @@ if (isset($_GET['asset'])) {
     if ($ext === 'css') {
       $body = $proxyFonts($body, $assetUrl);
     }
+    if ($isImage) {
+      $contentType = trim(explode(';', $upType)[0]);
+      @file_put_contents($assetCache . '.type', $contentType);
+    }
     @file_put_contents($assetCache, $body);
   }
-  header('Content-Type: ' . $types[$ext]);
+  header('Content-Type: ' . $contentType);
   header('Cache-Control: public, max-age=86400');
   header('X-Robots-Tag: noindex');
-  echo str_replace('__WTF_SELF__', $selfOrigin, $body);
+  echo $isImage ? $body : str_replace('__WTF_SELF__', $selfOrigin, $body);
   exit;
 }
 
@@ -202,7 +224,7 @@ if ($path === '' || $path[0] !== '/' || str_starts_with($path, '//')) {
 }
 $url = 'https://' . $homeHost . $path;
 
-$cacheFile = sys_get_temp_dir() . '/wtf-live8-' . md5($url) . '.html';
+$cacheFile = sys_get_temp_dir() . '/wtf-live9-' . md5($url) . '.html';
 $html = '';
 $finalUrl = $url;
 $cacheFresh = is_file($cacheFile) && time() - filemtime($cacheFile) < 1800;
@@ -251,7 +273,9 @@ if ($cacheFresh) {
   };
 
   [$html, $finalUrl] = $fetch($url, 7);
+  $fromArchive = false;
   if ($html === '') {
+    $fromArchive = true;
     [$html] = $fetch('https://web.archive.org/web/2id_/' . $url, 12);
     $finalUrl = $url;
     if ($html !== '') {
@@ -312,6 +336,33 @@ if ($cacheFresh) {
   $html = preg_replace_callback('/(?<![\w.$])url\(\s*(["\']?)(?!data:|https?:|\/\/|\#)([^"\')]+)\1\s*\)/', function ($m) use ($abs) {
     return 'url(' . $m[1] . $abs($m[2]) . $m[1] . ')';
   }, $html);
+  $html = preg_replace_callback('/<(?:img|source)\b[^>]*>/i', function ($m) use ($proxyImage) {
+    return (string)preg_replace_callback('/(\s(src|data-src|data-lazy-src|srcset|data-srcset|data-lazy-srcset)\s*=\s*)(["\'])(.*?)\3/is', function ($a) use ($proxyImage) {
+      $value = html_entity_decode($a[4], ENT_QUOTES);
+      if (stripos($a[2], 'srcset') === false) {
+        $value = $proxyImage(trim($value));
+      } else {
+        $value = implode(', ', array_map(function ($c) use ($proxyImage) {
+          $c = trim($c);
+          if ($c === '') {
+            return $c;
+          }
+          $bits = preg_split('/\s+/', $c, 2);
+          return $proxyImage($bits[0]) . (isset($bits[1]) ? ' ' . $bits[1] : '');
+        }, explode(',', $value)));
+      }
+      return $a[1] . $a[3] . htmlspecialchars($value, ENT_QUOTES) . $a[3];
+    }, $m[0]);
+  }, $html);
+  $html = preg_replace_callback('/(\sstyle\s*=\s*)(["\'])(.*?)\2/is', function ($m) use ($proxyImage) {
+    if (stripos($m[3], 'url(') === false) {
+      return $m[0];
+    }
+    $style = (string)preg_replace_callback('/url\(\s*(["\']?)([^"\')]+)\1\s*\)/i', function ($u) use ($proxyImage) {
+      return 'url("' . $proxyImage(trim($u[2])) . '")';
+    }, html_entity_decode($m[3], ENT_QUOTES));
+    return $m[1] . $m[2] . htmlspecialchars($style, ENT_QUOTES) . $m[2];
+  }, $html);
   $heavy = '(?:googletagmanager\.com|google-analytics\.com|connect\.facebook\.net|callrail\.com|google\.com\/recaptcha|gstatic\.com\/recaptcha|recaptcha\.net|hotjar\.com|clarity\.ms|klaviyo\.com|podium\.com|birdeye\.com|tidio\.co|userway\.org|acsbapp\.com|accessibe\.com|livechatinc\.com|hs-scripts\.com|hs-analytics\.net|leadconnectorhq\.com|msgsndr\.com|doubleclick\.net|bing\.com\/bat|snap\.licdn\.com|tiktok\.com\/i18n\/pixel|analytics\.tiktok\.com)';
   $html = preg_replace('/<script\b[^>]*\ssrc\s*=\s*["\'][^"\']*' . $heavy . '[^"\']*["\'][^>]*>\s*<\/script>/is', '', $html);
   $html = preg_replace('/<link\b[^>]*\shref\s*=\s*["\'][^"\']*' . $heavy . '[^"\']*["\'][^>]*>/is', '', $html);
@@ -345,6 +396,9 @@ if ($cacheFresh) {
     $html = $inject . $html;
   }
   @file_put_contents($cacheFile, $html);
+  if ($fromArchive) {
+    @touch($cacheFile, time() - 1680);
+  }
 }
 
 header('Content-Type: text/html; charset=UTF-8');
