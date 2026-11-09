@@ -180,8 +180,8 @@ if (isset($_GET['asset'])) {
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_FOLLOWLOCATION => true,
       CURLOPT_MAXREDIRS => 4,
-      CURLOPT_CONNECTTIMEOUT => 4,
-      CURLOPT_TIMEOUT => 10,
+      CURLOPT_CONNECTTIMEOUT => 8,
+      CURLOPT_TIMEOUT => 15,
       CURLOPT_ENCODING => '',
       CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
       CURLOPT_HTTPHEADER => $isImage ? ['Accept: image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5'] : [],
@@ -240,7 +240,7 @@ if ($cacheFresh) {
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_FOLLOWLOCATION => true,
       CURLOPT_MAXREDIRS => 5,
-      CURLOPT_CONNECTTIMEOUT => 4,
+      CURLOPT_CONNECTTIMEOUT => 8,
       CURLOPT_TIMEOUT => $timeout,
       CURLOPT_ENCODING => '',
       CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_2TLS,
@@ -248,16 +248,6 @@ if ($cacheFresh) {
       CURLOPT_HTTPHEADER => [
         'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
         'Accept-Language: en-US,en;q=0.9',
-        'Cache-Control: no-cache',
-        'Pragma: no-cache',
-        'Upgrade-Insecure-Requests: 1',
-        'Sec-Ch-Ua: "Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"',
-        'Sec-Ch-Ua-Mobile: ?0',
-        'Sec-Ch-Ua-Platform: "Windows"',
-        'Sec-Fetch-Dest: document',
-        'Sec-Fetch-Mode: navigate',
-        'Sec-Fetch-Site: none',
-        'Sec-Fetch-User: ?1',
       ],
     ]);
     $body = (string)curl_exec($ch);
@@ -272,7 +262,10 @@ if ($cacheFresh) {
     return [$ok ? $body : '', $final];
   };
 
-  [$html, $finalUrl] = $fetch($url, 7);
+  [$html, $finalUrl] = $fetch($url, 15);
+  if ($html === '') {
+    [$html, $finalUrl] = $fetch($url, 15);
+  }
   $fromArchive = false;
   if ($html === '') {
     $fromArchive = true;

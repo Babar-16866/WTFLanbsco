@@ -8970,6 +8970,7 @@ a[href^="tel:"],
 a[href^="mailto:"] {
   -webkit-user-select: text;
   user-select: text;
+  -webkit-user-drag: none;
 }
 html body .form-commit > .form-peek--under {
   position: relative;
@@ -8990,10 +8991,10 @@ html body .form-peek--under .form-peek-word--right {
   margin: 0;
 }
 html body .form-commit > .form-peek--under:not(.is-visible) .form-peek-head--flip {
-  transform: translateY(-110%) rotate(180deg);
+  transform: translateY(-110%);
 }
 html body .form-commit > .form-peek--under.is-visible .form-peek-head--flip {
-  transform: translateY(0) rotate(180deg);
+  transform: translateY(0);
 }
 @media (max-width: 640px) {
   html body .form-commit > .form-peek--under { height: 88px; }
@@ -10793,4 +10794,110 @@ html body .services-cta-band.services-cta-band--split {
 }
 .rail-section--fixed .rail-track {
   padding-bottom: 40px;
+}
+.niche-strip.is-draggable {
+  cursor: grab;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.niche-strip.is-draggable.is-dragging {
+  cursor: grabbing;
+}
+.niche-strip.is-draggable .niche-strip-track {
+  animation: none;
+  will-change: transform;
+}
+@media (max-width: 767px) {
+  .m-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+  .m-slider::-webkit-scrollbar {
+    display: none;
+  }
+  .why-done-grid.m-slider,
+  .excel-track.m-slider {
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    scroll-padding: 0;
+  }
+  .rail-viewport.m-slider,
+  .rx-exp-view.m-slider {
+    margin: -24px 0 -40px;
+    padding: 24px 0 40px 20px;
+    scroll-padding-inline: 20px;
+  }
+  .m-slider > .rail-track,
+  .m-slider > .rx-exp-track {
+    gap: 40px;
+    padding: 0 20px 0 0;
+    transform: none;
+  }
+  .m-slide {
+    flex: 0 0 var(--m-w) !important;
+    width: var(--m-w) !important;
+    max-width: none !important;
+    margin-top: 0 !important;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+  section:has(.excel-track.m-slider) .excel-nav {
+    display: none;
+  }
+  .m-slider-ctrl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  .m-slider-btn {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #C5E602;
+    color: #10231B;
+    cursor: pointer;
+  }
+  .m-slider-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+  .m-slider-dots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .m-slider-dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: currentColor;
+    opacity: 0.3;
+    cursor: pointer;
+    transition: width 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+  }
+  .m-slider-dot.is-active {
+    width: 22px;
+    background: #C5E602;
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) {
+  .m-slider-ctrl {
+    display: none;
+  }
 }

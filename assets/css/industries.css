@@ -2224,3 +2224,7 @@ html body .rx-work-canvas .work-card-body p {
 .rx-stage-screens {
   margin: calc(-60 / 360 * 100%) calc(-50 / 360 * 100%);
 }
+
+.rx:not([class*="rx--"]) .rx-ba-copy .rx-h2 {
+  font-size: clamp(40px, 3.8vw, 64px);
+}

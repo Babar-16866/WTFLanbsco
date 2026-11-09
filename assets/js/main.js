@@ -705,7 +705,10 @@ document.addEventListener('click', (e) => {
   function selectionIsContact() {
     const sel = window.getSelection ? window.getSelection() : null;
     if (!sel || sel.isCollapsed) return false;
-    return inContact(sel.anchorNode) && inContact(sel.focusNode);
+    if (inContact(sel.anchorNode) && inContact(sel.focusNode)) return true;
+    const text = sel.toString().trim();
+    if (!text) return false;
+    return Array.from(document.querySelectorAll(CONTACT_SEL)).some((el) => el.textContent.includes(text));
   }
 
   function openProtect() {
@@ -739,7 +742,7 @@ document.addEventListener('click', (e) => {
   });
 
   document.addEventListener('cut', (e) => {
-    if (isEditable(e.target)) return;
+    if (isEditable(e.target) || selectionIsContact()) return;
     e.preventDefault();
     openProtect();
   });
@@ -1617,14 +1620,11 @@ document.addEventListener('click', (e) => {
     });
   }
 
-  const PROXIED = new Set(['miaremodelingcontractors-com','beyondwow-com','tadlockroofing-com','2galslandscaping-com','timemachineatx-com','aqualecu-com','agropestpros-com','arrownj-com','aptivepestcontrol-com','foreverroofing-net','vh1roofing-com','prohandymanmia-com','h2gservices-com','hprohandyman-com','thehandymansflive-com','reliantplumbing-com','oandmplumbing-com','sunlandplumbing-com','aircorheatingcooling-com']);
-
   function previewUrl(url) {
     let u;
     try { u = new URL(url, window.location.href); } catch (e) { return url; }
     if (u.origin === window.location.origin) return url;
     const slug = u.hostname.toLowerCase().replace(/^www\./, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-    if (!PROXIED.has(slug)) return url;
     const path = u.pathname + u.search;
     return '/live-preview?site=' + encodeURIComponent(slug) + (path && path !== '/' ? '&path=' + encodeURIComponent(path) : '');
   }
@@ -2726,5 +2726,134 @@ document.addEventListener('click', (e) => {
     });
 
     show(0);
+  });
+})();
+
+(function initNicheStripDrag() {
+  document.querySelectorAll('.niche-strip').forEach((strip) => {
+    const track = strip.querySelector('.niche-strip-track');
+    if (!track) return;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const zoom = () => parseFloat(getComputedStyle(document.documentElement).zoom) || 1;
+    let offset = 0;
+    let half = 0;
+    let hover = false;
+    let drag = null;
+    let last = performance.now();
+    const measure = () => {
+      half = track.scrollWidth / 2;
+    };
+    const wrap = () => {
+      if (!half) return;
+      offset = ((offset % half) + half) % half;
+    };
+    const render = () => {
+      track.style.transform = 'translate3d(' + (-offset).toFixed(2) + 'px, 0, 0)';
+    };
+    strip.classList.add('is-draggable');
+    measure();
+    window.addEventListener('resize', measure);
+    window.addEventListener('load', measure, { once: true });
+    strip.addEventListener('mouseenter', () => { hover = true; });
+    strip.addEventListener('mouseleave', () => { hover = false; });
+    strip.addEventListener('pointerdown', (e) => {
+      if (e.button !== 0) return;
+      drag = { x: e.clientX, start: offset, id: e.pointerId };
+      strip.classList.add('is-dragging');
+      try { strip.setPointerCapture(e.pointerId); } catch (err) {}
+    });
+    strip.addEventListener('pointermove', (e) => {
+      if (!drag || e.pointerId !== drag.id) return;
+      offset = drag.start - (e.clientX - drag.x) / zoom();
+      wrap();
+      render();
+    });
+    const end = () => {
+      drag = null;
+      strip.classList.remove('is-dragging');
+    };
+    strip.addEventListener('pointerup', end);
+    strip.addEventListener('pointercancel', end);
+    strip.addEventListener('dragstart', (e) => e.preventDefault());
+    const tick = (now) => {
+      const dt = Math.min(64, now - last);
+      last = now;
+      if (!drag && !hover && !reduce && half) {
+        offset += (half / 32000) * dt;
+        wrap();
+        render();
+      }
+      requestAnimationFrame(tick);
+    };
+    render();
+    requestAnimationFrame(tick);
+  });
+})();
+
+(function initMobileSliders() {
+  const mq = window.matchMedia('(max-width: 767px)');
+  const groups = [
+    ['.why-done-grid', null],
+    ['.excel-track', null],
+    ['.rail-viewport', '.rail-track'],
+    ['.rx-exp-view', '.rx-exp-track'],
+  ];
+  const arrow = (d) => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + d + '"/></svg>';
+  groups.forEach(([sel, inner]) => {
+    document.querySelectorAll(sel).forEach((box) => {
+      const holder = inner ? box.querySelector(inner) : box;
+      if (!holder) return;
+      const slides = Array.from(holder.children).filter((el) => el.nodeType === 1);
+      if (slides.length < 2) return;
+      const ctrl = document.createElement('div');
+      ctrl.className = 'm-slider-ctrl';
+      ctrl.innerHTML = '<button type="button" class="m-slider-btn" aria-label="Previous">' + arrow('M15 5l-7 7 7 7') + '</button><div class="m-slider-dots"></div><button type="button" class="m-slider-btn" aria-label="Next">' + arrow('M9 5l7 7-7 7') + '</button>';
+      const dotsBox = ctrl.querySelector('.m-slider-dots');
+      const dots = slides.map((_, i) => {
+        const d = document.createElement('button');
+        d.type = 'button';
+        d.className = 'm-slider-dot';
+        d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+        dotsBox.appendChild(d);
+        return d;
+      });
+      box.insertAdjacentElement('afterend', ctrl);
+      let cur = 0;
+      const step = () => (slides[1] ? slides[1].offsetLeft - slides[0].offsetLeft : box.clientWidth) || box.clientWidth;
+      const mark = (i) => {
+        cur = i;
+        dots.forEach((d, k) => d.classList.toggle('is-active', k === i));
+      };
+      const go = (i) => {
+        const n = (i + slides.length) % slides.length;
+        box.scrollTo({ left: n * step(), behavior: 'smooth' });
+        mark(n);
+      };
+      ctrl.querySelectorAll('.m-slider-btn')[0].addEventListener('click', () => go(cur - 1));
+      ctrl.querySelectorAll('.m-slider-btn')[1].addEventListener('click', () => go(cur + 1));
+      dots.forEach((d, k) => d.addEventListener('click', () => go(k)));
+      let raf = 0;
+      box.addEventListener('scroll', () => {
+        if (!box.classList.contains('m-slider')) return;
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(() => mark(Math.max(0, Math.min(slides.length - 1, Math.round(box.scrollLeft / step())))));
+      }, { passive: true });
+      const sync = () => {
+        const on = mq.matches;
+        box.classList.toggle('m-slider', on);
+        slides.forEach((s) => s.classList.toggle('m-slide', on));
+        if (on) {
+          const cs = getComputedStyle(box);
+          box.style.setProperty('--m-w', (box.clientWidth - (parseFloat(cs.paddingLeft) || 0) - (inner ? 20 : parseFloat(cs.paddingRight) || 0)) + 'px');
+          box.scrollLeft = cur * step();
+          mark(cur);
+        } else {
+          box.style.removeProperty('--m-w');
+        }
+      };
+      sync();
+      window.addEventListener('resize', sync);
+      window.addEventListener('load', sync, { once: true });
+    });
   });
 })();

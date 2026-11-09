@@ -283,6 +283,11 @@
     else window.addEventListener('load', loadAsk, { once: true });
     window.addEventListener('message', (e) => {
       if (e.origin !== window.location.origin || !e.data || !e.data.wtfLiveFail || e.source !== askFrame.contentWindow) return;
+      if (!askFrame.dataset.retried) {
+        askFrame.dataset.retried = '1';
+        setTimeout(() => { askFrame.src = askFrame.getAttribute('src'); }, 400);
+        return;
+      }
       askFallback.hidden = false;
       askFrame.hidden = true;
     });

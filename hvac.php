@@ -84,8 +84,8 @@ include __DIR__ . '/includes/header.php';
       <a href="tel:+15123379723" class="rx-cta"><span>BOOK A CALL</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M6 18L18 6M8 6h10v10"/></svg></i></a>
     </div>
     <div class="rx-ba-stage" data-rx-ba-stage>
-      <img class="rx-ba-before" src="/assets/images/HAVC_Before.webp" alt="Mother and daughter sweating on the sofa on a hot day with the AC off" width="1254" height="1254" loading="lazy" decoding="async">
-      <div class="rx-ba-after"><img src="/assets/images/HAVC_After.webp" alt="The same mother and daughter relaxing with the wall AC running" width="1254" height="1254" loading="lazy" decoding="async"></div>
+      <img class="rx-ba-before" src="/assets/images/HAVC_Before_v2.webp" alt="Father and daughter sweating on the sofa on a hot day with the AC off" width="1254" height="1254" loading="lazy" decoding="async">
+      <div class="rx-ba-after"><img src="/assets/images/HAVC_After_v2.webp" alt="The same father and daughter relaxing with the wall AC running" width="1254" height="1254" loading="lazy" decoding="async"></div>
       <span class="rx-ba-handle" aria-hidden="true"><span></span></span>
       <span class="rx-ba-chip rx-ba-chip--b">Problem</span>
       <span class="rx-ba-chip rx-ba-chip--a">Solution</span>
