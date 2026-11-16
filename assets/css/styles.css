@@ -10901,3 +10901,15 @@ html body .services-cta-band.services-cta-band--split {
     display: none;
   }
 }
+html body .hero-canvas .mockup-tall {
+  border-radius: 0;
+  overflow: visible;
+  background: none;
+  box-shadow: none;
+}
+html body .hero-canvas .mockup-tall img {
+  object-fit: contain;
+}
+html body .hero-canvas .mockup-tall-right {
+  margin-right: 3.1%;
+}
