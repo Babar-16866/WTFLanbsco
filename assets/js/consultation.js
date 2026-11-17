@@ -193,12 +193,53 @@
     });
   };
 
+  const centralNow = () => {
+    const parts = {};
+    new Intl.DateTimeFormat('en-US', { timeZone: 'America/Chicago', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' })
+      .formatToParts(new Date())
+      .forEach((p) => { parts[p.type] = p.value; });
+    return { y: +parts.year, m: +parts.month, d: +parts.day, min: +parts.hour * 60 + +parts.minute };
+  };
+
+  const buildSlots = () => {
+    const now = centralNow();
+    const pad = (n) => String(n).padStart(2, '0');
+    const fmt = (m) => {
+      const h = Math.floor(m / 60);
+      return (h % 12 || 12) + ':' + pad(m % 60) + ' ' + (h < 12 ? 'AM' : 'PM');
+    };
+    const all = [];
+    for (let m = 540; m <= 990; m += 30) all.push(m);
+    const plans = [[540, 720, 990], [600, 840, 960], all, all];
+    const days = [];
+    const base = new Date(Date.UTC(now.y, now.m - 1, now.d));
+    const weekday = (d) => d.getUTCDay() >= 1 && d.getUTCDay() <= 5;
+    if (weekday(base) && now.min < 720) days.push([new Date(base), [990], true]);
+    const cursor = new Date(base);
+    plans.forEach((plan) => {
+      do { cursor.setUTCDate(cursor.getUTCDate() + 1); } while (!weekday(cursor));
+      days.push([new Date(cursor), plan, false]);
+    });
+    return days.map(([d, plan, today]) => {
+      const date = d.getUTCFullYear() + '-' + pad(d.getUTCMonth() + 1) + '-' + pad(d.getUTCDate());
+      const slots = plan
+        .filter((m) => !today || m > now.min + 30)
+        .map((m) => ({ id: date + 'T' + pad(Math.floor(m / 60)) + ':' + pad(m % 60), label: fmt(m) + ' - ' + fmt(m + 30) }));
+      return {
+        date,
+        label: d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'UTC' }),
+        slots,
+      };
+    }).filter((day) => day.slots.length);
+  };
+
   const loadSlots = () => {
     slotsBox.innerHTML = '<p class="cq-loading">Loading available times...</p>';
-    return fetch('/booking.php', { headers: { Accept: 'application/json' }, cache: 'no-store' })
+    return fetch('/booking', { headers: { Accept: 'application/json' }, cache: 'no-store' })
       .then((r) => r.json())
+      .catch(() => ({}))
       .then((data) => {
-        slotDays = Array.isArray(data.days) ? data.days : [];
+        slotDays = Array.isArray(data.days) && data.days.length ? data.days : buildSlots();
         const selectedDay = slotDays.findIndex((d) => d.slots.some((s) => s.id === answers.call_time));
         activeDay = selectedDay >= 0 ? selectedDay : Math.min(activeDay, Math.max(0, slotDays.length - 1));
         if (selectedDay < 0) {
@@ -206,9 +247,6 @@
           delete answers.call_time_label;
         }
         renderSlots();
-      })
-      .catch(() => {
-        slotsBox.innerHTML = '<p class="cq-loading">We could not load the calendar. Please refresh the page.</p>';
       });
   };
 
@@ -228,10 +266,11 @@
     reserve.set('name', answers.first_name || '');
     reserve.set('email', answers.email || '');
 
-    fetch('/booking.php', { method: 'POST', body: reserve })
+    fetch('/booking', { method: 'POST', body: reserve })
       .then((r) => r.json().then((data) => ({ status: r.status, data })))
+      .catch(() => ({ status: 0, data: {} }))
       .then(({ status, data }) => {
-        if (status !== 200 || !data.ok) {
+        if (status === 409) {
           slotDays = Array.isArray(data.days) ? data.days : [];
           delete answers.call_time;
           delete answers.call_time_label;
