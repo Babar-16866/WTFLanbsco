@@ -416,7 +416,8 @@ textarea {
 .cq-cal {
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
-  height: 460px;
+  height: 372px;
+  max-width: 640px;
   margin-left: 46px;
   overflow: hidden;
   border: 1px solid rgba(16, 35, 27, 0.12);
@@ -426,14 +427,14 @@ textarea {
 }
 
 .cq-cal-month {
-  padding: 26px 26px 22px;
+  padding: 20px 20px 18px;
 }
 
 .cq-cal-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .cq-cal-title {
@@ -477,7 +478,7 @@ textarea {
 .cq-cal-grid {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: 6px;
+  gap: 4px;
 }
 
 .cq-cal-week {
@@ -499,7 +500,7 @@ textarea {
   border: 0;
   border-radius: 50%;
   background: transparent;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   color: rgba(16, 35, 27, 0.32);
 }
@@ -546,7 +547,7 @@ textarea {
   display: flex;
   flex-direction: column;
   min-height: 0;
-  padding: 26px 24px 22px;
+  padding: 20px 18px 18px;
   border-left: 1px solid var(--cq-line);
   background: #FBF7EC;
 }
@@ -561,7 +562,7 @@ textarea {
   display: flex;
   align-items: center;
   gap: 6px;
-  margin: 6px 0 18px;
+  margin: 4px 0 12px;
   font-size: 13px;
   color: var(--cq-muted);
 }
@@ -608,11 +609,11 @@ textarea {
   justify-content: center;
   width: 100%;
   min-width: 0;
-  padding: 12px 16px;
+  padding: 9px 12px;
   border-color: rgba(30, 66, 51, 0.35);
   background: transparent;
   color: var(--cq-green);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   white-space: nowrap;
 }
@@ -636,7 +637,7 @@ textarea {
   }
   .cq-cal-slots {
     flex: none;
-    height: 264px;
+    height: 220px;
   }
 }
 
