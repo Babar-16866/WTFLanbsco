@@ -36,7 +36,7 @@
   };
 
   const focusStep = (step) => {
-    const target = step.querySelector('.cq-input, .cq-option.is-selected, .cq-option, .cq-day');
+    const target = step.querySelector('.cq-input, .cq-option.is-selected, .cq-option, .cq-cal-day.is-active');
     if (target) setTimeout(() => target.focus({ preventScroll: true }), 320);
   };
 
@@ -121,7 +121,7 @@
       choose(option);
       return;
     }
-    const day = e.target.closest('.cq-day');
+    const day = e.target.closest('.cq-cal-day.is-open');
     if (day) {
       activeDay = Number(day.dataset.index);
       renderSlots();
@@ -162,36 +162,86 @@
   const slotsBox = slotStep.querySelector('[data-slots]');
   const slotError = slotStep.querySelector('[data-slot-error]');
 
+  const monthTitle = slotStep.querySelector('[data-month-title]');
+  const dayTitle = slotStep.querySelector('[data-day-title]');
+  const prevMonth = slotStep.querySelector('[data-month-prev]');
+  const nextMonth = slotStep.querySelector('[data-month-next]');
+  let viewMonth = null;
+
+  const parseDate = (iso) => {
+    const [y, m, d] = iso.split('-').map(Number);
+    return new Date(Date.UTC(y, m - 1, d));
+  };
+  const monthKey = (d) => d.getUTCFullYear() * 12 + d.getUTCMonth();
+
   const renderSlots = () => {
     daysBox.innerHTML = '';
     slotsBox.innerHTML = '';
     if (!slotDays.length) {
-      slotsBox.innerHTML = '<p class="cq-loading">No open times right now. Please check back shortly.</p>';
+      monthTitle.textContent = '';
+      dayTitle.textContent = '';
+      slotsBox.innerHTML = '<p class="cq-loading">Loading available times...</p>';
       return;
     }
-    slotDays.forEach((day, i) => {
+    const months = [...new Set(slotDays.map((d) => monthKey(parseDate(d.date))))];
+    const active = parseDate(slotDays[activeDay].date);
+    if (viewMonth === null || !months.includes(viewMonth)) viewMonth = monthKey(active);
+    const year = Math.floor(viewMonth / 12);
+    const month = viewMonth % 12;
+    monthTitle.textContent = new Date(Date.UTC(year, month, 1)).toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+    prevMonth.disabled = viewMonth <= months[0];
+    nextMonth.disabled = viewMonth >= months[months.length - 1];
+
+    const firstDow = new Date(Date.UTC(year, month, 1)).getUTCDay();
+    const daysInMonth = new Date(Date.UTC(year, month + 1, 0)).getUTCDate();
+    for (let i = 0; i < firstDow; i++) {
+      const blank = document.createElement('span');
+      blank.className = 'cq-cal-blank';
+      daysBox.appendChild(blank);
+    }
+    for (let d = 1; d <= daysInMonth; d++) {
+      const iso = year + '-' + String(month + 1).padStart(2, '0') + '-' + String(d).padStart(2, '0');
+      const index = slotDays.findIndex((x) => x.date === iso);
+      const cell = document.createElement('button');
+      cell.type = 'button';
+      cell.className = 'cq-cal-day';
+      cell.textContent = String(d);
+      if (index < 0) {
+        cell.disabled = true;
+      } else {
+        cell.classList.add('is-open');
+        cell.dataset.index = String(index);
+        cell.setAttribute('aria-label', parseDate(iso).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' }));
+        if (index === activeDay) {
+          cell.classList.add('is-active');
+          cell.setAttribute('aria-pressed', 'true');
+        }
+      }
+      daysBox.appendChild(cell);
+    }
+
+    dayTitle.textContent = active.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' });
+    slotDays[activeDay].slots.forEach((slot) => {
       const btn = document.createElement('button');
       btn.type = 'button';
-      btn.className = 'cq-day' + (i === activeDay ? ' is-active' : '');
-      btn.dataset.index = String(i);
-      btn.textContent = day.label;
-      daysBox.appendChild(btn);
-    });
-    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    slotDays[activeDay].slots.forEach((slot, k) => {
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'cq-option' + (answers.call_time === slot.id ? ' is-selected' : '');
+      btn.className = 'cq-option cq-time' + (answers.call_time === slot.id ? ' is-selected' : '');
       btn.setAttribute('role', 'radio');
       btn.setAttribute('aria-checked', answers.call_time === slot.id ? 'true' : 'false');
       btn.dataset.value = slot.id;
-      btn.dataset.label = slotDays[activeDay].label + ', ' + slot.label + ' (Central Time)';
-      btn.innerHTML = '<span class="cq-key"></span><span class="cq-option-text"></span>';
-      btn.querySelector('.cq-key').textContent = letters[k] || '';
-      btn.querySelector('.cq-option-text').textContent = slot.label;
+      btn.dataset.label = dayTitle.textContent + ', ' + slot.label + ' (Central Time)';
+      btn.textContent = slot.label.split(' - ')[0];
       slotsBox.appendChild(btn);
     });
   };
+
+  prevMonth.addEventListener('click', () => {
+    viewMonth -= 1;
+    renderSlots();
+  });
+  nextMonth.addEventListener('click', () => {
+    viewMonth += 1;
+    renderSlots();
+  });
 
   const centralNow = () => {
     const parts = {};

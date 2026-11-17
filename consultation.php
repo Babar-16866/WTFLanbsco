@@ -77,9 +77,22 @@ $letters = range('A', 'Z');
         <div class="cq-actions"><button type="button" class="cq-ok" data-next>OK</button><span class="cq-hint">press <strong>Enter ↵</strong></span></div>
 
         <?php elseif ($q['type'] === 'slot'): ?>
-        <p class="cq-tz">All times are in US Central Time.</p>
-        <div class="cq-days" data-days></div>
-        <div class="cq-slots" data-slots></div>
+        <div class="cq-cal">
+          <div class="cq-cal-month">
+            <div class="cq-cal-head">
+              <button type="button" class="cq-cal-nav" data-month-prev aria-label="Previous month"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+              <p class="cq-cal-title" data-month-title></p>
+              <button type="button" class="cq-cal-nav" data-month-next aria-label="Next month"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+            </div>
+            <div class="cq-cal-week" aria-hidden="true"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+            <div class="cq-cal-grid" data-days></div>
+          </div>
+          <div class="cq-cal-times">
+            <p class="cq-cal-date" data-day-title></p>
+            <p class="cq-cal-tz"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Central Time (US &amp; Canada)</p>
+            <div class="cq-cal-slots" data-slots></div>
+          </div>
+        </div>
         <p class="cq-error" data-slot-error hidden></p>
 
         <?php elseif ($q['type'] === 'contact'): ?>
