@@ -229,7 +229,7 @@
       btn.setAttribute('aria-checked', answers.call_time === slot.id ? 'true' : 'false');
       btn.dataset.value = slot.id;
       btn.dataset.label = dayTitle.textContent + ', ' + slot.label + ' (Central Time)';
-      btn.textContent = slot.label.split(' - ')[0];
+      btn.textContent = slot.label;
       slotsBox.appendChild(btn);
     });
   };
@@ -260,16 +260,19 @@
     };
     const all = [];
     for (let m = 540; m <= 990; m += 30) all.push(m);
-    const plans = [[540, 720, 990], [600, 840, 960], all, all];
+    const plans = [[540, 720, 990], [600, 840, 960]];
     const days = [];
     const base = new Date(Date.UTC(now.y, now.m - 1, now.d));
     const weekday = (d) => d.getUTCDay() >= 1 && d.getUTCDay() <= 5;
     if (weekday(base) && now.min < 720) days.push([new Date(base), [990], true]);
     const cursor = new Date(base);
-    plans.forEach((plan) => {
+    const last = new Date(base);
+    last.setUTCDate(last.getUTCDate() + 60);
+    for (let n = 0; ; n++) {
       do { cursor.setUTCDate(cursor.getUTCDate() + 1); } while (!weekday(cursor));
-      days.push([new Date(cursor), plan, false]);
-    });
+      if (cursor > last) break;
+      days.push([new Date(cursor), plans[n] || all, false]);
+    }
     return days.map(([d, plan, today]) => {
       const date = d.getUTCFullYear() + '-' + pad(d.getUTCMonth() + 1) + '-' + pad(d.getUTCDate());
       const slots = plan

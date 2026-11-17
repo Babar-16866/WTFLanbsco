@@ -12,6 +12,7 @@ header('X-Robots-Tag: noindex');
 
 const BOOKING_TZ = 'America/Chicago';
 const BOOKING_FILE = __DIR__ . '/data/bookings.json';
+const BOOKING_WINDOW_DAYS = 60;
 
 $tz = new DateTimeZone(BOOKING_TZ);
 $now = new DateTimeImmutable('now', $tz);
@@ -46,8 +47,8 @@ function booking_close($handle): void
 
 /**
  * Business days start from the day after the visit. The first two days show three
- * slots each, the next two days show the full 9:00-5:00 schedule. Same-day visitors
- * before noon may also take the 4:30 PM slot.
+ * slots each; every business day after that, up to BOOKING_WINDOW_DAYS ahead, shows
+ * the full 9:00-5:00 schedule. Same-day visitors before noon may also take 4:30 PM.
  */
 function booking_slots(DateTimeImmutable $now, array $booked): array
 {
@@ -58,8 +59,6 @@ function booking_slots(DateTimeImmutable $now, array $booked): array
   $plans = [
     [9 * 60, 12 * 60, 16 * 60 + 30],
     [10 * 60, 14 * 60, 16 * 60],
-    $all,
-    $all,
   ];
 
   $days = [];
@@ -70,11 +69,17 @@ function booking_slots(DateTimeImmutable $now, array $booked): array
   }
 
   $cursor = $now->setTime(0, 0);
-  foreach ($plans as $plan) {
+  $last = $now->setTime(0, 0)->modify('+' . BOOKING_WINDOW_DAYS . ' days');
+  $n = 0;
+  while (true) {
     do {
       $cursor = $cursor->modify('+1 day');
     } while (!$isWeekday($cursor));
-    $days[] = [$cursor, $plan];
+    if ($cursor > $last) {
+      break;
+    }
+    $days[] = [$cursor, $plans[$n] ?? $all];
+    $n++;
   }
 
   $out = [];
