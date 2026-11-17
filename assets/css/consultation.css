@@ -252,6 +252,15 @@ textarea {
   }
 }
 
+.cq-options--grid {
+  grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+}
+
+.cq-options--grid .cq-option {
+  width: 100%;
+  min-width: 0;
+}
+
 .cq-input {
   display: block;
   width: calc(100% - 46px);
@@ -341,11 +350,6 @@ textarea {
   background: #E4FF43;
 }
 
-.cq-hint {
-  font-size: 13px;
-  color: var(--cq-muted);
-}
-
 .cq-error {
   margin-top: 14px;
   padding-left: 46px;
@@ -412,6 +416,7 @@ textarea {
 .cq-cal {
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  height: 460px;
   margin-left: 46px;
   overflow: hidden;
   border: 1px solid rgba(16, 35, 27, 0.12);
@@ -540,6 +545,7 @@ textarea {
 .cq-cal-times {
   display: flex;
   flex-direction: column;
+  min-height: 0;
   padding: 26px 24px 22px;
   border-left: 1px solid var(--cq-line);
   background: #FBF7EC;
@@ -571,10 +577,27 @@ textarea {
 .cq-cal-slots {
   display: grid;
   gap: 8px;
-  max-height: 318px;
+  flex: 1 1 auto;
+  align-content: start;
+  min-height: 0;
   overflow-y: auto;
-  padding-right: 4px;
+  padding-right: 6px;
   scrollbar-width: thin;
+  scrollbar-color: rgba(30, 66, 51, 0.35) transparent;
+  overscroll-behavior: contain;
+}
+
+.cq-cal-slots::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cq-cal-slots::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(30, 66, 51, 0.35);
+}
+
+.cq-cal-slots::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .cq-cal-slots .cq-loading {
@@ -608,8 +631,12 @@ textarea {
     border-left: 0;
     border-top: 1px solid var(--cq-line);
   }
+  .cq-cal {
+    height: auto;
+  }
   .cq-cal-slots {
-    max-height: none;
+    flex: none;
+    height: 264px;
   }
 }
 

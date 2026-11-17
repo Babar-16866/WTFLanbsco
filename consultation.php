@@ -66,15 +66,16 @@ $letters = range('A', 'Z');
         <p class="cq-q"><span class="cq-num"><?php echo $i + 1; ?><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12M13 6l6 6-6 6"/></svg></span><span class="cq-q-text"><?php echo $q['text']; ?></span></p>
 
         <?php if ($q['type'] === 'choice'): ?>
-        <div class="cq-options" role="radiogroup">
+        <div class="cq-options<?php echo count($q['options']) > 6 ? ' cq-options--grid' : ''; ?>" role="radiogroup">
           <?php foreach ($q['options'] as $k => $opt): ?>
           <button type="button" class="cq-option" role="radio" aria-checked="false" data-value="<?php echo htmlspecialchars($opt, ENT_QUOTES); ?>"><span class="cq-key"><?php echo $letters[$k]; ?></span><span class="cq-option-text"><?php echo htmlspecialchars($opt); ?></span><svg class="cq-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button>
           <?php endforeach; ?>
         </div>
+        <div class="cq-actions"><button type="button" class="cq-ok" data-next>Next</button></div>
 
         <?php elseif ($q['type'] === 'name'): ?>
         <input class="cq-input" type="text" name="first_name" autocomplete="given-name" placeholder="Type your answer here..." data-required>
-        <div class="cq-actions"><button type="button" class="cq-ok" data-next>OK</button><span class="cq-hint">press <strong>Enter ↵</strong></span></div>
+        <div class="cq-actions"><button type="button" class="cq-ok" data-next>Next</button></div>
 
         <?php elseif ($q['type'] === 'slot'): ?>
         <div class="cq-cal">
@@ -94,13 +95,14 @@ $letters = range('A', 'Z');
           </div>
         </div>
         <p class="cq-error" data-slot-error hidden></p>
+        <div class="cq-actions"><button type="button" class="cq-ok" data-next>Next</button></div>
 
         <?php elseif ($q['type'] === 'contact'): ?>
         <div class="cq-fields">
           <label class="cq-label">Email<input class="cq-input" type="email" name="email" autocomplete="email" inputmode="email" placeholder="name@example.com" data-required></label>
           <label class="cq-label">Phone<input class="cq-input" type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="(201) 555-0123" data-required></label>
         </div>
-        <div class="cq-actions"><button type="button" class="cq-ok" data-next>OK</button><span class="cq-hint">press <strong>Enter ↵</strong></span></div>
+        <div class="cq-actions"><button type="button" class="cq-ok" data-next>Next</button></div>
 
         <?php else: ?>
         <textarea class="cq-input cq-textarea" name="message" rows="3" placeholder="Type your answer here..."></textarea>
