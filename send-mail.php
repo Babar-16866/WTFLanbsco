@@ -89,6 +89,7 @@ $to = $mailConfig['recipient'];
 $form_titles = [
   'home-contact'      => 'Inquiry',
   'free-consultation' => 'Free Consultation',
+  'consultation'      => 'Free Consultation',
   'free-audit'        => 'Free Consultation',
   'promo-popup'       => 'New Lead',
   'contact-page'      => 'Contact',

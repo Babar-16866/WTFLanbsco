@@ -678,7 +678,7 @@ document.addEventListener('click', (e) => {
   const trigger = e.target.closest('a[href], button, [data-open-popup]');
   if (!trigger || !isContactCta(trigger)) return;
   e.preventDefault();
-  openPromoPopup(true);
+  window.open('/consultation', '_blank', 'noopener');
 });
 
 
@@ -686,6 +686,8 @@ document.addEventListener('click', (e) => {
 
 
 // Content protection — right-click modal + block copy
+
+/*
 (function initContentProtect() {
   const popup = document.getElementById('protectPopup');
   if (!popup) return;
@@ -702,14 +704,92 @@ document.addEventListener('click', (e) => {
     return !!(el && el instanceof Element && el.closest(CONTACT_SEL));
   }
 
-  function selectionIsContact() {
+  function contactsInSelection() {
     const sel = window.getSelection ? window.getSelection() : null;
-    if (!sel || sel.isCollapsed) return false;
-    if (inContact(sel.anchorNode) && inContact(sel.focusNode)) return true;
-    const text = sel.toString().trim();
-    if (!text) return false;
-    return Array.from(document.querySelectorAll(CONTACT_SEL)).some((el) => el.textContent.includes(text));
+    if (!sel || sel.isCollapsed || !sel.rangeCount) return [];
+    const range = sel.getRangeAt(0);
+    return Array.from(document.querySelectorAll(CONTACT_SEL)).filter((el) => range.intersectsNode(el));
   }
+
+  function selectionIsContact() {
+    return contactsInSelection().length > 0;
+  }
+
+  const CONTACT_PAD_X = 12;
+  const CONTACT_PAD_Y = 8;
+
+  function isContactCta(el) {
+    return el.matches('.btn, .ihero-secondary-btn');
+  }
+
+  function contactTextRect(el) {
+    const range = document.createRange();
+    range.selectNodeContents(el);
+    return range.getBoundingClientRect();
+  }
+
+  function contactFromPoint(x, y) {
+    const nodes = document.querySelectorAll(CONTACT_SEL);
+    for (let i = 0; i < nodes.length; i++) {
+      const el = nodes[i];
+      if (isContactCta(el)) continue;
+      const r = contactTextRect(el);
+      if (r.width <= 0 && r.height <= 0) continue;
+      if (
+        x >= Math.floor(r.left - CONTACT_PAD_X) &&
+        x <= Math.ceil(r.right + CONTACT_PAD_X) &&
+        y >= Math.floor(r.top - CONTACT_PAD_Y) &&
+        y <= Math.ceil(r.bottom + CONTACT_PAD_Y)
+      ) {
+        return el;
+      }
+    }
+    return null;
+  }
+
+  function selectContact(el) {
+    const sel = window.getSelection ? window.getSelection() : null;
+    if (!sel) return;
+    const range = document.createRange();
+    range.selectNodeContents(el);
+    sel.removeAllRanges();
+    sel.addRange(range);
+  }
+
+  let pressContact = null;
+
+  document.addEventListener('mousedown', (e) => {
+    if (isEditable(e.target) || e.button !== 0) {
+      if (e.button === 0) pressContact = null;
+      return;
+    }
+    pressContact = contactFromPoint(e.clientX, e.clientY);
+    if (pressContact) {
+      selectContact(pressContact);
+      if (!inContact(e.target)) e.preventDefault();
+    }
+  }, true);
+
+  document.addEventListener('mouseup', (e) => {
+    if (!pressContact || isEditable(e.target)) return;
+    if (!selectionIsContact()) selectContact(pressContact);
+  }, true);
+
+  document.addEventListener('touchstart', (e) => {
+    if (!e.changedTouches || !e.changedTouches.length) return;
+    if (isEditable(e.target)) {
+      pressContact = null;
+      return;
+    }
+    const t = e.changedTouches[0];
+    pressContact = contactFromPoint(t.clientX, t.clientY);
+    if (pressContact) selectContact(pressContact);
+  }, true);
+
+  document.addEventListener('touchend', (e) => {
+    if (!pressContact || isEditable(e.target)) return;
+    if (!selectionIsContact()) selectContact(pressContact);
+  }, true);
 
   function openProtect() {
     popup.hidden = false;
@@ -731,18 +811,29 @@ document.addEventListener('click', (e) => {
 
   document.addEventListener('contextmenu', (e) => {
     if (isEditable(e.target) || inContact(e.target)) return;
+    const near = contactFromPoint(e.clientX, e.clientY);
+    if (near) {
+      selectContact(near);
+      return;
+    }
     e.preventDefault();
     openProtect();
   });
 
   document.addEventListener('copy', (e) => {
-    if (isEditable(e.target) || selectionIsContact()) return;
+    if (isEditable(e.target)) return;
+    let contacts = contactsInSelection();
+    if (!contacts.length && pressContact) contacts = [pressContact];
     e.preventDefault();
+    if (contacts.length && e.clipboardData) {
+      e.clipboardData.setData('text/plain', contacts.map((el) => el.textContent.trim()).join('\n'));
+      return;
+    }
     openProtect();
   });
 
   document.addEventListener('cut', (e) => {
-    if (isEditable(e.target) || selectionIsContact()) return;
+    if (isEditable(e.target)) return;
     e.preventDefault();
     openProtect();
   });
@@ -757,7 +848,7 @@ document.addEventListener('click', (e) => {
   document.addEventListener('keydown', (e) => {
     if (isEditable(e.target)) return;
     const key = e.key.toLowerCase();
-    if ((e.ctrlKey || e.metaKey) && key === 'c' && selectionIsContact()) return;
+    if ((e.ctrlKey || e.metaKey) && key === 'c' && (selectionIsContact() || pressContact)) return;
     const block =
       (e.ctrlKey || e.metaKey) &&
       (key === 'c' || key === 'x' || key === 'u' || key === 's' || key === 'a' || key === 'p');
@@ -767,6 +858,9 @@ document.addEventListener('click', (e) => {
     }
   });
 })();
+
+*/
+
 
 // Works / Services / Industries two-tier category filters
 (function initCategoryFilters() {
@@ -2585,7 +2679,7 @@ document.addEventListener('click', (e) => {
     if (trigger) {
       e.preventDefault();
       e.stopPropagation();
-      open();
+      window.open('/consultation', '_blank', 'noopener');
       return;
     }
     if (e.target.closest('[data-step-popup-close]')) close();
