@@ -11035,10 +11035,10 @@ html body .promo-popup-dialog.exit-pop {
 .exit-pop-art {
   position: relative;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   min-height: 100%;
-  padding: 36px 20px 0;
+  padding: 36px 20px;
   background:
     radial-gradient(70% 60% at 50% 45%, rgba(208, 240, 0, 0.35), transparent 70%),
     linear-gradient(160deg, #24503E 0%, #10231B 100%);
@@ -11122,7 +11122,7 @@ html body .exit-pop .exit-pop-btn {
   }
   .exit-pop-art {
     min-height: 0;
-    padding: 24px 20px 0;
+    padding: 24px 20px;
   }
   .exit-pop-art img {
     max-width: 180px;
