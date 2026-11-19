@@ -45,10 +45,10 @@ include __DIR__ . '/includes/header.php';
 
     <div class="hero-canvas" id="heroCanvas">
       <div class="float-mockup mockup-tall mockup-tall-left" data-depth="0.04">
-        <img src="/assets/images/hero-mia-billboard.jpg" alt="">
+        <img src="/assets/images/hero-mia-billboard.webp" alt="">
       </div>
       <div class="float-mockup mockup-tall mockup-tall-right" data-depth="0.05">
-        <img src="/assets/images/hero-mia-phone.jpg" alt="">
+        <img src="/assets/images/hero-mia-phone.webp" alt="">
       </div>
       <div class="hero-banner" data-depth="0.08">
         <img src="/assets/images/main-banner.webp" alt="WTF Labs" class="hero-banner-img" width="1041" height="1069" fetchpriority="high">
