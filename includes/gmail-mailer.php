@@ -54,7 +54,6 @@ function gmail_http_post(string $url, array $fields): ?array {
       CURLOPT_HTTPHEADER => ['Content-Type: application/x-www-form-urlencoded'],
     ]);
     $response = curl_exec($ch);
-    curl_close($ch);
   } else {
     $context = stream_context_create(['http' => [
       'method' => 'POST',
