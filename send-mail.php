@@ -46,7 +46,7 @@ $form_pages = [
 $form_page = $form_pages[$source] ?? null;
 
 // Anything the form sent on top of the standard fields
-$standard = ['website', 'name', 'email', 'phone', 'help', 'budget', 'message', 'updates', 'source', 'terms', 'step', 'lead_id', 'g-recaptcha-response', 'phone_token'];
+$standard = ['website', 'name', 'email', 'phone', 'help', 'budget', 'message', 'updates', 'source', 'terms', 'step', 'lead_id', 'g-recaptcha-response'];
 $extra = [];
 foreach ($_POST as $key => $value) {
   if (in_array($key, $standard, true)) {
@@ -107,8 +107,8 @@ if ($is_consultation ? !human_ok() : !recaptcha_verify((string)($_POST['g-recapt
 
 // The consultation phone number must match the number verified by SMS code
 if ($is_consultation && otp_enabled()) {
-  $verified_phone = otp_verified_phone((string)($_POST['phone_token'] ?? ''));
-  if ($verified_phone === null || $verified_phone !== '+' . preg_replace('/\D/', '', $phone)) {
+  $verified_phone = otp_verified_phone();
+  if ($verified_phone === '' || $verified_phone !== '+' . preg_replace('/\D/', '', $phone)) {
     consultation_reply(['ok' => false, 'error' => 'phone'], 403);
     exit;
   }
@@ -131,7 +131,7 @@ $form_title = $form_titles[$source] ?? 'Inquiry';
 $step_note = ($step === 1 || $step === 2) ? ' (Step ' . $step . ' of 3)' : '';
 $subject = $form_title . $step_note . ' - ' . $name;
 
-$skip_fields = ['website', 'source', 'step', 'lead_id', 'terms', '_labels', 'g-recaptcha-response', 'phone_token'];
+$skip_fields = ['website', 'source', 'step', 'lead_id', 'terms', '_labels', 'g-recaptcha-response'];
 $label_pairs = json_decode((string)($_POST['_labels'] ?? ''), true);
 if (!is_array($label_pairs)) {
   $label_pairs = [];

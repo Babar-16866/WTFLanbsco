@@ -59,11 +59,6 @@ $show_gate = recaptcha_enabled() && !human_ok();
 <?php if ($show_gate): ?>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <?php endif; ?>
-<?php if (otp_enabled()): ?>
-  <script>window.cqOtpConfig = <?php echo json_encode(otp_client_config(), JSON_UNESCAPED_SLASHES); ?>;</script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js" defer></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js" defer></script>
-<?php endif; ?>
 </head>
 <body class="cq">
   <div class="cq-progress" aria-hidden="true"><span class="cq-progress-fill"></span></div>
@@ -79,7 +74,7 @@ $show_gate = recaptcha_enabled() && !human_ok();
   </section>
 <?php endif; ?>
 
-  <form class="cq-form" id="cqForm" action="/send-mail.php" method="post" novalidate<?php echo $show_gate ? ' data-gated hidden' : ''; ?>>
+  <form class="cq-form" id="cqForm" action="/send-mail.php" method="post" novalidate<?php echo otp_enabled() ? ' data-otp-on' : ''; ?><?php echo $show_gate ? ' data-gated hidden' : ''; ?>>
     <input type="text" name="website" value="" tabindex="-1" autocomplete="off" class="cq-hp" aria-hidden="true">
     <?php foreach ($questions as $i => $q): ?>
     <section class="cq-step" data-step="<?php echo $i; ?>" data-key="<?php echo $q['key']; ?>" data-type="<?php echo $q['type']; ?>"<?php echo $i === 0 && !$show_gate ? '' : ' hidden'; ?>>
@@ -152,7 +147,6 @@ $show_gate = recaptcha_enabled() && !human_ok();
             </div>
             <button type="button" class="cq-otp-resend" data-otp-resend>Resend code</button>
           </div>
-          <div id="cqOtpRecaptcha"></div>
         </div>
         <div class="cq-actions"><button type="button" class="cq-ok" data-next>Next</button></div>
 

@@ -321,12 +321,11 @@
     syncOtp();
   });
 
-  const otpConfig = window.cqOtpConfig && window.cqOtpConfig.apiKey ? window.cqOtpConfig : null;
+  const otpConfig = form.hasAttribute('data-otp-on');
   const otpBox = contactStep.querySelector('[data-otp]');
   const otpInput = otpBox.querySelector('input');
   const otpNote = otpBox.querySelector('[data-otp-note]');
-  const otp = { sentTo: '', confirmation: null, verified: '', token: '' };
-  let verifier = null;
+  const otp = { sentTo: '', verified: '' };
 
   const phoneE164 = () => '+' + country.dial + phoneInput.value.replace(/\D/g, '');
   const setContactButton = (text, disabled) => {
@@ -347,44 +346,39 @@
     if (otpInput.value !== digits) otpInput.value = digits;
   });
 
-  const firebaseAuth = () => {
-    if (!window.firebase.apps.length) window.firebase.initializeApp(otpConfig);
-    return window.firebase.auth();
+  const otpCall = (fields) => {
+    const body = new FormData();
+    Object.keys(fields).forEach((key) => body.set(key, fields[key]));
+    return fetch('/otp.php', { method: 'POST', body })
+      .then((r) => r.json())
+      .catch(() => ({ ok: false, error: 'network' }));
+  };
+
+  const otpMessages = {
+    phone: 'Please enter a valid phone number.',
+    wait: 'Please wait a few seconds before requesting another code.',
+    limit: 'Too many attempts. Please try again later.',
+    captcha: 'Your session has expired. Please refresh the page and try again.',
+    code: 'That code is not correct or has expired. Please try again or request a new code.',
+    expired: 'This code has expired. Please request a new one.',
   };
 
   const sendCode = (step) => {
-    if (!window.firebase || !window.firebase.auth) {
-      showError(step, 'Verification is still loading. Please try again in a moment.');
-      return;
-    }
     const number = phoneE164();
     setContactButton('Sending code...', true);
-    if (verifier) {
-      try { verifier.clear(); } catch (err) { /* already cleared */ }
-    }
-    const holder = document.getElementById('cqOtpRecaptcha');
-    holder.innerHTML = '';
-    const target = document.createElement('div');
-    holder.appendChild(target);
-    verifier = new window.firebase.auth.RecaptchaVerifier(target, { size: 'invisible' });
-    firebaseAuth().signInWithPhoneNumber(number, verifier)
-      .then((confirmation) => {
-        otp.confirmation = confirmation;
-        otp.sentTo = number;
-        otpNote.textContent = 'Enter the 6-digit code we sent to +' + country.dial + ' ' + phoneInput.value.replace(/\D/g, '') + '.';
-        otpInput.value = '';
-        otpBox.hidden = false;
-        setContactButton('Verify', false);
-        otpInput.focus({ preventScroll: true });
-      })
-      .catch((err) => {
+    otpCall({ action: 'send', phone: number }).then((data) => {
+      if (!data.ok) {
         setContactButton(otp.sentTo === number ? 'Verify' : 'Next', false);
-        const code = err && err.code;
-        let text = 'We could not send the code. Please check the number and try again.';
-        if (code === 'auth/invalid-phone-number') text = 'Please enter a valid phone number.';
-        if (code === 'auth/too-many-requests') text = 'Too many attempts. Please try again later.';
-        showError(step, text);
-      });
+        showError(step, otpMessages[data.error] || 'We could not send the code. Please check the number and try again.');
+        return;
+      }
+      otp.sentTo = number;
+      otpNote.textContent = 'Enter the 6-digit code we sent to +' + country.dial + ' ' + phoneInput.value.replace(/\D/g, '') + '.';
+      otpInput.value = '';
+      otpBox.hidden = false;
+      setContactButton('Verify', false);
+      otpInput.focus({ preventScroll: true });
+    });
   };
 
   const verifyPhone = (step) => {
@@ -393,7 +387,7 @@
       show(current + 1);
       return;
     }
-    if (otp.sentTo !== number || !otp.confirmation) {
+    if (otp.sentTo !== number) {
       sendCode(step);
       return;
     }
@@ -403,21 +397,17 @@
       return;
     }
     setContactButton('Verifying...', true);
-    otp.confirmation.confirm(code)
-      .then((result) => result.user.getIdToken())
-      .then((token) => {
-        otp.token = token;
-        otp.verified = number;
-        otpBox.hidden = true;
-        setContactButton('Next', false);
-        show(current + 1);
-      })
-      .catch((err) => {
+    otpCall({ action: 'verify', code }).then((data) => {
+      if (!data.ok) {
         setContactButton('Verify', false);
-        showError(step, err && err.code === 'auth/code-expired'
-          ? 'This code has expired. Please request a new one.'
-          : 'That code is not correct. Please try again.');
-      });
+        showError(step, otpMessages[data.error] || 'We could not verify the code. Please try again.');
+        return;
+      }
+      otp.verified = number;
+      otpBox.hidden = true;
+      setContactButton('Next', false);
+      show(current + 1);
+    });
   };
 
   otpBox.querySelector('[data-otp-resend]').addEventListener('click', () => {
@@ -648,7 +638,6 @@
         payload.set('name', answers.first_name || '');
         payload.set('email', answers.email || '');
         payload.set('phone', answers.phone || '');
-        if (otp.token) payload.set('phone_token', otp.token);
         steps.forEach((step) => {
           const key = step.dataset.key;
           const text = questionText(step);
@@ -680,7 +669,6 @@
             if (result && result.error === 'phone') {
               otp.verified = '';
               otp.sentTo = '';
-              otp.token = '';
               syncOtp();
               maxReached = steps.indexOf(contactStep);
               show(maxReached, true);

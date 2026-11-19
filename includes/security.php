@@ -1,6 +1,6 @@
 <?php
 /**
- * reCAPTCHA checks and Firebase phone verification helpers.
+ * reCAPTCHA checks and SMS code (Stytch) phone verification helpers.
  */
 
 function security_config(): array
@@ -113,78 +113,97 @@ function human_ok(): bool
   return $at > 0 && $at + HUMAN_SESSION_TTL > time();
 }
 
-/* Firebase phone verification */
+/* SMS code phone verification (Stytch: free for US and Canada numbers) */
+
+const OTP_MAX_SENDS = 5;
+const OTP_SEND_WINDOW = 3600;
+const OTP_RESEND_WAIT = 30;
+const OTP_MAX_ATTEMPTS = 5;
 
 function otp_enabled(): bool
 {
-  return security_value('firebase_api_key') !== '' && security_value('firebase_project_id') !== '';
+  return security_value('stytch_project_id') !== '' && security_value('stytch_secret') !== '';
 }
 
-function otp_client_config(): array
+function otp_request(string $path, array $body): array
 {
-  $project = security_value('firebase_project_id');
-  return [
-    'apiKey' => security_value('firebase_api_key'),
-    'authDomain' => security_value('firebase_auth_domain') !== '' ? security_value('firebase_auth_domain') : $project . '.firebaseapp.com',
-    'projectId' => $project,
-    'appId' => security_value('firebase_app_id'),
-  ];
-}
-
-function otp_base64url(string $value): string
-{
-  return (string)base64_decode(strtr($value, '-_', '+/') . str_repeat('=', (4 - strlen($value) % 4) % 4));
-}
-
-function otp_certificates(): array
-{
-  $cache = rtrim(sys_get_temp_dir(), '/\\') . '/wtf-firebase-certs.json';
-  if (is_file($cache) && filemtime($cache) > time() - 3600) {
-    $data = json_decode((string)file_get_contents($cache), true);
-    if (is_array($data) && $data) {
-      return $data;
-    }
-  }
-  $raw = security_http('https://www.googleapis.com/robot/v1/metadata/x509/securetoken@system.gserviceaccount.com');
+  $project = security_value('stytch_project_id');
+  $base = strpos($project, 'project-live-') === 0 ? 'https://api.stytch.com' : 'https://test.stytch.com';
+  $ch = curl_init($base . $path);
+  curl_setopt_array($ch, [
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_POST => true,
+    CURLOPT_POSTFIELDS => (string)json_encode($body),
+    CURLOPT_HTTPHEADER => ['Content-Type: application/json'],
+    CURLOPT_USERPWD => $project . ':' . security_value('stytch_secret'),
+    CURLOPT_TIMEOUT => 15,
+    CURLOPT_CONNECTTIMEOUT => 5,
+  ]);
+  $raw = curl_exec($ch);
+  $status = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
+  curl_close($ch);
   $data = json_decode((string)$raw, true);
-  if (!is_array($data) || !$data) {
-    return [];
-  }
-  @file_put_contents($cache, (string)$raw);
-  return $data;
+  return ['status' => $status, 'data' => is_array($data) ? $data : []];
 }
 
 /**
- * Validates a Firebase ID token and returns the verified phone number (E.164), or null.
+ * Sends a 6-digit code to the number (E.164). Returns '' on success or an error key.
  */
-function otp_verified_phone(string $token): ?string
+function otp_send(string $phone): string
 {
-  $parts = explode('.', $token);
-  if (count($parts) !== 3) {
-    return null;
-  }
-  $header = json_decode(otp_base64url($parts[0]), true);
-  $payload = json_decode(otp_base64url($parts[1]), true);
-  if (!is_array($header) || !is_array($payload) || ($header['alg'] ?? '') !== 'RS256') {
-    return null;
-  }
-  $certs = otp_certificates();
-  $cert = $certs[(string)($header['kid'] ?? '')] ?? null;
-  if (!$cert) {
-    return null;
-  }
-  $signature = otp_base64url($parts[2]);
-  if (openssl_verify($parts[0] . '.' . $parts[1], $signature, $cert, OPENSSL_ALGO_SHA256) !== 1) {
-    return null;
-  }
-  $project = security_value('firebase_project_id');
+  security_session();
   $now = time();
-  if (($payload['aud'] ?? '') !== $project
-    || ($payload['iss'] ?? '') !== 'https://securetoken.google.com/' . $project
-    || (int)($payload['exp'] ?? 0) < $now
-    || (int)($payload['iat'] ?? 0) > $now + 300
-    || empty($payload['phone_number'])) {
-    return null;
+  $sends = array_values(array_filter((array)($_SESSION['otp_sends'] ?? []), static fn($t) => (int)$t > $now - OTP_SEND_WINDOW));
+  if (count($sends) >= OTP_MAX_SENDS) {
+    return 'limit';
   }
-  return (string)$payload['phone_number'];
+  if ($sends && max($sends) > $now - OTP_RESEND_WAIT) {
+    return 'wait';
+  }
+  $result = otp_request('/v1/otps/sms/login_or_create', [
+    'phone_number' => $phone,
+    'expiration_minutes' => 10,
+    'attributes' => [
+      'ip_address' => (string)($_SERVER['REMOTE_ADDR'] ?? ''),
+      'user_agent' => substr((string)($_SERVER['HTTP_USER_AGENT'] ?? ''), 0, 300),
+    ],
+  ]);
+  if ($result['status'] !== 200 || empty($result['data']['phone_id'])) {
+    @error_log('WTF Labs OTP send failed: ' . (string)($result['data']['error_type'] ?? $result['status']));
+    return ($result['data']['error_type'] ?? '') === 'invalid_phone_number' ? 'phone' : 'send';
+  }
+  $sends[] = $now;
+  $_SESSION['otp_sends'] = $sends;
+  $_SESSION['otp_pending'] = ['phone' => $phone, 'id' => (string)$result['data']['phone_id'], 'tries' => 0];
+  unset($_SESSION['otp_verified']);
+  return '';
+}
+
+/**
+ * Checks the code for the pending number. Returns '' on success or an error key.
+ */
+function otp_check(string $code): string
+{
+  security_session();
+  $pending = $_SESSION['otp_pending'] ?? null;
+  if (!is_array($pending) || empty($pending['id'])) {
+    return 'expired';
+  }
+  if ((int)$pending['tries'] >= OTP_MAX_ATTEMPTS) {
+    return 'limit';
+  }
+  $_SESSION['otp_pending']['tries'] = (int)$pending['tries'] + 1;
+  $result = otp_request('/v1/otps/authenticate', ['method_id' => $pending['id'], 'code' => $code]);
+  if ($result['status'] !== 200) {
+    return 'code';
+  }
+  $_SESSION['otp_verified'] = (string)$pending['phone'];
+  unset($_SESSION['otp_pending']);
+  return '';
+}
+
+function otp_verified_phone(): string
+{
+  security_session();
+  return (string)($_SESSION['otp_verified'] ?? '');
 }

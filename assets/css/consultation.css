@@ -350,6 +350,10 @@ textarea {
   display: none;
 }
 
+.cq-field {
+  min-width: 0;
+}
+
 .cq-field .cq-label {
   margin-bottom: 4px;
 }
@@ -358,14 +362,8 @@ textarea {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   margin-left: 46px;
-  border-bottom: 2px solid rgba(30, 66, 51, 0.35);
-  transition: border-color 0.25s var(--cq-ease);
-}
-
-.cq-field-row:focus-within {
-  border-bottom-color: var(--cq-green);
 }
 
 .cq-field-row .cq-input {
@@ -373,18 +371,23 @@ textarea {
   width: auto;
   min-width: 0;
   margin-left: 0;
-  border-bottom: 0;
+}
+
+.cq-field-icon,
+.cq-cc-btn {
+  flex-shrink: 0;
+  width: 104px;
+  height: 48px;
+  border: 1px solid rgba(16, 35, 27, 0.14);
+  border-radius: 12px;
+  background: #FFFDF8;
+  box-shadow: 0 2px 8px rgba(16, 35, 27, 0.05);
+  color: var(--cq-green);
 }
 
 .cq-field-icon {
   display: grid;
   place-items: center;
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: rgba(30, 66, 51, 0.08);
-  color: var(--cq-green);
 }
 
 .cq-field-icon svg {
@@ -405,23 +408,20 @@ textarea {
 .cq-cc-btn {
   display: flex;
   align-items: center;
-  gap: 7px;
-  height: 40px;
-  padding: 0 10px;
-  border: 1px solid rgba(16, 35, 27, 0.16);
-  border-radius: 10px;
-  background: rgba(30, 66, 51, 0.08);
-  font-size: 16px;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 8px;
+  font-size: 15px;
   font-weight: 600;
-  color: var(--cq-green);
+  letter-spacing: -0.01em;
   cursor: pointer;
-  transition: background-color 0.2s var(--cq-ease), border-color 0.2s var(--cq-ease);
+  transition: border-color 0.2s var(--cq-ease), box-shadow 0.2s var(--cq-ease);
 }
 
 .cq-cc-btn:hover,
 .cq-cc-btn[aria-expanded="true"] {
-  border-color: rgba(30, 66, 51, 0.4);
-  background: rgba(30, 66, 51, 0.14);
+  border-color: rgba(30, 66, 51, 0.45);
+  box-shadow: 0 4px 14px rgba(16, 35, 27, 0.08);
 }
 
 .cq-cc-btn:focus-visible {
