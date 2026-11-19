@@ -11131,3 +11131,26 @@ html body .exit-pop .exit-pop-btn {
     padding: 26px 22px 26px;
   }
 }
+
+/* reCAPTCHA on contact and brief forms */
+.form-captcha {
+  margin: 4px 0 18px;
+}
+.form-captcha .g-recaptcha {
+  min-height: 78px;
+}
+.form-captcha-error {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #B3261E;
+}
+.form-captcha-error[hidden] {
+  display: none;
+}
+@media (max-width: 360px) {
+  .form-captcha .g-recaptcha {
+    transform: scale(0.9);
+    transform-origin: 0 0;
+  }
+}

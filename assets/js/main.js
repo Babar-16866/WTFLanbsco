@@ -304,6 +304,16 @@ function formLabels(form) {
 // Contact / promo forms — native POST to send-mail.php → thank-you.php
 document.querySelectorAll('form.contact-form').forEach((form) => {
   form.addEventListener('submit', (e) => {
+    const captcha = form.querySelector('.g-recaptcha');
+    if (captcha) {
+      const captchaError = form.querySelector('.form-captcha-error');
+      const answered = window.grecaptcha && window.grecaptcha.getResponse();
+      if (captchaError) captchaError.hidden = !!answered;
+      if (!answered) {
+        e.preventDefault();
+        return;
+      }
+    }
     let labelsInput = form.querySelector('input[name="_labels"]');
     if (!labelsInput) {
       labelsInput = document.createElement('input');

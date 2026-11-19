@@ -223,6 +223,7 @@ include __DIR__ . '/includes/header.php';
             <input type="checkbox" name="terms" required>
             <span>I agree to the <a href="/privacy-policy">Privacy Policy</a> and <a href="/terms-and-conditions">Terms of use</a>.</span>
           </label>
+          <?php require_once __DIR__ . '/includes/security.php'; recaptcha_widget(); ?>
           <button type="submit" class="btn btn-lime btn-lg btn-block">Send website brief</button>
           <p class="form-disclaimer">By providing your phone number and submitting the form, you consent to be contacted by SMS and agree to our <a href="/privacy-policy#phone-number">Privacy Policy</a>. Message and data rates may apply.</p>
         </form>

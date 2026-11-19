@@ -6,6 +6,7 @@
 declare(strict_types=1);
 
 require __DIR__ . '/includes/gmail-mailer.php';
+require __DIR__ . '/includes/security.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
   header('Location: /contact.php');
@@ -45,7 +46,7 @@ $form_pages = [
 $form_page = $form_pages[$source] ?? null;
 
 // Anything the form sent on top of the standard fields
-$standard = ['website', 'name', 'email', 'phone', 'help', 'budget', 'message', 'updates', 'source', 'terms', 'step', 'lead_id'];
+$standard = ['website', 'name', 'email', 'phone', 'help', 'budget', 'message', 'updates', 'source', 'terms', 'step', 'lead_id', 'g-recaptcha-response', 'phone_token'];
 $extra = [];
 foreach ($_POST as $key => $value) {
   if (in_array($key, $standard, true)) {
@@ -84,6 +85,35 @@ if ($errors) {
   exit;
 }
 
+// Consultation answers are posted by script and expect a JSON reply
+$is_consultation = $source === 'consultation';
+
+function consultation_reply(array $data, int $status = 200): void {
+  http_response_code($status);
+  header('Content-Type: application/json');
+  echo json_encode($data);
+}
+
+// Bot protection: the consultation visitor passes reCAPTCHA before the form starts,
+// every other form sends its reCAPTCHA response with the submission
+if ($is_consultation ? !human_ok() : !recaptcha_verify((string)($_POST['g-recaptcha-response'] ?? ''))) {
+  if ($is_consultation) {
+    consultation_reply(['ok' => false, 'error' => 'captcha'], 403);
+    exit;
+  }
+  header('Location: ' . ($form_page ? $form_page[1] : '/contact.php') . '?error=1');
+  exit;
+}
+
+// The consultation phone number must match the number verified by SMS code
+if ($is_consultation && otp_enabled()) {
+  $verified_phone = otp_verified_phone((string)($_POST['phone_token'] ?? ''));
+  if ($verified_phone === null || $verified_phone !== '+' . preg_replace('/\D/', '', $phone)) {
+    consultation_reply(['ok' => false, 'error' => 'phone'], 403);
+    exit;
+  }
+}
+
 $mailConfig = gmail_config();
 $to = $mailConfig['recipient'];
 $form_titles = [
@@ -101,7 +131,7 @@ $form_title = $form_titles[$source] ?? 'Inquiry';
 $step_note = ($step === 1 || $step === 2) ? ' (Step ' . $step . ' of 3)' : '';
 $subject = $form_title . $step_note . ' - ' . $name;
 
-$skip_fields = ['website', 'source', 'step', 'lead_id', 'terms', '_labels'];
+$skip_fields = ['website', 'source', 'step', 'lead_id', 'terms', '_labels', 'g-recaptcha-response', 'phone_token'];
 $label_pairs = json_decode((string)($_POST['_labels'] ?? ''), true);
 if (!is_array($label_pairs)) {
   $label_pairs = [];
@@ -157,6 +187,26 @@ if (!empty($_FILES['cv']) && is_array($_FILES['cv']) && ($_FILES['cv']['error'] 
   }
 }
 
+// Answer the consultation visitor right away; the email is sent after the response is closed
+if ($is_consultation) {
+  ignore_user_abort(true);
+  while (ob_get_level() > 0) {
+    ob_end_clean();
+  }
+  $reply = (string)json_encode(['ok' => true]);
+  header('Content-Type: application/json');
+  header('Content-Length: ' . strlen($reply));
+  header('Connection: close');
+  echo $reply;
+  if (function_exists('fastcgi_finish_request')) {
+    fastcgi_finish_request();
+  } elseif (function_exists('litespeed_finish_request')) {
+    litespeed_finish_request();
+  } else {
+    flush();
+  }
+}
+
 $sent = gmail_is_ready() && gmail_send($subject, $body, $name, $email, $attachments);
 if (!$sent) {
   $mail_headers = $headers;
@@ -168,6 +218,10 @@ if (!$sent) {
 if (!$sent) {
   // Still send user to thank-you so UX doesn't break; log locally if possible
   @error_log('WTF Labs mail failed for ' . $email);
+}
+
+if ($is_consultation) {
+  exit;
 }
 
 if ($partial) {

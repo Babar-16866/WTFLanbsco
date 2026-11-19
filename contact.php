@@ -168,6 +168,7 @@ include __DIR__ . '/includes/header.php';
               <option>Just exploring</option>
             </select>
           </div>
+          <?php require_once __DIR__ . '/includes/security.php'; recaptcha_widget(); ?>
           <button type="submit" class="btn btn-lime btn-lg btn-block">Let's Figure This Out</button>
           <p class="contact-form-micro">No spam. No surprise sales marathon. Just a practical next step.</p>
           <p class="form-disclaimer">By providing your phone number and submitting the form, you consent to be contacted by SMS and agree to our <a href="/privacy-policy#phone-number">Privacy Policy</a>. Message and data rates may apply.</p>

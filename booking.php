@@ -46,9 +46,42 @@ function booking_close($handle): void
 }
 
 /**
- * Business days start from the day after the visit. The first two days show three
- * slots each; every business day after that, up to BOOKING_WINDOW_DAYS ahead, shows
- * the full 9:00-5:00 schedule. Same-day visitors before noon may also take 4:30 PM.
+ * Deterministic pseudo-random sequence seeded by a string, so the same date always
+ * produces the same slot selection. Mirrored in assets/js/consultation.js.
+ */
+function booking_seed(string $text): int
+{
+  $h = 0;
+  $len = strlen($text);
+  for ($i = 0; $i < $len; $i++) {
+    $h = ($h * 31 + ord($text[$i])) % 2147483647;
+  }
+  return $h > 0 ? $h : 1;
+}
+
+function booking_next(int &$state): int
+{
+  $state = ($state * 48271) % 2147483647;
+  return $state;
+}
+
+function booking_pick(array $minutes, int $count, string $seed): array
+{
+  $state = booking_seed($seed);
+  for ($i = count($minutes) - 1; $i > 0; $i--) {
+    $j = booking_next($state) % ($i + 1);
+    [$minutes[$i], $minutes[$j]] = [$minutes[$j], $minutes[$i]];
+  }
+  $picked = array_slice($minutes, 0, $count);
+  sort($picked);
+  return $picked;
+}
+
+/**
+ * Same day: one slot an hour from now, one afternoon slot (morning visitors only)
+ * and 4:30 PM; after 2 PM only 4:30 PM. Next business day: six slots. Every business
+ * day after that, up to BOOKING_WINDOW_DAYS ahead: the full 9:00-5:00 schedule.
+ * Every day lists all slots; only the open ones can be booked.
  */
 function booking_slots(DateTimeImmutable $now, array $booked): array
 {
@@ -56,20 +89,30 @@ function booking_slots(DateTimeImmutable $now, array $booked): array
   for ($m = 9 * 60; $m <= 16 * 60 + 30; $m += 30) {
     $all[] = $m;
   }
-  $plans = [
-    [9 * 60, 12 * 60, 16 * 60 + 30],
-    [10 * 60, 14 * 60, 16 * 60],
-  ];
-
-  $days = [];
+  $evening = 16 * 60 + 30;
   $isWeekday = static fn(DateTimeImmutable $d): bool => (int)$d->format('N') <= 5;
+  $nowMin = (int)$now->format('G') * 60 + (int)$now->format('i');
+  $today = $now->setTime(0, 0);
+  $days = [];
 
-  if ($isWeekday($now) && (int)$now->format('G') < 12) {
-    $days[] = [$now->setTime(0, 0), [16 * 60 + 30]];
+  if ($isWeekday($today)) {
+    $open = [$evening];
+    if ($nowMin < 14 * 60) {
+      $first = max(9 * 60, (int)(ceil(($nowMin + 60) / 30) * 30));
+      $open[] = $first;
+      if ($nowMin < 12 * 60) {
+        $afternoon = array_values(array_filter($all, static fn(int $m): bool => $m >= 12 * 60 && $m < $evening && $m > $first));
+        if ($afternoon) {
+          $open = array_merge($open, booking_pick($afternoon, 1, $today->format('Y-m-d') . 'pm'));
+        }
+      }
+    }
+    $open = array_filter(array_unique($open), static fn(int $m): bool => $m >= 9 * 60 && $m <= $evening);
+    $days[] = [$today, array_values($open)];
   }
 
-  $cursor = $now->setTime(0, 0);
-  $last = $now->setTime(0, 0)->modify('+' . BOOKING_WINDOW_DAYS . ' days');
+  $cursor = $today;
+  $last = $today->modify('+' . BOOKING_WINDOW_DAYS . ' days');
   $n = 0;
   while (true) {
     do {
@@ -78,29 +121,27 @@ function booking_slots(DateTimeImmutable $now, array $booked): array
     if ($cursor > $last) {
       break;
     }
-    $days[] = [$cursor, $plans[$n] ?? $all];
+    $days[] = [$cursor, $n === 0 ? booking_pick($all, 6, $cursor->format('Y-m-d')) : $all];
     $n++;
   }
 
   $out = [];
-  foreach ($days as [$day, $minutes]) {
+  foreach ($days as [$day, $open]) {
     $slots = [];
-    foreach ($minutes as $m) {
+    $available = 0;
+    foreach ($all as $m) {
       $start = $day->setTime(intdiv($m, 60), $m % 60);
-      if ($start <= $now->modify('+30 minutes')) {
-        continue;
-      }
       $id = $start->format('Y-m-d\TH:i');
-      if (isset($booked[$id])) {
-        continue;
-      }
       $end = $start->modify('+30 minutes');
+      $free = in_array($m, $open, true) && $start > $now->modify('+30 minutes') && !isset($booked[$id]);
+      $available += $free ? 1 : 0;
       $slots[] = [
         'id' => $id,
         'label' => $start->format('g:i A') . ' - ' . $end->format('g:i A'),
+        'available' => $free,
       ];
     }
-    if ($slots) {
+    if ($available) {
       $out[] = [
         'date' => $day->format('Y-m-d'),
         'weekday' => $day->format('l'),
@@ -125,7 +166,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $valid = [];
   foreach (booking_slots($now, $booked) as $day) {
     foreach ($day['slots'] as $s) {
-      $valid[$s['id']] = $s;
+      if ($s['available']) {
+        $valid[$s['id']] = $s;
+      }
     }
   }
   if (!isset($valid[$slot])) {
