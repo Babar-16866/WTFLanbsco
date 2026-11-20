@@ -10831,8 +10831,8 @@ html body .services-cta-band.services-cta-band--split {
   }
   .rail-viewport.m-slider,
   .rx-exp-view.m-slider {
-    margin: -24px 0 -40px;
-    padding: 24px 0 40px 20px;
+    margin: -40px 0 -88px;
+    padding: 40px 0 88px 20px;
     scroll-padding-inline: 20px;
   }
   .m-slider > .rail-track,
