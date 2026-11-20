@@ -35,7 +35,6 @@ function security_http(string $url, ?array $post = null): ?string
     curl_setopt_array($ch, $options);
     $result = curl_exec($ch);
     $status = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    curl_close($ch);
     return ($result !== false && $status < 400) ? (string)$result : null;
   }
   $context = ['http' => ['timeout' => 10, 'ignore_errors' => false]];
@@ -141,7 +140,6 @@ function otp_request(string $path, array $body): array
   ]);
   $raw = curl_exec($ch);
   $status = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
-  curl_close($ch);
   $data = json_decode((string)$raw, true);
   return ['status' => $status, 'data' => is_array($data) ? $data : []];
 }

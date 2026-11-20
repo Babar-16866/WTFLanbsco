@@ -1385,6 +1385,7 @@ document.addEventListener('click', (e) => {
     let lastWidth = 0;
     let endAt = 0;
     let atEnd = false;
+    const endHold = parseInt(section.dataset.railEndHold, 10) || 2000;
 
     function setActive(index) {
       cards.forEach((card, i) => card.classList.toggle('is-active', i === index));
@@ -1432,7 +1433,7 @@ document.addEventListener('click', (e) => {
     let touchMoved = false;
 
     function endLocked(dir) {
-      if (dir <= 0 || isStatic || performance.now() - endAt >= 2000) return false;
+      if (dir <= 0 || isStatic || performance.now() - endAt >= endHold) return false;
       const b = bounds();
       return window.scrollY >= b.end - 2 && window.scrollY <= b.end + 2;
     }

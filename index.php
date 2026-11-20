@@ -1681,7 +1681,7 @@ include __DIR__ . '/includes/header.php';
 </div>
 
 <!-- HOW WE WORK -->
-<section class="rail-section how-rail-section" id="how-we-work" data-rail>
+<section class="rail-section how-rail-section" id="how-we-work" data-rail data-rail-end-hold="350">
   <div class="rail-sticky">
     <div class="container">
       <div class="section-header rail-head reveal">
