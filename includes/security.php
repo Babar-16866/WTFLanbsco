@@ -187,6 +187,19 @@ function otp_request(string $path, array $body): array
 }
 
 /**
+ * Visitor IP address; behind a proxy the first forwarded address is the visitor.
+ */
+function otp_client_ip(): string
+{
+  $forwarded = trim(explode(',', (string)($_SERVER['HTTP_X_FORWARDED_FOR'] ?? ''))[0]);
+  if (filter_var($forwarded, FILTER_VALIDATE_IP)) {
+    return $forwarded;
+  }
+  $remote = (string)($_SERVER['REMOTE_ADDR'] ?? '');
+  return filter_var($remote, FILTER_VALIDATE_IP) ? $remote : '';
+}
+
+/**
  * Sends a 6-digit code to the number (E.164). Returns '' on success or an error key.
  */
 function otp_send(string $phone): string
@@ -204,7 +217,7 @@ function otp_send(string $phone): string
     'phone_number' => $phone,
     'expiration_minutes' => 10,
     'attributes' => [
-      'ip_address' => (string)($_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['REMOTE_ADDR'] ?? ''),
+      'ip_address' => otp_client_ip(),
       'user_agent' => substr((string)($_SERVER['HTTP_USER_AGENT'] ?? ''), 0, 300),
     ],
   ]);
