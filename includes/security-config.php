@@ -3,7 +3,7 @@
  * Spam protection and phone verification keys.
  *
  * Google reCAPTCHA v2 ("I'm not a robot" checkbox): https://www.google.com/recaptcha/admin
- * textbee.dev SMS codes: textbee dashboard > API key, and the Device ID of the connected phone.
+ * Stytch SMS codes: Stytch dashboard > Project ID & API keys.
  *
  * Leave a value empty to switch that feature off.
  */
@@ -11,6 +11,6 @@ return [
   'recaptcha_site_key'   => '',
   'recaptcha_secret_key' => '',
 
-  'textbee_api_key'      => '',
-  'textbee_device_id'    => '',
+  'stytch_project_id'    => 'project-test-bd89f3fb-3a49-47f0-a841-1964f55144a4',
+  'stytch_secret'        => 'secret-test-byxixdJiSQBNifIpDDZG-FdV_KMYGNEVNYQ=',
 ];

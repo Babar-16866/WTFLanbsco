@@ -112,38 +112,78 @@ function human_ok(): bool
   return $at > 0 && $at + HUMAN_SESSION_TTL > time();
 }
 
-/* SMS code phone verification (codes are sent through textbee.dev) */
+/* SMS code phone verification (codes are sent by Stytch) */
 
 const OTP_MAX_SENDS = 5;
 const OTP_SEND_WINDOW = 3600;
 const OTP_RESEND_WAIT = 30;
 const OTP_MAX_ATTEMPTS = 5;
-const OTP_CODE_TTL = 600;
+const OTP_STATE_TTL = 7200;
+const OTP_COOKIE = 'cq_otp';
 
 function otp_enabled(): bool
 {
-  return security_value('textbee_api_key') !== '' && security_value('textbee_device_id') !== '';
+  return security_value('stytch_project_id') !== '' && security_value('stytch_secret') !== '';
 }
 
-function otp_sms(string $phone, string $message): bool
+/*
+ * Verification progress is kept in a signed cookie instead of the PHP session,
+ * so it works the same on regular hosting and on serverless hosting.
+ */
+function otp_state_sign(string $payload): string
 {
-  $url = 'https://api.textbee.dev/api/v1/gateway/devices/' . rawurlencode(security_value('textbee_device_id')) . '/send-sms';
-  $ch = curl_init($url);
+  return hash_hmac('sha256', $payload, 'wtf-otp|' . security_value('stytch_secret'));
+}
+
+function otp_state(): array
+{
+  $raw = (string)($_COOKIE[OTP_COOKIE] ?? '');
+  $parts = explode('.', $raw);
+  if (count($parts) !== 2 || !hash_equals(otp_state_sign($parts[0]), $parts[1])) {
+    return [];
+  }
+  $state = json_decode((string)base64_decode(strtr($parts[0], '-_', '+/'), true), true);
+  if (!is_array($state) || (int)($state['exp'] ?? 0) < time()) {
+    return [];
+  }
+  return $state;
+}
+
+function otp_state_save(array $state): void
+{
+  $state['exp'] = time() + OTP_STATE_TTL;
+  $payload = rtrim(strtr(base64_encode((string)json_encode($state)), '+/', '-_'), '=');
+  $value = $payload . '.' . otp_state_sign($payload);
+  $secure = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+    || strtolower((string)($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '')) === 'https';
+  setcookie(OTP_COOKIE, $value, [
+    'expires' => $state['exp'],
+    'path' => '/',
+    'secure' => $secure,
+    'httponly' => true,
+    'samesite' => 'Lax',
+  ]);
+  $_COOKIE[OTP_COOKIE] = $value;
+}
+
+function otp_request(string $path, array $body): array
+{
+  $project = security_value('stytch_project_id');
+  $base = strpos($project, 'project-live-') === 0 ? 'https://api.stytch.com' : 'https://test.stytch.com';
+  $ch = curl_init($base . $path);
   curl_setopt_array($ch, [
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_POST => true,
-    CURLOPT_POSTFIELDS => (string)json_encode(['recipients' => [$phone], 'message' => $message]),
-    CURLOPT_HTTPHEADER => ['Content-Type: application/json', 'x-api-key: ' . security_value('textbee_api_key')],
+    CURLOPT_POSTFIELDS => (string)json_encode($body),
+    CURLOPT_HTTPHEADER => ['Content-Type: application/json'],
+    CURLOPT_USERPWD => $project . ':' . security_value('stytch_secret'),
     CURLOPT_TIMEOUT => 15,
     CURLOPT_CONNECTTIMEOUT => 5,
   ]);
   $raw = curl_exec($ch);
   $status = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
-  if ($status < 200 || $status >= 300) {
-    @error_log('WTF Labs OTP send failed: HTTP ' . $status . ' ' . substr((string)$raw, 0, 300));
-    return false;
-  }
-  return true;
+  $data = json_decode((string)$raw, true);
+  return ['status' => $status, 'data' => is_array($data) ? $data : []];
 }
 
 /**
@@ -151,28 +191,32 @@ function otp_sms(string $phone, string $message): bool
  */
 function otp_send(string $phone): string
 {
-  security_session();
+  $state = otp_state();
   $now = time();
-  $sends = array_values(array_filter((array)($_SESSION['otp_sends'] ?? []), static fn($t) => (int)$t > $now - OTP_SEND_WINDOW));
+  $sends = array_values(array_filter((array)($state['sends'] ?? []), static fn($t) => (int)$t > $now - OTP_SEND_WINDOW));
   if (count($sends) >= OTP_MAX_SENDS) {
     return 'limit';
   }
   if ($sends && max($sends) > $now - OTP_RESEND_WAIT) {
     return 'wait';
   }
-  $code = str_pad((string)random_int(0, 999999), 6, '0', STR_PAD_LEFT);
-  if (!otp_sms($phone, 'Your WTF Labs verification code is ' . $code . '. It expires in 10 minutes.')) {
-    return 'send';
+  $result = otp_request('/v1/otps/sms/login_or_create', [
+    'phone_number' => $phone,
+    'expiration_minutes' => 10,
+    'attributes' => [
+      'ip_address' => (string)($_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['REMOTE_ADDR'] ?? ''),
+      'user_agent' => substr((string)($_SERVER['HTTP_USER_AGENT'] ?? ''), 0, 300),
+    ],
+  ]);
+  if ($result['status'] !== 200 || empty($result['data']['phone_id'])) {
+    @error_log('WTF Labs OTP send failed: ' . (string)($result['data']['error_type'] ?? $result['status']));
+    return ($result['data']['error_type'] ?? '') === 'invalid_phone_number' ? 'phone' : 'send';
   }
   $sends[] = $now;
-  $_SESSION['otp_sends'] = $sends;
-  $_SESSION['otp_pending'] = [
-    'phone' => $phone,
-    'hash' => password_hash($code, PASSWORD_DEFAULT),
-    'expires' => $now + OTP_CODE_TTL,
-    'tries' => 0,
-  ];
-  unset($_SESSION['otp_verified']);
+  otp_state_save([
+    'sends' => $sends,
+    'pending' => ['phone' => $phone, 'id' => (string)$result['data']['phone_id'], 'tries' => 0],
+  ]);
   return '';
 }
 
@@ -181,29 +225,27 @@ function otp_send(string $phone): string
  */
 function otp_check(string $code): string
 {
-  security_session();
-  $pending = $_SESSION['otp_pending'] ?? null;
-  if (!is_array($pending) || empty($pending['hash'])) {
-    return 'expired';
-  }
-  if ((int)$pending['expires'] < time()) {
-    unset($_SESSION['otp_pending']);
+  $state = otp_state();
+  $pending = $state['pending'] ?? null;
+  if (!is_array($pending) || empty($pending['id'])) {
     return 'expired';
   }
   if ((int)$pending['tries'] >= OTP_MAX_ATTEMPTS) {
     return 'limit';
   }
-  $_SESSION['otp_pending']['tries'] = (int)$pending['tries'] + 1;
-  if (!password_verify($code, (string)$pending['hash'])) {
+  $state['pending']['tries'] = (int)$pending['tries'] + 1;
+  otp_state_save($state);
+  $result = otp_request('/v1/otps/authenticate', ['method_id' => $pending['id'], 'code' => $code]);
+  if ($result['status'] !== 200) {
     return 'code';
   }
-  $_SESSION['otp_verified'] = (string)$pending['phone'];
-  unset($_SESSION['otp_pending']);
+  unset($state['pending']);
+  $state['verified'] = (string)$pending['phone'];
+  otp_state_save($state);
   return '';
 }
 
 function otp_verified_phone(): string
 {
-  security_session();
-  return (string)($_SESSION['otp_verified'] ?? '');
+  return (string)(otp_state()['verified'] ?? '');
 }
