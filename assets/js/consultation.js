@@ -148,13 +148,10 @@
       answers.call_time_label = button.dataset.label;
     }
     showError(step, '');
-    busy = true;
+    button.classList.remove('is-blink');
+    void button.offsetWidth;
     button.classList.add('is-blink');
-    setTimeout(() => {
-      button.classList.remove('is-blink');
-      busy = false;
-      show(current + 1);
-    }, 600);
+    setTimeout(() => button.classList.remove('is-blink'), 600);
   };
 
   form.addEventListener('click', (e) => {
@@ -703,8 +700,7 @@
         option.classList.add('is-selected');
         option.setAttribute('aria-checked', 'true');
         answers[steps[0].dataset.key] = option.dataset.value;
-        maxReached = 1;
-        show(1);
+        show(0);
         return;
       }
     }

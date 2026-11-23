@@ -174,7 +174,7 @@ include __DIR__ . '/includes/featured-work.php';
 
 
 <!-- How We Work -->
-<section class="rail-section how-rail-section" id="process" data-rail>
+<section class="rail-section how-rail-section" id="process" data-rail data-rail-end-hold="350">
   <div class="rail-sticky">
     <div class="container">
       <div class="section-header rail-head reveal">

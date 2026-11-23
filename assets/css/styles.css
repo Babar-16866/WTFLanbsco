@@ -8532,8 +8532,8 @@ html body :is(.works-show-more, #industriesShowMore, .brand-card-btn-alt, .btn-o
   pointer-events: none;
 }
 .hero-canvas .mockup-tall {
-  width: 132px;
-  height: 234px;
+  width: 152px;
+  height: 269px;
   top: 4%;
   border-radius: 16px;
 }
@@ -8555,7 +8555,7 @@ html body :is(.works-show-more, #industriesShowMore, .brand-card-btn-alt, .btn-o
   .hero-canvas .mockup-tall-right { right: -42%; }
 }
 @media (max-width: 1100px) {
-  .hero-canvas .mockup-tall { width: 104px !important; height: 184px !important; }
+  .hero-canvas .mockup-tall { width: 120px !important; height: 212px !important; }
   .hero-canvas .mockup-tall-left { left: -24%; }
   .hero-canvas .mockup-tall-right { right: -24%; }
 }

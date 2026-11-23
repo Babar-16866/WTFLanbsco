@@ -97,7 +97,7 @@ include __DIR__ . '/includes/featured-work.php';
 ?>
 
 <!-- OUR PROCESS -->
-<section class="rail-section why-wtf-section" id="process" data-rail>
+<section class="rail-section why-wtf-section" id="process" data-rail data-rail-end-hold="350">
   <div class="rail-sticky">
     <div class="container">
       <div class="section-header rail-head reveal">

@@ -340,7 +340,7 @@ include __DIR__ . '/includes/header.php';
 </section>
 
 <!-- WHY WTF LABS -->
-<section class="rail-section why-wtf-section" id="why-wtf-labs" data-rail>
+<section class="rail-section why-wtf-section" id="why-wtf-labs" data-rail data-rail-end-hold="350">
   <div class="rail-sticky">
     <div class="container">
       <div class="section-header rail-head reveal">

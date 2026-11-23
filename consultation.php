@@ -27,7 +27,7 @@ $questions = [
   ['key' => 'role', 'type' => 'choice', 'text' => 'How would you describe your role in your company?', 'options' => [
     'I’m the Owner / Founder of my company',
     'I’m the Co-Founder / Partner',
-    'I’m the ultimate decision maker',
+    'I’m the decision maker',
   ], 'other_label' => 'Other', 'other_placeholder' => 'How would you describe your role?'],
   ['key' => 'budget', 'type' => 'choice', 'text' => 'How much is a reasonable investment for your business growth?', 'options' => $budgets],
   ['key' => 'source_channel', 'type' => 'choice', 'text' => 'Almost there! How did you find us?', 'options' => [
@@ -35,10 +35,10 @@ $questions = [
     'I saw your ad on Meta',
     'I was referred to you guys',
   ]],
-  ['key' => 'first_name', 'type' => 'name', 'text' => 'Great to know. Finally, let’s set up a time to discuss your needs. But before that, what should I call you? What’s your first name?'],
-  ['key' => 'call_time', 'type' => 'slot', 'text' => '<span data-name></span>, great to meet you! What would be a good time and day to give you a call?'],
+  ['key' => 'first_name', 'type' => 'name', 'text' => 'Great to know. Finally, let’s set up a time to discuss your needs. Tell us what’s your name?'],
+  ['key' => 'call_time', 'type' => 'slot', 'text' => '<span data-name></span>, great to meet you! What would be a good time and day for us to speak?'],
   ['key' => 'contact', 'type' => 'contact', 'text' => 'Awesome, <span data-name></span>. Now, where should we send your meeting details? Enter your best email address and your phone'],
-  ['key' => 'extras', 'type' => 'extras', 'text' => 'Extras… Describe in your own words or leave blank.'],
+  ['key' => 'extras', 'type' => 'extras', 'text' => 'Leave blank or describe in your own words what’s your situation right now.'],
 ];
 $letters = range('A', 'Z');
 $show_gate = recaptcha_enabled() && !human_ok();
@@ -62,7 +62,7 @@ $show_gate = recaptcha_enabled() && !human_ok();
 </head>
 <body class="cq">
   <div class="cq-progress" aria-hidden="true"><span class="cq-progress-fill"></span></div>
-  <div class="cq-logo"><img src="/assets/images/logo-new.webp" alt="WTF Labs" width="72" height="70"></div>
+  <div class="cq-logo"><img src="/assets/images/logo-thank-you-card.webp" alt="WTF Labs" width="72" height="70"></div>
 
 <?php if ($show_gate): ?>
   <section class="cq-step cq-gate" data-gate>
@@ -161,12 +161,10 @@ $show_gate = recaptcha_enabled() && !human_ok();
     <?php endforeach; ?>
   </form>
 
-  <!-- Previous / next question buttons, hidden for now
   <div class="cq-nav">
-    <button type="button" class="cq-nav-btn" data-prev aria-label="Previous question"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg></button>
-    <button type="button" class="cq-nav-btn" data-forward aria-label="Next question"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+    <button type="button" class="cq-nav-btn" data-prev aria-label="Previous question"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+    <button type="button" class="cq-nav-btn" data-forward aria-label="Next question"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
   </div>
-  -->
 
   <script src="/assets/js/consultation.js?v=<?php echo asset_version('assets/js/consultation.js'); ?>" defer></script>
 </body>
