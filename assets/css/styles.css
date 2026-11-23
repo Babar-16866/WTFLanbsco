@@ -10943,6 +10943,7 @@ html body .hero-canvas .mockup-tall-right {
 }
 html body .hero-canvas .mockup-tall-right img {
   translate: -1.7% 0;
+  scale: 1.05;
 }
 .cq-card {
   position: relative;
