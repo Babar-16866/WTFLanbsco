@@ -8548,7 +8548,7 @@ html body :is(.works-show-more, #industriesShowMore, .brand-card-btn-alt, .btn-o
 .hero-canvas .mockup-tall-right {
   right: -16%;
   animation: mockup-float 5.5s ease-in-out infinite 0.4s;
-  --r: 8deg;
+  --r: 20.5deg;
 }
 @media (min-width: 981px) {
   .hero-canvas .mockup-tall-left { left: -42%; }
@@ -10940,6 +10940,9 @@ html body .hero-canvas .mockup-tall img {
 }
 html body .hero-canvas .mockup-tall-right {
   margin-right: 3.3%;
+}
+html body .hero-canvas .mockup-tall-right img {
+  translate: -1.7% 0;
 }
 .cq-card {
   position: relative;
